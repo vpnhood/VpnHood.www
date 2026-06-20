@@ -1,0 +1,76 @@
+{%- comment -%}
+  Shared FAQ section. Renders the visible Bootstrap accordion AND the FAQPage
+  JSON-LD from one source: a list of `q:` / `a:` pairs passed in as `items`
+  (typically site.data.faqs). Answers may contain inline HTML — Google permits
+  a/b/strong/em/br/ul/ol/li in FAQ answers.
+
+  Parameters:
+    items   — (required) the list of {q, a} entries to render
+    heading — render the section heading + wrapper (default: true).
+              Pass heading=false to emit just the accordion (e.g. the /faq page,
+              which supplies its own page heading).
+    explore — show the "Explore full FAQs" link to /faq (default: true).
+              Pass explore=false on the /faq page itself.
+    eyebrow — eyebrow label above the heading (default: FAQs).
+    schema  — emit the FAQPage JSON-LD (default: true).
+{%- endcomment -%}
+{%- capture faq_accordion -%}
+<div id="faqAccordion" class="accordion accordion-flush px-4 mx-auto">
+{% for faq in include.items %}
+  <div class="accordion-item" data-aos="fade-{% cycle 'right', 'left' %}"{% unless forloop.first %} data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endunless %}>
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-{{ forloop.index }}" aria-expanded="false" aria-controls="faq-{{ forloop.index }}">
+        {{ faq.q }}
+      </button>
+    </h2>
+    <div id="faq-{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">{{ faq.a }}</div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{%- endcapture -%}
+{%- if include.heading == false -%}
+{{ faq_accordion }}
+{%- else -%}
+<div id="faq" class="section-space">
+  <div class="container">
+    <div class="section-start-text mb-5" data-aos="fade-up">
+      <div class="section-label">
+        <h3 class="vh-txt-grad-purple-400">{{ include.eyebrow | default: 'FAQs' }}</h3>
+      </div>
+      <h4 class="section-title vh-txt-grad-purple-400">Frequently Asked Questions</h4>
+      <p class="section-desc">Let's find the answers to your questions.</p>
+    </div>
+    {{ faq_accordion }}
+    {% if include.explore != false %}
+    <div class="text-center mt-5 pt-4" data-aos="fade-up">
+      <a href="/faq" class="vh-text-btn vh-txt-purple-300">
+        Explore full FAQs
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <g fill="none">
+            <path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path>
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{%- endif -%}
+{%- unless include.schema == false -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in include.items %}{
+      "@type": "Question",
+      "name": {{ faq.q | strip | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ faq.a | strip | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{%- endunless -%}

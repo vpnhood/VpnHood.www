@@ -1,0 +1,37 @@
+# Shared FAQ items — rendered by _includes/faq.html on the home page, several
+# marketing pages, and the /faq page. Answers may contain inline HTML
+# (Google permits a/b/strong/em/br/ul/ol/li in FAQ answers).
+- q: "Why VpnHood?"
+  a: >-
+    VpnHood is a free VPN powered by the <b>VpnHood ENGINE</b>, fully developed
+    by the VpnHood team. It uses proprietary protocols built on open-source
+    foundations for maximum transparency. Our open-source code is available for
+    public review to verify its security and integrity. VpnHood is designed to
+    optimize data transmission for high-performance connectivity and enhanced
+    network compatibility. We prioritize your privacy by ensuring zero
+    collection of personal information and activity logs, providing a highly
+    secure and private digital experience.
+
+- q: "Is VpnHood a free VPN?"
+  a: >-
+    Yes, VpnHood offers a free VPN service without any time, traffic, or
+    bandwidth limitations. However, you can unlock additional features by
+    upgrading to a premium subscription. With the premium plan, you gain access
+    to servers in more countries, faster connection speeds, and enhanced app
+    functionality. For further information, visit the
+    <a href="/free-vpn/go-premium" class="text-decoration-underline">plan details</a> page.
+
+- q: "VpnHood! CONNECT vs. VpnHood! CLIENT?"
+  a: >-
+    VpnHood! CONNECT is a free VPN that users can enjoy without limitations.
+    However, while VpnHood! CLIENT is also free, it does not include servers for
+    direct connections. Instead, those who set up their own dedicated VPN using
+    VpnHood! MANAGER can share this app with their users along with a Server Key
+    for access.
+
+- q: "What platforms does VpnHood support?"
+  a: >-
+    Both VpnHood! CONNECT and VpnHood! CLIENT are compatible with Android,
+    Android TV, and Windows. However, VpnHood! CONNECT on Windows is not free;
+    you'll need to purchase a Premium Key, which is available on the
+    <a href="/free-vpn/go-premium" class="text-decoration-underline">pricing</a> page.
