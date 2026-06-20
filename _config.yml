@@ -1,0 +1,39 @@
+# Jekyll Configuration for VpnHood (static marketing site)
+title: VpnHood!
+description: "VpnHood! – A free, secure, and open-source VPN with a global server network designed to protect your online privacy and ensure secure access to the web."
+url: "https://www.vpnhood.com"
+baseurl: ""
+lang: en-us
+author: VpnHood
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Sass configuration (sources in _sass/, entry files in assets/css/*.scss)
+sass:
+  style: compressed
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude non-site files from the build
+exclude:
+  - README.md
+  - CLAUDE.md
+  - _reference/
+  - Gemfile
+  - Gemfile.lock
+  - .github/
+  - .vs/
+  - .vscode/
+
+# GitHub Pages
+safe: false
+incremental: false
