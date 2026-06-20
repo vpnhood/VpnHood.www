@@ -24,6 +24,14 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
 ### Shared header/footer (important)
 `header.html` renders the `<head>`, the framework JS, and the sticky nav, and **intentionally leaves `.body-wrapper` + `.body-innerwrapper` (and `<body>`/`<html>`) OPEN**; `footer.html` closes them (plus the off-canvas menu and page scripts). **Do NOT auto-format/"balance" these two includes** — an HTML formatter that closes the wrappers early breaks the page wrapper (the home globe stops being clipped by `.body-innerwrapper{overflow-x:hidden}` and the mobile layout overflows). `.prettierignore` guards them. `header.html` div balance must be net **+2** opens.
 
+## SEO
+- **`{% seo title=false %}`** in `header.html` (jekyll-seo-tag) emits the meta description, canonical, OpenGraph, Twitter Card and a WebSite/WebPage JSON-LD. `title=false` is deliberate — we keep our own `<title>` (the ported page titles) above it, so seo-tag does NOT append "| VpnHood!". Don't add a manual `<meta description>`/`<link canonical>` — that duplicates seo-tag.
+- Configured in `_config.yml`: `url`, `title`, `description`, `logo`, `twitter`, `social.links`, and a `defaults` `image:` = `/assets/images/og-image.png` (the default OG/Twitter card; override per page with front matter `image:`).
+- A hand-written **Organization** JSON-LD lives in the header (seo-tag already emits WebSite — don't duplicate it). FAQ pages also emit **FAQPage** JSON-LD via the FAQ component.
+- `robots.txt` points at `https://www.vpnhood.com/sitemap.xml`; `jekyll-sitemap` generates it. Utility pages (`404.html`) carry `noindex: true` + `sitemap: false`; `header.html` renders the `noindex` robots meta from `page.noindex`.
+- Performance: `<link rel="preconnect">` to Google Fonts; per-page LCP image preload via front matter `preload_image:` (home preloads the hero phone mockup).
+- Known quirk: seo-tag strips the ` | ` separator from `og:title` (so `Free VPN | VpnHood! CONNECT` → og:title `Free VPN VpnHood! CONNECT`); the visible `<title>` is unaffected.
+
 ## CSS Rules
 **Core principle: framework CSS is vendored, our CSS is authored as SCSS.** Reach for Bootstrap utilities and existing Helix/VpnHood classes before writing any CSS; the same visual pattern must use the same class on every page.
 

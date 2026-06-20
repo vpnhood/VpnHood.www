@@ -22,21 +22,47 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="author" content="VpnHood" />
-    <meta
-      name="description"
-      content="{{ page.description | default: site.description }}"
-    />
     {% if page.noindex %}
     <meta name="robots" content="noindex, nofollow" />
     {% endif %}
     <title>{{ page.title | default: site.title }}</title>
-    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+    <!-- SEO: jekyll-seo-tag emits meta description, canonical, OpenGraph, Twitter
+         Card, a WebSite JSON-LD, etc. title=false keeps our own page title above. -->
+    {% seo title=false %}
+
+    <!-- Organization structured data (seo-tag already emits the WebSite entity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "VpnHood!",
+      "url": "{{ site.url }}/",
+      "logo": {{ "/assets/images/site-icon.png" | absolute_url | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "email": "support@vpnhood.com",
+      "sameAs": [
+        "https://x.com/vpnhood",
+        "https://www.linkedin.com/company/vpnhood",
+        "https://www.instagram.com/vpnhood",
+        "https://github.com/vpnhood/VpnHood"
+      ]
+    }
+    </script>
 
     <link
       href="/assets/images/favicon.ico"
       rel="icon"
       type="image/vnd.microsoft.icon"
     />
+
+    <!-- Speed up Google Fonts + optional LCP image preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {% if page.preload_image %}
+    <link rel="preload" as="image" href="{{ page.preload_image }}" fetchpriority="high" />
+    {% endif %}
 
     <!-- Framework / vendor CSS (Bootstrap + Helix + Joomla), bundled unmodified -->
     <link href="/assets/css/vendor.bundle.css" rel="stylesheet" />

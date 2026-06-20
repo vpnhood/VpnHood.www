@@ -6,6 +6,26 @@ baseurl: ""
 lang: en-us
 author: VpnHood
 
+# Social media & SEO (consumed by jekyll-seo-tag)
+logo: /assets/images/site-icon.png
+twitter:
+  username: vpnhood
+  card: summary_large_image
+social:
+  name: VpnHood!
+  links:
+    - https://x.com/vpnhood
+    - https://www.linkedin.com/company/vpnhood
+    - https://www.instagram.com/vpnhood
+    - https://github.com/vpnhood/VpnHood
+
+# Default OG/Twitter image for every page (override per page with front matter `image:`)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-image.png
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
