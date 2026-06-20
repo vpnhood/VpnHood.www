@@ -5,3 +5,9 @@
 /.vs
 /_site/
 /.idea/
+
+# Working/scratch material — downloaded source pages, scratch assets, debug tooling.
+# Not part of the published site; excluded from build (_config.yml) and from the repo.
+/_reference/
+node_modules/
+.jekyll-cache/

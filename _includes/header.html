@@ -150,23 +150,9 @@
       <div class="body-innerwrapper">
         <div class="sticky-header-placeholder"></div>
         <header id="sp-header" class="full-header full-header-center">
-          <!-- China-only promo bar: hidden by default; shown client-side when the
-               Cloudflare edge reports the visitor is in CN. See /assets/js/china-bar.js.
-               Preview locally with ?geo=CN -->
-          <div id="mod-custom128" class="mod-custom custom" style="display: none">
-            <div id="chinaBar">
-              <div id="barTextWrapper">
-                <p class="txt-purple-l-1 me-lg-5">您想要购买高级代码吗？您在中国吗？</p>
-                <a id="chinaTopBarLink" href="https://www.c-hood.com/login" class="vh-btn vh-btn-light-purple px-3 py-1">
-                  <span>从这里开始</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path></svg>
-                </a>
-              </div>
-              <button id="closeChinaBar" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"><path fill="#7b7afe" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" opacity="0.3"></path><path fill="#7b7afe" d="M8.97 8.97a.75.75 0 0 1 1.06 0L12 10.94l1.97-1.97a.75.75 0 1 1 1.06 1.06L13.06 12l1.97 1.97a.75.75 0 0 1-1.06 1.06L12 13.06l-1.97 1.97a.75.75 0 0 1-1.06-1.06L10.94 12l-1.97-1.97a.75.75 0 0 1 0-1.06"></path></svg>
-              </button>
-            </div>
-          </div>
+          <!-- China-only promo bar is injected here client-side (CN visitors only)
+               by /assets/js/china-bar.js — intentionally NOT in static HTML so it
+               has zero SEO impact. Preview locally with ?geo=CN -->
           <div class="container">
             <div class="container-inner">
               <div class="row align-items-center position-relative">
