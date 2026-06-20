@@ -1,0 +1,25 @@
+// China promo bar layout (shown for CN visitors; injected by /assets/js/china-bar.js).
+//
+// The bar is injected into <body> OUTSIDE #sp-header so the header keeps its own
+// natural height (Helix's sticky measurements stay correct). It is a fixed bar
+// pinned to the top; we reserve its height via the --china-bar-h custom property
+// so nothing renders underneath it:
+//   * the (fixed) header is pushed down below the bar
+//   * in-flow page content is padded down by the same amount
+// Removing the bar (close button) drops .has-china-bar and the spacing reverts.
+
+#mod-custom128 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; // above the header (99); below the offcanvas menu (10000)
+}
+
+body.has-china-bar #sp-header {
+  top: var(--china-bar-h, 0px);
+}
+
+body.has-china-bar .body-wrapper {
+  padding-top: var(--china-bar-h, 0px);
+}

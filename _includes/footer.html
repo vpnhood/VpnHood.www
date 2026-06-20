@@ -96,8 +96,9 @@
         <!-- VpnHood general js -->
         <script src="/assets/js/vh-general.js"></script>
 
-        <!-- China-only promo bar (shown client-side when geo = CN) -->
-        <script src="/assets/js/china-bar.js"></script>
+        <!-- China-only promo bar (shown client-side when geo = CN). defer = never blocks render;
+             the geo lookup is async, so the page loads first and the bar appears after. -->
+        <script defer src="/assets/js/china-bar.js"></script>
 
         <!-- AOS animate -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -38,22 +38,38 @@
       '</div>' +
     '</div>';
 
+  function setBarHeight(bar) {
+    // Reserve the bar's height so the (fixed) header and page content sit below it.
+    document.documentElement.style.setProperty('--china-bar-h', bar.offsetHeight + 'px');
+  }
+
   function inject() {
-    var header = document.getElementById('sp-header');
-    if (!header || document.getElementById('mod-custom128')) return;
+    if (document.getElementById('mod-custom128')) return;
     var tmp = document.createElement('div');
     tmp.innerHTML = BAR_HTML;
     var bar = tmp.firstChild;
-    header.insertBefore(bar, header.firstChild);
+
+    // Inject OUTSIDE #sp-header (into <body>) so the header keeps its natural
+    // height and Helix's sticky measurements stay correct.
+    document.body.insertBefore(bar, document.body.firstChild);
+    document.body.classList.add('has-china-bar');
+    setBarHeight(bar);
+
+    // Keep the reserved space correct if the bar wraps/reflows on resize.
+    var onResize = function () {
+      if (document.getElementById('mod-custom128')) setBarHeight(bar);
+    };
+    window.addEventListener('resize', onResize);
 
     var closeBtn = document.getElementById('closeChinaBar');
     if (closeBtn) {
       closeBtn.addEventListener('click', function () {
-        bar.parentNode && bar.parentNode.removeChild(bar); // gone for this view only
-        window.dispatchEvent(new Event('resize'));          // let Helix recompute header height
+        if (bar.parentNode) bar.parentNode.removeChild(bar); // gone for this view only
+        document.body.classList.remove('has-china-bar');
+        document.documentElement.style.removeProperty('--china-bar-h');
+        window.removeEventListener('resize', onResize);
       });
     }
-    window.dispatchEvent(new Event('resize'));
   }
 
   function detect() {
