@@ -1,0 +1,43 @@
+// Legal pages (privacy policy / terms of use) — styles the Markdown rendered by
+// _includes/legal-page.html. Kept readable on the site's dark theme with comfortable
+// spacing and a contained measure for long-form text.
+
+.legal-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 0 80px; // clear the fixed header, breathing room at the bottom
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 1.75rem;
+    margin-bottom: .75rem;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 1.1rem;
+    line-height: 1.7;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.4rem;
+  }
+
+  li {
+    margin-bottom: .4rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,26 @@
+{%- comment -%}
+Renders a legal document (privacy policy / terms of use) from Markdown into the
+shared page shell. The Markdown lives in _includes/legals/, synced from the VpnHood
+GitHub wiki at BUILD time (see .github/workflows/jekyll.yml), so the published HTML
+is static (SEO-friendly, no runtime fetch) yet stays in sync with the wiki.
+
+Usage:  {% capture md %}{% include legals/<Page>.md %}{% endcapture %}
+        {% include legal-page.html md=md %}
+{%- endcomment -%}
+<section id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body legal-content" data-aos="fade-up">
+                {{ include.md | markdownify }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

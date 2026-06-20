@@ -9,6 +9,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Rebuild weekly so legal pages stay synced with the GitHub wiki even when no
+  # code is pushed (the wiki can change independently of this repo).
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
 
 # Permissions required by the official Pages deploy actions.
 permissions:
@@ -37,6 +41,17 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      # Pull the latest legal text from the VpnHood GitHub wiki so the privacy /
+      # terms pages stay synced. Baked into static HTML at build time (no runtime
+      # fetch). If a fetch fails, the step fails and the build is skipped — that's
+      # fine: GitHub Pages keeps serving the previous successful deployment.
+      - name: Sync legal pages from wiki
+        run: |
+          for p in VpnHood-CLIENT-Privacy-Policy VpnHood-CONNECT-Privacy-Policy VpnHood-MANAGER-Privacy-Policy VpnHood-MANAGER-Terms-of-Use; do
+            curl -sfL "https://raw.githubusercontent.com/wiki/vpnhood/VpnHood/$p.md" -o "_includes/legals/$p.md"
+            echo "synced $p"
+          done
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
