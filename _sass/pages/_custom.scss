@@ -1,0 +1,346 @@
+
+#sp-main-body{
+    position: relative;
+    z-index: 0;
+}
+#sp-main-body:before,
+#sp-main-body:after{
+    content: "";
+    position: fixed;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-size: cover;
+    opacity: .8;
+}
+#sp-main-body:before{
+    background-image: url("/assets/images/general/light-bg-left.svg");
+    background-position: bottom right;
+    top: 0;
+    left: -10%;
+}
+#sp-main-body:after{
+    background-image: url("/assets/images/general/light-bg-right.svg");
+    background-position: top left;
+    bottom: 0;
+    right: -10%;
+}
+@media (max-width: 1199px) {
+    #sp-main-body:before{
+        top: -30%;
+        left: 0;
+    }
+    #sp-main-body:after{
+        bottom: -30%;
+        right: 0;
+    }
+}
+/*-------------- Pricing page --------------*/
+/*-------------- VpnHood! Connect page --------------*/
+#screenshotSlider .item {
+    flex-shrink: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+#downloadIconsWrapper>div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    min-width: 200px;
+    min-height: 200px;
+    background: url("/assets/images/general/purple-hexagon.svg") no-repeat center center;
+    background-size: contain;
+}
+@media (max-width: 767px)  and (min-width: 366px){
+    #downloadIconsWrapper>div:first-child{
+        margin-bottom: -24px;
+    }
+}
+@media (max-width: 575px) {
+    #downloadIconsWrapper>div{
+        min-width: 175px;
+        min-height: 175px;
+    }
+}
+#downloadIconsWrapper>div:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    top: 100px;
+    width: 100%;
+    max-width: 200px;
+    height: 25%;
+    box-shadow: inset 10px 10px 84px -7px rgba(var(--purple-300-rgb), .3);
+}
+#appWrapper{
+    position: relative;
+    background: url("/assets/images/vpnhood-connect/download-pending-bg.webp") no-repeat center center;
+    height: 709px;
+}
+#rotateCircleWrapper{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--purple-300);
+    top: 145px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+#rotateCircle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: rotate 3s linear infinite;
+}
+#rotateCircle:before, #rotateCircle:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--purple-300);
+}
+#rotateCircle:before {
+    bottom: 13%;
+    left: 7%;
+}
+#rotateCircle:after {
+    top: 13%;
+    right: 7%;
+}
+#downloadBtnWrapper{
+    position: absolute;
+    top: 330px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#rocketWrapper{
+    position: relative;
+    background: url("/assets/images/general/purple-hole.webp") no-repeat center bottom;
+    background-size: 100%;
+    height: 470px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+#rocketWrapper:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: url("/assets/images/general/purple-hole-overlap.webp") no-repeat center bottom;
+    background-size: 100%;
+}
+#rocket{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 165px;
+}
+#rocketWrapper .star-effect{
+    max-width: 600px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+#guaranteeCircle{
+    width: 138px;
+    height: 138px;
+    background: url("/assets/images/general/purple-grad-circle.webp") no-repeat center center;
+}
+#goPremium #featuresTextWriter{
+    max-width: 500px;
+    z-index: 1;
+    position: relative;
+}
+@media (max-width: 991px) {
+    #appWrapper{
+        background-size: contain;
+        height: 523px;
+    }
+    #rotateCircleWrapper{
+        top: 86px;
+    }
+    #downloadBtnWrapper{
+        top: 266px;
+    }
+    #rocketWrapper,#rocketWrapper:after{
+        background-size: contain;
+    }
+    #rocketWrapper{
+        height: 500px;
+    }
+    #rocket {
+        bottom: 175px;
+        width: 100px;
+    }
+}
+@media (max-width: 767px) {
+    #appWrapper{
+        background-size: 575px;
+        height: 425px;
+    }
+    #rotateCircleWrapper{
+        width: 130px;
+        height: 130px;
+        top: 59px;
+    }
+    #downloadBtnWrapper{
+        top: 213px;
+    }
+    #downloadBtnWrapper>a{
+        padding: 8px 15px;
+    }
+    #rocket {
+        bottom: 29%;
+        width: 15%;
+    }
+    #rocketWrapper {
+        height: 380px;
+    }
+}
+@media (max-width: 575px) {
+    .multiTextWriter{
+        font-size: 13px;
+    }
+}
+@media (max-width: 425px) {
+    #rocketWrapper {
+        height: 312px;
+    }
+    #featuresTextWriter>svg{
+        width: 25px;
+        height: 25px;
+    }
+}
+@media (max-width: 375px) {
+    #rocketWrapper {
+        height: 275px;
+    }
+}
+/*-------------- VpnHood! Connect free vs premium page --------------*/
+#appMockupWrapper{
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 65px auto;
+}
+#appMockupWrapper .circle-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--purple-300-rgb), var(--vh-circle-border-opacity));
+    animation: rotate 25s linear infinite;
+}
+#appMockupWrapper .circle-wrapper.circle-1{
+    width: 47%;
+    height: 47%;
+    --vh-circle-border-opacity: .5;
+    --vh-shadow-blur: 145px;
+    --vh-shadow-spread: 150px;
+    background-color: rgba(var(--purple-400-rgb), .5);
+    box-shadow: 0 0 var(--vh-shadow-blur) var(--vh-shadow-spread) rgba(var(--purple-400-rgb), .4);
+}
+#appMockupWrapper .circle-wrapper.circle-2{
+    width: 56%;
+    height: 56%;
+    --vh-circle-border-opacity: .4;
+    animation-duration: 30s;
+}
+#appMockupWrapper .circle-wrapper.circle-3{
+    width: 66%;
+    height: 66%;
+    --vh-circle-border-opacity: .35;
+    animation-duration: 27s;
+}
+#appMockupWrapper .circle-wrapper.circle-4{
+    width: 78%;
+    height: 78%;
+    --vh-circle-border-opacity: .3;
+    animation-duration: 32s;
+}
+#appMockupWrapper .circle-wrapper.circle-5{
+    width: 89%;
+    height: 89%;
+    --vh-circle-border-opacity: .2;
+    animation-duration: 30s;
+}
+#appMockupWrapper .circle-wrapper.circle-6{
+    width: 100%;
+    height: 100%;
+    --vh-circle-border-opacity: .18;
+    animation-duration: 35s;
+}
+#appMockupWrapper .blob-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#appMockupWrapper .blob-wrapper:before,
+#appMockupWrapper .blob-wrapper:after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(var(--vh-blob-bg-color));
+    --vh-blob-shadow: 6px;
+    box-shadow: 0 0 0 var(--vh-blob-shadow) rgba(var(--vh-blob-bg-color), .3);
+}
+#appMockupWrapper .circle-1>.blob-wrapper:before{
+    top: -2%;
+    left: 49%;
+    --vh-blob-bg-color: var(--purple-300-rgb);
+}
+#appMockupWrapper .circle-1>.blob-wrapper:after{
+    bottom: -2%;
+    left: 49%;
+    --vh-blob-bg-color: var(--green-100-rgb);
+}
+#appMockupWrapper .circle-2>.blob-wrapper:before{
+    top: 30%;
+    left: 95%;
+    --vh-blob-bg-color: var(--green-100-rgb);
+}
+#appMockupWrapper .circle-2>.blob-wrapper:after{
+    bottom: 40%;
+    left: -1%;
+    --vh-blob-bg-color: var(--purple-300-rgb);
+}
+#appMockupWrapper .circle-3>.blob-wrapper:before{
+    top: 18%;
+    left: 9%;
+    --vh-blob-bg-color: var(--green-100-rgb);
+}
+#appMockupWrapper .circle-3>.blob-wrapper:after{
+    bottom: 17%;
+    left: 88%;
+    --vh-blob-bg-color: var(--purple-300-rgb);
+}
+#appMockupWrapper .circle-4>.blob-wrapper:before{
+    top: 3%;
+    left: 29%;
+    --vh-blob-bg-color: var(--purple-300-rgb);
+}
+#appMockupWrapper .circle-4>.blob-wrapper:after{
+    bottom: -3%;
+    left: 73%;
+}
