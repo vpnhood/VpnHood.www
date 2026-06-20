@@ -35,5 +35,5 @@ exclude:
   - .vscode/
 
 # GitHub Pages
-safe: false
+safe: true
 incremental: false
