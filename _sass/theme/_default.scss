@@ -1019,7 +1019,7 @@ iconify-icon {
 }
 /*-------------- China bar --------------*/
 #chinaBar{
-    background: url("../../images/china-country.webp") no-repeat left center, linear-gradient(to right, var(--purple-700), var(--purple-600)) no-repeat;
+    background: url("/assets/images/china-country.webp") no-repeat left center, linear-gradient(to right, var(--purple-700), var(--purple-600)) no-repeat;
     background-size: contain;
     border-bottom: 1px solid var(--purple-400);
     min-height: 104px;
@@ -1057,7 +1057,7 @@ iconify-icon {
 }
 @media (max-width: 680px) {
     #chinaBar{
-        background: url("../../images/china-country.webp") no-repeat center top, var(--purple-700);
+        background: url("/assets/images/china-country.webp") no-repeat center top, var(--purple-700);
         background-size: 150px;
         padding-top: 100px;
     }

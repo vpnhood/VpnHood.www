@@ -17,38 +17,37 @@
     <title>{{ page.title | default: site.title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 
-    <link href="/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
-    <link href="/media/vendor/joomla-custom-elements/css/joomla-alert.min.css" rel="stylesheet">
+    <link href="/assets/images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+
+    <!-- Framework / vendor CSS (Bootstrap + Helix + Joomla), bundled unmodified -->
+    <link href="/assets/css/vendor.bundle.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
-    <link href="/templates/vpnhood/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/plugins/system/helixultimate/assets/css/system-j4.min.css" rel="stylesheet">
-    <link href="/templates/vpnhood/css/template.css" rel="stylesheet">
-    <link href="/templates/vpnhood/css/presets/default.css" rel="stylesheet">
+    <!-- Page-specific CSS, then VpnHood's own global styles (compiled from SCSS) -->
     {% if page.extra_css %}{% for c in page.extra_css %}<link href="{{ c }}" rel="stylesheet">
-    {% endfor %}{% endif %}<link href="/templates/vhood_default.css" rel="stylesheet">
+    {% endfor %}{% endif %}<link href="/assets/css/style.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>body{font-family:'Poppins',sans-serif;font-size:16px;text-decoration:none;}</style>
     <style>.logo-image{height:50px;}.logo-image-phone{height:50px;}</style>
 
     <!-- Core / framework JS (jQuery, Bootstrap, Joomla, Helix menu) -->
-    <script src="/media/vendor/jquery/js/jquery.min.js"></script>
-    <script src="/media/legacy/js/jquery-noconflict.min.js"></script>
-    <script src="/media/mod_menu/js/menu.min.js" type="module"></script>
-    <script src="/media/system/js/core.min.js"></script>
-    <script src="/media/vendor/bootstrap/js/alert.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/button.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/carousel.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/collapse.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/dropdown.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/modal.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/offcanvas.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/popover.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/scrollspy.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/tab.min.js" type="module"></script>
-    <script src="/media/vendor/bootstrap/js/toast.min.js" type="module"></script>
-    <script src="/media/system/js/showon.min.js" type="module"></script>
-    <script src="/media/system/js/messages.min.js" type="module"></script>
-    <script src="/templates/vpnhood/js/main.js"></script>
+    <script src="/assets/js/vendor/jquery.min.js"></script>
+    <script src="/assets/js/vendor/jquery-noconflict.min.js"></script>
+    <script src="/assets/js/vendor/menu.min.js" type="module"></script>
+    <script src="/assets/js/vendor/core.min.js"></script>
+    <script src="/assets/js/vendor/bootstrap/alert.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/button.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/carousel.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/collapse.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/dropdown.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/modal.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/offcanvas.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/popover.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/scrollspy.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/tab.min.js" type="module"></script>
+    <script src="/assets/js/vendor/bootstrap/toast.min.js" type="module"></script>
+    <script src="/assets/js/vendor/showon.min.js" type="module"></script>
+    <script src="/assets/js/vendor/messages.min.js" type="module"></script>
+    <script src="/assets/js/main.js"></script>
 </head>
 <body class="site helix-ultimate hu en-us ltr sticky-header layout-fluid offcanvas-init offcanvs-position-left">
     <!-- Google Tag Manager (noscript) -->
@@ -75,8 +74,8 @@
 													
 							<div class="logo"><a href="/" class="d-flex align-items-center">
 				<img class='logo-image '
-					srcset='/images/site-icon.png 1x'
-					src='/images/site-icon.png'
+					srcset='/assets/images/site-icon.png 1x'
+					src='/assets/images/site-icon.png'
 					height='50px'
 					width='50px'
 					alt='VpnHood!'
@@ -91,19 +90,19 @@
 						<div class="menu-with-offcanvas d-flex justify-content-between align-items-center flex-auto">
 							<nav class="sp-megamenu-wrapper d-flex" role="navigation"><ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block"><li class="sp-menu-item active"><a   href="/"  >Home</a></li><li class="sp-menu-item sp-has-child vh-mega-menu has-graphic"><span  class=" sp-menu-heading"  >Free VPN</span><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-center" style="width: 100%;left: -50px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-7"><ul class="sp-mega-group"><li class="item-120 module "><div class="sp-module "><div class="sp-module-content">
 <div id="mod-custom120" class="mod-custom custom">
-    <div class="d-flex align-items-center"><img class="rounded-4" src="/images/general/connect-logo.svg" width="67" height="67" alt="VpnHood! CONNECT logo">
+    <div class="d-flex align-items-center"><img class="rounded-4" src="/assets/images/general/connect-logo.svg" width="67" height="67" alt="VpnHood! CONNECT logo">
 <h4 class="text-white ms-3 mb-0">VpnHood! <span class="text-uppercase vh-txt-purple-300">connect</span></h4>
 </div>
 <p class="vh-txt-purple-100 mt-3 mb-0 small">Free, secure, and open-source VPN with a global server network designed to protect your online privacy and ensure secure access to the web.</p></div>
 </div></div></li></ul></div><div class="col-sm-5"><ul class="sp-mega-group"><li class="item-306 menu_item item-header"><a   href="/free-vpn"  >Free VPN Overview</a></li><li class="item-245 menu_item item-header"><a   href="/free-vpn/features"  >Features</a></li><li class="item-191 menu_item item-header"><a   href="/free-vpn/download"  >Download</a></li><li class="item-264 menu_item item-header"><a   href="/free-vpn/free-vs-premium"  >Free vs Premium</a></li><li class="item-160 menu_item item-header"><a   href="/free-vpn/go-premium"  >Go premium</a></li></ul></div></div></div></div></li><li class="sp-menu-item"><a   href="/reseller"  >Reseller</a></li><li class="sp-menu-item sp-has-child vh-mega-menu has-graphic"><span  class=" sp-menu-heading"  >Self-Hosted VPN</span><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-center" style="width: 100%;left: -50px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-7"><ul class="sp-mega-group"><li class="item-121 module "><div class="sp-module "><div class="sp-module-content">
 <div id="mod-custom121" class="mod-custom custom">
     <div class="d-flex align-items-center justify-content-center gap-4">
-  <img class="rounded-4" src="/images/general/manager-logo.webp" width="67" height="67" alt="VpnHood! MANAGER logo">
+  <img class="rounded-4" src="/assets/images/general/manager-logo.webp" width="67" height="67" alt="VpnHood! MANAGER logo">
   <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24">
     <path fill="#9066fb" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" opacity=".3"></path>
     <path fill="#9066fb" d="M12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25z"></path>
   </svg>
-  <img class="rounded-4" src="/images/general/client-logo.svg" width="67" height="67" alt="VpnHood! CLIENT logo">
+  <img class="rounded-4" src="/assets/images/general/client-logo.svg" width="67" height="67" alt="VpnHood! CLIENT logo">
 </div>
 <p class="vh-txt-purple-100 mt-3 mb-0 small">
   Free panel for managing VPN services and servers, designed for those who wish to set up their own VPN service with a free, secure, and open-source VPN client app.

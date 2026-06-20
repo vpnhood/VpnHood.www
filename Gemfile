@@ -2,14 +2,11 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3"
 gem "webrick", "~> 1.8"
-gem "minima", "~> 2.5"
 gem "logger"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
-  gem "jekyll-redirect-from"
 end
 
 # Windows and JRuby do not include zoneinfo files

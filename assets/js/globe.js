@@ -91,7 +91,7 @@ var isHidden = false;
 function getData() {
 
   var request = new XMLHttpRequest();
-  request.open('GET', '/templates/globe-points.json', true);
+  request.open('GET', '/assets/js/globe-points.json', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
