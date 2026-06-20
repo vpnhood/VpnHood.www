@@ -1,0 +1,9 @@
+# These Jekyll includes intentionally contain UNBALANCED tags:
+# header.html opens .body-wrapper/.body-innerwrapper (and <body>/<html>);
+# footer.html closes them. Auto-formatting "balances" them and breaks the
+# page wrapper (causes mobile horizontal overflow). Never reformat these.
+_includes/header.html
+_includes/footer.html
+# Build output / scratch
+_site/
+_reference/
