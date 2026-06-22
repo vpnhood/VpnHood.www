@@ -38,7 +38,7 @@ jQuery(function ($) {
 	 * Helix settings data
 	 *
 	 */
-	var settings = Joomla.getOptions('data') || {};
+	var settings = (window.Joomla && Joomla.getOptions && Joomla.getOptions('data')) || {};
 
 	/**
 	 * sticky header
