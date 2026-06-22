@@ -7,7 +7,7 @@
 			"command": "cmd.exe",
 			"args": [
 				"/c",
-				"cd /d c:\\Repositories\\startup\\paymenthood-www & C:\\Ruby33-x64\\bin\\bundle.bat exec -- jekyll serve --livereload --host 127.0.0.1 --port 4000"
+				"cd /d c:\\Users\\Developer\\source\\repos\\Vh\\VpnHood.www & C:\\Ruby34-x64\\bin\\bundle.bat exec -- jekyll serve --livereload --host 127.0.0.1 --port 4000"
 			],
 			"isBackground": true,
 			"problemMatcher": [],
