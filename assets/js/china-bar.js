@@ -16,7 +16,8 @@
  * Geo source (in order):
  *   1. ?geo=CN query param     -> manual preview/testing
  *   2. localStorage 'vh_geo'   -> sticky manual override
- *   3. Cloudflare /cdn-cgi/trace (loc=CN) -> production (site is served via Cloudflare)
+ *   3. Cloudflare /cdn-cgi/trace (loc=CN) -> production; same-origin first, then
+ *      www.cloudflare.com as a fallback when this host isn't proxied (see detect())
  *
  * Closing the bar only removes it for the current page view; it reappears on the
  * next load if the visitor is still in CN (no persisted dismissal).
@@ -83,12 +84,29 @@
       if (String(override).toUpperCase() === 'CN') inject();
       return;
     }
-    // 3: production geolocation via Cloudflare edge (same-origin, no CORS).
-    fetch('/cdn-cgi/trace', { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.text() : ''; })
+    // 3: production geolocation via the Cloudflare edge.
+    // Primary: same-origin /cdn-cgi/trace — fast and guaranteed reachable since
+    // the visitor already loaded this (Cloudflare-proxied) site. But it only
+    // exists when THIS hostname is orange-clouded; if the `www` record is ever
+    // DNS-only it 404s on GitHub Pages. Fallback: www.cloudflare.com/cdn-cgi/trace,
+    // which is always behind Cloudflare and sends Access-Control-Allow-Origin:*
+    // so the cross-origin read is allowed. (cloudflare.com can be blocked in CN,
+    // so it's only the backstop, not the primary.)
+    function locFrom(text) {
+      var m = /(?:^|\n)loc=([A-Z]{2})/.exec(text || '');
+      return m ? m[1] : '';
+    }
+    function trace(url) {
+      return fetch(url, { cache: 'no-store' }).then(function (r) {
+        return r.ok ? r.text() : '';
+      });
+    }
+    trace('/cdn-cgi/trace')
       .then(function (text) {
-        var m = /(?:^|\n)loc=([A-Z]{2})/.exec(text || '');
-        if (m && m[1] === 'CN') inject();
+        return locFrom(text) ? text : trace('https://www.cloudflare.com/cdn-cgi/trace');
+      })
+      .then(function (text) {
+        if (locFrom(text) === 'CN') inject();
       })
       .catch(function () { /* not behind Cloudflare / offline: no bar */ });
   }
