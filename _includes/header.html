@@ -67,16 +67,36 @@
 
     <!-- Framework / vendor CSS (Bootstrap + Helix + Joomla), bundled unmodified -->
     <link href="/assets/css/vendor.bundle.css" rel="stylesheet" />
+    <!-- Poppins loaded non-blocking (media swap); body falls back to sans-serif
+         and the font uses display=swap, so it never blocks first paint. -->
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <!-- Page-specific CSS, then VpnHood's own global styles (compiled from SCSS) -->
     {% if page.extra_css %}{% for c in page.extra_css %}
     <link href="{{ c }}" rel="stylesheet" />
     {% endfor %}{% endif %}
     <link href="/assets/css/style.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS animation CSS is non-blocking: it only defines reveal states that are
+         initialized later (vhPlayAnimate, in the footer), not initial layout. -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    </noscript>
     <style>
       body {
         font-family: "Poppins", sans-serif;
