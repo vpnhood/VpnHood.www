@@ -1,9 +1,0 @@
-{
-    "chat.tools.terminal.autoApprove": {
-        "bundle": true,
-        "/^C:\\\\Ruby33-x64\\\\bin\\\\bundle\\.bat lock --add-platform x86_64-linux$/": {
-            "approve": true,
-            "matchCommandLine": true
-        }
-    }
-}
