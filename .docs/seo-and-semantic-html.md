@@ -260,6 +260,21 @@ add a `target="_blank"` link (pages, `header.html`, `footer.html`, templates).
 
 ---
 
+## 7. Performance & Lighthouse
+
+- **Images:** ship WebP sized to display (~2× for retina); downscale oversized
+  sources and keep originals in `.sources/images/` (build-excluded). Add
+  `width`/`height` to `<img>` unless CSS controls its size.
+- **CSS:** `sass: { style: compressed }` in `_config.yml`. Keep critical CSS
+  render-blocking; load non-critical CSS (web fonts, AOS) non-blocking via
+  `media="print" onload="this.media='all'"` + a `<noscript>` fallback.
+- **JS:** `defer` scripts and keep them in dependency order (deferred + module
+  scripts run in document order). Prefer minified vendor builds (`*.min.js`).
+- **A11y:** decorative/redundant icons → `alt="" aria-hidden="true"`; icon-only
+  links/buttons → `aria-label`; never put non-`listitem` children under `role="list"`.
+
+---
+
 ## Why this matters (rationale, in one place)
 
 - Centralizing meta / OG / JSON-LD in seo-tag + `_config.yml` + shared schema
