@@ -114,10 +114,12 @@
     </style>
 
     <!-- Core / framework JS (jQuery, Bootstrap, Joomla, Helix menu) -->
-    <script src="/assets/js/vendor/jquery.min.js"></script>
-    <script src="/assets/js/vendor/jquery-noconflict.min.js"></script>
+    <script defer src="/assets/js/vendor/jquery.min.js"></script>
+    <script defer src="/assets/js/vendor/jquery-noconflict.min.js"></script>
+    <!-- core.min.js (Joomla global) must run before menu/bootstrap modules; defer
+         keeps execution in document order, so it stays ahead of them. -->
+    <script defer src="/assets/js/vendor/core.min.js"></script>
     <script src="/assets/js/vendor/menu.min.js" type="module"></script>
-    <script src="/assets/js/vendor/core.min.js"></script>
     <script
       src="/assets/js/vendor/bootstrap/alert.min.js"
       type="module"
@@ -159,7 +161,7 @@
       src="/assets/js/vendor/bootstrap/toast.min.js"
       type="module"
     ></script>
-    <script src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/main.js"></script>
   </head>
   <body
     class="site helix-ultimate hu en-us ltr sticky-header layout-fluid offcanvas-init offcanvs-position-left"
