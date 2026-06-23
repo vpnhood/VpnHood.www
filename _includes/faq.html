@@ -14,15 +14,17 @@
     eyebrow — eyebrow label above the heading (default: FAQs).
     schema  — emit the FAQPage JSON-LD (default: true).
 {%- endcomment -%}
+{%- comment -%} Questions nest under the section title (h2) on content pages, or under the page's own h1 on /faq (heading=false). {%- endcomment -%}
+{%- if include.heading == false -%}{%- assign q_level = 'h2' -%}{%- else -%}{%- assign q_level = 'h3' -%}{%- endif -%}
 {%- capture faq_accordion -%}
 <div id="faqAccordion" class="accordion accordion-flush px-4 mx-auto">
 {% for faq in include.items %}
   <div class="accordion-item" data-aos="fade-{% cycle 'right', 'left' %}"{% unless forloop.first %} data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endunless %}>
-    <h2 class="accordion-header">
+    <{{ q_level }} class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-{{ forloop.index }}" aria-expanded="false" aria-controls="faq-{{ forloop.index }}">
         {{ faq.q }}
       </button>
-    </h2>
+    </{{ q_level }}>
     <div id="faq-{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
       <div class="accordion-body">{{ faq.a }}</div>
     </div>
@@ -37,9 +39,9 @@
   <div class="container">
     <div class="section-start-text mb-5" data-aos="fade-up">
       <div class="section-label">
-        <h3 class="vh-txt-grad-purple-400">{{ include.eyebrow | default: 'FAQs' }}</h3>
+        <p class="vh-txt-grad-purple-400">{{ include.eyebrow | default: 'FAQs' }}</p>
       </div>
-      <h4 class="section-title vh-txt-grad-purple-400">Frequently Asked Questions</h4>
+      <h2 class="section-title vh-txt-grad-purple-400">Frequently Asked Questions</h2>
       <p class="section-desc">Let's find the answers to your questions.</p>
     </div>
     {{ faq_accordion }}

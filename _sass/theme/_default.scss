@@ -340,7 +340,7 @@ iconify-icon {
     margin-bottom: 20px;
     display: inline-block;
 }
-.section-label>h3{
+.section-label>p{
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 0;
@@ -1140,7 +1140,14 @@ h1, .h1, h2, .h2{
     line-height: 14px;
 }
 .footer-module-title {
-    --bs-heading-color: white;
+    // Footer nav group labels are navigation, not page-outline content, so they are
+    // plain <div>s (not headings) — keeps them out of every page's heading outline and
+    // avoids diluting content h2s. These rules reproduce the previous heading styling.
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
 }
 #sp-footer ul.menu li{
     margin-top: 5px;

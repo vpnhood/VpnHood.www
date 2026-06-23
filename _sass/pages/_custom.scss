@@ -375,7 +375,7 @@
 #compareTable .premiumColumn{
     background-color: rgba(var(--green-100-rgb), .06);
 }
-#compareTable #header .featureColumn h4{
+#compareTable #header .featureColumn :is(h2, h3, h4){
     color: white;
 }
 #compareTable .features-row{
