@@ -16,8 +16,8 @@
  * Geo source (in order):
  *   1. ?geo=CN query param     -> manual preview/testing
  *   2. localStorage 'vh_geo'   -> sticky manual override
- *   3. Cloudflare /cdn-cgi/trace (loc=CN) -> production; same-origin first, then
- *      the apex vpnhood.com as a fallback when this host isn't proxied (see detect())
+ *   3. Cloudflare /cdn-cgi/trace (loc=CN) -> production; always read from the apex
+ *      vpnhood.com (cross-origin) since the site's host may not be proxied (see detect())
  *
  * Closing the bar only removes it for the current page view; it reappears on the
  * next load if the visitor is still in CN (no persisted dismissal).
@@ -84,33 +84,24 @@
       if (String(override).toUpperCase() === 'CN') inject();
       return;
     }
-    // 3: production geolocation via the Cloudflare edge.
-    // Primary: same-origin /cdn-cgi/trace — fast and guaranteed reachable since
-    // the visitor already loaded this (Cloudflare-proxied) site. But it only
-    // exists when THIS hostname is orange-clouded; if the `www` record is ever
-    // DNS-only it 404s on GitHub Pages. Fallback: the apex vpnhood.com/cdn-cgi/trace,
-    // which we keep reliably proxied and which sends Access-Control-Allow-Origin:*
-    // so the cross-origin read is allowed. Apex (not cloudflare.com) is the
-    // fallback because it's the SAME Cloudflare zone as the site, so its China
-    // reachability matches the site itself; cloudflare.com is a separate zone the
-    // GFW can block independently. See .docs/china-bar-geo.md.
-    function locFrom(text) {
-      var m = /(?:^|\n)loc=([A-Z]{2})/.exec(text || '');
-      return m ? m[1] : '';
-    }
-    function trace(url) {
-      return fetch(url, { cache: 'no-store' }).then(function (r) {
-        return r.ok ? r.text() : '';
-      });
-    }
-    trace('/cdn-cgi/trace')
+    // 3: production geolocation via the Cloudflare edge — always the apex
+    // vpnhood.com/cdn-cgi/trace (a cross-origin read; the apex sends
+    // Access-Control-Allow-Origin:* so the browser allows it). We DON'T use
+    // same-origin /cdn-cgi/trace because the site's host (www) isn't necessarily
+    // proxied — on a DNS-only host that 404s on GitHub Pages. The apex is kept
+    // behind Cloudflare, so geo always resolves there. Using OUR apex rather than
+    // www.cloudflare.com matters for China: apex is the SAME Cloudflare zone as
+    // the site (so its CN reachability tracks the site itself), whereas
+    // cloudflare.com is a separate zone the GFW can block independently — which
+    // would lose detection for the exact audience the bar targets.
+    // See .docs/china-bar-geo.md.
+    fetch('https://vpnhood.com/cdn-cgi/trace', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.text() : ''; })
       .then(function (text) {
-        return locFrom(text) ? text : trace('https://vpnhood.com/cdn-cgi/trace');
+        var m = /(?:^|\n)loc=([A-Z]{2})/.exec(text || '');
+        if (m && m[1] === 'CN') inject();
       })
-      .then(function (text) {
-        if (locFrom(text) === 'CN') inject();
-      })
-      .catch(function () { /* not behind Cloudflare / offline: no bar */ });
+      .catch(function () { /* not reachable / offline: no bar */ });
   }
 
   if (document.readyState === 'loading') {
