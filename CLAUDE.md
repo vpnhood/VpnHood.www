@@ -24,14 +24,8 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
 ### Shared header/footer (important)
 `header.html` renders the `<head>`, the framework JS, and the sticky nav, and **intentionally leaves `.body-wrapper` + `.body-innerwrapper` (and `<body>`/`<html>`) OPEN**; `footer.html` closes them (plus the off-canvas menu and page scripts). **Do NOT auto-format/"balance" these two includes** — an HTML formatter that closes the wrappers early breaks the page wrapper (the home globe stops being clipped by `.body-innerwrapper{overflow-x:hidden}` and the mobile layout overflows). `.prettierignore` guards them. `header.html` div balance must be net **+2** opens.
 
-## SEO
-- **Semantic-HTML & SEO conventions (binding for any markup change): [.docs/seo-and-semantic-html.md](.docs/seo-and-semantic-html.md).** Covers the heading outline (one H1, no skipped levels, `tag = level / .hN class = size`, non-outline text is never a heading), title-tag branding (every `title:` must contain "VpnHood!"), inline-SVG a11y (`aria-hidden` vs `aria-label`), and `<ul><li>` for link groups. Read it before editing pages or the shared `header.html`/`footer.html`/`faq.html`.
-- **`{% seo title=false %}`** in `header.html` (jekyll-seo-tag) emits the meta description, canonical, OpenGraph, Twitter Card and a WebSite/WebPage JSON-LD. `title=false` is deliberate — we keep our own `<title>` (the ported page titles) above it, so seo-tag does NOT append "| VpnHood!". Don't add a manual `<meta description>`/`<link canonical>` — that duplicates seo-tag.
-- Configured in `_config.yml`: `url`, `title`, `description`, `logo`, `twitter`, `social.links`, and a `defaults` `image:` = `/assets/images/og-image.png` (the default OG/Twitter card; override per page with front matter `image:`).
-- A hand-written **Organization** JSON-LD lives in the header (seo-tag already emits WebSite — don't duplicate it). FAQ pages also emit **FAQPage** JSON-LD via the FAQ component.
-- `robots.txt` points at `https://www.vpnhood.com/sitemap.xml`; `jekyll-sitemap` generates it. Utility pages (`404.html`) carry `noindex: true` + `sitemap: false`; `header.html` renders the `noindex` robots meta from `page.noindex`.
-- Performance: `<link rel="preconnect">` to Google Fonts; per-page LCP image preload via front matter `preload_image:` (home preloads the hero phone mockup).
-- Known quirk: seo-tag strips the ` | ` separator from `og:title` (so `Free VPN | VpnHood! CONNECT` → og:title `Free VPN VpnHood! CONNECT`); the visible `<title>` is unaffected.
+## SEO & semantic HTML
+**All SEO + semantic-HTML conventions live in [.docs/seo-and-semantic-html.md](.docs/seo-and-semantic-html.md) — read it before editing pages or the shared `header.html`/`footer.html`/`faq.html`.** It covers seo-tag/JSON-LD/sitemap/robots & site metadata, the heading outline (one H1, no skipped levels), title-tag branding (every `title:` must contain "VpnHood!"), inline-SVG a11y, `<ul><li>` link groups, and announcing `target="_blank"` new-tab links. These are binding for any markup change.
 
 ## CSS Rules
 **Core principle: framework CSS is vendored, our CSS is authored as SCSS.** Reach for Bootstrap utilities and existing Helix/VpnHood classes before writing any CSS; the same visual pattern must use the same class on every page.
@@ -68,7 +62,7 @@ On the old Joomla site a `#chinaBar` was emitted server-side only for CN visitor
 - Section head: `<div class="section-start-text" data-aos="fade-up">` → `<div class="section-label"><h3 class="vh-txt-grad-purple-400">eyebrow</h3></div>` → `<h4 class="section-title vh-txt-grad-purple-400">` → `<p class="section-desc">`.
 - Buttons: `<a class="vh-btn vh-btn-primary …">` / `vh-btn-secondary`; text buttons `vh-text-btn vh-txt-purple-300`.
 - Animations are **AOS** (`data-aos="fadeInUp|fade-left|…"`, `data-aos-delay`), initialized on a custom `vhPlayAnimate` event in the footer.
-- **External `target="_blank"` links must announce the new tab** (WCAG 2.4.4 / G201): icon-only links (e.g. social buttons) append ` (opens in new tab)` to their `aria-label`; text links carry a `<span class="visually-hidden"> (opens in new tab)</span>` (Bootstrap utility, from `vendor.bundle.css`) after the visible label. Screen-reader-only — no visual change. Keep this in sync when adding any `target="_blank"` link.
+- External `target="_blank"` links must announce the new tab — see SEO doc §6.
 
 ## Gotchas
 - **Never auto-format `_includes/header.html` or `_includes/footer.html`** — they share intentionally-unbalanced tags (see Page Anatomy). Covered by `.prettierignore`.
