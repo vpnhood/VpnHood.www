@@ -17,7 +17,7 @@
  *   1. ?geo=CN query param     -> manual preview/testing
  *   2. localStorage 'vh_geo'   -> sticky manual override
  *   3. Cloudflare /cdn-cgi/trace (loc=CN) -> production; same-origin first, then
- *      www.cloudflare.com as a fallback when this host isn't proxied (see detect())
+ *      the apex vpnhood.com as a fallback when this host isn't proxied (see detect())
  *
  * Closing the bar only removes it for the current page view; it reappears on the
  * next load if the visitor is still in CN (no persisted dismissal).
@@ -88,10 +88,12 @@
     // Primary: same-origin /cdn-cgi/trace — fast and guaranteed reachable since
     // the visitor already loaded this (Cloudflare-proxied) site. But it only
     // exists when THIS hostname is orange-clouded; if the `www` record is ever
-    // DNS-only it 404s on GitHub Pages. Fallback: www.cloudflare.com/cdn-cgi/trace,
-    // which is always behind Cloudflare and sends Access-Control-Allow-Origin:*
-    // so the cross-origin read is allowed. (cloudflare.com can be blocked in CN,
-    // so it's only the backstop, not the primary.)
+    // DNS-only it 404s on GitHub Pages. Fallback: the apex vpnhood.com/cdn-cgi/trace,
+    // which we keep reliably proxied and which sends Access-Control-Allow-Origin:*
+    // so the cross-origin read is allowed. Apex (not cloudflare.com) is the
+    // fallback because it's the SAME Cloudflare zone as the site, so its China
+    // reachability matches the site itself; cloudflare.com is a separate zone the
+    // GFW can block independently. See .docs/china-bar-geo.md.
     function locFrom(text) {
       var m = /(?:^|\n)loc=([A-Z]{2})/.exec(text || '');
       return m ? m[1] : '';
@@ -103,7 +105,7 @@
     }
     trace('/cdn-cgi/trace')
       .then(function (text) {
-        return locFrom(text) ? text : trace('https://www.cloudflare.com/cdn-cgi/trace');
+        return locFrom(text) ? text : trace('https://vpnhood.com/cdn-cgi/trace');
       })
       .then(function (text) {
         if (locFrom(text) === 'CN') inject();

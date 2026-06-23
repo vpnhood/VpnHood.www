@@ -182,7 +182,13 @@ done
 
 ---
 
-## 4. Inline SVG accessibility
+## 4. Image & inline-SVG accessibility
+
+Every image and inline icon is either **decorative** — it adds nothing a screen
+reader needs because adjacent text already conveys it — or **meaningful**,
+carrying information not available from nearby text. Mark each accordingly.
+
+### Inline `<svg>`
 
 Every inline `<svg>` is either decorative or meaningful — mark it accordingly:
 
@@ -195,6 +201,28 @@ Every inline `<svg>` is either decorative or meaningful — mark it accordingly:
   this, a screen reader announces only the URL.
 
 A bare `<svg>` with neither attribute is a defect.
+
+### `<img>` alt text
+
+Every `<img>` needs an `alt` attribute; its **value** depends on the role:
+
+- **Informative image** (a logo in a label-less slider, a screenshot, a diagram
+  that conveys content): give a short, specific `alt` describing what it shows or
+  names — never the file name.
+- **Decorative image** (a brand/product logo or icon sitting **right next to a
+  heading or label that already names it**, hero artwork, background shapes,
+  mascots): use an **empty `alt=""`** so assistive tech skips it. A non-empty
+  `alt` here is announced **on top of** the adjacent text — the duplication the
+  [axe `image-redundant-alt`](https://dequeuniversity.com/rules/axe/4.11/image-redundant-alt)
+  rule flags. The canonical case on these sites, fixed in both repos: a
+  product/gateway logo immediately followed by an `<h1>`/`<h2>`/`<h3>` of the same
+  name → the logo is `alt=""`.
+- **Never drop `alt` entirely.** A missing attribute makes some screen readers
+  read the file path aloud. Decorative means `alt=""`, not *no* `alt`.
+
+Rule of thumb: if removing the image would lose information that isn't in the
+surrounding text, it's informative — describe it; otherwise it's decorative —
+`alt=""`.
 
 ---
 
@@ -249,5 +277,8 @@ add a `target="_blank"` link (pages, `header.html`, `footer.html`, templates).
   placeholder is an invisible defect.
 - `aria-hidden`/`aria-label` on SVGs and list semantics for link groups are
   low-cost, high-value a11y wins that also keep the DOM clean for crawlers.
+- Decorative `<img alt="">` (and a specific `alt` on informative images) stops a
+  screen reader from reading a logo's name on top of the heading beside it, or
+  announcing a raw file path — the same decorative-vs-meaningful call as SVGs.
 - Announcing `target="_blank"` lets screen-reader users anticipate the context
   switch instead of being silently moved to a new tab.
