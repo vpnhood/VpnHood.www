@@ -68,6 +68,7 @@ On the old Joomla site a `#chinaBar` was emitted server-side only for CN visitor
 - Section head: `<div class="section-start-text" data-aos="fade-up">` → `<div class="section-label"><h3 class="vh-txt-grad-purple-400">eyebrow</h3></div>` → `<h4 class="section-title vh-txt-grad-purple-400">` → `<p class="section-desc">`.
 - Buttons: `<a class="vh-btn vh-btn-primary …">` / `vh-btn-secondary`; text buttons `vh-text-btn vh-txt-purple-300`.
 - Animations are **AOS** (`data-aos="fadeInUp|fade-left|…"`, `data-aos-delay`), initialized on a custom `vhPlayAnimate` event in the footer.
+- **External `target="_blank"` links must announce the new tab** (WCAG 2.4.4 / G201): icon-only links (e.g. social buttons) append ` (opens in new tab)` to their `aria-label`; text links carry a `<span class="visually-hidden"> (opens in new tab)</span>` (Bootstrap utility, from `vendor.bundle.css`) after the visible label. Screen-reader-only — no visual change. Keep this in sync when adding any `target="_blank"` link.
 
 ## Gotchas
 - **Never auto-format `_includes/header.html` or `_includes/footer.html`** — they share intentionally-unbalanced tags (see Page Anatomy). Covered by `.prettierignore`.
