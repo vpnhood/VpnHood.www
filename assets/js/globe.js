@@ -124,7 +124,7 @@ function showFallback() {
   /*
     This function will display an alert if WebGL is not supported.
   */
-  jQuery("#globeWrapper").addClass("d-none");
+  document.getElementById("globeWrapper")?.classList.add("d-none");
   console.log('Could not load the globe-points.json');
 
 }
