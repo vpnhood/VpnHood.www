@@ -94,8 +94,10 @@
 			</div>
 		</div>
 
-		{% if page.globe %}<!-- Interactive server globe (home page only) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+		{% if page.globe %}<!-- Interactive server globe (home page only). three.js is
+     self-hosted, NOT loaded from cdnjs.cloudflare.com, because that CDN is unreliable/
+     blocked in regions we target (e.g. China — see the China promo bar). -->
+<script src="/assets/js/vendor/three.min.js"></script>
 <script src="/assets/js/ThreeOrbitControls.js"></script>
 <script src="/assets/js/globe.js"></script>{% endif %}
 
