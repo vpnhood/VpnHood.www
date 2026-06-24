@@ -13,17 +13,8 @@ function removeTopBar(){
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    //---------------------- Main menu page overlay handler ----------------------
-    jQuery(".sp-megamenu-parent.menu-animation-fade-up .sp-has-child").hover(
-        function () {
-            // Mouse enters the element
-            jQuery("#vhOverlay").css({ "opacity": "1", "visibility": "visible" });
-        },
-        function () {
-            // Mouse leaves the element
-            jQuery("#vhOverlay").removeAttr("style");
-        }
-    );
+    // The desktop mega-menu hover overlay (#vhOverlay) is now driven purely by CSS
+    // (body:has(.vh-mega-menu:hover) #vhOverlay) — no JS handler needed.
 
     //---------------------- Star effect ----------------------
     const stars = document.querySelectorAll('.star-effect');

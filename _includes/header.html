@@ -189,25 +189,20 @@
                     <div
                       class="menu-with-offcanvas d-flex justify-content-between align-items-center flex-auto"
                     >
-                      <nav class="sp-megamenu-wrapper d-flex" role="navigation">
-                        <ul
-                          class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block"
-                        >
-                          <li class="sp-menu-item{% if page.nav_active == 'home' %} active{% endif %}">
+                      <nav class="vh-navbar d-flex" role="navigation">
+                        <ul class="vh-nav d-none d-lg-flex">
+                          <li class="vh-nav-item{% if page.nav_active == 'home' %} active{% endif %}">
                             <a href="/">Home</a>
                           </li>
                           <li
-                            class="sp-menu-item sp-has-child vh-mega-menu has-graphic{% if page.nav_active == 'free-vpn' %} active{% endif %}"
+                            class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'free-vpn' %} active{% endif %}"
                           >
-                            <span class="sp-menu-heading">Free VPN</span>
-                            <div
-                              class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-center"
-                              style="width: 100%; left: -50px"
-                            >
-                              <div class="sp-dropdown-inner">
+                            <span class="vh-nav-link vh-mega-toggle">Free VPN</span>
+                            <div class="vh-mega-panel">
+                              <div class="vh-mega-inner">
                                 <div class="row">
                                   <div class="col-sm-7">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li class="item-120 module">
                                         <div class="sp-module">
                                           <div class="sp-module-content">
@@ -251,7 +246,7 @@
                                     </ul>
                                   </div>
                                   <div class="col-sm-5">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li
                                         class="item-306 menu_item item-header"
                                       >
@@ -293,21 +288,18 @@
                               </div>
                             </div>
                           </li>
-                          <li class="sp-menu-item{% if page.nav_active == 'reseller' %} active{% endif %}">
+                          <li class="vh-nav-item{% if page.nav_active == 'reseller' %} active{% endif %}">
                             <a href="/reseller">Reseller</a>
                           </li>
                           <li
-                            class="sp-menu-item sp-has-child vh-mega-menu has-graphic{% if page.nav_active == 'self-hosted' %} active{% endif %}"
+                            class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'self-hosted' %} active{% endif %}"
                           >
-                            <span class="sp-menu-heading">Self-Hosted VPN</span>
-                            <div
-                              class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-center"
-                              style="width: 100%; left: -50px"
-                            >
-                              <div class="sp-dropdown-inner">
+                            <span class="vh-nav-link vh-mega-toggle">Self-Hosted VPN</span>
+                            <div class="vh-mega-panel">
+                              <div class="vh-mega-inner">
                                 <div class="row">
                                   <div class="col-sm-7">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li class="item-121 module">
                                         <div class="sp-module">
                                           <div class="sp-module-content">
@@ -367,7 +359,7 @@
                                     </ul>
                                   </div>
                                   <div class="col-sm-5">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li
                                         class="item-307 menu_item item-header"
                                       >
@@ -409,31 +401,28 @@
                             </div>
                           </li>
                           <li
-                            class="sp-menu-item sp-has-child vh-mega-menu has-child-group{% if page.nav_active == 'resources' %} active{% endif %}"
+                            class="vh-nav-item vh-mega-menu has-child-group{% if page.nav_active == 'resources' %} active{% endif %}"
                           >
-                            <span class="sp-menu-heading">Resources</span>
-                            <div
-                              class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-center"
-                              style="width: 100%; left: -50px"
-                            >
-                              <div class="sp-dropdown-inner">
+                            <span class="vh-nav-link vh-mega-toggle">Resources</span>
+                            <div class="vh-mega-panel">
+                              <div class="vh-mega-inner">
                                 <div class="row">
                                   <div class="col-sm-4">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li
                                         class="item-252 menu_item item-header"
                                       >
                                         <span
-                                          class="sp-group-title sp-menu-heading"
+                                          class="vh-mega-group-title"
                                           >Support</span
                                         >
                                         <ul
-                                          class="sp-mega-group-child sp-dropdown-items"
+                                          class="vh-mega-group-child"
                                         >
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a href="/faq">FAQ</a>
                                           </li>
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a
                                               rel="noopener noreferrer"
                                               href="https://github.com/vpnhood/VpnHood/discussions"
@@ -442,7 +431,7 @@
                                               >GitHub Discussion<span class="visually-hidden"> (opens in new tab)</span></a
                                             >
                                           </li>
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a
                                               rel="noopener noreferrer"
                                               href="https://github.com/vpnhood/VpnHood/issues"
@@ -451,7 +440,7 @@
                                               >GitHub Issues<span class="visually-hidden"> (opens in new tab)</span></a
                                             >
                                           </li>
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a
                                               href="/user-account-deletion-request"
                                               >User Account Deletion</a
@@ -462,18 +451,18 @@
                                     </ul>
                                   </div>
                                   <div class="col-sm-4">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li
                                         class="item-254 menu_item item-header"
                                       >
                                         <span
-                                          class="sp-group-title sp-menu-heading"
+                                          class="vh-mega-group-title"
                                           >Research</span
                                         >
                                         <ul
-                                          class="sp-mega-group-child sp-dropdown-items"
+                                          class="vh-mega-group-child"
                                         >
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a
                                               rel="noopener noreferrer"
                                               href="https://github.com/vpnhood/VpnHood/blob/main/CHANGELOG.md"
@@ -482,7 +471,7 @@
                                               >Changelog<span class="visually-hidden"> (opens in new tab)</span></a
                                             >
                                           </li>
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a
                                               rel="noopener noreferrer"
                                               href="https://github.com/vpnhood/VpnHood/wiki"
@@ -491,7 +480,7 @@
                                               >Documentation<span class="visually-hidden"> (opens in new tab)</span></a
                                             >
                                           </li>
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a
                                               rel="noopener noreferrer"
                                               href="https://github.com/vpnhood/VpnHood/wiki/How-does-VpnHood-work"
@@ -505,21 +494,21 @@
                                     </ul>
                                   </div>
                                   <div class="col-sm-4">
-                                    <ul class="sp-mega-group">
+                                    <ul class="vh-mega-group">
                                       <li
                                         class="item-253 menu_item item-header"
                                       >
                                         <span
-                                          class="sp-group-title sp-menu-heading"
+                                          class="vh-mega-group-title"
                                           >Company</span
                                         >
                                         <ul
-                                          class="sp-mega-group-child sp-dropdown-items"
+                                          class="vh-mega-group-child"
                                         >
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a href="/contact-us">Contact Us</a>
                                           </li>
-                                          <li class="sp-menu-item">
+                                          <li>
                                             <a href="/about-us">About Us</a>
                                           </li>
                                         </ul>
@@ -562,7 +551,11 @@
                     aria-label="Menu"
                     title="Menu"
                     class="mega offcanvas-toggler-secondary offcanvas-toggler-right d-flex align-items-center"
-                    href="#"
+                    href="#mobileMenu"
+                    role="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu"
+                    aria-controls="mobileMenu"
                   >
                     <div class="burger-icon">
                       <span></span><span></span><span></span>

@@ -92,20 +92,24 @@ body{
     backdrop-filter: blur(16px);
     background: rgba(3, 0, 20, .08);
 }
-/*----- Override parent menu chevron icon -----*/
-@media (min-width: 1200px) {
-    #sp-menu .sp-megamenu-wrapper{
-        position: relative;
-    }
+/*----- Desktop top navigation (de-Helixed; Bootstrap-stack, CSS-hover mega-menu) -----*/
+.vh-navbar{
+    position: relative;
+    flex: auto;              // fill the middle column so the mega panel (width:100%) is full-width
+    align-items: center;
+    justify-content: center; // centre the pill bar (was Helix #sp-menu.menu-center)
 }
-ul.sp-megamenu-parent{
+ul.vh-nav{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style: none;
     background-color: rgba(var(--purple-600-rgb), 0.48);
     border: 1px solid rgba(var(--purple-200-rgb), 0.48);
     border-radius: 50px;
     padding: 4px;
 }
-.sp-megamenu-parent>li.sp-has-child>a:after,
-.sp-megamenu-parent>li.sp-has-child>span:after{
+.vh-mega-menu>.vh-nav-link:after{
     content: "";
     display: inline-block;
     width: 1em;
@@ -121,20 +125,20 @@ ul.sp-megamenu-parent{
     font-size: 1.4em;
     transform: translateY(6px);
 }
-.vh-mega-menu .sp-dropdown.sp-dropdown-main{
-    top: 31px;
-    padding-top: 20px;
-}
-.vh-mega-menu .sp-mega-group{
+.vh-mega-menu .vh-mega-group{
     list-style: disc;
 }
-.vh-mega-menu.has-child-group .sp-mega-group,
-.vh-mega-menu.has-graphic .row>div:first-child .sp-mega-group{
+.vh-mega-menu.has-child-group .vh-mega-group,
+.vh-mega-menu.has-graphic .row>div:first-child .vh-mega-group{
     list-style: none;
     padding: 0;
 }
-.vh-mega-menu.has-graphic .row>div:first-child .sp-mega-group{
+.vh-mega-menu.has-graphic .row>div:first-child .vh-mega-group{
     max-width: 360px;
+}
+.vh-mega-group-child{
+    list-style: disc;
+    padding-left: 1.2rem;
 }
 .vh-mega-menu a{
     padding: 15px 0;
@@ -142,33 +146,32 @@ ul.sp-megamenu-parent{
     display: inline-block;
     cursor: pointer;
 }
-/*fade over content*/
-#vhOverlay {
-    background: rgba(0, 0, 0, 0.7);
-    bottom: 0;
-    left: 0;
-    opacity: 0;
+/*----- Mega panel (absolute, full-width, shown on hover) -----*/
+.vh-mega-panel{
     position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    visibility: hidden;
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+    padding-top: 20px;
+}
+.vh-mega-menu:hover>.vh-mega-panel{
+    display: block;
+    animation: spFadeInUp 400ms ease-in;
 }
 /*Mega menu wrapper*/
-.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+.vh-mega-inner {
     position: relative;
     background: var(--purple-710);
     border: 1px solid rgba(var(--purple-200-rgb), 0.5);
     border-top-width: 0;
     border-radius: 0 0 20px 20px;
     padding: 40px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 /*Mega menu light effect*/
-.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner:before{
+.vh-mega-inner:before{
     content: "";
     position: absolute;
     width: 45%;
@@ -181,35 +184,64 @@ ul.sp-megamenu-parent{
     filter: blur(27px);
     z-index: -1;
 }
+/*fade-over-content overlay — shown on hover via :has(), no JS*/
+#vhOverlay {
+    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+body:has(.vh-mega-menu:hover) #vhOverlay{
+    opacity: 1;
+    visibility: visible;
+}
 #sp-logo a{
     color: white;
 }
-.sp-menu-heading{
+.vh-mega-toggle{
     cursor: default;
 }
-.sp-megamenu-parent>.sp-menu-item>a,
-.sp-megamenu-parent>.sp-menu-item>span {
+.vh-nav>.vh-nav-item>a,
+.vh-nav>.vh-nav-item>span {
+    display: inline-block;
     color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
     line-height:40px;
+    margin: 0;
     padding: 0 17px;
 }
-.sp-megamenu-parent>.sp-menu-item>a:hover,
-.sp-megamenu-parent>.sp-menu-item>span:hover {
+.vh-nav>.vh-nav-item>a:hover,
+.vh-nav>.vh-nav-item>span:hover {
     color: rgba(255, 255, 255, 1);
 }
-.sp-megamenu-parent>.sp-menu-item.active>a,
-.sp-megamenu-parent>.sp-menu-item.active>span{
+.vh-nav>.vh-nav-item.active>a,
+.vh-nav>.vh-nav-item.active>span{
     color: white;
+    font-weight: 500;
     background: linear-gradient(to bottom, var(--purple-400), var(--purple-700));
     border-radius: 50px;
 }
-.sp-megamenu-parent>.sp-menu-item.active .sp-dropdown a[aria-current]{
+.vh-nav>.vh-nav-item.active .vh-mega-panel a[aria-current]{
     color: var(--purple-300);
 }
-.sp-dropdown a{
+.vh-mega-group-title{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.vh-mega-panel li a{
+    font-size: 14px;
+}
+.vh-mega-panel a{
     color: white;
 }
-.sp-dropdown a:hover{
+.vh-mega-panel a:hover{
     color: var(--purple-300);
 }
 #topRightMenu{
@@ -221,62 +253,69 @@ ul.sp-megamenu-parent{
 #topRightMenu .my-account:hover{
     color: var(--purple-300);
 }
-.offcanvas-menu li.deeper.parent>span{
-    color: white;
+// ---- Mobile off-canvas menu (Bootstrap .offcanvas; replaces the Helix off-canvas) ----
+.vh-offcanvas{
+    width: min(320px, 85vw);
+    background-color: var(--purple-700);
+    color: #fff;
 }
-.offcanvas-menu li.deeper.parent>ul>li{
-    padding: 10px 0;
+.vh-offcanvas .offcanvas-header{
+    padding: 1rem 1.25rem 0.25rem;
 }
-.offcanvas-menu ul.mod-menu{
-    flex-direction: column;
+.vh-offcanvas .vh-offcanvas-close{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 0;
 }
-.offcanvas-menu ul.mod-menu>li{
-    padding: 8px 0;
+.vh-offcanvas .offcanvas-body{
+    padding: 0.5rem 1.25rem 1.5rem;
 }
-.offcanvas-menu ul.mod-menu>li:not(:last-child){
-    border-bottom: 1px solid #2a2a2a;
+.vh-offcanvas-nav .nav-link{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
-.offcanvas-inner ul.mod-menu__sub{
-    padding-left: 15px;
+.vh-offcanvas-nav .nav-link:hover,
+.vh-offcanvas-nav .nav-link:focus{
+    color: var(--purple-300);
 }
-.offcanvas-inner ul.mod-menu__sub ul.mod-menu__sub{
-    list-style: square;
-}
-.offcanvas-inner ul.mod-menu__sub>.divider{
-    display: block;
-    margin-left: -15px;
-}
-.offcanvas-inner ul.mod-menu__sub .parent:not(:last-child){
-    border-bottom: 1px rgba(255, 255, 255, .07) solid;
-    margin-bottom: 10px;
-}
-.offcanvas-menu .offcanvas-inner ul.menu>li.menu-parent>.nav-header>.menu-toggler{
-    left: 0;
-    text-align: right;
-}
-.offcanvas-menu .offcanvas-inner ul.menu>li.menu-parent>.nav-header>.menu-toggler:after{
+.vh-offcanvas-nav .vh-submenu-toggle::after{
     content: "";
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m9 5l6 7l-6 7'/%3E%3C/svg%3E");
+    width: 1.1em;
+    height: 1.1em;
+    margin-left: auto;
     background-color: currentColor;
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    font-size: 1.4em;
-    transform: translateY(3px);
-    transition: all .4s ease;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m9 5l6 7l-6 7'/%3E%3C/svg%3E");
+    -webkit-mask: var(--svg) no-repeat center / contain;
+    mask: var(--svg) no-repeat center / contain;
+    transition: transform 0.3s ease;
 }
-.offcanvas-menu .offcanvas-inner ul.menu>li.menu-parent.menu-parent-open>.nav-header>.menu-toggler:after{
+.vh-offcanvas-nav .vh-submenu-toggle[aria-expanded="true"]::after{
     transform: rotate(90deg);
 }
-.offcanvas-menu .offcanvas-inner ul.menu>li>ul li a{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.vh-offcanvas-nav .vh-submenu{
+    padding-left: 0.85rem;
+}
+.vh-offcanvas-nav .vh-submenu li a{
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.vh-offcanvas-nav .vh-submenu li a:hover,
+.vh-offcanvas-nav .vh-submenu li a:focus{
+    color: var(--purple-120);
+}
+// Match the old Helix backdrop look (blurred, slightly darker than Bootstrap's default)
+.offcanvas-backdrop{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.offcanvas-backdrop.show{
+    opacity: 0.7;
 }
 .text-decoration-underline{
     text-underline-offset: 7px;
@@ -285,13 +324,10 @@ ul.sp-megamenu-parent{
     font-size: 13px;
 }
 @media (max-width: 1199px) {
-    .sp-megamenu-parent>.sp-menu-item>a,
-    .sp-megamenu-parent>.sp-menu-item>span {
+    .vh-nav>.vh-nav-item>a,
+    .vh-nav>.vh-nav-item>span {
         padding-left: 8px;
         padding-right: 8px;
-    }
-    .vh-mega-menu .sp-dropdown.sp-dropdown-main{
-        top: 55px;
     }
 }
 @media (min-width: 576px) {
