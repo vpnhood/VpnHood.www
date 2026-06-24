@@ -1,7 +1,7 @@
 /*
  * China promo bar.
  *
- * On the original Joomla site the #chinaBar module was emitted server-side only
+ * On the original site the #chinaBar module was emitted server-side only
  * for visitors geolocated in China. This static site has no server, so we detect
  * the country in the browser and INJECT the bar only for CN visitors.
  *

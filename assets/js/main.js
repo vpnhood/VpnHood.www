@@ -1,12 +1,6 @@
 /**
  * VpnHood site interactions — header/footer behaviour.
- *
- * Vanilla JS, no jQuery and no Joomla/Helix dependency. This replaces the
- * former Helix Ultimate `main.js`; only the behaviours this static site
- * actually uses are kept: preloader (fires `vhPlayAnimate` for AOS), sticky
- * header, scroll-to-top, the mega-menu layout helper, and the mobile
- * off-canvas menu. All the Joomla admin/blog/article cruft was dropped.
- */
+  */
 (function () {
   'use strict';
 
