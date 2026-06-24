@@ -47,7 +47,7 @@ plugins:
 exclude:
   - README.md
   - CLAUDE.md
-  - _reference/
+  - .legacy_joomla/
   - Gemfile
   - Gemfile.lock
   - .github/

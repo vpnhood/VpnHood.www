@@ -440,6 +440,55 @@
     }
 }
 /* Contact page form (FormSubmit) */
+.contact-info-col{
+    position: relative;
+    z-index: 0;
+}
+// Decorative animated glow behind the contact-info cards (restores the
+// original Helix "vh-circle-animation"): a pulsing purple radial glow with
+// two expanding ripple rings. Purely decorative — aria-hidden in the markup.
+.vh-circle-animation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    max-width: 90%;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--purple-300-rgb), .38) 0%, rgba(var(--purple-300-rgb), 0) 68%);
+    z-index: -1;
+    pointer-events: none;
+    animation: vh-circle-pulse 5s ease-in-out infinite;
+}
+.vh-circle-animation:before,
+.vh-circle-animation:after{
+    content: "";
+    position: absolute;
+    inset: 18%;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--purple-300-rgb), .35);
+    animation: vh-circle-ripple 4s cubic-bezier(.6,.6,0,1) infinite;
+}
+.vh-circle-animation:after{
+    animation-delay: 2s;
+}
+@keyframes vh-circle-pulse{
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: .85; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+@keyframes vh-circle-ripple{
+    0% { transform: scale(.7); opacity: 1; }
+    100% { transform: scale(1.7); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce){
+    .vh-circle-animation,
+    .vh-circle-animation:before,
+    .vh-circle-animation:after{
+        animation: none;
+    }
+}
 .contact-info-card svg{
     flex: 0 0 auto;
 }
