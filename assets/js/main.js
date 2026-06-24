@@ -77,10 +77,25 @@
       });
     }
 
-    // The desktop mega-menu opens on hover via CSS (.vh-mega-menu:hover) and the
-    // mobile off-canvas menu and its submenus are handled declaratively by
-    // Bootstrap's Offcanvas + Collapse components (data-bs-* attributes in the
-    // header/footer markup) — no custom JS needed here.
+    // The desktop mega-menu opens on hover via CSS (.vh-mega-menu:hover); the mobile
+    // off-canvas menu + submenus are Bootstrap Offcanvas/Collapse (declarative data-bs-*).
+
+    // ---- Drawer ↔ burger sync (mirror Bootstrap's offcanvas open state onto the
+    // header burger so it animates into an X, and lift the header above the backdrop
+    // so the burger stays the visible close control while the drawer is open). ----
+    var drawer = document.getElementById('mobileMenu');
+    var burger = document.getElementById('offcanvas-toggler');
+    var header = document.getElementById('sp-header');
+    if (drawer && burger) {
+      drawer.addEventListener('show.bs.offcanvas', function () {
+        burger.classList.add('is-open');
+        if (header) header.classList.add('menu-open');
+      });
+      drawer.addEventListener('hide.bs.offcanvas', function () {
+        burger.classList.remove('is-open');
+        if (header) header.classList.remove('menu-open');
+      });
+    }
 
     // ---- Optional Bootstrap tooltips/popovers (no-op unless a page opts in) ----
     if (window.bootstrap) {

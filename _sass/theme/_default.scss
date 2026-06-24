@@ -94,10 +94,11 @@ body{
 }
 /*----- Desktop top navigation (de-Helixed; Bootstrap-stack, CSS-hover mega-menu) -----*/
 .vh-navbar{
-    position: relative;
-    flex: auto;              // fill the middle column so the mega panel (width:100%) is full-width
-    align-items: center;
-    justify-content: center; // centre the pill bar (was Helix #sp-menu.menu-center)
+    // Pill is content-width and centred in the header's middle column. NOT position:relative
+    // and NOT flex:auto — so it never overflows onto the Log In / Go Premium buttons, and the
+    // mega panel (position:absolute) anchors to the header `.row.position-relative` instead,
+    // giving a full-container-width dropdown independent of the pill's width.
+    margin: 0 auto;
 }
 ul.vh-nav{
     display: flex;
@@ -255,9 +256,22 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 }
 // ---- Mobile off-canvas menu (Bootstrap .offcanvas; replaces the Helix off-canvas) ----
 .vh-offcanvas{
-    width: min(320px, 85vw);
+    // Small phones: full-width drawer covers the header burger, so the in-drawer
+    // close (X) is the only close control.
+    width: 100%;
     background-color: var(--purple-700);
     color: #fff;
+}
+// From ~400px up the drawer is a fixed 320px, leaving the header burger clear on the
+// right — it serves as the close (X), so the in-drawer close is hidden to avoid showing
+// two close buttons next to each other.
+@media (min-width: 400px){
+    .vh-offcanvas{
+        width: 320px;
+    }
+    .vh-offcanvas .offcanvas-header{
+        display: none;
+    }
 }
 .vh-offcanvas .offcanvas-header{
     padding: 1rem 1.25rem 0.25rem;
@@ -310,6 +324,21 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 }
 .offcanvas-backdrop.show{
     opacity: 0.7;
+}
+// While the drawer is open: lift the header above the backdrop (1040) but below the
+// drawer panel (1045) so the burger stays the visible/clickable close control, and
+// animate the burger into an X (paymenthood-style — synced by main.js via offcanvas events).
+#sp-header.menu-open{
+    z-index: 1042;
+}
+#offcanvas-toggler.is-open .burger-icon>span:nth-child(1){
+    transform: translate(0, 7px) rotate(-45deg);
+}
+#offcanvas-toggler.is-open .burger-icon>span:nth-child(2){
+    opacity: 0;
+}
+#offcanvas-toggler.is-open .burger-icon>span:nth-child(3){
+    transform: translate(0, -7px) rotate(45deg);
 }
 .text-decoration-underline{
     text-underline-offset: 7px;
