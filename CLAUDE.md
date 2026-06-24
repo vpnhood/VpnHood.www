@@ -18,7 +18,7 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
 - Every page: front matter (`layout: none`, `title`, `description`, `nav_active`, optional `extra_css`) → `{% include header.html %}` → the page's `<section id="sp-main-body">…</section>` content → `{% include footer.html %}`.
 - **The page body (Helix template markup) is wrapped in `{% raw %}…{% endraw %}`** because it can contain stray `{`/`}` that would otherwise trip Liquid. **To use a Liquid tag inside that body (e.g. a component include), break out of raw:** `{% endraw %}{% include faq.html … %}{% raw %}`.
 - `nav_active` drives the active state of the top-level nav in `header.html`: one of `home | free-vpn | reseller | self-hosted | resources` (legal pages use `resources`). Leave unset for pages not in the main nav.
-- `extra_css` is a list of page-specific stylesheets, linked **after** `vendor.bundle.css`/Poppins and **before** `style.css`. Home uses `/assets/css/home.css`; secondary/content pages use `/assets/css/custom.css`.
+- `extra_css` is a list of page-specific stylesheets, linked **after** the framework CSS/Poppins and **before** `style.css`. Home uses `/assets/css/home.css`; secondary/content pages use `/assets/css/custom.css`.
 - The home page sets `globe: true` (loads the three.js server globe — home only) — see footer.
 
 ### Shared header/footer (important)
@@ -30,12 +30,12 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
 ## CSS Rules
 **Core principle: framework CSS is vendored, our CSS is authored as SCSS.** Reach for Bootstrap utilities and existing Helix/VpnHood classes before writing any CSS; the same visual pattern must use the same class on every page.
 
-- **Framework / generated CSS → static `assets/css/vendor.bundle.css`, never hand-converted to Sass.** That bundle is Bootstrap 5.3 + Helix `system-j4` + the Helix-generated `template.css` + the active color preset (plus a small alert web-component), concatenated unmodified (only `url()` paths repointed to `/assets/images/`). Rule of thumb: if a framework ships a Sass source, compile that; otherwise vendor its CSS as-is. Never convert a framework's CSS to Sass yourself.
+- **Framework CSS → two static, vendored files, never hand-converted to Sass:** `assets/css/bootstrap.min.css` (the official **Bootstrap 5.3.3** dist) and `assets/css/helix-theme.css` (the Helix Ultimate theme — `system-j4` + the Helix-generated `template.css` + the active color preset; `url()` paths repointed to `/assets/images/`). Loaded in that order — Bootstrap first, Helix on top. Rule of thumb: if a framework ships a Sass source, compile that; otherwise vendor its CSS as-is. Never convert a framework's CSS to Sass yourself.
 - **VpnHood's own CSS → SCSS in `_sass/`, compiled by Jekyll** (entry files in `assets/css/*.scss`, two `---` lines required):
   - `style.scss` → `_sass/theme/_default.scss` + `_sass/pages/_china-bar.scss` + `_sass/pages/_legal.scss`. Loaded on every page, last in the cascade.
   - `home.scss` → `_sass/pages/_home.scss`. Home only.
   - `custom.scss` → `_sass/pages/_custom.scss`. Secondary/content pages.
-- Head load order: `vendor.bundle.css` → Poppins (Google Fonts) → page `extra_css` → `style.css` → AOS.
+- Head load order: `bootstrap.min.css` → `helix-theme.css` → Poppins (Google Fonts) → page `extra_css` → `style.css` → AOS.
 - Use palette/utility classes already defined in the theme (`vh-txt-grad-purple-400`, `vh-btn vh-btn-primary`, `section-title`, `section-space`, Bootstrap `row`/`col-*`/spacing). New CSS is a last resort; add it to the relevant `_sass/pages/` partial, not inline.
 - Never edit anything under `_site/` (build output). SCSS style: `//` comments, kebab-case class names.
 

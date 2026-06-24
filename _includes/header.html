@@ -65,8 +65,9 @@
     <link rel="preload" as="image" href="{{ page.preload_image }}" fetchpriority="high" />
     {% endif %}
 
-    <!-- Framework / vendor CSS (Bootstrap + Helix + Joomla), bundled unmodified -->
-    <link href="/assets/css/vendor.bundle.css" rel="stylesheet" />
+    <!-- Framework CSS (vendored): official Bootstrap 5.3, then the Helix theme on top -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/helix-theme.css" rel="stylesheet" />
     <!-- Poppins loaded non-blocking (media swap); body falls back to sans-serif
          and the font uses display=swap, so it never blocks first paint. -->
     <link
