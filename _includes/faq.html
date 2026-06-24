@@ -9,8 +9,13 @@
     heading — render the section heading + wrapper (default: true).
               Pass heading=false to emit just the accordion (e.g. the /faq page,
               which supplies its own page heading).
-    explore — show the "Explore full FAQs" link to /faq (default: true).
+    explore — show the "View All FAQs" link to /faq (default: true).
               Pass explore=false on the /faq page itself.
+    wrapper_class — class on the section wrapper, used to control the FAQ's
+                    vertical spacing per page (default: 'section-space', i.e.
+                    200px top + bottom). Footer-adjacent pages pass
+                    'section-space-top' to drop the big bottom gap; pages with
+                    another section after the FAQ (e.g. home) keep the default.
     eyebrow — eyebrow label above the heading (default: FAQs).
     schema  — emit the FAQPage JSON-LD (default: true).
 {%- endcomment -%}
@@ -35,7 +40,7 @@
 {%- if include.heading == false -%}
 {{ faq_accordion }}
 {%- else -%}
-<div id="faq" class="section-space">
+<div id="faq" class="{{ include.wrapper_class | default: 'section-space' }}">
   <div class="container">
     <div class="section-start-text mb-5" data-aos="fade-up">
       <div class="section-label">
@@ -48,7 +53,7 @@
     {% if include.explore != false %}
     <div class="text-center mt-5 pt-4" data-aos="fade-up">
       <a href="/faq" class="vh-text-btn vh-txt-purple-300">
-        Explore full FAQs
+        View All FAQs
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none">
             <path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path>

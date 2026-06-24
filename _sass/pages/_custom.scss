@@ -37,6 +37,24 @@
         right: 0;
     }
 }
+/*-------------- Features list page --------------*/
+// Space between each feature section.
+#featuresDescription > .row + .row{
+    margin-top: 4rem;
+}
+@media (max-width: 991px){
+    // Stacked layout: center the screenshot and add breathing room below it.
+    // Theme sets `img{display:block}`, so center via auto margins, not text-align.
+    #featuresDescription > .row > .col-lg-4 > img{
+        margin-inline: auto;
+    }
+    #featuresDescription > .row > .col-lg-4{
+        margin-bottom: 1.5rem;
+    }
+    #featuresDescription > .row + .row{
+        margin-top: 3rem;
+    }
+}
 /*-------------- Pricing page --------------*/
 /*-------------- VpnHood! Connect page --------------*/
 #screenshotSlider .item {
