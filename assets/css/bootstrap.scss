@@ -1,0 +1,10 @@
+---
+# Bootstrap 5.3.3 — compiled by Jekyll from vendored Sass source to
+# /assets/css/bootstrap.css. Mirrors the paymenthood-www build:
+#   1. bootstrap-overrides — project-owned Bootstrap variables (edit here)
+#   2. bootstrap           — official Bootstrap v5.3.3 source, UNMODIFIED
+# Never edit _sass/vendor/bootstrap/ — customize via the overrides partial.
+# Loaded first in the head cascade, before helix-theme.css.
+---
+@import "vendor/bootstrap-overrides";
+@import "vendor/bootstrap/bootstrap";
