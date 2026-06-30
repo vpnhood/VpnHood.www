@@ -1,4 +1,7 @@
-
+#sp-main-body{padding:100px 0}
+@media (min-width: 992px){
+    #sp-main-body{padding-top:200px}
+}
 #sp-main-body{
     position: relative;
     z-index: 0;
