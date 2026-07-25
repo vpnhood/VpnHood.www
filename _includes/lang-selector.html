@@ -10,7 +10,7 @@
 {% capture vh_lang_items %}{% for vh_lpair in site.data.i18n %}{% assign vh_lcode = vh_lpair[0] %}
   {% if vh_lcode == 'en' %}{% assign vh_lurl = vh_base_url %}{% else %}
     {% capture vh_lurl %}/{{ vh_lcode }}{{ vh_base_url }}{% endcapture %}
-    {% assign vh_lpage = site.pages | where: "url", vh_lurl | first %}
+    {% assign vh_lpage = vh_lang_pages | default: site.pages | where: "url", vh_lurl | first %}
     {% unless vh_lpage %}{% capture vh_lurl %}/{{ vh_lcode }}/{% endcapture %}{% endunless %}
   {% endif %}
   {% assign vh_lname = site.data.languages[vh_lcode] | default: vh_lcode %}

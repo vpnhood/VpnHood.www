@@ -26,6 +26,13 @@ defaults:
     values:
       image: /assets/images/og-image.png
 
+# Generated language trees (vhtranslator output) live under _langs/ to keep the
+# repo root clean. Each generated page carries an explicit `permalink: /<lang>/...`,
+# so they are still served at root URLs (/fa/...). See CLAUDE.md "Translations".
+collections:
+  langs:
+    output: true
+
 # Build settings
 markdown: kramdown
 highlighter: rouge

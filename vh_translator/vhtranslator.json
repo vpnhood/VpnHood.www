@@ -9,7 +9,7 @@
       "terms-of-use/**"
     ],
     "languages": ["fa"],
-    "output": "{lang}/{path}",
+    "output": "_langs/{lang}/{path}",
     "titleMustContain": "VpnHood!",
     "pageBody": "copy",
     "data": ["_data/i18n/en"]
