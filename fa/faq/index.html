@@ -1,0 +1,56 @@
+---
+layout: none
+title: "سوالات متداول | VpnHood!"
+description: "VpnHood! – یک VPN رایگان، امن و متن‌باز با شبکه سرور جهانی که برای محافظت از حریم خصوصی آنلاین شما و تضمین دسترسی امن به وب طراحی شده است."
+extra_css:
+  - /assets/css/custom.css
+nav_active: resources
+lang: fa
+auto_translated: true
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].faq_page %}
+<section id="sp-main-body" >
+
+										<div class="container">
+					<div class="container-inner">
+						
+	
+<div class="row">
+	
+<div id="sp-component" class="col-lg-12 ">
+	<div class="sp-column ">
+		<div id="system-message-container" aria-live="polite"></div>
+
+
+		
+		<div class="com-content-article item-page">
+    
+    
+        
+        
+    
+    
+        
+                                    <div class="com-content-article__body">
+        <div class="section-start-text pb-5 mb-5" data-aos="fade-up">
+    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+    <p class="section-desc">{{ t.page_desc }}</p>
+</div>
+<p class="h3 text-white">{{ t.general_title }}</p>
+{% include faq.html items=site.data.faqs heading=false explore=false %}
+     </div>
+
+        
+                                        </div>
+
+
+			</div>
+</div>
+</div>
+											</div>
+				</div>
+						
+	</section>
+{% include footer.html %}

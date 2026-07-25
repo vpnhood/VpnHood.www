@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "items": {
+    "hero_logo_alt": "VpnHood! CONNECT logo",
+    "hero_title": "Download VpnHood! CONNECT",
+    "hero_desc": "Free, secure, and open-source VPN with a global server network designed to protect your online privacy and ensure secure access to the web.",
+    "android_title": "Android",
+    "androidtv_title": "Android TV",
+    "windows_title": "Windows",
+    "linux_title": "Linux",
+    "get_it_on": "Get it on",
+    "get_it_via": "Get it via",
+    "google_play": "Google Play",
+    "direct_link": "Direct Link",
+    "new_tab": "(opens in new tab)",
+    "android_min_version": "Support <b>Android 7.0</b> and above.",
+    "androidtv_min_version": "Support <b>Android TV 10.0</b> and above.",
+    "windows_min_version": "Support <b>Windows 10</b> and above.",
+    "windows_x64_only": "Windows x64 version only.",
+    "direct_link_note": "It's best to download with the direct link only when you don't have access to Google Play.",
+    "windows_premium_note": "The Windows version does not have any free servers, and you must <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">upgrade to Premium</b></a> to use it.",
+    "linux_arch_note": "Supports x64 and ARM64 architectures.",
+    "linux_premium_note": "The Linux version does not have any free servers, and you must <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">upgrade to Premium</b></a> to use it."
+  }
+}

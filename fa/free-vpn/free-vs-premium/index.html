@@ -1,0 +1,91 @@
+---
+layout: none
+title: "رایگان در برابر اشتراکی | مقایسه پلن‌های VpnHood! CONNECT"
+description: "VpnHood! – یک VPN رایگان، امن و متن‌باز با شبکه سرور جهانی، طراحی شده برای محافظت از حریم خصوصی آنلاین شما و تضمین دسترسی امن به وب."
+extra_css:
+  - /assets/css/custom.css
+nav_active: free-vpn
+lang: fa
+auto_translated: true
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].free_vpn_free_vs_premium %}
+<section id="sp-main-body" >
+
+										<div class="container">
+					<div class="container-inner">
+
+
+<div class="row">
+
+<div id="sp-component" class="col-lg-12 ">
+	<div class="sp-column ">
+		<div id="system-message-container" aria-live="polite"></div>
+
+
+
+		<div class="com-content-article item-page">
+
+
+
+
+
+
+
+                                    <div class="com-content-article__body">
+        <div id="freeVsPremiumBanner" class="pb-4">
+    <div class="section-start-text" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="section-title vh-txt-grad-purple-400">{{ t.banner_title }}</h1>
+        <p class="section-desc">{{ t.banner_desc }}</p>
+    </div>
+    <div id="appMockupWrapper" class="d-flex align-items-center justify-content-center">
+        <div class="circle-wrapper circle-1">
+            <div class="blob-wrapper"></div>
+        </div>
+        <div class="circle-wrapper circle-2">
+            <div class="blob-wrapper"></div>
+        </div>
+        <div class="circle-wrapper circle-3">
+            <div class="blob-wrapper"></div>
+        </div>
+        <div class="circle-wrapper circle-4">
+            <div class="blob-wrapper"></div>
+        </div>
+        <div class="circle-wrapper circle-5">
+            <div class="blob-wrapper"></div>
+        </div>
+        <div class="circle-wrapper circle-6">
+            <div class="blob-wrapper"></div>
+        </div>
+        <img src="/assets/images/general/vpnhood-connect-app-phone.webp" class="position-absolute" width="484" height="450" alt="{{ t.phone_alt }}">
+    </div>
+</div>
+
+{% include compare-table.html %}
+
+<div class="d-flex flex-wrap align-items-center justify-content-center gap-4 my-5 py-5">
+    <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/free-vpn/download">
+        <span>{{ t.download_for_free }}</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none"><path fill="#fff" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"></path></g></svg>
+    </a>
+    <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/free-vpn/go-premium">
+        <span>{{ t.premium_pricing }}</span>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none"><path fill="#fff" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"></path></g></svg>
+    </a>
+</div>
+{% include faq.html items=site.data.faqs wrapper_class="section-space-top" %}
+     </div>
+
+
+                                        </div>
+
+
+			</div>
+</div>
+</div>
+											</div>
+				</div>
+
+	</section>
+{% include footer.html %}
