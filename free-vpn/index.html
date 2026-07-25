@@ -7,7 +7,8 @@ extra_css:
 nav_active: free-vpn
 ---
 {% include header.html %}
-{% raw %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].free_vpn %}
 <section id="sp-main-body">
           <div class="container">
             <div class="container-inner">
@@ -27,7 +28,7 @@ nav_active: free-vpn
                           </div>
                           <img
                             src="/assets/images/general/connect-logo.svg"
-                            alt="VpnHood! CONNECT logo"
+                            alt="{{ t.hero_logo_alt }}"
                             width="100"
                             height="100"
                             class="rounded-5 mx-auto mb-4"
@@ -39,18 +40,13 @@ nav_active: free-vpn
                             <h1
                               class="section-title vh-txt-grad-purple-400 mb-0"
                             >
-                              Free VPN
+                              {{ t.hero_title }}
                             </h1>
                             <h2 class="shining-wrapper fs-1">
                               <span class="shining-star"></span>
                               <span class="shining-star"></span>
                               <span class="shining-star"></span>
-                              <span class="shining-text"
-                                >VpnHood!
-                                <span class="text-uppercase"
-                                  >CONNECT</span
-                                ></span
-                              >
+                              <span class="shining-text">{{ t.app_name }}</span>
                             </h2>
                             <div class="light-blob-wrapper">
                               <div class="blob blob-1">&nbsp;</div>
@@ -62,14 +58,12 @@ nav_active: free-vpn
                             </div>
                           </div>
                           <p class="section-desc">
-                            Free, secure, and open-source VPN with a global
-                            server network designed to protect your online
-                            privacy and ensure secure access to the web.
+                            {{ t.hero_desc }}
                           </p>
                           <a
                             class="vh-btn vh-download-btn mt-3 mb-5"
                             href="/free-vpn/download"
-                            >Download Now<svg aria-hidden="true"
+                            >{{ t.download_now }}<svg aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
                               height="20"
@@ -95,7 +89,7 @@ nav_active: free-vpn
                             src="/assets/images/general/purple-line-globe.svg"
                             width="897"
                             height="631"
-                            alt="purple globe"
+                            alt="{{ t.purple_globe_alt }}"
                             class="mx-auto"
                           />
                         </div>
@@ -107,18 +101,14 @@ nav_active: free-vpn
                           >
                             <div class="section-label">
                               <p class="vh-txt-grad-purple-400">
-                                Let's take a look
+                                {{ t.screenshot_label }}
                               </p>
                             </div>
                             <h2 class="section-title vh-txt-grad-purple-400">
-                              Full Connectivity Control
+                              {{ t.screenshot_title }}
                             </h2>
                             <p class="section-desc">
-                              Manage every aspect of your connection. Customize
-                              your global presence, select specific apps for VPN
-                              usage, optimize local traffic routing, and enjoy
-                              the app in your native language, you have complete
-                              control.
+                              {{ t.screenshot_desc }}
                             </p>
                           </div>
                           <div
@@ -132,73 +122,73 @@ nav_active: free-vpn
                               role="list"
                             >
                               <div class="item" role="listitem">
-                                <h3 class="h6">Global Server Network</h3>
+                                <h3 class="h6">{{ t.slide_global_server_network }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/global-server-network.webp"
-                                  alt="Servers list screenshot"
+                                  alt="{{ t.alt_servers_list }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Split Countries</h3>
+                                <h3 class="h6">{{ t.slide_split_countries }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/split-countries.webp"
-                                  alt="Exclude country screenshot"
+                                  alt="{{ t.alt_exclude_country }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Split Apps</h3>
+                                <h3 class="h6">{{ t.slide_split_apps }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/split-apps.webp"
-                                  alt="Apps filter screenshot"
+                                  alt="{{ t.alt_apps_filter }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Split IPs</h3>
+                                <h3 class="h6">{{ t.slide_split_ips }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/split-ips.webp"
-                                  alt="IP filter screenshot"
+                                  alt="{{ t.alt_ip_filter }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Split Domains</h3>
+                                <h3 class="h6">{{ t.slide_split_domains }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/split-domains.webp"
-                                  alt="IP filter screenshot"
+                                  alt="{{ t.alt_ip_filter }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Protocols</h3>
+                                <h3 class="h6">{{ t.slide_protocols }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/protocols.webp"
-                                  alt="Protocols screenshot"
+                                  alt="{{ t.alt_protocols }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Smart Proxies</h3>
+                                <h3 class="h6">{{ t.slide_smart_proxies }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/smart-proxies.webp"
-                                  alt="Languages screenshot"
+                                  alt="{{ t.alt_languages }}"
                                   width="280"
                                   height="400"
                                 />
                               </div>
                               <div class="item" role="listitem">
-                                <h3 class="h6">Private DNS</h3>
+                                <h3 class="h6">{{ t.slide_private_dns }}</h3>
                                 <img
                                   src="/assets/images/vpnhood-connect/screenshot/private-dns.webp"
-                                  alt="Languages screenshot"
+                                  alt="{{ t.alt_languages }}"
                                   width="280"
                                   height="400"
                                 />
@@ -210,7 +200,7 @@ nav_active: free-vpn
                             class="vh-text-btn vh-txt-purple-300"
                             data-aos="fade-up"
                             data-aos-duration="1000"
-                            >Explore full features
+                            >{{ t.explore_features }}
                             <svg aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg"
                               width="20"
@@ -241,18 +231,13 @@ nav_active: free-vpn
                             data-aos-duration="1000"
                           >
                             <div class="section-label">
-                              <p class="vh-txt-grad-purple-400">Let's go</p>
+                              <p class="vh-txt-grad-purple-400">{{ t.pending_label }}</p>
                             </div>
                             <h2 class="section-title vh-txt-grad-purple-400">
-                              Secure and Private Access
+                              {{ t.pending_title }}
                             </h2>
                             <p class="section-desc">
-                              Enjoy a seamless and private experience with our
-                              free, open-source VPN. No registration or personal
-                              data is required. Experience high-speed
-                              connectivity for all your online activities with
-                              no bandwidth or time limits, ensuring your digital
-                              life stays private and uninterrupted.
+                              {{ t.pending_desc }}
                             </p>
                           </div>
                           <div
@@ -265,27 +250,27 @@ nav_active: free-vpn
                                 src="/assets/images/general/android-icon-grad-purple-300.svg"
                                 width="65"
                                 height="66"
-                                alt="Android icon"
+                                alt="{{ t.android_icon_alt }}"
                               />
-                              <span>Android</span>
+                              <span>{{ t.android }}</span>
                             </div>
                             <div class="col-auto">
                               <img
                                 src="/assets/images/general/android-tv-icon-grad-purple-300.svg"
                                 width="60"
                                 height="61"
-                                alt="Android TV icon"
+                                alt="{{ t.android_tv_icon_alt }}"
                               />
-                              <span>Android TV</span>
+                              <span>{{ t.android_tv }}</span>
                             </div>
                             <div class="col-auto">
                               <img
                                 src="/assets/images/general/windows-icon-grad-purple-300.svg"
                                 width="62"
                                 height="63"
-                                alt="Windows icon"
+                                alt="{{ t.windows_icon_alt }}"
                               />
-                              <span>Windows</span>
+                              <span>{{ t.windows }}</span>
                             </div>
                           </div>
                           <div id="appWrapper" class="mt-5">
@@ -294,14 +279,14 @@ nav_active: free-vpn
                               <div
                                 class="position-absolute top-0 d-flex align-items-center justify-content-center small w-100 h-100"
                               >
-                                Waiting for you
+                                {{ t.waiting_for_you }}
                               </div>
                             </div>
                             <div id="downloadBtnWrapper">
                               <a
                                 class="vh-btn vh-btn-primary"
                                 href="/free-vpn/download"
-                                >Download Now<svg aria-hidden="true"
+                                >{{ t.download_now }}<svg aria-hidden="true"
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="20"
                                   height="20"
@@ -333,16 +318,13 @@ nav_active: free-vpn
                             data-aos-duration="1000"
                           >
                             <div class="section-label">
-                              <p class="vh-txt-grad-purple-400">Go premium</p>
+                              <p class="vh-txt-grad-purple-400">{{ t.premium_label }}</p>
                             </div>
                             <h2 class="section-title vh-txt-grad-purple-400">
-                              Enhance the capabilities of the free version
+                              {{ t.premium_title }}
                             </h2>
                             <p class="section-desc">
-                              It's up to you to optimize your experience and
-                              achieve maximum speed and go ad-free with 24/7
-                              support and more features, You can do it at any
-                              time.
+                              {{ t.premium_desc }}
                             </p>
                           </div>
                           <div id="rocketWrapper">
@@ -354,7 +336,7 @@ nav_active: free-vpn
                             <img
                               id="rocket"
                               src="/assets/images/general/rocket.webp"
-                              alt="Rocket"
+                              alt="{{ t.rocket_alt }}"
                               width="133"
                               height="312"
                               class="animation-translate-y"
@@ -364,14 +346,14 @@ nav_active: free-vpn
                             id="guaranteeCircle"
                             class="d-inline-flex flex-column align-items-center justify-content-center text-white mt-4"
                           >
-                            <span class="fw-medium lh-1 fs-1 mb-0">30</span>
-                            <span class="fw-medium lh-1 fs-2 mb-2">Days</span>
-                            <span class="lh-1">Risk free</span>
+                            <span class="fw-medium lh-1 fs-1 mb-0">{{ t.guarantee_number }}</span>
+                            <span class="fw-medium lh-1 fs-2 mb-2">{{ t.guarantee_days }}</span>
+                            <span class="lh-1">{{ t.guarantee_risk_free }}</span>
                           </div>
                           <p
                             class="fw-semibold fs-2 vh-txt-grad-purple-400 mt-3 text-center"
                           >
-                            Money-back guarantee
+                            {{ t.money_back_guarantee }}
                           </p>
                           <div
                             id="featuresTextWriter"
@@ -407,7 +389,7 @@ nav_active: free-vpn
                               class="vh-btn vh-btn-primary green-bg"
                               href="/free-vpn/go-premium"
                             >
-                              Premium Pricing
+                              {{ t.premium_pricing }}
                               <svg aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
@@ -434,7 +416,7 @@ nav_active: free-vpn
                               class="vh-btn vh-btn-secondary"
                               href="/free-vpn/free-vs-premium"
                             >
-                              Free vs Premium
+                              {{ t.free_vs_premium }}
                               <svg aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
@@ -459,9 +441,7 @@ nav_active: free-vpn
                             </a>
                           </div>
                         </div>
-                        {% endraw %}
 {% include faq.html items=site.data.faqs wrapper_class="section-space-top" %}
-{% raw %}
                       </div>
                     </div>
                   </div>
@@ -470,5 +450,4 @@ nav_active: free-vpn
             </div>
           </div>
         </section>
-{% endraw %}
 {% include footer.html %}

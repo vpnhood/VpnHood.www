@@ -7,7 +7,8 @@ extra_css:
 nav_active: resources
 ---
 {% include header.html %}
-{% raw %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].about_us %}
 <section id="sp-main-body" >
 
 										<div class="container">
@@ -32,15 +33,15 @@ nav_active: resources
         
                                     <div class="com-content-article__body">
         <div class="section-start-text pb-5 mb-5" data-aos="fade-up" data-aos-duration="1000">
-    <h1 class="section-title vh-txt-grad-purple-400">About Us</h1>
-    <p class="section-desc">Our goal is to provide users with free and unrestricted access to the internet, regardless of geographical barriers or censorship imposed by certain countries, while ensuring complete data security and individual privacy.</p>
+    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+    <p class="section-desc">{{ t.page_desc }}</p>
 </div>
-<p><b>VpnHood</b> is a free VPN service powered by the <b>VpnHood! ENGINE</b>, fully developed in .NET by the VpnHood team. Unlike many other solutions, the VpnHood Engine is built entirely from scratch—it does not embed or reuse any existing VPN software in its codebase. It uses custom protocols inspired by open standards to ensure transparency, auditability, and trust.</p>
-<p class="h3 text-white mt-5">VPN traffic like ordinary web browsing</p>
-<p>VpnHood is designed to make VPN traffic look exactly like ordinary web browsing, enabling it to bypass firewalls and censorship systems with high reliability. It collects no personal information and stores no activity logs, offering strong privacy and anonymity by default.</p>
-<p class="h3 text-white mt-5">Component-based architecture</p>
-<p>Built with a modular, component-based architecture, VpnHood empowers developers to reuse individual components—such as packet obfuscation, transport layers, or encryption utilities—or to easily assemble new VPN applications tailored to specific needs.</p>
-<p class="mt-5">In addition, VpnHood provides a complete backend service as SaaS, allowing individuals and enterprises to manage users, devices, and infrastructure without writing a single line of backend code. This enables anyone to launch a decentralized VPN network at scale with zero setup, making VpnHood ideal for both personal projects and enterprise-grade solutions.</p>     </div>
+<p>{{ t.intro }}</p>
+<p class="h3 text-white mt-5">{{ t.traffic_title }}</p>
+<p>{{ t.traffic_desc }}</p>
+<p class="h3 text-white mt-5">{{ t.architecture_title }}</p>
+<p>{{ t.architecture_desc }}</p>
+<p class="mt-5">{{ t.saas_desc }}</p>     </div>
 
         
                                         </div>
@@ -53,5 +54,4 @@ nav_active: resources
 				</div>
 						
 	</section>
-{% endraw %}
 {% include footer.html %}

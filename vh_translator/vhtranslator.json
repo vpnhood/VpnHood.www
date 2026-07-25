@@ -8,8 +8,9 @@
       "vpnhood-*-privacy-policy/**",
       "terms-of-use/**"
     ],
-    "languages": ["fr"],
+    "languages": ["fa"],
     "output": "{lang}/{path}",
-    "titleMustContain": "VpnHood!"
+    "titleMustContain": "VpnHood!",
+    "data": ["_data/i18n/en"]
   }
 }

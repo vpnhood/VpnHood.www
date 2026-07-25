@@ -1,0 +1,19 @@
+{
+  "page_title": "Features list",
+  "page_desc": "Get to know the app's features in more detail, customize it to fit your needs, and make the most of its capabilities.",
+  "server_network_title": "Global Server Network",
+  "server_network_alt": "Global Server Network",
+  "server_network_desc": "VpnHood! CONNECT provides a global network of servers, allowing you to connect through various worldwide regions. Select the ideal server for enhanced speed and connection stability, ensuring a seamless experience for your browsing, professional work, and online activities.",
+  "split_apps_title": "Split Tunnel by Apps",
+  "split_apps_alt": "Split Tunnel by Apps",
+  "split_apps_desc": "Some apps don’t need a VPN to work, while others, such as local banking, payment, and taxi services, may not be accessible through a VPN. With Split Tunnel by App, you can choose which apps use the VPN and which connect directly. This keeps essential apps working smoothly, reduces unnecessary out-of-country traffic through the VPN, and improves overall speed and data efficiency.",
+  "split_ip_title": "Split Tunnel by IP",
+  "split_ip_alt": "Split Tunnel by IP",
+  "split_ip_desc": "Split Tunnel by IP lets you include or exclude specific IP addresses or ranges from the VPN connection. You can route only selected destinations through the VPN while keeping others on your normal internet connection. This feature works even for browser traffic and is useful when an app should normally use the VPN but needs direct access to certain services or local networks.",
+  "split_countries_title": "Split Tunnel by Countries",
+  "split_countries_alt": "Split Tunnel by Countries",
+  "split_countries_desc": "Split Tunnel by Countries lets you include or exclude traffic based on its destination country. It offers the same benefits as app or IP-based tunneling but without the need to select specific apps or find IP ranges. This helps save traffic and increase speed by allowing direct access to services that don’t need the VPN, while keeping protection active where it’s needed most.",
+  "protocols_title": "Steadfast Protocols",
+  "protocols_alt": "Protocols screenshot",
+  "protocols_desc": "VpnHood’s protocol is engineered for maximum resilience and stability across diverse network environments. You can switch between protocols to find the optimal balance of speed and efficiency based on your specific network conditions. Beyond securing your data, VpnHood optimizes connection metadata to ensure your traffic remains consistent and secure, providing a professional-grade private connection with high-level encryption."
+}

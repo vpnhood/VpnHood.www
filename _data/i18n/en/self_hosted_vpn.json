@@ -1,0 +1,18 @@
+{
+  "page_title": "Self-Hosted VPN",
+  "page_desc": "empowers users to create and manage their own VPN servers with ease, offering a free and open-source solution.",
+  "manager_title": "VpnHood! MANAGER",
+  "manager_desc": "VpnHood! MANAGER is a web-based dashboard that allows users to set up, configure, and monitor their VPN servers effortlessly. With an intuitive interface, users can:",
+  "manager_li_deploy": "Deploy and manage VPN servers without technical expertise.",
+  "manager_li_monitor": "Monitor connection logs and performance metrics.",
+  "manager_li_access": "Control access and security settings.",
+  "manager_li_api": "Utilize a RESTful API for advanced automation.",
+  "learn_more": "Learn more",
+  "client_title": "VpnHood! CLIENT",
+  "client_desc": "VpnHood! CLIENT is available for Windows and Android, providing a seamless VPN experience for users. Key features include:",
+  "client_li_fast": "<b>Fast and secure</b> VPN connections powered by VpnHood Engine.",
+  "client_li_protocol": "<b>Steadfast protocol</b> to ensures a smooth, encrypted connection, maintaining a private online presence across various network environments.",
+  "client_li_split": "<b>Split tunneling</b> for apps, IPs, domains, and country-based filtering.",
+  "client_li_ip": "<b>IPv4 &amp; IPv6 support</b> for broad compatibility.",
+  "outro": "With VpnHood, users can enjoy a self-hosted VPN solution that is free, customizable, and easy to manage."
+}

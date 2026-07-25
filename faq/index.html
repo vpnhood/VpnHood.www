@@ -7,7 +7,8 @@ extra_css:
 nav_active: resources
 ---
 {% include header.html %}
-{% raw %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].faq_page %}
 <section id="sp-main-body" >
 
 										<div class="container">
@@ -32,13 +33,12 @@ nav_active: resources
         
                                     <div class="com-content-article__body">
         <div class="section-start-text pb-5 mb-5" data-aos="fade-up">
-    <h1 class="section-title vh-txt-grad-purple-400">Frequently Asked Questions</h1>
-    <p class="section-desc">Let's find the answers to your questions.</p>
+    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+    <p class="section-desc">{{ t.page_desc }}</p>
 </div>
-<p class="h3 text-white">General</p>
-{% endraw %}
+<p class="h3 text-white">{{ t.general_title }}</p>
 {% include faq.html items=site.data.faqs heading=false explore=false %}
-{% raw %}     </div>
+     </div>
 
         
                                         </div>
@@ -51,5 +51,4 @@ nav_active: resources
 				</div>
 						
 	</section>
-{% endraw %}
 {% include footer.html %}

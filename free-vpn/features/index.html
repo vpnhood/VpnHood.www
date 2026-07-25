@@ -7,7 +7,8 @@ extra_css:
 nav_active: free-vpn
 ---
 {% include header.html %}
-{% raw %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].free_vpn_features %}
 <section id="sp-main-body">
           <div class="container">
             <div class="container-inner">
@@ -25,12 +26,10 @@ nav_active: free-vpn
                           data-aos-duration="1000"
                         >
                           <h1 class="section-title vh-txt-grad-purple-400">
-                            Features list
+                            {{ t.page_title }}
                           </h1>
                           <p class="section-desc">
-                            Get to know the app's features in more detail,
-                            customize it to fit your needs, and make the most of
-                            its capabilities.
+                            {{ t.page_desc }}
                           </p>
                         </div>
                         <div id="featuresDescription">
@@ -40,7 +39,7 @@ nav_active: free-vpn
                                 src="/assets/images/vpnhood-connect/screenshot/global-server-network.webp"
                                 width="280"
                                 height="400"
-                                alt="Global Server Network"
+                                alt="{{ t.server_network_alt }}"
                                 data-aos="fade-right"
                               />
                             </div>
@@ -49,17 +48,11 @@ nav_active: free-vpn
                                 class="vh-txt-grad-purple-400 text-capitalize"
                                 data-aos="fade-up"
                               >
-                                Global Server Network
+                                {{ t.server_network_title }}
                               </h2>
                               <div data-aos="fade-up" data-aos-delay="100">
                                 <p>
-                                  VpnHood! CONNECT provides a global network of
-                                  servers, allowing you to connect through
-                                  various worldwide regions. Select the ideal
-                                  server for enhanced speed and connection
-                                  stability, ensuring a seamless experience for
-                                  your browsing, professional work, and online
-                                  activities.
+                                  {{ t.server_network_desc }}
                                 </p>
                               </div>
                             </div>
@@ -71,7 +64,7 @@ nav_active: free-vpn
                                 src="/assets/images/vpnhood-connect/screenshot/split-apps.webp"
                                 width="280"
                                 height="400"
-                                alt="Split Tunnel by Apps"
+                                alt="{{ t.split_apps_alt }}"
                                 data-aos="fade-left"
                               />
                             </div>
@@ -80,19 +73,11 @@ nav_active: free-vpn
                                 class="vh-txt-grad-purple-400 text-capitalize"
                                 data-aos="fade-up"
                               >
-                                Split Tunnel by Apps
+                                {{ t.split_apps_title }}
                               </h2>
                               <div data-aos="fade-up" data-aos-delay="100">
                                 <p>
-                                  Some apps don’t need a VPN to work, while
-                                  others, such as local banking, payment, and
-                                  taxi services, may not be accessible through a
-                                  VPN. With Split Tunnel by App, you can choose
-                                  which apps use the VPN and which connect
-                                  directly. This keeps essential apps working
-                                  smoothly, reduces unnecessary out-of-country
-                                  traffic through the VPN, and improves overall
-                                  speed and data efficiency.
+                                  {{ t.split_apps_desc }}
                                 </p>
                               </div>
                             </div>
@@ -104,7 +89,7 @@ nav_active: free-vpn
                                 src="/assets/images/vpnhood-connect/screenshot/split-ips.webp"
                                 width="280"
                                 height="400"
-                                alt="Split Tunnel by IP"
+                                alt="{{ t.split_ip_alt }}"
                                 data-aos="fade-right"
                               />
                             </div>
@@ -113,19 +98,11 @@ nav_active: free-vpn
                                 class="vh-txt-grad-purple-400 text-capitalize"
                                 data-aos="fade-up"
                               >
-                                Split Tunnel by IP
+                                {{ t.split_ip_title }}
                               </h2>
                               <div data-aos="fade-up" data-aos-delay="100">
                                 <p>
-                                  Split Tunnel by IP lets you include or exclude
-                                  specific IP addresses or ranges from the VPN
-                                  connection. You can route only selected
-                                  destinations through the VPN while keeping
-                                  others on your normal internet connection.
-                                  This feature works even for browser traffic
-                                  and is useful when an app should normally use
-                                  the VPN but needs direct access to certain
-                                  services or local networks.
+                                  {{ t.split_ip_desc }}
                                 </p>
                               </div>
                             </div>
@@ -137,7 +114,7 @@ nav_active: free-vpn
                                 src="/assets/images/vpnhood-connect/screenshot/split-countries.webp"
                                 width="280"
                                 height="400"
-                                alt="Split Tunnel by Countries"
+                                alt="{{ t.split_countries_alt }}"
                                 data-aos="fade-left"
                               />
                             </div>
@@ -146,19 +123,11 @@ nav_active: free-vpn
                                 class="vh-txt-grad-purple-400 text-capitalize"
                                 data-aos="fade-up"
                               >
-                                Split Tunnel by Countries
+                                {{ t.split_countries_title }}
                               </h2>
                               <div data-aos="fade-up" data-aos-delay="100">
                                 <p>
-                                  Split Tunnel by Countries lets you include or
-                                  exclude traffic based on its destination
-                                  country. It offers the same benefits as app or
-                                  IP-based tunneling but without the need to
-                                  select specific apps or find IP ranges. This
-                                  helps save traffic and increase speed by
-                                  allowing direct access to services that don’t
-                                  need the VPN, while keeping protection active
-                                  where it’s needed most.
+                                  {{ t.split_countries_desc }}
                                 </p>
                               </div>
                             </div>
@@ -170,7 +139,7 @@ nav_active: free-vpn
                                 src="/assets/images/vpnhood-connect/screenshot/protocols.webp"
                                 width="280"
                                 height="400"
-                                alt="Protocols screenshot"
+                                alt="{{ t.protocols_alt }}"
                                 data-aos="fade-right"
                               />
                             </div>
@@ -179,20 +148,11 @@ nav_active: free-vpn
                                 class="vh-txt-grad-purple-400 text-capitalize"
                                 data-aos="fade-up"
                               >
-                                Steadfast Protocols
+                                {{ t.protocols_title }}
                               </h2>
                               <div data-aos="fade-up" data-aos-delay="100">
                                 <p>
-                                  VpnHood’s protocol is engineered for maximum
-                                  resilience and stability across diverse
-                                  network environments. You can switch between
-                                  protocols to find the optimal balance of speed
-                                  and efficiency based on your specific network
-                                  conditions. Beyond securing your data, VpnHood
-                                  optimizes connection metadata to ensure your
-                                  traffic remains consistent and secure,
-                                  providing a professional-grade private
-                                  connection with high-level encryption.
+                                  {{ t.protocols_desc }}
                                 </p>
                               </div>
                             </div>
@@ -206,5 +166,4 @@ nav_active: free-vpn
             </div>
           </div>
         </section>
-{% endraw %}
 {% include footer.html %}

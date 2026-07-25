@@ -1,0 +1,123 @@
+{% comment %}
+  Free-vs-Premium feature comparison table, shared by /free-vpn/free-vs-premium/ and
+  /free-vpn/go-premium/. Strings come from _data/i18n/<lang>/free_vpn_free_vs_premium.json.
+  Params:
+    heading        - heading tag for the three column titles (default "h2"; go-premium uses "h3")
+    heading_class  - extra class prepended to the Free/Premium column titles (go-premium passes "h2")
+{% endcomment %}
+{% assign vh_ct_lang = page.lang | default: 'en' %}
+{% assign vh_ct = site.data.i18n[vh_ct_lang].free_vpn_free_vs_premium %}
+{% assign vh_ct_h = include.heading | default: "h2" %}
+<div id="mod-custom122" class="mod-custom custom">
+    <div id="compareTable">
+    <div class="vh-card-light rounded-5 px-4">
+        <div id="header" class="row gx-5" data-aos="fade-up">
+            <div class="featureColumn col-md-4 col d-flex flex-column justify-content-end pb-5">
+                <{{ vh_ct_h }} class="h4 mb-0">{{ vh_ct.table_title }}</{{ vh_ct_h }}>
+            </div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2 d-flex flex-column align-items-center justify-content-center gap-1 py-md-5 py-4 px-md-4 px-2">
+                <{{ vh_ct_h }} class="{% if include.heading_class %}{{ include.heading_class }} {% endif %}vh-txt-purple-300 mb-0">{{ vh_ct.free_title }}</{{ vh_ct_h }}>
+                <p class="d-md-block d-none mt-3 mb-0">{{ vh_ct.free_desc }}</p>
+            </div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2 d-flex flex-column align-items-center justify-content-center gap-1 py-md-5 py-4 px-md-4 px-2">
+                <{{ vh_ct_h }} class="{% if include.heading_class %}{{ include.heading_class }} {% endif %}vh-txt-green-100 mb-0">{{ vh_ct.premium_title }}</{{ vh_ct_h }}>
+                <p class="d-md-block d-none mt-3 mb-0">{{ vh_ct.premium_desc }}</p>
+            </div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_unlimited_traffic }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="50">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_unlimited_bandwidth }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="60">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_countries }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="70">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_apps }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="80">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_change_protocols }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="90">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_add_proxy }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_kill_switch }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="110">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_multilingual }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_locations }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-purple-300 fs-5">{{ vh_ct.locations_free }}</span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-green-100 fs-5">{{ vh_ct.locations_premium }}</span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ad_free }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="50">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_resilient_servers }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="60">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_windows_version }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="70">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ultra_fast_server }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="80">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_always_on }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="90">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_ips }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_domains }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="110">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_private_dns }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_quick_launch }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="130">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_support_247 }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+    </div>
+</div></div>

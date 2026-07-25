@@ -7,7 +7,8 @@ extra_css:
 nav_active: free-vpn
 ---
 {% include header.html %}
-{% raw %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang].free_vpn_download %}
 <section id="sp-main-body">
           <div class="container">
             <div class="container-inner">
@@ -39,19 +40,17 @@ nav_active: free-vpn
                             </div>
                             <img
                               src="/assets/images/general/connect-logo.svg"
-                              alt="VpnHood! CONNECT logo"
+                              alt="{{ t.hero_logo_alt }}"
                               width="100"
                               height="100"
                               class="position-relative mx-auto my-4"
                             />
                           </div>
                           <h1 class="section-title vh-txt-grad-purple-400">
-                            Download VpnHood! CONNECT
+                            {{ t.hero_title }}
                           </h1>
                           <p class="section-desc">
-                            Free, secure, and open-source VPN with a global
-                            server network designed to protect your online
-                            privacy and ensure secure access to the web.
+                            {{ t.hero_desc }}
                           </p>
                         </div>
                         <div
@@ -76,7 +75,7 @@ nav_active: free-vpn
                                     d="M493 355q16 0 27.5-11.5T532 316t-11.5-27.5T493 277t-27 11.5t-11 27.5t11 27.5t27 11.5m422 0q16 0 27-11.5t11-27.5t-11-27.5t-27-11.5t-27.5 11.5T876 316t11.5 27.5T915 355M103 539q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30t-73-30t-30-73V641q0-42 30-72t73-30m1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30t-73-30t-30-73v-227H635v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78V558zM931 153q107 55 171 153.5t64 215.5H241q0-117 64-215.5T477 153L406 22q-7-13 5-20q13-6 20 6l72 132q95-42 201-42t201 42L977 8q7-12 20-6q12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73V641q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5"
                                   ></path>
                                 </svg>
-                                <h2 class="h3 fw-semibold mt-2 mb-0">Android</h2>
+                                <h2 class="h3 fw-semibold mt-2 mb-0">{{ t.android_title }}</h2>
                               </div>
                               <div
                                 class="d-flex flex-column align-self-center gap-3"
@@ -90,10 +89,10 @@ nav_active: free-vpn
                                 >
                                   <span
                                     class="text-uppercase small opacity-50 lh-1"
-                                    >Get it on</span
+                                    >{{ t.get_it_on }}</span
                                   >
-                                  <span class="fs-5">Google Play</span>
-                                  <span class="visually-hidden"> (opens in new tab)</span>
+                                  <span class="fs-5">{{ t.google_play }}</span>
+                                  <span class="visually-hidden"> {{ t.new_tab }}</span>
                                 </a>
                                 <a
                                   id="connectWebAndroid"
@@ -104,18 +103,16 @@ nav_active: free-vpn
                                 >
                                   <span
                                     class="text-uppercase small vh-txt-purple-100 lh-1"
-                                    >Get it via</span
+                                    >{{ t.get_it_via }}</span
                                   >
-                                  <span class="fs-5">Direct Link</span>
-                                  <span class="visually-hidden"> (opens in new tab)</span>
+                                  <span class="fs-5">{{ t.direct_link }}</span>
+                                  <span class="visually-hidden"> {{ t.new_tab }}</span>
                                 </a>
                               </div>
                               <ul class="mb-0 small">
-                                <li>Support <b>Android 7.0</b> and above.</li>
+                                <li>{{ t.android_min_version }}</li>
                                 <li>
-                                  It's best to download with the direct link
-                                  only when you don't have access to Google
-                                  Play.
+                                  {{ t.direct_link_note }}
                                 </li>
                               </ul>
                             </div>
@@ -140,7 +137,7 @@ nav_active: free-vpn
                                   ></path>
                                 </svg>
                                 <h2 class="h3 fw-semibold mt-1 mb-0">
-                                  Android TV
+                                  {{ t.androidtv_title }}
                                 </h2>
                               </div>
                               <div
@@ -155,10 +152,10 @@ nav_active: free-vpn
                                 >
                                   <span
                                     class="text-uppercase small opacity-50 lh-1"
-                                    >Get it on</span
+                                    >{{ t.get_it_on }}</span
                                   >
-                                  <span class="fs-5">Google Play</span>
-                                  <span class="visually-hidden"> (opens in new tab)</span>
+                                  <span class="fs-5">{{ t.google_play }}</span>
+                                  <span class="visually-hidden"> {{ t.new_tab }}</span>
                                 </a>
                                 <a
                                   id="connectWebTvAndroid"
@@ -169,20 +166,18 @@ nav_active: free-vpn
                                 >
                                   <span
                                     class="text-uppercase small vh-txt-purple-100 lh-1"
-                                    >Get it via</span
+                                    >{{ t.get_it_via }}</span
                                   >
-                                  <span class="fs-5">Direct Link</span>
-                                  <span class="visually-hidden"> (opens in new tab)</span>
+                                  <span class="fs-5">{{ t.direct_link }}</span>
+                                  <span class="visually-hidden"> {{ t.new_tab }}</span>
                                 </a>
                               </div>
                               <ul class="mb-0 small">
                                 <li>
-                                  Support <b>Android TV 10.0</b> and above.
+                                  {{ t.androidtv_min_version }}
                                 </li>
                                 <li>
-                                  It's best to download with the direct link
-                                  only when you don't have access to Google
-                                  Play.
+                                  {{ t.direct_link_note }}
                                 </li>
                               </ul>
                             </div>
@@ -208,7 +203,7 @@ nav_active: free-vpn
                                     clip-rule="evenodd"
                                   ></path>
                                 </svg>
-                                <h2 class="h3 fw-semibold mt-2 mb-0">Windows</h2>
+                                <h2 class="h3 fw-semibold mt-2 mb-0">{{ t.windows_title }}</h2>
                               </div>
                               <div
                                 class="d-flex flex-column align-self-center gap-3"
@@ -223,24 +218,17 @@ nav_active: free-vpn
                                 >
                                   <span
                                     class="text-uppercase small opacity-50 lh-1"
-                                    >Get it via</span
+                                    >{{ t.get_it_via }}</span
                                   >
-                                  <span class="fs-5">Direct Link</span>
-                                  <span class="visually-hidden"> (opens in new tab)</span>
+                                  <span class="fs-5">{{ t.direct_link }}</span>
+                                  <span class="visually-hidden"> {{ t.new_tab }}</span>
                                 </a>
                               </div>
                               <ul class="mb-0 small">
-                                <li>Support <b>Windows 10</b> and above.</li>
-                                <li>Windows x64 version only.</li>
+                                <li>{{ t.windows_min_version }}</li>
+                                <li>{{ t.windows_x64_only }}</li>
                                 <li>
-                                  The Windows version does not have any free
-                                  servers, and you must
-                                  <a href="/free-vpn/go-premium"
-                                    ><b class="text-decoration-underline"
-                                      >upgrade to Premium</b
-                                    ></a
-                                  >
-                                  to use it.
+                                  {{ t.windows_premium_note }}
                                 </li>
                               </ul>
                             </div>
@@ -270,7 +258,7 @@ nav_active: free-vpn
                                     ></path>
                                   </g>
                                 </svg>
-                                <h2 class="h3 fw-semibold mt-2 mb-0">Linux</h2>
+                                <h2 class="h3 fw-semibold mt-2 mb-0">{{ t.linux_title }}</h2>
                               </div>
                               <div
                                 class="d-flex flex-column align-self-center gap-3"
@@ -285,31 +273,22 @@ nav_active: free-vpn
                                 >
                                   <span
                                     class="text-uppercase small opacity-50 lh-1"
-                                    >Get it via</span
+                                    >{{ t.get_it_via }}</span
                                   >
-                                  <span class="fs-5">Direct Link</span>
-                                  <span class="visually-hidden"> (opens in new tab)</span>
+                                  <span class="fs-5">{{ t.direct_link }}</span>
+                                  <span class="visually-hidden"> {{ t.new_tab }}</span>
                                 </a>
                               </div>
                               <ul class="mb-0 small">
-                                <li>Supports x64 and ARM64 architectures.</li>
+                                <li>{{ t.linux_arch_note }}</li>
                                 <li>
-                                  The Linux version does not have any free
-                                  servers, and you must
-                                  <a href="/free-vpn/go-premium"
-                                    ><b class="text-decoration-underline"
-                                      >upgrade to Premium</b
-                                    ></a
-                                  >
-                                  to use it.
+                                  {{ t.linux_premium_note }}
                                 </li>
                               </ul>
                             </div>
                           </div>
                         </div>
-                        {% endraw %}
 {% include faq.html items=site.data.faqs wrapper_class="section-space-top" %}
-{% raw %}
                       </div>
                     </div>
                   </div>
@@ -318,5 +297,4 @@ nav_active: free-vpn
             </div>
           </div>
         </section>
-{% endraw %}
 {% include footer.html %}

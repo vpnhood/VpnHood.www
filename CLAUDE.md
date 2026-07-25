@@ -16,7 +16,7 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
 
 ## Page Anatomy
 - Every page: front matter (`layout: none`, `title`, `description`, `nav_active`, optional `extra_css`) → `{% include header.html %}` → the page's `<section id="sp-main-body">…</section>` content → `{% include footer.html %}`.
-- **The page body (Helix template markup) is wrapped in `{% raw %}…{% endraw %}`** because it can contain stray `{`/`}` that would otherwise trip Liquid. **To use a Liquid tag inside that body (e.g. a component include), break out of raw:** `{% endraw %}{% include faq.html … %}{% raw %}`.
+- **All page text lives in `_data/i18n/en/<page>.json`, not in the page markup.** Every page body starts with `{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang].<page_key> %}` and renders text via `{{ t.key }}` (inline HTML fragments like `<b>…</b>` or a whole `<a>` live inside the JSON string). **Edit copy in the JSON file; edit structure in the page.** Translatable attributes (`alt`, `placeholder`, `aria-label`) use `{{ t.* }}` too; `class`/`href`/`data-*` never do. The i18n files are flat string maps (the vhtranslator classic format — they are listed under `site.data` in `vh_translator/vhtranslator.json` and machine-translated per key). Page bodies are no longer `{% raw %}`-wrapped (they contain no stray braces; the old Joomla-era wrappers were removed during the i18n extraction).
 - `nav_active` drives the active state of the top-level nav in `header.html`: one of `home | free-vpn | reseller | self-hosted | resources` (legal pages use `resources`). Leave unset for pages not in the main nav.
 - `extra_css` is a list of page-specific stylesheets, linked **after** the framework CSS/Poppins and **before** `style.css`. Home uses `/assets/css/home.css`; secondary/content pages use `/assets/css/custom.css`.
 - The home page sets `globe: true` (loads the three.js server globe — home only) — see footer.
@@ -49,6 +49,7 @@ Everything lives under `/assets` (`assets/css`, `assets/js`, `assets/images`). T
 
 ## Components & Includes
 - **FAQ — `_includes/faq.html` + `_data/faqs.yml`.** Data-driven: renders the Bootstrap accordion **and** the `FAQPage` JSON-LD from a list of `{q, a}` items. Used on 7 pages. Params: `items` (required; usually `site.data.faqs`), `heading` (default true — `/faq` passes `heading=false` to emit just the accordion under its own `<h1>`), `explore` (default true — the "Explore full FAQs" → /faq button; `/faq` passes `explore=false`), `eyebrow`, `schema`. **Edit FAQ copy in `_data/faqs.yml`, not in the pages.** Never hand-write FAQ accordion markup or FAQPage schema per page.
+- **Compare table — `_includes/compare-table.html`.** The Free-vs-Premium feature table, shared by `/free-vpn/free-vs-premium/` and `/free-vpn/go-premium/` (params `heading`, `heading_class`); strings from `_data/i18n/<lang>/free_vpn_free_vs_premium.json`. Never duplicate the table markup in pages.
 - **Legal pages — `_includes/legal-page.html` + `_includes/legals/*.md`.** See below.
 - **China promo bar — `assets/js/china-bar.js`.** See below.
 - `header.html` / `footer.html` are shared by every page — edits there are global; make them deliberate.
@@ -74,7 +75,7 @@ On the original server-rendered site a `#chinaBar` was emitted server-side only 
 
 ## Gotchas
 - **Never auto-format `_includes/header.html` or `_includes/footer.html`** — they share intentionally-unbalanced tags (see Page Anatomy). Covered by `.prettierignore`.
-- A Liquid tag placed inside a page's `{% raw %}` body is treated as literal text — wrap it `{% endraw %}…{% raw %}`.
+- New page copy goes into `_data/i18n/en/<page>.json` — hardcoding text in a page body reintroduces untranslatable strings; the i18n extraction was verified by whitespace-normalized diffs of the built `_site` pages (keep that technique for future refactors).
 - **Menus** — the top nav lives in `header.html`/`footer.html` and is styled by the `vh-*` rules in `_sass/theme/_default.scss`. The **desktop mega-menu** opens on **hover via CSS** (`.vh-mega-menu:hover`), with the `#vhOverlay` blur driven by `body:has(.vh-mega-menu:hover)` — no JS. The **mobile menu** is a Bootstrap **Offcanvas** (`#mobileMenu`) with **Collapse** submenus (`data-bs-*`); `main.js` mirrors its open state onto the header burger (hamburger↔X) and lifts the header above the backdrop. The **FAQ accordion** is the other Bootstrap-JS feature (Collapse).
 - `/cdn-cgi/trace` is a Cloudflare-only endpoint (not Jekyll/GitHub Pages) — the China bar and any geo logic only work in production behind Cloudflare.
 - Local builds render absolute URLs as `http://localhost:4000`; production uses `site.url`. Don't "fix" localhost URLs seen in a local `_site`.

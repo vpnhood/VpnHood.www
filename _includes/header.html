@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}" dir="ltr">
+<html lang="{{ page.lang | default: site.lang }}" dir="{% if page.lang == 'fa' or page.lang == 'ar' or page.lang == 'he' or page.lang == 'ur' %}rtl{% else %}ltr{% endif %}">
   <head>
     <!-- Google Tag Manager -->
     <script>
