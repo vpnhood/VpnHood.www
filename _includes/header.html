@@ -140,6 +140,9 @@
     <!-- Framework JS: stock Bootstrap 5 bundle (Popper included). No jQuery. -->
     <script defer src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
     <script defer src="/assets/js/main.js"></script>
+    <!-- Language preference / first-visit auto-switch (redirect targets come from the
+         hreflang alternates above, so it is inert until translations exist) -->
+    <script defer src="/assets/js/lang.js"></script>
   </head>
   <body
     class="site helix-ultimate hu en-us ltr sticky-header layout-fluid offcanvas-init offcanvs-position-left"
@@ -574,6 +577,7 @@
                         >Go Premium</a
                       >
                     </li>
+                    {% include lang-selector.html style="dropdown" %}
                   </ul>
 
                   <a
