@@ -1,11 +1,13 @@
 {%- comment -%}
   Shared FAQ section. Renders the visible Bootstrap accordion AND the FAQPage
-  JSON-LD from one source: a list of `q:` / `a:` pairs passed in as `items`
-  (typically site.data.faqs). Answers may contain inline HTML — Google permits
-  a/b/strong/em/br/ul/ol/li in FAQ answers.
+  JSON-LD from one source: the language's FAQ strings in
+  _data/i18n/<lang>/faqs.json (numbered keys q1/a1, q2/a2, ... plus the section
+  chrome: eyebrow/heading/desc/view_all). Falls back to English while a
+  language's file has not been generated yet. Answers may contain inline HTML —
+  Google permits a/b/strong/em/br/ul/ol/li in FAQ answers. Internal links inside
+  answers are rewritten onto the page's language tree via vh_base.
 
   Parameters:
-    items   — (required) the list of {q, a} entries to render
     heading — render the section heading + wrapper (default: true).
               Pass heading=false to emit just the accordion (e.g. the /faq page,
               which supplies its own page heading).
@@ -16,22 +18,25 @@
                     200px top + bottom). Footer-adjacent pages pass
                     'section-space-top' to drop the big bottom gap; pages with
                     another section after the FAQ (e.g. home) keep the default.
-    eyebrow — eyebrow label above the heading (default: FAQs).
+    eyebrow — eyebrow label above the heading (default: the file's `eyebrow`).
     schema  — emit the FAQPage JSON-LD (default: true).
 {%- endcomment -%}
+{%- assign vh_faq_lang = page.lang | default: 'en' -%}
+{%- assign vh_faqs = site.data.i18n[vh_faq_lang].faqs | default: site.data.i18n.en.faqs -%}
+{%- capture vh_href_lang %}href="{{ vh_base }}/{% endcapture -%}
 {%- comment -%} Questions nest under the section title (h2) on content pages, or under the page's own h1 on /faq (heading=false). {%- endcomment -%}
 {%- if include.heading == false -%}{%- assign q_level = 'h2' -%}{%- else -%}{%- assign q_level = 'h3' -%}{%- endif -%}
 {%- capture faq_accordion -%}
 <div id="faqAccordion" class="accordion accordion-flush px-4 mx-auto">
-{% for faq in include.items %}
-  <div class="accordion-item" data-aos="fade-{% cycle 'right', 'left' %}"{% unless forloop.first %} data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endunless %}>
+{% for i in (1..50) %}{% assign vh_qk = 'q' | append: i %}{% assign vh_q = vh_faqs[vh_qk] %}{% if vh_q == nil %}{% break %}{% endif %}{% assign vh_ak = 'a' | append: i %}{% assign vh_a = vh_faqs[vh_ak] %}{% assign vh_side = i | modulo: 2 %}
+  <div class="accordion-item" data-aos="fade-{% if vh_side == 1 %}right{% else %}left{% endif %}"{% unless i == 1 %} data-aos-delay="{{ i | minus: 1 | times: 100 }}"{% endunless %}>
     <{{ q_level }} class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-{{ forloop.index }}" aria-expanded="false" aria-controls="faq-{{ forloop.index }}">
-        {{ faq.q }}
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-{{ i }}" aria-expanded="false" aria-controls="faq-{{ i }}">
+        {{ vh_q }}
       </button>
     </{{ q_level }}>
-    <div id="faq-{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-      <div class="accordion-body">{{ faq.a }}</div>
+    <div id="faq-{{ i }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+      <div class="accordion-body">{{ vh_a | replace: 'href="/', vh_href_lang }}</div>
     </div>
   </div>
 {% endfor %}
@@ -44,16 +49,16 @@
   <div class="container">
     <div class="section-start-text mb-5" data-aos="fade-up">
       <div class="section-label">
-        <p class="vh-txt-grad-purple-400">{{ include.eyebrow | default: 'FAQs' }}</p>
+        <p class="vh-txt-grad-purple-400">{{ include.eyebrow | default: vh_faqs.eyebrow }}</p>
       </div>
-      <h2 class="section-title vh-txt-grad-purple-400">Frequently Asked Questions</h2>
-      <p class="section-desc">Let's find the answers to your questions.</p>
+      <h2 class="section-title vh-txt-grad-purple-400">{{ vh_faqs.heading }}</h2>
+      <p class="section-desc">{{ vh_faqs.desc }}</p>
     </div>
     {{ faq_accordion }}
     {% if include.explore != false %}
     <div class="text-center mt-5 pt-4" data-aos="fade-up">
       <a href="{{ vh_base }}/faq" class="vh-text-btn vh-txt-purple-300">
-        View All FAQs
+        {{ vh_faqs.view_all }}
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none">
             <path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path>
@@ -72,11 +77,11 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {% for faq in include.items %}{
+    {% for i in (1..50) %}{% assign vh_qk = 'q' | append: i %}{% assign vh_q = vh_faqs[vh_qk] %}{% if vh_q == nil %}{% break %}{% endif %}{% assign vh_ak = 'a' | append: i %}{% assign vh_a = vh_faqs[vh_ak] | replace: 'href="/', vh_href_lang %}{% if i > 1 %},{% endif %}{
       "@type": "Question",
-      "name": {{ faq.q | strip | jsonify }},
-      "acceptedAnswer": { "@type": "Answer", "text": {{ faq.a | strip | jsonify }} }
-    }{% unless forloop.last %},{% endunless %}{% endfor %}
+      "name": {{ vh_q | strip | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ vh_a | strip | jsonify }} }
+    }{% endfor %}
   ]
 }
 </script>
