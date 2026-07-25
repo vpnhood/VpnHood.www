@@ -9,7 +9,7 @@
   "premium_desc": "The features are the same across all premium plans; only the discount amount varies.",
   "row_unlimited_traffic": "Unlimited traffic",
   "row_unlimited_bandwidth": "Unlimited bandwidth",
-  "row_split_countries": "Split tunneling by countris",
+  "row_split_countries": "Split tunneling by countries",
   "row_split_apps": "Split tunneling by apps",
   "row_change_protocols": "Change protocols",
   "row_add_proxy": "Add proxy",
