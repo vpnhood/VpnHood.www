@@ -11,6 +11,7 @@
     "languages": ["fa"],
     "output": "{lang}/{path}",
     "titleMustContain": "VpnHood!",
+    "pageBody": "copy",
     "data": ["_data/i18n/en"]
   }
 }
