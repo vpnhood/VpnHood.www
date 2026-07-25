@@ -53,6 +53,7 @@ exclude:
   - .github/
   - .vs/
   - .vscode/
+  - vh_translator/
 
 # GitHub Pages
 safe: true

@@ -1,0 +1,15 @@
+{
+  "model": "gemini-2.5-flash",
+  "site": {
+    "pages": ["**/index.html"],
+    "exclude": [
+      ".legacy_joomla/**",
+      "privacy-policy/**",
+      "vpnhood-*-privacy-policy/**",
+      "terms-of-use/**"
+    ],
+    "languages": ["fr"],
+    "output": "{lang}/{path}",
+    "titleMustContain": "VpnHood!"
+  }
+}

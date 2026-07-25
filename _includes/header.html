@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-us" dir="ltr">
+<html lang="{{ page.lang | default: site.lang }}" dir="ltr">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -30,6 +30,20 @@
     <!-- SEO: jekyll-seo-tag emits meta description, canonical, OpenGraph, Twitter
          Card, a WebSite JSON-LD, etc. title=false keeps our own page title above. -->
     {% seo title=false %}
+
+    <!-- hreflang: alternates are derived from the generated locale pages themselves
+         (front matter `lang`, added by vhtranslator) — no separate language registry.
+         Emitted only when this page actually has translations, always as the full
+         reciprocal set (self included) plus x-default → English. Canonicals stay
+         per-language: a translated page must never canonicalize to English. -->
+    {% assign vh_base_url = page.url %}
+    {% if page.lang %}{% capture vh_lang_prefix %}/{{ page.lang }}{% endcapture %}{% assign vh_base_url = page.url | remove_first: vh_lang_prefix %}{% endif %}
+    {% capture vh_alternates %}{% for vh_p in site.pages %}{% if vh_p.lang %}{% capture vh_p_prefix %}/{{ vh_p.lang }}{% endcapture %}{% assign vh_p_base = vh_p.url | remove_first: vh_p_prefix %}{% if vh_p_base == vh_base_url %}
+    <link rel="alternate" hreflang="{{ vh_p.lang }}" href="{{ vh_p.url | absolute_url }}" />{% endif %}{% endif %}{% endfor %}{% endcapture %}
+    {% if vh_alternates != "" %}
+    <link rel="alternate" hreflang="en" href="{{ vh_base_url | absolute_url }}" />{{ vh_alternates }}
+    <link rel="alternate" hreflang="x-default" href="{{ vh_base_url | absolute_url }}" />
+    {% endif %}
 
     <!-- Organization structured data (seo-tag already emits the WebSite entity) -->
     <script type="application/ld+json">

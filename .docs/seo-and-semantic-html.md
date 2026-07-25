@@ -275,6 +275,34 @@ add a `target="_blank"` link (pages, `header.html`, `footer.html`, templates).
 
 ---
 
+## 8. Translated pages — hreflang & language metadata
+
+Applies to any site in this family that ships generated translations (vhtranslator
+`site` mode). A site without translations emits none of this — every rule below is
+self-deactivating when no translated pages exist.
+
+- **`<html lang>` reflects the page's language**: `{{ page.lang | default: site.lang }}`.
+  Generated pages carry `lang:` front matter (added by the translator); source pages
+  leave it unset and inherit the site default.
+- **hreflang alternates are derived, never registered.** `header.html` finds a page's
+  translations by scanning `site.pages` for entries with a `lang` whose URL maps back to
+  the same source path — there is no hand-maintained language list to drift out of sync.
+- **Full reciprocal set or nothing.** A page emits hreflang only when it actually has
+  translations, and then always the complete set: one `<link rel="alternate">` per
+  language **including the page itself**, plus `hreflang="en"` for the source page and
+  `x-default` pointing at the source (English) page. Search engines ignore partial or
+  non-reciprocal sets.
+- **Canonicals stay within a language.** Every translated page canonicalizes to itself
+  (the jekyll-seo-tag default). Never canonicalize a translation to its English source —
+  that deindexes the translation.
+- **`og:locale` follows `page.lang`** via jekyll-seo-tag automatically; never hand-write it.
+- **No `inLanguage` microdata in page bodies.** Language is declared by `<html lang>` and
+  hreflang only. Legacy body-level `<meta itemprop="inLanguage">` tags were removed
+  site-wide: they get copied verbatim into translations, where they lie.
+- **Titles keep the brand after translation too** — the translator enforces §3 via its
+  `titleMustContain` setting; a translated page whose title lost the brand is rejected
+  before it is ever written.
+
 ## Why this matters (rationale, in one place)
 
 - Centralizing meta / OG / JSON-LD in seo-tag + `_config.yml` + shared schema
