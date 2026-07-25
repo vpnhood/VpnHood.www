@@ -38,6 +38,13 @@
          per-language: a translated page must never canonicalize to English. -->
     {% assign vh_base_url = page.url %}
     {% if page.lang %}{% capture vh_lang_prefix %}/{{ page.lang }}{% endcapture %}{% assign vh_base_url = page.url | remove_first: vh_lang_prefix %}{% endif %}
+
+    {% comment %} vh_base: language-aware link prefix ('' on English, '/fa' on Persian
+         pages, ...). Internal links site-wide use href="{{ vh_base }}/..." so a translated
+         page links within its own language tree. Assigned here once; Jekyll includes share
+         scope, so page bodies and footer.html see it too. Legal pages are deliberately NOT
+         prefixed — they exist in English only. {% endcomment %}
+    {% assign vh_base = '' %}{% if page.lang and page.lang != 'en' %}{% assign vh_base = vh_lang_prefix %}{% endif %}
     {% capture vh_alternates %}{% for vh_p in site.pages %}{% if vh_p.lang %}{% capture vh_p_prefix %}/{{ vh_p.lang }}{% endcapture %}{% assign vh_p_base = vh_p.url | remove_first: vh_p_prefix %}{% if vh_p_base == vh_base_url %}
     <link rel="alternate" hreflang="{{ vh_p.lang }}" href="{{ vh_p.url | absolute_url }}" />{% endif %}{% endif %}{% endfor %}{% endcapture %}
     {% if vh_alternates != "" %}
@@ -178,7 +185,7 @@
                 <div id="sp-logo" class="col-auto">
                   <div class="sp-column">
                     <div class="logo">
-                      <a href="/" class="d-flex align-items-center">
+                      <a href="{{ vh_base }}/" class="d-flex align-items-center">
                         <img
                           class="logo-image"
                           srcset="/assets/images/site-icon.png 1x"
@@ -208,7 +215,7 @@
                       <nav class="vh-navbar d-flex" role="navigation">
                         <ul class="vh-nav d-none d-lg-flex">
                           <li class="vh-nav-item{% if page.nav_active == 'home' %} active{% endif %}">
-                            <a href="/">Home</a>
+                            <a href="{{ vh_base }}/">Home</a>
                           </li>
                           <li
                             class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'free-vpn' %} active{% endif %}"
@@ -266,42 +273,42 @@
                                       <li
                                         class="item-306 menu_item item-header"
                                       >
-                                        <a href="/free-vpn"
+                                        <a href="{{ vh_base }}/free-vpn"
                                           >Free VPN Overview</a
                                         >
                                       </li>
                                       <li
                                         class="item-245 menu_item item-header"
                                       >
-                                        <a href="/free-vpn/features"
+                                        <a href="{{ vh_base }}/free-vpn/features"
                                           >Features</a
                                         >
                                       </li>
                                       <li
                                         class="item-246 menu_item item-header"
                                       >
-                                        <a href="/free-vpn/comparison"
+                                        <a href="{{ vh_base }}/free-vpn/comparison"
                                           >VPN Comparison</a
                                         >
                                       </li>
                                       <li
                                         class="item-191 menu_item item-header"
                                       >
-                                        <a href="/free-vpn/download"
+                                        <a href="{{ vh_base }}/free-vpn/download"
                                           >Download</a
                                         >
                                       </li>
                                       <li
                                         class="item-264 menu_item item-header"
                                       >
-                                        <a href="/free-vpn/free-vs-premium"
+                                        <a href="{{ vh_base }}/free-vpn/free-vs-premium"
                                           >Free vs Premium</a
                                         >
                                       </li>
                                       <li
                                         class="item-160 menu_item item-header"
                                       >
-                                        <a href="/free-vpn/go-premium"
+                                        <a href="{{ vh_base }}/free-vpn/go-premium"
                                           >Go premium</a
                                         >
                                       </li>
@@ -312,7 +319,7 @@
                             </div>
                           </li>
                           <li class="vh-nav-item{% if page.nav_active == 'reseller' %} active{% endif %}">
-                            <a href="/reseller">Reseller</a>
+                            <a href="{{ vh_base }}/reseller">Reseller</a>
                           </li>
                           <li
                             class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'self-hosted' %} active{% endif %}"
@@ -386,24 +393,24 @@
                                       <li
                                         class="item-307 menu_item item-header"
                                       >
-                                        <a href="/self-hosted-vpn"
+                                        <a href="{{ vh_base }}/self-hosted-vpn"
                                           >Self-Hosted VPN Overview</a
                                         >
                                       </li>
                                       <li
                                         class="item-109 menu_item item-header"
                                       >
-                                        <a href="/vpnhood-manager">Dashboard</a>
+                                        <a href="{{ vh_base }}/vpnhood-manager">Dashboard</a>
                                       </li>
                                       <li
                                         class="item-162 menu_item item-header"
                                       >
-                                        <a href="/vpnhood-client">Client App</a>
+                                        <a href="{{ vh_base }}/vpnhood-client">Client App</a>
                                       </li>
                                       <li
                                         class="item-190 menu_item item-header"
                                       >
-                                        <a href="/vpnhood-client/download"
+                                        <a href="{{ vh_base }}/vpnhood-client/download"
                                           >Download</a
                                         >
                                       </li>
@@ -443,7 +450,7 @@
                                           class="vh-mega-group-child"
                                         >
                                           <li>
-                                            <a href="/faq">FAQ</a>
+                                            <a href="{{ vh_base }}/faq">FAQ</a>
                                           </li>
                                           <li>
                                             <a
@@ -465,7 +472,7 @@
                                           </li>
                                           <li>
                                             <a
-                                              href="/user-account-deletion-request"
+                                              href="{{ vh_base }}/user-account-deletion-request"
                                               >User Account Deletion</a
                                             >
                                           </li>
@@ -529,10 +536,10 @@
                                           class="vh-mega-group-child"
                                         >
                                           <li>
-                                            <a href="/contact-us">Contact Us</a>
+                                            <a href="{{ vh_base }}/contact-us">Contact Us</a>
                                           </li>
                                           <li>
-                                            <a href="/about-us">About Us</a>
+                                            <a href="{{ vh_base }}/about-us">About Us</a>
                                           </li>
                                         </ul>
                                       </li>
@@ -562,7 +569,7 @@
                     </li>
                     <li class="item-324">
                       <a
-                        href="/free-vpn/go-premium"
+                        href="{{ vh_base }}/free-vpn/go-premium"
                         class="vh-btn vh-btn-primary px-3"
                         >Go Premium</a
                       >
