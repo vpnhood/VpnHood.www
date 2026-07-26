@@ -1,0 +1,21 @@
+{
+  "meta_title": "تحميل VpnHood!‎ CLIENT",
+  "meta_description": "VpnHood!‎ - شبكة VPN مجانية وآمنة ومفتوحة المصدر مع شبكة خوادم عالمية، مصممة لحماية خصوصيتك على الإنترنت وضمان تصفح آمن للويب.",
+  "page_title": "تحميل VpnHood!‎ CLIENT",
+  "page_desc": "حل VPN سريع وآمن وموثوق مدعوم بـ <b>VpnHood!‎ Engine</b>، وهو مفتوح المصدر وأول VPN يتم تطويره بالكامل باستخدام منصة .NET.",
+  "android_title": "أندرويد",
+  "androidtv_title": "تلفزيون أندرويد",
+  "windows_title": "ويندوز",
+  "linux_title": "لينكس",
+  "get_it_on": "احصل عليه من",
+  "get_it_via": "احصل عليه عبر",
+  "google_play": "جوجل بلاي",
+  "direct_link": "رابط مباشر",
+  "new_tab": "(يفتح في علامة تبويب جديدة)",
+  "android_min_version": "يدعم <b>أندرويد 7.0</b> والأحدث.",
+  "androidtv_min_version": "يدعم <b>تلفزيون أندرويد 10.0</b> والأحدث.",
+  "windows_min_version": "يدعم <b>ويندوز 10</b> والأحدث.",
+  "windows_x64_only": "إصدار ويندوز x64 فقط.",
+  "direct_link_note": "من الأفضل استخدام الرابط المباشر للتحميل فقط إذا لم يكن لديك إمكانية الوصول إلى جوجل بلاي.",
+  "linux_arch_note": "يدعم معمارية x64 و ARM64."
+}
