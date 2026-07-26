@@ -1,0 +1,21 @@
+{
+  "meta_title": "Funzionalità VPN Gratuite | VpnHood! CONNECT",
+  "meta_description": "Scopri le funzionalità di VpnHood! CONNECT: una rete di server globale, split tunneling per app, IP o paese e protocolli affidabili che resistono al blocco della VPN.",
+  "page_title": "Elenco delle funzionalità",
+  "page_desc": "Scopri tutte le funzioni dell'app in dettaglio, personalizzala secondo le tue esigenze e sfrutta al massimo le sue potenzialità.",
+  "server_network_title": "Rete di server globale",
+  "server_network_alt": "Rete di server globale",
+  "server_network_desc": "VpnHood! CONNECT offre una rete di server globale per connetterti da qualsiasi parte del mondo. Scegli il server ideale per velocità e stabilità superiori, garantendo un'esperienza fluida per la navigazione, il lavoro e le tue attività online.",
+  "split_apps_title": "Split Tunneling per app",
+  "split_apps_alt": "Split Tunneling per app",
+  "split_apps_desc": "Alcune app non richiedono una VPN, mentre servizi locali come banche, pagamenti e trasporti potrebbero non funzionare se attivi. Con lo Split Tunneling per app, decidi tu quali applicazioni usare tramite VPN e quali connettere direttamente. In questo modo le app essenziali funzionano senza intoppi, riduci il traffico estero non necessario e ottimizzi velocità e consumo di dati.",
+  "split_ip_title": "Split Tunneling per IP",
+  "split_ip_alt": "Split Tunneling per IP",
+  "split_ip_desc": "Lo Split Tunneling per IP consente di includere o escludere specifici indirizzi o intervalli IP dalla connessione VPN. Puoi instradare solo le destinazioni desiderate tramite VPN mantenendo le altre sulla tua linea internet normale. Questa funzione è ideale anche per il traffico del browser quando un'app protetta necessita di accesso diretto a reti o servizi locali.",
+  "split_countries_title": "Split Tunneling per paese",
+  "split_countries_alt": "Split Tunneling per paese",
+  "split_countries_desc": "Lo Split Tunneling per paese ti permette di gestire il traffico in base al paese di destinazione. Offre gli stessi vantaggi del tunneling per app o IP, ma senza dover configurare singoli programmi o intervalli IP. Risparmia traffico e aumenta la velocità accedendo direttamente ai servizi che non richiedono la VPN, mantenendo la massima protezione dove serve.",
+  "protocols_title": "Protocolli affidabili",
+  "protocols_alt": "Screenshot dei protocolli",
+  "protocols_desc": "Il protocollo di VpnHood è progettato per garantire massima resistenza e stabilità in qualsiasi rete. Puoi passare da un protocollo all'altro per trovare il perfetto equilibrio tra velocità ed efficienza in base alla tua connessione. Oltre a proteggere i dati, VpnHood ottimizza i metadati per mantenere il traffico sicuro e costante, offrendo una connessione privata professionale con crittografia avanzata."
+}

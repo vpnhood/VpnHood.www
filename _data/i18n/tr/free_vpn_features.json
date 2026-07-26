@@ -1,0 +1,21 @@
+{
+  "meta_title": "Ücretsiz VPN Özellikleri | VpnHood! CONNECT",
+  "meta_description": "VpnHood! CONNECT'in harika özelliklerini keşfedin: küresel sunucu ağı, uygulama, IP veya ülkeye göre tünelleme ve VPN engellemelerine karşı güçlü protokoller.",
+  "page_title": "Özellikler Listesi",
+  "page_desc": "Uygulamanın özelliklerini yakından tanıyın, ihtiyaçlarınıza göre özelleştirin ve sunduğu imkanlardan en iyi şekilde yararlanın.",
+  "server_network_title": "Küresel Sunucu Ağı",
+  "server_network_alt": "Küresel Sunucu Ağı",
+  "server_network_desc": "VpnHood! CONNECT, dünyanın dört bir yanındaki bölgelerden bağlanmanıza olanak tanıyan küresel bir sunucu ağı sunar. Göz atma, profesyonel çalışmalarınız ve çevrimiçi etkinlikleriniz için kesintisiz bir deneyim sağlayarak, en iyi hız ve bağlantı kararlılığı için ideal sunucuyu seçin.",
+  "split_apps_title": "Uygulama Bazlı Tünelleme",
+  "split_apps_alt": "Uygulama Bazlı Tünelleme",
+  "split_apps_desc": "Bazı uygulamaların çalışmak için VPN'e ihtiyacı yoktur; yerel bankacılık, ödeme ve taksi hizmetleri gibi diğerleri ise VPN üzerinden erişilemeyebilir. Uygulama Bazlı Tünelleme ile hangi uygulamaların VPN kullanacağını ve hangilerinin doğrudan bağlanacağını seçebilirsiniz. Bu, temel uygulamaların sorunsuz çalışmasını sağlar, gereksiz ülke dışı trafiği azaltır ve genel hızı ile veri verimliliğini artırır.",
+  "split_ip_title": "IP Bazlı Tünelleme",
+  "split_ip_alt": "IP Bazlı Tünelleme",
+  "split_ip_desc": "IP Bazlı Tünelleme, belirli IP adreslerini veya aralıklarını VPN bağlantısına dahil etmenize ya da hariç tutmanıza olanak tanır. Diğerlerini normal internet bağlantınızda tutarken, yalnızca seçilen hedefleri VPN üzerinden yönlendirebilirsiniz. Bu özellik tarayıcı trafiği için bile çalışır ve bir uygulamanın normalde VPN kullanması gerekirken belirli hizmetlere veya yerel ağlara doğrudan erişmesi gerektiğinde çok kullanışlıdır.",
+  "split_countries_title": "Ülke Bazlı Tünelleme",
+  "split_countries_alt": "Ülke Bazlı Tünelleme",
+  "split_countries_desc": "Ülke Bazlı Tünelleme, trafiği hedef ülkesine göre dahil etmenize veya hariç tutmanıza olanak tanır. Belirli uygulamaları seçme veya IP aralıkları bulma zorunluluğu olmadan, uygulama veya IP tabanlı tünelleme ile aynı avantajları sunar. Bu, VPN'e ihtiyaç duymayan hizmetlere doğrudan erişim sağlayarak trafik tasarrufu yapmanıza ve hızı artırmanıza yardımcı olurken, korumayı en çok ihtiyaç duyulan yerde aktif tutar.",
+  "protocols_title": "Güçlü Protokoller",
+  "protocols_alt": "Protokoller ekran görüntüsü",
+  "protocols_desc": "VpnHood protokolü, farklı ağ ortamlarında maksimum direnç ve kararlılık için tasarlanmıştır. Belirli ağ koşullarınıza bağlı olarak hız ve verimlilik açısından en iyi dengesini bulmak için protokoller arasında geçiş yapabilirsiniz. VpnHood, verilerinizi güvence altına almanın ötesinde, trafiğinizin tutarlı ve güvenli kalmasını sağlamak için bağlantı meta verilerini optimize ederek üst düzey şifrelemeyle profesyonel kalitede özel bir bağlantı sunar."
+}

@@ -1,0 +1,14 @@
+{
+  "eyebrow": "FAQ",
+  "heading": "Perguntas Frequentes",
+  "desc": "Tire todas as suas dúvidas aqui.",
+  "view_all": "Ver Todas as Perguntas",
+  "q1": "Por que escolher o VpnHood?",
+  "a1": "O VpnHood é uma VPN gratuita alimentada pelo <b>VpnHood ENGINE</b>, desenvolvida inteiramente pela equipa do VpnHood. Utiliza protocolos próprios criados com base em open-source para garantir a máxima transparência. O nosso código open-source está disponível publicamente para auditoria de segurança e integridade. O VpnHood foi concebido para otimizar a transmissão de dados, oferecendo alta performance e excelente compatibilidade de rede. Priorizamos a sua privacidade com uma política rigorosa de zero registos (zero logs) de dados pessoais ou de atividade, proporcionando uma experiência digital totalmente segura.",
+  "q2": "O VpnHood é totalmente gratuito?",
+  "a2": "Sim, o VpnHood oferece um serviço de VPN gratuito, sem limites de tempo, tráfego ou largura de banda. No entanto, pode desbloquear recursos exclusivos fazendo upgrade para uma assinatura premium. Com o plano premium, ganha acesso a servidores em mais países, velocidades superiores e funcionalidades avançadas. Para saber mais, visite a página de <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">detalhes dos planos</a>.",
+  "q3": "VpnHood! CONNECT vs. VpnHood! CLIENT?",
+  "a3": "O VpnHood! CONNECT é uma VPN gratuita que pode usar sem quaisquer limitações. Já o VpnHood! CLIENT, embora também seja gratuito, não inclui servidores integrados para ligação direta. É ideal para quem configura a sua própria VPN dedicada com o VpnHood! MANAGER, permitindo partilhar a aplicação e a respetiva Server Key com os utilizadores.",
+  "q4": "Quais são as plataformas suportadas pelo VpnHood?",
+  "a4": "Tanto o VpnHood! CONNECT como o VpnHood! CLIENT são compatíveis com Android, Android TV e Windows. No entanto, a versão do VpnHood! CONNECT para Windows requer uma Premium Key, que pode adquirir na página de <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">preços</a>."
+}

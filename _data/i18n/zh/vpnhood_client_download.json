@@ -1,0 +1,21 @@
+{
+  "meta_title": "下载 VpnHood! CLIENT",
+  "meta_description": "VpnHood! 是一款免费、安全且开源的 VPN。依托全球服务器网络，全力保护您的在线隐私，保障安全畅游网络。",
+  "page_title": "下载 VpnHood! CLIENT",
+  "page_desc": "高速、安全且可靠的 VPN 解决方案，由开源的 <b>VpnHood! ENGINE</b> 驱动，更是首款完全基于 .NET 平台开发的 VPN。",
+  "android_title": "Android",
+  "androidtv_title": "Android TV",
+  "windows_title": "Windows",
+  "linux_title": "Linux",
+  "get_it_on": "前往获取",
+  "get_it_via": "下载方式",
+  "google_play": "Google Play",
+  "direct_link": "直接下载",
+  "new_tab": "（在新标签页中打开）",
+  "android_min_version": "支持 <b>Android 7.0</b> 及以上版本。",
+  "androidtv_min_version": "支持 <b>Android TV 10.0</b> 及以上版本。",
+  "windows_min_version": "支持 <b>Windows 10</b> 及以上版本。",
+  "windows_x64_only": "仅支持 Windows x64 版本。",
+  "direct_link_note": "建议仅在无法访问 Google Play 时使用直接下载。",
+  "linux_arch_note": "支持 x64 和 ARM64 架构。"
+}

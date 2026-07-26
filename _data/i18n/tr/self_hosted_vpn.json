@@ -1,0 +1,20 @@
+{
+  "meta_title": "Kendi Sunucunda VPN | VpnHood!",
+  "meta_description": "VpnHood! – Çevrimiçi gizliliğinizi korumak ve güvenli internet erişimi sağlamak için tasarlanmış, küresel sunucu ağlı ücretsiz, güvenli ve açık kaynaklı bir VPN.",
+  "page_title": "Kendi Sunucunda VPN",
+  "page_desc": "kullanıcılara kendi VPN sunucularını kolayca kurma ve yönetme gücü veren, ücretsiz ve açık kaynaklı bir çözüm sunar.",
+  "manager_title": "VpnHood! MANAGER",
+  "manager_desc": "VpnHood! MANAGER, kullanıcıların VPN sunucularını zahmetsizce kurmasını, yapılandırmasını ve izlemesini sağlayan web tabanlı bir yönetim panelidir. Kolay arayüzü sayesinde şunları yapabilirsiniz:",
+  "manager_li_deploy": "Teknik bilgiye ihtiyaç duymadan VPN sunucuları kurun ve yönetin.",
+  "manager_li_monitor": "Bağlantı günlüklerini ve performans ölçümlerini takip edin.",
+  "manager_li_access": "Erişim ve güvenlik ayarlarını kolayca kontrol edin.",
+  "manager_li_api": "Gelişmiş otomasyon için RESTful API kullanın.",
+  "learn_more": "Daha fazla bilgi al",
+  "client_title": "VpnHood! CLIENT",
+  "client_desc": "Windows ve Android için geliştirilen VpnHood! CLIENT, kusursuz bir VPN deneyimi sunar. Başlıca özellikleri:",
+  "client_li_fast": "VpnHood Engine gücüyle <b>hızlı ve güvenli</b> VPN bağlantıları.",
+  "client_li_protocol": "Farklı ağ ortamlarında gizliliğinizi koruyan, kesintisiz ve şifreli bir bağlantı sağlayan <b>güvenilir protokol</b>.",
+  "client_li_split": "Uygulamalar, IP'ler, alan adları ve ülkeye göre filtreleme için <b>bölünmüş tünelleme (Split Tunneling)</b>.",
+  "client_li_ip": "Geniş uyumluluk için <b>IPv4 ve IPv6 desteği</b>.",
+  "outro": "VpnHood ile tamamen ücretsiz, özelleştirilebilir ve yönetimi kolay, kendi sunucunuzda çalışan bir VPN çözümünün tadını çıkarın."
+}

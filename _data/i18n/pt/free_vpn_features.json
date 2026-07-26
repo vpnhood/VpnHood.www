@@ -1,0 +1,21 @@
+{
+  "meta_title": "Recursos de VPN Grátis | VpnHood! CONNECT",
+  "meta_description": "Explore os recursos do VpnHood! CONNECT: rede global de servidores, tunelamento dividido por aplicativo, IP ou país, e protocolos robustos que resistem ao bloqueio de VPN.",
+  "page_title": "Lista de recursos",
+  "page_desc": "Conheça os recursos do app em detalhes, personalize-o conforme as suas necessidades e aproveite ao máximo todo o seu potencial.",
+  "server_network_title": "Rede de Servidores Globais",
+  "server_network_alt": "Rede de Servidores Globais",
+  "server_network_desc": "O VpnHood! CONNECT oferece uma rede global de servidores, permitindo que você se conecte de várias regiões do mundo. Escolha o servidor ideal para garantir mais velocidade e estabilidade, proporcionando uma experiência fluida para navegação, trabalho e atividades online.",
+  "split_apps_title": "Divisão de Túnel por Aplicativos",
+  "split_apps_alt": "Divisão de Túnel por Aplicativos",
+  "split_apps_desc": "Alguns apps não precisam de VPN, enquanto serviços locais como bancos, pagamentos e transporte podem não funcionar com ela ativada. Com a divisão por apps, você escolhe quais usam a VPN e quais se conectam diretamente. Assim, seus apps essenciais funcionam perfeitamente, você economiza dados e ganha mais velocidade.",
+  "split_ip_title": "Divisão de Túnel por IP",
+  "split_ip_alt": "Divisão de Túnel por IP",
+  "split_ip_desc": "A divisão por IP permite incluir ou excluir endereços ou faixas de IP específicas da conexão VPN. Roteie apenas os destinos escolhidos pela VPN enquanto mantém o restante na sua internet normal. O recurso funciona até no navegador e é ideal quando um app precisa da VPN, mas requer acesso direto a redes ou serviços locais.",
+  "split_countries_title": "Divisão de Túnel por Países",
+  "split_countries_alt": "Divisão de Túnel por Países",
+  "split_countries_desc": "A divisão por países permite incluir ou excluir tráfego com base no país de destino. Ela traz os mesmos benefícios do túnel por app ou IP, mas sem a necessidade de configurar apps ou buscar IPs. Isso economiza dados e aumenta a velocidade, dando acesso direto a serviços que não precisam de VPN e mantendo a proteção ativa onde é mais importante.",
+  "protocols_title": "Protocolos Resistentes",
+  "protocols_alt": "Captura de tela de protocolos",
+  "protocols_desc": "O protocolo do VpnHood foi desenvolvido para garantir máxima resiliência e estabilidade em qualquer rede. Alterne entre protocolos para encontrar o equilíbrio perfeito entre velocidade e eficiência de acordo com a sua conexão. Além de proteger seus dados, o VpnHood otimiza os metadados para manter seu tráfego seguro e consistente, entregando uma conexão privada de nível profissional com criptografia avançada."
+}

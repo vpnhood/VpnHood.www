@@ -1,0 +1,14 @@
+{
+  "eyebrow": "常见问题",
+  "heading": "常见问题解答",
+  "desc": "在这里找到您想了解的答案。",
+  "view_all": "查看所有常见问题",
+  "q1": "为什么选择 VpnHood？",
+  "a1": "VpnHood 是一款免费的 VPN，由 VpnHood 团队独立研发，并搭载 <b>VpnHood ENGINE</b> 引擎。它采用基于开源基础构建的专有协议，确保极致的透明度。我们的开源代码完全公开，可供所有人审查，以验证其安全性和完整性。VpnHood 旨在优化数据传输，实现高性能连接并增强网络兼容性。我们始终将您的隐私放在首位，承诺不收集任何个人信息和活动日志，为您带来安全、私密的数字体验。",
+  "q2": "VpnHood 是免费的 VPN 吗？",
+  "a2": "是的，VpnHood 提供完全免费的 VPN 服务，且没有时间、流量或带宽限制。此外，您还可以通过升级高级订阅来解锁更多高级功能。高级版为您提供更多国家的服务器节点、更快的连接速度以及增强的应用体验。了解更多详情，请访问<a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">套餐详情</a>页面。",
+  "q3": "VpnHood! CONNECT 与 VpnHood! CLIENT 有何区别？",
+  "a3": "VpnHood! CONNECT 是一款用户可以无限制畅享的免费 VPN。而 VpnHood! CLIENT 虽然同样免费，但本身不包含直连服务器。它通常用于：通过 VpnHood! MANAGER 搭建专属 VPN 的用户，可以将此应用连同服务器密钥（Server Key）分享给其他人使用。",
+  "q4": "VpnHood 支持哪些平台？",
+  "a4": "VpnHood! CONNECT 和 VpnHood! CLIENT 均支持 Android、Android TV 和 Windows 平台。需要注意的是，Windows 版的 VpnHood! CONNECT 并非免费，您需要前往<a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">价格</a>页面购买高级密钥（Premium Key）。"
+}

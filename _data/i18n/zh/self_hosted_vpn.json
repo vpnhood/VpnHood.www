@@ -1,0 +1,20 @@
+{
+  "meta_title": "自托管 VPN | VpnHood!",
+  "meta_description": "VpnHood! – 一款免费、安全且开源的 VPN，拥有全球服务器网络，旨在保护您的在线隐私并确保安全访问网络。",
+  "page_title": "自托管 VPN",
+  "page_desc": "让用户轻松创建和管理自己的 VPN 服务器，提供免费且开源的解决方案。",
+  "manager_title": "VpnHood! MANAGER",
+  "manager_desc": "VpnHood! MANAGER 是一个基于网页的控制面板，让用户能够轻松设置、配置和监控其 VPN 服务器。通过直观的界面，用户可以：",
+  "manager_li_deploy": "无需专业技术即可部署和管理 VPN 服务器。",
+  "manager_li_monitor": "实时监控连接日志和性能指标。",
+  "manager_li_access": "轻松控制访问和安全设置。",
+  "manager_li_api": "利用 RESTful API 实现高级自动化。",
+  "learn_more": "了解更多",
+  "client_title": "VpnHood! CLIENT",
+  "client_desc": "VpnHood! CLIENT 适用于 Windows 和 Android，为用户提供流畅的 VPN 体验。主要功能包括：",
+  "client_li_fast": "由 VpnHood Engine 驱动的<b>快速且安全</b>的 VPN 连接。",
+  "client_li_protocol": "<b>稳健的协议</b>确保流畅、加密的连接，在各种网络环境中保持私密的在线状态。",
+  "client_li_split": "针对应用、IP、域名和国家/地区过滤的<b>分流（Split tunneling）</b>功能。",
+  "client_li_ip": "<b>支持 IPv4 和 IPv6</b>，具备极高的兼容性。",
+  "outro": "借助 VpnHood，用户可以享受免费、可定制且易于管理的自托管 VPN 解决方案。"
+}

@@ -1,0 +1,14 @@
+{
+  "eyebrow": "Preguntas frecuentes",
+  "heading": "Preguntas frecuentes",
+  "desc": "Encuentra respuestas a todas tus dudas.",
+  "view_all": "Ver todas las preguntas",
+  "q1": "¿Por qué elegir VpnHood?",
+  "a1": "VpnHood es una VPN gratuita impulsada por el <b>VpnHood ENGINE</b> y desarrollada íntegramente por su equipo. Utiliza protocolos propios basados en cimientos de código abierto para garantizar la máxima transparencia. Nuestro código es público para que puedas verificar su seguridad e integridad. VpnHood está diseñado para optimizar la transmisión de datos, logrando una conexión de alto rendimiento y gran compatibilidad. Tu privacidad es lo primero: no recopilamos información personal ni registros de actividad, ofreciéndote una experiencia digital totalmente segura y privada.",
+  "q2": "¿VpnHood es una VPN gratuita?",
+  "a2": "Sí, VpnHood ofrece un servicio VPN gratuito sin límites de tiempo, tráfico ni ancho de banda. Si lo deseas, puedes desbloquear funciones adicionales pasando a una suscripción premium. Con el plan premium, tendrás acceso a servidores en más países, mayor velocidad de conexión y funciones avanzadas en la aplicación. Para más información, visita la página de <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">detalles de planes</a>.",
+  "q3": "¿VpnHood! CONNECT frente a VpnHood! CLIENT?",
+  "a3": "VpnHood! CONNECT es una VPN gratuita que puedes disfrutar sin límites. Por su parte, VpnHood! CLIENT también es gratuita, pero no incluye servidores para conexiones directas. Está pensada para que quienes configuran su propia VPN con VpnHood! MANAGER puedan compartir esta app con sus usuarios junto con una clave de servidor (Server Key) para conectar.",
+  "q4": "¿Qué plataformas admite VpnHood?",
+  "a4": "Tanto VpnHood! CONNECT como VpnHood! CLIENT son compatibles con Android, Android TV y Windows. Ten en cuenta que VpnHood! CONNECT en Windows no es gratuita; requiere una clave Premium que puedes adquirir en la página de <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">precios</a>."
+}

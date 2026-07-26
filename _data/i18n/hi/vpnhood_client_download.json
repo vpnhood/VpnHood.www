@@ -1,0 +1,21 @@
+{
+  "meta_title": "VpnHood! CLIENT डाउनलोड करें",
+  "meta_description": "VpnHood! – एक मुफ़्त, सुरक्षित और ओपन-सोर्स VPN जो वैश्विक सर्वर नेटवर्क के साथ आपकी ऑनलाइन प्राइवेसी की सुरक्षा करता है और सुरक्षित वेब एक्सेस देता है।",
+  "page_title": "VpnHood! CLIENT डाउनलोड करें",
+  "page_desc": "<b>VpnHood! Engine</b> द्वारा संचालित एक तेज़, सुरक्षित और भरोसेमंद VPN समाधान, जो ओपन-सोर्स है और पूरी तरह से .NET प्लेटफ़ॉर्म पर विकसित पहला VPN है।",
+  "android_title": "Android",
+  "androidtv_title": "Android TV",
+  "windows_title": "Windows",
+  "linux_title": "Linux",
+  "get_it_on": "यहाँ से पाएँ",
+  "get_it_via": "के माध्यम से पाएँ",
+  "google_play": "Google Play",
+  "direct_link": "डायरेक्ट लिंक",
+  "new_tab": "(नए टैब में खुलता है)",
+  "android_min_version": "<b>Android 7.0</b> और उससे ऊपर के वर्ज़न पर समर्थित।",
+  "androidtv_min_version": "<b>Android TV 10.0</b> और उससे ऊपर के वर्ज़न पर समर्थित।",
+  "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्ज़न पर समर्थित।",
+  "windows_x64_only": "केवल Windows x64 वर्ज़न के लिए।",
+  "direct_link_note": "डायरेक्ट लिंक से केवल तभी डाउनलोड करें जब आपके पास Google Play तक पहुँच न हो।",
+  "linux_arch_note": "x64 और ARM64 आर्किटेक्चर का समर्थन करता है।"
+}

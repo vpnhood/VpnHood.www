@@ -1,0 +1,12 @@
+{
+  "meta_title": "VpnHood! CLIENT",
+  "meta_description": "VpnHood! 是一款免费、安全且开源的 VPN，拥有全球服务器网络，旨在保护您的网络隐私，确保安全顺畅地访问网络。",
+  "page_title": "VpnHood! CLIENT",
+  "page_desc": "由开源且首款完全基于 .NET 平台开发的 <b>VpnHood! Engine</b> 驱动，为您提供快速、安全、可靠的 VPN 解决方案。",
+  "intro": "VpnHood! CLIENT 支持 Windows 和 Android，为您提供无缝的网络连接体验。主要特色包括：",
+  "li_fast": "<b>高速安全</b>：由 VpnHood Engine 驱动的 VPN 连接。",
+  "li_protocol": "<b>稳定协议</b>：保障加密连接顺畅无阻，在各种网络环境下守护您的在线隐私。",
+  "li_split": "<b>分流隧道</b>：支持按应用、IP、域名及国家/地区进行智能过滤。",
+  "li_ip": "<b>支持 IPv4 &amp; IPv6</b>：提供更广泛的网络兼容性。",
+  "download_client": "下载 VpnHood! CLIENT"
+}

@@ -1,0 +1,21 @@
+{
+  "meta_title": "VpnHood! CLIENT İndir",
+  "meta_description": "VpnHood! – Çevrim içi gizliliğinizi koruyan ve güvenli web erişimi sağlayan; küresel sunucu ağına sahip, ücretsiz, güvenli ve açık kaynaklı bir VPN.",
+  "page_title": "VpnHood! CLIENT İndir",
+  "page_desc": "Açık kaynaklı ve tamamen .NET platformuyla geliştirilen ilk VPN olan <b>VpnHood! ENGINE</b> altyapısına sahip; hızlı, güvenli ve güvenilir VPN çözümü.",
+  "android_title": "Android",
+  "androidtv_title": "Android TV",
+  "windows_title": "Windows",
+  "linux_title": "Linux",
+  "get_it_on": "Edinin",
+  "get_it_via": "Şununla edinin",
+  "google_play": "Google Play",
+  "direct_link": "Doğrudan Bağlantı",
+  "new_tab": "(yeni sekmede açılır)",
+  "android_min_version": "<b>Android 7.0</b> ve üzerini destekler.",
+  "androidtv_min_version": "<b>Android TV 10.0</b> ve üzerini destekler.",
+  "windows_min_version": "<b>Windows 10</b> ve üzerini destekler.",
+  "windows_x64_only": "Yalnızca Windows x64 sürümü.",
+  "direct_link_note": "Doğrudan bağlantıyı yalnızca Google Play'e erişiminiz olmadığında tercih etmeniz önerilir.",
+  "linux_arch_note": "x64 ve ARM64 mimarilerini destekler."
+}

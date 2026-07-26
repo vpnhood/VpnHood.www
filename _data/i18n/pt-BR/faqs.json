@@ -1,0 +1,14 @@
+{
+  "eyebrow": "FAQ",
+  "heading": "Perguntas Frequentes",
+  "desc": "Encontre respostas para todas as suas dúvidas.",
+  "view_all": "Ver Todas as Perguntas",
+  "q1": "Por que escolher o VpnHood?",
+  "a1": "O VpnHood é uma VPN gratuita alimentada pelo <b>VpnHood ENGINE</b>, desenvolvida inteiramente pela equipe do VpnHood. Ele usa protocolos proprietários construídos sobre bases de código aberto para garantir total transparência. Nosso código aberto está disponível para auditoria pública, comprovando nossa segurança e integridade. O VpnHood foi criado para otimizar a transmissão de dados, oferecendo alta performance e excelente compatibilidade de rede. Priorizamos sua privacidade com uma política rigorosa de zero registro de dados pessoais ou de atividades, garantindo uma experiência digital altamente segura e privada.",
+  "q2": "O VpnHood é realmente gratuito?",
+  "a2": "Sim, o VpnHood oferece um serviço de VPN gratuito, sem limites de tempo, tráfego ou largura de banda. No entanto, você pode desbloquear recursos extras fazendo upgrade para uma assinatura premium. Com o plano premium, você tem acesso a servidores em mais países, conexões mais rápidas e recursos avançados no aplicativo. Para saber mais, acesse a página de <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">detalhes do plano</a>.",
+  "q3": "Qual a diferença entre VpnHood! CONNECT e VpnHood! CLIENT?",
+  "a3": "O VpnHood! CONNECT é uma VPN gratuita que você pode usar sem limitações. Já o VpnHood! CLIENT também é gratuito, mas não inclui servidores para conexão direta. Ele é indicado para quem configura sua própria VPN dedicada usando o VpnHood! MANAGER, permitindo compartilhar o aplicativo e uma Chave de Servidor com outros usuários.",
+  "q4": "Quais plataformas o VpnHood suporta?",
+  "a4": "Tanto o VpnHood! CONNECT quanto o VpnHood! CLIENT são compatíveis com Android, Android TV e Windows. No entanto, o VpnHood! CONNECT no Windows não é gratuito: é necessário adquirir uma Chave Premium, disponível na página de <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">preços</a>."
+}

@@ -1,0 +1,21 @@
+{
+  "meta_title": "Descarga VpnHood! CLIENT",
+  "meta_description": "VpnHood!: una VPN gratuita, segura y de código abierto con una red global de servidores para proteger tu privacidad online y navegar con total seguridad.",
+  "page_title": "Descarga VpnHood! CLIENT",
+  "page_desc": "Una solución VPN rápida, segura y confiable impulsada por <b>VpnHood! ENGINE</b>, de código abierto y la primera VPN desarrollada íntegramente en la plataforma .NET.",
+  "android_title": "Android",
+  "androidtv_title": "Android TV",
+  "windows_title": "Windows",
+  "linux_title": "Linux",
+  "get_it_on": "Disponible en",
+  "get_it_via": "Consíguelo mediante",
+  "google_play": "Google Play",
+  "direct_link": "Enlace directo",
+  "new_tab": "(se abre en una nueva pestaña)",
+  "android_min_version": "Compatible con <b>Android 7.0</b> y versiones posteriores.",
+  "androidtv_min_version": "Compatible con <b>Android TV 10.0</b> y versiones posteriores.",
+  "windows_min_version": "Compatible con <b>Windows 10</b> y versiones posteriores.",
+  "windows_x64_only": "Solo disponible para Windows x64.",
+  "direct_link_note": "Usa el enlace directo únicamente si no tienes acceso a Google Play.",
+  "linux_arch_note": "Compatible con arquitecturas x64 y ARM64."
+}

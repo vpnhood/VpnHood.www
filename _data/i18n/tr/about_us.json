@@ -1,0 +1,12 @@
+{
+  "meta_title": "Hakkımızda | VpnHood!",
+  "meta_description": "VpnHood! – Çevrimiçi gizliliğinizi korumak ve güvenli web erişimi sağlamak için küresel bir sunucu ağına sahip, ücretsiz, güvenli ve açık kaynaklı bir VPN.",
+  "page_title": "Hakkımızda",
+  "page_desc": "Amacımız; coğrafi engeller veya ülkesel sansürler ne olursa olsun kullanıcılara tam veri güvenliği ve kişisel gizlilikle birlikte, özgür ve sınırsız internet erişimi sunmaktır.",
+  "intro": "<b>VpnHood</b>, VpnHood ekibi tarafından tamamen .NET ile geliştirilen <b>VpnHood! ENGINE</b> altyapısıyla çalışan ücretsiz bir VPN hizmetidir. Diğer birçok çözümden farklı olarak VpnHood Engine sıfırdan inşa edilmiştir; kod tabanında mevcut hiçbir VPN yazılımını barındırmaz veya yeniden kullanmaz. Şeffaflık, denetlenebilirlik ve güven sağlamak için açık standartlardan ilham alan özel protokoller kullanır.",
+  "traffic_title": "Sıradan web gezinmesi gibi görünen VPN trafiği",
+  "traffic_desc": "VpnHood, VPN trafiğini tamamen sıradan bir web gezintisi gibi göstererek güvenlik duvarlarını ve sansür sistemlerini yüksek güvenilirlikle aşmanızı sağlar. Hiçbir kişisel bilgi toplamaz ve etkinlik günlüğü tutmaz; varsayılan olarak güçlü bir gizlilik ve anonimlik sunar.",
+  "architecture_title": "Bileşen tabanlı mimari",
+  "architecture_desc": "Modüler ve bileşen tabanlı bir mimariyle inşa edilen VpnHood; geliştiricilerin paket gizleme, aktarım katmanları veya şifreleme araçları gibi bireysel bileşenleri yeniden kullanmasını veya özel ihtiyaçlara uygun yeni VPN uygulamalarını kolayca oluşturmasını sağlar.",
+  "saas_desc": "Buna ek olarak VpnHood, SaaS olarak eksiksiz bir arka uç hizmeti sunar; böylece bireyler ve kurumlar tek bir satır arka uç kodu yazmadan kullanıcıları, cihazları ve altyapıyı yönetebilir. Bu sayede herkes sıfır kurulumla ölçeklenebilir ve merkeziyetsiz bir VPN ağı başlatabilir; bu da VpnHood'u hem kişisel projeler hem de kurumsal çözümler için ideal kılar."
+}

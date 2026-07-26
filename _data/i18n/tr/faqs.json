@@ -1,0 +1,14 @@
+{
+  "eyebrow": "SSS",
+  "heading": "Sıkça Sorulan Sorular",
+  "desc": "Sorularınızın yanıtlarını hemen bulun.",
+  "view_all": "Tüm Soruları Gör",
+  "q1": "Neden VpnHood?",
+  "a1": "VpnHood, tamamen VpnHood ekibi tarafından geliştirilen <b>VpnHood ENGINE</b> gücüne sahip ücretsiz bir VPN'dir. Maksimum şeffaflık için açık kaynak temelli tescilli protokoller kullanır. Güvenlik ve bütünlüğü doğrulamak üzere açık kaynak kodumuz herkesin incelemesine açıktır. VpnHood; yüksek performanslı bağlantı ve gelişmiş ağ uyumluluğu için veri aktarımını optimize etmek üzere tasarlanmıştır. Kişisel bilgilerinizi ve etkinlik kayıtlarınızı asla toplamayarak gizliliğinizi ön planda tutar, son derece güvenli ve gizli bir dijital deneyim sunar.",
+  "q2": "VpnHood ücretsiz bir VPN mi?",
+  "a2": "Evet, VpnHood herhangi bir zaman, trafik veya bant genişliği sınırı olmaksızın ücretsiz bir VPN hizmeti sunar. Ancak premium aboneliğe geçerek ek özelliklerin kilidini açabilirsiniz. Premium plan ile daha fazla ülkedeki sunuculara erişebilir, daha hızlı bağlantı hızları ve gelişmiş uygulama özellikleri elde edersiniz. Daha fazla bilgi için <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">plan detayları</a> sayfasını ziyaret edin.",
+  "q3": "VpnHood! CONNECT ile VpnHood! CLIENT arasındaki fark nedir?",
+  "a3": "VpnHood! CONNECT, kullanıcıların sınırsızca keyfini çıkarabileceği ücretsiz bir VPN'dir. VpnHood! CLIENT da ücretsiz olsa da doğrudan bağlantı için sunucu içermez. Bunun yerine, VpnHood! MANAGER kullanarak kendi özel VPN'ini kuranlar, bu uygulamayı bir Sunucu Anahtarı ile birlikte kullanıcılarıyla paylaşarak erişim sağlayabilir.",
+  "q4": "VpnHood hangi platformları destekliyor?",
+  "a4": "Hem VpnHood! CONNECT hem de VpnHood! CLIENT; Android, Android TV ve Windows ile uyumludur. Ancak VpnHood! CONNECT Windows üzerinde ücretsiz değildir; <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">fiyatlandırma</a> sayfasında bulabileceğiniz bir Premium Anahtar satın almanız gerekir."
+}

@@ -1,0 +1,21 @@
+{
+  "meta_title": "免费 VPN 功能 | VpnHood! CONNECT",
+  "meta_description": "探索 VpnHood! CONNECT 的强大功能：全球服务器网络、按应用、IP或国家/地区划分的隧道分流，以及有效抗封锁的稳定协议。",
+  "page_title": "功能列表",
+  "page_desc": "深入了解应用功能，根据您的需求自由定制，充分发挥其强大性能。",
+  "server_network_title": "全球服务器网络",
+  "server_network_alt": "全球服务器网络",
+  "server_network_desc": "VpnHood! CONNECT 提供全球服务器网络，让您连接至世界各地。自由选择理想服务器以提升速度与连接稳定性，为您的网页浏览、日常办公和在线活动带来丝滑顺畅的体验。",
+  "split_apps_title": "应用分流",
+  "split_apps_alt": "应用分流",
+  "split_apps_desc": "有些应用无需 VPN 即可运行，而本地银行、支付和打车等服务则可能无法通过 VPN 访问。通过应用分流，您可以自由选择哪些应用使用 VPN，哪些应用直接联网。这不仅能确保常用应用顺畅运行，还能减少不必要的跨境流量，全面提升网速与流量效率。",
+  "split_ip_title": "IP 地址分流",
+  "split_ip_alt": "IP 地址分流",
+  "split_ip_desc": "IP 地址分流允许您在 VPN 连接中包含或排除特定的 IP 地址或网段。您可以仅将选定的目标路由至 VPN，其余流量保持正常网络连接。该功能同样适用于浏览器流量，当应用需要使用 VPN 但又必须直接访问某些特定服务或本地网络时，它会非常实用。",
+  "split_countries_title": "国家/地区分流",
+  "split_countries_alt": "国家/地区分流",
+  "split_countries_desc": "国家/地区分流允许您根据目标国家/地区来包含或排除流量。它提供与应用或 IP 分流相同的优势，且无需手动选择特定应用或查找 IP 网段。它能让无需 VPN 的服务直接联网，从而帮您节省流量并提升速度，同时在最需要的关键地方保持全方位保护。",
+  "protocols_title": "稳健的协议",
+  "protocols_alt": "协议截图",
+  "protocols_desc": "VpnHood 协议专为各种复杂网络环境下的极致弹性和稳定性而设计。您可以根据自身网络状况在不同协议间自由切换，从而找到速度与效率的最佳平衡点。除了保障数据安全，VpnHood 还可优化连接元数据，确保流量持续稳定且安全，为您提供具备高级加密的专业级私密连接。"
+}

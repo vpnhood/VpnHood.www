@@ -1,0 +1,20 @@
+{
+  "meta_title": "VPN autohospedada | VpnHood!",
+  "meta_description": "VpnHood! – Una VPN gratuita, segura y de código abierto con una red de servidores global diseñada para proteger tu privacidad en línea y garantizar un acceso web seguro.",
+  "page_title": "VPN autohospedada",
+  "page_desc": "permite a los usuarios crear y gestionar sus propios servidores VPN con facilidad, ofreciendo una solución gratuita y de código abierto.",
+  "manager_title": "VpnHood! MANAGER",
+  "manager_desc": "VpnHood! MANAGER es un panel web que te permite configurar y supervisar tus servidores VPN sin esfuerzo. Con una interfaz intuitiva, podrás:",
+  "manager_li_deploy": "Implementar y gestionar servidores VPN sin conocimientos técnicos.",
+  "manager_li_monitor": "Supervisar registros de conexión y métricas de rendimiento.",
+  "manager_li_access": "Controlar el acceso y la configuración de seguridad.",
+  "manager_li_api": "Utilizar una API RESTful para una automatización avanzada.",
+  "learn_more": "Más información",
+  "client_title": "VpnHood! CLIENT",
+  "client_desc": "VpnHood! CLIENT está disponible para Windows y Android, ofreciendo una experiencia VPN fluida. Sus características principales incluyen:",
+  "client_li_fast": "Conexiones VPN <b>rápidas y seguras</b> impulsadas por VpnHood Engine.",
+  "client_li_protocol": "<b>Protocolo robusto</b> que garantiza una conexión cifrada y fluida, manteniendo tu privacidad en cualquier red.",
+  "client_li_split": "<b>Túnel dividido</b> (split tunneling) para aplicaciones, IPs, dominios y filtrado por países.",
+  "client_li_ip": "<b>Compatibilidad con IPv4 e IPv6</b> para una mayor conectividad.",
+  "outro": "Con VpnHood, disfruta de una solución VPN autohospedada, gratuita, totalmente personalizable y fácil de usar."
+}

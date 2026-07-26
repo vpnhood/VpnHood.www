@@ -559,3 +559,8 @@
     font-size: 20px;
     font-weight: 600;
 }
+// Titles inherit the muted body colour otherwise, so they read as one block with
+// the copy below them. The icon's lavender ties the two halves of a card together.
+.vh-feature-card h3{
+    color: var(--purple-120);
+}
