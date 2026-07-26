@@ -73,7 +73,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           dotnet tool restore
-          dotnet tool run vhtranslator site
+          dotnet tool run vhtranslator
 
       # Push the generated translations + watches back to main so the repo stays in
       # sync and nothing is re-translated on the next publish. Scoped to the
@@ -83,7 +83,7 @@ jobs:
       # already-translated tree either way.
       - name: Commit translations back
         run: |
-          git add _langs _data/i18n vh_translator
+          git add _data/i18n vh_translator
           if git diff --cached --quiet; then
             echo "translations already current"
           else

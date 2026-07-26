@@ -55,10 +55,9 @@
          file is generated. Includes share scope, so footer.html and lang-selector.html
          use tc as well. {% endcomment %}
     {% assign tc = site.data.i18n[vh_page_lang].chrome | default: site.data.i18n.en.chrome %}
-    {% comment %} Generated language pages live in the _langs collection (site.langs);
-         hand-authored ones could still sit in site.pages — scan both. {% endcomment %}
+    {% comment %} Per-language pages are generated into site.pages at build time
+         by _plugins/i18n-pages.rb (one clone per _data/i18n/<code>/ folder). {% endcomment %}
     {% assign vh_lang_pages = site.pages %}
-    {% if site.langs %}{% assign vh_lang_pages = vh_lang_pages | concat: site.langs %}{% endif %}
     {% capture vh_alternates %}{% for vh_p in vh_lang_pages %}{% if vh_p.lang %}{% capture vh_p_prefix %}/{{ vh_p.lang }}{% endcapture %}{% assign vh_p_base = vh_p.url | remove_first: vh_p_prefix %}{% if vh_p_base == vh_base_url %}
     <link rel="alternate" hreflang="{{ vh_p.lang }}" href="{{ vh_p.url | absolute_url }}" />{% endif %}{% endif %}{% endfor %}{% endcapture %}
     {% if vh_alternates != "" %}

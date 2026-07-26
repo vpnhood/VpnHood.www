@@ -1,17 +1,5 @@
 {
+  "base": "_data/i18n/en",
   "model": "gemini-flash-lite-latest",
-  "site": {
-    "pages": ["**/index.html"],
-    "exclude": [
-      ".legacy_joomla/**",
-      "privacy-policy/**",
-      "vpnhood-*-privacy-policy/**",
-      "terms-of-use/**"
-    ],
-    "languages": ["fa", "fr", "de", "ar"],
-    "output": "_langs/{lang}/{path}",
-    "titleMustContain": "VpnHood!",
-    "pageBody": "copy",
-    "data": ["_data/i18n/en"]
-  }
+  "languages": ["fa", "fr", "de", "ar"]
 }
