@@ -3,7 +3,7 @@
   "meta_description": "VpnHood! – Çevrim içi gizliliğinizi korumak ve web'e güvenli erişim sağlamak için tasarlanmış, küresel sunucu ağına sahip ücretsiz, güvenli ve açık kaynaklı bir VPN.",
   "page_title": "VpnHood! CLIENT",
   "page_desc": "Tamamen .NET platformuyla geliştirilen açık kaynaklı ilk VPN olan <b>VpnHood! ENGINE</b> altyapısına sahip hızlı, güvenli ve güvenilir VPN çözümü.",
-  "intro": "Windows ve Android platformlarında sunulan VpnHood! CLIENT, kesintisiz bir VPN deneyimi sağlar. Öne çıkan özellikler:",
+  "intro": "VpnHood! CLIENT, Android, Android TV, Windows ve Linux için kesintisiz bir VPN deneyimi sunar. Başlıca özellikleri:",
   "li_fast": "VpnHood ENGINE destekli <b>hızlı ve güvenli</b> VPN bağlantıları.",
   "li_protocol": "Farklı ağ ortamlarında çevrim içi gizliliğinizi korurken kesintisiz ve şifreli bir bağlantı sağlayan <b>sarsılmaz protokol</b>.",
   "li_split": "Uygulamalar, IP'ler, alan adları ve ülke bazlı filtreleme için <b>bölünmüş tünelleme</b>.",
