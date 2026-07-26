@@ -1,5 +1,9 @@
+{%- comment -%} Layout direction comes from _data/languages.yml (`dir` per language),
+     used for <html dir> and the Helix ltr/rtl body class — no hardcoded RTL list. {%- endcomment -%}
+{%- assign vh_page_lang = page.lang | default: 'en' -%}
+{%- assign vh_dir = site.data.languages[vh_page_lang].dir | default: 'ltr' -%}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}" dir="{% if page.lang == 'fa' or page.lang == 'ar' or page.lang == 'he' or page.lang == 'ur' %}rtl{% else %}ltr{% endif %}">
+<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -50,7 +54,6 @@
          from _data/i18n/<lang>/chrome.json, falling back to English until a language's
          file is generated. Includes share scope, so footer.html and lang-selector.html
          use tc as well. {% endcomment %}
-    {% assign vh_page_lang = page.lang | default: 'en' %}
     {% assign tc = site.data.i18n[vh_page_lang].chrome | default: site.data.i18n.en.chrome %}
     {% comment %} Generated language pages live in the _langs collection (site.langs);
          hand-authored ones could still sit in site.pages — scan both. {% endcomment %}
@@ -156,7 +159,7 @@
     <script defer src="/assets/js/lang.js"></script>
   </head>
   <body
-    class="site helix-ultimate hu en-us {% if page.lang == 'fa' or page.lang == 'ar' or page.lang == 'he' or page.lang == 'ur' %}rtl{% else %}ltr{% endif %} sticky-header layout-fluid offcanvas-init offcanvs-position-left"
+    class="site helix-ultimate hu en-us {{ vh_dir }} sticky-header layout-fluid offcanvas-init offcanvs-position-left"
   >
     <!-- Google Tag Manager (noscript) -->
     <noscript
@@ -181,7 +184,7 @@
           top: 56%;
         "
       >
-        VpnHood!
+        VpnHood!&lrm;
       </div>
     </div>
 
@@ -209,7 +212,7 @@
                           alt=""
                           aria-hidden="true"
                         />
-                        <span class="ms-1">VpnHood!</span>
+                        <span class="ms-1">VpnHood!&lrm;</span>
                       </a>
                     </div>
                   </div>

@@ -13,7 +13,7 @@
     {% assign vh_lpage = vh_lang_pages | default: site.pages | where: "url", vh_lurl | first %}
     {% unless vh_lpage %}{% capture vh_lurl %}/{{ vh_lcode }}/{% endcapture %}{% endunless %}
   {% endif %}
-  {% assign vh_lname = site.data.languages[vh_lcode] | default: vh_lcode %}
+  {% assign vh_lname = site.data.languages[vh_lcode].name | default: vh_lcode %}
   <li>
     <a
       class="{% if include.style == 'dropdown' %}dropdown-item{% endif %}{% if vh_lcode == vh_cur_lang %} active{% endif %}"
