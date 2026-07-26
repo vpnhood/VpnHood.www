@@ -525,6 +525,17 @@ iconify-icon {
     transform: scaleX(-1);
 }
 
+// RTL: our Bootstrap build is the LTR one — .text-start/.text-end pin left/right
+// instead of following the reading direction. Re-point them, or a block that opts
+// into start-alignment (the CONNECT card on the home page) keeps its heading and
+// copy on the left of an RTL page. !important matches Bootstrap's own utilities.
+[dir="rtl"] .text-start{
+    text-align: right !important;
+}
+[dir="rtl"] .text-end{
+    text-align: left !important;
+}
+
 .vh-btn-primary{
     border-style: none;
     padding: 10px 30px;
