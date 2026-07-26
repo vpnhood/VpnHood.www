@@ -31,6 +31,9 @@ hi:
 id:
   name: Bahasa Indonesia
   dir: ltr
+it:
+  name: Italiano
+  dir: ltr
 ja:
   name: 日本語
   dir: ltr
@@ -39,6 +42,9 @@ ko:
   dir: ltr
 pt:
   name: Português
+  dir: ltr
+pt-BR:
+  name: Português (Brasil)
   dir: ltr
 ru:
   name: Русский
