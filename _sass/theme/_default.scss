@@ -511,6 +511,14 @@ iconify-icon {
 [dir="rtl"] .vh-rtl-mirror{
     transform: scaleX(-1);
 }
+// RTL: the linear slider (vh-general.js) animates translateX(-x) and assumes an
+// LTR flex strip whose overflow extends rightward; in RTL the overflow extends
+// left, so the strip empties instead of looping. Keep the strip LTR so the loop
+// runs identically in every language (captions inside still render their own
+// bidi text correctly).
+[dir="rtl"] .linear-slider-items{
+    direction: ltr;
+}
 
 // RTL: our Bootstrap build is the LTR one — .text-start/.text-end pin left/right
 // instead of following the reading direction. Re-point them, or a block that opts
