@@ -156,7 +156,7 @@
     <script defer src="/assets/js/lang.js"></script>
   </head>
   <body
-    class="site helix-ultimate hu en-us ltr sticky-header layout-fluid offcanvas-init offcanvs-position-left"
+    class="site helix-ultimate hu en-us {% if page.lang == 'fa' or page.lang == 'ar' or page.lang == 'he' or page.lang == 'ur' %}rtl{% else %}ltr{% endif %} sticky-header layout-fluid offcanvas-init offcanvs-position-left"
   >
     <!-- Google Tag Manager (noscript) -->
     <noscript

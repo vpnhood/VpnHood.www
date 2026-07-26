@@ -340,18 +340,27 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     content: "";
     width: 1.1em;
     height: 1.1em;
-    margin-left: auto;
+    // Logical: pushes the chevron to the row's tail — right in LTR, left in RTL.
+    margin-inline-start: auto;
     background-color: currentColor;
     --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m9 5l6 7l-6 7'/%3E%3C/svg%3E");
     -webkit-mask: var(--svg) no-repeat center / contain;
     mask: var(--svg) no-repeat center / contain;
     transition: transform 0.3s ease;
 }
+// RTL: the collapsed chevron points into the reading direction (left).
+[dir="rtl"] .vh-offcanvas-nav .vh-submenu-toggle::after{
+    transform: scaleX(-1);
+}
 .vh-offcanvas-nav .vh-submenu-toggle[aria-expanded="true"]::after{
     transform: rotate(90deg);
 }
+// Expanded points down in both directions (must follow the RTL base rule to win).
+[dir="rtl"] .vh-offcanvas-nav .vh-submenu-toggle[aria-expanded="true"]::after{
+    transform: rotate(90deg);
+}
 .vh-offcanvas-nav .vh-submenu{
-    padding-left: 0.85rem;
+    padding-inline-start: 0.85rem; // submenu indent follows the reading direction
 }
 .vh-offcanvas-nav .vh-submenu li a{
     display: block;
@@ -509,6 +518,10 @@ iconify-icon {
 }
 .vh-text-btn>iconify-icon{
     transform: translateY(0) !important;
+}
+// RTL: the inline arrow icon points into the reading direction.
+[dir="rtl"] .vh-text-btn svg{
+    transform: scaleX(-1);
 }
 
 .vh-btn-primary{
@@ -1200,6 +1213,16 @@ h1, .h1, h2, .h2{
 }
 .accordion-button::after{
     background-position-y: center;
+}
+// RTL: our Bootstrap build is the LTR one — it pins the +/- icon with
+// margin-left:auto and resets buttons to text-align:left. Mirror both so the
+// icon sits at the row's tail (left) and questions align right on RTL pages.
+[dir="rtl"] .accordion-button::after{
+    margin-left: 0;
+    margin-right: auto;
+}
+[dir="rtl"] .accordion-button{
+    text-align: right;
 }
 .accordion-button:focus{
     box-shadow: none;
