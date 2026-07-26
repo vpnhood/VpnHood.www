@@ -1,7 +1,6 @@
 ---
 layout: none
-title: "کلاینت VpnHood!‎"
-description: "VpnHood!‎ – یک وی‌پی‌ان رایگان، امن و متن‌باز با شبکه سرور جهانی که برای حفاظت از حریم خصوصی آنلاین شما و تضمین دسترسی امن به وب طراحی شده است."
+i18n: vpnhood_client
 extra_css:
   - /assets/css/custom.css
 nav_active: self-hosted
@@ -11,7 +10,7 @@ auto_translated: true
 ---
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
-{% assign t = site.data.i18n[vh_lang].vpnhood_client %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 <section id="sp-main-body" >
 
 										<div class="container">

@@ -1,7 +1,6 @@
 ---
 layout: none
-title: "Thank You | VpnHood!"
-description: "We've received your message and will get back to you shortly."
+i18n: thank_you
 extra_css:
   - /assets/css/custom.css
 noindex: true
@@ -9,7 +8,7 @@ sitemap: false
 ---
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
-{% assign t = site.data.i18n[vh_lang].thank_you %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 <section id="sp-main-body">
 	<div class="container">
 		<div class="container-inner">

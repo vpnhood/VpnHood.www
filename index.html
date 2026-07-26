@@ -1,7 +1,6 @@
 ---
 layout: none
-title: "VpnHood! - Free, Secure & Open-Source VPN"
-description: "VpnHood! – A free, secure, and open-source VPN with a global server network designed to protect your online privacy and ensure secure access to the web."
+i18n: home
 extra_css:
   - /assets/css/home.css
 globe: true
@@ -11,7 +10,7 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
 
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
-{% assign t = site.data.i18n[vh_lang].home %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 <section id="sp-main-body">
   <div class="row">
     <div id="sp-component" class="col-lg-12">

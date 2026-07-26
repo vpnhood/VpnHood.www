@@ -1,7 +1,6 @@
 ---
 layout: none
-title: "فیلترشکن رایگان | VpnHood!‎ CONNECT"
-description: ""
+i18n: free_vpn
 extra_css:
   - /assets/css/custom.css
 nav_active: free-vpn
@@ -11,7 +10,7 @@ auto_translated: true
 ---
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
-{% assign t = site.data.i18n[vh_lang].free_vpn %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 <section id="sp-main-body">
           <div class="container">
             <div class="container-inner">

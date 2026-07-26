@@ -1,7 +1,6 @@
 ---
 layout: none
-title: "مقایسه رایگان VPN — وپ‌هود! در برابر ProtonVPN، Windscribe، Hotspot Shield و NordVPN | VpnHood!‎"
-description: "ببینید VpnHood!‎ CONNECT چگونه در نسخه رایگان خود با ProtonVPN، Windscribe، Hotspot Shield و NordVPN مقایسه می‌شود — ترافیک نامحدود، تونل‌زنی تفکیک‌شده، انتخاب سرور و متن‌باز، به‌صورت پهلو‌به‌پهلو."
+i18n: free_vpn_comparison
 extra_css:
   - /assets/css/custom.css
   - /assets/css/comparison.css
@@ -12,7 +11,7 @@ auto_translated: true
 ---
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
-{% assign t = site.data.i18n[vh_lang].free_vpn_comparison %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 <section id="sp-main-body">
   <div class="container">
     <div class="container-inner">

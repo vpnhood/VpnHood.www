@@ -1,4 +1,6 @@
 {
+  "meta_title": "About Us | VpnHood!",
+  "meta_description": "VpnHood! – A free, secure, and open-source VPN with a global server network designed to protect your online privacy and ensure secure access to the web.",
   "page_title": "About Us",
   "page_desc": "Our goal is to provide users with free and unrestricted access to the internet, regardless of geographical barriers or censorship imposed by certain countries, while ensuring complete data security and individual privacy.",
   "intro": "<b>VpnHood</b> is a free VPN service powered by the <b>VpnHood! ENGINE</b>, fully developed in .NET by the VpnHood team. Unlike many other solutions, the VpnHood Engine is built entirely from scratch—it does not embed or reuse any existing VPN software in its codebase. It uses custom protocols inspired by open standards to ensure transparency, auditability, and trust.",

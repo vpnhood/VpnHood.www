@@ -149,8 +149,9 @@ PY
 ## 3. Title tags — brand on every page
 
 **The principle (both sites): the brand name must appear in every page's
-`<title>` (and therefore in the `og:title`/Twitter title derived from it).** A
-page's `title:` front matter is the single source for all three. The brand
+`<title>` (and therefore in the `og:title`/Twitter title derived from it).** The
+page title is the single source for all three — where it lives differs per site
+(see the table). The brand
 belongs in the title tag, **not** in a duplicate H1 — one descriptive H1 + brand
 in the title + the Organization JSON-LD is the SEO-optimal arrangement; don't
 reintroduce a brand H1 to "boost" the keyword.
@@ -158,9 +159,9 @@ reintroduce a brand H1 to "boost" the keyword.
 **The two sites wire the brand into the title differently — match the site you're
 editing:**
 
-| Site             | seo-tag call            | `<title>` source                | Brand in `title:` front matter?            |
-|------------------|-------------------------|---------------------------------|--------------------------------------------|
-| **VpnHood.www**  | `{% seo title=false %}` | a hand-written `<title>{{ page.title }}</title>` above the tag | **Yes** — every `title:` must contain `VpnHood!` (seo-tag won't append it). Convention: `Descriptive Keywords \| VpnHood!`; home is brand-first `VpnHood! — Free, Secure & Open-Source VPN`. |
+| Site | seo-tag call | `<title>` source | Brand in the page title? |
+| --- | --- | --- | --- |
+| **VpnHood.www** | `{% seo title=false %}` | a hand-written `<title>{{ page.title }}</title>` above the tag | **Yes** — every page title must contain `VpnHood!` (seo-tag won't append it). Titles live in the page's i18n data — `meta_title`/`meta_description` in `_data/i18n/<lang>/<page>.json`, injected into `page.title`/`page.description` at build time by `_plugins/i18n-meta.rb` (so they are translated like any other key); legal pages still declare `title:` front matter. Convention: `Descriptive Keywords \| VpnHood!`; home is brand-first `VpnHood! — Free, Secure & Open-Source VPN`. |
 | **paymenthood-www** | `{% seo %}` (default) | seo-tag emits it and **appends** ` \| PaymentHood` (the `site.title`) | **No** — `title:` must NOT contain the brand, or it would render doubled (`… \| PaymentHood \| PaymentHood`). |
 
 Why the difference: VpnHood uses `title=false` deliberately for a brand-first
@@ -168,15 +169,14 @@ home title and full separator control; PaymentHood lets seo-tag append the brand
 so it can never be forgotten. Both yield the brand in every `<title>` — don't
 "unify" one onto the other without a deliberate, tested migration.
 
-Audit titles for the brand (run in the relevant repo; set `BRAND`):
+Audit titles for the brand on the **rendered** output (both sites — VpnHood
+titles come from the i18n data, PaymentHood's brand is appended at render time,
+so front matter proves nothing; build first, then run in the repo root):
 
 ```bash
 BRAND="VpnHood"   # or "PaymentHood"
-for f in $(find . -name '*.html' -not -path './_site/*' -not -path './_archive/*' -not -path './assets/*'); do
-  t=$(awk '/^---/{n++;next} n==1 && /^title:/{sub(/^title:[ ]*/,"");print;exit}' "$f")
-  # VpnHood: every title must contain the brand. PaymentHood: seo-tag appends it,
-  # so check the *rendered* _site/<page> <title> instead of front matter.
-  echo "$f -> $t"
+for f in $(find _site -name '*.html'); do
+  grep -o '<title>[^<]*</title>' "$f" | grep -q "$BRAND" || echo "MISSING brand: $f"
 done
 ```
 
@@ -299,9 +299,12 @@ self-deactivating when no translated pages exist.
 - **No `inLanguage` microdata in page bodies.** Language is declared by `<html lang>` and
   hreflang only. Legacy body-level `<meta itemprop="inLanguage">` tags were removed
   site-wide: they get copied verbatim into translations, where they lie.
-- **Titles keep the brand after translation too** — the translator enforces §3 via its
-  `titleMustContain` setting; a translated page whose title lost the brand is rejected
-  before it is ever written.
+- **Titles keep the brand after translation too.** Translated titles flow through the
+  i18n data pipeline (`meta_title` keys), where the brand rule is carried by the
+  translation prompt (brand names never change) and audited on the rendered output
+  (§3). Pages that still declare a front-matter `title:` are additionally guarded by
+  the translator's `titleMustContain` setting, which rejects a translated page whose
+  title lost the brand before it is ever written.
 
 ## Why this matters (rationale, in one place)
 

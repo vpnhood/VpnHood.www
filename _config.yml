@@ -37,6 +37,11 @@ collections:
 markdown: kramdown
 highlighter: rouge
 
+# Disable auto-excerpts. Without this, a _langs collection page with no meta
+# description would get its whole raw body as jekyll-seo-tag's description
+# (seo-tag falls back page.description -> page.excerpt -> site.description).
+excerpt_separator: ""
+
 # Sass configuration (sources in _sass/, entry files in assets/css/*.scss)
 sass:
   style: compressed
@@ -62,6 +67,7 @@ exclude:
   - .vscode/
   - vh_translator/
 
-# GitHub Pages
-safe: true
+# No `safe: true`: the site builds in our own GitHub Actions workflow (not the legacy
+# shared Pages builder that forced safe mode), so custom plugins in _plugins/
+# (i18n-meta.rb injects page title/description from _data/i18n/) load in CI and locally.
 incremental: false

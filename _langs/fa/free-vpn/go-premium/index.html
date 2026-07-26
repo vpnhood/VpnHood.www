@@ -1,7 +1,6 @@
 ---
 layout: none
-title: "ارتقا به نسخه پرمیوم | باز کردن تمام قابلیت‌های VpnHood!‎ CONNECT"
-description: "VpnHood!‎ – یک VPN رایگان، امن و متن‌باز با شبکه سرور جهانی که برای محافظت از حریم خصوصی آنلاین شما و تضمین دسترسی امن به وب طراحی شده است."
+i18n: free_vpn_go_premium
 extra_css:
   - /assets/css/custom.css
 nav_active: free-vpn
@@ -11,7 +10,7 @@ auto_translated: true
 ---
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
-{% assign t = site.data.i18n[vh_lang].free_vpn_go_premium %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 <section id="sp-main-body" >
 
 										<div class="container">
