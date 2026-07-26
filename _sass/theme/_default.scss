@@ -269,10 +269,24 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     color: var(--purple-100);
 }
 // `.vh-mega-menu a` sets line-height:1 for single-line labels; two-line items
-// need their own rhythm.
+// need their own rhythm. The anchor is an inline-block, whose baseline is its
+// LAST line box — the descriptor — which would drag the list marker down to the
+// description. `vertical-align: top` plus zero padding (the spacing moves to the
+// <li>) keeps the disc next to the label instead.
 .vh-mega-menu a:has(.vh-mega-sub){
-    padding: 10px 0;
+    padding: 0;
     line-height: 1.3;
+    vertical-align: top;
+}
+// Match the marker's strut to the label's own metrics so the disc sits on the
+// label's line, and carry the inter-item spacing the anchor's padding used to.
+.vh-mega-panel li:has(.vh-mega-sub){
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.vh-mega-panel li:has(.vh-mega-sub):last-child{
+    margin-bottom: 0;
 }
 .vh-mega-panel a{
     color: white;
