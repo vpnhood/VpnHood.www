@@ -1,4 +1,4 @@
-- The brand "VpnHood!" (with exclamation mark) and product names "VpnHood CLIENT", "VpnHood CONNECT", "VpnHood MANAGER" never change.
+- The brand name "VpnHood" — alone, as "VpnHood!", or in product names like "VpnHood CLIENT", "VpnHood CONNECT", "VpnHood MANAGER" — never changes: never translate or transliterate it; always keep it in Latin script.
 - Keep the technical terms "VPN", "API", "SDK", "open source" widely-understood; prefer the form most natural in the target language.
 - Company names (GitHub, Google Play, App Store, Windows, Android, iOS, Cloudflare) never change.
 - Tone: consumer marketing — friendly, clear, and concise. Avoid literal word-for-word translation.

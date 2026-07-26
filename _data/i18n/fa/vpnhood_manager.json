@@ -1,6 +1,6 @@
 {
-  "page_title": "VpnHood!‎ MANAGER",
-  "page_desc": "VpnHood Access Manager یک سرویس ابری متمرکز و قدرتمند است که برای مدیریت آسان سرورهای VpnHood شما از طریق یک رابط کاربری بصری و یک API RESTful، همه در یک مکان طراحی شده است.",
-  "open_manager": "VpnHood!‎ Manager را باز کنید",
-  "new_tab": "(در تب جدید باز می‌شود)"
+  "page_title": "مدیریت VpnHood!‎",
+  "page_desc": "مدیریت دسترسی VpnHood یک سرویس ابری متمرکز و سازمانی است که برای مدیریت سرورهای VpnHood شما از طریق یک رابط کاربرپسند و یک RESTful API در یک مکان طراحی شده است.",
+  "open_manager": "باز کردن مدیریت VpnHood!‎",
+  "new_tab": "(در برگه جدید باز می‌شود)"
 }
