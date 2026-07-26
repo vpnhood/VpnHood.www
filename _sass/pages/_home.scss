@@ -43,6 +43,9 @@
 }
 #banner h2{
     font-size: 35px;
+    // the vh-txt-grad-purple-300 utility fixes height at 49px (per-word usage);
+    // this h2 holds a full translated sentence that may wrap to multiple lines
+    height: auto;
 }
 #resilientText{
     background: url('/assets/images/home/resilient_underline.webp') no-repeat center bottom;
