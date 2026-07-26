@@ -1,0 +1,16 @@
+{% comment %}
+  Typewriter text loop, animated by vh-general.js (setTyper).
+  Params:
+    keys  — comma-separated key names from the page's i18n data file (page.i18n),
+            typed in the order given
+    class — optional extra classes for the visible span
+  Renders the visible target span plus a hidden phrase list; the JS reads the
+  phrases from the DOM, so translated pages work with no extra wiring and a
+  language that hasn't translated the keys yet simply skips the empty ones.
+  Usage: {% include multi-text-writer.html keys="typer_a,typer_b,typer_c" %}
+  (Relies on the page having assigned `t` — includes share Liquid scope.)
+{% endcomment %}{% assign vh_typer_keys = include.keys | split: "," %}<span class="multiTextWriter {{ include.class }}"></span>
+<ul class="multi-text-writer-words" hidden>
+  {%- for vh_typer_key in vh_typer_keys %}{% assign vh_typer_word = t[vh_typer_key] %}{% unless vh_typer_word == nil or vh_typer_word == "" %}
+  <li>{{ vh_typer_word }}</li>{% endunless %}{% endfor %}
+</ul>

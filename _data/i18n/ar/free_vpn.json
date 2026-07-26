@@ -43,6 +43,12 @@
   "guarantee_days": "أيام",
   "guarantee_risk_free": "بدون مخاطر",
   "money_back_guarantee": "ضمان استرداد الأموال",
+  "typer_more_servers": "المزيد من الخوادم فائقة السرعة في مختلف المواقع.",
+  "typer_resilient_servers": "اتصل دائماً بخوادم أكثر استقراراً وقوة.",
+  "typer_include_exclude_ip": "تحكم كامل في تضمين أو استثناء عناوين IP.",
+  "typer_domains": "قم بتضمين النطاقات أو استثنائها أو حظرها بكل سهولة.",
+  "typer_dns_leak": "حماية متقدمة ضد تسرب DNS.",
+  "typer_always_on": "ابق محمياً دائماً مع ميزة VPN الدائمة.",
   "premium_pricing": "أسعار الباقات المميزة",
   "free_vs_premium": "المجاني مقابل المميز"
 }

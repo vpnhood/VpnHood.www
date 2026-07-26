@@ -43,6 +43,12 @@
   "guarantee_days": "Gün",
   "guarantee_risk_free": "Risk Almadan",
   "money_back_guarantee": "Para İade Garantisi",
+  "typer_more_servers": "Farklı konumlarda daha da hızlı sunucular.",
+  "typer_resilient_servers": "Kesintisiz ve güçlü sunucularla her zaman bağlanın.",
+  "typer_include_exclude_ip": "IP adreslerini kolayca dahil edin veya hariç tutun.",
+  "typer_domains": "Alan adlarını dahil edin, hariç tutun veya engelleyin.",
+  "typer_dns_leak": "Gelişmiş DNS sızıntı koruması.",
+  "typer_always_on": "Her Zaman Açık VPN ile her an güvende kalın.",
   "premium_pricing": "Premium Fiyatlandırma",
   "free_vs_premium": "Ücretsiz ve Premium Karşılaştırması"
 }

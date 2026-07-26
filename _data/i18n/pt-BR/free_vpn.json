@@ -43,6 +43,12 @@
   "guarantee_days": "Dias",
   "guarantee_risk_free": "Sem riscos",
   "money_back_guarantee": "Garantia de reembolso",
+  "typer_more_servers": "Mais servidores ultrarrápidos em mais localizações.",
+  "typer_resilient_servers": "Conecte-se sempre com servidores resilientes.",
+  "typer_include_exclude_ip": "Inclua e exiba endereços IP com facilidade.",
+  "typer_domains": "Inclua, exclua ou bloqueie domínios.",
+  "typer_dns_leak": "Proteção total contra vazamento de DNS.",
+  "typer_always_on": "Fique protegido com a VPN sempre ativa.",
   "premium_pricing": "Planos Premium",
   "free_vs_premium": "Grátis vs Premium"
 }

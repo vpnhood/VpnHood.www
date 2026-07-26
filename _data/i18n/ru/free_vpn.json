@@ -43,6 +43,12 @@
   "guarantee_days": "Дней",
   "guarantee_risk_free": "Без риска",
   "money_back_guarantee": "Гарантия возврата денег",
+  "typer_more_servers": "Еще больше ультрабыстрых серверов по всему миру.",
+  "typer_resilient_servers": "Всегда на связи с надежными серверами.",
+  "typer_include_exclude_ip": "Настройка включения и исключения IP-адресов.",
+  "typer_domains": "Управление доменами: включение, исключение или блокировка.",
+  "typer_dns_leak": "Надежная защита от утечки DNS.",
+  "typer_always_on": "Оставайтесь под защитой с постоянно включенным VPN.",
   "premium_pricing": "Премиум-тарифы",
   "free_vs_premium": "Бесплатно и Премиум"
 }

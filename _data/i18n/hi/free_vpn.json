@@ -43,6 +43,12 @@
   "guarantee_days": "दिन",
   "guarantee_risk_free": "रिस्क-फ्री",
   "money_back_guarantee": "मनी-बैक गारंटी",
+  "typer_more_servers": "अधिक स्थानों पर अत्यधिक तेज़ सर्वर का आनंद लें।",
+  "typer_resilient_servers": "हमेशा मजबूत और भरोसेमंद सर्वर से कनेक्ट रहें।",
+  "typer_include_exclude_ip": "IP पतों को आसानी से शामिल या बाहर करें।",
+  "typer_domains": "डोमेन को शामिल करें, बाहर करें या ब्लॉक करें।",
+  "typer_dns_leak": "सुरक्षित DNS लीक प्रोटेक्शन।",
+  "typer_always_on": "हमेशा चालू रहने वाले VPN के साथ हमेशा सुरक्षित रहें।",
   "premium_pricing": "प्रीमियम प्राइसिंग",
   "free_vs_premium": "फ्री बनाम प्रीमियम"
 }

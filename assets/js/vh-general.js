@@ -89,19 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //---------------------- Multi text writer ----------------------
-    // get all the elements
-    const textsElements = document.querySelectorAll('.multiTextWriter');
-
-    // make an array of word arrays, each sub-array for a different .typing-text element
-    const wordsSets = [
-        ["More ultra-fast servers on the more locations.", "Always connect with Resilient servers.", "Include and exclude IP addresses.", "Include, exclude, or block domains.", "DNS leak protection.", "Stay Protected with Always-on VPN."],
-    ];
-
-    // apply the typing effect to each element
-    textsElements.forEach((element, index) => {
-        if (index < wordsSets.length) {
-            setTyper(element, wordsSets[index]);
-        }
+    // Each .multiTextWriter is rendered by _includes/multi-text-writer.html
+    // together with a hidden <ul class="multi-text-writer-words"> holding the
+    // (translated) phrases — never hardcode copy here.
+    document.querySelectorAll('.multiTextWriter').forEach(element => {
+        const list = element.parentElement.querySelector('.multi-text-writer-words');
+        if (!list) return;
+        const words = Array.from(list.querySelectorAll('li'))
+            .map(li => li.textContent.trim())
+            .filter(w => w.length);
+        if (words.length) setTyper(element, words);
     });
 
     function setTyper(element, words) {

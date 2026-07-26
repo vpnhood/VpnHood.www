@@ -43,6 +43,12 @@
   "guarantee_days": "روز",
   "guarantee_risk_free": "بدون ریسک",
   "money_back_guarantee": "تضمین بازگشت وجه",
+  "typer_more_servers": "سرورهای فوق‌العاده سریع در لوکیشن‌های بیشتر.",
+  "typer_resilient_servers": "همیشه با سرورهای پایدار و مطمئن متصل بمانید.",
+  "typer_include_exclude_ip": "مدیریت کامل آدرس‌های IP (شامل یا مستثنی کردن آن‌ها).",
+  "typer_domains": "دامنه‌ها را اضافه، حذف یا مسدود کنید.",
+  "typer_dns_leak": "محافظت کامل در برابر نشتی DNS.",
+  "typer_always_on": "با VPN همیشه روشن، همیشه ایمن بمانید.",
   "premium_pricing": "تعرفه‌های حرفه‌ای",
   "free_vs_premium": "رایگان در برابر حرفه‌ای"
 }
