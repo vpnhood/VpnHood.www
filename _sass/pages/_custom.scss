@@ -564,3 +564,91 @@
 .vh-feature-card h3{
     color: var(--purple-120);
 }
+
+/*-------------- VpnHood! MANAGER page --------------*/
+// Feature grid, moved here from the home page (it used to be home's
+// `#vpnHoodManager` section). The bottom padding leaves room for the backdrop
+// image and for `#selfSetupButtons`, which is pulled up into it.
+#managerFeaturesList{
+    padding-bottom: 145px;
+}
+#managerFeaturesListBg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("/assets/images/home/manager-bg.webp") no-repeat center bottom;
+    background-size: contain;
+    z-index: -1;
+}
+#managerFeaturesList .feature-item{
+    position: relative;
+    border-left: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 0 12px 0 30px;
+    max-width: 300px;
+    margin-bottom: 80px;
+}
+#managerFeaturesList .feature-item:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    width: 1px;
+    height: 16px;
+    background-color: #ffffff5c;
+    transform: translateY(-8px);
+}
+#managerFeaturesList .icon{
+    margin-bottom: 25px;
+}
+#managerFeaturesList .title{
+    color: white;
+}
+#managerFeaturesList .desc{
+    margin-bottom: 0;
+}
+#managerFeaturesList .star-effect{
+    bottom: 142px;
+}
+#selfSetupButtons{
+    margin-top: -50px;
+    padding-bottom: 100px;
+}
+@media (max-width: 1399px) {
+    #managerFeaturesList{
+        padding-bottom: 95px;
+    }
+    #managerFeaturesList .star-effect {
+        bottom: 80px;
+    }
+}
+@media (max-width: 1199px) {
+    #selfSetupButtons{
+        margin-top: -23px;
+    }
+}
+@media (max-width: 991px) {
+    #managerFeaturesList{
+        padding-bottom: 35px;
+    }
+    #selfSetupButtons{
+        margin-top: 0;
+    }
+}
+@media (max-width: 767px) {
+    #managerFeaturesList .star-effect {
+        bottom: 40px;
+    }
+}
+@media (max-width: 575px) {
+    #managerFeaturesList {
+        padding-bottom: 0;
+    }
+    #managerFeaturesList .star-effect {
+        bottom: 20px;
+    }
+    #selfSetupButtons {
+        margin-top: 25px;
+    }
+}

@@ -253,6 +253,27 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 .vh-mega-panel li a{
     font-size: 14px;
 }
+// Mega-panel sub-items carry a one-line descriptor under the label, so the panel
+// sells the destination instead of only naming it.
+.vh-mega-sub{
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--purple-100);
+    max-width: 34ch;
+}
+// The descriptor stays calm while the label takes the hover colour.
+.vh-mega-panel a:hover .vh-mega-sub{
+    color: var(--purple-100);
+}
+// `.vh-mega-menu a` sets line-height:1 for single-line labels; two-line items
+// need their own rhythm.
+.vh-mega-menu a:has(.vh-mega-sub){
+    padding: 10px 0;
+    line-height: 1.3;
+}
 .vh-mega-panel a{
     color: white;
 }
