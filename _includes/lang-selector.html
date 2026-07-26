@@ -3,10 +3,17 @@
      display names come from _data/languages.yml. Each entry links to the current page's
      counterpart in that language when it exists, else to that language's home page.
      Explicit choices are persisted by /assets/js/lang.js via data-vh-lang.
-     Params: include.style = "dropdown" (desktop header <li>) | "list" (offcanvas block).
+     One Bootstrap dropdown serves both the desktop header and the mobile off-canvas.
+     Params: include.id = the toggle's id — both instances render on every page, so the
+             second caller MUST pass its own (duplicate ids break the aria-labelledby pair);
+             include.align = menu alignment, "end" (default) | "start" (Bootstrap flips
+             either one for RTL);
+             include.wrapper_class = classes for a <ul> wrapped around the <li>; omit it
+             when the caller is already inside a <ul> (the header's #topRightMenu).
      Requires vh_base_url (assigned in header.html) — the page's language-neutral URL. {% endcomment %}
 {% if site.data.i18n.size > 1 %}
 {% assign vh_cur_lang = page.lang | default: 'en' %}
+{% assign vh_lang_id = include.id | default: 'vhLangToggle' %}
 {% capture vh_lang_items %}{% for vh_lpair in site.data.i18n %}{% assign vh_lcode = vh_lpair[0] %}
   {% if vh_lcode == 'en' %}{% assign vh_lurl = vh_base_url %}{% else %}
     {% capture vh_lurl %}/{{ vh_lcode }}{{ vh_base_url }}{% endcapture %}
@@ -16,7 +23,7 @@
   {% assign vh_lname = site.data.languages[vh_lcode].name | default: vh_lcode %}
   <li>
     <a
-      class="{% if include.style == 'dropdown' %}dropdown-item{% endif %}{% if vh_lcode == vh_cur_lang %} active{% endif %}"
+      class="dropdown-item{% if vh_lcode == vh_cur_lang %} active{% endif %}"
       {% if vh_lcode == vh_cur_lang %}aria-current="true"{% endif %}
       href="{{ vh_lurl }}"
       hreflang="{{ vh_lcode }}"
@@ -25,12 +32,12 @@
       >{{ vh_lname }}</a
     >
   </li>{% endfor %}{% endcapture %}
-{% if include.style == 'dropdown' %}
+{% if include.wrapper_class %}<ul class="{{ include.wrapper_class }}">{% endif %}
 <li class="vh-lang-menu dropdown">
   <a
     href="#"
     class="my-account dropdown-toggle"
-    id="vhLangToggle"
+    id="{{ vh_lang_id }}"
     role="button"
     data-bs-toggle="dropdown"
     aria-expanded="false"
@@ -39,14 +46,8 @@
     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
     <span class="text-uppercase">{{ vh_cur_lang }}</span>
   </a>
-  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="vhLangToggle">{{ vh_lang_items }}
+  <ul class="dropdown-menu dropdown-menu-{{ include.align | default: 'end' }} dropdown-menu-dark" aria-labelledby="{{ vh_lang_id }}">{{ vh_lang_items }}
   </ul>
 </li>
-{% else %}
-<div class="vh-lang-list mt-4 pt-4">
-  <div class="text-uppercase small vh-txt-purple-100 mb-2">{{ tc.lang_label }}</div>
-  <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">{{ vh_lang_items }}
-  </ul>
-</div>
-{% endif %}
+{% if include.wrapper_class %}</ul>{% endif %}
 {% endif %}

@@ -1,5 +1,5 @@
 {
-  "model": "gemini-2.5-flash",
+  "model": "gemini-flash-lite-latest",
   "site": {
     "pages": ["**/index.html"],
     "exclude": [
@@ -8,7 +8,7 @@
       "vpnhood-*-privacy-policy/**",
       "terms-of-use/**"
     ],
-    "languages": ["fa"],
+    "languages": ["fa", "fr", "de", "ar"],
     "output": "_langs/{lang}/{path}",
     "titleMustContain": "VpnHood!",
     "pageBody": "copy",

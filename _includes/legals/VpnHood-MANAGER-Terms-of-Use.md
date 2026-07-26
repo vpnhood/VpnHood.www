@@ -135,12 +135,12 @@ These Terms of Use and any separate agreements whereby we provide you Services s
 
 ## YOUR CLIENT'S PRIVACY POLICY
 
-We store some information about your clients. Also, you can configure your VpnHood server or VpnHood MANAGER project to store some information about your clients. Please make sure you read our privacy policy. You are responsible for your client's privacy policy.  
+We store some information about your clients. Also, you can configure your VpnHood server or VpnHood! MANAGER project to store some information about your clients. Please make sure you read our privacy policy. You are responsible for your client's privacy policy.  
 
 
 ## YOUR VPNHOOD SERVER
 
-You may install and operate a VpnHood server on your own infrastructure and manage it through VpnHood Manager. VpnHood assumes no responsibility or control over independently hosted servers that are not purchased or provided by us. 
+You may install and operate a VpnHood server on your own infrastructure and manage it through VpnHood! MANAGER. VpnHood assumes no responsibility or control over independently hosted servers that are not purchased or provided by us. 
 
 
 ## OUR VPNHOOD SERVER

@@ -1,0 +1,14 @@
+{
+  "eyebrow": "FAQ",
+  "heading": "Foire Aux Questions",
+  "desc": "Découvrez les réponses à vos questions.",
+  "view_all": "Voir toutes les FAQ",
+  "q1": "Pourquoi VpnHood ?",
+  "a1": "VpnHood est un VPN gratuit propulsé par le <b>VpnHood ENGINE</b>, entièrement développé par l'équipe VpnHood. Il utilise des protocoles propriétaires basés sur des fondations open source pour une transparence maximale. Notre code open source est disponible pour examen public afin de vérifier sa sécurité et son intégrité. VpnHood est conçu pour optimiser la transmission de données, offrant une connectivité haute performance et une compatibilité réseau améliorée. Nous privilégions votre vie privée en garantissant une collecte nulle d'informations personnelles et de journaux d'activité, vous offrant ainsi une expérience numérique hautement sécurisée et privée.",
+  "q2": "VpnHood est-il un VPN gratuit ?",
+  "a2": "Oui, VpnHood propose un service VPN gratuit sans aucune limitation de temps, de trafic ou de bande passante. Cependant, vous pouvez débloquer des fonctionnalités supplémentaires en passant à un abonnement premium. Avec le forfait premium, vous accédez à des serveurs dans plus de pays, à des vitesses de connexion plus rapides et à des fonctionnalités d'application améliorées. Pour plus d'informations, consultez la page des <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">détails du forfait</a>.",
+  "q3": "VpnHood! CONNECT vs. VpnHood! CLIENT ?",
+  "a3": "VpnHood! CONNECT est un VPN gratuit dont les utilisateurs peuvent profiter sans limitations. Cependant, bien que VpnHood! CLIENT soit également gratuit, il n'inclut pas de serveurs pour des connexions directes. Au lieu de cela, ceux qui configurent leur propre VPN dédié à l'aide de VpnHood! MANAGER peuvent partager cette application avec leurs utilisateurs, accompagnée d'une Server Key pour l'accès.",
+  "q4": "Quelles plateformes VpnHood prend-il en charge ?",
+  "a4": "VpnHood! CONNECT et VpnHood! CLIENT sont tous deux compatibles avec Android, Android TV et Windows. Cependant, VpnHood! CONNECT sur Windows n'est pas gratuit ; vous devrez acheter une clé Premium, disponible sur la page des <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">tarifs</a>."
+}

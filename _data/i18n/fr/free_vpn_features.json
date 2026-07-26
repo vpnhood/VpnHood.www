@@ -1,0 +1,21 @@
+{
+  "meta_title": "Fonctionnalités VPN Gratuites | VpnHood! CONNECT",
+  "meta_description": "",
+  "page_title": "Liste des fonctionnalités",
+  "page_desc": "Découvrez en détail les fonctionnalités de l'application, personnalisez-la selon vos besoins et exploitez au maximum ses capacités.",
+  "server_network_title": "Réseau Mondial de Serveurs",
+  "server_network_alt": "Réseau Mondial de Serveurs",
+  "server_network_desc": "VpnHood! CONNECT offre un réseau mondial de serveurs, vous permettant de vous connecter via diverses régions du monde. Sélectionnez le serveur idéal pour une vitesse et une stabilité de connexion optimales, garantissant une expérience fluide pour votre navigation, votre travail et toutes vos activités en ligne.",
+  "split_apps_title": "Tunneling Sélectif par Applications",
+  "split_apps_alt": "Tunneling Sélectif par Applications",
+  "split_apps_desc": "Certaines applications n'ont pas besoin d'un VPN, tandis que d'autres, comme les services bancaires locaux, de paiement ou de taxi, peuvent ne pas être accessibles via un VPN. Avec le Tunneling Sélectif par Application, vous choisissez quelles applications utilisent le VPN et lesquelles se connectent directement. Cela garantit le bon fonctionnement de vos applications essentielles, réduit le trafic VPN inutile et améliore la vitesse globale et l'efficacité de vos données.",
+  "split_ip_title": "Tunneling Sélectif par IP",
+  "split_ip_alt": "Tunneling Sélectif par IP",
+  "split_ip_desc": "Le Tunneling Sélectif par IP vous permet d'inclure ou d'exclure des adresses IP ou des plages spécifiques de votre connexion VPN. Vous pouvez acheminer uniquement les destinations sélectionnées via le VPN, tandis que les autres restent sur votre connexion Internet normale. Cette fonction est également efficace pour le trafic de navigateur et s'avère utile quand une application devrait utiliser le VPN mais nécessite un accès direct à certains services ou réseaux locaux.",
+  "split_countries_title": "Tunneling Sélectif par Pays",
+  "split_countries_alt": "Tunneling Sélectif par Pays",
+  "split_countries_desc": "Le Tunneling Sélectif par Pays vous permet d'inclure ou d'exclure le trafic en fonction de son pays de destination. Il offre les mêmes avantages que le tunneling par application ou par IP, mais sans avoir à sélectionner d'applications spécifiques ni à chercher des plages d'IP. Cela aide à économiser du trafic et à augmenter la vitesse en permettant un accès direct aux services qui n'ont pas besoin du VPN, tout en maintenant la protection active là où elle est le plus nécessaire.",
+  "protocols_title": "Protocoles Robustes",
+  "protocols_alt": "Capture d'écran des protocoles",
+  "protocols_desc": "Le protocole de VpnHood est conçu pour une résilience et une stabilité maximales dans divers environnements réseau. Vous pouvez basculer entre les protocoles pour trouver l'équilibre optimal entre vitesse et efficacité selon vos conditions réseau. En plus de sécuriser vos données, VpnHood optimise les métadonnées de connexion pour garantir un trafic cohérent et sécurisé, offrant une connexion privée de qualité professionnelle avec un chiffrement de haut niveau."
+}

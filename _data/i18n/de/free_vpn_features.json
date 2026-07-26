@@ -1,0 +1,21 @@
+{
+  "meta_title": "Kostenlose VPN-Funktionen | VpnHood! CONNECT",
+  "meta_description": "",
+  "page_title": "Alle Funktionen",
+  "page_desc": "Entdecken Sie alle Funktionen der App, passen Sie VpnHood! CONNECT an Ihre Bedürfnisse an und nutzen Sie ihr volles Potenzial optimal.",
+  "server_network_title": "Globales Server-Netzwerk",
+  "server_network_alt": "Globales Server-Netzwerk",
+  "server_network_desc": "VpnHood! CONNECT bietet ein globales Server-Netzwerk. Verbinden Sie sich über verschiedene Regionen weltweit und wählen Sie den idealen Server für maximale Geschwindigkeit und Stabilität. Genießen Sie ein nahtloses Online-Erlebnis beim Surfen, Arbeiten und bei all Ihren Aktivitäten.",
+  "split_apps_title": "Split-Tunneling pro App",
+  "split_apps_alt": "Split-Tunneling pro App",
+  "split_apps_desc": "Manche Apps benötigen kein VPN, während andere (wie lokale Bank-, Zahlungs- oder Taxidienste) über ein VPN möglicherweise nicht erreichbar sind. Mit Split-Tunneling pro App entscheiden Sie, welche Apps das VPN nutzen und welche direkt verbunden werden. Das sorgt für reibungslos funktionierende Apps, reduziert unnötigen VPN-Traffic ins Ausland und verbessert Geschwindigkeit sowie Dateneffizienz.",
+  "split_ip_title": "Split-Tunneling pro IP",
+  "split_ip_alt": "Split-Tunneling pro IP",
+  "split_ip_desc": "Mit Split-Tunneling pro IP können Sie festlegen, welche IP-Adressen oder -Bereiche die VPN-Verbindung nutzen sollen und welche nicht. So leiten Sie nur ausgewählte Ziele über das VPN, während der Rest über Ihre normale Verbindung läuft. Diese Funktion gilt auch für Browser-Traffic und ist ideal, wenn eine App zwar das VPN nutzen soll, aber direkten Zugriff auf bestimmte Dienste oder lokale Netzwerke benötigt.",
+  "split_countries_title": "Split-Tunneling pro Land",
+  "split_countries_alt": "Split-Tunneling pro Land",
+  "split_countries_desc": "Mit Split-Tunneling pro Land können Sie Traffic basierend auf dem Zielland ein- oder ausschließen. Profitieren Sie von den Vorteilen des Tunnelings – ohne Apps oder IP-Bereiche festlegen zu müssen. Sparen Sie Traffic, steigern Sie die Geschwindigkeit durch direkten Zugriff auf Dienste, die kein VPN brauchen, und bleiben Sie geschützt, wo es am wichtigsten ist.",
+  "protocols_title": "Robuste Protokolle",
+  "protocols_alt": "Screenshot der Protokolle",
+  "protocols_desc": "Die Protokolle von VpnHood sind für höchste Widerstandsfähigkeit und Stabilität in jeder Netzwerkumgebung entwickelt. Wechseln Sie bei Bedarf die Protokolle, um die perfekte Balance aus Geschwindigkeit und Effizienz zu finden. VpnHood sichert nicht nur Ihre Daten, sondern optimiert auch Verbindungs-Metadaten für konsistenten und sicheren Traffic. Das Ergebnis: eine private Verbindung auf Profi-Niveau mit hochgradiger Verschlüsselung."
+}

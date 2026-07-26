@@ -1,4 +1,6 @@
-- The brand name "VpnHood" — alone, as "VpnHood!", or in product names like "VpnHood CLIENT", "VpnHood CONNECT", "VpnHood MANAGER" — never changes: never translate or transliterate it; always keep it in Latin script.
+- The brand name "VpnHood" — alone, as "VpnHood!", or in product names like "VpnHood CLIENT", "VpnHood CONNECT", "VpnHood MANAGER" — never changes: never translate or transliterate it; always keep it in Latin script. Never spell it out in the target script (not "وی‌پی‌ان‌هود").
+- The product words CLIENT, CONNECT, MANAGER, SERVER and ENGINE are part of the product name, not descriptions: keep them in Latin capitals. "VpnHood! MANAGER" stays "VpnHood! MANAGER" — never "VpnHood! مدیریت", "VpnHood! Verwaltung", "VpnHood! Gestionnaire".
 - Keep the technical terms "VPN", "API", "SDK", "open source" widely-understood; prefer the form most natural in the target language.
-- Company names (GitHub, Google Play, App Store, Windows, Android, iOS, Cloudflare) never change.
+- Other companies and platforms (GitHub, Google Play, App Store, Windows, Android, iOS, Cloudflare, LinkedIn, Instagram, X) take the spelling that is already established in the target language — unlike "VpnHood" above, they may be written in that language's own script. A language written in Latin script keeps the original spelling ("Projekt auf GitHub"); Persian uses its own established forms ("GitHub Discussion" -> "بحث‌های گیت‌هاب").
+- Whichever form you choose, write the whole name in one script: never half-convert a name ("گitHub" is always wrong), and never touch a name inside a URL or an href.
 - Tone: consumer marketing — friendly, clear, and concise. Avoid literal word-for-word translation.

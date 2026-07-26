@@ -1,0 +1,20 @@
+{
+  "meta_title": "VPN auto-hébergé | VpnHood!",
+  "meta_description": "VpnHood! – Un VPN gratuit, sécurisé et open source avec un réseau de serveurs mondial conçu pour protéger votre vie privée en ligne et garantir un accès sécurisé au web.",
+  "page_title": "VPN auto-hébergé",
+  "page_desc": "permet aux utilisateurs de créer et gérer leurs propres serveurs VPN en toute simplicité, en offrant une solution gratuite et open source.",
+  "manager_title": "VpnHood! MANAGER",
+  "manager_desc": "VpnHood! MANAGER est un tableau de bord web qui permet aux utilisateurs de configurer, gérer et surveiller leurs serveurs VPN sans effort. Grâce à son interface intuitive, les utilisateurs peuvent :",
+  "manager_li_deploy": "Déployer et gérer des serveurs VPN sans expertise technique.",
+  "manager_li_monitor": "Surveiller les journaux de connexion et les métriques de performance.",
+  "manager_li_access": "Contrôler les paramètres d'accès et de sécurité.",
+  "manager_li_api": "Utiliser une API RESTful pour une automatisation avancée.",
+  "learn_more": "En savoir plus",
+  "client_title": "VpnHood! CLIENT",
+  "client_desc": "VpnHood! CLIENT est disponible sur Windows et Android, offrant une expérience VPN fluide aux utilisateurs. Ses principales fonctionnalités incluent :",
+  "client_li_fast": "Des connexions VPN <b>rapides et sécurisées</b>, optimisées par VpnHood Engine.",
+  "client_li_protocol": "Un <b>protocole robuste</b> qui assure une connexion fluide et chiffrée, garantissant une présence en ligne privée dans divers environnements réseau.",
+  "client_li_split": "Le <b>split tunneling</b> pour les applications, les adresses IP, les domaines et le filtrage par pays.",
+  "client_li_ip": "Prise en charge <b>IPv4 &amp; IPv6</b> pour une large compatibilité.",
+  "outro": "Avec VpnHood, les utilisateurs profitent d'une solution VPN auto-hébergée, gratuite, personnalisable et facile à gérer."
+}

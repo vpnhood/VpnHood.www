@@ -1,8 +1,8 @@
 # VpnHood! MANAGER - Privacy Policy
 
-**PLEASE NOTE:** This privacy policy applies just to "VpnHood Manager". To see the privacy policy of the  "VpnHood! CLIENT" & "VpnHood! SERVER", visit the following page: https://www.vpnhood.com/privacy-policy  
+**PLEASE NOTE:** This privacy policy applies just to "VpnHood! MANAGER". To see the privacy policy of the  "VpnHood! CLIENT" & "VpnHood! SERVER", visit the following page: https://www.vpnhood.com/privacy-policy  
 
-This page informs website visitors regarding our policies on the collection, use, and disclosure of Personal Information. If anyone decides to use our service, the VpnHood website, and the VpnHood Manager.  
+This page informs website visitors regarding our policies on the collection, use, and disclosure of Personal Information. If anyone decides to use our service, the VpnHood website, and the VpnHood! MANAGER.  
 
 If you choose to use our service, you agree to the collection and use of information under this policy. The Personal Information that we collect is used for providing and improving the service and preventing unlawful activities. We will not use or share your information with anyone except as described in this Privacy Policy.  
 
@@ -13,20 +13,20 @@ If you choose to use our service, you agree to the collection and use of informa
 - **VPNHOOD SERVER:** Your VPN server that your clients connect to  
 - **HOSTING:** Any hosting company that hosts your VpnHood Server  
 - **VPNHOOD ACCESS SERVER:** The server that manages your VpnHood Servers  
-- **YOU:** You, who created a VpnHood Manager account  
+- **YOU:** You, who created a VpnHood! MANAGER account  
 - **YOUR PRIVACY POLICY:** The privacy policy that your clients should accept to use your VPN service  
 
-## Sign up for VpnHood Manager
+## Sign up for VpnHood! MANAGER
 
-**Email address.** We store your email address and public profile as part of the registration process. It is necessary to create a VpnHood Manager account.  
+**Email address.** We store your email address and public profile as part of the registration process. It is necessary to create a VpnHood! MANAGER account.  
 
 ## VpnHood Server IP
 
-The VpnHood Server IPs, versions, and countries are collected and saved in the VpnHood Manager database. The VpnHood Server IP may identify the hosting provider and the country where the VpnHood Server has been set up, but this doesn't provide information about who's running the server or accessing it.  
+The VpnHood Server IPs, versions, and countries are collected and saved in the VpnHood! MANAGER database. The VpnHood Server IP may identify the hosting provider and the country where the VpnHood Server has been set up, but this doesn't provide information about who's running the server or accessing it.  
 
 ## Client IP Address
 
-You can configure your VpnHood Server to send your client IP address to the Manager or not. If you decide to send it, VpnHood Manager can perform certain operations to counter DDoS attacks, scanning, and similar hacking attempts. We do not save or log your client IP addresses in the VpnHood Manager database by default unless you explicitly enable it. If you allow your users to keep their IP addresses, you are responsible for your client's privacy policy.  
+You can configure your VpnHood Server to send your client IP address to the Manager or not. If you decide to send it, VpnHood! MANAGER can perform certain operations to counter DDoS attacks, scanning, and similar hacking attempts. We do not save or log your client IP addresses in the VpnHood! MANAGER database by default unless you explicitly enable it. If you allow your users to keep their IP addresses, you are responsible for your client's privacy policy.  
 
 ## Server SSH Credential
 

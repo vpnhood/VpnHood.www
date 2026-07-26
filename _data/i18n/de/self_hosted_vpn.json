@@ -1,0 +1,20 @@
+{
+  "meta_title": "Selbstgehostetes VPN | VpnHood!",
+  "meta_description": "VpnHood! – Das kostenlose, sichere und quelloffene VPN mit globalem Servernetzwerk. Schützen Sie Ihre Online-Privatsphäre und surfen Sie sicher im Web.",
+  "page_title": "Selbstgehostetes VPN",
+  "page_desc": "ermöglicht Nutzern, mit Leichtigkeit eigene VPN-Server zu erstellen und zu verwalten – eine kostenlose und quelloffene Lösung.",
+  "manager_title": "VpnHood! MANAGER",
+  "manager_desc": "VpnHood! MANAGER ist ein webbasiertes Dashboard, das Ihnen die mühelose Einrichtung, Konfiguration und Überwachung Ihrer VPN-Server ermöglicht. Dank der intuitiven Oberfläche können Sie:",
+  "manager_li_deploy": "VPN-Server ohne technisches Vorwissen bereitstellen und verwalten.",
+  "manager_li_monitor": "Verbindungslogs und Leistungsdaten überwachen.",
+  "manager_li_access": "Zugriffs- und Sicherheitseinstellungen kontrollieren.",
+  "manager_li_api": "Eine RESTful API für erweiterte Automatisierung nutzen.",
+  "learn_more": "Mehr erfahren",
+  "client_title": "VpnHood! CLIENT",
+  "client_desc": "VpnHood! CLIENT ist für Windows und Android verfügbar und bietet Nutzern ein nahtloses VPN-Erlebnis. Die wichtigsten Funktionen umfassen:",
+  "client_li_fast": "<b>Schnelle und sichere</b> VPN-Verbindungen, unterstützt durch die VpnHood Engine.",
+  "client_li_protocol": "<b>Stabiles Protokoll</b> für eine reibungslose, verschlüsselte Verbindung, die Ihre Online-Privatsphäre in jeder Netzwerkumgebung schützt.",
+  "client_li_split": "<b>Split-Tunneling</b> für Apps, IPs, Domains und länderspezifische Filterung.",
+  "client_li_ip": "<b>IPv4 &amp; IPv6-Unterstützung</b> für umfassende Kompatibilität.",
+  "outro": "Mit VpnHood genießen Sie eine selbstgehostete VPN-Lösung, die kostenlos, anpassbar und einfach zu verwalten ist."
+}

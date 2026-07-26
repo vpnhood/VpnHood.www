@@ -14,9 +14,10 @@ on:
   schedule:
     - cron: "0 6 * * 1" # Mondays 06:00 UTC
 
-# Permissions required by the official Pages deploy actions.
+# Permissions required by the official Pages deploy actions, plus contents: write
+# so the build job can commit freshly translated strings back to main.
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -52,6 +53,45 @@ jobs:
             curl -sfL "https://raw.githubusercontent.com/wiki/vpnhood/VpnHood/$p.md" -o "_includes/legals/$p.md"
             echo "synced $p"
           done
+
+      # Translate anything stale (source copy edited without running the translator
+      # locally) so a deploy never ships untranslated strings. Incremental: the
+      # committed vh_translator/watches/ files make this a no-op when nothing
+      # changed — and because the results are COMMITTED BACK below, each change is
+      # translated exactly once, not on every publish. Fail-fast like the legal
+      # sync: on failure the build is skipped and Pages keeps serving the previous
+      # deployment. Requires the GEMINI_API_KEY repo secret and
+      # VpnHood.Tools.ResourceTranslator >= 1.1.3 on NuGet (version pinned in
+      # .config/dotnet-tools.json).
+      - name: Set up .NET (vhtranslator)
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Translate stale strings
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          dotnet tool restore
+          dotnet tool run vhtranslator site
+
+      # Push the generated translations + watches back to main so the repo stays in
+      # sync and nothing is re-translated on the next publish. Scoped to the
+      # translator's own outputs (never the wiki-synced legal pages). No workflow
+      # loop: pushes made with GITHUB_TOKEN don't trigger 'push' workflows, and
+      # [skip ci] is the belt-and-suspenders. This run continues deploying the
+      # already-translated tree either way.
+      - name: Commit translations back
+        run: |
+          git add _langs _data/i18n vh_translator
+          if git diff --cached --quiet; then
+            echo "translations already current"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: translate changed strings [skip ci]"
+            git push || (git pull --rebase && git push)
+          fi
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

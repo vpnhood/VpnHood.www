@@ -1,0 +1,14 @@
+{
+  "eyebrow": "FAQs",
+  "heading": "Häufig gestellte Fragen",
+  "desc": "Hier finden Sie Antworten auf Ihre Fragen.",
+  "view_all": "Alle FAQs anzeigen",
+  "q1": "Warum VpnHood?",
+  "a1": "VpnHood ist ein kostenloses VPN, das von der <b>VpnHood ENGINE</b> angetrieben und vollständig vom VpnHood-Team entwickelt wurde. Es nutzt proprietäre Protokolle auf Open-Source-Basis für höchste Transparenz. Unser Open-Source-Code ist öffentlich einsehbar, um Sicherheit und Integrität zu überprüfen. VpnHood optimiert die Datenübertragung für Hochleistungsverbindungen und erweiterte Netzwerkkonnektivität. Wir schützen Ihre Privatsphäre, indem wir keinerlei persönliche Daten oder Aktivitätsprotokolle sammeln – für ein maximal sicheres und privates digitales Erlebnis.",
+  "q2": "Ist VpnHood ein kostenloses VPN?",
+  "a2": "Ja, VpnHood bietet einen kostenlosen VPN-Dienst ganz ohne Zeit-, Daten- oder Bandbreitenbeschränkungen. Sie können jedoch zusätzliche Funktionen freischalten, indem Sie auf ein Premium-Abonnement upgraden. Mit dem Premium-Plan erhalten Sie Zugang zu Servern in mehr Ländern, schnelleren Verbindungsgeschwindigkeiten und erweiterten App-Funktionen. Weitere Details finden Sie auf unserer Seite zu den <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">Plan-Details</a>.",
+  "q3": "VpnHood! CONNECT vs. VpnHood! CLIENT?",
+  "a3": "VpnHood! CONNECT ist ein kostenloses VPN, das Nutzer uneingeschränkt nutzen können. VpnHood! CLIENT ist zwar ebenfalls kostenlos, enthält aber keine eigenen Server für direkte Verbindungen. Stattdessen können Nutzer, die ihr eigenes dediziertes VPN über VpnHood! MANAGER eingerichtet haben, diese App zusammen mit einem Server-Schlüssel für den Zugriff mit ihren Nutzern teilen.",
+  "q4": "Welche Plattformen unterstützt VpnHood?",
+  "a4": "Sowohl VpnHood! CONNECT als auch VpnHood! CLIENT sind mit Android, Android TV und Windows kompatibel. Beachten Sie jedoch, dass VpnHood! CONNECT für Windows nicht kostenlos ist. Hierfür benötigen Sie einen Premium-Schlüssel, den Sie auf unserer <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">Preise</a>-Seite erwerben können."
+}

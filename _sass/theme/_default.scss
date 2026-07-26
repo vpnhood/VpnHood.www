@@ -282,23 +282,10 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     min-width: 9rem;
     font-size: 14px;
 }
-.vh-lang-list a{
-    display: inline-block;
-    color: #fff;
-    padding: 0.35rem 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 2rem;
-    text-decoration: none;
-}
-.vh-lang-list a:hover,
-.vh-lang-list a:focus{
-    color: var(--purple-300);
-    border-color: var(--purple-300);
-}
-.vh-lang-list a.active{
-    background-color: var(--purple-300);
-    border-color: var(--purple-300);
-    color: var(--purple-700);
+// The off-canvas gets the same dropdown as the header; only the separator above it
+// (the nav rows it follows already carry hairlines) is mobile-specific.
+.vh-lang-mobile{
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 // ---- Mobile off-canvas menu (Bootstrap .offcanvas; replaces the Helix off-canvas) ----
 .vh-offcanvas{
@@ -534,6 +521,13 @@ iconify-icon {
 }
 [dir="rtl"] .text-end{
     text-align: left !important;
+}
+
+// RTL: same reason — .list-unstyled only zeroes padding-left, so on an RTL page the
+// browser's own list indent (padding-inline-start, i.e. right) survives and pushes
+// the items off the right edge while their heading stays flush.
+[dir="rtl"] .list-unstyled{
+    padding-right: 0;
 }
 
 .vh-btn-primary{

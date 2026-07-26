@@ -1,0 +1,12 @@
+{
+  "meta_title": "Über uns | VpnHood!",
+  "meta_description": "VpnHood! – Ein kostenloses, sicheres und quelloffenes VPN mit einem globalen Servernetzwerk, das Ihre Online-Privatsphäre schützt und sicheren Zugang zum Web gewährleistet.",
+  "page_title": "Über uns",
+  "page_desc": "Unser Ziel ist es, Nutzern freien und uneingeschränkten Zugang zum Internet zu ermöglichen – unabhängig von geografischen Barrieren oder Zensur, die in bestimmten Ländern auferlegt wird. Dabei garantieren wir stets umfassende Datensicherheit und den Schutz Ihrer Privatsphäre.",
+  "intro": "<b>VpnHood</b> ist ein kostenloser VPN-Dienst, der von der <b>VpnHood! ENGINE</b> angetrieben wird, komplett in .NET vom VpnHood-Team entwickelt. Im Gegensatz zu vielen anderen Lösungen wurde die VpnHood Engine vollständig von Grund auf neu entwickelt – sie bettet keine vorhandene VPN-Software ein oder nutzt diese in ihrem Code wieder. Stattdessen verwendet sie kundenspezifische Protokolle, die von offenen Standards inspiriert sind, um Transparenz, Prüfbarkeit und Vertrauen zu gewährleisten.",
+  "traffic_title": "VPN-Verkehr: Unauffällig wie normales Surfen im Web",
+  "traffic_desc": "VpnHood wurde entwickelt, um VPN-Verkehr wie gewöhnliches Surfen im Web aussehen zu lassen, sodass Firewalls und Zensursysteme zuverlässig umgangen werden können. Es werden keine persönlichen Informationen gesammelt und keine Aktivitätsprotokolle gespeichert, wodurch standardmäßig ein hohes Maß an Privatsphäre und Anonymität gewährleistet ist.",
+  "architecture_title": "Komponentenbasierte Architektur",
+  "architecture_desc": "VpnHood basiert auf einer modularen, komponentenbasierten Architektur, die es Entwicklern ermöglicht, einzelne Komponenten – wie Paketverschleierung, Transportschichten oder Verschlüsselungsdienstprogramme – wiederzuverwenden oder auf einfache Weise neue VPN-Anwendungen für spezifische Anforderungen zusammenzustellen.",
+  "saas_desc": "Zusätzlich bietet VpnHood einen vollständigen Backend-Dienst als SaaS an, der es Einzelpersonen und Unternehmen ermöglicht, Benutzer, Geräte und Infrastruktur zu verwalten, ohne eine einzige Zeile Backend-Code schreiben zu müssen. Dies ermöglicht jedem, ein dezentrales VPN-Netzwerk im großen Maßstab mit null Einrichtungsaufwand zu starten, wodurch VpnHood ideal für persönliche Projekte und Enterprise-Lösungen ist."
+}

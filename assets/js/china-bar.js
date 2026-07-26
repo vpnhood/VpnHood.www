@@ -23,8 +23,11 @@
  * next load if the visitor is still in CN (no persisted dismissal).
  */
 (function () {
+  // dir="ltr": the bar is Chinese (LTR) content and must render identically on
+  // RTL pages (e.g. a CN visitor reading the Persian tree) — without this, an
+  // RTL <html dir> would mirror the bar's layout and arrow.
   var BAR_HTML =
-    '<div id="mod-custom128" class="mod-custom custom">' +
+    '<div id="mod-custom128" class="mod-custom custom" dir="ltr">' +
       '<div id="chinaBar">' +
         '<div id="barTextWrapper">' +
           '<p class="txt-purple-l-1 me-lg-5">您想要购买高级代码吗？您在中国吗？</p>' +
