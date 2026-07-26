@@ -519,8 +519,9 @@ iconify-icon {
 .vh-text-btn>iconify-icon{
     transform: translateY(0) !important;
 }
-// RTL: the inline arrow icon points into the reading direction.
-[dir="rtl"] .vh-text-btn svg{
+// RTL: inline icons that depict a direction (arrows) declare class="vh-rtl-mirror"
+// on their <svg> and are mirrored here so they point into the reading direction.
+[dir="rtl"] .vh-rtl-mirror{
     transform: scaleX(-1);
 }
 
