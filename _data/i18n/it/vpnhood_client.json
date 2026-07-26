@@ -3,7 +3,7 @@
   "meta_description": "VpnHood! – Una VPN gratuita, sicura e open source con una rete globale di server, progettata per proteggere la tua privacy online e garantirti un accesso sicuro al web.",
   "page_title": "VpnHood! CLIENT",
   "page_desc": "Una soluzione VPN veloce, sicura e affidabile basata su <b>VpnHood! ENGINE</b>, open source e prima VPN sviluppata interamente su piattaforma .NET.",
-  "intro": "VpnHood! CLIENT è disponibile per Windows e Android, offrendo un'esperienza VPN fluida e senza interruzioni. Le funzionalità principali includono:",
+  "intro": "VpnHood! CLIENT è disponibile per Android, Android TV, Windows e Linux per offrirti un'esperienza VPN impeccabile. Le caratteristiche principali includono:",
   "li_fast": "Connessioni VPN <b>veloci e sicure</b> basate su VpnHood ENGINE.",
   "li_protocol": "<b>Protocollo ultra-stabile</b> per garantire una connessione crittografata e fluida, proteggendo la tua privacy in qualsiasi rete.",
   "li_split": "<b>Split tunneling</b> per app, indirizzi IP, domini e filtraggio per paese.",
