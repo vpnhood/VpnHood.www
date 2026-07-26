@@ -3,4 +3,5 @@
 - Keep the technical terms "VPN", "API", "SDK", "open source" widely-understood; prefer the form most natural in the target language.
 - Other companies and platforms (GitHub, Google Play, App Store, Windows, Android, iOS, Cloudflare, LinkedIn, Instagram, X) take the spelling that is already established in the target language — unlike "VpnHood" above, they may be written in that language's own script. A language written in Latin script keeps the original spelling ("Projekt auf GitHub"); Persian uses its own established forms ("GitHub Discussion" -> "بحث‌های گیت‌هاب").
 - Whichever form you choose, write the whole name in one script: never half-convert a name ("گitHub" is always wrong), and never touch a name inside a URL or an href.
+- Insert bidi control characters (LRM U+200E, RLM U+200F) yourself — for RTL languages the tool adds a left-to-right mark after "VpnHood!" only where it is needed, i.e. when the word after it is translated. When the next word stays Latin ("VpnHood! CLIENT") the punctuation is already inside a Latin run and no mark belongs there.
 - Tone: consumer marketing — friendly, clear, and concise. Avoid literal word-for-word translation.

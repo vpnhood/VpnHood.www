@@ -1,12 +1,12 @@
 {
-  "meta_title": "VpnHood!‎ CLIENT",
+  "meta_title": "VpnHood! CLIENT",
   "meta_description": "VpnHood!‎ - شبكة VPN مجانية، آمنة ومفتوحة المصدر مع شبكة خوادم عالمية مصممة لحماية خصوصيتك عبر الإنترنت وضمان وصول آمن للويب.",
-  "page_title": "VpnHood!‎ CLIENT",
-  "page_desc": "خدمة VPN سريعة، آمنة وموثوقة مدعومة بواسطة <b>VpnHood!‎ Engine</b>، وهو مفتوح المصدر وأول VPN يُطور بالكامل باستخدام منصة .NET.",
-  "intro": "تطبيق VpnHood!‎ CLIENT متوفر لنظامي ويندوز وأندرويد، ليمنحك تجربة VPN سلسة. إليك أبرز المزايا:",
+  "page_title": "VpnHood! CLIENT",
+  "page_desc": "خدمة VPN سريعة، آمنة وموثوقة مدعومة بواسطة <b>VpnHood! Engine</b>، وهو مفتوح المصدر وأول VPN يُطور بالكامل باستخدام منصة .NET.",
+  "intro": "تطبيق VpnHood! CLIENT متوفر لنظامي ويندوز وأندرويد، ليمنحك تجربة VPN سلسة. إليك أبرز المزايا:",
   "li_fast": "اتصالات VPN <b>سريعة وآمنة</b> مدعومة بمحرك VpnHood Engine.",
   "li_protocol": "<b>بروتوكول قوي وثابت</b> يضمن اتصالاً سلساً ومشفرأً، مع الحفاظ على خصوصيتك عبر مختلف شبكات الإنترنت.",
   "li_split": "<b>نفق مقسم (Split tunneling)</b> للتطبيقات، عناوين IP، النطاقات، والتصفية حسب الدولة.",
   "li_ip": "<b>دعم بروتوكولي IPv4 وIPv6</b> لضمان توافقية أوسع.",
-  "download_client": "تحميل VpnHood!‎ CLIENT"
+  "download_client": "تحميل VpnHood! CLIENT"
 }
