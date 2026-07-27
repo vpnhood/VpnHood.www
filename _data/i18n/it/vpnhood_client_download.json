@@ -1,8 +1,10 @@
 {
   "meta_title": "Scarica VpnHood! CLIENT",
-  "meta_description": "VpnHood! – Una VPN gratuita, sicura e open source con una rete globale di server per proteggere la tua privacy online e navigare in totale sicurezza.",
+  "meta_description": "Scarica VpnHood! CLIENT per Android, Android TV, Windows o Linux. L'app non ha server VPN integrati: ti serve una chiave di accesso fornita da chi gestisce il server.",
   "page_title": "Scarica VpnHood! CLIENT",
   "page_desc": "Soluzione VPN veloce, sicura e affidabile basata su <b>VpnHood! ENGINE</b>, open source e la prima VPN sviluppata interamente con la piattaforma .NET.",
+  "notice_title": "Nessun server integrato.",
+  "notice_desc": "VpnHood! CLIENT non include server VPN propri, quindi non può connettersi da solo. Ti serve una <b>chiave di accesso</b> da chi gestisce il server: incollala nell'app una sola volta e sei subito connesso.",
   "android_title": "Android",
   "androidtv_title": "Android TV",
   "windows_title": "Windows",

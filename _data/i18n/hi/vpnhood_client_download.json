@@ -1,8 +1,10 @@
 {
   "meta_title": "VpnHood! CLIENT डाउनलोड करें",
-  "meta_description": "VpnHood! – एक मुफ़्त, सुरक्षित और ओपन-सोर्स VPN जो वैश्विक सर्वर नेटवर्क के साथ आपकी ऑनलाइन प्राइवेसी की सुरक्षा करता है और सुरक्षित वेब एक्सेस देता है।",
+  "meta_description": "Android, Android TV, Windows या Linux के लिए VpnHood! CLIENT डाउनलोड करें। इस ऐप में कोई इन-बिल्ट VPN सर्वर नहीं है — सर्वर चलाने वाले से आपको एक एक्सेस की (access key) की आवश्यकता होगी।",
   "page_title": "VpnHood! CLIENT डाउनलोड करें",
   "page_desc": "तेज़, सुरक्षित और भरोसेमंद VPN समाधान जो <b>VpnHood! ENGINE</b> द्वारा संचालित है। यह ओपन-सोर्स है और .NET प्लेटफ़ॉर्म पर पूरी तरह से विकसित होने वाला पहला VPN है।",
+  "notice_title": "कोई इन-बिल्ट सर्वर नहीं है।",
+  "notice_desc": "VpnHood! CLIENT में खुद के कोई VPN सर्वर शामिल नहीं हैं, इसलिए यह अकेले किसी से कनेक्ट नहीं हो सकता। सर्वर चलाने वाले से आपको एक <b>एक्सेस की (access key)</b> चाहिए — इसे एक बार ऐप में पेस्ट करें और आप कनेक्ट हो जाएंगे।",
   "android_title": "Android",
   "androidtv_title": "Android TV",
   "windows_title": "Windows",
