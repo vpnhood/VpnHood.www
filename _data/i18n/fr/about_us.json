@@ -3,7 +3,7 @@
   "meta_description": "VpnHood! – Un VPN gratuit, sécurisé et open source avec un réseau mondial de serveurs, conçu pour protéger votre vie privée en ligne et garantir un accès sécurisé au web.",
   "page_title": "À Propos de Nous",
   "page_desc": "Notre objectif est d'offrir un accès internet libre et illimité à tous, sans contraintes géographiques ni censure, tout en garantissant une sécurité totale des données et une confidentialité absolue.",
-  "intro": "<b>VpnHood</b> est un service VPN gratuit propulsé par le <b>VpnHood! ENGINE</b>, entièrement développé en .NET par l'équipe VpnHood. Contrairement à de nombreuses solutions, le VpnHood Engine a été conçu de A à Z : il n'intègre ni ne réutilise aucun logiciel VPN existant. Il utilise des protocoles personnalisés inspirés des standards ouverts pour garantir transparence, auditabilité et confiance.",
+  "intro": "<b>VpnHood</b> est un VPN gratuit propulsé par le <b>VpnHood! ENGINE</b>, développé de A à Z en .NET par l'équipe VpnHood. Contrairement à d'autres solutions, le <b>VpnHood! ENGINE</b> est conçu entièrement à partir de zéro, sans aucun code tiers. Il utilise des protocoles sur mesure inspirés des standards ouverts pour garantir transparence, auditabilité et confiance.",
   "traffic_title": "Un trafic VPN discret comme une navigation web classique",
   "traffic_desc": "VpnHood est conçu pour que votre trafic VPN ressemble à une navigation web ordinaire, lui permettant de contourner les pare-feu et les systèmes de censure avec une grande fiabilité. Il ne collecte aucune information personnelle et ne stocke aucun journal d'activité, assurant par défaut une confidentialité et un anonymat renforcés.",
   "architecture_title": "Architecture modulaire par composants",
