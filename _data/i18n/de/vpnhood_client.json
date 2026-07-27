@@ -10,5 +10,9 @@
   "li_proxy": "Der <b>Proxy-Modus</b> verbindet Sie über einen SOCKS- oder HTTP-Proxy mit Ihrem Server, falls direkte Verbindungen blockiert sind, und erleichtert zudem die Weiterleitung über ein anderes Netzwerk.",
   "li_split": "<b>Split-Tunneling</b> für Apps, IPs, Domains und länderbasierte Filterung.",
   "li_ip": "<b>Unterstützung für IPv4 &amp; IPv6</b> für umfassende Kompatibilität.",
+  "screenshot_home_alt": "VpnHood! CLIENT auf einem Smartphone, verbunden und mit Live-Geschwindigkeit für Download und Upload sowie Split-Tunneling und Protokolloptionen",
+  "screenshot_servers_alt": "Die Server-Ansicht im VpnHood! CLIENT, die öffentliche und private Zugangsschlüssel-Profile mit ihren Serverstandorten auflistet",
+  "win_title": "Die gleiche App jetzt auch auf deinem Desktop",
+  "win_desc": "VpnHood! CLIENT läuft auch auf Windows und Linux — gewohnte Bedienung in einem kompakten Fenster, das nicht im Weg ist. Einfach den Zugangsschlüssel einmal einfügen und mit nur einem Klick verbinden.",
   "download_client": "VpnHood! CLIENT herunterladen"
 }
