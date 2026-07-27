@@ -10,5 +10,9 @@
   "li_proxy": "当直接连接受阻时，<b>代理模式 (Proxy Mode)</b> 通过 SOCKS 或 HTTP 代理连接服务器，同时也能轻松通过其他网络进行转发。",
   "li_split": "<b>分流隧道</b>：支持按应用、IP、域名及国家/地区进行智能过滤。",
   "li_ip": "<b>支持 IPv4 &amp; IPv6</b>：提供更广泛的网络兼容性。",
+  "screenshot_home_alt": "手机上的 VpnHood! CLIENT 已连接，实时显示下载和上传速度，并支持分应用代理和协议选项",
+  "screenshot_servers_alt": "VpnHood! CLIENT 的服务器界面，列出了公共和私有访问密钥配置文件及其服务器位置",
+  "win_title": "电脑端同样精彩",
+  "win_desc": "VpnHood! CLIENT 也支持 Windows 和 Linux。熟悉的操作界面，小巧不占空间。只需粘贴一次访问密钥，一键即可连接服务器。",
   "download_client": "下载 VpnHood! CLIENT"
 }

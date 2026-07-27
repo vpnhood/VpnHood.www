@@ -10,5 +10,9 @@
   "li_proxy": "Doğrudan bağlantı engellendiğinde sunucunuza SOCKS veya HTTP proxy üzerinden ulaşan <b>Proxy Modu</b>, başka bir ağ üzerinden yönlendirme yapmanızı da kolaylaştırır.",
   "li_split": "Uygulamalar, IP'ler, alan adları ve ülke bazlı filtreleme için <b>bölünmüş tünelleme</b>.",
   "li_ip": "Geniş uyumluluk için <b>IPv4 &amp; IPv6 desteği</b>.",
+  "screenshot_home_alt": "Telefon ekranında VpnHood! CLIENT: Bağlı durumda, bölünmüş tünelleme ve protokol seçenekleriyle anlık indirme ve yükleme hızını gösteriyor",
+  "screenshot_servers_alt": "VpnHood! CLIENT Sunucular ekranı: Genel ve özel erişim anahtarı profillerini sunucu konumlarıyla birlikte listeliyor",
+  "win_title": "Aynı harika uygulama bilgisayarınızda",
+  "win_desc": "VpnHood! CLIENT Windows ve Linux'ta da çalışır; bildiğiniz arayüz, işinize engel olmayan şık ve küçük bir pencerede. Erişim anahtarınızı bir kez yapıştırın, sunucularınız bir tık uzağınızda olsun.",
   "download_client": "VpnHood! CLIENT İndir"
 }
