@@ -56,7 +56,6 @@ plugins:
 exclude:
   - README.md
   - CLAUDE.md
-  - .legacy_joomla/
   - Gemfile
   - Gemfile.lock
   - .github/
