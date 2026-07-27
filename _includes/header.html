@@ -85,12 +85,16 @@
          it tells social/link-preview crawlers that this page exists in other languages.
          seo-tag emits og:locale for THIS page only and has no notion of siblings, so the
          alternates are emitted here (og:locale itself is still seo-tag's — never duplicate
-         it). Values mirror what seo-tag emits per page — the bare page.lang for a
-         generated page, site.lang for the English source — so the document is internally
-         consistent. The current page's own locale is excluded, per the OG spec. {% endcomment %}
-    {%- assign vh_site_locale = site.lang | default: 'en_US' | replace: '-', '_' -%}
-    {%- assign vh_this_locale = page.lang | default: vh_site_locale -%}
-    {%- assign vh_locale_list = vh_locales | append: vh_site_locale | split: ',' -%}
+         it). Values are the territory-qualified og_locale from _data/languages.yml
+         (fa_IR, zh_CN, ...) — the same source that stamps page.locale on generated
+         clones (_plugins/i18n-pages.rb) and site.locale for English, so og:locale and
+         its alternates always agree. The current page's own locale is excluded, per
+         the OG spec; an unmapped language falls back to its bare code. {% endcomment %}
+    {%- assign vh_site_locale = site.locale | default: site.lang | replace: '-', '_' -%}
+    {%- assign vh_this_locale = page.locale | default: vh_site_locale -%}
+    {%- assign vh_lang_codes = vh_locales | split: ',' -%}
+    {%- capture vh_og_alts -%}{%- for vh_code in vh_lang_codes -%}{{ site.data.languages[vh_code].og_locale | default: vh_code }},{%- endfor -%}{{ vh_site_locale }}{%- endcapture -%}
+    {%- assign vh_locale_list = vh_og_alts | replace: '-', '_' | split: ',' -%}
     {%- for vh_loc in vh_locale_list -%}{%- unless vh_loc == vh_this_locale %}
     <meta property="og:locale:alternate" content="{{ vh_loc }}" />{% endunless %}{%- endfor %}
     {% endif %}

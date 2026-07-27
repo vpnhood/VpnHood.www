@@ -295,16 +295,23 @@ self-deactivating when no translated pages exist.
 - **Canonicals stay within a language.** Every translated page canonicalizes to itself
   (the jekyll-seo-tag default). Never canonicalize a translation to its English source —
   that deindexes the translation.
-- **`og:locale` follows `page.lang`** via jekyll-seo-tag automatically; never hand-write it.
+- **`og:locale` is territory-qualified** (`language_TERRITORY`: `fa_IR`, `zh_CN`, …, per
+  Facebook's locale registry — OG consumers ignore bare language codes and fall back to
+  `en_US`). The map lives in the language-metadata data file (`og_locale:` per language in
+  `_data/languages.yml`); the page generator stamps it as `locale:` on every clone and
+  `_config.yml` sets `locale:` for the source language, so **jekyll-seo-tag emits the tag
+  natively** (it resolves `page.locale || site.locale || page.lang`) — never hand-write the
+  `og:locale` meta itself. Meta-tag only: URLs, `<html lang>`, and hreflang all keep the
+  bare language code.
 - **`og:locale:alternate` is emitted alongside the hreflang set** — the Open Graph
   counterpart, telling social/link-preview crawlers the page exists in other languages.
   seo-tag only knows the *current* page's locale, so `header.html` emits the alternates
-  from the same `site.pages` scan that builds the hreflang links (no second scan). Rules:
-  one tag per *other* available locale (**the page's own locale is excluded**, per the OG
-  spec), values mirroring what seo-tag emits per page (the bare `page.lang` for a
-  generated page, `site.lang` for the source page) so the document stays internally
-  consistent. Like hreflang, it is emitted **only** when the page actually has
-  translations — an untranslated page (e.g. legal) keeps its lone `og:locale`.
+  from the same `site.pages` scan that builds the hreflang links (no second scan), mapping
+  each language through the same `og_locale:` data so `og:locale` and its alternates always
+  agree (an unmapped language falls back to its bare code). Rules: one tag per *other*
+  available locale (**the page's own locale is excluded**, per the OG spec). Like hreflang,
+  it is emitted **only** when the page actually has translations — an untranslated page
+  (e.g. legal) keeps its lone `og:locale`.
 - **No `inLanguage` microdata in page bodies.** Language is declared by `<html lang>` and
   hreflang only. Legacy body-level `<meta itemprop="inLanguage">` tags were removed
   site-wide: they get copied verbatim into translations, where they lie.

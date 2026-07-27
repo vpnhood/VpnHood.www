@@ -34,6 +34,14 @@ module VhI18nPages
       copy = Jekyll::Page.new(site, site.source, File.dirname(page.relative_path), page.name)
       copy.data["lang"] = lang
       copy.data["permalink"] = "/#{lang}#{page.url}"
+      # Territory-qualified OG locale (fa_IR, zh_CN, ...) from _data/languages.yml.
+      # jekyll-seo-tag resolves og:locale as page.locale || site.locale || page.lang,
+      # so stamping it here makes seo-tag emit the qualified form natively. Meta-tag
+      # only — URLs, <html lang>, and hreflang all keep the bare `lang` code. Must be
+      # set on EVERY clone (site.locale exists, so an unstamped clone would claim the
+      # English en_US); an unmapped language falls back to its bare code.
+      lang_meta = site.data["languages"][lang] if site.data["languages"]
+      copy.data["locale"] = (lang_meta && lang_meta["og_locale"]) || lang
       copy
     end
   end

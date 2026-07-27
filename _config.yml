@@ -4,6 +4,9 @@ description: "VpnHood! – A free, secure, and open-source VPN with a global ser
 url: "https://www.vpnhood.com"
 baseurl: ""
 lang: en-us
+# Territory-qualified OG locale for English pages (og:locale meta only — <html lang>
+# keeps `lang` above). Translated clones get their own via _plugins/i18n-pages.rb.
+locale: en_US
 author: VpnHood
 
 # Social media & SEO (consumed by jekyll-seo-tag)
