@@ -10,9 +10,6 @@
   "li_cloak": "<b>Cloak Mode.</b> Dresses the tunnel as ordinary web traffic — a censor probing the connection gets a plain web-server reply instead of anything worth blocking.",
   "li_proxy": "<b>Proxy Mode.</b> Blocked from connecting directly? Reach your server through a SOCKS or HTTP proxy, or relay through another network entirely.",
   "li_split": "<b>Split tunneling.</b> Choose what goes through the VPN — by app, IP address, domain, or country — so local apps like banking keep working untouched.",
-  "screenshot_home_alt": "VpnHood! CLIENT on a phone, connected, showing live download and upload speed with split tunneling and protocol options",
-  "screenshot_servers_alt": "The Servers screen in VpnHood! CLIENT, listing a public and a private access-key profile with their server locations",
-  "win_title": "The same app on your desktop",
-  "win_desc": "VpnHood! CLIENT runs on Windows and Linux too — the interface you know, in a compact window that stays out of the way. Paste an access key once, and your servers are a click away.",
+  "phones_alt": "VpnHood! CLIENT on two phones: one connected and showing live download and upload speed, the other listing public and private access-key profiles",
   "download_client": "Download VpnHood! CLIENT"
 }
