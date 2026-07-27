@@ -16,6 +16,8 @@
   "nav_self_hosted_start_sub": "İhtiyaçlar, maliyetler ve kurulum rehberi",
   "nav_manager": "VpnHood! MANAGER",
   "nav_manager_sub": "Sunucu ekleyin, canlı izleyin ve erişim anahtarları dağıtın",
+  "nav_server": "VpnHood! SERVER",
+  "nav_server_sub": "Kendi cihazınızda çalışan açık kaynaklı altyapı — Linux, Windows veya Docker",
   "nav_client_app": "VpnHood! CLIENT",
   "nav_client_app_sub": "Kullanıcılarınız için ücretsiz uygulama — Android, TV, Windows ve Linux",
   "nav_github_project": "GitHub'da Açık Kaynak",

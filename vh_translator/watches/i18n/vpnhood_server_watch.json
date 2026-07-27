@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "VpnHood! SERVER",
+    "meta_description": "The free, open-source engine of your self-hosted VPN. Runs on Linux, Windows, or Docker, shrugs off probing and blocking, and works with or without VpnHood! MANAGER.",
+    "page_title": "VpnHood! SERVER",
+    "page_desc": "The engine of your VPN. It runs on your own machine, carries your users' traffic, and answers to nobody's infrastructure but yours.",
+    "f_anywhere_title": "Runs anywhere you can rent",
+    "f_anywhere_desc": "Linux, Windows, or Docker — any VPS or dedicated machine from any provider, installed with a single pasted command.",
+    "f_stealth_title": "Hard to spot, harder to block",
+    "f_stealth_desc": "With Cloak Mode, the tunnel is shaped to look like ordinary web traffic — and an unauthenticated probe gets a plain web-server response instead of anything worth testing.",
+    "f_engine_title": "Steadfast by design",
+    "f_engine_desc": "VpnHood! ENGINE keeps the connection encrypted and stable across hostile networks, with IPv4 and IPv6 support.",
+    "f_open_title": "Open-source and audited",
+    "f_open_desc": "Every line is public on GitHub, and the project has been audited by independent security firms. Nothing to take on faith.",
+    "run_label": "Your server, your call",
+    "run_title": "Two ways to run it",
+    "run_manager_title": "With VpnHood! MANAGER",
+    "run_manager_desc": "The free panel installs the server for you, watches it live, and issues your access keys. The easiest path for most people.",
+    "run_solo_title": "On its own",
+    "run_solo_desc": "No panel required: a built-in file-based access manager lets a single server issue its own keys, configured from a simple settings file.",
+    "setup_guide": "Setup guide: install on Windows, Linux, or Docker",
+    "learn_more": "Learn more",
+    "cta": "Free, open-source, and ready for your server.",
+    "github_btn": "Source on GitHub",
+    "new_tab": "(opens in new tab)"
+  }
+}

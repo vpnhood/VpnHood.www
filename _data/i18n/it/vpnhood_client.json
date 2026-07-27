@@ -6,6 +6,8 @@
   "intro": "VpnHood! CLIENT è disponibile per Android, Android TV, Windows e Linux per offrirti un'esperienza VPN impeccabile. Le caratteristiche principali includono:",
   "li_fast": "Connessioni VPN <b>veloci e sicure</b> basate su VpnHood ENGINE.",
   "li_protocol": "<b>Protocollo ultra-stabile</b> per garantire una connessione crittografata e fluida, proteggendo la tua privacy in qualsiasi rete.",
+  "li_cloak": "<b>Modalità Cloak</b> per le reti che bloccano le VPN: il traffico viene mascherato da normale navigazione web, mentre le richieste non autenticate ricevono una semplice risposta del server senza alcuna informazione utile.",
+  "li_proxy": "<b>Modalità Proxy</b> per connettersi al server tramite proxy SOCKS o HTTP in caso di blocco diretto, facilitando anche il passaggio attraverso altre reti.",
   "li_split": "<b>Split tunneling</b> per app, indirizzi IP, domini e filtraggio per paese.",
   "li_ip": "<b>Supporto IPv4 &amp; IPv6</b> per un'ampia compatibilità.",
   "download_client": "Scarica VpnHood! CLIENT"

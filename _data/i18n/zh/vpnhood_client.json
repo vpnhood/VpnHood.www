@@ -6,6 +6,8 @@
   "intro": "VpnHood! CLIENT 现已支持 Android、Android TV、Windows 和 Linux，为您带来极致流畅的 VPN 体验。核心功能包括：",
   "li_fast": "<b>高速安全</b>：由 VpnHood Engine 驱动的 VPN 连接。",
   "li_protocol": "<b>稳定协议</b>：保障加密连接顺畅无阻，在各种网络环境下守护您的在线隐私。",
+  "li_cloak": "针对的主动探测 VPN 的网络，<b>隐蔽模式 (Cloak Mode)</b> 可以将连接伪装成普通网页流量，让未授权的探测只收到普通的网页服务器响应，无法识别。",
+  "li_proxy": "当直接连接受阻时，<b>代理模式 (Proxy Mode)</b> 通过 SOCKS 或 HTTP 代理连接服务器，同时也能轻松通过其他网络进行转发。",
   "li_split": "<b>分流隧道</b>：支持按应用、IP、域名及国家/地区进行智能过滤。",
   "li_ip": "<b>支持 IPv4 &amp; IPv6</b>：提供更广泛的网络兼容性。",
   "download_client": "下载 VpnHood! CLIENT"

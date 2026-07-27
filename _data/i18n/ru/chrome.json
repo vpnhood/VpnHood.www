@@ -16,6 +16,8 @@
   "nav_self_hosted_start_sub": "Что нужно, сколько стоит и как запустить",
   "nav_manager": "VpnHood! MANAGER",
   "nav_manager_sub": "Добавляйте серверы, отслеживайте их в реальном времени и выдавайте ключи доступа",
+  "nav_server": "VpnHood! SERVER",
+  "nav_server_sub": "Open-source движок на вашем собственном сервере — Linux, Windows или Docker",
   "nav_client_app": "VpnHood! CLIENT",
   "nav_client_app_sub": "Бесплатное приложение для пользователей: Android, ТВ, Windows и Linux",
   "nav_github_project": "Исходный код на GitHub",

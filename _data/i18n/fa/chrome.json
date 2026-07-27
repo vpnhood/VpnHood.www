@@ -16,6 +16,8 @@
   "nav_self_hosted_start_sub": "آنچه نیاز دارید، هزینه‌ها و نحوه شروع کار",
   "nav_manager": "VpnHood! MANAGER",
   "nav_manager_sub": "افزودن سرورها، نظارت زنده و ارائه کلیدهای دسترسی",
+  "nav_server": "VpnHood! SERVER",
+  "nav_server_sub": "موتور متن‌باز روی سیستم شخصی شما — لینوکس، ویندوز یا داکر",
   "nav_client_app": "VpnHood! CLIENT",
   "nav_client_app_sub": "اپلیکیشن رایگان برای کاربران شما — اندروید، تلویزیون، ویندوز و لینوکس",
   "nav_github_project": "کد منبع در گیت‌هاب",

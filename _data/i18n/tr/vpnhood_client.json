@@ -6,6 +6,8 @@
   "intro": "VpnHood! CLIENT; Android, Android TV, Windows ve Linux'ta kesintisiz bir VPN deneyimi sunar. Başlıca özellikler:",
   "li_fast": "VpnHood ENGINE destekli <b>hızlı ve güvenli</b> VPN bağlantıları.",
   "li_protocol": "Farklı ağ ortamlarında çevrim içi gizliliğinizi korurken kesintisiz ve şifreli bir bağlantı sağlayan <b>sarsılmaz protokol</b>.",
+  "li_cloak": "VPN'leri aktif olarak engelleyen ağlar için <b>Gizli Mod (Cloak Mode)</b>: Bağlantınız sıradan web trafiği gibi görünür ve yetkisiz taramalar, şüpheli bir şey yerine standart bir web sunucusu yanıtı alır.",
+  "li_proxy": "Doğrudan bağlantı engellendiğinde sunucunuza SOCKS veya HTTP proxy üzerinden ulaşan <b>Proxy Modu</b>, başka bir ağ üzerinden yönlendirme yapmanızı da kolaylaştırır.",
   "li_split": "Uygulamalar, IP'ler, alan adları ve ülke bazlı filtreleme için <b>bölünmüş tünelleme</b>.",
   "li_ip": "Geniş uyumluluk için <b>IPv4 &amp; IPv6 desteği</b>.",
   "download_client": "VpnHood! CLIENT İndir"

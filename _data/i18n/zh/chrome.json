@@ -16,6 +16,8 @@
   "nav_self_hosted_start_sub": "了解所需条件、费用及快速上手指南",
   "nav_manager": "VpnHood! MANAGER",
   "nav_manager_sub": "添加服务器，实时监控，分发访问密钥",
+  "nav_server": "VpnHood! SERVER",
+  "nav_server_sub": "在您自己的设备上运行的开源引擎 —— 支持 Linux、Windows 或 Docker",
   "nav_client_app": "VpnHood! CLIENT",
   "nav_client_app_sub": "用户专用的免费应用 — 支持 Android、电视、Windows 和 Linux",
   "nav_github_project": "GitHub 源码",
