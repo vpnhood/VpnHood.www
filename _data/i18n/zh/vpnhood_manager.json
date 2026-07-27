@@ -1,10 +1,10 @@
 {
   "meta_title": "VpnHood! MANAGER",
-  "meta_description": "通过一个面板轻松运营您自己的 VPN 服务：只需一条命令即可添加服务器、自由设定套餐、分发访问密钥，并实时监控状态。最多可免费管理 5 台服务器。",
+  "meta_description": "通过一个面板轻松运营专属 VPN 服务：一键添加服务器、自定义套餐、分发访问密钥，并实时监控全局。",
   "page_title": "VpnHood! MANAGER",
   "page_desc": "无需精通系统运维，即可轻松搭建您的专属 VPN。VpnHood! MANAGER 是您的全能管理面板，无论面向家人、社群还是客户，您都可以轻松添加服务器、自定义用户权限，并通过单个密钥快速分发访问权。",
   "open_manager": "打开 VpnHood! MANAGER",
-  "free_note": "免费支持最多 5 台服务器、5 个服务器组、2,000 个访问密钥以及 3 名团队成员，业务增长后可随时升级至无限版。您只需自备服务器，唯一需要支付费用的只有任意云服务商的 VPS。",
+  "free_note": "只需自备服务器，您只需为任意云服务商的 VPS 支付费用。",
   "features_label": "核心功能",
   "features_title": "打造您自己的 VPN 服务，今天即可上线",
   "features_desc": "提供运营商业级付费 VPN 所需的一切功能，告别繁琐复杂的设置。",

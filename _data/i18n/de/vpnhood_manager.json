@@ -1,10 +1,10 @@
 {
   "meta_title": "VpnHood! MANAGER",
-  "meta_description": "Betreibe deinen eigenen VPN-Dienst über ein einziges Dashboard: Füge Server mit nur einem Befehl hinzu, lege eigene Tarife fest, verteile Zugangsschlüssel und behalte alles live im Blick. Kostenlos für bis zu 5 Server.",
+  "meta_description": "Betreibe deinen eigenen VPN-Dienst über ein einziges Dashboard: Füge mit nur einem Befehl einen Server hinzu, lege eigene Tarife fest, verteile Zugangsschlüssel und behalte alles live im Blick.",
   "page_title": "VpnHood! MANAGER",
   "page_desc": "Betreibe dein eigenes VPN, ohne Systemadministrator sein zu müssen. VpnHood! MANAGER ist das Dashboard, in dem du Server hinzufügst, den Funktionsumfang für Nutzer festlegst und Zugänge per Einzelschlüssel vergibst – egal ob für Familie, Community oder Kunden.",
   "open_manager": "VpnHood! MANAGER öffnen",
-  "free_note": "Kostenlos für bis zu 5 Server, 5 Server-Farmen, 2.000 Zugangsschlüssel und 3 Teammitglieder. Für mehr Wachstum gibt es einen Unlimited-Tarif. Du bringst den Server mit – bezahlt wird lediglich ein VPS bei einem Cloud-Anbieter deiner Wahl.",
+  "free_note": "Du stellst den Server bereit – ein VPS von einem beliebigen Cloud-Anbieter ist das Einzige, wofür du bezahlst.",
   "features_label": "Deine Möglichkeiten",
   "features_title": "Dein eigener VPN-Dienst, noch heute startklar",
   "features_desc": "Alles, was du für einen kommerziellen VPN-Dienst brauchst – ganz ohne den üblichen technischen Frust.",
