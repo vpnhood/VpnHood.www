@@ -65,5 +65,7 @@
   "oc_close": "Chiudi menu",
   "oc_site_menu": "Menu del sito",
   "oc_features": "Elenco funzionalità",
-  "lang_change": "Cambia lingua"
+  "lang_change": "Cambia lingua",
+  "theme_switch_to_light": "Passa al tema chiaro",
+  "theme_switch_to_dark": "Passa al tema scuro"
 }

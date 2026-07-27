@@ -65,5 +65,7 @@
   "oc_close": "إغلاق القائمة",
   "oc_site_menu": "قائمة الموقع",
   "oc_features": "قائمة الميزات",
-  "lang_change": "تغيير اللغة"
+  "lang_change": "تغيير اللغة",
+  "theme_switch_to_light": "التبديل إلى الوضع الفاتح",
+  "theme_switch_to_dark": "التبديل إلى الوضع الداكن"
 }

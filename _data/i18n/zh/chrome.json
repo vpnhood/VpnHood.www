@@ -65,5 +65,7 @@
   "oc_close": "关闭菜单",
   "oc_site_menu": "网站菜单",
   "oc_features": "功能列表",
-  "lang_change": "切换语言"
+  "lang_change": "切换语言",
+  "theme_switch_to_light": "切换至浅色主题",
+  "theme_switch_to_dark": "切换至深色主题"
 }

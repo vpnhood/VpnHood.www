@@ -65,5 +65,7 @@
   "oc_close": "Menüyü kapat",
   "oc_site_menu": "Site menüsü",
   "oc_features": "Özellikler listesi",
-  "lang_change": "Dil değiştir"
+  "lang_change": "Dil değiştir",
+  "theme_switch_to_light": "Açık temaya geç",
+  "theme_switch_to_dark": "Koyu temaya geç"
 }

@@ -67,6 +67,8 @@
     "oc_close": "Close menu",
     "oc_site_menu": "Site menu",
     "oc_features": "Features list",
-    "lang_change": "Change language"
+    "lang_change": "Change language",
+    "theme_switch_to_light": "Switch to light theme",
+    "theme_switch_to_dark": "Switch to dark theme"
   }
 }
