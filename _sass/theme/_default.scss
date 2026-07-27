@@ -776,6 +776,18 @@ iconify-icon {
     background-color: rgba(var(--purple-600-rgb), 0.48);
     border: 1px solid rgba(var(--purple-200-rgb), 0.48);
 }
+// Check bullet for feature lists (home banner, vpnhood-client). Lives in the
+// shared theme because pages on both home.css and custom.css use it, and
+// _light.scss already re-points its white check stroke.
+.list-check-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--purple-300);
+}
 .vh-bg-purple-300-blur{
     background: radial-gradient(100% 100%, rgba(var(--purple-300-rgb), 1) 20%, rgba(var(--purple-500-rgb), 1) 75%);
     filter: blur(50px);

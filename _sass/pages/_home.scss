@@ -63,15 +63,8 @@
     margin-top: 25px;
     margin-bottom: 35px;
 }
-.list-check-icon{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: var(--purple-300);
-}
+// .list-check-icon moved to theme/_default.scss — it is used beyond the home
+// banner now (vpnhood-client feature list), and _light.scss already themes it.
 #phoneMockupWrapper{
     margin-top: -40px;
     margin-right: -85px;
