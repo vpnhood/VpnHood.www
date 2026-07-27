@@ -2,11 +2,11 @@
   "version": 1,
   "items": {
     "meta_title": "VpnHood! MANAGER",
-    "meta_description": "Run your own VPN service from one panel: add a server with a single command, set your own plans, hand out access keys, and watch it all live. Free for up to 5 servers.",
+    "meta_description": "Run your own VPN service from one panel: add a server with a single command, set your own plans, hand out access keys, and watch it all live.",
     "page_title": "VpnHood! MANAGER",
     "page_desc": "Run your own VPN without becoming a system administrator. VpnHood! MANAGER is the panel where you add your servers, decide what your users get, and hand out access with a single key, whether that is for your family, your community, or your customers.",
     "open_manager": "Open VpnHood! MANAGER",
-    "free_note": "Free for up to 5 servers, 5 farms, 2,000 access keys, and 3 team members, with an Unlimited plan when you outgrow it. You bring the server; a VPS from any cloud provider is the only thing you pay for.",
+    "free_note": "You bring the server; a VPS from any cloud provider is the only thing you pay for.",
     "features_label": "What you can do",
     "features_title": "Your own VPN service, up and running today",
     "features_desc": "Everything it takes to run a VPN people actually pay for, without the parts nobody enjoys.",

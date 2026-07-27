@@ -1,10 +1,10 @@
 {
   "meta_title": "VpnHood! MANAGER",
-  "meta_description": "Pilotez votre propre service VPN depuis un seul tableau de bord : ajoutez un serveur en une seule commande, créez vos forfaits, distribuez des clés d'accès et suivez l'activité en temps réel. Gratuit jusqu'à 5 serveurs.",
+  "meta_description": "Pilotez votre propre service VPN depuis un seul tableau de bord : ajoutez un serveur en une commande, créez vos offres, distribuez des clés d'accès et suivez tout en direct.",
   "page_title": "VpnHood! MANAGER",
   "page_desc": "Lancez votre propre VPN sans être administrateur système. VpnHood! MANAGER est le tableau de bord idéal pour ajouter vos serveurs, gérer les droits de vos utilisateurs et distribuer des accès en un clin d'œil, que ce soit pour vos proches, votre communauté ou vos clients.",
   "open_manager": "Ouvrir VpnHood! MANAGER",
-  "free_note": "Gratuit jusqu'à 5 serveurs, 5 fermes, 2 000 clés d'accès et 3 membres d'équipe, avec une offre illimitée pour aller encore plus loin. Vous fournissez le serveur : un simple VPS chez l'hébergeur de votre choix suffit.",
+  "free_note": "Vous fournissez le serveur ; un VPS chez l'hébergeur de votre choix est votre unique dépense.",
   "features_label": "Ce que vous pouvez faire",
   "features_title": "Votre propre service VPN, opérationnel dès aujourd'hui",
   "features_desc": "Tout le nécessaire pour lancer un service VPN attractif, les complications techniques en moins.",

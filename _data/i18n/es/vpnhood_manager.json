@@ -1,10 +1,10 @@
 {
   "meta_title": "VpnHood! MANAGER",
-  "meta_description": "Crea tu propio servicio de VPN desde un único panel: añade un servidor con un solo comando, configura tus planes, reparte claves de acceso y contrólalo todo en directo. Gratis hasta 5 servidores.",
+  "meta_description": "Gestiona tu propio servicio de VPN desde un solo panel: añade un servidor con un solo comando, crea tus planes, reparte claves de acceso y monitorízalo todo en tiempo real.",
   "page_title": "VpnHood! MANAGER",
   "page_desc": "Monta tu propia VPN sin necesidad de ser administrador de sistemas. VpnHood! MANAGER es el panel donde añades tus servidores, defines los planes de tus usuarios y repartes accesos con una sola clave, ya sea para tu familia, tu comunidad o tus clientes.",
   "open_manager": "Abrir VpnHood! MANAGER",
-  "free_note": "Gratis hasta 5 servidores, 5 granjas, 2000 claves de acceso y 3 miembros en el equipo, con un plan Unlimited cuando lo necesites. Tú pones el servidor; un VPS de cualquier proveedor en la nube es lo único que pagas.",
+  "free_note": "Tú pones el servidor; un VPS de cualquier proveedor en la nube es lo único que necesitas pagar.",
   "features_label": "Lo que puedes hacer",
   "features_title": "Tu propio servicio de VPN, listo y funcionando hoy mismo",
   "features_desc": "Todo lo necesario para ofrecer una VPN por la que la gente realmente quiera pagar, sin las complicaciones de siempre.",
