@@ -4,8 +4,11 @@ double-phone marketing mockup, in the style of vpnhood-connect-app-phone.webp.
 Run from the repo root: python tools/make-client-phones.py  (needs Pillow + NumPy).
 App-UI art renders identically in both themes - never add it to make-light-art.
 
-Compose two CLIENT store screenshots into a marketing double-phone mockup
-in the style of vpnhood-connect-app-phone.webp (transparent background)."""
+Both phones are built at the SAME size: depth comes from the z-order (right
+phone in front), the lower placement, and a symmetric vertical keystone (top
+edge slightly narrower, as if the phones lean away at the top). Never scale one
+phone down or taper a single side edge - a smaller-but-in-front phone reads as
+squashed, and a one-sided taper reads as a widened bottom."""
 from PIL import Image, ImageDraw, ImageFilter
 import numpy as np, os
 
@@ -56,15 +59,14 @@ def make_phone(shot_name, screen_w):
     return canvas
 
 
-def tilt(img, taper, side):
-    """Mild perspective: shrink one vertical edge by taper*h (side=+1 right, -1 left)."""
+def keystone(img, k):
+    """Symmetric vertical perspective: top edge narrower by k*w per corner, as
+    if the phone leans away at the top. Same transform for both phones, so
+    neither silhouette reads wider than the other."""
     w, h = img.size
     src = [(0, 0), (w - 1, 0), (w - 1, h - 1), (0, h - 1)]
-    t = taper * h
-    if side > 0:
-        dst = [(0, 0), (w - 1, t), (w - 1, h - 1 - t), (0, h - 1)]
-    else:
-        dst = [(0, t), (w - 1, 0), (w - 1, h - 1), (0, h - 1 - t)]
+    t = k * w
+    dst = [(t, 0), (w - 1 - t, 0), (w - 1, h - 1), (0, h - 1)]
     return img.transform((w, h), Image.PERSPECTIVE, find_coeffs(dst, src), Image.BICUBIC)
 
 
@@ -75,13 +77,13 @@ def shadow_of(img, blur, opacity):
     return sil.filter(ImageFilter.GaussianBlur(blur))
 
 
-# build the two phones
-a = make_phone("1_en-US.png", 340)             # connected home screen (front, nearer)
-b = make_phone("2_en-US.png", 298)             # servers screen (set back, so smaller)
-a = tilt(a, 0.014, +1).rotate(8, Image.BICUBIC, expand=True)
-b = tilt(b, 0.014, -1).rotate(-7, Image.BICUBIC, expand=True)
+# build the two phones - identical geometry, mirrored rotation
+a = make_phone("1_en-US.png", 330)             # connected home screen (back left)
+b = make_phone("2_en-US.png", 330)             # servers screen (front right)
+a = keystone(a, 0.030).rotate(8, Image.BICUBIC, expand=True)
+b = keystone(b, 0.030).rotate(-8, Image.BICUBIC, expand=True)
 
-OVERLAP, DROP = int(185 * S), 118 * S
+OVERLAP, DROP = int(175 * S), 110 * S
 W, H = a.size[0] + b.size[0] - OVERLAP, max(a.size[1], b.size[1]) + DROP
 canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
 ax, ay = 0, 0
