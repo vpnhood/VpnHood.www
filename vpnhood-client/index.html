@@ -45,15 +45,44 @@ nav_active: self-hosted
     <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
     <p class="section-desc">{{ t.page_desc }}</p>
 </div>
-<p>{{ t.intro }}</p>
-<ul>
-    <li>{{ t.li_fast }}</li>
-    <li>{{ t.li_protocol }}</li>
-    <li>{{ t.li_cloak }}</li>
-    <li>{{ t.li_proxy }}</li>
-    <li>{{ t.li_split }}</li>
-    <li>{{ t.li_ip }}</li>
-</ul>
+<div class="row align-items-center g-5">
+    <div class="col-lg-6" data-aos="fade-up">
+        <p>{{ t.intro }}</p>
+        <ul>
+            <li>{{ t.li_fast }}</li>
+            <li>{{ t.li_protocol }}</li>
+            <li>{{ t.li_cloak }}</li>
+            <li>{{ t.li_proxy }}</li>
+            <li>{{ t.li_split }}</li>
+            <li>{{ t.li_ip }}</li>
+        </ul>
+    </div>
+    <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="vh-phone-frame">
+            <img src="/assets/images/vpnhood-client/screenshot-home.webp" alt="{{ t.screenshot_home_alt }}" width="640" height="1316" loading="lazy">
+        </div>
+    </div>
+</div>
+<div class="row align-items-center g-5 mt-5 pt-5">
+    <div class="col-lg-6 order-lg-last" data-aos="fade-up">
+        <h2 class="vh-txt-grad-purple-400">{{ t.win_title }}</h2>
+        <p class="mb-0">{{ t.win_desc }}</p>
+    </div>
+    <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="vh-win-frame mx-auto">
+            <div class="vh-win-bar">
+                <img src="/assets/images/general/client-logo.svg" alt="" width="16" height="16">
+                <span dir="ltr">VpnHood! CLIENT</span>
+                <span class="vh-win-controls" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M2 6h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><rect x="2.5" y="2.5" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.2"></rect></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
+                </span>
+            </div>
+            <img src="/assets/images/vpnhood-client/screenshot-servers.webp" alt="{{ t.screenshot_servers_alt }}" width="640" height="1316" loading="lazy">
+        </div>
+    </div>
+</div>
 <div class="text-center mt-5"><a class="vh-btn vh-btn-primary blue-bg" href="{{ vh_base }}/vpnhood-client/download">{{ t.download_client }} <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"> <g fill="none"> <path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"></path> </g> </svg> </a></div>     </div>
 
         
