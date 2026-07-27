@@ -120,6 +120,10 @@
     --bs-dropdown-header-color: var(--vh-text-muted);
     box-shadow: 0 12px 32px rgba(23, 18, 58, 0.14);
 }
+// Same for the tooltip: a white floating panel needs a shadow to lift off a light page.
+[data-theme="light"] .tooltip-inner{
+    box-shadow: 0 12px 32px rgba(23, 18, 58, 0.14);
+}
 // .btn-close-white inverts the close glyph for dark panels; undo that on a light one.
 [data-theme="light"] .btn-close-white{
     filter: none;

@@ -1371,6 +1371,19 @@ h1, .h1, h2, .h2{
     height: 1px;
     background: linear-gradient(45deg, var(--vh-page-bg) 0%, var(--vh-divider-glint) 50%, var(--vh-page-bg) 100%);
 }
+/*-------------- Override bootstrap tooltip --------------*/
+// Stock Bootstrap resolves --bs-tooltip-color from --bs-body-bg, which we re-point to the
+// page background — so the footer social tooltips render page-coloured text on a
+// near-black box and are unreadable on the dark theme. Pin both ends to our own tokens
+// (they follow the light theme automatically).
+.tooltip{
+    --bs-tooltip-bg: var(--vh-surface-raised);
+    --bs-tooltip-color: var(--vh-text);
+    --bs-tooltip-opacity: 1;
+}
+.tooltip-inner{
+    border: 1px solid var(--vh-border);
+}
 /*-------------- Footer --------------*/
 #sp-footer{
     font-size: 14px;
