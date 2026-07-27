@@ -74,11 +74,25 @@
     {% comment %} Per-language pages are generated into site.pages at build time
          by _plugins/i18n-pages.rb (one clone per _data/i18n/<code>/ folder). {% endcomment %}
     {% assign vh_lang_pages = site.pages %}
-    {% capture vh_alternates %}{% for vh_p in vh_lang_pages %}{% if vh_p.lang %}{% capture vh_p_prefix %}/{{ vh_p.lang }}{% endcapture %}{% assign vh_p_base = vh_p.url | remove_first: vh_p_prefix %}{% if vh_p_base == vh_base_url %}
+    {% assign vh_locales = '' %}
+    {% capture vh_alternates %}{% for vh_p in vh_lang_pages %}{% if vh_p.lang %}{% capture vh_p_prefix %}/{{ vh_p.lang }}{% endcapture %}{% assign vh_p_base = vh_p.url | remove_first: vh_p_prefix %}{% if vh_p_base == vh_base_url %}{% assign vh_locales = vh_locales | append: vh_p.lang | append: ',' %}
     <link rel="alternate" hreflang="{{ vh_p.lang }}" href="{{ vh_p.url | absolute_url }}" />{% endif %}{% endif %}{% endfor %}{% endcapture %}
     {% if vh_alternates != "" %}
     <link rel="alternate" hreflang="en" href="{{ vh_base_url | absolute_url }}" />{{ vh_alternates }}
     <link rel="alternate" hreflang="x-default" href="{{ vh_base_url | absolute_url }}" />
+
+    {% comment %} og:locale:alternate — the Open Graph counterpart of the hreflang set:
+         it tells social/link-preview crawlers that this page exists in other languages.
+         seo-tag emits og:locale for THIS page only and has no notion of siblings, so the
+         alternates are emitted here (og:locale itself is still seo-tag's — never duplicate
+         it). Values mirror what seo-tag emits per page — the bare page.lang for a
+         generated page, site.lang for the English source — so the document is internally
+         consistent. The current page's own locale is excluded, per the OG spec. {% endcomment %}
+    {%- assign vh_site_locale = site.lang | default: 'en_US' | replace: '-', '_' -%}
+    {%- assign vh_this_locale = page.lang | default: vh_site_locale -%}
+    {%- assign vh_locale_list = vh_locales | append: vh_site_locale | split: ',' -%}
+    {%- for vh_loc in vh_locale_list -%}{%- unless vh_loc == vh_this_locale %}
+    <meta property="og:locale:alternate" content="{{ vh_loc }}" />{% endunless %}{%- endfor %}
     {% endif %}
 
     <!-- Organization structured data (seo-tag already emits the WebSite entity) -->

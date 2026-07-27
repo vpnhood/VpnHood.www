@@ -76,15 +76,16 @@ def shadow_of(img, blur, opacity):
 
 
 # build the two phones
-a = make_phone("1_en-US.png", 330)             # connected home screen
-b = make_phone("2_en-US.png", 330)             # servers screen (public/private profiles)
-a = tilt(a, 0.020, +1).rotate(8, Image.BICUBIC, expand=True)
-b = tilt(b, 0.020, -1).rotate(-8, Image.BICUBIC, expand=True)
+a = make_phone("1_en-US.png", 340)             # connected home screen (front, nearer)
+b = make_phone("2_en-US.png", 298)             # servers screen (set back, so smaller)
+a = tilt(a, 0.014, +1).rotate(8, Image.BICUBIC, expand=True)
+b = tilt(b, 0.014, -1).rotate(-7, Image.BICUBIC, expand=True)
 
-W, H = a.size[0] + b.size[0] - int(150 * S), max(a.size[1], b.size[1]) + 90 * S
+OVERLAP, DROP = int(185 * S), 118 * S
+W, H = a.size[0] + b.size[0] - OVERLAP, max(a.size[1], b.size[1]) + DROP
 canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
 ax, ay = 0, 0
-bx, by = a.size[0] - int(150 * S), 90 * S
+bx, by = a.size[0] - OVERLAP, DROP
 for img, (x, y) in [(a, (ax, ay)), (b, (bx, by))]:
     canvas.alpha_composite(shadow_of(img, 22 * S, 110), (x + 10 * S, y + 22 * S))
 canvas.alpha_composite(a, (ax, ay))
