@@ -72,7 +72,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    color: white;
+    color: var(--vh-text);
     min-width: 200px;
     min-height: 200px;
     background: url("/assets/images/general/purple-hexagon.svg") no-repeat center center;
@@ -397,7 +397,7 @@
     background-color: rgba(var(--green-100-rgb), .06);
 }
 #compareTable #header .featureColumn :is(h2, h3, h4){
-    color: white;
+    color: var(--vh-text);
 }
 #compareTable .features-row{
     align-items: center;
@@ -408,7 +408,7 @@
 #compareTable .features-row .featureColumn{
     display: flex;
     align-items: center;
-    color: white;
+    color: var(--vh-text);
 }
 #compareTable .yes,
 #compareTable .no{
@@ -423,12 +423,12 @@
     mask-size: contain;
 }
 #compareTable .yes{
-    background-color: var(--green-100);
+    background-color: var(--vh-ok);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M4.5 12.5l5 5 10-11' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
     mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M4.5 12.5l5 5 10-11' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
 }
 #compareTable .no{
-    background-color: var(--red-200);
+    background-color: var(--vh-danger);
     -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M6 6l12 12M18 6L6 18' stroke='black' stroke-width='2.5' stroke-linecap='round'/%3e%3c/svg%3e");
     mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3e%3cpath d='M6 6l12 12M18 6L6 18' stroke='black' stroke-width='2.5' stroke-linecap='round'/%3e%3c/svg%3e");
 }
@@ -516,18 +516,18 @@
 .contact-form .form-control{
     background-color: rgba(var(--purple-700-rgb), .35);
     border: 1px solid rgba(var(--purple-200-rgb), .25);
-    color: #fff;
+    color: var(--vh-text);
     padding: .75rem 1rem;
     border-radius: .75rem;
 }
 .contact-form .form-control::placeholder{
-    color: rgba(255, 255, 255, .4);
+    color: rgba(var(--vh-text-rgb), .4);
 }
 .contact-form .form-control:focus{
     background-color: rgba(var(--purple-700-rgb), .5);
     border-color: rgba(var(--purple-300-rgb), .8);
     box-shadow: 0 0 0 .2rem rgba(var(--purple-300-rgb), .25);
-    color: #fff;
+    color: var(--vh-text);
 }
 .contact-form .form-label{
     letter-spacing: .04em;
@@ -584,7 +584,7 @@
 }
 #managerFeaturesList .feature-item{
     position: relative;
-    border-left: 1px solid rgba(255, 255, 255, 0.10);
+    border-left: 1px solid rgba(var(--vh-text-rgb), .1);
     padding: 0 12px 0 30px;
     max-width: 300px;
     margin-bottom: 80px;
@@ -596,14 +596,14 @@
     left: -1px;
     width: 1px;
     height: 16px;
-    background-color: #ffffff5c;
+    background-color: rgba(var(--vh-text-rgb), .36);
     transform: translateY(-8px);
 }
 #managerFeaturesList .icon{
     margin-bottom: 25px;
 }
 #managerFeaturesList .title{
-    color: white;
+    color: var(--vh-text);
 }
 #managerFeaturesList .desc{
     margin-bottom: 0;

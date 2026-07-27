@@ -1,0 +1,391 @@
+// ===========================================================================
+// Light theme
+// ===========================================================================
+// Opt-in only: everything here hangs off `<html data-theme="light">`, which the inline
+// bootstrap at the top of _includes/header.html sets before first paint and
+// /assets/js/theme.js toggles. Dark is the default and this file never touches it — the
+// whole light theme can be removed by deleting this partial and its @use.
+//
+// It works in two passes:
+//
+//   1. Re-point the palette. The *surface* end of the brand ramp (600/700/710/800) is
+//      inverted and the ink end (90/100/120/130/200) is darkened, so every rule that
+//      reads one of those as "a dark surface" or "muted copy" keeps working unedited.
+//      That covers most of the site. The semantic --vh-* tokens carry the rest.
+//   2. Explicit overrides, below, for what re-pointing cannot express: art that is
+//      literally a light-on-dark glow, icons drawn in white, and the handful of places
+//      a surface token was used as a foreground.
+//
+// ALL light-theme overrides live in this file — page partials stay single-theme, so
+// there is exactly one place to look when something reads wrong in light mode.
+//
+// Contrast targets: body copy and headings clear 4.5:1 on the page background; the
+// brand purple is too light for text on white, so text uses --vh-accent-ink while fills
+// keep --purple-300.
+
+[data-theme="light"] {
+    color-scheme: light;
+
+    /*----- Surfaces: the dark ramp, inverted -----*/
+    // --purple-800 is also baked into tools/make-light-art.py (PAGE_BG) so the generated
+    // backdrops fade into it seamlessly. Change both together.
+    --purple-800: #f4f2fb;
+    --purple-800-rgb: 244, 242, 251;
+
+    --purple-710: #ffffff;
+    --purple-710-rgb: 255, 255, 255;
+
+    --purple-700: #ffffff;
+    --purple-700-rgb: 255, 255, 255;
+
+    --purple-600: #cfc5ee;   // chips/pills, mostly used at ~48% over the page
+    --purple-600-rgb: 207, 197, 238;
+
+    --purple-200: #7c6cc6;   // hairlines, mostly used at ~48%
+    --purple-200-rgb: 124, 108, 198;
+
+    /*----- Ink: the ramp darkened to read on a light page -----*/
+    --purple-100: #565472;   // body copy — 7.0:1 on the page background
+    --purple-100-rgb: 86, 84, 114;
+
+    --purple-90: #77758f;    // de-emphasised / struck-through
+    --purple-90-rgb: 119, 117, 143;
+
+    --purple-120: #5730b8;   // card titles, off-canvas hover
+    --purple-120-rgb: 87, 48, 184;
+
+    --purple-130: #6a44cf;
+    --purple-130-rgb: 106, 68, 207;
+
+    /*----- Semantic tokens -----*/
+    --vh-surface: rgba(var(--purple-600-rgb), 0.42);
+    --vh-surface-hover: rgba(var(--purple-600-rgb), 0.75);
+    --vh-drawer-bg: #fff;
+    --vh-header-bg: rgba(255, 255, 255, 0.72);
+    --vh-scrim: rgba(26, 20, 62, 0.4);
+    --vh-nav-active-bg: linear-gradient(to bottom, var(--purple-300), var(--purple-500));
+
+    --vh-hairline: rgba(23, 18, 58, 0.12);
+    --vh-hairline-soft: rgba(23, 18, 58, 0.08);
+    --vh-divider-glint: rgba(23, 18, 58, 0.28);
+
+    --vh-text: #17123a;
+    --vh-text-rgb: 23, 18, 58;
+    --vh-text-muted: var(--purple-100);
+    --vh-text-dim: rgba(23, 18, 58, 0.62);
+    --vh-text-soft: rgba(23, 18, 58, 0.78);
+    --vh-on-accent: #fff;      // white on brand purple stays white
+    --vh-on-bright: #17123a;   // ink on a mint/white fill flips to dark
+
+    // Text-safe accents. Each clears 4.5:1 on the page background — the brand originals
+    // sit near 3:1 there, which is fine for a fill but not for type.
+    --vh-accent-ink: #5b2ee0;
+    --vh-accent-ink-rgb: 91, 46, 224;
+    --vh-green-ink: #046b4e;
+    --vh-blue-ink: #0a6bbd;
+    --vh-heading-grad-top: #1d1147;
+
+    --vh-ok: #0d9c6f;
+    --vh-danger: #d5202f;
+    --vh-warn: #a84f00;
+    --vh-table-sticky-bg: var(--purple-800);
+    --vh-promote-bg: #fff;
+
+    --bs-link-color-rgb: var(--vh-accent-ink-rgb);
+    --bs-link-hover-color-rgb: var(--vh-text-rgb);
+}
+
+// ---------------------------------------------------------------------------
+// Bootstrap utilities & components
+// ---------------------------------------------------------------------------
+// .text-white is used across the pages for headings that sit on the page background,
+// never inside a brand-coloured button — but guard the button case so a future one
+// can't silently turn white-on-white.
+[data-theme="light"] .text-white{
+    color: var(--vh-text) !important;
+}
+[data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon) .text-white{
+    color: #fff !important;
+}
+// The language selector ships as a dark dropdown; on a light page it is a light one.
+[data-theme="light"] .dropdown-menu-dark{
+    --bs-dropdown-color: var(--vh-text-muted);
+    --bs-dropdown-bg: #fff;
+    --bs-dropdown-border-color: var(--vh-border);
+    --bs-dropdown-link-color: var(--vh-text-muted);
+    --bs-dropdown-link-hover-color: var(--vh-text);
+    --bs-dropdown-link-hover-bg: rgba(var(--purple-300-rgb), 0.12);
+    --bs-dropdown-link-active-color: #fff;
+    --bs-dropdown-link-active-bg: var(--purple-300);
+    --bs-dropdown-header-color: var(--vh-text-muted);
+    box-shadow: 0 12px 32px rgba(23, 18, 58, 0.14);
+}
+// .btn-close-white inverts the close glyph for dark panels; undo that on a light one.
+[data-theme="light"] .btn-close-white{
+    filter: none;
+}
+// A white hairline disappears on a white page.
+[data-theme="light"] .border-white{
+    border-color: var(--vh-border) !important;
+}
+// The .vh-bg-* chips stay brand-coloured in light mode, but their label inherited the
+// page's copy colour — which flips to dark ink and lands dark-on-dark (the "SAVE 0%"
+// pricing badge). Give every brand fill its matching ink.
+[data-theme="light"] :is(.vh-bg-purple-200, .vh-bg-purple-300, .vh-bg-purple-400){
+    color: var(--vh-on-accent);
+}
+[data-theme="light"] .vh-bg-green-300{
+    color: var(--vh-on-bright);
+}
+// Same idea: the "RECOMMENDED" badge inks itself with --purple-800, which is the page
+// background — near-black on dark, near-white on light.
+[data-theme="light"] #brandCompare .vh-cmp-badge{
+    color: var(--vh-on-bright);
+}
+// Small print: 70% of the copy colour clears 4:1 on the dark page but not on the light
+// one, and this is the smallest type on the site.
+[data-theme="light"] #brandCompare .vh-cmp-note{
+    color: rgba(var(--purple-100-rgb), 0.9);
+}
+
+// ---------------------------------------------------------------------------
+// Chrome — header, mega menu, off-canvas, footer
+// ---------------------------------------------------------------------------
+[data-theme="light"] #sp-header{
+    border-bottom: 1px solid var(--vh-hairline-soft);
+}
+// The panel is opaque white now, so it needs a shadow to lift off the page instead of
+// the bloom that separated it from the dark one.
+[data-theme="light"] .vh-mega-inner{
+    box-shadow: 0 18px 44px rgba(23, 18, 58, 0.16);
+}
+[data-theme="light"] .vh-mega-inner:before{
+    opacity: 0.35;
+}
+[data-theme="light"] .vh-offcanvas{
+    box-shadow: 0 0 40px rgba(23, 18, 58, 0.18);
+}
+// Helix draws the burger in white and the pre-loader on its own near-black field.
+[data-theme="light"] .burger-icon > span{
+    background-color: var(--vh-text);
+}
+[data-theme="light"] .sp-pre-loader{
+    background: var(--vh-page-bg);
+}
+[data-theme="light"] .sp-scroll-up{
+    color: var(--vh-text);
+    box-shadow: 0 6px 18px rgba(23, 18, 58, 0.12);
+}
+// The accordion's +/- glyphs are data-URI SVGs stroked in white.
+[data-theme="light"] .accordion{
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' width='10' height='10' %3e%3cpath d='M8.75 5H5M5 5H1.25M5 5V1.25M5 5V8.75' stroke='%2317123a' stroke-width='1.25' stroke-linecap='round' /%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2' fill='none' width='10' height='2' %3e%3cpath d='M8.75 1H1.25' stroke='%2317123a' stroke-width='1.25' stroke-linecap='round' /%3e%3c/svg%3e");
+}
+// The China bar's gradient inverts with the ramp; its border was a near-black purple.
+[data-theme="light"] #chinaBar,
+[data-theme="light"] #barTextWrapper{
+    border-color: var(--vh-border);
+}
+
+// ---------------------------------------------------------------------------
+// Type & accents
+// ---------------------------------------------------------------------------
+// The gradient headings run white → purple on dark. On light they run the other way:
+// near-black at the top into the deep brand indigo, so they keep reading as a gradient
+// instead of collapsing into flat dark text.
+[data-theme="light"] .vh-txt-grad-purple-300{
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 30%, var(--purple-500) 85%);
+}
+[data-theme="light"] .vh-txt-grad-purple-400{
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 33%, var(--purple-500) 95%);
+}
+[data-theme="light"] .section-label > p{
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 40%, var(--purple-300) 100%);
+}
+[data-theme="light"] .shining-text{
+    background-image: linear-gradient(to right, var(--purple-500), var(--purple-130), var(--purple-120), var(--purple-500));
+}
+// Brand accents used as TEXT: --purple-300 / the mints / the sky blue are tuned for a
+// dark page and land near 3:1 on white, so text swaps to the darker ink tokens. Fills
+// (buttons, chips, glows) keep the original brand colours.
+[data-theme="light"] .vh-txt-purple-300{
+    --bs-link-hover-color-rgb: var(--vh-accent-ink-rgb);
+    color: var(--vh-accent-ink);
+}
+[data-theme="light"] .vh-txt-green-100,
+[data-theme="light"] .vh-txt-green-200{
+    color: var(--vh-green-ink);
+}
+[data-theme="light"] .vh-txt-blue-100{
+    color: var(--vh-blue-ink);
+}
+[data-theme="light"] .vh-mega-panel a:hover,
+[data-theme="light"] #topRightMenu .my-account:hover,
+[data-theme="light"] .vh-lang-menu .dropdown-toggle:hover,
+[data-theme="light"] .vh-offcanvas-nav .nav-link:hover,
+[data-theme="light"] .vh-offcanvas-nav .nav-link:focus,
+[data-theme="light"] .vh-nav > .vh-nav-item.active .vh-mega-panel a[aria-current]{
+    color: var(--vh-accent-ink);
+}
+// Border utilities: the mint/sky/amber hairlines vanish against white.
+[data-theme="light"] .border-green-200{
+    border-color: rgba(13, 156, 111, var(--bs-border-opacity, 1)) !important;
+}
+[data-theme="light"] .border-blue-200{
+    border-color: rgba(10, 107, 189, var(--bs-border-opacity, 1)) !important;
+}
+[data-theme="light"] .border-orange-200{
+    border-color: rgba(191, 91, 0, var(--bs-border-opacity, 1)) !important;
+}
+[data-theme="light"] .border-red-200{
+    border-color: rgba(213, 32, 47, var(--bs-border-opacity, 1)) !important;
+}
+
+// ---------------------------------------------------------------------------
+// Cards & surfaces
+// ---------------------------------------------------------------------------
+// On the dark page a card separates by being lighter than its background. On a light
+// page there is no room above white, so cards separate with elevation instead.
+[data-theme="light"] .vh-card-dark{
+    background-color: #fff;
+    border-color: var(--vh-border);
+    box-shadow: 0 10px 28px rgba(23, 18, 58, 0.07);
+}
+[data-theme="light"] .vh-card-light{
+    box-shadow: 0 8px 22px rgba(23, 18, 58, 0.05);
+}
+[data-theme="light"] .light-box-wrapper:hover{
+    box-shadow: 0 12px 30px rgba(23, 18, 58, 0.12);
+}
+// A translucent field over a light page has no edge at all, so it goes solid white with
+// a firmer border.
+[data-theme="light"] .contact-form .form-control,
+[data-theme="light"] .contact-form .form-control:focus{
+    background-color: #fff;
+}
+[data-theme="light"] .contact-form .form-control{
+    border-color: rgba(var(--purple-200-rgb), 0.5);
+}
+// Scrollbar: white-on-near-white is invisible, so the thumb takes the chip colour.
+[data-theme="light"] .horizontal-scroll{
+    scrollbar-color: var(--purple-200) var(--purple-600);
+}
+[data-theme="light"] .horizontal-scroll::-webkit-scrollbar-track{
+    background-color: rgba(var(--purple-600-rgb), 0.5);
+}
+[data-theme="light"] .horizontal-scroll::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--purple-200-rgb), 0.7);
+}
+
+// ---------------------------------------------------------------------------
+// Decorative effects
+// ---------------------------------------------------------------------------
+// A starfield only makes sense against night. The layers it sits on carry their own
+// glow art, so removing it costs nothing.
+[data-theme="light"] .star-effect{
+    display: none;
+}
+// The blurred blobs and radial blooms were sized to glow *out* of a black page; at full
+// strength on white they read as smudges.
+[data-theme="light"] .blob{
+    opacity: 0.55;
+}
+[data-theme="light"] .vh-bg-purple-300-blur{
+    opacity: 0.45;
+}
+[data-theme="light"] #sp-main-body:before,
+[data-theme="light"] #sp-main-body:after{
+    opacity: 0.45;
+}
+
+// ---------------------------------------------------------------------------
+// Backdrop art
+// ---------------------------------------------------------------------------
+// Every `*-light.*` file below is GENERATED by tools/make-light-art.py — never hand-authored,
+// never hand-edited, and never replaced by a CSS filter (invert() turns this art yellow).
+// To add one: register the dark source in that script, run it, then point a rule here at
+// the result. See its docstring for what is deliberately NOT converted — the app
+// screenshots above all.
+[data-theme="light"] #bannerBgWrapper{
+    background-image: url("/assets/images/home/banner-bg-light.webp");
+}
+[data-theme="light"] #features{
+    background-image: url("/assets/images/home/features-bg-light.webp");
+}
+[data-theme="light"] #titleEffectWrapper{
+    background-image: url("/assets/images/home/steadfast-bg-light.webp");
+}
+[data-theme="light"] #options .row{
+    background-image: url("/assets/images/home/options-bg-light.webp");
+}
+[data-theme="light"] #platformsAndDownloadBg{
+    background-image: url("/assets/images/home/download-bg-light.webp");
+}
+[data-theme="light"] #managerFeaturesListBg{
+    background-image: url("/assets/images/general/manager-bg-light.webp");
+}
+[data-theme="light"] #rocketWrapper{
+    background-image: url("/assets/images/general/purple-hole-light.webp");
+}
+[data-theme="light"] #rocketWrapper:after{
+    background-image: url("/assets/images/general/purple-hole-overlap-light.webp");
+}
+[data-theme="light"] #downloadIconsWrapper > div{
+    background-image: url("/assets/images/general/purple-hexagon-light.svg");
+}
+// #appWrapper keeps its dark art on purpose: it is a phone running VpnHood! CONNECT, and
+// app screenshots must look the same in both themes. Left bare it would be a hard-edged
+// dark rectangle stranded on a white page, so the container is filled with the art's own
+// backdrop colour and rounded — the screenshot then reads as a deliberate dark showcase
+// band rather than a mistake, and not one pixel of the app UI changes.
+[data-theme="light"] #appWrapper{
+    background-color: #090620;
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(23, 18, 58, 0.16);
+    // The panel stays dark, so the labels overlaid on it keep the dark theme's ink
+    // instead of inheriting the page's (now dark-on-light) copy colour.
+    color: #fff;
+}
+
+// ---------------------------------------------------------------------------
+// Inline SVG icons drawn in white
+// ---------------------------------------------------------------------------
+// The pages carry inline icons with literal white fills/strokes. Recolouring them at the
+// source would flip them in dark mode too, so they are re-pointed here by attribute.
+// Excluded, in order:
+//   * `mask *` — the circle-flag icons use fill="#fff" for their mask geometry, where
+//     white means "show this pixel", not a colour;
+//   * anything inside a fill that stays dark or brand-coloured in light mode, where the
+//     icon must remain white.
+[data-theme="light"] :is(path, circle, rect, g, line, polyline, polygon)[fill="#fff"]:not(mask *),
+[data-theme="light"] :is(path, circle, rect, g, line, polyline, polygon)[fill="#ffffff"]:not(mask *),
+[data-theme="light"] :is(path, circle, rect, g, line, polyline, polygon)[fill="white"]:not(mask *){
+    fill: var(--vh-text);
+}
+[data-theme="light"] :is(path, circle, rect, g, line, polyline, polygon)[stroke="#fff"]:not(mask *),
+[data-theme="light"] :is(path, circle, rect, g, line, polyline, polygon)[stroke="#ffffff"]:not(mask *),
+[data-theme="light"] :is(path, circle, rect, g, line, polyline, polygon)[stroke="white"]:not(mask *){
+    stroke: var(--vh-text);
+}
+[data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon, .vh-bg-purple-300, .vh-bg-purple-400, #appWrapper) :is(path, circle, rect, g, line, polyline, polygon)[fill="#fff"],
+[data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon, .vh-bg-purple-300, .vh-bg-purple-400, #appWrapper) :is(path, circle, rect, g, line, polyline, polygon)[fill="white"]{
+    fill: #fff;
+}
+[data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon, .vh-bg-purple-300, .vh-bg-purple-400, #appWrapper) :is(path, circle, rect, g, line, polyline, polygon)[stroke="#fff"],
+[data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon, .vh-bg-purple-300, .vh-bg-purple-400, #appWrapper) :is(path, circle, rect, g, line, polyline, polygon)[stroke="white"]{
+    stroke: #fff;
+}
+
+// ---------------------------------------------------------------------------
+// Theme toggle
+// ---------------------------------------------------------------------------
+// The control offers the theme you are *not* in, so the icons swap with the theme.
+.vh-theme-toggle .vh-theme-icon-moon{
+    display: none;
+}
+[data-theme="light"] .vh-theme-toggle .vh-theme-icon-sun{
+    display: none;
+}
+[data-theme="light"] .vh-theme-toggle .vh-theme-icon-moon{
+    display: block;
+}

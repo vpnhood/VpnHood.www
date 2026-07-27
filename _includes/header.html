@@ -3,8 +3,24 @@
 {%- assign vh_page_lang = page.lang | default: 'en' -%}
 {%- assign vh_dir = site.data.languages[vh_page_lang].dir | default: 'ltr' -%}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}">
+<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark">
   <head>
+    <!-- Colour theme bootstrap. Dark is the default and is what the markup ships with,
+         so this only ever has to *upgrade* to light — and it does so before first paint,
+         which is why it is inline and blocking rather than in /assets/js/theme.js.
+         Preview either theme without touching the stored choice via ?vh_theme=light|dark. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("vh_theme");
+          var q = window.location.search;
+          if (q.indexOf("vh_theme=light") > -1) t = "light";
+          else if (q.indexOf("vh_theme=dark") > -1) t = "dark";
+          if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -90,6 +106,7 @@
     <link rel="icon" href="/assets/images/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- Kept in sync with the active theme by /assets/js/theme.js -->
     <meta name="theme-color" content="#122272" />
 
     <!-- Speed up Google Fonts + optional LCP image preload -->
@@ -153,6 +170,9 @@
     <!-- Framework JS: stock Bootstrap 5 bundle (Popper included). No jQuery. -->
     <script defer src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
     <script defer src="/assets/js/main.js"></script>
+    <!-- Colour-theme toggle + preference persistence. The pre-paint bootstrap at the top
+         of <head> already applied the stored theme; this only wires the controls. -->
+    <script defer src="/assets/js/theme.js"></script>
     <!-- Language preference / first-visit auto-switch (redirect targets come from the
          hreflang alternates above, so it is inert until translations exist) -->
     <script defer src="/assets/js/lang.js"></script>
@@ -175,7 +195,7 @@
       <div
         style="
           text-align: center;
-          color: white;
+          color: var(--vh-text);
           margin-top: 20px;
           position: absolute;
           left: 0;
@@ -576,6 +596,7 @@
                       >
                     </li>
                     {% include lang-selector.html %}
+                    {% include theme-toggle.html %}
                   </ul>
 
                   <a

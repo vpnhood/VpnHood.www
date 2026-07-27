@@ -1,5 +1,15 @@
 /*------------------------ Variables --------------------------*/
+// Two layers live here:
+//   1. the raw brand ramp (--purple-*, --green-*, …) — the DARK theme's values, and
+//   2. the semantic tokens (--vh-*) the rules actually consume.
+// The light theme (theme/_light.scss) re-points both: it inverts the *surface* end of
+// the ramp (600/700/710/800) so every "dark surface" rule keeps working untouched, and
+// re-points the semantic tokens for everything that can't just be inverted. Never write
+// a literal `white`/`#fff`/`rgba(255,255,255,…)` in a rule — reach for a token, or the
+// light theme has nothing to override.
 :root {
+    color-scheme: dark;
+
     --purple-90: #626d85;
     --purple-90-rgb: 98, 109, 133;
 
@@ -75,13 +85,53 @@
     --red-200: #ff4752;
     --red-200-rgb: 255, 71, 82;
 
-    --bs-body-bg: var(--purple-800);
+    /*----- Semantic tokens (see the note above) -----*/
+    // Surfaces
+    --vh-page-bg: var(--purple-800);
+    --vh-surface: rgba(var(--purple-600-rgb), 0.48);      // chips, pills, secondary buttons
+    --vh-surface-hover: rgba(var(--purple-600-rgb), 0.9);
+    --vh-surface-raised: var(--purple-710);               // mega panel, opaque cards
+    --vh-drawer-bg: var(--purple-700);                    // mobile off-canvas panel
+    --vh-header-bg: rgba(3, 0, 20, 0.08);
+    --vh-scrim: rgba(0, 0, 0, 0.7);                       // page dimmer behind the mega menu
+    --vh-nav-active-bg: linear-gradient(to bottom, var(--purple-400), var(--purple-700));
+    --vh-promote-bg: #fff;                                // countdown CTA, sits on --purple-500
+    // Lines
+    --vh-border: rgba(var(--purple-200-rgb), 0.48);
+    --vh-border-strong: rgba(var(--purple-200-rgb), 0.9);
+    --vh-hairline: rgba(255, 255, 255, 0.12);             // dividers inside the chrome
+    --vh-hairline-soft: rgba(255, 255, 255, 0.07);
+    --vh-divider-glint: rgba(255, 255, 255, 0.3);         // bright middle of a fading rule
+    // Ink
+    --vh-text: #fff;                                      // headings / high-emphasis text
+    --vh-text-rgb: 255, 255, 255;
+    --vh-text-muted: var(--purple-100);                   // body copy
+    --vh-text-dim: rgba(255, 255, 255, 0.6);              // resting nav links
+    --vh-text-soft: rgba(255, 255, 255, 0.8);             // off-canvas sub-items
+    --vh-on-accent: #fff;                                 // ink on a brand-purple fill
+    --vh-on-bright: var(--purple-700);                    // ink on a mint/white fill
+    // Accents used as TEXT (the raw ramp is tuned for fills on a dark page and needs
+    // darker counterparts on a light one)
+    --vh-accent-ink: var(--purple-300);
+    --vh-accent-ink-rgb: var(--purple-300-rgb);
+    --vh-green-ink: var(--green-200);
+    --vh-blue-ink: var(--blue-100);
+    --vh-heading-grad-top: #fff;                          // .vh-txt-grad-* start colour
+    // States
+    --vh-ok: var(--green-100);
+    --vh-danger: var(--red-200);
+    --vh-warn: var(--orange-200);
+    // Sticky first column of the /free-vpn/comparison table: must be opaque so the
+    // scrolled-under cells don't bleed through it.
+    --vh-table-sticky-bg: #150e34;
+
+    --bs-body-bg: var(--vh-page-bg);
     --bs-body-line-height: 1.9;
     --bs-link-color-rgb: var(--purple-300-rgb);
     --bs-link-hover-color-rgb: var(--purple-200-rgb);
 }
 body{
-    color: var(--purple-100);
+    color: var(--vh-text-muted);
 }
 /*------------------------------- Template override --------------------------*/
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
@@ -90,7 +140,7 @@ body{
 #sp-header{
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
-    background: rgba(3, 0, 20, .08);
+    background: var(--vh-header-bg);
 }
 /*----- Desktop top navigation (de-Helixed; Bootstrap-stack, CSS-hover mega-menu) -----*/
 .vh-navbar{
@@ -201,7 +251,7 @@ ul.vh-nav{
 }
 /*fade-over-content overlay — shown on hover via :has(), no JS*/
 #vhOverlay {
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--vh-scrim);
     inset: 0;
     opacity: 0;
     position: absolute;
@@ -217,7 +267,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     visibility: visible;
 }
 #sp-logo a{
-    color: white;
+    color: var(--vh-text);
 }
 .vh-mega-toggle{
     cursor: default;
@@ -225,7 +275,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 .vh-nav>.vh-nav-item>a,
 .vh-nav>.vh-nav-item>span {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--vh-text-dim);
     font-size: 14px;
     line-height:40px;
     margin: 0;
@@ -233,13 +283,13 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 }
 .vh-nav>.vh-nav-item>a:hover,
 .vh-nav>.vh-nav-item>span:hover {
-    color: rgba(255, 255, 255, 1);
+    color: var(--vh-text);
 }
 .vh-nav>.vh-nav-item.active>a,
 .vh-nav>.vh-nav-item.active>span{
-    color: white;
+    color: var(--vh-on-accent);
     font-weight: 500;
-    background: linear-gradient(to bottom, var(--purple-400), var(--purple-700));
+    background: var(--vh-nav-active-bg);
     border-radius: 50px;
 }
 .vh-nav>.vh-nav-item.active .vh-mega-panel a[aria-current]{
@@ -289,7 +339,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     margin-bottom: 0;
 }
 .vh-mega-panel a{
-    color: white;
+    color: var(--vh-text);
 }
 .vh-mega-panel a:hover{
     color: var(--purple-300);
@@ -298,7 +348,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     font-size: 14px;
 }
 #topRightMenu .my-account{
-    color: white;
+    color: var(--vh-text);
 }
 #topRightMenu .my-account:hover{
     color: var(--purple-300);
@@ -308,7 +358,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    color: white;
+    color: var(--vh-text);
 }
 .vh-lang-menu .dropdown-toggle:hover{
     color: var(--purple-300);
@@ -320,15 +370,41 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 // The off-canvas gets the same dropdown as the header; only the separator above it
 // (the nav rows it follows already carry hairlines) is mobile-specific.
 .vh-lang-mobile{
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid var(--vh-hairline);
+}
+// ---- Theme toggle (_includes/theme-toggle.html; sits beside the language selector) ----
+// Sized to match the language selector's optical weight rather than to be a button:
+// it is a quiet, always-available control, not a call to action.
+.vh-theme-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid var(--vh-border);
+    border-radius: 50%;
+    background-color: var(--vh-surface);
+    color: var(--vh-text);
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.vh-theme-toggle:hover,
+.vh-theme-toggle:focus-visible{
+    color: var(--vh-accent-ink);
+    background-color: var(--vh-surface-hover);
+    border-color: var(--vh-border-strong);
+}
+.vh-theme-menu{
+    display: flex;
+    align-items: center;
 }
 // ---- Mobile off-canvas menu (Bootstrap .offcanvas; replaces the Helix off-canvas) ----
 .vh-offcanvas{
     // Small phones: full-width drawer covers the header burger, so the in-drawer
     // close (X) is the only close control.
     width: 100%;
-    background-color: var(--purple-700);
-    color: #fff;
+    background-color: var(--vh-drawer-bg);
+    color: var(--vh-text);
 }
 // From ~400px up the drawer is a fixed 320px, leaving the header burger clear on the
 // right — it serves as the close (X), so the in-drawer close is hidden to avoid showing
@@ -350,9 +426,9 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 .vh-offcanvas-nav .nav-link{
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--vh-text);
     padding: 0.7rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid var(--vh-hairline-soft);
 }
 .vh-offcanvas-nav .nav-link:hover,
 .vh-offcanvas-nav .nav-link:focus{
@@ -388,7 +464,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
     display: block;
     padding: 0.5rem 0;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--vh-text-soft);
 }
 .vh-offcanvas-nav .vh-submenu li a:hover,
 .vh-offcanvas-nav .vh-submenu li a:focus{
@@ -480,7 +556,7 @@ iconify-icon {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 0;
-    background-image: linear-gradient(to bottom, white 40%, var(--purple-400) 100%)
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 40%, var(--purple-400) 100%)
 }
 .section-title{
     font-size: 40px;
@@ -577,7 +653,7 @@ iconify-icon {
     border-style: none;
     padding: 10px 30px;
     border-radius: 50px;
-    color: white !important;
+    color: var(--vh-on-accent) !important;
     transition: 0.3s cubic-bezier(0.68, 0.01, 0.58, 0.75) !important;
     background-image: linear-gradient(to right, var(--purple-500) 0%, var(--purple-300) 51%, var(--purple-500) 100%);
     background-size: 200%, 1%;
@@ -595,14 +671,14 @@ iconify-icon {
 .vh-btn-secondary{
     padding: 10px 30px;
     border-radius: 50px;
-    color: white !important;
-    background-color: rgba(var(--purple-600-rgb), 0.48);
-    border: 1px solid rgba(var(--purple-200-rgb), 0.48);
+    color: var(--vh-text) !important;
+    background-color: var(--vh-surface);
+    border: 1px solid var(--vh-border);
     transition: all 0.3s ease !important;
 }
 .vh-btn-secondary:hover{
-    background-color: rgba(var(--purple-600-rgb), .9);
-    border-color: rgba(var(--purple-200-rgb), 0.9);
+    background-color: var(--vh-surface-hover);
+    border-color: var(--vh-border-strong);
 }
 
 .vh-download-btn{
@@ -611,7 +687,7 @@ iconify-icon {
     border-radius: 50px;
     font-weight: 600;
     background: var(--green-200);
-    color: var(--purple-700);
+    color: var(--vh-on-bright);
     transition: all 0.3s ease !important;
 }
 .vh-download-btn:hover{
@@ -654,14 +730,14 @@ iconify-icon {
     color: rgba(var(--blue-100-rgb), var(--bs-text-opacity));
 }
 .vh-txt-grad-purple-300{
-    background-image: linear-gradient(to bottom, white 30%, var(--purple-300) 80%);
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 30%, var(--purple-300) 80%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     height: 49px;
 }
 .vh-txt-grad-purple-400{
-    background-image: linear-gradient(to bottom, white 33%, var(--purple-400) 95%);
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 33%, var(--purple-400) 95%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -794,7 +870,7 @@ iconify-icon {
 }
 /* Handle on hover */
 .horizontal-scroll::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255,255,255, .5);
+    background-color: rgba(var(--vh-text-rgb), .5);
 }
 
 .horizontal-scroll.scroll-on-start {
@@ -1205,7 +1281,7 @@ iconify-icon {
     padding: 0;
 }
 #barTextWrapper{
-    color: white;
+    color: var(--vh-text);
     border-radius: 10px;
     border: 1px solid var(--purple-400);
     padding: 13px 20px;
@@ -1252,7 +1328,7 @@ h1, .h1, h2, .h2{
 .accordion{
     --bs-accordion-bg: transparent;
     --bs-accordion-border-width: 0;
-    --bs-accordion-btn-color: white;
+    --bs-accordion-btn-color: var(--vh-text);
     --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' width='10' height='10' %3e%3cpath d='M8.75 5H5M5 5H1.25M5 5V1.25M5 5V8.75' stroke='white' stroke-width='1.25' stroke-linecap='round' /%3e%3c/svg%3e");
     --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2' fill='none' width='10' height='2' %3e%3cpath d='M8.75 1H1.25' stroke='white' stroke-width='1.25' stroke-linecap='round' /%3e%3c/svg%3e");
     --bs-accordion-active-color: var(--bs-accordion-btn-color);
@@ -1293,7 +1369,7 @@ h1, .h1, h2, .h2{
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(45deg, var(--purple-800) 0%, rgba(255,255,255, .3) 50%, var(--purple-800) 100%);
+    background: linear-gradient(45deg, var(--vh-page-bg) 0%, var(--vh-divider-glint) 50%, var(--vh-page-bg) 100%);
 }
 /*-------------- Footer --------------*/
 #sp-footer{
@@ -1311,7 +1387,7 @@ h1, .h1, h2, .h2{
 #sp-footer5,
 #sp-copy-right-menu{
     --bs-link-color-rgb: var(--purple-100-rgb);
-    --bs-link-hover-color-rgb: 255,255,255;
+    --bs-link-hover-color-rgb: var(--vh-text-rgb);
 }
 #sp-copy-right-menu .menu-separator{
     line-height: 14px;
@@ -1320,7 +1396,7 @@ h1, .h1, h2, .h2{
     // Footer nav group labels are navigation, not page-outline content, so they are
     // plain <div>s (not headings) — keeps them out of every page's heading outline and
     // avoids diluting content h2s. These rules reproduce the previous heading styling.
-    color: white;
+    color: var(--vh-text);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.2;
@@ -1344,10 +1420,10 @@ h1, .h1, h2, .h2{
     border-style: none;
     padding: 4px 16px;
     border-radius: 50px;
-    color: var(--purple-700);
+    color: var(--vh-on-bright);
     transition: 0.3s
     cubic-bezier(0.68, 0.01, 0.58, 0.75) !important;
-    background-color: white;
+    background-color: var(--vh-promote-bg);
 }
 #promoteButton:hover{
     background-color: var(--green-200);

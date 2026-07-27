@@ -5,3 +5,7 @@
 @use 'theme/default';
 @use 'pages/china-bar';
 @use 'pages/legal';
+// Last: the whole light theme, so its [data-theme="light"] overrides win over both the
+// partials above and the page stylesheets (home.css / custom.css / comparison.css load
+// earlier in the head). Dark is untouched by it.
+@use 'theme/light';

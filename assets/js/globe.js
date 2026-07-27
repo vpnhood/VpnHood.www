@@ -27,10 +27,10 @@ var props = {
   dotsAmount: 20, // Amount of dots to generate and animate randomly across the lines
   startingCountry: 'hongkong', // The key of the country to rotate the camera to during the introduction animation (and which country to start the cycle at)
   colours: {
-    // Cache the colours
-    globeDots: 'rgb(255, 255, 255)', // No need to use the Three constructor as this value is used for the HTML canvas drawing 'fillStyle' property
-    lines: new THREE.Color('#18FFFF'),
-    lineDots: new THREE.Color('#18FFFF')
+    // Filled in by applyThemeColours() before the scene is built — see themeColours.
+    globeDots: null, // No need to use the Three constructor as this value is used for the HTML canvas drawing 'fillStyle' property
+    lines: null,
+    lineDots: null
   },
   alphas: {
     // Transparent values of materials
@@ -84,7 +84,38 @@ var animations = {
 // Boolean to enable or disable rendering when window is in or out of focus
 var isHidden = false;
 
+/* THEME */
 
+// The globe is drawn straight over the page background, so its dots have to flip with the
+// colour theme or they disappear: white dots vanish on a light page, and the cyan trail
+// dots drop to about 1.5:1 against it. Read once before the scene is built, then updated
+// live from the `vhThemeChange` event that /assets/js/theme.js dispatches.
+var themeColours = {
+  dark: { globeDots: 'rgb(255, 255, 255)', lineDots: '#18FFFF' },
+  light: { globeDots: 'rgb(72, 60, 132)', lineDots: '#0f8f9c' }
+};
+
+// Kept so the trail-dot colour can be changed after the material is created.
+var lineDotMaterial = null;
+
+function applyThemeColours() {
+  var mode = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  var colours = themeColours[mode];
+  props.colours.globeDots = colours.globeDots;
+  props.colours.lineDots = new THREE.Color(colours.lineDots);
+  props.colours.lines = props.colours.lineDots;
+}
+
+applyThemeColours();
+
+document.addEventListener('vhThemeChange', function () {
+  applyThemeColours();
+  if (groups.globeDots && groups.globeDots.material.map) {
+    paintGlobeDot(groups.globeDots.material.map.image);
+    groups.globeDots.material.map.needsUpdate = true;
+  }
+  if (lineDotMaterial) lineDotMaterial.color.set(props.colours.lineDots);
+});
 
 /* SETUP */
 
@@ -374,21 +405,29 @@ function addGlobe() {
 
 }
 
+// Draws the single dot the globe's point cloud is textured with. Split out of
+// addGlobeDots() so a theme change can repaint the existing texture in place.
+function paintGlobeDot(textureCanvas) {
+
+  var halfSize = textureCanvas.width / 2;
+  var canvasContext = textureCanvas.getContext('2d');
+  canvasContext.clearRect(0, 0, textureCanvas.width, textureCanvas.height);
+  canvasContext.beginPath();
+  canvasContext.arc(halfSize, halfSize, halfSize, 0, 2 * Math.PI);
+  canvasContext.fillStyle = props.colours.globeDots;
+  canvasContext.fill();
+
+}
+
 function addGlobeDots() {
 
   var geometry = new THREE.Geometry();
 
   // Make circle
-  var canvasSize = 16;
-  var halfSize = canvasSize / 2;
   var textureCanvas = document.createElement('canvas');
-  textureCanvas.width = canvasSize;
-  textureCanvas.height = canvasSize;
-  var canvasContext = textureCanvas.getContext('2d');
-  canvasContext.beginPath();
-  canvasContext.arc(halfSize, halfSize, halfSize, 0, 2 * Math.PI);
-  canvasContext.fillStyle = props.colours.globeDots;
-  canvasContext.fill();
+  textureCanvas.width = 16;
+  textureCanvas.height = 16;
+  paintGlobeDot(textureCanvas);
 
   // Make texture
   var texture = new THREE.Texture(textureCanvas);
@@ -448,6 +487,7 @@ function addLineDots() {
   var material = new THREE.MeshBasicMaterial({
     color: props.colours.lineDots
   });
+  lineDotMaterial = material; // so a theme change can re-tint the trail dots
 
   // Returns a sphere geometry positioned at coordinates
   var returnLineDot = function() {

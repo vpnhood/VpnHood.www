@@ -51,7 +51,7 @@
 			<div class="offcanvas-body">
 				<div class="d-grid gap-2 mb-4">
 					<a href="{{ vh_base }}/free-vpn/go-premium" class="vh-btn vh-btn-primary d-flex align-items-center justify-content-center gap-2 opacity-100"><img src="/assets/images/general/go-premium-icon.svg" alt="" aria-hidden="true" width="24" height="24" loading="lazy"><span class="image-title">{{ tc.go_premium }}</span></a>
-					<a href="https://my.vpnhood.com/login" class="vh-btn vh-btn-secondary d-flex align-items-center justify-content-center gap-2 opacity-100"><img src="/assets/images/general/login-icon.svg" alt="" aria-hidden="true" width="24" height="24" loading="lazy"><span class="image-title">{{ tc.log_in }}</span></a>
+					<a href="https://my.vpnhood.com/login" class="vh-btn vh-btn-secondary d-flex align-items-center justify-content-center gap-2 opacity-100"><img src="/assets/images/general/login-icon.svg" data-vh-light-src="/assets/images/general/login-icon-light.svg" alt="" aria-hidden="true" width="24" height="24" loading="lazy"><span class="image-title">{{ tc.log_in }}</span></a>
 				</div>
 				<ul class="vh-offcanvas-nav list-unstyled mb-0">
 					<li><a class="nav-link" href="{{ vh_base }}/">{{ tc.nav_home }}</a></li>
@@ -90,7 +90,10 @@
 						</ul>
 					</li>
 				</ul>
-				{% include lang-selector.html id="vhLangToggleMobile" align="start" wrapper_class="vh-lang-mobile list-unstyled mt-4 pt-4 mb-0" %}
+				<ul class="vh-lang-mobile list-unstyled d-flex align-items-center justify-content-between gap-3 mt-4 pt-4 mb-0">
+					{% include lang-selector.html id="vhLangToggleMobile" align="start" %}
+					{% include theme-toggle.html id="vhThemeToggleMobile" %}
+				</ul>
 			</div>
 		</div>
 

@@ -22,7 +22,7 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
 - The home page sets `globe: true` (loads the three.js server globe — home only) — see footer.
 
 ### Shared header/footer (important)
-`header.html` renders the `<head>`, the framework JS, and the sticky nav, and **intentionally leaves `.body-wrapper` + `.body-innerwrapper` (and `<body>`/`<html>`) OPEN**; `footer.html` closes them (plus the off-canvas menu and page scripts). **Do NOT auto-format/"balance" these two includes** — an HTML formatter that closes the wrappers early breaks the page wrapper (the home globe stops being clipped by `.body-innerwrapper{overflow-x:hidden}` and the mobile layout overflows). `.prettierignore` guards them. `header.html` div balance must be net **+2** opens.
+`header.html` renders the `<head>`, the framework JS, and the sticky nav, and **intentionally leaves `.body-wrapper` + `.body-innerwrapper` (and `<body>`/`<html>`) OPEN**; `footer.html` closes them (plus the off-canvas menu and page scripts). **Do NOT auto-format/"balance" these two includes** — an HTML formatter that closes the wrappers early breaks the page wrapper (the home globe stops being clipped by `.body-innerwrapper{overflow-x:hidden}` and the mobile layout overflows). `.prettierignore` guards them. `header.html` div balance must be net **+2** opens. It also opens `<html>` with `data-theme="dark"` and runs the pre-paint theme bootstrap — see Colour themes.
 
 ## SEO & semantic HTML
 **All SEO + semantic-HTML conventions live in [.docs/seo-and-semantic-html.md](.docs/seo-and-semantic-html.md) — read it before editing pages or the shared `header.html`/`footer.html`/`faq.html`.** It is a **shared standard kept byte-identical with the `paymenthood-www` repo** (edit both copies together). It covers seo-tag/JSON-LD/sitemap/robots & site metadata, generated structured data (FAQPage/SoftwareApplication/BreadcrumbList from includes), favicons/app-icons/manifest, the heading outline (one H1, no skipped levels), title-tag branding (every page title must contain "VpnHood!" — titles live in the `meta_title` i18n keys, legal pages in `title:` front matter; this site uses `{% seo title=false %}`; see the doc's §3 table), image & inline-SVG a11y (decorative `alt=""`/`aria-hidden` vs descriptive; no redundant alt), `<ul><li>` link groups, and announcing `target="_blank"` new-tab links. These are binding for any markup change.
@@ -35,16 +35,63 @@ shared header/footer. The folder path **is** the URL (e.g. `free-vpn/download/in
   - **Helix theme → still a static vendored CSS file:** `assets/css/helix-theme.css` (the Helix Ultimate theme — `system-j4` + the Helix-generated `template.css` + the active color preset; `url()` paths repointed to `/assets/images/`). Kept as static CSS (not folded into the Sass bundle) because it contains stray non-CSS tokens (e.g. `--header_height: $header_height`) that would break Sass parsing. Vendor such prebuilt theme CSS as-is.
   - Loaded in that order — Bootstrap first, Helix on top.
 - **VpnHood's own CSS → SCSS in `_sass/`, compiled by Jekyll** (entry files in `assets/css/*.scss`, two `---` lines required):
-  - `style.scss` → `_sass/theme/_default.scss` + `_sass/pages/_china-bar.scss` + `_sass/pages/_legal.scss`. Loaded on every page, last in the cascade.
+  - `style.scss` → `_sass/theme/_default.scss` + `_sass/pages/_china-bar.scss` + `_sass/pages/_legal.scss` + `_sass/theme/_light.scss` (**last** — see Colour themes). Loaded on every page, last in the cascade.
   - `home.scss` → `_sass/pages/_home.scss`. Home only.
   - `custom.scss` → `_sass/pages/_custom.scss`. Secondary/content pages.
+  - `comparison.scss` → `_sass/pages/_comparison.scss`. `/free-vpn/comparison/` only.
 - Head load order: `bootstrap.css` (compiled from Sass) → `helix-theme.css` → Poppins (Google Fonts) → page `extra_css` → `style.css` → AOS.
 - Use palette/utility classes already defined in the theme (`vh-txt-grad-purple-400`, `vh-btn vh-btn-primary`, `section-title`, `section-space`, Bootstrap `row`/`col-*`/spacing). New CSS is a last resort; add it to the relevant `_sass/pages/` partial, not inline.
+- **Never write a literal `white` / `#fff` / `rgba(255,255,255,…)` (or any raw colour) in our SCSS** — use a `--vh-*` token or the brand ramp, or the light theme has nothing to re-point. See Colour themes.
 - Never edit anything under `_site/` (build output). SCSS style: `//` comments, kebab-case class names.
+
+## Colour themes (dark is the default; light is opt-in)
+Both themes ship on every page; the active one is `<html data-theme="dark|light">`.
+
+- **How it's applied.** `header.html` renders `data-theme="dark"` and a small **inline, blocking** script at the very top of `<head>` upgrades it to `light` when `localStorage vh_theme` says so — before first paint, so a light visitor never flashes dark. `assets/js/theme.js` (deferred) only wires the toggles, persists the choice, swaps `<meta name="theme-color">` and the decorative image sources, and dispatches a `vhThemeChange` event. Preview either theme with **`?vh_theme=light|dark`** (does not overwrite the stored choice) — same idea as `?vh_lang=fa` and the China bar's `?geo=CN`.
+- **Toggle — `_includes/theme-toggle.html`.** A `<button>` rendered twice, exactly like the language selector: `header.html` drops the bare `<li>` into `#topRightMenu`, `footer.html` puts a second one in the mobile off-canvas — the second caller **must** pass its own `id`. Its accessible name states the action ("Switch to light theme") and `theme.js` swaps it with the theme. Strings live in `chrome.json` (`theme_switch_to_light` / `theme_switch_to_dark`) but fall back to English **per key**, so a not-yet-translated `chrome.json` can't leave the button unnamed.
+- **Two layers, and only two.** `_sass/theme/_default.scss` holds the raw brand ramp (the **dark** values) plus the semantic `--vh-*` tokens every rule consumes. `_sass/theme/_light.scss` holds the **entire** light theme: it re-points the surface end of the ramp (`--purple-600/700/710/800`, inverted) and the ink end (`--purple-90/100/120/130/200`, darkened) so most rules work unedited, then overrides what inversion can't express. **All light-mode rules live in that one file** — page partials stay single-theme, so there is one place to look when something reads wrong in light. It is imported last, so it beats the page stylesheets without needing extra specificity.
+- **Fills vs. text.** The brand purple/mint/sky are tuned for fills on a dark page and land near 3:1 on white. Fills keep the raw ramp; text uses `--vh-accent-ink` / `--vh-green-ink` / `--vh-blue-ink`, which clear 4.5:1. `--vh-on-accent` is ink on a brand-purple fill (always white); `--vh-on-bright` is ink on a mint/white fill (flips).
+- **The globe** (`assets/js/globe.js`) picks its dot colours from `data-theme` and re-tints on `vhThemeChange` — white dots and cyan trails vanish on a light page.
+- **Verify both themes after any markup/CSS change.** The dark theme must stay pixel-identical: build, then screenshot each page in both themes and diff dark against the previous build (the only expected delta is the header band that holds the toggle).
+
+### Light-mode art — always via `tools/make-light-art.py`
+The backdrops are light-on-dark glows authored for the dark theme, so each one has a
+generated `<name>-light.<ext>` sibling. **That script is the only way light art is
+produced. Do not hand-author a light variant, hand-edit a generated `*-light.*` file, or
+invent a per-image CSS filter — those are all output, and the next run overwrites them.**
+
+To give a dark image a light counterpart:
+
+1. **Register the source** in `tools/make-light-art.py` — `RASTERS` for bitmaps (value = a
+   blur radius applied to the *source*, which kills the compression mottling that only
+   becomes visible once lightness is flipped), or `SVGS` for vectors (value = an explicit
+   `{dark colour: light colour}` map; vector art is hand-authored, so guessing is worse
+   than naming the swaps).
+2. **Run `python tools/make-light-art.py`** (needs Pillow + NumPy). `--check` reports
+   missing or stale output without writing anything — use it to confirm the tree is in
+   sync after changing a dark original.
+3. **Reference the generated file**: art referenced from CSS gets a `background-image`
+   override in `_sass/theme/_light.scss`; an `<img>` gets `data-vh-light-src="…-light.…"`
+   and `theme.js` swaps `src` on theme change.
+
+Why a script and not a CSS filter: the art is dark indigo, and `invert()` turns that pale
+yellow. The transform inverts *lightness* in HSL while keeping hue and saturation, then
+cross-fades the flat field into the light page background (`PAGE_BG`, which must stay in
+sync with `--purple-800` in `_sass/theme/_light.scss`) so a full-bleed backdrop has no
+seam. CSS can't express that.
+
+**Never convert anything depicting the real app UI.** The CONNECT screenshots, the phone
+mockup, and `vpnhood-connect/download-pending-bg.webp` (which looks like a backdrop but is
+a phone running the app) must render identically in both themes — `#appWrapper` becomes a
+dark showcase panel on a light page instead. Also skipped, deliberately: brand logos, the
+flag/brand marks, and art that already reads on white (the hero glows, the resilient
+underline, the guarantee ring, the rocket, the `light-bg-*` blurs, the open-source swirl).
+The script's docstring carries the same list — keep the two in agreement.
 
 ## Assets
 Everything lives under `/assets` (`assets/css`, `assets/js`, `assets/images`). There are no legacy CMS `/templates`, `/media`, `/plugins` folders.
-- JS: the only vendored framework JS is the stock Bootstrap 5 bundle (`vendor/bootstrap.bundle.min.js`, Popper included), loaded `defer` in the `<head>`. **No jQuery.** VpnHood's own scripts in `assets/js/` are plain vanilla JS: `main.js` (preloader→`vhPlayAnimate`, sticky header, scroll-to-top, drawer↔burger sync), `globe.js`, `ThreeOrbitControls.js`, `vh-general.js`, `china-bar.js`, `lang.js` (language preference + auto-switch — see Translations).
+- JS: the only vendored framework JS is the stock Bootstrap 5 bundle (`vendor/bootstrap.bundle.min.js`, Popper included), loaded `defer` in the `<head>`. **No jQuery.** VpnHood's own scripts in `assets/js/` are plain vanilla JS: `main.js` (preloader→`vhPlayAnimate`, sticky header, scroll-to-top, drawer↔burger sync), `globe.js`, `ThreeOrbitControls.js`, `vh-general.js`, `china-bar.js`, `lang.js` (language preference + auto-switch — see Translations), `theme.js` (colour theme — see Colour themes).
+- Images: every dark backdrop has a generated `<name>-light.<ext>` sibling for the light theme — produced by `tools/make-light-art.py`, never hand-edited. See Colour themes.
 - **Self-host third-party assets — do NOT hot-link public CDNs.** We target China (see the China promo bar), and the **Great Firewall blocks/throttles `cdnjs.cloudflare.com`, `unpkg.com`, and all Google hosts (`fonts.googleapis.com`/`fonts.gstatic.com`, `googletagmanager.com`)** — a CDN asset that silently fails there breaks the page for those users. So vendor external libs into `assets/js/vendor/` (or `assets/css`) and reference them locally. three.js (r87) is vendored at `assets/js/vendor/three.min.js` for exactly this reason. **Known still-external (move them local when touched):** AOS JS/CSS (`unpkg.com/aos@2.3.1`) and the Poppins web font (Google Fonts) — Poppins already uses `display=swap` + non-blocking load so it degrades to the system font in CN, but self-hosting is better. GTM is analytics and degrades gracefully, so it can stay remote.
 
 ## Components & Includes
@@ -52,6 +99,7 @@ Everything lives under `/assets` (`assets/css`, `assets/js`, `assets/images`). T
 - **Compare table — `_includes/compare-table.html`.** The Free-vs-Premium feature table, shared by `/free-vpn/free-vs-premium/` and `/free-vpn/go-premium/` (params `heading`, `heading_class`); strings from `_data/i18n/<lang>/free_vpn_free_vs_premium.json`. Never duplicate the table markup in pages.
 - **Typewriter text — `_includes/multi-text-writer.html`.** The self-typing text loop (currently the Premium card on `/free-vpn/`). Pass `keys="a,b,c"` — comma-separated key names from the page's i18n data file, typed in that order; optional `class`. Renders the animated span plus a hidden phrase list that `vh-general.js` reads, so the copy is translatable and empty/missing keys are skipped. **Never hardcode typed phrases in JS.**
 - **Legal pages — `_includes/legal-page.html` + `_includes/legals/*.md`.** See below.
+- **Theme toggle — `_includes/theme-toggle.html` + `assets/js/theme.js`.** See Colour themes.
 - **Language selector — `_includes/lang-selector.html` + `_data/languages.yml` + `assets/js/lang.js`.** Renders **nothing until a second language exists**: languages are discovered from `site.data.i18n` folder keys (no registry — a language appears when vhtranslator drops its `_data/i18n/<code>/` folder); `_data/languages.yml` only maps codes to native display names. Used twice, and it is the **same Bootstrap dropdown** both times — `header.html` drops the bare `<li>` into the desktop `#topRightMenu` (already a `<ul>`), `footer.html` renders it in the mobile offcanvas by passing `wrapper_class` (which wraps it in its own `<ul>`) plus `align="start"`. The second caller **must** pass its own `id`: both instances are in the DOM of every page, so a shared toggle id would duplicate and break `aria-labelledby`. Each entry links to the current page's counterpart when it exists (checked against `site.pages`), else that language's home. `lang.js` persists clicks in `localStorage vh_lang` and, **on English pages only** (crawler-safe), redirects a stored/browser-preferred language to its translation using the page's own hreflang alternates (never 404s). Preview with `?vh_lang=fa`.
 - **China promo bar — `assets/js/china-bar.js`.** See below.
 - `header.html` / `footer.html` are shared by every page — edits there are global; make them deliberate.
@@ -89,6 +137,8 @@ On the original server-rendered site a `#chinaBar` was emitted server-side only 
 - **Never auto-format `_includes/header.html` or `_includes/footer.html`** — they share intentionally-unbalanced tags (see Page Anatomy). Covered by `.prettierignore`.
 - New page copy goes into `_data/i18n/en/<page>.json` — hardcoding text in a page body reintroduces untranslatable strings; the i18n extraction was verified by whitespace-normalized diffs of the built `_site` pages (keep that technique for future refactors).
 - **Menus** — the top nav lives in `header.html`/`footer.html` and is styled by the `vh-*` rules in `_sass/theme/_default.scss`. The **desktop mega-menu** opens on **hover via CSS** (`.vh-mega-menu:hover`), with the `#vhOverlay` blur driven by `body:has(.vh-mega-menu:hover)` — no JS. The **mobile menu** is a Bootstrap **Offcanvas** (`#mobileMenu`) with **Collapse** submenus (`data-bs-*`); `main.js` mirrors its open state onto the header burger (hamburger↔X) and lifts the header above the backdrop. The **FAQ accordion** is the other Bootstrap-JS feature (Collapse).
+- The theme bootstrap at the top of `header.html` **must stay inline and blocking** — moving it into `theme.js` (deferred) would make every light-theme page flash dark before first paint.
+- Inline SVGs drawn with a literal white fill/stroke are re-pointed in light mode by attribute selector in `_sass/theme/_light.scss`. Two carve-outs are load-bearing there: the circle-flag icons use `fill="#fff"` for `<mask>` geometry (white = "show this pixel", not a colour), and icons inside a fill that stays dark/brand-coloured must remain white. Adding a white icon on a new kind of background means checking both lists.
 - `/cdn-cgi/trace` is a Cloudflare-only endpoint (not Jekyll/GitHub Pages) — the China bar and any geo logic only work in production behind Cloudflare.
 - Local builds render absolute URLs as `http://localhost:4000`; production uses `site.url`. Don't "fix" localhost URLs seen in a local `_site`.
 - `.legacy_joomla/` holds the pre-migration Joomla/Helix old-site source (theme + original page HTML, recovered from early git commits — see memory) kept for reference — excluded from the build and gitignored; safe to delete.
