@@ -23,7 +23,6 @@
   "manager_li_monitor": "Watch what is happening live: who is connected, how much traffic, which countries.",
   "manager_li_access": "Set what each plan allows, then issue access keys against it, with device, traffic, and speed limits.",
   "manager_li_api": "Drive all of it from the same REST API the panel itself uses.",
-  "manager_li_free": "Free for up to 5 servers, with an Unlimited plan when you outgrow it.",
   "learn_more": "Learn more",
   "client_title": "VpnHood! CLIENT",
   "client_desc": "VpnHood! CLIENT is the app your users install, on Android, Android TV, Windows, and Linux. Key features include:",
