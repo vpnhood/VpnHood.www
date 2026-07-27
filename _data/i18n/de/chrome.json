@@ -65,5 +65,7 @@
   "oc_close": "Menü schließen",
   "oc_site_menu": "Website-Menü",
   "oc_features": "Funktionen",
-  "lang_change": "Sprache ändern"
+  "lang_change": "Sprache ändern",
+  "theme_switch_to_light": "Zum hellen Modus wechseln",
+  "theme_switch_to_dark": "Zum dunklen Modus wechseln"
 }

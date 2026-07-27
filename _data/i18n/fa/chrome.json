@@ -65,5 +65,7 @@
   "oc_close": "بستن منو",
   "oc_site_menu": "منوی سایت",
   "oc_features": "لیست ویژگی‌ها",
-  "lang_change": "تغییر زبان"
+  "lang_change": "تغییر زبان",
+  "theme_switch_to_light": "تغییر به حالت روشن",
+  "theme_switch_to_dark": "تغییر به حالت تاریک"
 }

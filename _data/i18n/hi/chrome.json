@@ -65,5 +65,7 @@
   "oc_close": "मेन्यू बंद करें",
   "oc_site_menu": "साइट मेन्यू",
   "oc_features": "सुविधाओं की सूची",
-  "lang_change": "भाषा बदलें"
+  "lang_change": "भाषा बदलें",
+  "theme_switch_to_light": "लाइट थीम पर स्विच करें",
+  "theme_switch_to_dark": "डार्क थीम पर स्विच करें"
 }

@@ -65,5 +65,7 @@
   "oc_close": "Закрыть меню",
   "oc_site_menu": "Меню сайта",
   "oc_features": "Список функций",
-  "lang_change": "Сменить язык"
+  "lang_change": "Сменить язык",
+  "theme_switch_to_light": "Включить светлую тему",
+  "theme_switch_to_dark": "Включить темную тему"
 }
