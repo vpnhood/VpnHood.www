@@ -353,15 +353,50 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 #topRightMenu .my-account:hover{
     color: var(--purple-300);
 }
-// ---- Language selector (_includes/lang-selector.html; hidden until a 2nd language exists) ----
-.vh-lang-menu .dropdown-toggle{
+// ---- Language selector + theme toggle (_includes/lang-selector.html, theme-toggle.html;
+//      the selector is hidden until a 2nd language exists) ----
+// The two sit side by side at the end of #topRightMenu (and again in the mobile
+// off-canvas), so they share one box: same height, same hairline + surface, same hover.
+// Keep the shared block shared — sizing only one of them is what makes the pair read as
+// mismatched. They are deliberately quieter than the Go Premium button beside them:
+// always-available controls, not calls to action.
+.vh-lang-menu .dropdown-toggle,
+.vh-theme-toggle{
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: center;
+    height: 34px;
+    border: 1px solid var(--vh-border);
+    border-radius: 50px;
+    background-color: var(--vh-surface);
     color: var(--vh-text);
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
-.vh-lang-menu .dropdown-toggle:hover{
-    color: var(--purple-300);
+// The selector is a pill (globe + code + caret); the toggle is the same box squared off
+// into a circle.
+.vh-lang-menu .dropdown-toggle{
+    gap: 0.4rem;
+    padding: 0 0.75rem;
+}
+.vh-theme-toggle{
+    width: 34px;
+    padding: 0;
+    border-radius: 50%;
+}
+.vh-lang-menu .dropdown-toggle:hover,
+.vh-lang-menu .dropdown-toggle:focus-visible,
+.vh-theme-toggle:hover,
+.vh-theme-toggle:focus-visible{
+    color: var(--vh-accent-ink);
+    background-color: var(--vh-surface-hover);
+    border-color: var(--vh-border-strong);
+}
+// Both <li>s are flex boxes so the control centres in the 14px/1.9 line box it inherits
+// from #topRightMenu instead of sitting on its baseline.
+.vh-lang-menu,
+.vh-theme-menu{
+    display: flex;
+    align-items: center;
 }
 .vh-lang-menu .dropdown-menu{
     min-width: 9rem;
@@ -371,32 +406,6 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 // (the nav rows it follows already carry hairlines) is mobile-specific.
 .vh-lang-mobile{
     border-top: 1px solid var(--vh-hairline);
-}
-// ---- Theme toggle (_includes/theme-toggle.html; sits beside the language selector) ----
-// Sized to match the language selector's optical weight rather than to be a button:
-// it is a quiet, always-available control, not a call to action.
-.vh-theme-toggle{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    padding: 0;
-    border: 1px solid var(--vh-border);
-    border-radius: 50%;
-    background-color: var(--vh-surface);
-    color: var(--vh-text);
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-.vh-theme-toggle:hover,
-.vh-theme-toggle:focus-visible{
-    color: var(--vh-accent-ink);
-    background-color: var(--vh-surface-hover);
-    border-color: var(--vh-border-strong);
-}
-.vh-theme-menu{
-    display: flex;
-    align-items: center;
 }
 // ---- Mobile off-canvas menu (Bootstrap .offcanvas; replaces the Helix off-canvas) ----
 .vh-offcanvas{

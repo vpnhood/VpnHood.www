@@ -10,7 +10,6 @@
   "stack_manager_desc": "The panel where you run it all: install servers, watch them live, and decide who gets access.",
   "stack_server_title": "VpnHood! SERVER",
   "stack_server_desc": "The engine of your VPN. It runs on your own Linux or Windows machine and carries your users' traffic on nobody's infrastructure but yours.",
-  "stack_server_link": "Source on GitHub",
   "stack_client_title": "VpnHood! CLIENT",
   "stack_client_desc": "The app your users install. They paste the access key you give them, and they are connected.",
   "learn_more": "Learn more",
@@ -35,7 +34,7 @@
   "step3_desc": "Issue a key from the Access Token page, with the limits you choose.",
   "step4_title": "Share the key",
   "step4_desc": "Anyone with VpnHood! CLIENT pastes it in and is connected.",
-  "manual_note": "Rather not use the panel at all? VpnHood! SERVER also runs on its own — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">install it manually on Windows, Linux, or Docker<span class=\"visually-hidden\"> (opens in new tab)</span></a>.",
+  "manual_note": "Rather not use the VpnHood! MANAGER panel at all? VpnHood! SERVER also runs on its own — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">install it manually on Windows, Linux, or Docker<span class=\"visually-hidden\"> (opens in new tab)</span></a>.",
   "new_tab": "(opens in new tab)",
   "cta": "Your VPN, your server, your rules — and the first access key is only minutes away.",
   "cta_btn": "Open VpnHood! MANAGER"
