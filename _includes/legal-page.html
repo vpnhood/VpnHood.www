@@ -1,8 +1,10 @@
 {%- comment -%}
 Renders a legal document (privacy policy / terms of use) from Markdown into the
-shared page shell. The Markdown lives in _includes/legals/, synced from the VpnHood
-GitHub wiki at BUILD time (see .github/workflows/jekyll.yml), so the published HTML
-is static (SEO-friendly, no runtime fetch) yet stays in sync with the wiki.
+shared page shell. The Markdown lives in _includes/legals/ and is OVERWRITTEN at build
+time (see .github/workflows/jekyll.yml): the migrated end-user policies come from the
+VpnHood repo's docs/legal/end-user/, the rest still from the GitHub wiki. The published
+HTML is therefore static (SEO-friendly, no runtime fetch) yet never lags its source —
+the copies committed here only serve local preview.
 
 Usage:  {% capture md %}{% include legals/<Page>.md %}{% endcapture %}
         {% include legal-page.html md=md %}

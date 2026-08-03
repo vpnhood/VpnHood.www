@@ -40,4 +40,30 @@
   a {
     text-decoration: underline;
   }
+
+  // Policies use tables to say what differs per build/platform. Kramdown emits a bare
+  // <table>, so style it here; `display: block` + overflow-x keeps a wide matrix
+  // scrollable on a phone instead of stretching the page.
+  table {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    line-height: 1.5;
+  }
+
+  th,
+  td {
+    padding: .6rem .9rem;
+    border: 1px solid rgba(255, 255, 255, .15);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 600;
+    background: rgba(255, 255, 255, .05);
+  }
 }

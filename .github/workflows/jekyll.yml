@@ -43,15 +43,31 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
-      # Pull the latest legal text from the VpnHood GitHub wiki so the privacy /
-      # terms pages stay synced. Baked into static HTML at build time (no runtime
-      # fetch). If a fetch fails, the step fails and the build is skipped — that's
-      # fine: GitHub Pages keeps serving the previous successful deployment.
-      - name: Sync legal pages from wiki
+      # Pull the latest legal text so the privacy / terms pages stay synced. Baked
+      # into static HTML at build time (no runtime fetch). If a fetch fails, the
+      # step fails and the build is skipped — that's fine: GitHub Pages keeps
+      # serving the previous successful deployment.
+      #
+      # The end-user policies live in the VpnHood repo (docs/legal/end-user/, edited
+      # via reviewed PRs — merging to develop, that repo's default branch, is
+      # publication). MANAGER's pages have not been migrated yet and still come from
+      # the GitHub wiki; move each one here as it lands — see
+      # docs/legal/end-user/README.md in the VpnHood repo.
+      #
+      # Repo file name = website slug; the include keeps the wiki-era file name so
+      # the page templates don't have to change as pages migrate.
+      - name: Sync legal pages
         run: |
-          for p in VpnHood-CLIENT-Privacy-Policy VpnHood-CONNECT-Privacy-Policy VpnHood-MANAGER-Privacy-Policy VpnHood-MANAGER-Terms-of-Use; do
+          sync_repo() {
+            curl -sfL "https://raw.githubusercontent.com/vpnhood/VpnHood/develop/docs/legal/end-user/$1.md" \
+              -o "_includes/legals/$2.md"
+            echo "synced $2 (VpnHood repo)"
+          }
+          sync_repo vpnhood-client-privacy-policy VpnHood-CLIENT-Privacy-Policy
+          sync_repo vpnhood-connect-privacy-policy VpnHood-CONNECT-Privacy-Policy
+          for p in VpnHood-MANAGER-Privacy-Policy VpnHood-MANAGER-Terms-of-Use; do
             curl -sfL "https://raw.githubusercontent.com/wiki/vpnhood/VpnHood/$p.md" -o "_includes/legals/$p.md"
-            echo "synced $p"
+            echo "synced $p (wiki)"
           done
 
       # Translate anything stale (source copy edited without running the translator
