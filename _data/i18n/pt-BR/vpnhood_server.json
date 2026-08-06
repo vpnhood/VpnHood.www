@@ -19,6 +19,7 @@
   "run_solo_desc": "Sem precisar de painel: um gerenciador de acesso integrado baseado em arquivos permite que um único servidor gere suas próprias chaves através de uma configuração simples.",
   "setup_guide": "Guia de instalação: Windows, Linux ou Docker",
   "learn_more": "Saiba mais",
+  "learn_more_manager": "sobre o VpnHood! MANAGER",
   "cta": "Grátis, open-source e pronto para o seu servidor.",
   "github_btn": "Código no GitHub",
   "new_tab": "(abre em nova aba)"

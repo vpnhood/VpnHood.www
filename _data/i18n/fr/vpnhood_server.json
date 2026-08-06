@@ -19,6 +19,7 @@
   "run_solo_desc": "Aucun panneau requis : un gestionnaire de clés intégré permet à un serveur isolé de générer ses propres accès via un simple fichier de configuration.",
   "setup_guide": "Guide d'installation : Windows, Linux ou Docker",
   "learn_more": "En savoir plus",
+  "learn_more_manager": "en savoir plus sur VpnHood! MANAGER",
   "cta": "Gratuit, open source et prêt pour votre serveur.",
   "github_btn": "Code source sur GitHub",
   "new_tab": "(s'ouvre dans un nouvel onglet)"

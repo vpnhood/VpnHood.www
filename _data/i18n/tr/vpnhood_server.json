@@ -19,6 +19,7 @@
   "run_solo_desc": "Panele gerek yok: Yerleşik dosya tabanlı erişim yöneticisi sayesinde tek bir sunucu kendi anahtarlarını oluşturabilir ve basit bir ayar dosyasından kolayca yönetilebilir.",
   "setup_guide": "Kurulum kılavuzu: Windows, Linux veya Docker üzerinde kurulum yapın",
   "learn_more": "Daha fazla bilgi edinin",
+  "learn_more_manager": "VpnHood! MANAGER hakkında",
   "cta": "Ücretsiz, açık kaynaklı ve kendi sunucunuz için hazır.",
   "github_btn": "GitHub'da İnceleyin",
   "new_tab": "(yeni sekmede açılır)"

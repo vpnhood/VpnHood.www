@@ -19,6 +19,7 @@
   "run_solo_desc": "无需面板：内置基于文件的访问管理器，让单个服务器通过简单的配置文件即可独立签发密钥。",
   "setup_guide": "安装指南：在 Windows、Linux 或 Docker 上部署",
   "learn_more": "了解详情",
+  "learn_more_manager": "了解 VpnHood! MANAGER",
   "cta": "免费、开源，随时可部署到您的服务器。",
   "github_btn": "在 GitHub 上查看源码",
   "new_tab": "（在新标签页中打开）"

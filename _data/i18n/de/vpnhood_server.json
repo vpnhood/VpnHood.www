@@ -19,6 +19,7 @@
   "run_solo_desc": "Kein Panel nötig: Ein integrierter, dateibasierter Manager ermöglicht es einem einzelnen Server, eigene Schlüssel über eine einfache Konfigurationsdatei auszugeben.",
   "setup_guide": "Installationsanleitung für Windows, Linux oder Docker",
   "learn_more": "Mehr erfahren",
+  "learn_more_manager": "Über den VpnHood! MANAGER",
   "cta": "Kostenlos, Open Source und bereit für deinen Server.",
   "github_btn": "Quellcode auf GitHub",
   "new_tab": "(wird in einem neuen Tab geöffnet)"

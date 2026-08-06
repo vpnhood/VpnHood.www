@@ -19,6 +19,7 @@
   "run_solo_desc": "Nessun pannello necessario: un gestore di accessi integrato basato su file permette a un singolo server di generare le proprie chiavi, configurandosi tramite un semplice file di impostazioni.",
   "setup_guide": "Guida all'installazione: Windows, Linux o Docker",
   "learn_more": "Scopri di più",
+  "learn_more_manager": "scopri VpnHood! MANAGER",
   "cta": "Gratuito, open source e pronto per il tuo server.",
   "github_btn": "Codice sorgente su GitHub",
   "new_tab": "(si apre in una nuova scheda)"

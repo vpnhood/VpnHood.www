@@ -19,6 +19,7 @@
   "run_solo_desc": "Sin paneles adicionales: un administrador de claves integrado permite que el servidor genere sus propios accesos mediante un sencillo archivo de configuración.",
   "setup_guide": "Guía de instalación: cómo configurarlo en Windows, Linux o Docker",
   "learn_more": "Saber más",
+  "learn_more_manager": "sobre VpnHood! MANAGER",
   "cta": "Gratis, de código abierto y listo para tu servidor.",
   "github_btn": "Código en GitHub",
   "new_tab": "(se abre en una pestaña nueva)"
