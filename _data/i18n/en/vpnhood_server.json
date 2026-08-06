@@ -19,6 +19,7 @@
   "run_solo_desc": "No panel required: a built-in file-based access manager lets a single server issue its own keys, configured from a simple settings file.",
   "setup_guide": "Setup guide: install on Windows, Linux, or Docker",
   "learn_more": "Learn more",
+  "learn_more_manager": "about VpnHood! MANAGER",
   "cta": "Free, open-source, and ready for your server.",
   "github_btn": "Source on GitHub",
   "new_tab": "(opens in new tab)"
