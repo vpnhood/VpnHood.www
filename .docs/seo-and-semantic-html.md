@@ -37,7 +37,11 @@ centrally — don't hand-add per-page tags that seo-tag already emits.
   `jekyll-sitemap` (never hand-write a sitemap — a manual file silently disables
   the plugin). Utility pages (`404.html`, `thank-you.html`) carry
   `noindex: true` + `sitemap: false`; `header.html` renders the `noindex` robots
-  meta from `page.noindex`.
+  meta from `page.noindex`, and on every other page emits
+  `max-snippet:-1, max-image-preview:large` — the preview opt-in Google Discover
+  requires (Google's own default is the smaller `max-image-preview:standard`).
+  **Never write a positive `index, follow`**: that is already the behaviour when
+  no robots meta is present, so it only adds noise.
 - Performance: `<link rel="preconnect">` to font hosts; per-page LCP image
   preload via front-matter / inlined critical CSS for the hero.
 

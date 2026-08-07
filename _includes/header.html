@@ -44,6 +44,8 @@
     <meta name="author" content="VpnHood" />
     {% if page.noindex %}
     <meta name="robots" content="noindex, nofollow" />
+    {% else %}
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large" />
     {% endif %}
     <title>{{ page.title | default: site.title }}</title>
 
