@@ -121,9 +121,18 @@
     }
     </script>
 
-    <!-- Favicons & app icons (generated from favicon.svg) -->
+    <!-- Favicons & app icons.
+         ORDER AND `sizes` HERE ARE LOAD-BEARING — do not "tidy" them.
+         favicon.svg is the theme-aware tab mark (it carries its own
+         prefers-color-scheme media query); favicon.ico is the old badge, kept
+         only for browsers with no SVG-favicon support (Safari). Chromium
+         scores icon candidates against the 16/32px it wants, so an .ico that
+         advertises `sizes="16x16 32x32 48x48"` outscores an SVG that declares
+         no size — Edge/Chrome then show the .ico and the SVG is never used.
+         Declaring a single size on the .ico, and listing the SVG last, is the
+         documented way round it. -->
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/assets/images/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Kept in sync with the active theme by /assets/js/theme.js -->
