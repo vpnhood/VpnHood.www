@@ -155,10 +155,7 @@
         width: calc(50% - 14px);
     }
     #features .feature-4{
-        max-width: calc(60% - 14px);
-    }
-    #features .feature-5{
-        max-width: calc(40% - 14px);
+        width: 100%;
     }
 }
 @media (max-width: 991px){
@@ -168,10 +165,11 @@
 }
 @media (max-width: 991px) and (min-width: 768px) {
     #features .feature-2,
-    #features .feature-3,
-    #features .feature-4,
-    #features .feature-5{
+    #features .feature-3{
         width: calc(50% - 14px);
+    }
+    #features .feature-4{
+        width: 100%;
     }
 }
 @media (max-width: 767px) {
