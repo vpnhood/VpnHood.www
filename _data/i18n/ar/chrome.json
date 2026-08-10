@@ -41,6 +41,7 @@
   "connect_logo_alt": "شعار VpnHood! CONNECT",
   "manager_logo_alt": "شعار VpnHood! MANAGER",
   "client_logo_alt": "شعار VpnHood! CLIENT",
+  "og_image_alt": "VpnHood!‎ - أول شبكة VPN مفتوحة المصدر مبنية بتقنية .NET. محرك VPN مجاني، سريع، وغير قابل للاكتشاف.",
   "footer_about": "حل VPN سريع وآمن وموثوق <a href=\"https://github.com/vpnhood/VpnHood\" target=\"_blank\" rel=\"noopener\" class=\"fw-medium\">مدعوم بواسطة VpnHood! ENGINE<span class=\"visually-hidden\"> (يفتح في تبويب جديد)</span></a>، وهو مفتوح المصدر وأول VPN يتم تطويره بالكامل باستخدام منصة .NET.",
   "aria_linkedin": "VpnHood على لينكد إن (يفتح في تبويب جديد)",
   "aria_instagram": "VpnHood على إنستغرام (يفتح في تبويب جديد)",

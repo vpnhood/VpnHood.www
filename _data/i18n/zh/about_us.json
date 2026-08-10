@@ -1,6 +1,6 @@
 {
   "meta_title": "关于我们 | VpnHood!",
-  "meta_description": "VpnHood! – 免费、安全且开源的 VPN，拥有全球服务器网络，旨在保护您的在线隐私并确保安全访问网络。",
+  "meta_description": "VpnHood 是一款免费 VPN，基于开源的 VpnHood! ENGINE 使用 .NET 构建。它采用模块化设计、支持自托管，并能将 VPN 流量伪装成普通网页浏览。",
   "page_title": "关于我们",
   "page_desc": "我们的目标是为用户提供自由、无限制的互联网访问，打破地理壁垒与某些国家的审查，同时确保完整的数据安全与个人隐私。",
   "intro": "<b>VpnHood</b> 是一项免费的 VPN 服务，由 <b>VpnHood! ENGINE</b> 强力驱动，由 VpnHood 团队完全使用 .NET 开发。与许多其他解决方案不同，VpnHood! ENGINE 完全从零构建，其代码库中未嵌入或重用任何现有的 VPN 软件。它采用受开放标准启发而设计的自定义协议，确保完全的透明度、可审计性与信任度。",

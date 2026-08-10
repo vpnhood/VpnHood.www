@@ -1,6 +1,6 @@
 {
   "meta_title": "用户账号注销申请 | VpnHood!",
-  "meta_description": "VpnHood! – 免费、安全且开源的全球 VPN，全方位保护您的网络隐私，带来安全无忧的上网体验。",
+  "meta_description": "如何在应用内或网页端永久删除您的 VpnHood! 账户及关联的个人数据。",
   "page_title": "用户账号注销申请",
-  "page_desc": "如需彻底注销账号，请使用您的注册邮箱发送申请至 <a href=\"mailto:support@vpnhood.com\" class=\"text-decoration-underline\">support@vpnhood.com</a>。"
+  "page_desc": "您可以通过以下两种方式永久删除您的 VpnHood! 账户以及与之关联的个人数据：<br><br><strong>1. 在应用内（最快）：</strong>打开<em>“账户”</em>页面并选择<em>“删除我的账户”</em>。<br><br><strong>2. 在网页端（无需打开应用）：</strong>登录<a href=\"https://account.vpnhood.com/index.php?m=vpnhoodiap&amp;action=delete-account\" class=\"text-decoration-underline\">账户中心</a>并选择<em>“删除我的账户”</em>。如果您从未设置过密码，请使用您注册时的电子邮箱点击<em>“忘记密码”</em>进行找回。<br><br>账户删除后将适用于所有设备且无法恢复——再次登录将创建一个全新的空账户。请注意，删除账户并不会自动取消订阅：请在您购买订阅的应用商店中进行取消。出于法律法规要求，系统会保留发票，但您的个人信息将被替换为匿名占位符。<br><br>如有疑问？请联系 <a href=\"mailto:support@vpnhood.com\" class=\"text-decoration-underline\">support@vpnhood.com</a>。"
 }

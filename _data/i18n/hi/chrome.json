@@ -41,6 +41,7 @@
   "connect_logo_alt": "VpnHood! CONNECT लोगो",
   "manager_logo_alt": "VpnHood! MANAGER लोगो",
   "client_logo_alt": "VpnHood! CLIENT लोगो",
+  "og_image_alt": "VpnHood! - .NET से बना पहला ओपन-सोर्स VPN। मुफ़्त, तेज़ और अदृश्य VPN इंजन।",
   "footer_about": "तेज़, सुरक्षित और भरोसेमंद VPN समाधान जो <a href=\"https://github.com/vpnhood/VpnHood\" target=\"_blank\" rel=\"noopener\" class=\"fw-medium\">VpnHood! ENGINE<span class=\"visually-hidden\"> (नए टैब में खुलता है)</span></a> द्वारा संचालित है। यह ओपन-सोर्स है और .NET प्लेटफ़ॉर्म पर पूरी तरह से विकसित पहला VPN है।",
   "aria_linkedin": "LinkedIn पर VpnHood (नए टैब में खुलता है)",
   "aria_instagram": "Instagram पर VpnHood (नए टैब में खुलता है)",

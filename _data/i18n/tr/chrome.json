@@ -41,6 +41,7 @@
   "connect_logo_alt": "VpnHood! CONNECT logosu",
   "manager_logo_alt": "VpnHood! MANAGER logosu",
   "client_logo_alt": "VpnHood! CLIENT logosu",
+  "og_image_alt": "VpnHood! — .NET ile geliştirilen ilk açık kaynaklı VPN. Ücretsiz, hızlı ve tespit edilemeyen VPN altyapısı.",
   "footer_about": "Hızlı, güvenli ve güvenilir VPN çözümü. Tamamen açık kaynaklı ve .NET platformuyla geliştirilen ilk VPN olan <a href=\"https://github.com/vpnhood/VpnHood\" target=\"_blank\" rel=\"noopener\" class=\"fw-medium\">VpnHood! ENGINE<span class=\"visually-hidden\"> (yeni sekmede açılır)</span></a> gücünü arkasına alır.",
   "aria_linkedin": "LinkedIn'de VpnHood (yeni sekmede açılır)",
   "aria_instagram": "Instagram'da VpnHood (yeni sekmede açılır)",

@@ -41,6 +41,7 @@
   "connect_logo_alt": "Logo di VpnHood! CONNECT",
   "manager_logo_alt": "Logo di VpnHood! MANAGER",
   "client_logo_alt": "Logo di VpnHood! CLIENT",
+  "og_image_alt": "VpnHood! – la prima VPN open source basata su .NET. Motore VPN gratuito, veloce e invisibile.",
   "footer_about": "Soluzione VPN veloce, sicura e affidabile <a href=\"https://github.com/vpnhood/VpnHood\" target=\"_blank\" rel=\"noopener\" class=\"fw-medium\">basata su VpnHood! ENGINE<span class=\"visually-hidden\"> (si apre in una nuova scheda)</span></a>, open source e la prima VPN sviluppata interamente con la piattaforma .NET.",
   "aria_linkedin": "VpnHood su LinkedIn (si apre in una nuova scheda)",
   "aria_instagram": "VpnHood su Instagram (si apre in una nuova scheda)",

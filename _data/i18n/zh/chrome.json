@@ -41,6 +41,7 @@
   "connect_logo_alt": "VpnHood! CONNECT 标志",
   "manager_logo_alt": "VpnHood! MANAGER 标志",
   "client_logo_alt": "VpnHood! CLIENT 标志",
+  "og_image_alt": "VpnHood! - 首款基于 .NET 构建的开源 VPN。免费、高速且无法检测的 VPN 引擎。",
   "footer_about": "快速、安全且可靠的 VPN 解决方案，<a href=\"https://github.com/vpnhood/VpnHood\" target=\"_blank\" rel=\"noopener\" class=\"fw-medium\">由 VpnHood! ENGINE 驱动<span class=\"visually-hidden\">（在新标签页中打开）</span></a>。它是开源的，也是完全基于 .NET 平台开发的首款 VPN。",
   "aria_linkedin": "VpnHood 领英主页（在新标签页中打开）",
   "aria_instagram": "VpnHood Instagram 主页（在新标签页中打开）",
