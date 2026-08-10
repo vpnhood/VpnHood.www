@@ -5,6 +5,18 @@
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark">
   <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- charset stays FIRST — nothing may be hoisted above it, not even a comment.
+         The HTML spec requires the encoding declaration to fall entirely within the
+         first 1024 bytes; past that the parser starts on a guessed encoding and may
+         restart. It used to sit below the two inline scripts, at byte 1410.
+         (GTM's snippet injects itself before the first <script>, not before these
+         metas, so it cannot push them down.) -->
+
     <!-- Colour theme bootstrap. Dark is the default and is what the markup ships with,
          so this only ever has to *upgrade* to light — and it does so before first paint,
          which is why it is inline and blocking rather than in /assets/js/theme.js.
@@ -36,11 +48,6 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
     <meta name="author" content="VpnHood" />
     {% if page.noindex %}
     <meta name="robots" content="noindex, nofollow" />
@@ -256,8 +263,8 @@
                           class="logo-image"
                           srcset="/assets/images/site-icon.png 1x"
                           src="/assets/images/site-icon.png"
-                          height="50px"
-                          width="50px"
+                          width="50"
+                          height="50"
                           alt=""
                           aria-hidden="true"
                         />
