@@ -128,6 +128,21 @@
     }
     </script>
 
+    <!-- Share-image metadata that jekyll-seo-tag does not emit. og:image:width/height
+         let a link preview render on the FIRST share, instead of showing blank until the
+         crawler has fetched and measured the file; the *:alt strings are what LinkedIn
+         reads out, and X ignores og:image:alt so twitter:image:alt is emitted too.
+         Guarded on the site-default image: a page that overrides `image:` in its front
+         matter has different dimensions, so it must supply its own tags rather than
+         inherit these. Keep the numbers in step with assets/images/og-image.png. -->
+    {% if page.image == '/assets/images/og-image.png' %}
+    {% assign vh_og_alt = tc.og_image_alt | default: site.data.i18n.en.chrome.og_image_alt %}
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{ vh_og_alt }}" />
+    <meta name="twitter:image:alt" content="{{ vh_og_alt }}" />
+    {% endif %}
+
     <!-- Favicons & app icons.
          ORDER AND `sizes` HERE ARE LOAD-BEARING — do not "tidy" them.
          favicon.svg is the theme-aware tab mark (it carries its own
