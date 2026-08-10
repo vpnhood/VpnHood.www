@@ -1,6 +1,6 @@
 {
   "meta_title": "User Account Deletion Request | VpnHood!",
-  "meta_description": "How to permanently delete your VpnHood! account and the personal data linked to it by sending a deletion request to the VpnHood! support team.",
+  "meta_description": "How to permanently delete your VpnHood! account and the personal data linked to it, from inside the app or on the web.",
   "page_title": "User Account Deletion Request",
-  "page_desc": "To delete your account completely, please send a request to <a href=\"mailto:support@vpnhood.com\" class=\"text-decoration-underline\">support@vpnhood.com</a> from the email address you used to register."
+  "page_desc": "You can permanently delete your VpnHood! account and the personal data linked to it in two ways:<br><br><strong>1. In the app (fastest):</strong> open the <em>Account</em> page and choose <em>Delete my account</em>.<br><br><strong>2. On the web, without the app:</strong> sign in to the <a href=\"https://account.vpnhood.com/index.php?m=vpnhoodiap&amp;action=delete-account\" class=\"text-decoration-underline\">account portal</a> and choose <em>Delete my account</em>. If you have never set a password, use <em>Forgot password</em> with the email address you signed in with.<br><br>Deletion applies to all devices and cannot be undone — signing in again later creates a new, empty account. Deleting your account does not cancel a subscription: cancel it in the store where you purchased it, before or after deleting. Invoices are kept for legal reasons with your personal details replaced by anonymous placeholders.<br><br>Questions? Contact <a href=\"mailto:support@vpnhood.com\" class=\"text-decoration-underline\">support@vpnhood.com</a>."
 }
