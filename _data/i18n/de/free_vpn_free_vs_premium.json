@@ -1,14 +1,14 @@
 {
-  "meta_title": "Kostenlos vs. Premium | VpnHood! CONNECT Tarife vergleichen",
-  "meta_description": "Vergleiche VpnHood! CONNECT Free und Premium direkt: Daten- und Bandbreitenlimits, App- oder länderspezifisches Split-Tunneling, Protokollauswahl, Werbung und Support.",
-  "banner_title": "Vergleichen Sie Kostenlos mit Premium-Funktionen",
+  "meta_title": "Kostenlos vs. Premium | VpnHood! CONNECT-Tarife vergleichen",
+  "meta_description": "VpnHood! CONNECT Kostenlos und Premium im Vergleich: Datenverkehr, Bandbreitenlimits, Split-Tunneling nach App oder Land, Protokollauswahl, Werbung und Support.",
+  "banner_title": "Funktionen von Kostenlos und Premium vergleichen",
   "banner_desc": "Optimieren Sie Ihr Erlebnis und genießen Sie maximale Geschwindigkeit, Werbefreiheit, 24/7-Support und viele weitere Funktionen – jederzeit flexibel.",
   "phone_alt": "VpnHood! CONNECT App auf einem Smartphone",
   "table_title": "VPN-Funktionen",
   "free_title": "Kostenlos",
   "free_desc": "Keine Registrierung oder persönliche Daten erforderlich und ohne Einschränkungen.",
   "premium_title": "Premium",
-  "premium_desc": "Alle Premium-Tarife bieten die gleichen Funktionen; lediglich die Höhe des Rabatts variiert.",
+  "premium_desc": "Alle Premium-Tarife bieten dieselben Funktionen; nur die Rabatthöhe unterscheidet sich.",
   "row_unlimited_traffic": "Unbegrenzter Datenverkehr",
   "row_unlimited_bandwidth": "Unbegrenzte Bandbreite",
   "row_split_countries": "Split-Tunneling nach Ländern",
@@ -31,5 +31,5 @@
   "row_quick_launch": "Schnellstart",
   "row_support_247": "24/7 Support",
   "download_for_free": "Kostenlos herunterladen",
-  "premium_pricing": "Premium-Preise"
+  "premium_pricing": "Premium-Tarife"
 }

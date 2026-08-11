@@ -35,7 +35,7 @@
   "android_tv_icon_alt": "Android TV simgesi",
   "windows_icon_alt": "Windows simgesi",
   "waiting_for_you": "Seni bekliyor",
-  "premium_label": "Premium'a geç",
+  "premium_label": "Premium'a Geç",
   "premium_title": "Ücretsiz sürümün özelliklerini artır",
   "premium_desc": "Deneyiminizi optimize etmek, maksimum hıza ulaşmak, 7/24 destek ve daha fazla özellikle reklamsız deneyim yaşamak sizin elinizde. İstediğiniz zaman geçiş yapabilirsiniz.",
   "rocket_alt": "Roket",
@@ -50,5 +50,5 @@
   "typer_dns_leak": "Gelişmiş DNS sızıntı koruması.",
   "typer_always_on": "Her Zaman Açık VPN ile her an güvende kalın.",
   "premium_pricing": "Premium Fiyatlandırma",
-  "free_vs_premium": "Ücretsiz ve Premium Karşılaştırması"
+  "free_vs_premium": "Ücretsiz ve Premium"
 }

@@ -35,7 +35,7 @@
   "android_tv_icon_alt": "Icône Android TV",
   "windows_icon_alt": "Icône Windows",
   "waiting_for_you": "On vous attend",
-  "premium_label": "Passez au Premium",
+  "premium_label": "Passer au Premium",
   "premium_title": "Boostez les capacités de la version gratuite",
   "premium_desc": "Optimisez votre expérience : profitez d'une vitesse maximale, naviguez sans publicité, et accédez à un support 24h/24 et 7j/7 ainsi qu'à des fonctionnalités exclusives. Passez au Premium quand vous le souhaitez.",
   "rocket_alt": "Fusée",
@@ -50,5 +50,5 @@
   "typer_dns_leak": "Protection renforcée contre les fuites DNS.",
   "typer_always_on": "Restez protégé en permanence grâce au VPN Always-on.",
   "premium_pricing": "Tarifs Premium",
-  "free_vs_premium": "Gratuit ou Premium"
+  "free_vs_premium": "Gratuit vs Premium"
 }

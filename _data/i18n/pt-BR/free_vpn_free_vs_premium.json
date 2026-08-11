@@ -1,14 +1,14 @@
 {
   "meta_title": "Grátis vs Premium | Compare os planos do VpnHood! CONNECT",
-  "meta_description": "Compare o VpnHood! CONNECT Gratuito e Premium lado a lado: limites de tráfego e largura de banda, tunelamento dividido por aplicativo ou país, escolha de protocolo, anúncios e suporte.",
-  "banner_title": "Compare os recursos Grátis e Premium",
+  "meta_description": "Compare o VpnHood! CONNECT Grátis e Premium lado a lado: limites de tráfego e largura de banda, túnel dividido por aplicativo ou país, escolha de protocolo, anúncios e suporte.",
+  "banner_title": "Compare os recursos dos planos Grátis e Premium",
   "banner_desc": "Otimize sua experiência com velocidade máxima, navegação sem anúncios, suporte 24/7 e muito mais. Faça um upgrade quando quiser!",
   "phone_alt": "Aplicativo VpnHood! CONNECT em um smartphone",
   "table_title": "Recursos da VPN",
   "free_title": "Grátis",
   "free_desc": "Sem cadastro ou dados pessoais exigidos, e sem limites.",
   "premium_title": "Premium",
-  "premium_desc": "Os recursos são os mesmos em todos os planos premium; o que muda é apenas o valor do desconto.",
+  "premium_desc": "Os recursos são os mesmos em todos os planos Premium; apenas o valor do desconto varia.",
   "row_unlimited_traffic": "Tráfego ilimitado",
   "row_unlimited_bandwidth": "Largura de banda ilimitada",
   "row_split_countries": "Tunneling dividido por países",
@@ -31,5 +31,5 @@
   "row_quick_launch": "Início rápido",
   "row_support_247": "Suporte 24/7",
   "download_for_free": "Baixe grátis",
-  "premium_pricing": "Planos Premium"
+  "premium_pricing": "Preços Premium"
 }
