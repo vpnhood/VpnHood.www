@@ -50,6 +50,14 @@ collections:
   blog:
     output: true
 
+# Publish dated documents even when the date is ahead of the build clock. Jekyll's
+# default (false) drops them SILENTLY — a one-day typo, or simply a writer in a
+# timezone ahead of the runner, and the post just never appears, with no error
+# anywhere. Real scheduling isn't possible on a static site anyway (nothing would
+# rebuild on the date), so publishing immediately and warning in the content repo's
+# validator beats losing a post without telling anyone.
+future: true
+
 # Per-language page trees (/fa/..., /fr/...) are generated at build time by
 # _plugins/i18n-pages.rb — no translated page copies exist in the repo. See
 # CLAUDE.md "Translations".

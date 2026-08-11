@@ -52,6 +52,41 @@ $vh-post-measure: 44rem; // ~72 characters at the body size — a comfortable re
   margin: 3rem 0;
 }
 
+.vh-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: $vh-post-measure;
+  margin: 2.5rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--vh-hairline);
+
+  a {
+    color: var(--vh-accent-ink);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
+  // Keeps "Page 2 / 5" centred even when only one arrow is present.
+  .vh-pagination-prev {
+    margin-inline-end: auto;
+  }
+
+  .vh-pagination-next {
+    margin-inline-start: auto;
+  }
+}
+
+.vh-pagination-status {
+  color: var(--vh-text-muted);
+  font-size: 0.9rem;
+}
+
 // ----------------------------------------------------------------- post page
 
 .vh-post {

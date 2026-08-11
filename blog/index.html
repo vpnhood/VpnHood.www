@@ -3,6 +3,7 @@ layout: none
 title: "Blog - VpnHood!"
 description: "Guides, engineering notes, and news from the VpnHood project — a free, secure, open-source VPN."
 nav_active: blog
+blog_index: true
 extra_css:
   - /assets/css/custom.css
   - /assets/css/blog.css
@@ -10,12 +11,13 @@ extra_css:
 {% include header.html %}
 {%- comment -%}
   Index of the blog. Posts come from the VpnHood.Blog repo (fetched into _blog/ at
-  build time); this page only lists them. A post carries `lang` only when it is a
-  translation, so the English index shows the ones without it — and a language's
-  index exists only once that language actually has translated posts.
+  build time); this page only lists them. `paginator` is built by
+  _plugins/blog-paginate.rb — /blog/ is page 1, /blog/page/2/ onwards are generated
+  from this same file, so there is one template for every page. It also filters to
+  this page's language, because a language's blog tree only exists once it has
+  translated posts.
 {%- endcomment -%}
-{%- assign vh_page_lang = page.lang | default: 'en' -%}
-{%- assign vh_posts = site.blog | sort: 'date' | reverse -%}
+{%- assign vh_pg = page.paginator -%}
 <main id="sp-main-body">
   <div class="container">
     <div class="container-inner">
@@ -27,10 +29,9 @@ extra_css:
               <p class="section-desc">{{ tc.blog_desc | default: 'Guides, engineering notes, and news from the VpnHood project.' }}</p>
             </div>
 
+            {%- if vh_pg.posts.size > 0 %}
             <ul class="vh-post-list">
-              {%- for vh_post in vh_posts -%}
-              {%- assign vh_post_lang = vh_post.lang | default: 'en' -%}
-              {%- if vh_post_lang == vh_page_lang and vh_post.published != false %}
+              {%- for vh_post in vh_pg.posts %}
               <li class="vh-post-card">
                 <article>
                   <h2 class="vh-post-card-title">
@@ -46,13 +47,22 @@ extra_css:
                   <p class="vh-post-card-desc">{{ vh_post.description }}</p>
                 </article>
               </li>
-              {%- endif -%}
               {%- endfor %}
             </ul>
-
-            {%- assign vh_visible = vh_posts | where_exp: 'p', 'p.published != false' -%}
-            {%- if vh_visible.size == 0 %}
+            {%- else %}
             <p class="vh-post-empty">{{ tc.blog_empty | default: 'No posts yet.' }}</p>
+            {%- endif %}
+
+            {%- if vh_pg.total_pages > 1 %}
+            <nav class="vh-pagination" aria-label="{{ tc.blog_pagination | default: 'Blog pages' }}">
+              {%- if vh_pg.previous_page_path %}
+              <a class="vh-pagination-prev" href="{{ vh_pg.previous_page_path }}" rel="prev">&larr; {{ tc.blog_newer | default: 'Newer' }}</a>
+              {%- endif %}
+              <span class="vh-pagination-status">{{ tc.blog_page | default: 'Page' }} {{ vh_pg.page }} / {{ vh_pg.total_pages }}</span>
+              {%- if vh_pg.next_page_path %}
+              <a class="vh-pagination-next" href="{{ vh_pg.next_page_path }}" rel="next">{{ tc.blog_older | default: 'Older' }} &rarr;</a>
+              {%- endif %}
+            </nav>
             {%- endif %}
           </div>
         </div>
