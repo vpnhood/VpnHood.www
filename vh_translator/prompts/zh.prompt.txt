@@ -1,0 +1,32 @@
+Chinese (Simplified) glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = 高级版
+Free (plan name) = 免费版
+Kill Switch = 断网保护
+Private DNS = 私有 DNS
+Split tunneling = 分流
+Go premium = 升级高级版
+Premium Pricing = 高级版定价
+Features = 功能
+Self-Hosted VPN = 自托管 VPN
+Download Now = 立即下载
+(opens in new tab) = （在新标签页中打开）
+Split tunneling by apps / by countries = 按应用分流 / 按国家分流
+Frequently Asked Questions = 常见问题
+Learn more = 了解更多
+Free vs Premium = 免费版与高级版
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = 功能 · app = 应用 · traffic = 流量 · plan = 套餐
+reseller = 分销商 · open source = 开源
+
+KEYWORDS — meta_title and meta_description keys ONLY.
+Chinese users search 科学上网 alongside VPN. In those two keys work 科学上网 in where it fits
+naturally — "免费 VPN，科学上网首选". Everywhere else keep VPN as in NAMES.
+Never use 翻墙回国 or 回国: that is the opposite service (getting back INTO China).
+RULES
+- Full-width punctuation in Chinese text — （）、，。： — never half-width; never mixed.
+- One space between Chinese characters and Latin words or numbers: "免费 VPN",
+  "Android 7.0 及以上", "100% 免费".

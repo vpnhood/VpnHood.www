@@ -1,0 +1,28 @@
+Hindi glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = प्रीमियम (never प्रिमियम)
+Free (plan name) = मुफ़्त (always with the nukta; never मुफ्त, never फ्री)
+Kill Switch = किल स्विच
+Private DNS = प्राइवेट DNS
+Split tunneling = स्प्लिट टनलिंग
+Go premium = प्रीमियम पर जाएं
+Premium Pricing = प्रीमियम मूल्य निर्धारण
+Features = फ़ीचर्स
+Self-Hosted VPN = सेल्फ-होस्टेड VPN
+Download Now = अभी डाउनलोड करें
+(opens in new tab) = (नए टैब में खुलता है)
+Split tunneling by apps / by countries = ऐप्स के अनुसार स्प्लिट टनलिंग / देशों के अनुसार स्प्लिट टनलिंग
+Frequently Asked Questions = अक्सर पूछे जाने वाले सवाल
+Learn more = और जानें
+Free vs Premium = मुफ़्त बनाम प्रीमियम
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = फ़ीचर्स · app = ऐप · traffic = ट्रैफ़िक · server = सर्वर
+plan = प्लान · reseller = रीसेलर · open source = ओपन सोर्स
+
+RULES
+- Devanagari or Latin only. Never emit Arabic, Cyrillic, Hangul or CJK characters — past
+  outputs mixed those in mid-word and had to be repaired by hand.
+- "VPN" stays Latin; never वीपीएन.

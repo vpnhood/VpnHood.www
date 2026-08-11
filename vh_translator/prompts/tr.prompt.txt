@@ -1,0 +1,27 @@
+Turkish glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (never translated; suffixes take an apostrophe: Premium'a, Premium'da)
+Free (plan name) = Ücretsiz
+Kill Switch = Kill Switch
+Private DNS = Özel DNS
+Split tunneling = tünelleme
+Go premium = Premium'a Geç
+Premium Pricing = Premium Fiyatlandırma
+Features = Özellikler
+Self-Hosted VPN = Kendi Sunucunda VPN
+Download Now = Hemen İndir
+(opens in new tab) = (yeni sekmede açılır)
+Split tunneling by apps / by countries = Uygulamalara göre tünelleme / Ülkelere göre tünelleme
+Frequently Asked Questions = Sıkça Sorulan Sorular
+Learn more = Daha fazla bilgi edinin
+Free vs Premium = Ücretsiz ve Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = özellikler · app = uygulama · traffic = trafik
+plan = plan/planlar · reseller = bayilik · open source = açık kaynak
+
+RULES
+- The percent sign precedes the number: "%100 ücretsiz", never "100%".
+- Buttons use the second-person plural ("Keşfedin", "Ulaşın") on every button.

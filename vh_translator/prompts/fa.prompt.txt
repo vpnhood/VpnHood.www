@@ -1,0 +1,47 @@
+Persian glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = ویژه (never پرمیوم / پریمیوم — transliterations, not word choices)
+Free (plan name) = رایگان
+Kill Switch = Kill Switch
+Private DNS = DNS اختصاصی
+Split tunneling = تونل‌زنی تفکیکی
+Go premium = ارتقا به نسخه ویژه
+Premium Pricing = تعرفه‌های ویژه
+Features = امکانات
+Self-Hosted VPN = VPN شخصی
+Download Now = همین حالا دانلود کنید (NOT دانلود رایگان — that is "Download for free")
+(opens in new tab) = (در تب جدید باز می‌شود)
+Split tunneling by apps / by countries = تونل‌زنی تفکیکی بر اساس اپلیکیشن‌ها / بر اساس کشورها
+Frequently Asked Questions = سؤالات متداول
+Global Server Network = شبکه جهانی سرورها
+Learn more = بیشتر بدانید
+Free vs Premium = رایگان در برابر ویژه
+
+PROSE — preferred wording in running text; a preference, not a ban.
+premium = ویژه / نسخه ویژه / اشتراک ویژه, whichever the sentence needs
+feature(s) = امکانات (not ویژگی‌ها / قابلیت‌ها)
+app = اپلیکیشن (not برنامه)
+traffic = ترافیک · server = سرور · plan = پلن · open source = متن‌باز
+
+KEYWORDS — meta_title and meta_description keys ONLY.
+Iranians search for "فیلترشکن", not "وی‌پی‌ان". In those two keys render "VPN" / "Free VPN"
+as فیلترشکن — "Download Free VPN" = دانلود فیلترشکن رایگان, "free, secure, open-source VPN"
+= فیلترشکن رایگان، امن و متن‌باز. Add پرسرعت where the English says fast; "فیلترشکن رایگان و
+پرسرعت" is the phrase people search. Everywhere else keep VPN as in NAMES. Never write
+وی‌پی‌ان anywhere: the Persian word is فیلترشکن, otherwise leave VPN in Latin.
+RULES
+- "VpnHood" is Latin in every sentence. Never وی‌پی‌ان‌هود.
+- Platform names stay Latin: Windows, Android, Android TV, Linux — never ویندوز / اندروید.
+- Persian digits (۰۱۲۳) everywhere the site already uses them: prices (۷.۹ دلار), plans
+  (۱۲ ماهه), discounts (۲۵٪), counts (۵ دستگاه), the copyright year. The ONE exception is a
+  version number attached to a Latin platform name — "Android 7.0", "Windows 10" — which
+  stays fully Latin.
+- Do not add an ezafe ی where normal Persian writes none: شبکه جهانی، مشاهده همه، درباره ما —
+  not شبکه‌ی جهانی. When an ی IS part of the word, write it as ZWNJ + ی (درباره‌ی، نسخه‌ی),
+  never the hamza form (دربارهٔ، نسخهٔ).
+- Do not insert bidi marks (LRM U+200E, RLM U+200F) yourself. The tool adds an LRM after
+  "VpnHood!" where it is needed — i.e. when the next word is translated. When the next word
+  stays Latin ("VpnHood! CLIENT") the punctuation is already inside a Latin run and no mark
+  belongs there.

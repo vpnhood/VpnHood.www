@@ -1,0 +1,27 @@
+French glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (never translated)
+Free (plan name) = Gratuit
+Kill Switch = Kill Switch
+Private DNS = DNS privé
+Split tunneling = Split tunneling (not "tunneling sélectif")
+Go premium = Passer au Premium
+Premium Pricing = Tarifs Premium
+Features = Fonctionnalités
+Self-Hosted VPN = VPN auto-hébergé
+Download Now = Télécharger maintenant
+(opens in new tab) = (s'ouvre dans un nouvel onglet)
+Split tunneling by apps / by countries = Split tunneling par applications / par pays
+Frequently Asked Questions = Foire aux questions
+Learn more = En savoir plus
+Free vs Premium = Gratuit vs Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = fonctionnalités · app = application · plan = offre/offres
+reseller = revendeur
+
+RULES
+- Buttons use the infinitive ("Télécharger"), never the vous imperative ("Téléchargez").
+- Percentages take a space: "100 % gratuit".

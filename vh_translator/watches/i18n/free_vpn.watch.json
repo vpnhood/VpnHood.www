@@ -37,7 +37,6 @@
     "android_tv_icon_alt": "Android TV icon",
     "windows_icon_alt": "Windows icon",
     "waiting_for_you": "Waiting for you",
-    "premium_label": "Go premium",
     "premium_title": "Enhance the capabilities of the free version",
     "premium_desc": "It's up to you to optimize your experience and achieve maximum speed and go ad-free with 24/7 support and more features, You can do it at any time.",
     "rocket_alt": "Rocket",
@@ -50,8 +49,6 @@
     "typer_include_exclude_ip": "Include and exclude IP addresses.",
     "typer_domains": "Include, exclude, or block domains.",
     "typer_dns_leak": "DNS leak protection.",
-    "typer_always_on": "Stay Protected with Always-on VPN.",
-    "premium_pricing": "Premium Pricing",
-    "free_vs_premium": "Free vs Premium"
+    "typer_always_on": "Stay Protected with Always-on VPN."
   }
 }

@@ -1,0 +1,24 @@
+Portuguese glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (never translated)
+Free (plan name) = Grátis
+Kill Switch = Kill Switch
+Private DNS = DNS privado
+Split tunneling = Túnel dividido
+Go premium = Seja Premium
+Premium Pricing = Preços Premium
+Features = Recursos
+Self-Hosted VPN = VPN auto-hospedada
+Download Now = Baixar Agora
+(opens in new tab) = (abre em uma nova aba)
+Split tunneling by apps / by countries = Túnel dividido por aplicativos / por países
+Frequently Asked Questions = Perguntas frequentes
+Learn more = Saiba mais
+Free vs Premium = Grátis vs Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = recursos · download (verb) = baixar (not "descarregar")
+open source = código aberto (not "open source")
+app = aplicativo · plan = plano/planos · reseller = revendedor

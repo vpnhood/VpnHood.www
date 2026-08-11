@@ -1,0 +1,28 @@
+German glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (never translated, never "Premium-Version")
+Free (plan name) = Kostenlos
+Kill Switch = Kill Switch
+Private DNS = Privates DNS
+Split tunneling = Split-Tunneling
+Go premium = Premium werden
+Premium Pricing = Premium-Tarife
+Features = Funktionen
+Self-Hosted VPN = Selbstgehostetes VPN (one word)
+Download Now = Jetzt herunterladen
+(opens in new tab) = (öffnet in neuem Tab)
+Split tunneling by apps / by countries = Split-Tunneling nach Apps / nach Ländern
+Frequently Asked Questions = Häufig gestellte Fragen
+Learn more = Mehr erfahren
+Free vs Premium = Kostenlos vs. Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+traffic = Datenverkehr (not "Traffic")
+reseller = Reseller (not "Wiederverkäufer")
+plan = Tarif/Tarife (not "Plan" or "Abo") · app = App · open source = Open Source
+
+RULES
+- Percentages take a space: "100 % kostenlos", never "100%".
+- Buttons use the infinitive ("Jetzt herunterladen"), never the Sie-imperative, on all buttons.

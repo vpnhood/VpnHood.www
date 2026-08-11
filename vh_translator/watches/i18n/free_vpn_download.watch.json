@@ -20,8 +20,6 @@
     "windows_min_version": "Support <b>Windows 10</b> and above.",
     "windows_x64_only": "Windows x64 version only.",
     "direct_link_note": "It's best to download with the direct link only when you don't have access to Google Play.",
-    "windows_premium_note": "The Windows version does not have any free servers, and you must <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">upgrade to Premium</b></a> to use it.",
-    "linux_arch_note": "Supports x64 and ARM64 architectures.",
-    "linux_premium_note": "The Linux version does not have any free servers, and you must <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">upgrade to Premium</b></a> to use it."
+    "linux_arch_note": "Supports x64 and ARM64 architectures."
   }
 }

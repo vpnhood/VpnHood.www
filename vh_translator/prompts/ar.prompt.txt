@@ -1,0 +1,35 @@
+Arabic glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = المميز (never بريميوم)
+Free (plan name) = المجاني
+Kill Switch = Kill Switch
+Private DNS = DNS خاص
+Split tunneling = النفق المقسم
+Go premium = احصل على النسخة المميزة
+Premium Pricing = أسعار الباقات المميزة
+Features = الميزات
+Self-Hosted VPN = VPN ذاتي الاستضافة
+Download Now = حمّل الآن
+(opens in new tab) = (يفتح في علامة تبويب جديدة)
+Split tunneling by apps / by countries = النفق المقسم حسب التطبيقات / حسب الدول
+Frequently Asked Questions = الأسئلة الشائعة
+Learn more = اعرف المزيد
+Free vs Premium = المجاني مقابل المميز
+
+PROSE — preferred wording in running text; a preference, not a ban.
+premium = المميزة, or المدفوعة when the sentence is about paying rather than the tier's name
+feature(s) = الميزات (not المميزات, which means "advantages")
+app = التطبيق · traffic = حركة المرور · plan = باقة/باقات · reseller = موزّع
+open source = مفتوح المصدر
+
+RULES
+- Product words stay Latin: "VpnHood! SERVER", never خادم VpnHood!.
+- Western digits throughout ("100%", "30", "Android 7.0"), as the rest of the Arabic copy
+  already does — never ٠١٢٣.
+- Stable spelling across files: الآن (never الان), أنشئ, حمّل with the shadda.
+- Do not insert bidi marks (LRM U+200E, RLM U+200F) yourself. The tool adds an LRM after
+  "VpnHood!" where it is needed — i.e. when the next word is translated. When the next word
+  stays Latin ("VpnHood! CLIENT") the punctuation is already inside a Latin run and no mark
+  belongs there.

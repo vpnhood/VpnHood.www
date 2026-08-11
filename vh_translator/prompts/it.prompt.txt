@@ -1,0 +1,27 @@
+Italian glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (never translated)
+Free (plan name) = Gratis (does not inflect)
+Kill Switch = Kill Switch
+Private DNS = DNS privato
+Split tunneling = Split tunneling
+Go premium = Passa a Premium
+Premium Pricing = Tariffe Premium
+Features = Funzionalità
+Self-Hosted VPN = VPN self-hosted
+Download Now = Scarica ora
+(opens in new tab) = (si apre in una nuova scheda)
+Split tunneling by apps / by countries = Split tunneling per app / per paese
+Frequently Asked Questions = Domande frequenti
+Learn more = Scopri di più
+Free vs Premium = Gratis vs Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = funzionalità (not "funzioni")
+support = supporto (not "assistenza")
+plan = piano/piani · reseller = rivenditore
+
+RULES
+- "gratuito/gratuita" is an ordinary adjective for prose; the plan itself is always "Gratis".

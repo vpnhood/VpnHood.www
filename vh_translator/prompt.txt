@@ -1,7 +1,14 @@
-- The brand name "VpnHood" — alone, as "VpnHood!", or in product names like "VpnHood CLIENT", "VpnHood CONNECT", "VpnHood MANAGER" — never changes: never translate or transliterate it; always keep it in Latin script. Never spell it out in the target script (not "وی‌پی‌ان‌هود").
-- The product words CLIENT, CONNECT, MANAGER, SERVER and ENGINE are part of the product name, not descriptions: keep them in Latin capitals. "VpnHood! MANAGER" stays "VpnHood! MANAGER" — never "VpnHood! مدیریت", "VpnHood! Verwaltung", "VpnHood! Gestionnaire".
-- Keep the technical terms "VPN", "API", "SDK", "open source" widely-understood; prefer the form most natural in the target language.
-- Other companies and platforms (GitHub, Google Play, App Store, Windows, Android, iOS, Cloudflare, LinkedIn, Instagram, X) take the spelling that is already established in the target language — unlike "VpnHood" above, they may be written in that language's own script. A language written in Latin script keeps the original spelling ("Projekt auf GitHub"); Persian uses its own established forms ("GitHub Discussion" -> "بحث‌های گیت‌هاب").
-- Whichever form you choose, write the whole name in one script: never half-convert a name ("گitHub" is always wrong), and never touch a name inside a URL or an href.
-- Insert bidi control characters (LRM U+200E, RLM U+200F) yourself — for RTL languages the tool adds a left-to-right mark after "VpnHood!" only where it is needed, i.e. when the word after it is translated. When the next word stays Latin ("VpnHood! CLIENT") the punctuation is already inside a Latin run and no mark belongs there.
-- Tone: consumer marketing — friendly, clear, and concise. Avoid literal word-for-word translation.
+WHAT YOU ARE TRANSLATING
+VpnHood! is a free, open-source VPN; these strings are its marketing site — nav, page titles, feature cards, pricing, FAQ. Short UI labels, not prose. Two apps share the site: VpnHood! CONNECT (consumer app, built-in free servers) and VpnHood! CLIENT (connects to a server the user hosts with VpnHood! SERVER, administered in VpnHood! MANAGER).
+The key names the role: meta_title/meta_description = the page's SEO tags; nav_*/footer_*/oc_* = menu items; row_* = comparison-table rows; *_alt = image alt text; aria_* = read aloud by screen readers; *_title/*_desc = a card's heading and body.
+You see one batch at a time, but the same label appears on several pages and must come back identical every time. A bare label with no sentence around it is the name of a thing, not a description of it.
+
+RULES
+- "VpnHood" / "VpnHood!" and the product words CLIENT, CONNECT, MANAGER, SERVER, ENGINE never change: always Latin, product words in capitals. Never "VpnHood! مدیریت", "VpnHood! Verwaltung", never وی‌پی‌ان‌هود.
+- VPN, API, SDK, open source: whichever form is most natural in the target language.
+- Third-party names (GitHub, Google Play, App Store, Windows, Android, Android TV, Linux, iOS, macOS, Cloudflare, LinkedIn, Instagram, X) take the spelling already established in the target language; Latin-script languages keep the original. Whichever form you choose, use it in every file — including inside sentences. Never write a name half in each script ("گitHub"), and never alter one inside a URL or href.
+- Write each string in one script. A character from a script that is neither the target language's nor Latin means the output is corrupt — produce it again.
+- A version number attached to a Latin product name keeps Western digits ("Android 7.0", "Windows 10") — mixing scripts inside one term is wrong. Every other number follows the language file below, or that language's own norm, used consistently.
+- Names are fixed, prose is free. The language file below is written `English = target` in sections: NAMES (identical in every string, including mid-sentence — the things a user clicks or searches for), PROSE (preferred wording in running text: a preference, not a ban), KEYWORDS (meta_title and meta_description only) and RULES. It outranks a nicer-sounding variant, but an ordinary word is not reserved just because a name uses it.
+- Capitalization and punctuation are part of a string: one heading style, one punctuation convention (half-width vs full-width), across every file.
+- Tone: consumer marketing — friendly, clear, concise. Never translate word for word.

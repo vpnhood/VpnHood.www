@@ -1,0 +1,30 @@
+Russian glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (Latin, undeclined — never "Премиум")
+Free (plan name) = Бесплатно
+Kill Switch = Kill Switch
+Private DNS = Частный DNS
+Split tunneling = Раздельное туннелирование
+Go premium = Перейти на Premium
+Premium Pricing = Тарифы Premium
+Features = Возможности
+Self-Hosted VPN = Собственный VPN-сервер
+Download Now = Скачать
+(opens in new tab) = (откроется в новой вкладке)
+Split tunneling by apps / by countries = Раздельное туннелирование по приложениям / по странам
+Frequently Asked Questions = Часто задаваемые вопросы
+Learn more = Узнать больше
+Free vs Premium = Бесплатно и Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+premium = Premium, or lowercase "премиум" where a Russian adjective reads better
+feature(s) = возможности (not "функции")
+app = приложение · traffic = трафик · plan = тариф/тарифы · reseller = реселлер
+
+KEYWORDS — meta_title and meta_description keys ONLY.
+Russians search "впн" in Cyrillic as much as "VPN". In those two keys use ВПН where the
+sentence allows — "Бесплатный ВПН", "Скачать ВПН". Everywhere else keep VPN Latin.
+RULES
+- The Premium label stays Latin even after a preposition ("Перейти на Premium").

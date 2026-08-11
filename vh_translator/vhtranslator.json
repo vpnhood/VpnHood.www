@@ -1,5 +1,6 @@
 {
   "base": "_data/i18n/en",
-  "model": "gemini-flash-lite-latest",
+  "model": "gemini-flash-latest",
+  "batch": 40,
   "languages": ["fa", "fr", "de", "ar", "es", "hi", "it", "pt", "pt-BR", "ru", "tr", "zh"]
 }

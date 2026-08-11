@@ -1,9 +1,6 @@
 {
   "version": 1,
   "items": {
-    "meta_title": "Go Premium | Unlock the Full Power of VpnHood! CONNECT",
-    "meta_description": "VpnHood! CONNECT Premium plans, monthly to yearly, for maximum speed with no ads and 24/7 support. Every plan is covered by a 30-day money-back guarantee.",
-    "banner_title": "Premium pricing",
     "banner_desc": "It's up to you to optimize your experience and achieve maximum speed and go ad-free with 24/7 support and more features, You can do it at any time.",
     "rocket_alt": "Rocket",
     "free_plan_title": "Free",
@@ -32,13 +29,10 @@
     "purchase_plan": "Purchase this plan",
     "moneyback_30_days": "30 days money-back guarantee",
     "devices_5": "5 devices simultaneously",
-    "all_features": "All free and premium features",
     "cancel_anytime": "Cancel anytime",
-    "note_same_features": "The features are the same across all premium plans; only the discount amount varies.",
     "note_usd": "All amounts shown are in USD.",
     "note_tax": "Sales tax/VAT applied at checkout where applicable.",
     "compare_label": "Compare",
-    "compare_title": "Compare Free with Premium features",
     "compare_desc": "It's up to you to optimize your experience and achieve maximum speed and go ad-free with 24/7 support and more features, You can do it at any time."
   }
 }

@@ -1,0 +1,27 @@
+Spanish glossary.
+
+NAMES — same wording everywhere, including mid-sentence.
+These are the ones a translator cannot get right from a single string alone.
+Premium = Premium (never translated)
+Free (plan name) = Gratis
+Kill Switch = Kill Switch
+Private DNS = DNS privado
+Split tunneling = Túnel dividido
+Go premium = Hazte Premium
+Premium Pricing = Precios Premium
+Features = Funciones
+Self-Hosted VPN = VPN autohospedada
+Download Now = Descargar ahora
+(opens in new tab) = (se abre en una pestaña nueva)
+Split tunneling by apps / by countries = Túnel dividido por aplicaciones / por países
+Frequently Asked Questions = Preguntas frecuentes
+Learn more = Más información
+Free vs Premium = Gratis vs Premium
+
+PROSE — preferred wording in running text; a preference, not a ban.
+feature(s) = funciones (not "características")
+open source = código abierto (not "open source")
+app = aplicación · plan = plan/planes · reseller = revendedor
+
+RULES
+- Buttons use the infinitive ("Descargar ahora"), never the tú imperative ("Descárgalo").

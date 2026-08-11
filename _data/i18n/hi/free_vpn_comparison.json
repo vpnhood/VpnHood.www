@@ -21,7 +21,7 @@
   "row_split_countries": "देशों के आधार पर स्प्लिट टनलिंग",
   "row_split_apps": "ऐप्स के अनुसार स्प्लिट टनलिंग",
   "row_split_local": "लोकल नेटवर्क के अनुसार स्प्लिट टनलिंग",
-  "row_server_choice": "सर्ور लोकेशन चुनने की सुविधा",
+  "row_server_choice": "सर्वर लोकेशन चुनने की सुविधा",
   "row_open_source": "100% ओपन सोर्स <span class=\"vh-cmp-feature-sub\">(सर्वर और क्लाइंट)</span>",
   "aria_yes": "हाँ",
   "aria_no": "नहीं",
