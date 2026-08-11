@@ -11,13 +11,34 @@ extra_css:
 {% include header.html %}
 {%- comment -%}
   Index of the blog. Posts come from the VpnHood.Blog repo (fetched into _blog/ at
-  build time); this page only lists them. `paginator` is built by
-  _plugins/blog-paginate.rb — /blog/ is page 1, /blog/page/2/ onwards are generated
-  from this same file, so there is one template for every page. It also filters to
-  this page's language, because a language's blog tree only exists once it has
+  build time); this page only lists them. It serves every page of the index:
+  /blog/ is page 1, and _plugins/blog-paginate.rb generates /blog/page/2/ onwards
+  from this same file, stamping only `paginator_page`.
+
+  The slice is worked out here rather than handed over by the generator on
+  purpose — page 1 must not depend on data the generator wrote onto a page
+  object, because under `jekyll serve` a rebuild triggered by a _data change
+  renders a different object and the index came out empty (see that plugin's
+  header comment). Deriving it from site.blog means page 1 always renders.
+
+  A post carries `lang` only when it is a translation, so the English index takes
+  the ones without it — a language's blog tree exists only once that language has
   translated posts.
 {%- endcomment -%}
-{%- assign vh_pg = page.paginator -%}
+{%- assign vh_per_page = 25 -%}
+{%- assign vh_pool = site.blog | where_exp: 'p', 'p.published != false' -%}
+{%- if page.lang -%}
+  {%- assign vh_mine = vh_pool | where: 'lang', page.lang -%}
+{%- else -%}
+  {%- assign vh_mine = vh_pool | where_exp: 'p', 'p.lang == nil' -%}
+{%- endif -%}
+{%- assign vh_mine = vh_mine | sort: 'date' | reverse -%}
+{%- assign vh_num = page.paginator_page | default: 1 -%}
+{%- comment -%} Integer ceiling: Liquid's divided_by floors. {%- endcomment -%}
+{%- assign vh_total = vh_mine.size | plus: vh_per_page | minus: 1 | divided_by: vh_per_page -%}
+{%- assign vh_offset = vh_num | minus: 1 | times: vh_per_page -%}
+{%- assign vh_posts = vh_mine | slice: vh_offset, vh_per_page -%}
+{%- capture vh_blog_base %}{{ vh_base }}/blog{% endcapture -%}
 <main id="sp-main-body">
   <div class="container">
     <div class="container-inner">
@@ -29,26 +50,35 @@ extra_css:
               <p class="section-desc">{{ tc.blog_desc | default: 'Guides, engineering notes, and news from the VpnHood project.' }}</p>
             </div>
 
-            {%- if vh_pg.posts.size > 0 %}
+            {%- if vh_posts.size > 0 %}
             <ul class="vh-post-list">
-              {%- for vh_post in vh_pg.posts %}
+              {%- for vh_post in vh_posts %}
               <li class="vh-post-card">
                 <article>
                   {%- comment -%}
                     Optional thumbnail — a card without one simply runs full width.
-                    `card_image`, not `image`: every document inherits the site-wide OG
-                    share image from _config.yml defaults, so `image` is always set and
-                    would put the same generic picture on every card (see
-                    _plugins/blog-pages.rb).
+                    `image` can't be tested directly: _config.yml defaults give EVERY
+                    document the site-wide OG share image, so it is never empty and every
+                    card would show the same generic picture. A post's own image always
+                    lives under the blog asset path (the content repo's validator requires
+                    it), which is what tells the two apart. Derived here rather than
+                    stamped by a plugin so it survives `jekyll serve` rebuilds.
 
-                    alt carries the post title so the image can be found in image search.
-                    That repeats the heading next to it, so the link keeps tabindex="-1"
-                    to avoid a second tab stop on the same destination — but no
-                    aria-hidden, which would suppress the alt text entirely.
+                    alt comes from the post's own `image_alt`, falling back to the title
+                    so an image is never announced as unlabelled. `default:` can't be used
+                    because it treats "" as absent, and the three states differ: no key =
+                    title; text = that text; `image_alt: ""` = decorative.
+
+                    Either way this link goes where the title link beside it goes, so it
+                    keeps tabindex="-1" to avoid a second tab stop on the same
+                    destination. When the alt is deliberately empty it also takes
+                    aria-hidden, because a link with no accessible name is worse than no
+                    link — with alt text present, aria-hidden would suppress it instead.
                   {%- endcomment -%}
-                  {%- if vh_post.card_image %}
-                  <a class="vh-post-card-media" href="{{ vh_post.url }}" tabindex="-1">
-                    <img src="{{ vh_post.card_image }}" alt="{{ vh_post.headline | escape }}" loading="lazy" decoding="async" width="1200" height="630" />
+                  {%- if vh_post.image contains '/assets/images/blog/' %}
+                  {%- if vh_post.image_alt == nil %}{% assign vh_alt = vh_post.headline %}{% else %}{% assign vh_alt = vh_post.image_alt %}{% endif -%}
+                  <a class="vh-post-card-media" href="{{ vh_post.url }}" tabindex="-1"{% if vh_alt == '' %} aria-hidden="true"{% endif %}>
+                    <img src="{{ vh_post.image }}" alt="{{ vh_alt | escape }}" loading="lazy" decoding="async" width="1200" height="630" />
                   </a>
                   {%- endif %}
                   <div class="vh-post-card-text">
@@ -72,14 +102,16 @@ extra_css:
             <p class="vh-post-empty">{{ tc.blog_empty | default: 'No posts yet.' }}</p>
             {%- endif %}
 
-            {%- if vh_pg.total_pages > 1 %}
+            {%- if vh_total > 1 %}
             <nav class="vh-pagination" aria-label="{{ tc.blog_pagination | default: 'Blog pages' }}">
-              {%- if vh_pg.previous_page_path %}
-              <a class="vh-pagination-prev" href="{{ vh_pg.previous_page_path }}" rel="prev">&larr; {{ tc.blog_newer | default: 'Newer' }}</a>
+              {%- if vh_num > 1 %}
+              {%- assign vh_prev = vh_num | minus: 1 -%}
+              {%- if vh_prev == 1 %}{% capture vh_prev_url %}{{ vh_blog_base }}/{% endcapture %}{% else %}{% capture vh_prev_url %}{{ vh_blog_base }}/page/{{ vh_prev }}/{% endcapture %}{% endif %}
+              <a class="vh-pagination-prev" href="{{ vh_prev_url }}" rel="prev">&larr; {{ tc.blog_newer | default: 'Newer' }}</a>
               {%- endif %}
-              <span class="vh-pagination-status">{{ tc.blog_page | default: 'Page' }} {{ vh_pg.page }} / {{ vh_pg.total_pages }}</span>
-              {%- if vh_pg.next_page_path %}
-              <a class="vh-pagination-next" href="{{ vh_pg.next_page_path }}" rel="next">{{ tc.blog_older | default: 'Older' }} &rarr;</a>
+              <span class="vh-pagination-status">{{ tc.blog_page | default: 'Page' }} {{ vh_num }} / {{ vh_total }}</span>
+              {%- if vh_num < vh_total %}
+              <a class="vh-pagination-next" href="{{ vh_blog_base }}/page/{{ vh_num | plus: 1 }}/" rel="next">{{ tc.blog_older | default: 'Older' }} &rarr;</a>
               {%- endif %}
             </nav>
             {%- endif %}

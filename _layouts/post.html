@@ -29,13 +29,21 @@
               </header>
 
               {%- comment -%}
-                Hero image, only when the post declared one of its own — `page.image`
-                always resolves to the site-wide OG share image otherwise (see
-                _plugins/blog-pages.rb). alt carries the title for image search, which
-                does repeat the <h1> directly above it.
+                Hero image, only when the post declared one of its own: `page.image`
+                otherwise resolves to the site-wide OG share image from _config.yml
+                defaults, which would put that generic banner on top of every post. A
+                post's own image lives under the blog asset path (enforced by the content
+                repo's validator).
+
+                alt comes from the post's `image_alt`, falling back to the title so an
+                image is never announced as unlabelled. The three states are distinct and
+                `default:` cannot tell them apart (it treats "" as absent), hence the
+                explicit nil test: no key = use the title; text = use it; `image_alt: ""`
+                = decorative, announce nothing.
               {%- endcomment -%}
-              {%- if page.card_image %}
-              <img class="vh-post-hero" src="{{ page.card_image }}" alt="{{ page.headline | escape }}" width="1200" height="630" />
+              {%- if page.image contains '/assets/images/blog/' %}
+              {%- if page.image_alt == nil %}{% assign vh_hero_alt = page.headline %}{% else %}{% assign vh_hero_alt = page.image_alt %}{% endif -%}
+              <img class="vh-post-hero" src="{{ page.image }}" alt="{{ vh_hero_alt | escape }}" width="1200" height="630" />
               {%- endif %}
 
               {%- comment -%}
