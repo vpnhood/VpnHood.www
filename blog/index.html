@@ -39,13 +39,16 @@ extra_css:
                     `card_image`, not `image`: every document inherits the site-wide OG
                     share image from _config.yml defaults, so `image` is always set and
                     would put the same generic picture on every card (see
-                    _plugins/blog-pages.rb). alt="" and aria-hidden because the heading
-                    beside it is the link text; describing the picture again would make
-                    screen readers announce the same post twice.
+                    _plugins/blog-pages.rb).
+
+                    alt carries the post title so the image can be found in image search.
+                    That repeats the heading next to it, so the link keeps tabindex="-1"
+                    to avoid a second tab stop on the same destination — but no
+                    aria-hidden, which would suppress the alt text entirely.
                   {%- endcomment -%}
                   {%- if vh_post.card_image %}
-                  <a class="vh-post-card-media" href="{{ vh_post.url }}" tabindex="-1" aria-hidden="true">
-                    <img src="{{ vh_post.card_image }}" alt="" loading="lazy" decoding="async" width="1200" height="630" />
+                  <a class="vh-post-card-media" href="{{ vh_post.url }}" tabindex="-1">
+                    <img src="{{ vh_post.card_image }}" alt="{{ vh_post.headline | escape }}" loading="lazy" decoding="async" width="1200" height="630" />
                   </a>
                   {%- endif %}
                   <div class="vh-post-card-text">
