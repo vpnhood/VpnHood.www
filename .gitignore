@@ -11,3 +11,11 @@
 
 node_modules/
 .jekyll-cache/
+
+# Blog content, fetched from the VpnHood.Blog repo at build time (see CLAUDE.md
+# "Blog"). Never committed here — that repo is the source of truth.
+/.blog-src/
+/.blog-good/
+/_blog/
+/assets/images/blog/
+/_data/blog_redirects.yml

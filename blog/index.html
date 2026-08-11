@@ -1,0 +1,63 @@
+---
+layout: none
+title: "Blog - VpnHood!"
+description: "Guides, engineering notes, and news from the VpnHood project — a free, secure, open-source VPN."
+nav_active: blog
+extra_css:
+  - /assets/css/custom.css
+  - /assets/css/blog.css
+---
+{% include header.html %}
+{%- comment -%}
+  Index of the blog. Posts come from the VpnHood.Blog repo (fetched into _blog/ at
+  build time); this page only lists them. A post carries `lang` only when it is a
+  translation, so the English index shows the ones without it — and a language's
+  index exists only once that language actually has translated posts.
+{%- endcomment -%}
+{%- assign vh_page_lang = page.lang | default: 'en' -%}
+{%- assign vh_posts = site.blog | sort: 'date' | reverse -%}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div class="section-start-text" data-aos="fade-up">
+              <h1 class="section-title vh-txt-grad-purple-400">{{ tc.blog_heading | default: 'VpnHood Blog' }}</h1>
+              <p class="section-desc">{{ tc.blog_desc | default: 'Guides, engineering notes, and news from the VpnHood project.' }}</p>
+            </div>
+
+            <ul class="vh-post-list">
+              {%- for vh_post in vh_posts -%}
+              {%- assign vh_post_lang = vh_post.lang | default: 'en' -%}
+              {%- if vh_post_lang == vh_page_lang and vh_post.published != false %}
+              <li class="vh-post-card">
+                <article>
+                  <h2 class="vh-post-card-title">
+                    <a href="{{ vh_post.url }}">{{ vh_post.headline }}</a>
+                  </h2>
+                  <p class="vh-post-meta">
+                    <time datetime="{{ vh_post.date | date_to_xmlschema }}">{{ vh_post.date | date_to_long_string }}</time>
+                    {%- if vh_post.tags and vh_post.tags.size > 0 %}
+                    <span aria-hidden="true">·</span>
+                    <span>{{ vh_post.tags | join: ', ' }}</span>
+                    {%- endif %}
+                  </p>
+                  <p class="vh-post-card-desc">{{ vh_post.description }}</p>
+                </article>
+              </li>
+              {%- endif -%}
+              {%- endfor %}
+            </ul>
+
+            {%- assign vh_visible = vh_posts | where_exp: 'p', 'p.published != false' -%}
+            {%- if vh_visible.size == 0 %}
+            <p class="vh-post-empty">{{ tc.blog_empty | default: 'No posts yet.' }}</p>
+            {%- endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

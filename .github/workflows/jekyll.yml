@@ -70,6 +70,79 @@ jobs:
             echo "synced $p (wiki)"
           done
 
+      # Blog content lives in the private vpnhood/VpnHood.Blog repo so its writers
+      # never need access to this one; the build pulls it in and renders it with the
+      # site's own chrome. BLOG_DEPLOY_KEY is a READ-ONLY deploy key on that repo.
+      # Checked out to a dot-folder, which Jekyll ignores, so only the staged copy
+      # is ever read as site content.
+      #
+      # NOTHING ABOUT THE BLOG MAY BLOCK THIS DEPLOY. The marketing site has to stay
+      # publishable regardless of the state of the content repo, so this step is
+      # continue-on-error and the staging step below falls back to the last good
+      # copy. Deliberate: the previous design failed the build on a bad fetch, which
+      # let the blog repo hold the whole site hostage.
+      - name: Fetch blog content
+        id: blog_fetch
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          repository: vpnhood/VpnHood.Blog
+          path: .blog-src
+          ssh-key: ${{ secrets.BLOG_DEPLOY_KEY }}
+          persist-credentials: false
+
+      # Last known-good content, so an unreachable content repo doesn't take the
+      # blog off the air (every /blog/ URL 404ing would be far worse than shipping
+      # slightly stale posts). Rotating key + prefix restore = "always the newest".
+      - name: Restore last good blog content
+        uses: actions/cache/restore@v4
+        with:
+          path: .blog-good
+          key: blog-good-${{ github.run_id }}
+          restore-keys: blog-good-
+
+      # Re-validate here rather than trusting the content repo's own CI: this build
+      # is what publishes, so it is what has to be sure — a writer who merges past a
+      # red check still cannot put a broken post on the site. --prune drops only the
+      # posts that fail, so one bad file never holds back the rest.
+      - name: Validate and stage blog content
+        run: |
+          set -euo pipefail
+          pip install --quiet pyyaml
+          staged=""
+
+          if [ -d .blog-src/posts ] && python .blog-src/tools/validate-posts.py --prune; then
+            rm -rf .blog-good && mkdir -p .blog-good
+            cp -r .blog-src/posts .blog-good/posts
+            cp -r .blog-src/images .blog-good/images 2>/dev/null || mkdir -p .blog-good/images
+            cp .blog-src/redirects.yml .blog-good/redirects.yml 2>/dev/null || true
+            staged="fresh"
+            echo "BLOG_CACHE_SAVE=1" >> "$GITHUB_ENV"
+          elif [ -d .blog-good/posts ]; then
+            echo "::warning::blog content unusable this run — falling back to the last good copy"
+            staged="cached"
+          else
+            echo "::warning::no blog content available (fetch failed and no cache) — publishing the site without /blog/"
+          fi
+
+          # Replace, never merge: the staged tree must mirror the content repo, so a
+          # post or image deleted there disappears from the site.
+          rm -rf _blog assets/images/blog _data/blog_redirects.yml
+          if [ -n "$staged" ]; then
+            mkdir -p _blog assets/images/blog
+            cp -r .blog-good/posts/. _blog/
+            find .blog-good/images -maxdepth 1 -type f ! -name '.gitkeep' -exec cp {} assets/images/blog/ \; 2>/dev/null || true
+            [ -f .blog-good/redirects.yml ] && cp .blog-good/redirects.yml _data/blog_redirects.yml
+            echo "staged ($staged) $(find _blog -name '*.md' | wc -l) post(s), $(find assets/images/blog -type f | wc -l) image(s)"
+          fi
+
+      - name: Save blog content
+        if: env.BLOG_CACHE_SAVE == '1'
+        uses: actions/cache/save@v4
+        with:
+          path: .blog-good
+          key: blog-good-${{ github.run_id }}
+
       # Translate anything stale (source copy edited without running the translator
       # locally) so a deploy never ships untranslated strings. Incremental: the
       # committed vh_translator/watches/ files make this a no-op when nothing

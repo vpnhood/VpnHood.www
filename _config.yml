@@ -28,6 +28,27 @@ defaults:
       path: ""
     values:
       image: /assets/images/og-image.png
+  # Blog posts. Content is FETCHED from the VpnHood.Blog repo at build time into
+  # _blog/<lang>/<slug>.md (gitignored here) — see CLAUDE.md "Blog".
+  # render_with_liquid: false — posts are written by a blogger who has no reason
+  # to know Liquid, so `{{ }}` and `{% %}` must render literally (code samples).
+  - scope:
+      path: ""
+      type: blog
+    values:
+      layout: post
+      nav_active: blog
+      render_with_liquid: false
+      extra_css:
+        - /assets/css/custom.css
+        - /assets/css/blog.css
+
+# Blog posts live in a collection so they carry a date and can be sorted and
+# grouped; URLs (/blog/<slug>/, /<lang>/blog/<slug>/) are stamped by
+# _plugins/blog-pages.rb, which is why no permalink is set here.
+collections:
+  blog:
+    output: true
 
 # Per-language page trees (/fa/..., /fr/...) are generated at build time by
 # _plugins/i18n-pages.rb — no translated page copies exist in the repo. See

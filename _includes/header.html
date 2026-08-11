@@ -628,6 +628,19 @@
                               </div>
                             </div>
                           </li>
+                          {%- comment -%} Blog. A language gets its own /xx/blog/ tree only once it
+                               has translated posts, so link to this language's index when it exists
+                               and fall back to English otherwise — the same counterpart-else-fallback
+                               rule as lang-selector.html, and it upgrades itself when translations
+                               land. `| default:` on the label because tc falls back to English as a
+                               whole file: a translated chrome.json missing this key would render an
+                               unnamed link. {%- endcomment -%}
+                          {%- capture vh_blog_probe %}{{ vh_base }}/blog/{% endcapture -%}
+                          {%- assign vh_blog_page = site.pages | where: "url", vh_blog_probe | first -%}
+                          {%- if vh_blog_page %}{% capture vh_blog_url %}{{ vh_base }}/blog{% endcapture %}{% else %}{% assign vh_blog_url = '/blog' %}{% endif -%}
+                          <li class="vh-nav-item{% if page.nav_active == 'blog' %} active{% endif %}">
+                            <a href="{{ vh_blog_url }}">{{ tc.nav_blog | default: site.data.i18n.en.chrome.nav_blog }}</a>
+                          </li>
                         </ul>
                       </nav>
                     </div>

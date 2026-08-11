@@ -1,0 +1,75 @@
+{% include header.html %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <article class="vh-post">
+              <header class="vh-post-head">
+                <h1 class="vh-post-title vh-txt-grad-purple-400">{{ page.headline }}</h1>
+                <p class="vh-post-meta">
+                  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+                  {%- assign vh_words = content | number_of_words -%}
+                  {%- assign vh_minutes = vh_words | divided_by: 200 | plus: 1 -%}
+                  <span aria-hidden="true">·</span>
+                  <span>{{ vh_minutes }} min read</span>
+                  {%- if page.author %}
+                  <span aria-hidden="true">·</span>
+                  <span>{{ page.author }}</span>
+                  {%- endif %}
+                </p>
+                {%- if page.tags and page.tags.size > 0 %}
+                <ul class="vh-post-tags">
+                  {%- for vh_tag in page.tags %}
+                  <li>{{ vh_tag }}</li>
+                  {%- endfor %}
+                </ul>
+                {%- endif %}
+              </header>
+
+              {%- if page.image %}
+              <img class="vh-post-hero" src="{{ page.image }}" alt="" width="1200" height="630" />
+              {%- endif %}
+
+              {%- comment -%}
+                Table of contents, built from the rendered H2s (kramdown adds the ids).
+                Opt in per post with `toc: true`; skipped when a post has fewer than two
+                sections, where a contents list is just noise.
+              {%- endcomment -%}
+              {%- assign vh_sections = content | split: '<h2 id="' -%}
+              {%- if page.toc and vh_sections.size > 2 %}
+              <nav class="vh-post-toc" aria-labelledby="vh-toc-heading">
+                <h2 id="vh-toc-heading">{{ tc.blog_contents | default: 'Contents' }}</h2>
+                <ul>
+                  {%- for vh_section in vh_sections offset:1 %}
+                  {%- assign vh_id = vh_section | split: '"' | first -%}
+                  {%- assign vh_text = vh_section | split: '</h2>' | first | split: '>' | last -%}
+                  <li><a href="#{{ vh_id }}">{{ vh_text }}</a></li>
+                  {%- endfor %}
+                </ul>
+              </nav>
+              {%- endif %}
+
+              <div class="vh-post-body">
+                {{ content }}
+              </div>
+
+              <p class="vh-post-back">
+                <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/blog">&larr; {{ tc.blog_all_posts | default: 'All posts' }}</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{%- comment -%}
+  No BlogPosting JSON-LD here: jekyll-seo-tag already emits a complete one for any
+  document with a date (headline, description, datePublished, dateModified from
+  `last_modified_at`, image, author, publisher, mainEntityOfPage). A second block
+  would duplicate the entity and risk contradicting it.
+{%- endcomment -%}
+{% include footer.html %}
