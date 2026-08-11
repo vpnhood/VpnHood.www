@@ -39,6 +39,14 @@ module VhBlogPages
         doc.data["headline"] = headline
         doc.data["title"] = brand(headline)
 
+        # `image` is never empty: _config.yml gives every document the site-wide
+        # OG share image by default. So the index card can't test it directly —
+        # every post would show the same generic thumbnail. A post's own image
+        # always lives under the blog asset path (the content repo's validator
+        # requires it), which is what distinguishes the two.
+        image = doc.data["image"].to_s
+        doc.data["card_image"] = image if image.start_with?("/assets/images/blog/")
+
         # Territory-qualified OG locale, same source and reasoning as the
         # generated page clones in _plugins/i18n-pages.rb.
         if lang != "en" && site.data["languages"]

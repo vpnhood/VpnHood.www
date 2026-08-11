@@ -34,17 +34,33 @@ extra_css:
               {%- for vh_post in vh_pg.posts %}
               <li class="vh-post-card">
                 <article>
-                  <h2 class="vh-post-card-title">
-                    <a href="{{ vh_post.url }}">{{ vh_post.headline }}</a>
-                  </h2>
-                  <p class="vh-post-meta">
-                    <time datetime="{{ vh_post.date | date_to_xmlschema }}">{{ vh_post.date | date_to_long_string }}</time>
-                    {%- if vh_post.tags and vh_post.tags.size > 0 %}
-                    <span aria-hidden="true">·</span>
-                    <span>{{ vh_post.tags | join: ', ' }}</span>
-                    {%- endif %}
-                  </p>
-                  <p class="vh-post-card-desc">{{ vh_post.description }}</p>
+                  {%- comment -%}
+                    Optional thumbnail — a card without one simply runs full width.
+                    `card_image`, not `image`: every document inherits the site-wide OG
+                    share image from _config.yml defaults, so `image` is always set and
+                    would put the same generic picture on every card (see
+                    _plugins/blog-pages.rb). alt="" and aria-hidden because the heading
+                    beside it is the link text; describing the picture again would make
+                    screen readers announce the same post twice.
+                  {%- endcomment -%}
+                  {%- if vh_post.card_image %}
+                  <a class="vh-post-card-media" href="{{ vh_post.url }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ vh_post.card_image }}" alt="" loading="lazy" decoding="async" width="1200" height="630" />
+                  </a>
+                  {%- endif %}
+                  <div class="vh-post-card-text">
+                    <h2 class="vh-post-card-title">
+                      <a href="{{ vh_post.url }}">{{ vh_post.headline }}</a>
+                    </h2>
+                    <p class="vh-post-meta">
+                      <time datetime="{{ vh_post.date | date_to_xmlschema }}">{{ vh_post.date | date_to_long_string }}</time>
+                      {%- if vh_post.tags and vh_post.tags.size > 0 %}
+                      <span aria-hidden="true">·</span>
+                      <span>{{ vh_post.tags | join: ', ' }}</span>
+                      {%- endif %}
+                    </p>
+                    <p class="vh-post-card-desc">{{ vh_post.description }}</p>
+                  </div>
                 </article>
               </li>
               {%- endfor %}

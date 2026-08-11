@@ -22,6 +22,32 @@ $vh-post-measure: 44rem; // ~72 characters at the body size — a comfortable re
   &:last-child {
     border-bottom: 0;
   }
+
+  // Thumbnail beside the text; a post without an image just fills the row.
+  > article {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+}
+
+.vh-post-card-media {
+  flex: 0 0 clamp(7rem, 22%, 11rem);
+  display: block;
+  border-radius: 0.6rem;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
+
+.vh-post-card-text {
+  min-width: 0; // lets long words wrap instead of stretching the flex row
 }
 
 .vh-post-card-title {
@@ -44,6 +70,19 @@ $vh-post-measure: 44rem; // ~72 characters at the body size — a comfortable re
 .vh-post-card-desc {
   color: var(--vh-text-soft);
   margin: 0.5rem 0 0;
+}
+
+// Stack below Bootstrap's sm breakpoint — side by side leaves the text too narrow.
+@media (max-width: 575.98px) {
+  .vh-post-card > article {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .vh-post-card-media {
+    flex-basis: auto;
+    width: 100%;
+  }
 }
 
 .vh-post-empty {

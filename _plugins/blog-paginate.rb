@@ -17,7 +17,7 @@ module VhBlogPaginate
     safe false
     priority :low
 
-    PER_PAGE = 10
+    PER_PAGE = 25
 
     def generate(site)
       collection = site.collections["blog"]
