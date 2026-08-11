@@ -147,17 +147,26 @@ jobs:
       # locally) so a deploy never ships untranslated strings. Incremental: the
       # committed vh_translator/watches/ files make this a no-op when nothing
       # changed — and because the results are COMMITTED BACK below, each change is
-      # translated exactly once, not on every publish. Fail-fast like the legal
-      # sync: on failure the build is skipped and Pages keeps serving the previous
-      # deployment. Requires the GEMINI_API_KEY repo secret and
-      # VpnHood.Tools.ResourceTranslator >= 1.1.3 on NuGet (version pinned in
-      # .config/dotnet-tools.json).
+      # translated exactly once, not on every publish. Requires the GEMINI_API_KEY
+      # repo secret and VpnHood.Tools.ResourceTranslator >= 1.1.3 on NuGet (version
+      # pinned in .config/dotnet-tools.json).
+      #
+      # continue-on-error, NOT fail-fast: the translator writes each language file
+      # to disk as it finishes it, and saves that source file's watch once its
+      # targets are done — so a run that dies on file 12 of 20 has eleven files
+      # fully translated on disk. Failing here would skip the commit below and throw
+      # all of that away, to be paid for again on the next run. Instead we let the
+      # commit capture whatever finished, then fail the job afterwards (see
+      # "Stop if translation was incomplete") so a half-translated tree is never
+      # deployed. The next run resumes from the committed watches.
       - name: Set up .NET (vhtranslator)
         uses: actions/setup-dotnet@v6
         with:
           dotnet-version: "10.0.x"
 
       - name: Translate stale strings
+        id: translate
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -181,6 +190,20 @@ jobs:
             git commit -m "chore: translate changed strings [skip ci]"
             git push || (git pull --rebase && git push)
           fi
+
+      # Only now may an incomplete translation stop the run. Everything the
+      # translator finished is committed above, so the work survives and the next
+      # run picks up where this one stopped; what we refuse to do is publish a tree
+      # where some strings are translated and others are not. deploy needs: build,
+      # so Pages keeps serving the previous deployment — same guarantee as before,
+      # minus the wasted work.
+      - name: Stop if translation was incomplete
+        if: steps.translate.outcome == 'failure'
+        run: |
+          echo "::error::vhtranslator did not finish. Whatever it completed has been committed; \
+          re-run this workflow to translate the rest. Skipping deploy so a partly \
+          translated site is never published."
+          exit 1
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
