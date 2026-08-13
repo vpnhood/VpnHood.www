@@ -95,7 +95,7 @@ jobs:
       # blog off the air (every /blog/ URL 404ing would be far worse than shipping
       # slightly stale posts). Rotating key + prefix restore = "always the newest".
       - name: Restore last good blog content
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: .blog-good
           key: blog-good-${{ github.run_id }}
@@ -138,7 +138,7 @@ jobs:
 
       - name: Save blog content
         if: env.BLOG_CACHE_SAVE == '1'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: .blog-good
           key: blog-good-${{ github.run_id }}
