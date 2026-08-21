@@ -1,6 +1,6 @@
 # VpnHood! CONNECT - Privacy Policy
 
-*Effective: 2026-08-12*
+*Effective: 2026-08-13*
 
 **PLEASE NOTE:** This privacy policy applies to the official **VpnHood! CONNECT** app and to the VPN servers **we operate**. Unlike VpnHood! CLIENT, CONNECT comes with its own built-in access and does not let you add another provider's server, so the servers you use are ours and this policy covers them.
 
@@ -96,24 +96,39 @@ If you have signed in, you can permanently delete your account at any time:
 
 Deletion applies everywhere at once: you are signed out on all devices, your sign-in identity and
 email address are erased, and there is no way to restore the account — signing in again later
-creates a new, empty one.
+creates a new, empty one. Premium granted by the account ends with it on every device; a premium
+code you own — one you typed in yourself, or one you bought on our website — is yours and keeps
+working until the period you paid for ends.
+
+**Nothing blocks a deletion.** If you bought services on our website, their billing is cancelled at
+the end of the period already paid for, so no further invoice is generated and nothing you paid for
+is cut short; unpaid invoices are cancelled and your stored payment method is removed.
+
+**Before anything is erased, we show you every premium code you paid for, one last time**, and send
+one final email to your address carrying the same codes — the last message we will ever send there.
+Save them: after deletion we can no longer look them up for you, and a saved code is the way back
+that always works, on any platform, years later.
 
 What deletion does **not** do:
 
-- It does not cancel a subscription. Subscriptions are billed by the store where you purchased
-  them, and only you can cancel there — before or after deleting. Access you have already paid for
-  keeps working until the current period ends.
-- It does not erase invoices and payment records. We are legally required to keep them for
-  accounting and tax purposes, but they are anonymized: your name and email address are replaced
-  with placeholders.
+- It does not cancel an app-store subscription by itself. Subscriptions are billed by the store
+  where you purchased them. Where we are able to stop future renewals for you, deletion offers
+  that as a plain choice and tells you what actually happened; otherwise only you can cancel,
+  in the store that billed you — before or after deleting. A subscription that is still running
+  remains yours: create a new account and use **Restore purchase** to attach it again.
+- **A subscription whose payment has failed is still open.** It looks finished, but the store can
+  revive it and start charging again once the payment method works. Deleting the account does not
+  change that — cancel the subscription in the store if you do not want it back.
+- It does not erase invoices, and does not strip the name off them. We are legally required to
+  keep financial records, and a financial record has to say who bought — so invoices keep the name
+  they were issued with, frozen exactly as issued. They are kept because tax law requires it, for
+  as long as that law requires, and are used for nothing else: not for support, not for marketing,
+  only to satisfy that legal obligation.
 - Residual copies of your data may remain in our server logs and backups for up to **30 days**
   after deletion, after which they expire.
 
-If you also have services purchased on our website, those form a separate billing relationship:
-deletion is refused until you cancel them in the web client area, so you are never left with a
-running payment you cannot manage. Companies that processed your data in their own right — your
-sign-in provider, the app store that billed you, and payment processors — retain their own records
-under their own published policies.
+Companies that processed your data in their own right — your sign-in provider, the app store that
+billed you, and payment processors — retain their own records under their own published policies.
 
 Separately from deletion: if we process a refund for a purchase made **on our website**, we keep an
 anonymous one-way hash of the refunded account's email address for up to **24 months**, used only to

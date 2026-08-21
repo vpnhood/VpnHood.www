@@ -62,7 +62,7 @@ You can choose one of the following options for your clients' Activities, and yo
 
 We do not sell or share any data of you and your clients with any third party.  
 
-## Forget me
+## Delete Your Account
 
 You can request to delete your account and data from the Manager database. Still, it is almost impossible to erase your data from our old backups, which were created by database cloud services such as Azure Database.  
 
