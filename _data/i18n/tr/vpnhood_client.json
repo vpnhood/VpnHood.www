@@ -1,9 +1,9 @@
 {
   "meta_title": "VpnHood! CLIENT",
-  "meta_description": "VpnHood! CLIENT, kendi VPN sunucunuz için ücretsiz ve açık kaynaklı uygulamadır. Kullanıcılar Android, Android TV, Windows veya Linux'ta bağlanmak için bir erişim anahtarı yapıştırır.",
+  "meta_description": "VpnHood! CLIENT, kendi sunucunuzdaki VPN için ücretsiz ve açık kaynaklı bir uygulamadır. Bağlanmak için Android, iOS, Android TV, Windows veya Linux'ta erişim anahtarını yapıştırmanız yeterli.",
   "page_title": "VpnHood! CLIENT",
   "page_desc": ".NET platformuyla tamamen geliştirilen ilk açık kaynaklı VPN olan <b>VpnHood! ENGINE</b> ile güçlendirilmiş, hızlı, güvenli ve güvenilir VPN çözümü.",
-  "intro": "VpnHood! CLIENT; Android, Android TV, Windows ve Linux'ta kullanıcılarınızın yükleyeceği ücretsiz, açık kaynaklı bir uygulamadır. Anahtarı elinde tutan kişinin hiçbir açıklamaya ihtiyaç duymayacağı şekilde tasarlandı:",
+  "intro": "VpnHood! CLIENT; Android, iOS, Android TV, Windows ve Linux'ta kullanıcılarınızın yükleyeceği ücretsiz, açık kaynaklı bir uygulamadır. Anahtara sahip olan herkesin kolayca ve ek bir açıklamaya gerek duymadan kullanabilmesi için tasarlandı:",
   "li_key_title": "Bir anahtar yapıştır, tamam",
   "li_key_desc": "Bir erişim anahtarı ekle ve bağlan; hesap yok, kayıt olmak yok, ayar yapmak yok.",
   "li_fast_title": "Hızlı ve hafif",

@@ -10,5 +10,5 @@
   "q3": "VpnHood! CONNECT vs. VpnHood! CLIENT?",
   "a3": "VpnHood! CONNECT ist ein kostenloses VPN, das Nutzer uneingeschränkt nutzen können. VpnHood! CLIENT ist zwar ebenfalls kostenlos, enthält aber keine eigenen Server für direkte Verbindungen. Stattdessen können Nutzer, die ihr eigenes dediziertes VPN über VpnHood! MANAGER eingerichtet haben, diese App zusammen mit einem Server-Schlüssel für den Zugriff mit ihren Nutzern teilen.",
   "q4": "Welche Plattformen unterstützt VpnHood?",
-  "a4": "Sowohl VpnHood! CONNECT als auch VpnHood! CLIENT unterstützen Android, Android TV und Windows. VpnHood! CONNECT für Windows ist jedoch nicht kostenlos. Sie benötigen einen Premium-Key, den Sie auf der Seite <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">Tarife</a> erwerben können."
+  "a4": "VpnHood! CLIENT läuft auf Android, iOS (iPhone und iPad), Android TV, Windows und Linux. VpnHood! CONNECT läuft auf Android, Android TV, Windows und Linux. Unter Windows und Linux bietet VpnHood! CONNECT keine kostenlosen Server; dafür benötigen Sie einen Premium-Key, den Sie auf der Seite <a href=\"/free-vpn/go-premium\" class=\"text-decoration-underline\">Premium-Tarife</a> erwerben können."
 }

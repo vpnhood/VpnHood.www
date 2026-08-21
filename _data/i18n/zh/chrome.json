@@ -19,7 +19,7 @@
   "nav_server": "VpnHood! SERVER",
   "nav_server_sub": "在您自己的设备上运行的开源引擎 —— 支持 Linux、Windows 或 Docker",
   "nav_client_app": "VpnHood! CLIENT",
-  "nav_client_app_sub": "用户专用的免费应用 — 支持 Android、电视、Windows 和 Linux",
+  "nav_client_app_sub": "供用户安装的免费应用 — 支持 Android、iOS、TV、Windows 和 Linux",
   "nav_github_project": "GitHub 源码",
   "nav_github_project_sub": "完全开源，并已通过两家安全公司的审计",
   "nav_resources": "资源",
