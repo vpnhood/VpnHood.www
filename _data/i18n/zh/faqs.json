@@ -6,9 +6,9 @@
   "q1": "为什么选择 VpnHood？",
   "a1": "VpnHood 是一款由 VpnHood 团队自主研发的免费 VPN，搭载 <b>VpnHood! ENGINE</b> 强劲引擎。它采用基于开源基础打造的独家协议，确保最高透明度。我们的开源代码完全公开，供大众审查以验证其安全性与完整性。VpnHood 旨在优化数据传输，实现高性能连接并提升网络兼容性。我们承诺绝不收集任何个人信息，全力守护您的隐私，为您带来极其安全、私密的数字体验。",
   "q2": "VpnHood 是免费的 VPN 吗？",
-  "a2": "是的，VpnHood 提供无任何时间、流量或带宽限制的免费 VPN 服务。不过，您也可以通过升级至高级版解锁更多功能。高级版套餐提供更多国家的服务器、更快的连接速度以及更强大的应用功能。欲了解更多信息，请访问<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">套餐详情</a>页面。",
+  "a2": "是的，VpnHood 提供完全免费的 VPN 服务，无任何时间、流量或带宽限制。此外，您也可以选择升级高级版以解锁更多专属功能，包括畅享更多国家和地区的服务器、更快的连接速度以及更丰富的应用功能。详情请访问<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">套餐详情</a>页面。",
   "q3": "VpnHood! CONNECT 与 VpnHood! CLIENT 有何区别？",
   "a3": "VpnHood! CONNECT 是一款用户可以无限制畅享的免费 VPN。而 VpnHood! CLIENT 虽然同样免费，但本身不包含直连服务器。它通常用于：通过 VpnHood! MANAGER 搭建专属 VPN 的用户，可以将此应用连同服务器密钥（Server Key）分享给其他人使用。",
   "q4": "VpnHood 支持哪些平台？",
-  "a4": "VpnHood! CLIENT 支持 Android、iOS（iPhone 与 iPad）、Android TV、Windows 和 Linux。VpnHood! CONNECT 支持 Android、Android TV、Windows 以及 Linux。在 Windows 和 Linux 上，VpnHood! CONNECT 不提供免费服务器，您需要在<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">定价</a>页面购买高级版密钥。"
+  "a4": "VpnHood! CLIENT 支持 Android、iOS（iPhone 和 iPad）、Android TV、Windows 及 Linux。VpnHood! CONNECT 支持 Android、Android TV、Windows 及 Linux。在 Windows 和 Linux 平台，VpnHood! CONNECT 未提供免费服务器，您需要购买高级版密钥（Premium Key），欢迎前往<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">高级版定价</a>页面选购。"
 }

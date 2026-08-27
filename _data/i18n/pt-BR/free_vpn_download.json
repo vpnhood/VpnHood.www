@@ -18,7 +18,7 @@
   "windows_min_version": "Compatível com <b>Windows 10</b> ou superior.",
   "windows_x64_only": "Apenas para versão Windows x64.",
   "direct_link_note": "É recomendável usar o link direto apenas se você não tiver acesso ao Google Play.",
-  "windows_premium_note": "A versão para Windows não possui servidores grátis, e você precisa <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">migrar para o Premium</b></a> para usá-la.",
+  "windows_premium_note": "A versão para Windows não possui servidores grátis. Você precisa <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">mudar para o Premium</b></a> para usá-la.",
   "linux_arch_note": "Compatível com arquiteturas x64 e ARM64.",
-  "linux_premium_note": "A versão para Linux não possui servidores grátis, e você precisa <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">migrar para o Premium</b></a> para usá-la."
+  "linux_premium_note": "A versão para Linux não possui servidores grátis. Você precisa <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">mudar para o Premium</b></a> para usá-la."
 }

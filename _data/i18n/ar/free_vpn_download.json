@@ -18,7 +18,7 @@
   "windows_min_version": "يدعم نظام <b>ويندوز 10</b> والأحدث.",
   "windows_x64_only": "نسخة ويندوز 64-بت فقط.",
   "direct_link_note": "من الأفضل استخدام الرابط المباشر للتحميل فقط إذا لم يكن متجر جوجل بلاي متاحاً لديك.",
-  "windows_premium_note": "لا يتضمن إصدار Windows أي خوادم مجانية، ويتطلب <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى النسخة المميزة</b></a> لاستخدامه.",
+  "windows_premium_note": "لا يحتوي إصدار Windows على خوادم مجانية، لذا يلزم <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى الباقة المميزة</b></a> لاستخدامه.",
   "linux_arch_note": "يدعم معمارية x64 و ARM64.",
-  "linux_premium_note": "لا يتضمن إصدار Linux أي خوادم مجانية، ويتطلب <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى النسخة المميزة</b></a> لاستخدامه."
+  "linux_premium_note": "لا يحتوي إصدار Linux على خوادم مجانية، لذا يلزم <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى الباقة المميزة</b></a> لاستخدامه."
 }

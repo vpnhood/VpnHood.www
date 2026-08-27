@@ -18,7 +18,7 @@
   "windows_min_version": "Поддерживается <b>Windows 10</b> и выше.",
   "windows_x64_only": "Только для версии Windows x64.",
   "direct_link_note": "Скачивайте по прямой ссылке только в том случае, если у вас нет доступа к Google Play.",
-  "windows_premium_note": "В версии для Windows нет бесплатных серверов. Чтобы использовать её, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>.",
+  "windows_premium_note": "В версии для Windows нет бесплатных серверов. Чтобы пользоваться приложением, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>.",
   "linux_arch_note": "Поддерживает архитектуры x64 и ARM64.",
-  "linux_premium_note": "В версии для Linux нет бесплатных серверов. Чтобы использовать её, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>."
+  "linux_premium_note": "В версии для Linux нет бесплатных серверов. Чтобы пользоваться приложением, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>."
 }

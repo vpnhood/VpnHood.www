@@ -18,7 +18,7 @@
   "windows_min_version": "<b>Windows 10</b> ve üzerini destekler.",
   "windows_x64_only": "Yalnızca Windows x64 sürümü.",
   "direct_link_note": "Doğrudan bağlantıyı yalnızca Google Play'e erişiminiz yoksa kullanmanız önerilir.",
-  "windows_premium_note": "Windows sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a geçin</b></a>.",
+  "windows_premium_note": "Windows sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir.",
   "linux_arch_note": "x64 ve ARM64 mimarilerini destekler.",
-  "linux_premium_note": "Linux sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a geçin</b></a>."
+  "linux_premium_note": "Linux sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir."
 }
