@@ -227,7 +227,7 @@ nav_active: free-vpn
                                 <li>{{ t.windows_min_version }}</li>
                                 <li>{{ t.windows_x64_only }}</li>
                                 <li>
-                                  {{ t.windows_premium_note }}
+                                  {{ t.windows_premium_note | replace: 'href="/', vh_href_lang }}
                                 </li>
                               </ul>
                             </div>
@@ -281,7 +281,7 @@ nav_active: free-vpn
                               <ul class="mb-0 small">
                                 <li>{{ t.linux_arch_note }}</li>
                                 <li>
-                                  {{ t.linux_premium_note }}
+                                  {{ t.linux_premium_note | replace: 'href="/', vh_href_lang }}
                                 </li>
                               </ul>
                             </div>

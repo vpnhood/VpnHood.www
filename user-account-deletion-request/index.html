@@ -36,7 +36,7 @@ nav_active: resources
 <!-- text-start, not text-left: Bootstrap 5 renamed it, so the old name is a dead class and the
      paragraph silently inherited the container's text-center. Logical alignment is also what an
      RTL locale needs here. -->
-<p class="text-start mb-5">{{ t.page_desc }}</p>
+<p class="text-start mb-5">{{ t.page_desc | replace: 'href="/', vh_href_lang }}</p>
 </div>     </div>
 
         

@@ -116,17 +116,25 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                               height="25"
                               viewBox="0 0 24 24"
                             >
-                              <path
+                              <g
                                 fill="none"
                                 stroke="#fff"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                stroke-width="2.6"
-                                d="m7 12.9l3.143 3.6L18 7.5"
-                              ></path>
+                                stroke-width="2"
+                              >
+                                <rect
+                                  x="5.5"
+                                  y="10.5"
+                                  width="13"
+                                  height="9"
+                                  rx="2"
+                                ></rect>
+                                <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"></path>
+                              </g>
                             </svg>
                           </div>
-                          <span>{{ t.li_free_service }}</span>
+                          <span>{{ t.li_secure }}</span>
                         </li>
                         <li
                           class="d-flex align-items-center my-3"
@@ -140,17 +148,22 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                               height="25"
                               viewBox="0 0 24 24"
                             >
-                              <path
+                              <g
                                 fill="none"
                                 stroke="#fff"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2.6"
-                                d="m7 12.9l3.143 3.6L18 7.5"
-                              ></path>
+                                transform="translate(3 3) scale(0.75)"
+                              >
+                                <path
+                                  d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                                ></path>
+                                <line x1="1" y1="1" x2="23" y2="23"></line>
+                              </g>
                             </svg>
                           </div>
-                          <span>{{ t.li_no_limits }}</span>
+                          <span>{{ t.li_undetectable }}</span>
                         </li>
                         <li
                           class="d-flex align-items-center"
@@ -164,17 +177,22 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                               height="25"
                               viewBox="0 0 24 24"
                             >
-                              <path
+                              <g
                                 fill="none"
                                 stroke="#fff"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2.6"
-                                d="m7 12.9l3.143 3.6L18 7.5"
-                              ></path>
+                                transform="translate(3 3) scale(0.75)"
+                              >
+                                <path
+                                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.83z"
+                                ></path>
+                                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                              </g>
                             </svg>
                           </div>
-                          <span>{{ t.li_no_registration }}</span>
+                          <span>{{ t.li_free_service }}</span>
                         </li>
                       </ul>
                       <div
@@ -184,7 +202,7 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                         data-aos-delay="700"
                       >
                         <a
-                          href="{{ vh_base }}/free-vpn/download"
+                          href="{{ vh_base }}/free-vpn/download/"
                           class="vh-btn vh-download-btn text-capitalize"
                           >{{ t.download_now }}<svg class="vh-rtl-mirror" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +312,7 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                       class="d-xl-block d-none my-4 mx-auto"
                     />
                     <a
-                      href="{{ vh_base }}/free-vpn/features"
+                      href="{{ vh_base }}/free-vpn/features/"
                       id="fullFeaturesBtn"
                       class="vh-text-btn vh-txt-green-200"
                     >
@@ -702,7 +720,7 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                 </div>
                 <div class="text-center" data-aos="fade-up">
                   <a
-                    href="{{ vh_base }}/free-vpn/features"
+                    href="{{ vh_base }}/free-vpn/features/"
                     class="vh-text-btn vh-txt-purple-300 mt-5"
                   > {{ t.explore_all_options }} <svg class="vh-rtl-mirror" aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1231,7 +1249,7 @@ preload_image: /assets/images/general/vpnhood-connect-app-phone.webp
                   </div>
                   <a
                     class="vh-btn vh-btn-secondary border-white fw-semibold fs-3 mt-5"
-                    href="{{ vh_base }}/free-vpn/download"
+                    href="{{ vh_base }}/free-vpn/download/"
                     data-aos="fade-up"
                   >
                     <span class="me-4">{{ t.get_it_now }}</span>

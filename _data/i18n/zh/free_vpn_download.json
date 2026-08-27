@@ -18,7 +18,7 @@
   "windows_min_version": "支持 <b>Windows 10</b> 及以上版本。",
   "windows_x64_only": "仅限 Windows x64 版本。",
   "direct_link_note": "建议仅在无法访问 Google Play 时使用直链下载。",
-  "windows_premium_note": "Windows 版本没有任何免费服务器，您必须<a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">升级高级版</b></a>才能使用。",
+  "windows_premium_note": "Windows 版本没有任何免费服务器，您必须<a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">升级高级版</b></a>才能使用。",
   "linux_arch_note": "支持 x64 和 ARM64 架构。",
-  "linux_premium_note": "Linux 版本没有任何免费服务器，您必须<a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">升级高级版</b></a>才能使用。"
+  "linux_premium_note": "Linux 版本没有任何免费服务器，您必须<a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">升级高级版</b></a>才能使用。"
 }

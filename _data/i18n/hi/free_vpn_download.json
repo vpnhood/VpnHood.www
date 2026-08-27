@@ -18,7 +18,7 @@
   "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्शन को सपोर्ट करता है।",
   "windows_x64_only": "केवल Windows x64 वर्शन के लिए।",
   "direct_link_note": "डायरेक्ट लिंक से तभी डाउनलोड करना सबसे अच्छा है जब आपके पास Google Play तक पहुंच न हो।",
-  "windows_premium_note": "Windows वर्ज़न में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं। इसका इस्तेमाल करने के लिए <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">प्रीमियम पर अपग्रेड करें</b></a>।",
+  "windows_premium_note": "Windows वर्ज़न में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं। इसका इस्तेमाल करने के लिए <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम पर अपग्रेड करें</b></a>।",
   "linux_arch_note": "x64 और ARM64 आर्किटेक्चर को सपोर्ट करता है।",
-  "linux_premium_note": "Linux वर्ज़न में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं। इसका इस्तेमाल करने के लिए <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">प्रीमियम पर अपग्रेड करें</b></a>।"
+  "linux_premium_note": "Linux वर्ज़न में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं। इसका इस्तेमाल करने के लिए <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम पर अपग्रेड करें</b></a>।"
 }

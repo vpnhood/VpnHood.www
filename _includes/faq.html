@@ -27,7 +27,7 @@
 {%- comment -%} Questions nest under the section title (h2) on content pages, or under the page's own h1 on /faq (heading=false). {%- endcomment -%}
 {%- if include.heading == false -%}{%- assign q_level = 'h2' -%}{%- else -%}{%- assign q_level = 'h3' -%}{%- endif -%}
 {%- capture faq_accordion -%}
-<div id="faqAccordion" class="accordion accordion-flush px-4 mx-auto">
+<div id=/"faqAccordion" class="accordion accordion-flush px-4 mx-auto">
 {% for i in (1..50) %}{% assign vh_qk = 'q' | append: i %}{% assign vh_q = vh_faqs[vh_qk] %}{% if vh_q == nil %}{% break %}{% endif %}{% assign vh_ak = 'a' | append: i %}{% assign vh_a = vh_faqs[vh_ak] %}{% assign vh_side = i | modulo: 2 %}
   <div class="accordion-item" data-aos="fade-{% if vh_side == 1 %}right{% else %}left{% endif %}"{% unless i == 1 %} data-aos-delay="{{ i | minus: 1 | times: 100 }}"{% endunless %}>
     <{{ q_level }} class="accordion-header">
@@ -57,7 +57,7 @@
     {{ faq_accordion }}
     {% if include.explore != false %}
     <div class="text-center mt-5 pt-4" data-aos="fade-up">
-      <a href="{{ vh_base }}/faq" class="vh-text-btn vh-txt-purple-300">
+      <a href="{{ vh_base }}/faq/" class="vh-text-btn vh-txt-purple-300">
         {{ vh_faqs.view_all }}
         <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <g fill="none">

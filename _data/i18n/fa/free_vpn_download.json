@@ -18,7 +18,7 @@
   "windows_min_version": "پشتیبانی از <b>ویندوز ۱۰</b> و بالاتر.",
   "windows_x64_only": "فقط نسخه ۶۴ بیت ویندوز.",
   "direct_link_note": "پیشنهاد می‌شود تنها زمانی که به Google Play دسترسی ندارید، از لینک مستقیم استفاده کنید.",
-  "windows_premium_note": "نسخه Windows سرور رایگان ندارد و برای استفاده از آن باید <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">به نسخه ویژه ارتقا دهید</b></a>.",
+  "windows_premium_note": "نسخه Windows سرور رایگان ندارد و برای استفاده از آن باید <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">به نسخه ویژه ارتقا دهید</b></a>.",
   "linux_arch_note": "پشتیبانی از معماری‌های x64 و ARM64.",
-  "linux_premium_note": "نسخه Linux سرور رایگان ندارد و برای استفاده از آن باید <a href=\"/free-vpn/go-premium\"><b class=\"text-decoration-underline\">به نسخه ویژه ارتقا دهید</b></a>."
+  "linux_premium_note": "نسخه Linux سرور رایگان ندارد و برای استفاده از آن باید <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">به نسخه ویژه ارتقا دهید</b></a>."
 }

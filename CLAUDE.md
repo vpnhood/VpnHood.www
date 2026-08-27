@@ -112,7 +112,7 @@ Only **strings** are ever translated; pages are generated. Two halves:
 
 **Never hand-edit generated data folders** (`_data/i18n/<lang>/` — overwritten by the tool; fixes go in `vh_translator/prompt.txt`, or `vh_translator/prompts/<lang>.prompt.txt` for one language; per-key edits in the generated JSON survive until the source key changes). `header.html` derives **reciprocal hreflang + `x-default`** from the generated pages' `lang` and sets `<html lang>`/`dir` from `page.lang` + `_data/languages.yml` — see [.docs/seo-and-semantic-html.md](.docs/seo-and-semantic-html.md) §8 before touching any of it. Never add body-level `inLanguage` microdata. Translator bookkeeping lives in `vh_translator/watches/i18n/<file>.watch.json` — commit it.
 
-**Language-aware links (`vh_base`)**: `header.html` assigns `vh_base` once per page (`''` on English, `/fa` on Persian, …; Jekyll includes share Liquid scope). **Every internal link must be written `href="{{ vh_base }}/free-vpn/download"`** so translated pages link within their own tree — a bare `href="/free-vpn"` on a fa page would jump back to English. Exceptions (never prefixed): legal pages (`/privacy-policy`, `/terms-of-use`, `/vpnhood-*-privacy-policy` — English only by policy), `/assets/...`, and external URLs.
+**Language-aware links (`vh_base`)**: `header.html` assigns `vh_base` once per page (`''` on English, `/fa` on Persian, …; Jekyll includes share Liquid scope). **Every internal link must be written `href="{{ vh_base }}/free-vpn/download/"`** so translated pages link within their own tree — a bare `href="/free-vpn"` on a fa page would jump back to English. Exceptions (never prefixed, but still trailing-slashed): legal pages (`/privacy-policy/`, `/terms-of-use/`, `/vpnhood-*-privacy-policy/` — English only by policy). Never slashed: `/assets/...` and external URLs.
 
 **Chrome strings (`chrome.json`)**: all header/footer/offcanvas/language-selector text (nav labels, mega-menu blurbs, footer columns, copyright, aria-labels) lives in `_data/i18n/<lang>/chrome.json`; `header.html` assigns `tc` once per page (English fallback) and the includes render `{{ tc.* }}`. **Edit chrome copy there, never in the includes.**
 
@@ -144,7 +144,13 @@ On the original server-rendered site a `#chinaBar` was emitted server-side only 
 ## Markup Patterns
 - Section head: `<div class="section-start-text" data-aos="fade-up">` → `<div class="section-label"><h3 class="vh-txt-grad-purple-400">eyebrow</h3></div>` → `<h4 class="section-title vh-txt-grad-purple-400">` → `<p class="section-desc">`.
 - Buttons: `<a class="vh-btn vh-btn-primary …">` / `vh-btn-secondary`; text buttons `vh-text-btn vh-txt-purple-300`.
-- Internal links: `href="{{ vh_base }}/<path>"` (no trailing slash, matching the existing markup) — see Translations. Legal/asset/external URLs stay bare.
+- Internal links: `href="{{ vh_base }}/<path>/"` — **always with a trailing slash**. Jekyll
+  serves every page as `<path>/index.html`, so `/free-vpn/` is the canonical URL and
+  GitHub Pages 301s `/free-vpn` to it. Google *does* honour that redirect (URL Inspection
+  reports the slashless form as "Page with redirect", canonical = the slashed one), so this
+  is a crawl-efficiency and UX rule, not a duplicate-content fix: linking without the slash
+  costs a redirect hop on every internal navigation. See Translations. Asset/external URLs
+  stay bare.
 - Animations are **AOS** (`data-aos="fadeInUp|fade-left|…"`, `data-aos-delay`), initialized on a custom `vhPlayAnimate` event in the footer.
 - External `target="_blank"` links must announce the new tab — see SEO doc §6.
 

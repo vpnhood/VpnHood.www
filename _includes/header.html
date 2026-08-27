@@ -69,11 +69,16 @@
     {% if page.lang %}{% capture vh_lang_prefix %}/{{ page.lang }}{% endcapture %}{% assign vh_base_url = page.url | remove_first: vh_lang_prefix %}{% endif %}
 
     {% comment %} vh_base: language-aware link prefix ('' on English, '/fa' on Persian
-         pages, ...). Internal links site-wide use href="{{ vh_base }}/..." so a translated
+         pages, ...). Internal links site-wide use href="{{ vh_base }}/.../" so a translated
          page links within its own language tree. Assigned here once; Jekyll includes share
          scope, so page bodies and footer.html see it too. Legal pages are deliberately NOT
          prefixed — they exist in English only. {% endcomment %}
     {% assign vh_base = '' %}{% if page.lang and page.lang != 'en' %}{% assign vh_base = vh_lang_prefix %}{% endif %}
+    {% comment %} vh_href_lang: rewrites internal links embedded in i18n copy onto the
+       page's own language tree. Any {{ t.* }} value containing <a href="/..."> MUST be
+       piped through `replace: 'href="/', vh_href_lang` or a translated page links back
+       to English. {% endcomment %}
+    {%- capture vh_href_lang %}href="{{ vh_base }}/{% endcapture -%}
 
     {% comment %} tc: shared chrome strings (nav, footer, offcanvas, language selector)
          from _data/i18n/<lang>/chrome.json, falling back to English until a language's
@@ -355,42 +360,42 @@
                                       <li
                                         class="item-306 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/free-vpn"
+                                        <a href="{{ vh_base }}/free-vpn/"
                                           >{{ tc.nav_free_vpn_overview }}</a
                                         >
                                       </li>
                                       <li
                                         class="item-245 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/free-vpn/features"
+                                        <a href="{{ vh_base }}/free-vpn/features/"
                                           >{{ tc.nav_features }}</a
                                         >
                                       </li>
                                       <li
                                         class="item-246 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/free-vpn/comparison"
+                                        <a href="{{ vh_base }}/free-vpn/comparison/"
                                           >{{ tc.nav_comparison }}</a
                                         >
                                       </li>
                                       <li
                                         class="item-191 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/free-vpn/download"
+                                        <a href="{{ vh_base }}/free-vpn/download/"
                                           >{{ tc.nav_download }}</a
                                         >
                                       </li>
                                       <li
                                         class="item-264 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/free-vpn/free-vs-premium"
+                                        <a href="{{ vh_base }}/free-vpn/free-vs-premium/"
                                           >{{ tc.nav_free_vs_premium }}</a
                                         >
                                       </li>
                                       <li
                                         class="item-160 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/free-vpn/go-premium"
+                                        <a href="{{ vh_base }}/free-vpn/go-premium/"
                                           >{{ tc.nav_go_premium }}</a
                                         >
                                       </li>
@@ -401,7 +406,7 @@
                             </div>
                           </li>
                           <li class="vh-nav-item{% if page.nav_active == 'reseller' %} active{% endif %}">
-                            <a href="{{ vh_base }}/reseller">{{ tc.nav_reseller }}</a>
+                            <a href="{{ vh_base }}/reseller/">{{ tc.nav_reseller }}</a>
                           </li>
                           <li
                             class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'self-hosted' %} active{% endif %}"
@@ -468,28 +473,28 @@
                                       <li
                                         class="item-307 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/self-hosted-vpn"
+                                        <a href="{{ vh_base }}/self-hosted-vpn/"
                                           >{{ tc.nav_self_hosted_start }}<span class="vh-mega-sub">{{ tc.nav_self_hosted_start_sub }}</span></a
                                         >
                                       </li>
                                       <li
                                         class="item-109 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/vpnhood-manager"
+                                        <a href="{{ vh_base }}/vpnhood-manager/"
                                           >{{ tc.nav_manager }}<span class="vh-mega-sub">{{ tc.nav_manager_sub }}</span></a
                                         >
                                       </li>
                                       <li
                                         class="item-251 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/vpnhood-server"
+                                        <a href="{{ vh_base }}/vpnhood-server/"
                                           >{{ tc.nav_server }}<span class="vh-mega-sub">{{ tc.nav_server_sub }}</span></a
                                         >
                                       </li>
                                       <li
                                         class="item-162 menu_item item-header"
                                       >
-                                        <a href="{{ vh_base }}/vpnhood-client"
+                                        <a href="{{ vh_base }}/vpnhood-client/"
                                           >{{ tc.nav_client_app }}<span class="vh-mega-sub">{{ tc.nav_client_app_sub }}</span></a
                                         >
                                       </li>
@@ -518,7 +523,7 @@
                                unnamed link. {%- endcomment -%}
                           {%- capture vh_blog_probe %}{{ vh_base }}/blog/{% endcapture -%}
                           {%- assign vh_blog_page = site.pages | where: "url", vh_blog_probe | first -%}
-                          {%- if vh_blog_page %}{% capture vh_blog_url %}{{ vh_base }}/blog{% endcapture %}{% else %}{% assign vh_blog_url = '/blog' %}{% endif %}
+                          {%- if vh_blog_page %}{% capture vh_blog_url %}{{ vh_base }}/blog/{% endcapture %}{% else %}{% assign vh_blog_url = '/blog/' %}{% endif %}
                           <li class="vh-nav-item{% if page.nav_active == 'blog' %} active{% endif %}">
                             <a href="{{ vh_blog_url }}">{{ tc.nav_blog | default: site.data.i18n.en.chrome.nav_blog }}</a>
                           </li>
@@ -542,7 +547,7 @@
                                           class="vh-mega-group-child"
                                         >
                                           <li>
-                                            <a href="{{ vh_base }}/faq">{{ tc.nav_faq }}</a>
+                                            <a href="{{ vh_base }}/faq/">{{ tc.nav_faq }}</a>
                                           </li>
                                           <li>
                                             <a
@@ -564,7 +569,7 @@
                                           </li>
                                           <li>
                                             <a
-                                              href="{{ vh_base }}/user-account-deletion-request"
+                                              href="{{ vh_base }}/user-account-deletion-request/"
                                               >{{ tc.nav_account_deletion }}</a
                                             >
                                           </li>
@@ -628,10 +633,10 @@
                                           class="vh-mega-group-child"
                                         >
                                           <li>
-                                            <a href="{{ vh_base }}/contact-us">{{ tc.nav_contact_us }}</a>
+                                            <a href="{{ vh_base }}/contact-us/">{{ tc.nav_contact_us }}</a>
                                           </li>
                                           <li>
-                                            <a href="{{ vh_base }}/about-us">{{ tc.nav_about_us }}</a>
+                                            <a href="{{ vh_base }}/about-us/">{{ tc.nav_about_us }}</a>
                                           </li>
                                         </ul>
                                       </li>
@@ -661,7 +666,7 @@
                     </li>
                     <li class="item-324">
                       <a
-                        href="{{ vh_base }}/free-vpn/go-premium"
+                        href="{{ vh_base }}/free-vpn/go-premium/"
                         class="vh-btn vh-btn-primary px-3"
                         >{{ tc.go_premium }}</a
                       >
