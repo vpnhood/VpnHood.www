@@ -1,9 +1,9 @@
 {
   "meta_title": "VpnHood! CLIENT",
-  "meta_description": "VpnHood! CLIENT é o aplicativo gratuito e open-source para o seu próprio servidor VPN. Os usuários colam uma chave de acesso no Android, Android TV, Windows ou Linux para se conectar.",
+  "meta_description": "O VpnHood! CLIENT é o aplicativo gratuito e de código aberto para o seu servidor VPN auto-hospedado. Cole uma chave de acesso no Android, iOS, Android TV, Windows ou Linux para se conectar.",
   "page_title": "VpnHood! CLIENT",
   "page_desc": "Uma solução de VPN rápida, segura e confiável impulsionada pelo <b>VpnHood! ENGINE</b>, um projeto de código aberto e o primeiro VPN desenvolvido totalmente na plataforma .NET.",
-  "intro": "O VpnHood! CLIENT é o aplicativo gratuito e de código aberto que seus usuários instalam no Android, Android TV, Windows e Linux. Foi criado para ser tão simples que quem tem a chave não precisa de nenhuma explicação:",
+  "intro": "O VpnHood! CLIENT é o aplicativo gratuito e de código aberto que seus usuários instalam no Android, iOS, Android TV, Windows e Linux. Ele foi feito para ser simples e intuitivo para quem tem a chave de acesso:",
   "li_key_title": "Cole uma chave e pronto",
   "li_key_desc": "Adicione uma chave de acesso e conecte-se na hora — sem conta, sem cadastro e sem complicações.",
   "li_fast_title": "Rápido e leve",

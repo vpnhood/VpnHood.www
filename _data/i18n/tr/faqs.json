@@ -10,5 +10,5 @@
   "q3": "VpnHood! CONNECT ile VpnHood! CLIENT arasındaki fark nedir?",
   "a3": "VpnHood! CONNECT, kullanıcıların sınırsızca keyfini çıkarabileceği ücretsiz bir VPN'dir. VpnHood! CLIENT da ücretsiz olsa da doğrudan bağlantı için sunucu içermez. Bunun yerine, VpnHood! MANAGER kullanarak kendi özel VPN'ini kuranlar, bu uygulamayı bir Sunucu Anahtarı ile birlikte kullanıcılarıyla paylaşarak erişim sağlayabilir.",
   "q4": "VpnHood hangi platformları destekliyor?",
-  "a4": "Hem VpnHood! CONNECT hem de VpnHood! CLIENT; Android, Android TV ve Windows ile uyumludur. Ancak Windows üzerinde VpnHood! CONNECT ücretsiz değildir; <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">fiyatlandırma</a> sayfasından bir Premium Key satın almanız gerekir."
+  "a4": "VpnHood! CLIENT; Android, iOS (iPhone ve iPad), Android TV, Windows ve Linux platformlarında çalışır. VpnHood! CONNECT ise Android, Android TV, Windows ve Linux'ta kullanılabilir. Windows ve Linux sürümlerinde VpnHood! CONNECT ücretsiz sunucu içermez; <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">fiyatlandırma</a> sayfamızdan bir Premium Anahtar edinmeniz gerekir."
 }
