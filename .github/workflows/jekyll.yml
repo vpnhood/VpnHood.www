@@ -65,6 +65,8 @@ jobs:
           }
           sync_repo vpnhood-client-privacy-policy VpnHood-CLIENT-Privacy-Policy
           sync_repo vpnhood-connect-privacy-policy VpnHood-CONNECT-Privacy-Policy
+          sync_repo vpnhood-client-terms-of-use VpnHood-CLIENT-Terms-of-Use
+          sync_repo vpnhood-connect-terms-of-use VpnHood-CONNECT-Terms-of-Use
           for p in VpnHood-MANAGER-Privacy-Policy VpnHood-MANAGER-Terms-of-Use; do
             curl -sfL "https://raw.githubusercontent.com/wiki/vpnhood/VpnHood/$p.md" -o "_includes/legals/$p.md"
             echo "synced $p (wiki)"
