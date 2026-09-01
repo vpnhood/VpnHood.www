@@ -1,0 +1,27 @@
+---
+layout: none
+sitemap: false
+---
+{% comment %}
+  Retired URL. The MANAGER terms moved to /legal/vpnhood-manager-terms-of-use/
+  when each product got its own Terms of Use under /legal/.
+
+  GitHub Pages can't issue a 301, so this is the same stub _plugins/blog-redirects.rb
+  emits for retired posts: a canonical link to the new address plus an instant meta
+  refresh — the form Google treats as equivalent to a permanent redirect — and
+  noindex so the stub itself never ranks. sitemap: false keeps it out of the sitemap.
+{% endcomment %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting&hellip;</title>
+    <link rel="canonical" href="{{ site.url }}/legal/vpnhood-manager-terms-of-use/" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="0; url=/legal/vpnhood-manager-terms-of-use/" />
+  </head>
+  <body>
+    <h1>Redirecting&hellip;</h1>
+    <p><a href="/legal/vpnhood-manager-terms-of-use/">Continue to the new location</a></p>
+  </body>
+</html>
