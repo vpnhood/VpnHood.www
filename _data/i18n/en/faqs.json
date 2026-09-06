@@ -13,6 +13,6 @@
   "a4": "VpnHood! CLIENT runs on Android, iOS (iPhone and iPad), Android TV, Windows, and Linux. VpnHood! CONNECT runs on Android, Android TV, Windows, and Linux. On Windows and Linux, VpnHood! CONNECT has no free servers; you'll need to purchase a Premium Key, which is available on the <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">pricing</a> page.",
   "q5": "Is VpnHood open source?",
   "a5": "Yes, all of it. VpnHood! CONNECT, VpnHood! CLIENT, the server, and the VpnHood! ENGINE behind them are published on GitHub, and the project has been audited by two independent security firms. You can read the code yourself rather than take our word for it.",
-  "q6": "Can VpnHood get past VPN blocking?",
+  "q6": "Is VpnHood undetectable?",
   "a6": "It's built for it. VpnHood uses its own protocols rather than OpenVPN or WireGuard, and shapes its traffic to look like ordinary encrypted browsing, so there's no familiar signature for a firewall or deep packet inspection to match. On networks that actively block VPNs, the connection is designed to keep working."
 }
