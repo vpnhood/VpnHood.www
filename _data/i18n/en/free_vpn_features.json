@@ -1,6 +1,6 @@
 {
   "meta_title": "Free VPN Features | VpnHood! CONNECT",
-  "meta_description": "Explore VpnHood! CONNECT features: a global server network, split tunneling by app, IP, or country, and steadfast protocols that resist VPN blocking.",
+  "meta_description": "Every feature in VpnHood! CONNECT: global servers, split tunneling by app, IP, or country, and undetectable protocols built to get past VPN blocking.",
   "page_title": "Free VPN features",
   "page_desc": "Choose which apps, addresses, or countries go through the VPN, pick from servers worldwide, and switch protocols when a network fights back.",
   "server_network_title": "Global Server Network",
@@ -17,5 +17,5 @@
   "split_countries_desc": "Split Tunnel by Countries lets you include or exclude traffic based on its destination country. It offers the same benefits as app or IP-based tunneling but without the need to select specific apps or find IP ranges. This helps save traffic and increase speed by allowing direct access to services that don’t need the VPN, while keeping protection active where it’s needed most.",
   "protocols_title": "Steadfast Protocols",
   "protocols_alt": "Protocols screenshot",
-  "protocols_desc": "VpnHood’s protocol is engineered for maximum resilience and stability across diverse network environments. You can switch between protocols to find the optimal balance of speed and efficiency based on your specific network conditions. Beyond securing your data, VpnHood optimizes connection metadata to ensure your traffic remains consistent and secure, providing a professional-grade private connection with high-level encryption."
+  "protocols_desc": "Switch between protocols to find the best balance of speed and stability for the network you are on. They are VpnHood's own rather than OpenVPN or WireGuard, which is what keeps your traffic undetectable: there is no familiar signature for a firewall or deep packet inspection to match."
 }
