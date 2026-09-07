@@ -402,3 +402,9 @@
     border-color: transparent;
     box-shadow: 0 16px 40px rgba(23, 18, 58, 0.16);
 }
+
+// The topology diagram is a blackboard - it keeps its own dark ground on a light page
+// and reads as a deliberate object, exactly like the .vh-feature-shot panel above.
+[data-theme="light"] .vh-topology-svg{
+    box-shadow: 0 16px 40px rgba(23, 18, 58, 0.16);
+}
