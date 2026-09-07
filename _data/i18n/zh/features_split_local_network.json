@@ -1,0 +1,18 @@
+{
+  "meta_title": "开启 VPN 科学上网时仍可访问本地局域网设备 | VpnHood!",
+  "meta_description": "使用 VPN 科学上网时，打印机、电视等局域网设备依然顺畅访问。立即体验 VpnHood! 局域网分流功能。",
+  "eyebrow": "分流",
+  "title": "局域网分流",
+  "lead": "开启 VPN 时，打印机、电视及其他本地网络设备依然触手可及。",
+  "shot_alt": "VpnHood! 应用中的局域网分流设置界面",
+  "platforms_label": "支持平台",
+  "platforms": "Android、iOS、Windows 和 Linux",
+  "cta": "获取 VpnHood! CONNECT",
+  "back_parent": "所有分流选项",
+  "how_title": "工作原理",
+  "how_desc": "发往本地地址的流量会直接传输，而不经过 VPN 隧道。无需断开 VPN，周围的设备始终顺畅连接。",
+  "when_title": "适用场景",
+  "when_desc": "电视投屏、打印文件、访问 NAS、联动智能家居设备——任何与您处于同一 Wi-Fi 下的设备均可无缝使用。",
+  "cost_title": "注意事项",
+  "cost_desc": "本地流量会在局域网中直接传输，与未开启 VPN 时的状态完全一致。连接公共 Wi-Fi 时，建议关闭此功能以确保安全。"
+}

@@ -1,0 +1,21 @@
+{
+  "meta_title": "Kill Switch VPN: Bloqueie o tráfego se a VPN cair | VpnHood!",
+  "meta_description": "O Kill Switch bloqueia sua conexão à internet assim que a VPN desconectar, mantendo você sempre protegido. Disponível no VpnHood!",
+  "eyebrow": "Recurso",
+  "title": "Kill Switch",
+  "lead": "Bloqueia a internet automaticamente caso a VPN seja desconectada.",
+  "shot_alt": "Tela do Kill Switch no aplicativo VpnHood!",
+  "platforms_label": "Disponível para",
+  "platforms": "Exclusivo para Android. O recurso usa uma configuração do sistema que outras plataformas não oferecem.",
+  "cta": "Baixar VpnHood! CONNECT",
+  "all_features": "Todos os recursos",
+  "how_title": "Como funciona",
+  "how_desc": "Se a conexão VPN cair, o dispositivo normalmente voltaria à internet comum sem avisar. O Kill Switch bloqueia todo o tráfego nesses momentos, impedindo qualquer vazamento de dados. Nas configurações do Android, esse recurso se chama Bloquear conexões sem VPN.",
+  "when_title": "Quando ativar",
+  "when_desc": "Mantenha ativado sempre que a sua privacidade e segurança forem prioridade máxima.",
+  "cost_title": "O que muda no uso",
+  "cost_desc": "Se a VPN cair, você fica sem internet até que ela reconecte. Telas de login de Wi-Fi em hotéis ou aeroportos também podem não carregar, exigindo desativar o recurso por um instante.",
+  "pair_title": "Exige o recurso Sempre ativa",
+  "pair_desc": "O Android inclui o Kill Switch dentro da opção de VPN sempre ativa, funcionando em conjunto. A VPN sempre ativa reconecta após reiniciar ou trocar de rede, e o Kill Switch segura o tráfego até a conexão voltar. Sem ele, os aplicativos poderiam enviar dados desprotegidos nesses poucos segundos.",
+  "pair_link": "Sobre VPN sempre ativa"
+}

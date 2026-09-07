@@ -1,0 +1,21 @@
+{
+  "meta_title": "Durchgehendes VPN: Immer verbunden, auch nach Neustarts | VpnHood!",
+  "meta_description": "Immer aktiviert hält das Gerät dauerhaft mit dem VPN verbunden – auch nach Neustarts oder Netzwerkwechseln. Verfügbar in VpnHood!",
+  "eyebrow": "Funktion",
+  "title": "Immer aktiviert",
+  "lead": "Hält das Gerät dauerhaft mit dem VPN verbunden – auch nach Neustarts oder Netzwerkwechseln.",
+  "shot_alt": "Der Bildschirm „Immer aktiviert“ in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Nur für Android. Nutzt die Android-Einstellung „Durchgehendes VPN“, die auf anderen Plattformen nicht verfügbar ist.",
+  "cta": "VpnHood! CONNECT holen",
+  "all_features": "Alle Funktionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Statt sich nach jedem Neustart oder WLAN-Wechsel manuell neu zu verbinden, baut das System die VPN-Verbindung automatisch wieder auf.",
+  "when_title": "Wann es sinnvoll ist",
+  "when_desc": "Ideal für Geräte, die niemals ungeschützt online sein dürfen – und für alle, die sich nicht ständig manuell neu verbinden wollen.",
+  "cost_title": "Mögliche Nachteile",
+  "cost_desc": "Das VPN läuft durchgehend, solange das Gerät aktiv ist. Das verbraucht etwas mehr Akku, als wenn Sie es nur bei Bedarf einschalten.",
+  "pair_title": "Optimal in Kombination mit dem Kill Switch",
+  "pair_desc": "„Immer aktiviert“ stellt den Tunnel automatisch wieder her. Der Neuaufbau dauert jedoch einen Moment – und Apps warten nicht. Der Kill Switch schließt diese Lücke und blockiert den gesamten Datenverkehr, bis das VPN wieder steht. Unter Android befindet sich beides in derselben Einstellung und ist mit einem Fingertipp aktiviert.",
+  "pair_link": "Mehr über den Kill Switch"
+}

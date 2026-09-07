@@ -1,0 +1,18 @@
+{
+  "meta_title": "Cloak-Modus: Unauffindbarer VPN-Datenverkehr | VpnHood!",
+  "meta_description": "Der Cloak-Modus tarnt VPN-Datenverkehr als normalen Web-Traffic – ohne Signaturen für Deep Packet Inspection. Verfügbar in VpnHood!",
+  "eyebrow": "Funktion",
+  "title": "Cloak-Modus",
+  "lead": "Umgeht VPN-Sperren, indem Ihr VPN-Datenverkehr als gewöhnlicher Web-Traffic getarnt wird – unsichtbar für Deep Packet Inspection.",
+  "shot_alt": "Die Cloak-Modus-Ansicht in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Android, iOS, Windows und Linux",
+  "cta": "VpnHood! CONNECT holen",
+  "all_features": "Alle Funktionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Die meisten VPN-Protokolle geben sich sofort zu erkennen: Deep Packet Inspection erkennt das Protokoll am Datenmuster und blockiert die Verbindung direkt. Der Cloak-Modus verpackt den Tunnel so, dass er wie gewöhnlicher verschlüsselter Web-Datenverkehr aussieht – ohne jegliche Angriffspunkte für Filter.",
+  "when_title": "Wann aktivieren?",
+  "when_desc": "Aktivieren Sie ihn, wenn ein Netzwerk VPNs gezielt blockiert: in Schul- oder Firmennetzwerken, im Hotel- und Flughafen-WLAN oder bei staatlicher Zensur. Bei einer normalen Verbindung zu Hause benötigen Sie ihn nicht.",
+  "cost_title": "Gibt es Nachteile?",
+  "cost_desc": "Getarnter Datenverkehr erzeugt mehr Overhead. Das kann die Verbindung etwas verlangsamen und mehr Akku verbrauchen. Ein fairer Kompromiss: maximale Geschwindigkeit, wenn nichts blockiert wird – und eine stabile Verbindung, wenn Netzwerke stören."
+}

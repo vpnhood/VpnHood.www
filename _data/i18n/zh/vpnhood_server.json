@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! SERVER",
-  "meta_description": "免费且开源的自建 VPN 核心引擎。支持 Linux、Windows 或 Docker，轻松对抗探测与封锁，可搭配或不搭配 VpnHood! MANAGER 使用。",
+  "meta_description": "免费开源的自托管 VPN 引擎，助您轻松科学上网。支持 Linux、Windows 与 Docker，无惧深度探测与封锁，可独立运行或搭配 VpnHood! MANAGER 使用。",
   "page_title": "VpnHood! SERVER",
   "page_desc": "专属于你的 VPN 引擎。运行在你自己的服务器上，承载用户流量，完全由你自主掌控。",
   "f_anywhere_title": "随处部署，随租随用",

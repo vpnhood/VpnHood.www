@@ -1,0 +1,18 @@
+{
+  "meta_title": "按国家分流 VPN 流量，科学上网首选 | VpnHood!",
+  "meta_description": "根据目标国家灵活分流 VPN 流量，支持一键排除本国流量直连。轻松科学上网，尽在 VpnHood！",
+  "eyebrow": "分流",
+  "title": "按国家分流",
+  "lead": "根据目标国家，灵活决定流量是否经过 VPN。",
+  "shot_alt": "VpnHood! 应用中的按国家分流界面",
+  "platforms_label": "支持平台",
+  "platforms": "Android、iOS、Windows 和 Linux",
+  "cta": "获取 VpnHood! CONNECT",
+  "back_parent": "所有分流选项",
+  "how_title": "工作原理",
+  "how_desc": "按国家精准匹配目标流量。排除本国后，本地服务即可全速直连，海外流量则全部走代理隧道；也可以反向设置，仅为您指定的国家开启隧道。",
+  "when_title": "适用场景",
+  "when_desc": "日常推荐开启“排除本国”：本地银行、外卖和政务网站保持正常直连访问，其他流量交由 VPN 处理。",
+  "cost_title": "需要注意的事项",
+  "cost_desc": "访问被排除的国家时，目标网站将看到您的真实 IP 地址。这是为了换取全速访问体验所做的权衡。"
+}

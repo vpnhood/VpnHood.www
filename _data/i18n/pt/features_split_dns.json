@@ -1,0 +1,23 @@
+{
+  "meta_title": "Split DNS: Mantenha o DNS dentro da VPN | VpnHood!",
+  "meta_description": "Escolha se as consultas DNS seguem suas regras de túnel dividido ou ficam sempre na VPN. Split DNS no VpnHood!, em todas as plataformas.",
+  "eyebrow": "Túnel dividido",
+  "title": "Split DNS",
+  "lead": "Consultas DNS revelam todos os sites que você visita. O Split DNS decide se elas seguem as regras de divisão ou se ficam sempre protegidas dentro da VPN.",
+  "shot_alt": "A tela de Split DNS no aplicativo VpnHood!, mostrando as opções Sempre usar VPN e Permitir ignorar VPN",
+  "platforms_label": "Disponível para",
+  "platforms": "Android, iOS, Windows e Linux",
+  "cta": "Baixar VpnHood! CONNECT",
+  "back_parent": "Todas as opções de túnel dividido",
+  "modes_title": "Dois modos",
+  "always_title": "Sempre usar VPN",
+  "always_desc": "Todas as consultas DNS passam pela VPN, mesmo quando uma regra de divisão as enviaria para fora. Se o servidor não puder responder, a consulta é descartada para evitar vazamentos. Esta é a configuração recomendada.",
+  "bypass_title": "Permitir ignorar VPN",
+  "bypass_desc": "O DNS segue suas regras de túnel dividido: países, domínios ou endereços excluídos são resolvidos fora da VPN. Ideal para redes locais, como servidores DNS corporativos que respondem apenas a nomes internos.",
+  "how_title": "Como funciona",
+  "how_desc": "O VpnHood! identifica o DNS pelas portas: 53 para consultas comuns e 853 para DNS sobre TLS criptografado (TCP e UDP). No modo Sempre usar VPN, esses pacotes são mantidos no túnel mesmo com regras de divisão ativas. Já o DNS sobre HTTPS usa a porta 443 do tráfego web comum, não sendo afetado por essa configuração.",
+  "when_title": "Quando usar",
+  "when_desc": "Mantenha em Sempre usar VPN. Mude para Permitir ignorar VPN apenas se precisar acessar servidores DNS da sua rede local (lembrando que essa rede verá as consultas).",
+  "cost_title": "Quanto custa",
+  "cost_desc": "Aplica-se ao tráfego filtrado pelo próprio VpnHood!, seja por país, domínio ou endereço IP. Aplicativos excluídos da VPN não passam pelo túnel, e o sistema operacional envia suas consultas diretamente com o restante do tráfego, independentemente desta configuração."
+}

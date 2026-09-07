@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN Protokolleri: UDP, TCP ve QUIC | VpnHood!",
+  "meta_description": "Ağınıza en uygun UDP, TCP ve QUIC arasında geçiş yapın; video sorunlarını çözmek için QUIC'i engelleyin. VpnHood!'da.",
+  "eyebrow": "Özellik",
+  "title": "Protokoller",
+  "lead": "VPN protokolü, verilerinizin cihazınızla sunucu arasında nasıl aktarılacağını belirler. Bağlı olduğunuz ağa en uygun protokolü seçin.",
+  "shot_alt": "VpnHood! uygulamasındaki Protokoller ekranı",
+  "platforms_label": "Kullanabileceğiniz platformlar",
+  "platforms": "Android, iOS, Windows ve Linux. QUIC desteği platforma göre değişebilir.",
+  "cta": "VpnHood! CONNECT Edinin",
+  "all_features": "Tüm özellikler",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "UDP hafif ve genellikle en hızlı seçenektir, ancak bazı ağlar bunu kısıtlayabilir. TCP güvenilirdir: teorik olarak daha yavaştır ama UDP'nin engellendiği yerlerde bağlantı sağlar. QUIC ise UDP tabanlı modern bir protokoldür ve izin verilen yerlerde çok daha hızlıdır.",
+  "when_title": "Ne zaman değiştirmeli?",
+  "when_desc": "Ağınız yavaşladığında veya bağlantı kurulamadığında protokolü değiştirin. Hız için önce UDP'yi, bir engelle karşılaşırsanız TCP'yi deneyin. QUIC'i engellemek uygulamaları standart akışa yönlendirir; bu da Gizleme Modu'nda video oynatımını iyileştirebilir.",
+  "cost_title": "Size maliyeti nedir?",
+  "cost_desc": "Yalnızca kısa bir yeniden bağlanma süresi. Protokol seçimi her bağlantıda değiştirilebilir, böylece performans düştüğünde anında diğerine geçebilirsiniz."
+}

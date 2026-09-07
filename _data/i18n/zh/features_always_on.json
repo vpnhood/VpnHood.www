@@ -1,0 +1,21 @@
+{
+  "meta_title": "始终开启 VPN：重启后自动连接，科学上网更省心 | VpnHood!",
+  "meta_description": "始终开启功能让您的设备始终保持 VPN 连接，即便重启或切换网络也无需手动重连。稳定科学上网，尽在 VpnHood！",
+  "eyebrow": "功能",
+  "title": "始终开启",
+  "lead": "让设备始终保持 VPN 连接，即便重启或切换网络也无须手动重连。",
+  "shot_alt": "VpnHood! 应用中的“始终开启”设置界面",
+  "platforms_label": "支持平台",
+  "platforms": "仅限 Android。该功能依托 Android 原生的“始终开启的 VPN”设置，其他平台暂不支持。",
+  "cta": "获取 VpnHood! CONNECT",
+  "all_features": "所有功能",
+  "how_title": "运作方式",
+  "how_desc": "系统会自动恢复 VPN 连接，无需在每次重启设备或切换 Wi-Fi 后手动操作。",
+  "when_title": "适用场景",
+  "when_desc": "适合需要全天候安全联网的设备，也适合不想每次开机都手动重连的用户。",
+  "cost_title": "资源消耗",
+  "cost_desc": "VPN 会在开机状态下持续运行，因此耗电量会略高于仅在需要时手动连接。",
+  "pair_title": "搭配断网保护一同使用",
+  "pair_desc": "“始终开启”能自动恢复连接，但重新连线需要片刻时间，而其他应用此时可能已经产生网络请求。断网保护可以在 VPN 恢复前彻底阻断流量，消除安全缝隙。Android 将这两项配置整合在同一菜单下，只需再多点一步即可同时开启。",
+  "pair_link": "关于断网保护"
+}

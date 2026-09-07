@@ -1,0 +1,23 @@
+{
+  "meta_title": "Split DNS: DNS-Anfragen sicher im VPN behalten | VpnHood!",
+  "meta_description": "Bestimmen Sie, ob DNS-Anfragen Ihren Split-Tunneling-Regeln folgen oder stets im VPN bleiben. Split DNS in VpnHood! auf allen Plattformen.",
+  "eyebrow": "Split-Tunneling",
+  "title": "Split DNS",
+  "lead": "DNS-Anfragen zeigen jede Website, die Sie aufrufen. Split DNS bestimmt, ob sie wie jeder andere Datenverkehr den Split-Regeln folgen oder immer sicher im VPN bleiben.",
+  "shot_alt": "Der Split-DNS-Bildschirm in der VpnHood!-App mit den Optionen „Always use VPN“ und „Allow Bypass VPN“",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Android, iOS, Windows und Linux",
+  "cta": "VpnHood! CONNECT holen",
+  "back_parent": "Alle Split-Tunneling-Optionen",
+  "modes_title": "Zwei Modi",
+  "always_title": "Always use VPN",
+  "always_desc": "Jede DNS-Anfrage läuft durch das VPN – selbst dann, wenn eine Split-Regel sie ausschließen würde. Kann der Server eine Anfrage nicht zustellen, wird sie verworfen statt ungeschützt geleakt. Dies ist die empfohlene Standardeinstellung.",
+  "bypass_title": "Allow Bypass VPN",
+  "bypass_desc": "DNS folgt Ihren Split-Regeln wie gewöhnlicher Datenverkehr: Ausgeschlossene Länder, Domains oder Adressen werden außerhalb des Tunnels aufgelöst. Ideal, wenn ein lokaler Resolver erforderlich ist, etwa ein Firmen-DNS für interne Adressen.",
+  "how_title": "Funktionsweise",
+  "how_desc": "VpnHood! erkennt DNS an den Ports: Port 53 für Standardanfragen und Port 853 für verschlüsseltes DNS over TLS (jeweils TCP und UDP). Im Modus „Always use VPN“ werden diese Pakete immer in den Tunnel gelenkt, auch wenn eine Split-Regel greift. DNS over HTTPS läuft ununterscheidbar über Port 443 und kann daher von keiner Einstellung erfasst werden.",
+  "when_title": "Empfohlene Nutzung",
+  "when_desc": "Belassen Sie die Einstellung auf „Always use VPN“. Wechseln Sie nur dann zu „Allow Bypass VPN“, wenn ein lokaler Resolver in Ihrem Netzwerk antworten muss – beachten Sie dabei, dass dieses Netzwerk die Anfragen einsehen kann.",
+  "cost_title": "Mögliche Einschränkungen",
+  "cost_desc": "Es greift für den Datenverkehr, den VpnHood! selbst filtert – nach Land, Domain und IP-Adresse. Apps, die Sie vom VPN ausschließen, nutzen den Tunnel gar nicht erst: Das Betriebssystem leitet deren DNS-Anfragen zusammen mit dem restlichen Datenverkehr direkt weiter, unabhängig von dieser Einstellung."
+}

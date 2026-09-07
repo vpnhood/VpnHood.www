@@ -1,0 +1,23 @@
+{
+  "meta_title": "Split DNS: mantieni il DNS protetto nella VPN | VpnHood!",
+  "meta_description": "Scegli se le query DNS seguono le regole di split tunneling o restano sempre protette nella VPN. Split DNS con VpnHood!, su ogni piattaforma.",
+  "eyebrow": "Split tunneling",
+  "title": "Split DNS",
+  "lead": "Le richieste DNS rivelano ogni sito che visiti. Con Split DNS decidi se farle passare attraverso le regole di split tunneling o mantenerle sempre protette nella VPN.",
+  "shot_alt": "La schermata Split DNS nell'app VpnHood!, con le opzioni Usa sempre VPN e Consenti bypass VPN",
+  "platforms_label": "Disponibile su",
+  "platforms": "Android, iOS, Windows e Linux",
+  "cta": "Scarica VpnHood! CONNECT",
+  "back_parent": "Tutte le opzioni di split tunneling",
+  "modes_title": "Due modalità",
+  "always_title": "Usa sempre VPN",
+  "always_desc": "Ogni richiesta DNS passa attraverso la VPN, anche quando una regola di split tunneling l'avrebbe esclusa. Se il server non può risolvere una query, la richiesta viene bloccata invece di essere esposta. È l'impostazione consigliata per la massima privacy.",
+  "bypass_title": "Consenti bypass VPN",
+  "bypass_desc": "Il traffico DNS segue le tue regole di split tunneling come qualsiasi altro dato: paesi, domini o indirizzi esclusi vengono risolti fuori dal tunnel. Ideale quando serve un resolver locale, come un server DNS aziendale per nomi interni.",
+  "how_title": "Come funziona",
+  "how_desc": "VpnHood! riconosce il DNS dalle porte: 53 per le richieste standard e 853 per il DNS crittografato su TLS, sia su TCP che su UDP. Con la modalità \"Usa sempre VPN\", questi pacchetti vengono reindirizzati nel tunnel anche se esclusi da una regola di split. Il DNS over HTTPS, indistinguibile dal normale traffico web sulla porta 443, non può essere intercettato da questa impostazione.",
+  "when_title": "Quando usarlo",
+  "when_desc": "Lascia attiva la modalità \"Usa sempre VPN\". Passa a \"Consenti bypass VPN\" solo se hai bisogno di raggiungere un resolver sulla tua rete locale, tenendo presente che tali richieste saranno visibili a quella rete.",
+  "cost_title": "Cosa comporta",
+  "cost_desc": "Si applica al traffico filtrato direttamente da VpnHood! per paese, dominio e indirizzo IP. Le app escluse dalla VPN non entrano affatto nel tunnel: il sistema operativo gestisce le loro richieste insieme al resto del normale traffico, a prescindere da questa impostazione."
+}

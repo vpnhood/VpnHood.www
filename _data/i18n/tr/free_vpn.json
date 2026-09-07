@@ -28,6 +28,7 @@
   "stealth_label": "Sansürü aşın",
   "stealth_title": "Diğer ücretsiz VPN'lerin engellendiği yerlerde bile tespit edilemez",
   "stealth_desc": "Kısıtlayıcı ağlar genelde ilk olarak ücretsiz VPN'leri engeller; çünkü protokolleri bilinir ve filtrelenmeleri kolaydır. VpnHood tam da bu ağlar için geliştirildi: Trafiğini sıradan şifreli web trafiği gibi gösterir, geride tanıdık bir iz bırakmaz. Kısıtlı halka açık Wi-Fi ağlarında, katı iş yeri ağlarında veya ülke çapındaki sansürlerde bile bağlantınız kesintisiz çalışmaya devam eder.",
+  "stealth_link": "Ücretsiz VPN planlarını karşılaştırın",
   "pending_label": "Hadi başlayalım",
   "pending_title": "Güvenli ve Gizli Erişim",
   "pending_desc": "Ücretsiz ve open source VPN'imizle kesintisiz, gizli bir deneyim yaşayın. Kayıt olma veya kişisel veri gerekmez. Bant genişliği veya süre sınırı olmadan tüm çevrimiçi aktivitelerinizde yüksek hızın tadını çıkarın, dijital yaşamınız güvende ve kesintisiz kalsın.",

@@ -1,0 +1,23 @@
+{
+  "meta_title": "Split DNS: Mantenha o DNS protegido na VPN | VpnHood!",
+  "meta_description": "Escolha se as consultas DNS seguem as regras de túnel dividido ou ficam sempre na VPN. Split DNS no VpnHood!, em todas as plataformas.",
+  "eyebrow": "Túnel dividido",
+  "title": "Split DNS",
+  "lead": "As consultas DNS revelam todos os sites que você visita. O Split DNS decide se elas seguem as regras de túnel dividido ou se permanecem sempre protegidas dentro da VPN.",
+  "shot_alt": "A tela do Split DNS no aplicativo VpnHood!, exibindo as opções Sempre usar VPN e Permitir ignorar a VPN",
+  "platforms_label": "Disponível para",
+  "platforms": "Android, iOS, Windows e Linux",
+  "cta": "Baixar VpnHood! CONNECT",
+  "back_parent": "Todas as opções de túnel dividido",
+  "modes_title": "Dois modos",
+  "always_title": "Sempre usar VPN",
+  "always_desc": "Todas as consultas DNS passam pela VPN, mesmo que uma regra de divisão as enviasse para fora. Se o servidor não puder responder a uma consulta, ela é descartada para evitar vazamentos. Esta é a configuração recomendada.",
+  "bypass_title": "Permitir ignorar a VPN",
+  "bypass_desc": "O tráfego DNS segue suas regras de túnel dividido normalmente, resolvendo fora da VPN quando um país, domínio ou IP for excluído. Ideal para quando você precisa acessar servidores DNS locais, como os de redes corporativas internas.",
+  "how_title": "Como funciona",
+  "how_desc": "O VpnHood! identifica o DNS pelas portas: 53 para consultas padrão e 853 para DNS criptografado via TLS, tanto em TCP quanto UDP. No modo Sempre usar VPN, esses pacotes são direcionados de volta ao túnel, mesmo que excluídos por uma regra. O DNS via HTTPS não pode ser filtrado, pois usa a porta 443 como o tráfego comum da web.",
+  "when_title": "Quando usar",
+  "when_desc": "Mantenha a opção Sempre usar VPN ativada. Só mude para Permitir ignorar a VPN se precisar resolver nomes diretamente na sua rede local — lembrando que essa rede verá essas consultas.",
+  "cost_title": "Quanto custa",
+  "cost_desc": "Aplica-se às divisões filtradas pelo próprio VpnHood!, por país, domínio e endereço IP. Qualquer aplicativo excluído da VPN nunca entra no túnel, permitindo que o sistema operacional envie suas consultas diretamente com o restante do tráfego, independentemente desta configuração."
+}

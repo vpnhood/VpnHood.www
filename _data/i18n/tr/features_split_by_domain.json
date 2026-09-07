@@ -1,0 +1,18 @@
+{
+  "meta_title": "Alan Adına Göre VPN Tünelleme | VpnHood!",
+  "meta_description": "Belirli alan adlarını VPN trafiğine dahil edin, hariç tutun veya engelleyin. VpnHood! ile alan adına göre tünelleme.",
+  "eyebrow": "tünelleme",
+  "title": "Alan adına göre tünelleme",
+  "lead": "Belirli alan adlarını VPN trafiğine dahil edin, hariç tutun veya tamamen engelleyin.",
+  "shot_alt": "VpnHood! uygulamasında Alan adına göre tünelleme ekranı",
+  "platforms_label": "Kullanılabilen platformlar:",
+  "platforms": "Android, iOS, Windows ve Linux",
+  "cta": "VpnHood! CONNECT Edinin",
+  "back_parent": "Tüm tünelleme seçenekleri",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "Bir alan adı ekleyin ve trafiğini belirleyin: VPN üzerinden yönlendirin, doğrudan bağlayın veya tamamen engelleyin.",
+  "when_title": "Ne zaman kullanılır?",
+  "when_desc": "VPN kullanıcılarını engelleyen bir site, yalnızca yerel ağda çalışan dahili bir adres veya bu cihazda tamamen engellemek istediğiniz bir alan adı için.",
+  "cost_title": "Neleri göze almalısınız?",
+  "cost_desc": "Hariç tutulan bir alan adı gerçek IP adresinizi görür ve engelleme kesindir: Listedeki küçük bir yazım hatası, siz düzeltilene kadar o siteye erişiminizi kesebilir."
+}

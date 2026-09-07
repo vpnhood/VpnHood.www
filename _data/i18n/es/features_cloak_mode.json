@@ -1,0 +1,18 @@
+{
+  "meta_title": "Cloak Mode: tráfico VPN indetectable | VpnHood!",
+  "meta_description": "Cloak Mode camufla el tráfico VPN como tráfico web normal para esquivar la inspección profunda de paquetes. Disponible en VpnHood!",
+  "eyebrow": "Función",
+  "title": "Cloak Mode",
+  "lead": "Supera los bloqueos de VPN camuflando tu tráfico como navegación web habitual, haciéndolo resistente a la inspección profunda de paquetes.",
+  "shot_alt": "Pantalla de Cloak Mode en la aplicación VpnHood!",
+  "platforms_label": "Disponible en",
+  "platforms": "Android, iOS, Windows y Linux",
+  "cta": "Obtener VpnHood! CONNECT",
+  "all_features": "Todas las funciones",
+  "how_title": "Cómo funciona",
+  "how_desc": "La mayoría de los protocolos VPN se delatan fácilmente. La inspección profunda de paquetes analiza el tráfico, detecta el protocolo y la red lo bloquea de inmediato. Cloak Mode camufla el túnel para que parezca tráfico web cifrado normal, sin dejar firmas reconocibles para los filtros.",
+  "when_title": "Cuándo activarlo",
+  "when_desc": "Actívalo cuando una red restrinja las VPN de forma activa: cortafuegos de centros educativos o empresas, redes wifi de hoteles y aeropuertos, o censura nacional. En la conexión de tu casa, donde nada está bloqueado, no lo necesitas.",
+  "cost_title": "Qué implica usarlo",
+  "cost_desc": "El tráfico camuflado requiere más procesamiento, por lo que la velocidad puede disminuir ligeramente y consumir algo más de batería. Esa es la compensación: máxima velocidad cuando no hay restricciones, y una conexión que sigue funcionando cuando sí las hay."
+}

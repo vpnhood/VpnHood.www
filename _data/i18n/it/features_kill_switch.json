@@ -1,0 +1,21 @@
+{
+  "meta_title": "VPN Kill Switch: blocca il traffico se la VPN cade | VpnHood!",
+  "meta_description": "Il Kill Switch blocca la connessione Internet appena la VPN si disconnette, proteggendo tutti i tuoi dati. Disponibile in VpnHood!",
+  "eyebrow": "Funzionalità",
+  "title": "Kill Switch",
+  "lead": "Blocca automaticamente la connessione Internet se la VPN si disconnette.",
+  "shot_alt": "La schermata del Kill Switch nell'app VpnHood!",
+  "platforms_label": "Disponibile su",
+  "platforms": "Solo Android. Sfrutta un'impostazione di sistema di Android non presente sulle altre piattaforme.",
+  "cta": "Scarica VpnHood! CONNECT",
+  "all_features": "Tutte le funzionalità",
+  "how_title": "Come funziona",
+  "how_desc": "Se il tunnel cade, il dispositivo torna di norma alla connessione standard senza avvisarti. Il Kill Switch invece blocca il traffico, così nessun dato lascia il dispositivo senza protezione. Nelle impostazioni di Android è chiamato \"Blocca connessioni senza VPN\".",
+  "when_title": "Quando attivarlo",
+  "when_desc": "Tienilo attivo se evitare una fuga accidentale di dati conta più del rimanere sempre online.",
+  "cost_title": "Cosa comporta",
+  "cost_desc": "Se la VPN cade, perdi la connessione a Internet finché non si ripristina. Anche le pagine di accesso Wi-Fi (captive portal) potrebbero non caricarsi: negli hotel o negli aeroporti potrebbe servire disattivarlo per un attimo.",
+  "pair_title": "Richiede Always On",
+  "pair_desc": "Android include il Kill Switch all'interno dell'impostazione VPN sempre attiva (Always On), quindi i due operano insieme. Always On ripristina il tunnel dopo un riavvio o un cambio di rete; il Kill Switch blocca il traffico finché la VPN non è di nuovo attiva. Senza di esso, le app potrebbero inviare dati nei secondi che precedono la riconnessione.",
+  "pair_link": "Informazioni su Always On"
+}

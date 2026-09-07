@@ -1,0 +1,18 @@
+{
+  "meta_title": "Accéder aux appareils locaux sous VPN | VpnHood!",
+  "meta_description": "Gardez imprimantes, TV et appareils locaux accessibles même avec le VPN actif. Split tunneling du réseau local avec VpnHood!.",
+  "eyebrow": "Split tunneling",
+  "title": "Split tunneling du réseau local",
+  "lead": "Gardez imprimantes, téléviseurs et autres appareils de votre réseau local accessibles lorsque le VPN est activé.",
+  "shot_alt": "L'écran du Split tunneling du réseau local dans l'application VpnHood!",
+  "platforms_label": "Disponible sur",
+  "platforms": "Android, iOS, Windows et Linux",
+  "cta": "Obtenir VpnHood! CONNECT",
+  "back_parent": "Toutes les options de split tunneling",
+  "how_title": "Comment ça marche",
+  "how_desc": "Le trafic vers les adresses locales est envoyé directement hors du tunnel : vos appareils restent accessibles sans devoir désactiver le VPN.",
+  "when_title": "Quand l'utiliser",
+  "when_desc": "Pour caster sur une TV, imprimer, accéder à un NAS, gérer la domotique : tout ce qui partage votre réseau Wi-Fi.",
+  "cost_title": "Ce que cela implique",
+  "cost_desc": "Le trafic local reste visible sur votre réseau local, exactement comme sans VPN. Sur un Wi-Fi public, il est préférable de le désactiver."
+}

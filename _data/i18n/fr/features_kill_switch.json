@@ -1,0 +1,21 @@
+{
+  "meta_title": "Kill Switch VPN : bloquez le trafic si le VPN se déconnecte | VpnHood!",
+  "meta_description": "Le Kill Switch coupe votre connexion Internet dès que le VPN se déconnecte pour éviter toute fuite de données. Disponible sur VpnHood!",
+  "eyebrow": "Fonctionnalité",
+  "title": "Kill Switch",
+  "lead": "Bloque automatiquement la connexion Internet en cas de déconnexion du VPN.",
+  "shot_alt": "Écran du Kill Switch dans l'application VpnHood!",
+  "platforms_label": "Disponible sur",
+  "platforms": "Android uniquement. Cette option utilise un paramètre système propre à Android.",
+  "cta": "Obtenir VpnHood! CONNECT",
+  "all_features": "Toutes les fonctionnalités",
+  "how_title": "Comment ça marche",
+  "how_desc": "Si le tunnel s'interrompt, votre appareil bascule habituellement sur le réseau classique sans prévenir. Le Kill Switch coupe le trafic pour empêcher toute fuite non protégée. Dans les paramètres Android, cette option s'appelle « Bloquer les connexions sans VPN ».",
+  "when_title": "Quand l'activer",
+  "when_desc": "Activez-le dès que la protection absolue de vos données passe avant le maintien de la connexion.",
+  "cost_title": "Les inconvénients",
+  "cost_desc": "En cas de coupure du VPN, vous perdez Internet jusqu'à sa reconnexion. Les portails de connexion Wi-Fi (hôtels, aéroports) peuvent aussi être bloqués : désactivez-le temporairement pour vous identifier.",
+  "pair_title": "Nécessite le VPN permanent",
+  "pair_desc": "Android intègre le Kill Switch dans l'option « VPN toujours activé » : les deux fonctionnent ensemble. Le VPN permanent rétablit le tunnel après un redémarrage ou un changement de réseau, tandis que le Kill Switch bloque le trafic en attendant la reconnexion pour éviter toute fuite.",
+  "pair_link": "En savoir plus sur le VPN permanent"
+}

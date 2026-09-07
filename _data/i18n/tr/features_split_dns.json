@@ -1,0 +1,23 @@
+{
+  "meta_title": "Ayrık DNS: DNS Sorgularınızı VPN İçinde Tutun | VpnHood!",
+  "meta_description": "DNS sorgularınızın tünelleme kurallarını mı izleyeceğini yoksa daima VPN içinde mi kalacağını belirleyin. Tüm platformlarda VpnHood! Ayrık DNS.",
+  "eyebrow": "tünelleme",
+  "title": "Ayrık DNS",
+  "lead": "DNS sorguları ziyaret ettiğiniz her siteyi açığa çıkarır. Ayrık DNS, bu sorguların normal trafik gibi tünelleme kurallarını mı takip edeceğine yoksa daima VPN içinde mi kalacağına karar verir.",
+  "shot_alt": "VpnHood! uygulamasında Daima VPN kullan ve VPN bypass izni ver seçeneklerini gösteren Ayrık DNS ekranı",
+  "platforms_label": "Kullanabileceğiniz platformlar",
+  "platforms": "Android, iOS, Windows ve Linux",
+  "cta": "VpnHood! CONNECT Edinin",
+  "back_parent": "Tüm tünelleme seçenekleri",
+  "modes_title": "İki farklı mod",
+  "always_title": "Daima VPN kullan",
+  "always_desc": "Tünelleme kuralı aksini belirtse bile tüm DNS sorguları VPN üzerinden iletilir. Sunucunun yanıtlayamadığı bir sorgu dışarı sızdırılmak yerine düşürülür. Özel bir durum gerekmedikçe önerilen ve kullanılması gereken ayar budur.",
+  "bypass_title": "VPN bypass izni ver",
+  "bypass_desc": "DNS, diğer tüm trafik gibi tünelleme kurallarınızı izler; böylece kapsam dışı bırakılan bir ülke, alan adı veya adres tünel dışında çözümlenir. Yalnızca şirket içi adresleri bilen yerel bir DNS sunucusu gerektiğinde idealdir.",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "VpnHood!, DNS trafiğini bağlantı noktalarından tanır: Standart sorgular için 53, TLS üzerinden şifreli DNS için hem TCP hem de UDP'de 853. Daima VPN kullan modunda bu paketler, bir tünelleme kuralıyla hariç tutulmuş olsalar bile tünele yönlendirilir. HTTPS üzerinden DNS (DoH), 443 numaralı bağlantı noktasındaki sıradan web trafiğinden ayırt edilemediği için hiçbir ayar tarafından yakalanamaz.",
+  "when_title": "Ne zaman kullanılmalı?",
+  "when_desc": "Daima VPN kullan modunda bırakmanız önerilir. Yalnızca kendi yerel ağınızdaki bir DNS sunucusunun yanıt vermesi gerektiğinde VPN bypass izni ver moduna geçin; bu durumda ağınızın sorguları görebileceğini unutmayın.",
+  "cost_title": "Maliyeti nedir?",
+  "cost_desc": "VpnHood!'un ülke, alan adı ve IP adresine göre bizzat filtrelediği tünelleme ayarlarına uygulanır. VPN dışında bıraktığınız bir uygulama hiçbir şekilde tünele girmez; bu nedenle işletim sistemi, bu ayardan bağımsız olarak uygulamanın sorgularını doğrudan normal trafiğiyle birlikte gönderir."
+}

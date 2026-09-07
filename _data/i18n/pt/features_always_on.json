@@ -1,0 +1,21 @@
+{
+  "meta_title": "VPN Always-On: Conexão Contínua Mesmo Após Reiniciar | VpnHood!",
+  "meta_description": "O Always-On mantém seu dispositivo sempre conectado à VPN, mesmo após reiniciar ou trocar de rede. Disponível no VpnHood!",
+  "eyebrow": "Recurso",
+  "title": "Always-On",
+  "lead": "Mantém seu dispositivo conectado à VPN o tempo todo, mesmo após reiniciar ou mudar de rede.",
+  "shot_alt": "A tela do recurso Always-On no aplicativo VpnHood!",
+  "platforms_label": "Disponível para",
+  "platforms": "Exclusivo para Android. O recurso utiliza a configuração nativa de VPN sempre ativa do Android, indisponível em outras plataformas.",
+  "cta": "Baixar o VpnHood! CONNECT",
+  "all_features": "Todos os recursos",
+  "how_title": "Como funciona",
+  "how_desc": "Em vez de reconectar manualmente após reiniciar ou trocar de rede Wi-Fi, o sistema reativa a VPN de forma totalmente automática.",
+  "when_title": "Quando ativar",
+  "when_desc": "Ideal para quem nunca quer ficar desprotegido online e não quer ter o trabalho de reconectar a VPN a cada reinicialização.",
+  "cost_title": "O que muda no uso",
+  "cost_desc": "Como a VPN fica ativa sempre que o aparelho estiver ligado, o consumo de bateria pode ser ligeiramente maior do que conectando sob demanda.",
+  "pair_title": "Combine com o Kill Switch",
+  "pair_desc": "O Always-On restabelece a conexão, mas a reconexão leva alguns instantes — e os aplicativos não esperam. O Kill Switch fecha essa brecha bloqueando o tráfego até que a VPN volte a operar. No Android, ambos ficam no mesmo menu e podem ser ativados juntos com apenas um toque.",
+  "pair_link": "Sobre o Kill Switch"
+}

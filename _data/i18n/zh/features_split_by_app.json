@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN 按应用分流｜科学上网利器 VpnHood!",
+  "meta_description": "自主选择哪些应用使用 VPN，哪些直接连接。VpnHood! Android 端支持按应用分流，科学上网更自如。",
+  "eyebrow": "分流",
+  "title": "按应用分流",
+  "lead": "自由选择哪些应用使用 VPN，哪些直接连接网络。",
+  "shot_alt": "VpnHood! 应用中的按应用分流设置界面",
+  "platforms_label": "支持平台",
+  "platforms": "仅限 Android。iOS、Windows 和 Linux 无法按应用过滤流量，因此这些平台不显示此选项。",
+  "cta": "获取 VpnHood! CONNECT",
+  "back_parent": "所有分流选项",
+  "how_title": "运作原理",
+  "how_desc": "设备上的所有应用都会列出。勾选需要走代理的应用，或排除无需代理的应用，其余应用自动按相反规则处理。被排除的应用流量绝不会经过 VPN。",
+  "when_title": "适用场景",
+  "when_desc": "比如无法在 VPN 下使用的手机银行、需要超低延迟的在线游戏，或是需要识别真实位置的流媒体应用。",
+  "cost_title": "注意事项",
+  "cost_desc": "被排除的应用完全处于无 VPN 保护的状态。建议谨慎选择，仅添加必要应用。"
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "VPN Split Tunneling by IP Address and IPv6 | VpnHood!",
+    "meta_description": "Decide which IP addresses use the VPN, at device level or inside the app, and what happens to IPv6. Available in VpnHood!",
+    "eyebrow": "Split tunneling",
+    "title": "Split tunneling by IP address",
+    "lead": "Decide which IP addresses use the VPN, on the device or inside the app, and what happens to IPv6.",
+    "shot_alt": "The Split tunneling by IP address screen in the VpnHood! app",
+    "platforms_label": "Available on",
+    "platforms": "Android, iOS, Windows and Linux",
+    "cta": "Get VpnHood! CONNECT",
+    "back_parent": "All split tunneling options",
+    "how_title": "How it works",
+    "how_desc": "Two ways to split by address, and the difference is where the rule is enforced: the operating system, or VpnHood! itself. Split IPv6 is separate, and decides what happens to IPv6 traffic when the server has no public IPv6 address.",
+    "when_title": "When to use it",
+    "when_desc": "Network ranges rather than names: a corporate subnet, a NAS at home, a service that only publishes addresses.",
+    "cost_title": "What it costs you",
+    "cost_desc": "Address lists are easy to get subtly wrong, and an excluded range is unprotected. Prefer domain or country rules when they can express the same thing.",
+    "ways_title": "Via device or via app",
+    "device_title": "Via device",
+    "device_desc": "The excluded ranges are simply not routed into the tunnel, so that traffic never reaches VpnHood! at all. It runs at full speed, and it keeps working even if the app stops responding. Each range becomes a system route, though, so this list has to stay short.",
+    "app_title": "Via app",
+    "app_desc": "The app checks every packet against your lists, so they can be long, and they can block addresses outright as well as send them around the VPN. The traffic reaches VpnHood! first, so this is the flexible option rather than the featherweight one.",
+    "ways_hint": "Rule of thumb: a handful of ranges you never want touched go via device; long lists, and anything you want blocked, go via app."
+  }
+}

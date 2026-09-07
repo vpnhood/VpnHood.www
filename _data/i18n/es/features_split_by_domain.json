@@ -1,0 +1,18 @@
+{
+  "meta_title": "Túnel dividido de VPN por dominio | VpnHood!",
+  "meta_description": "Incluye, excluye o bloquea dominios específicos del tráfico VPN. Túnel dividido por dominio en VpnHood!.",
+  "eyebrow": "Túnel dividido",
+  "title": "Túnel dividido por dominio",
+  "lead": "Incluye, excluye o bloquea dominios específicos del tráfico VPN.",
+  "shot_alt": "Pantalla de Túnel dividido por dominio en la aplicación VpnHood!",
+  "platforms_label": "Disponible en",
+  "platforms": "Android, iOS, Windows y Linux",
+  "cta": "Obtener VpnHood! CONNECT",
+  "back_parent": "Todas las opciones de túnel dividido",
+  "how_title": "Cómo funciona",
+  "how_desc": "Añade un dominio y elige qué hacer con él: enviarlo por la VPN, permitir la conexión directa o bloquearlo por completo.",
+  "when_title": "Cuándo usarlo",
+  "when_desc": "Para sitios que bloquean conexiones VPN, direcciones internas que solo funcionan en la red local o dominios que quieras bloquear totalmente en este dispositivo.",
+  "cost_title": "A tener en cuenta",
+  "cost_desc": "Un dominio excluido verá tu dirección IP real. Además, el bloqueo es total: un error al escribirlo puede dejar el sitio inaccesible hasta que lo corrijas."
+}

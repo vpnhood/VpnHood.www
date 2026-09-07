@@ -1,0 +1,18 @@
+{
+  "meta_title": "Split tunneling VPN per paese | VpnHood!",
+  "meta_description": "Invia il traffico tramite VPN o direttamente in base al paese di destinazione, oppure escludi del tutto il tuo. Disponibile su VpnHood!",
+  "eyebrow": "Split tunneling",
+  "title": "Split tunneling per paese",
+  "lead": "Instrada il traffico attraverso la VPN o bypassala in base al paese di destinazione.",
+  "shot_alt": "Schermata dello Split tunneling per paese nell'app VpnHood!",
+  "platforms_label": "Disponibile su",
+  "platforms": "Android, iOS, Windows e Linux",
+  "cta": "Scarica VpnHood! CONNECT",
+  "back_parent": "Tutte le opzioni di split tunneling",
+  "how_title": "Come funziona",
+  "how_desc": "Il traffico viene gestito in base al paese di destinazione. Escludi il tuo paese per accedere ai servizi locali alla massima velocità instradando all'estero tutto il resto, oppure fai l'opposto e attiva la VPN solo per i paesi che preferisci.",
+  "when_title": "Quando usarlo",
+  "when_desc": "«Escludi il mio paese» è l'impostazione ideale per tutti i giorni: banche locali, app di consegna e siti governativi continuano a funzionare, mentre la VPN protegge il resto.",
+  "cost_title": "Cosa comporta",
+  "cost_desc": "Il traffico verso un paese escluso mostrerà il tuo vero indirizzo IP a quei siti: è il compromesso per avere la massima velocità."
+}

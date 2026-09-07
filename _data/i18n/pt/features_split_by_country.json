@@ -1,0 +1,18 @@
+{
+  "meta_title": "Túnel dividido por país na VPN | VpnHood!",
+  "meta_description": "Direcione o tráfego pela VPN ou fora dela com base no país de destino, ou exclua seu próprio país por completo. Disponível no VpnHood!",
+  "eyebrow": "Túnel dividido",
+  "title": "Túnel dividido por países",
+  "lead": "Direcione o tráfego pela VPN ou fora dela com base no país de destino.",
+  "shot_alt": "A tela de túnel dividido por países no aplicativo VpnHood!",
+  "platforms_label": "Disponível para",
+  "platforms": "Android, iOS, Windows e Linux",
+  "cta": "Baixar VpnHood! CONNECT",
+  "back_parent": "Todas as opções de túnel dividido",
+  "how_title": "Como funciona",
+  "how_desc": "Os destinos são filtrados por país. Exclua o seu próprio país para acessar serviços locais diretamente na velocidade máxima enquanto o tráfego internacional passa pelo túnel, ou faça o inverso e use o túnel apenas para os países selecionados.",
+  "when_title": "Quando usar",
+  "when_desc": "A opção \"Excluir meu país\" é ideal para o dia a dia: bancos locais, apps de entrega e sites do governo continuam funcionando normalmente, enquanto a VPN cuida do resto.",
+  "cost_title": "O que você precisa saber",
+  "cost_desc": "O tráfego destinado a um país excluído revela seu IP real para esses sites. É o equilíbrio ideal entre privacidade e velocidade."
+}

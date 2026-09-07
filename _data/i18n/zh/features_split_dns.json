@@ -1,0 +1,23 @@
+{
+  "meta_title": "DNS 分流：让 DNS 请求安全留在 VPN 内 | VpnHood! 科学上网",
+  "meta_description": "自由选择让 DNS 查询遵循分流规则，或始终保留在 VPN 隧道内。VpnHood! DNS 分流功能，全平台支持，科学上网更私密安全。",
+  "eyebrow": "分流",
+  "title": "DNS 分流",
+  "lead": "DNS 查询会暴露你访问的每个网站。DNS 分流功能让你决定：是让查询与其他流量一样遵循分流规则，还是始终留在 VPN 内保护隐私。",
+  "shot_alt": "VpnHood! 应用中的 DNS 分流设置界面，显示“始终使用 VPN”和“允许绕过 VPN”选项",
+  "platforms_label": "支持平台",
+  "platforms": "Android、iOS、Windows 和 Linux",
+  "cta": "获取 VpnHood! CONNECT",
+  "back_parent": "所有分流选项",
+  "modes_title": "两种模式",
+  "always_title": "始终使用 VPN",
+  "always_desc": "所有 DNS 查询均通过 VPN 发送，即使分流规则原本会将其排除。如果服务器无法解析，该查询会被直接丢弃而不是泄漏到本地网络。这是推荐设置，如无特殊需求建议保持开启。",
+  "bypass_title": "允许绕过 VPN",
+  "bypass_desc": "DNS 查询像其他流量一样遵循分流规则，因此被排除的国家、域名或地址将在隧道外解析。当必须使用本地解析器时（例如仅支持内网域名的公司 DNS 服务器），此模式非常实用。",
+  "how_title": "运作原理",
+  "how_desc": "VpnHood! 通过端口识别 DNS：明文查询使用端口 53，加密的 DNS over TLS 使用端口 853（同时支持 TCP 和 UDP）。在“始终使用 VPN”模式下，即使分流规则排除了这些数据包，也会被强制拉回隧道内。而 DNS over HTTPS 与端口 443 上的常规网页流量完全一致，因此无法单独拦截。",
+  "when_title": "何时使用",
+  "when_desc": "建议始终保持“始终使用 VPN”。仅在必须由本地网络解析器响应时，才切换为“允许绕过 VPN”，请注意此时本地网络将能看到这些查询内容。",
+  "cost_title": "对连接速度的影响",
+  "cost_desc": "它适用于 VpnHood! 自身通过国家、域名和 IP 地址进行的分流。从 VPN 中排除的应用完全不会进入加密隧道，因此无论此项如何设置，操作系统都会将其查询请求与常规流量一同直接发出。"
+}

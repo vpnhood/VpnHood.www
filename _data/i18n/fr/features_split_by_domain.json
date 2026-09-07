@@ -1,0 +1,18 @@
+{
+  "meta_title": "Split tunneling VPN par domaine | VpnHood!",
+  "meta_description": "Incluez, excluez ou bloquez des domaines spécifiques du trafic VPN. Split tunneling par domaine avec VpnHood!.",
+  "eyebrow": "Split tunneling",
+  "title": "Split tunneling par domaine",
+  "lead": "Incluez, excluez ou bloquez des domaines spécifiques du trafic VPN.",
+  "shot_alt": "Écran du Split tunneling par domaine dans l'application VpnHood!",
+  "platforms_label": "Disponible sur",
+  "platforms": "Android, iOS, Windows et Linux",
+  "cta": "Obtenir VpnHood! CONNECT",
+  "back_parent": "Toutes les options de Split tunneling",
+  "how_title": "Comment ça marche",
+  "how_desc": "Ajoutez un domaine et choisissez son comportement : le faire passer par le VPN, autoriser la connexion directe ou le bloquer totalement.",
+  "when_title": "Quand l'utiliser",
+  "when_desc": "Pour un site qui bloque les VPN, une adresse interne accessible uniquement sur votre réseau local, ou un domaine que vous souhaitez bloquer complètement sur cet appareil.",
+  "cost_title": "Les points d'attention",
+  "cost_desc": "Un domaine exclu voit votre véritable adresse IP, et le blocage est immédiat : une faute de frappe peut rendre un site inaccessible tant que vous ne l'avez pas corrigée."
+}

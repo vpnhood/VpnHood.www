@@ -1,0 +1,18 @@
+{
+  "meta_title": "按域名分流 VPN 流量，科学上网更自如 | VpnHood!",
+  "meta_description": "自定义域名的 VPN 流量路由：指定走 VPN、直连或彻底拦截。VpnHood! 按域名分流，科学上网更灵活。",
+  "eyebrow": "分流",
+  "title": "按域名分流",
+  "lead": "精准控制特定域名的流量：走 VPN、直连或彻底拦截。",
+  "shot_alt": "VpnHood! 应用中的按域名分流设置界面",
+  "platforms_label": "支持平台",
+  "platforms": "Android、iOS、Windows 和 Linux",
+  "cta": "获取 VpnHood! CONNECT",
+  "back_parent": "所有分流选项",
+  "how_title": "工作原理",
+  "how_desc": "添加域名并指定其规则：通过 VPN 转发、直接连接或彻底拦截。",
+  "when_title": "适用场景",
+  "when_desc": "屏蔽 VPN 访问的网站、仅在本地网络解析的内部地址，或是想在此设备上彻底拦截的域名。",
+  "cost_title": "注意事项",
+  "cost_desc": "直连的域名将暴露您的真实 IP 地址；拦截规则严格生效，若列表中出现拼写错误，可能会导致该网站无法访问，直至更正。"
+}

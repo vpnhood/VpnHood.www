@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN-Split-Tunneling nach Ländern | VpnHood!",
+  "meta_description": "Leiten Sie Datenverkehr nach Zielland durch das VPN oder daran vorbei, oder schließen Sie Ihr eigenes Land komplett aus. Verfügbar in VpnHood!",
+  "eyebrow": "Split-Tunneling",
+  "title": "Split-Tunneling nach Ländern",
+  "lead": "Leiten Sie Datenverkehr basierend auf dem Zielland durch das VPN oder daran vorbei.",
+  "shot_alt": "Die Ansicht „Split-Tunneling nach Ländern“ in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Android, iOS, Windows und Linux",
+  "cta": "VpnHood! CONNECT holen",
+  "back_parent": "Alle Split-Tunneling-Optionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Ziele werden nach Land zugeordnet. Schließen Sie Ihr eigenes Land aus, damit lokale Dienste mit voller Geschwindigkeit direkt verbinden, während Datenverkehr ins Ausland verschlüsselt durch das VPN läuft. Oder kehren Sie das Prinzip um und leiten Sie nur ausgewählte Länder durch den Tunnel.",
+  "when_title": "Typische Anwendungsfälle",
+  "when_desc": "Das eigene Land auszuschließen ist die ideale Alltagseinstellung: Lokales Online-Banking, Lieferdienste und Behördenseiten funktionieren weiterhin reibungslos, während das VPN alles andere schützt.",
+  "cost_title": "Was Sie beachten sollten",
+  "cost_desc": "Datenverkehr in ein ausgeschlossenes Land legt Ihre echte IP-Adresse für diese Websites offen. Das ist der Kompromiss für maximale Geschwindigkeit."
+}
