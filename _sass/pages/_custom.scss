@@ -689,6 +689,20 @@
     border-radius: 22px;
 }
 
+// The /features/ hero art. Brand colours on transparency, so unlike the screenshot
+// panel above it needs no light variant and no pinned backdrop - it reads on both
+// themes unchanged. See tools/make-light-art.py for why that matters.
+.vh-feature-hero-art{
+    max-width: 460px;
+    margin-inline: auto;
+}
+
+.vh-feature-hero-art img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .vh-feature-meta{
     display: flex;
     flex-wrap: wrap;
