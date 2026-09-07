@@ -393,3 +393,12 @@
 [data-theme="light"] .vh-theme-toggle .vh-theme-icon-moon{
     display: block;
 }
+
+// Feature spoke screenshots are real app UI and must not change between themes, so the
+// panel holding one keeps the art's own backdrop and reads as a deliberate dark showcase
+// on a light page — exactly the #appWrapper reasoning above.
+[data-theme="light"] .vh-feature-shot{
+    background-color: #090620;
+    border-color: transparent;
+    box-shadow: 0 16px 40px rgba(23, 18, 58, 0.16);
+}

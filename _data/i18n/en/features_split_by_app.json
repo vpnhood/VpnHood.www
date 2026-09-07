@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN Split Tunneling by App | VpnHood!",
+  "meta_description": "Choose which apps use the VPN and which connect directly. Split tunneling by app in the VpnHood! apps, on Android and Android TV.",
+  "eyebrow": "Split tunneling",
+  "title": "Split tunneling by app",
+  "lead": "Choose which apps use the VPN and which connect directly.",
+  "shot_alt": "The Split tunneling by app screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Android and Android TV only. iOS, Windows and Linux cannot filter traffic per app, so this option does not appear there.",
+  "cta": "Get VpnHood! CONNECT",
+  "back_parent": "All split tunneling options",
+  "how_title": "How it works",
+  "how_desc": "Every app on the device is listed. Pick the ones that should go through the tunnel, or the ones that should stay out of it, and the rest follow the opposite rule. Traffic from an excluded app never enters the VPN.",
+  "when_title": "When to use it",
+  "when_desc": "A banking app that refuses to work over a VPN, a game that wants the lowest possible latency, or a streaming app that should see your real location.",
+  "cost_title": "What it costs you",
+  "cost_desc": "An excluded app is exactly as exposed as it would be with no VPN at all. Keep the list short and deliberate."
+}

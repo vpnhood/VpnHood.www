@@ -1,0 +1,18 @@
+{
+  "meta_title": "Private DNS and Adapter DNS | VpnHood!",
+  "meta_description": "Private DNS encrypts the lookup of website addresses so nobody on the network can see which sites you visit. In the VpnHood! apps.",
+  "eyebrow": "Feature",
+  "title": "Private DNS",
+  "lead": "Encrypts the lookup of website addresses, so nobody on the network can see which sites you visit.",
+  "shot_alt": "The Private DNS screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Private DNS is Android phones and tablets only, as it uses an Android system setting. Adapter DNS is available on every platform.",
+  "cta": "Get VpnHood! CONNECT",
+  "all_features": "All features",
+  "how_title": "How it works",
+  "how_desc": "Before your device can reach a site it asks a DNS server for the address, and that question normally travels in the clear. Private DNS encrypts it, closing a gap that can reveal your browsing even while a VPN is running.",
+  "when_title": "When to turn it on",
+  "when_desc": "Worth leaving on permanently. It costs nothing you will notice and closes a common leak.",
+  "cost_title": "What it costs you",
+  "cost_desc": "Nothing you will feel day to day."
+}

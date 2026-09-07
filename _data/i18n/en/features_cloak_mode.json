@@ -1,0 +1,18 @@
+{
+  "meta_title": "Cloak Mode: Undetectable VPN Traffic | VpnHood!",
+  "meta_description": "Cloak Mode disguises VPN traffic as ordinary web traffic, so deep packet inspection has no signature to match. In the VpnHood! apps.",
+  "eyebrow": "Feature",
+  "title": "Cloak Mode",
+  "lead": "Overcomes VPN blocks by disguising your VPN traffic as regular web traffic, making it resistant to deep packet inspection.",
+  "shot_alt": "The Cloak Mode screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Android, Android TV, iOS, Windows and Linux",
+  "cta": "Get VpnHood! CONNECT",
+  "all_features": "All features",
+  "how_title": "How it works",
+  "how_desc": "Most VPN protocols announce themselves. Deep packet inspection reads the shape of the traffic, recognizes the protocol on sight, and a network that wants to block VPNs simply drops it. Cloak Mode wraps the tunnel so it looks like ordinary encrypted web traffic, leaving nothing familiar for a filter to match against.",
+  "when_title": "When to turn it on",
+  "when_desc": "Turn it on when a network is actively fighting VPNs: a school or office firewall, hotel and airport Wi-Fi that blocks tunnels, or a national filter. On a home connection that is not blocking anything, you do not need it.",
+  "cost_title": "What it costs you",
+  "cost_desc": "Cloaked traffic carries more overhead than a direct tunnel, so it can be a little slower and use slightly more battery. That is the trade: raw speed when nothing is in your way, a connection that still works when something is."
+}

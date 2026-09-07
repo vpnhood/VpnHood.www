@@ -1,0 +1,18 @@
+{
+  "meta_title": "Reach Local Devices While on a VPN | VpnHood!",
+  "meta_description": "Keep printers, TVs and other devices on your local network reachable while the VPN is on. Split local network in the VpnHood! apps.",
+  "eyebrow": "Split tunneling",
+  "title": "Split local network",
+  "lead": "Keep printers, TVs and other devices on your local network reachable while the VPN is on.",
+  "shot_alt": "The Split local network screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Android, Android TV, iOS, Windows and Linux",
+  "cta": "Get VpnHood! CONNECT",
+  "back_parent": "All split tunneling options",
+  "how_title": "How it works",
+  "how_desc": "Traffic to local addresses is sent directly instead of into the tunnel, so the devices around you stay visible without turning the VPN off.",
+  "when_title": "When to use it",
+  "when_desc": "Casting to a TV, printing, a NAS, a smart home hub, anything that lives on the same Wi-Fi as you.",
+  "cost_title": "What it costs you",
+  "cost_desc": "Local traffic is exposed to the local network, which is exactly how it was before the VPN. On public Wi-Fi you may prefer to leave this off."
+}

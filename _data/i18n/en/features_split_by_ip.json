@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN Split Tunneling by IP Address and IPv6 | VpnHood!",
+  "meta_description": "Decide which IP addresses use the VPN, at device level or inside the app, and what happens to IPv6. In the VpnHood! apps.",
+  "eyebrow": "Split tunneling",
+  "title": "Split tunneling by IP address",
+  "lead": "Decide which IP addresses use the VPN, on the device or inside the app, and what happens to IPv6.",
+  "shot_alt": "The Split tunneling by IP address screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Android, Android TV, iOS, Windows and Linux",
+  "cta": "Get VpnHood! CONNECT",
+  "back_parent": "All split tunneling options",
+  "how_title": "How it works",
+  "how_desc": "Split IPs Via Device chooses which addresses use the VPN at the device level. Split IPs Via App applies the rules inside the app instead, and can also block addresses. Split IPv6 decides what happens to IPv6 traffic when the server has no public IPv6 address.",
+  "when_title": "When to use it",
+  "when_desc": "Network ranges rather than names: a corporate subnet, a NAS at home, a service that only publishes addresses.",
+  "cost_title": "What it costs you",
+  "cost_desc": "Address lists are easy to get subtly wrong, and an excluded range is unprotected. Prefer domain or country rules when they can express the same thing."
+}

@@ -1,0 +1,83 @@
+---
+layout: none
+i18n: features_quick_launch
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+<main id="sp-main-body">
+          <div class="container">
+            <div class="container-inner">
+              <div class="row">
+                <div id="sp-component" class="col-lg-12">
+                  <div class="sp-column">
+                    <div id="system-message-container" aria-live="polite"></div>
+                    <div class="com-content-article item-page">
+                      <div class="com-content-article__body">
+
+                        <p class="pt-4 mb-0">
+                          <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
+                        </p>
+
+                        <div class="row align-items-center gap-lg-0 gap-5 pt-lg-4 pb-5">
+                          <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="section-label">
+                              <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                            </div>
+                            <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                            <p class="section-desc">{{ t.lead }}</p>
+                            <p class="vh-feature-platforms">
+                              <span class="vh-feature-platforms-label">{{ t.platforms_label }}</span>
+                              {{ t.platforms }}
+                            </p>
+                            <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
+                          </div>
+                          <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="vh-feature-shot">
+                              <img
+                                src="/assets/images/features/quick-launch-app.webp"
+                                alt="{{ t.shot_alt }}"
+                                width="840"
+                                height="1615"
+                                loading="eager"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row section-space gap-lg-0 gap-5">
+                          <div class="col-lg-4" data-aos="fade-up">
+                            <div class="vh-card-dark vh-feature-panel h-100">
+                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.how_title }}</h2>
+                              <p class="mb-0">{{ t.how_desc }}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="vh-card-dark vh-feature-panel h-100">
+                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
+                              <p class="mb-0">{{ t.when_desc }}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="vh-card-dark vh-feature-panel h-100">
+                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
+                              <p class="mb-0">{{ t.cost_desc }}</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="section-space text-center" data-aos="fade-up">
+                          <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+{% include footer.html %}

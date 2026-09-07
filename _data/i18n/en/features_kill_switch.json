@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN Kill Switch: Block Traffic If the VPN Drops | VpnHood!",
+  "meta_description": "The kill switch blocks your internet connection the moment the VPN disconnects, so nothing leaves the device unprotected. In the VpnHood! apps.",
+  "eyebrow": "Feature",
+  "title": "Kill Switch",
+  "lead": "Automatically blocks the internet connection if the VPN disconnects.",
+  "shot_alt": "The Kill Switch screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Android phones and tablets only. It relies on an Android system setting that iOS, Windows and Android TV do not expose.",
+  "cta": "Get VpnHood! CONNECT",
+  "all_features": "All features",
+  "how_title": "How it works",
+  "how_desc": "If the tunnel drops, a device would normally fall back to the ordinary connection without telling you. The kill switch blocks traffic instead, so nothing leaves the device unprotected in the gap.",
+  "when_title": "When to turn it on",
+  "when_desc": "Leave it on whenever an accidental unprotected moment matters more to you than staying online.",
+  "cost_title": "What it costs you",
+  "cost_desc": "When the VPN drops you lose connectivity until it is back. That is exactly the trade you are choosing."
+}

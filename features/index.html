@@ -1,0 +1,183 @@
+---
+layout: none
+i18n: features_index
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+<main id="sp-main-body">
+          <div class="container">
+            <div class="container-inner">
+              <div class="row">
+                <div id="sp-component" class="col-lg-12">
+                  <div class="sp-column">
+                    <div id="system-message-container" aria-live="polite"></div>
+                    <div class="com-content-article item-page">
+                      <div class="com-content-article__body">
+
+                        <div class="row align-items-center gap-lg-0 gap-5 pt-lg-5 pb-5">
+                          <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="section-label">
+                              <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                            </div>
+                            <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                            <p class="section-desc">{{ t.lead }}</p>
+                            <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
+                          </div>
+                          <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="vh-feature-shot">
+                              <img
+                                src="/assets/images/features/home-app.webp"
+                                alt="{{ t.shot_alt }}"
+                                width="840"
+                                height="1615"
+                                loading="eager"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="section-space">
+                          <h2 class="h3 vh-txt-grad-purple-400 mb-4" data-aos="fade-up">{{ t.g1_title }}</h2>
+                          <ul class="row list-unstyled gap-lg-0 gap-4 m-0">
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/cloak-mode.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/cloak-mode/">{{ t.cloak_mode_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.cloak_mode_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.cloak_mode_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <span class="vh-feature-icon">{% include icons/protocols.svg %}</span>
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/protocols/">{{ t.protocols_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.protocols_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.protocols_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/proxies.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/proxies/">{{ t.proxies_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.proxies_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.proxies_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="section-space">
+                          <h2 class="h3 vh-txt-grad-purple-400 mb-4" data-aos="fade-up">{{ t.g2_title }}</h2>
+                          <ul class="row list-unstyled gap-lg-0 gap-4 m-0">
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/split-tunneling.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/split-tunneling/">{{ t.split_tunneling_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.split_tunneling_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.split_tunneling_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/private-dns.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/private-dns/">{{ t.private_dns_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.private_dns_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.private_dns_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="section-space">
+                          <h2 class="h3 vh-txt-grad-purple-400 mb-4" data-aos="fade-up">{{ t.g3_title }}</h2>
+                          <ul class="row list-unstyled gap-lg-0 gap-4 m-0">
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/kill-switch.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/kill-switch/">{{ t.kill_switch_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.kill_switch_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.kill_switch_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/always-on.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/always-on/">{{ t.always_on_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.always_on_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.always_on_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="section-space">
+                          <h2 class="h3 vh-txt-grad-purple-400 mb-4" data-aos="fade-up">{{ t.g4_title }}</h2>
+                          <ul class="row list-unstyled gap-lg-0 gap-4 m-0">
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/quick-launch.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/quick-launch/">{{ t.quick_launch_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.quick_launch_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.quick_launch_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+{% include footer.html %}

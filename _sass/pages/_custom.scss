@@ -669,3 +669,117 @@
         margin-top: 25px;
     }
 }
+
+// Feature spoke pages ---------------------------------------------------------
+// The screenshot is real app UI, so it must render identically in both themes.
+// The panel around it is pinned dark in _light.scss, same reasoning as #appWrapper.
+.vh-feature-shot{
+    max-width: 320px;
+    margin-inline: auto;
+    padding: 14px;
+    border-radius: 34px;
+    background-color: var(--vh-surface-raised);
+    border: 1px solid var(--vh-hairline);
+}
+
+.vh-feature-shot img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+}
+
+.vh-feature-meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.vh-feature-chip{
+    display: inline-flex;
+    align-items: center;
+    padding: .4rem .9rem;
+    border-radius: 999px;
+    border: 1px solid var(--vh-border);
+    color: var(--vh-text-soft);
+    font-size: .875rem;
+    text-decoration: none;
+}
+
+a.vh-feature-chip:hover{
+    border-color: var(--vh-border-strong);
+    color: var(--vh-text);
+}
+
+.vh-feature-platforms{
+    margin-top: 1.25rem;
+    color: var(--vh-text-dim);
+    font-size: .95rem;
+}
+
+.vh-feature-platforms-label{
+    color: var(--vh-text-soft);
+    font-weight: 600;
+    margin-inline-end: .35rem;
+}
+
+.vh-feature-card-link{
+    color: var(--vh-text);
+    text-decoration: none;
+}
+
+.vh-feature-card-link:hover{
+    color: var(--vh-accent-ink);
+}
+
+// Boxes on the feature pages: the explainer cards on a spoke page and the index cards
+// on /features/ and /features/split-tunneling/. .vh-card-dark ships no padding of its
+// own, and an index card is one big link (Bootstrap .stretched-link needs a positioned
+// ancestor). Hover and equal height come from the shared .vh-feature-card above.
+.vh-feature-panel{
+    position: relative;
+    border-radius: 23px;
+    padding: 28px;
+}
+
+.vh-feature-card .vh-feature-card-link{
+    color: var(--vh-accent-ink);
+}
+
+// Index cards lay a small mark beside the text: the app's own feature illustration where
+// one exists, otherwise a line symbol in the site's icon disc. Flex follows the page
+// direction, so the mark sits on the left in LTR and on the right in RTL with no extra rule.
+.vh-feature-inline{
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.vh-feature-inline .vh-feature-body{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+// The slot is the same size whether it holds a picture or a symbol, so titles line up
+// across a row.
+.vh-feature-art{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+}
+
+.vh-feature-art img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vh-feature-art .vh-feature-icon{
+    margin-bottom: 0;
+}

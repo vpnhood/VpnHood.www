@@ -1,0 +1,18 @@
+{
+  "meta_title": "SOCKS and HTTP Proxy Support | VpnHood!",
+  "meta_description": "Reach your VpnHood! server through a SOCKS or HTTP proxy when a direct connection to it is blocked. In the VpnHood! apps.",
+  "eyebrow": "Feature",
+  "title": "Proxies",
+  "lead": "Reach your server through a SOCKS or HTTP proxy, or relay through one when a direct connection is blocked.",
+  "shot_alt": "The Proxies screen in the VpnHood! app",
+  "platforms_label": "Available on",
+  "platforms": "Android, Android TV, iOS, Windows and Linux",
+  "cta": "Get VpnHood! CONNECT",
+  "all_features": "All features",
+  "how_title": "How it works",
+  "how_desc": "When a network will not let you reach the server at all, a proxy gives the connection another route in.",
+  "when_title": "When to turn it on",
+  "when_desc": "As a fallback on networks that block the server outright, rather than ones that merely inspect traffic.",
+  "cost_title": "What it costs you",
+  "cost_desc": "SOCKS and HTTP proxies carry their own fingerprint and can be blocked easily by firewalls, so a proxy is a way in rather than a way to go unnoticed. Cloak Mode is the stealth tool."
+}
