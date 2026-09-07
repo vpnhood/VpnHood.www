@@ -64,32 +64,11 @@ nav_active: self-hosted
                     <p class="vh-feature-desc">{{ t.li_fast_desc }}</p>
                 </div>
             </li>
-            <li class="d-flex mb-4">
-                <div class="list-check-icon me-3 flex-shrink-0"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="m7 12.9l3.143 3.6L18 7.5"></path></svg></div>
-                <div>
-                    <h2 class="h6 vh-feature-title">{{ t.li_protocol_title }}</h2>
-                    <p class="vh-feature-desc">{{ t.li_protocol_desc }}</p>
-                </div>
-            </li>
-            <li class="d-flex mb-4">
-                <div class="list-check-icon me-3 flex-shrink-0"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="m7 12.9l3.143 3.6L18 7.5"></path></svg></div>
-                <div>
-                    <h2 class="h6 vh-feature-title">{{ t.li_cloak_title }}</h2>
-                    <p class="vh-feature-desc">{{ t.li_cloak_desc }}</p>
-                </div>
-            </li>
-            <li class="d-flex mb-4">
-                <div class="list-check-icon me-3 flex-shrink-0"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="m7 12.9l3.143 3.6L18 7.5"></path></svg></div>
-                <div>
-                    <h2 class="h6 vh-feature-title">{{ t.li_proxy_title }}</h2>
-                    <p class="vh-feature-desc">{{ t.li_proxy_desc }}</p>
-                </div>
-            </li>
             <li class="d-flex">
                 <div class="list-check-icon me-3 flex-shrink-0"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="m7 12.9l3.143 3.6L18 7.5"></path></svg></div>
                 <div>
-                    <h2 class="h6 vh-feature-title">{{ t.li_split_title }}</h2>
-                    <p class="vh-feature-desc">{{ t.li_split_desc }}</p>
+                    <h2 class="h6 vh-feature-title">{{ t.li_own_title }}</h2>
+                    <p class="vh-feature-desc">{{ t.li_own_desc }}</p>
                 </div>
             </li>
         </ul>
@@ -98,6 +77,138 @@ nav_active: self-hosted
         <img src="/assets/images/vpnhood-client/client-app-phones.webp" alt="{{ t.phones_alt }}" width="968" height="1086" loading="lazy" class="img-fluid mx-auto">
     </div>
 </div>
+
+<div class="section-space">
+  <div class="section-start-text mb-4 text-center" data-aos="fade-up">
+    <h2 class="section-title vh-txt-grad-purple-400">{{ t.engine_title }}</h2>
+    <p class="section-desc">{{ t.engine_desc }}</p>
+  </div>
+  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                        <div class="vh-feature-art">
+                          <span class="vh-feature-icon">{% include icons/protocols.svg %}</span>
+                        </div>
+                        <div class="vh-feature-body">
+                          <h3 class="h5 mb-2">
+                            <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/protocols/">{{ t.engine_protocols_title }}</a>
+                          </h3>
+                          <p class="mb-0">{{ t.engine_protocols_desc }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                        <div class="vh-feature-art">
+                          <img src="/assets/images/features/art/cloak-mode.webp" alt="" width="468" height="480" loading="lazy" />
+                        </div>
+                        <div class="vh-feature-body">
+                          <h3 class="h5 mb-2">
+                            <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/cloak-mode/">{{ t.engine_cloak_title }}</a>
+                          </h3>
+                          <p class="mb-0">{{ t.engine_cloak_desc }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                        <div class="vh-feature-art">
+                          <img src="/assets/images/features/art/proxies.webp" alt="" width="468" height="480" loading="lazy" />
+                        </div>
+                        <div class="vh-feature-body">
+                          <h3 class="h5 mb-2">
+                            <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/proxies/">{{ t.engine_proxies_title }}</a>
+                          </h3>
+                          <p class="mb-0">{{ t.engine_proxies_desc }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                        <div class="vh-feature-art">
+                          <img src="/assets/images/features/art/split-tunneling.webp" alt="" width="468" height="480" loading="lazy" />
+                        </div>
+                        <div class="vh-feature-body">
+                          <h3 class="h5 mb-2">
+                            <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/split-tunneling/">{{ t.engine_split_title }}</a>
+                          </h3>
+                          <p class="mb-0">{{ t.engine_split_desc }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                        <div class="vh-feature-art">
+                          <img src="/assets/images/features/art/private-dns.webp" alt="" width="468" height="480" loading="lazy" />
+                        </div>
+                        <div class="vh-feature-body">
+                          <h3 class="h5 mb-2">
+                            <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/private-dns/">{{ t.engine_dns_title }}</a>
+                          </h3>
+                          <p class="mb-0">{{ t.engine_dns_desc }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                        <div class="vh-feature-art">
+                          <img src="/assets/images/features/art/kill-switch.webp" alt="" width="468" height="480" loading="lazy" />
+                        </div>
+                        <div class="vh-feature-body">
+                          <h3 class="h5 mb-2">
+                            <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/kill-switch/">{{ t.engine_kill_title }}</a>
+                          </h3>
+                          <p class="mb-0">{{ t.engine_kill_desc }}</p>
+                        </div>
+                      </div>
+                    </li>
+  </ul>
+  <div class="text-center mt-5" data-aos="fade-up">
+    <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/features/">{{ t.engine_all }}</a>
+  </div>
+</div>
+
+<div class="section-space">
+  <div class="section-start-text mb-4 text-center" data-aos="fade-up">
+    <h2 class="section-title vh-txt-grad-purple-400">{{ t.server_title }}</h2>
+    <p class="section-desc">{{ t.server_desc }}</p>
+  </div>
+  <div class="row row-gap-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card h-100">
+                        <h3 class="h5 mb-2">
+                          <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/self-hosted-vpn/">{{ t.server_start_title }}</a>
+                        </h3>
+                        <p class="mb-0">{{ t.server_start_desc }}</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card h-100">
+                        <h3 class="h5 mb-2">
+                          <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/vpnhood-server/">{{ t.server_server_title }}</a>
+                        </h3>
+                        <p class="mb-0">{{ t.server_server_desc }}</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel vh-feature-card h-100">
+                        <h3 class="h5 mb-2">
+                          <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/vpnhood-manager/">{{ t.server_manager_title }}</a>
+                        </h3>
+                        <p class="mb-0">{{ t.server_manager_desc }}</p>
+                      </div>
+                    </div>
+  </div>
+</div>
+
+<div class="section-space" data-aos="fade-up">
+  <div class="vh-card-dark vh-feature-panel">
+    <h2 class="h4 vh-txt-grad-purple-400">{{ t.oss_title }}</h2>
+    <p>{{ t.oss_desc }}</p>
+    <p class="mb-0"><a class="vh-text-btn vh-txt-purple-300" href="https://github.com/vpnhood/VpnHood" target="_blank" rel="noopener noreferrer">{{ t.oss_link }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+  </div>
+</div>
+
 <div class="text-center mt-5"><a class="vh-btn vh-btn-primary blue-bg" href="{{ vh_base }}/vpnhood-client/download/">{{ t.download_client }} <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"> <g fill="none"> <path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"></path> </g> </svg> </a></div>     </div>
 
         

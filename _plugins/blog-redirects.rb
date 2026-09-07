@@ -39,15 +39,17 @@ module VhBlogRedirects
     end
   end
 
+  # Shared with _plugins/legacy-redirects.rb, which retires whole site URLs; `lang` is
+  # what makes a stub under /fa/ declare Persian rather than claiming English.
   class RedirectPage < Jekyll::PageWithoutAFile
-    def initialize(site, url, target)
+    def initialize(site, url, target, lang = "en")
       super(site, site.source, "", "index.html")
       data["permalink"] = url
       data["sitemap"] = false # jekyll-sitemap must not advertise a redirect stub
       data["layout"] = nil
       self.content = <<~HTML
         <!doctype html>
-        <html lang="en">
+        <html lang="#{lang}">
           <head>
             <meta charset="utf-8" />
             <title>Redirecting&hellip;</title>
