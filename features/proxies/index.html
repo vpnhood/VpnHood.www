@@ -182,6 +182,33 @@ extra_css:
 
                         <div class="section-space">
                           <div class="section-start-text mb-4" data-aos="fade-up">
+                            <h2 class="section-title vh-txt-grad-purple-400">{{ t.list_title }}</h2>
+                            <p class="section-desc">{{ t.list_desc }}</p>
+                          </div>
+                          <div class="row row-gap-4">
+                            <div class="col-lg-6" data-aos="fade-up">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/list.svg %}</span>
+                                <h3 class="h5 mb-2">{{ t.src1_title }}</h3>
+                                <p>{{ t.src1_desc }}</p>
+                                <p class="mb-3"><code class="vh-code">https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt</code></p>
+                                <p class="mb-0"><a class="vh-txt-purple-300" href="https://github.com/proxifly/free-proxy-list" target="_blank" rel="noopener noreferrer">proxifly/free-proxy-list<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/protocols.svg %}</span>
+                                <h3 class="h5 mb-2">{{ t.src2_title }}</h3>
+                                <p>{{ t.src2_desc }}</p>
+                                <p class="mb-0">{{ t.src2_example }} <a class="vh-txt-purple-300" href="https://github.com/TheSpeedX/PROXY-List" target="_blank" rel="noopener noreferrer">TheSpeedX/PROXY-List<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="mt-4 mb-0" data-aos="fade-up">{{ t.list_note }}</p>
+                        </div>
+
+                        <div class="section-space">
+                          <div class="section-start-text mb-4" data-aos="fade-up">
                             <h2 class="section-title vh-txt-grad-purple-400">{{ t.how_title }}</h2>
                             <p class="section-desc">{{ t.how_desc }}</p>
                           </div>

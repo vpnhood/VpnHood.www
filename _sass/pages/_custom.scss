@@ -831,6 +831,20 @@ a.vh-feature-chip:hover{
     color: var(--purple-120);
 }
 
+// The example proxy list URL. It is one long unbreakable token inside a narrow card, so it
+// wraps mid-string and sits on its own tinted line instead of running into the copy.
+.vh-code{
+    display: block;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background-color: rgba(var(--purple-300-rgb), .12);
+    border: 1px solid var(--vh-border);
+    color: var(--vh-text-soft);
+    font-size: 13px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
 // The rating scale: a penalty gradient with the six quality levels the app shows, each
 // keyed to the same semantic colour the app uses for it.
 .vh-rating-scale{
