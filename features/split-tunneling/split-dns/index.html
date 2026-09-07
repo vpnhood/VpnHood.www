@@ -1,6 +1,6 @@
 ---
 layout: none
-i18n: features_split_by_ip
+i18n: features_split_dns
 extra_css:
   - /assets/css/custom.css
 ---
@@ -37,10 +37,10 @@ extra_css:
                           <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
                             <div class="vh-feature-shot">
                               <img
-                                src="/assets/images/features/split-by-ip-app.webp"
+                                src="/assets/images/features/split-dns-app.webp"
                                 alt="{{ t.shot_alt }}"
                                 width="840"
-                                height="1615"
+                                height="1040"
                                 loading="eager"
                               />
                             </div>
@@ -48,24 +48,21 @@ extra_css:
                         </div>
 
                         <div class="section-space">
-                          <h2 class="h3 vh-txt-grad-purple-400 mb-4" data-aos="fade-up">{{ t.ways_title }}</h2>
+                          <h2 class="h3 vh-txt-grad-purple-400 mb-4" data-aos="fade-up">{{ t.modes_title }}</h2>
                           <div class="row row-gap-4">
                             <div class="col-lg-6" data-aos="fade-up">
                               <div class="vh-card-dark vh-feature-panel h-100">
-                                <span class="vh-feature-icon">{% include icons/split-via-device.svg %}</span>
-                                <h3 class="h5 mb-2">{{ t.device_title }}</h3>
-                                <p class="mb-0">{{ t.device_desc }}</p>
+                                <h3 class="h5 mb-2">{{ t.always_title }}</h3>
+                                <p class="mb-0">{{ t.always_desc }}</p>
                               </div>
                             </div>
                             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                               <div class="vh-card-dark vh-feature-panel h-100">
-                                <span class="vh-feature-icon">{% include icons/split-via-app.svg %}</span>
-                                <h3 class="h5 mb-2">{{ t.app_title }}</h3>
-                                <p class="mb-0">{{ t.app_desc }}</p>
+                                <h3 class="h5 mb-2">{{ t.bypass_title }}</h3>
+                                <p class="mb-0">{{ t.bypass_desc }}</p>
                               </div>
                             </div>
                           </div>
-                          <p class="mt-4 mb-0" data-aos="fade-up">{{ t.ways_hint }}</p>
                         </div>
 
                         <div class="row section-space gap-lg-0 gap-5">

@@ -18,7 +18,7 @@
   "kinds_title": "What you can split",
   "kinds_desc": "Each option has its own screen in the app and its own page here.",
   "split_dns_title": "Split DNS",
-  "split_dns_desc": "Decide whether DNS queries follow your split rules or always stay in the VPN. It covers the splits the app filters itself, by country, domain and IP; an app you exclude never enters the tunnel, so its lookups leave with it.",
+  "split_dns_desc": "Decide whether DNS lookups follow your split rules or always stay inside the VPN.",
   "by_app_title": "By app",
   "by_app_short": "Choose which apps use the VPN and which connect directly.",
   "by_app_plat": "Android only",
@@ -33,5 +33,6 @@
   "by_ip_plat": "All platforms",
   "local_network_title": "Local network",
   "local_network_short": "Keep printers, TVs and other devices on your local network reachable while the VPN is on.",
-  "local_network_plat": "All platforms"
+  "local_network_plat": "All platforms",
+  "split_dns_plat": "All platforms"
 }

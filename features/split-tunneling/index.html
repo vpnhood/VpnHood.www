@@ -124,13 +124,16 @@ extra_css:
                               </div>
                             </li>
                             <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                              <div class="vh-card-dark vh-feature-panel vh-feature-inline h-100">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
                                 <div class="vh-feature-art">
                                   <span class="vh-feature-icon">{% include icons/split-dns.svg %}</span>
                                 </div>
                                 <div class="vh-feature-body">
-                                  <h3 class="h5 mb-2">{{ t.split_dns_title }}</h3>
-                                  <p class="mb-0">{{ t.split_dns_desc }}</p>
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/split-tunneling/split-dns/">{{ t.split_dns_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.split_dns_desc }}</p>
+                                  <span class="vh-feature-chip">{{ t.split_dns_plat }}</span>
                                 </div>
                               </div>
                             </li>

@@ -39,12 +39,12 @@ extra_css:
                             <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
                           </div>
                           <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
-                            <div class="vh-feature-shot">
+                            <div class="vh-feature-relay">
                               <img
-                                src="/assets/images/features/proxies-app.webp"
-                                alt="{{ t.shot_alt }}"
-                                width="840"
-                                height="1713"
+                                src="/assets/images/features/art/proxies.webp"
+                                alt="{{ t.relay_alt }}"
+                                width="468"
+                                height="480"
                                 loading="eager"
                               />
                             </div>
@@ -143,7 +143,8 @@ extra_css:
                           <div class="row row-gap-4">
                             <div class="col-lg-6" data-aos="fade-up">
                               <div class="vh-card-dark vh-feature-panel h-100">
-                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.score_title }}</h2>
+                                <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                                <h3 class="h5 mb-2">{{ t.score_title }}</h3>
                                 <p>{{ t.score_desc }}</p>
                                 <div class="vh-rating-scale" aria-hidden="true"></div>
                                 <div class="vh-rating-scale-labels" aria-hidden="true"><span>{{ t.score_low }}</span><span>{{ t.score_high }}</span></div>
@@ -176,8 +177,8 @@ extra_css:
 
                         <div class="row section-space align-items-center gap-lg-0 gap-5">
                           <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
-                            <div class="vh-feature-relay">
-                              <img src="/assets/images/features/art/proxies.webp" alt="{{ t.relay_alt }}" width="468" height="480" loading="lazy" />
+                            <div class="vh-feature-shot">
+                              <img src="/assets/images/features/proxies-app.webp" alt="{{ t.shot_alt }}" width="840" height="1713" loading="lazy" />
                             </div>
                           </div>
                           <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
@@ -186,13 +187,13 @@ extra_css:
                             <div class="row g-4 mt-1">
                               <div class="col-md-6">
                                 <div class="vh-card-dark vh-feature-panel h-100">
-                                  <h3 class="h5 mb-2">{{ t.when_title }}</h3>
+                                  <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
                                   <p class="mb-0">{{ t.when_desc }}</p>
                                 </div>
                               </div>
                               <div class="col-md-6">
                                 <div class="vh-card-dark vh-feature-panel h-100">
-                                  <h3 class="h5 mb-2">{{ t.cost_title }}</h3>
+                                  <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
                                   <p class="mb-0">{{ t.cost_desc }}</p>
                                 </div>
                               </div>
