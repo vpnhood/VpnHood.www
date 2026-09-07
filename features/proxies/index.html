@@ -51,41 +51,46 @@ extra_css:
                           </div>
                         </div>
 
-                        <div class="section-space">
-                          <div class="section-start-text mb-4" data-aos="fade-up">
+                        <div class="row section-space align-items-center gap-lg-0 gap-5">
+                          <div class="col-lg-7 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
                             <h2 class="section-title vh-txt-grad-purple-400">{{ t.pipeline_title }}</h2>
                             <p class="section-desc">{{ t.pipeline_desc }}</p>
-                          </div>
-                          <ol class="row list-unstyled vh-pipeline row-gap-4 mb-0">
-                            <li class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                              <div class="vh-card-dark vh-feature-panel h-100 text-center">
+                            <ol class="list-unstyled vh-timeline mt-4 mb-0">
+                              <li>
                                 <span class="vh-step-num" aria-hidden="true">1</span>
-                                <h3 class="h5 mb-2">{{ t.step1_title }}</h3>
-                                <p class="mb-0">{{ t.step1_desc }}</p>
-                              </div>
-                            </li>
-                            <li class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                              <div class="vh-card-dark vh-feature-panel h-100 text-center">
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step1_title }}</h3>
+                                  <p class="mb-0">{{ t.step1_desc }}</p>
+                                </div>
+                              </li>
+                              <li>
                                 <span class="vh-step-num" aria-hidden="true">2</span>
-                                <h3 class="h5 mb-2">{{ t.step2_title }}</h3>
-                                <p class="mb-0">{{ t.step2_desc }}</p>
-                              </div>
-                            </li>
-                            <li class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                              <div class="vh-card-dark vh-feature-panel h-100 text-center">
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step2_title }}</h3>
+                                  <p class="mb-0">{{ t.step2_desc }}</p>
+                                </div>
+                              </li>
+                              <li>
                                 <span class="vh-step-num" aria-hidden="true">3</span>
-                                <h3 class="h5 mb-2">{{ t.step3_title }}</h3>
-                                <p class="mb-0">{{ t.step3_desc }}</p>
-                              </div>
-                            </li>
-                            <li class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                              <div class="vh-card-dark vh-feature-panel h-100 text-center">
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step3_title }}</h3>
+                                  <p class="mb-0">{{ t.step3_desc }}</p>
+                                </div>
+                              </li>
+                              <li>
                                 <span class="vh-step-num" aria-hidden="true">4</span>
-                                <h3 class="h5 mb-2">{{ t.step4_title }}</h3>
-                                <p class="mb-0">{{ t.step4_desc }}</p>
-                              </div>
-                            </li>
-                          </ol>
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step4_title }}</h3>
+                                  <p class="mb-0">{{ t.step4_desc }}</p>
+                                </div>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="col-lg-5 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="vh-feature-shot">
+                              <img src="/assets/images/features/proxies-app.webp" alt="{{ t.shot_alt }}" width="840" height="1713" loading="lazy" />
+                            </div>
+                          </div>
                         </div>
 
                         <div class="section-space">
@@ -175,27 +180,22 @@ extra_css:
                           </div>
                         </div>
 
-                        <div class="row section-space align-items-center gap-lg-0 gap-5">
-                          <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
-                            <div class="vh-feature-shot">
-                              <img src="/assets/images/features/proxies-app.webp" alt="{{ t.shot_alt }}" width="840" height="1713" loading="lazy" />
-                            </div>
-                          </div>
-                          <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="section-space">
+                          <div class="section-start-text mb-4" data-aos="fade-up">
                             <h2 class="section-title vh-txt-grad-purple-400">{{ t.how_title }}</h2>
                             <p class="section-desc">{{ t.how_desc }}</p>
-                            <div class="row g-4 mt-1">
-                              <div class="col-md-6">
-                                <div class="vh-card-dark vh-feature-panel h-100">
-                                  <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
-                                  <p class="mb-0">{{ t.when_desc }}</p>
-                                </div>
+                          </div>
+                          <div class="row row-gap-4">
+                            <div class="col-lg-6" data-aos="fade-up">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
+                                <p class="mb-0">{{ t.when_desc }}</p>
                               </div>
-                              <div class="col-md-6">
-                                <div class="vh-card-dark vh-feature-panel h-100">
-                                  <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
-                                  <p class="mb-0">{{ t.cost_desc }}</p>
-                                </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
+                                <p class="mb-0">{{ t.cost_desc }}</p>
                               </div>
                             </div>
                           </div>

@@ -800,41 +800,35 @@ a.vh-feature-chip:hover{
 }
 
 // ---- Smart Proxies page ----
-// The four-step pipeline: each step's number disc sits on the card's top edge, and on
-// desktop a dashed rule runs through the gutters so the row reads as a sequence. The rule
-// is drawn at the discs' centre line, where the cards' own top borders hide it.
-.vh-pipeline{
+// The four steps read top to bottom beside the app screenshot. The dashed rail is drawn per
+// item, from under one number disc down to the next, so the last step draws nothing and the
+// list ends cleanly. `.vh-step-num` keeps its shared look; only its spacing changes here.
+.vh-timeline > li{
     position: relative;
+    display: flex;
+    gap: 18px;
 }
 
-.vh-pipeline > li{
-    padding-top: 24px;
+.vh-timeline > li:not(:last-child){
+    padding-bottom: 30px;
 }
 
-.vh-pipeline .vh-feature-panel{
-    padding-top: 40px;
-}
-
-.vh-pipeline .vh-step-num{
+.vh-timeline > li:not(:last-child)::before{
+    content: "";
     position: absolute;
-    top: -24px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    background-color: var(--vh-surface-raised);
-    background-image: linear-gradient(rgba(var(--purple-300-rgb), .18), rgba(var(--purple-300-rgb), .18));
-    border: 1px solid var(--vh-border);
+    top: 56px;
+    bottom: 8px;
+    left: 23px;
+    border-left: 2px dashed var(--vh-border);
 }
 
-@media (min-width: 992px){
-    .vh-pipeline::before{
-        content: "";
-        position: absolute;
-        top: 24px;
-        left: 12.5%;
-        right: 12.5%;
-        border-top: 2px dashed var(--vh-border);
-    }
+.vh-timeline .vh-step-num{
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.vh-timeline h3{
+    color: var(--purple-120);
 }
 
 // The rating scale: a penalty gradient with the six quality levels the app shows, each
