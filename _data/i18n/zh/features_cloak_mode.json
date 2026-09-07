@@ -1,0 +1,18 @@
+{
+  "meta_title": "隐身模式：流量完全隐蔽，科学上网首选 | VpnHood!",
+  "meta_description": "隐身模式将 VPN 流量伪装成普通网络流量，从容绕过深度包检测（DPI）。科学上网稳定防封，尽在 VpnHood！",
+  "eyebrow": "功能",
+  "title": "隐身模式",
+  "lead": "将 VPN 流量伪装成普通网页浏览流量，轻松突破封锁，有效抵御深度包检测（DPI）。",
+  "shot_alt": "VpnHood! 应用中的隐身模式设置界面",
+  "platforms_label": "支持平台",
+  "platforms": "Android、iOS、Windows 和 Linux",
+  "cta": "获取 VpnHood! CONNECT",
+  "all_features": "全部功能",
+  "how_title": "工作原理",
+  "how_desc": "大多数 VPN 协议都有明显的特征。深度包检测能直接识别出特征并掐断连接。隐身模式会将整个隧道深度伪装成普通的加密网页流量，让防火墙无从识别、无法拦截。",
+  "when_title": "适用场景",
+  "when_desc": "当遇到严格限制 VPN 的网络时开启：例如校园网、公司防火墙、屏蔽隧道的酒店和机场 Wi-Fi，或是严格的审查过滤系统。在没有封锁的网络环境中，无需开启。",
+  "cost_title": "性能影响",
+  "cost_desc": "伪装流量需要额外封装，可能会略微降低速度并稍微增加耗电。在畅通网络下享受极速体验，在受限环境下开启确保稳定连通。"
+}

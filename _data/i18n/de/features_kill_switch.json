@@ -1,0 +1,21 @@
+{
+  "meta_title": "VPN Kill Switch: Datenverkehr bei Verbindungsabbruch sperren | VpnHood!",
+  "meta_description": "Der Kill Switch blockiert die Internetverbindung sofort, wenn das VPN abbricht. So bleibt alles geschützt. Verfügbar in VpnHood!",
+  "eyebrow": "Funktion",
+  "title": "Kill Switch",
+  "lead": "Trennt die Internetverbindung automatisch, sobald das VPN abreißt.",
+  "shot_alt": "Der Kill Switch-Bereich in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Nur für Android. Nutzt eine Android-Systemeinstellung, die andere Plattformen nicht bieten.",
+  "cta": "VpnHood! CONNECT herunterladen",
+  "all_features": "Alle Funktionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Reißt der Tunnel ab, wechselt ein Gerät normalerweise unbemerkt zur regulären Verbindung zurück. Der Kill Switch sperrt stattdessen den gesamten Datenverkehr – so dringt nichts ungeschützt nach außen. In den Android-Einstellungen heißt die Option „Verbindungen ohne VPN blockieren“.",
+  "when_title": "Wann er sinnvoll ist",
+  "when_desc": "Immer dann aktivieren, wenn der Schutz Ihrer Daten wichtiger ist als eine unterbrechungsfreie Verbindung.",
+  "cost_title": "Was Sie beachten sollten",
+  "cost_desc": "Bricht das VPN ab, sind Sie offline, bis die Verbindung wieder steht. Auch WLAN-Anmeldeseiten in Hotels oder Flughäfen laden dann meist nicht – hier muss der Kill Switch eventuell kurz ausgeschaltet werden.",
+  "pair_title": "Erfordert „Durchgehend aktives VPN“",
+  "pair_desc": "Android koppelt den Kill Switch an die Einstellung „Durchgehend aktives VPN“. Beide gehören zusammen: „Durchgehend aktiv“ stellt die Verbindung nach einem Neustart oder Netzwechsel wieder her, während der Kill Switch den Datenverkehr blockiert, bis der Tunnel steht. Andernfalls könnten Apps in diesen Sekunden ungeschützt Daten übertragen.",
+  "pair_link": "Mehr über „Durchgehend aktives VPN“"
+}

@@ -1,0 +1,18 @@
+{
+  "meta_title": "Cloak Mode: Tespit Edilemeyen VPN Trafiği | VpnHood!",
+  "meta_description": "Cloak Mode, VPN trafiğinizi sıradan web trafiği gibi gösterir; böylece derin paket incelemesi (DPI) hiçbir imza yakalayamaz. VpnHood!'da.",
+  "eyebrow": "Özellik",
+  "title": "Cloak Mode",
+  "lead": "VPN trafiğinizi sıradan web trafiği gibi göstererek engelleri aşar, derin paket incelemesine (DPI) karşı tam dayanıklılık sağlar.",
+  "shot_alt": "VpnHood! uygulamasındaki Cloak Mode ekranı",
+  "platforms_label": "Desteklenen platformlar",
+  "platforms": "Android, iOS, Windows ve Linux",
+  "cta": "VpnHood! CONNECT Edinin",
+  "all_features": "Tüm özellikler",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "Çoğu VPN protokolü kendini hemen ele verir. Derin paket incelemesi (DPI) trafik biçimini analiz edip protokolü tanır ve ağ engellemesi varsa bağlantıyı keser. Cloak Mode, tüneli sıradan şifreli web trafiği gibi sararak filtrelerin tanıyabileceği hiçbir iz bırakmaz.",
+  "when_title": "Ne zaman açılmalı?",
+  "when_desc": "Ağ VPN kullanımını aktif olarak engellediğinde açın: okul veya iş yeri güvenlik duvarları, VPN'leri engelleyen otel ve havaalanı Wi-Fi ağları ya da ulusal sansür filtreleri. Herhangi bir engelleme olmayan ev ağınızda buna ihtiyacınız yoktur.",
+  "cost_title": "Dezavantajı nedir?",
+  "cost_desc": "Gizlenmiş trafik standart bir tünele göre daha fazla veri yükü taşır; bu nedenle biraz daha yavaş olabilir ve pili biraz daha fazla tüketebilir. Takas basittir: Yolunuz açıkken saf hız, engellendiğinizde ise kesintisiz çalışan bir bağlantı."
+}

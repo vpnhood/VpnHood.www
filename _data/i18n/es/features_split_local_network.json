@@ -1,0 +1,18 @@
+{
+  "meta_title": "Accede a dispositivos locales mientras usas una VPN | VpnHood!",
+  "meta_description": "Mantén accesibles impresoras, televisores y otros dispositivos de tu red local mientras la VPN está activa. Túnel dividido para la red local en VpnHood!.",
+  "eyebrow": "Túnel dividido",
+  "title": "Túnel dividido para la red local",
+  "lead": "Mantén accesibles impresoras, televisores y otros dispositivos de tu red local mientras la VPN está activa.",
+  "shot_alt": "Pantalla de túnel dividido para la red local en la aplicación VpnHood!",
+  "platforms_label": "Disponible en",
+  "platforms": "Android, iOS, Windows y Linux",
+  "cta": "Obtener VpnHood! CONNECT",
+  "back_parent": "Todas las opciones de túnel dividido",
+  "how_title": "Cómo funciona",
+  "how_desc": "El tráfico hacia direcciones locales se envía directamente en lugar de pasar por el túnel, así tus dispositivos cercanos siguen visibles sin tener que apagar la VPN.",
+  "when_title": "Cuándo usarlo",
+  "when_desc": "Para transmitir a un televisor, imprimir, conectar un NAS, gestionar domótica o cualquier dispositivo en tu misma red Wi-Fi.",
+  "cost_title": "Qué debes tener en cuenta",
+  "cost_desc": "El tráfico local queda visible para la red local, igual que si no usaras VPN. En redes Wi-Fi públicas, es preferible mantenerlo desactivado."
+}

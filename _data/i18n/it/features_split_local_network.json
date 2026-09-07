@@ -1,0 +1,18 @@
+{
+  "meta_title": "Accedi ai dispositivi locali mentre usi la VPN | VpnHood!",
+  "meta_description": "Mantieni accessibili stampanti, TV e altri dispositivi locali mentre la VPN è attiva. Split tunneling della rete locale con VpnHood!.",
+  "eyebrow": "Split tunneling",
+  "title": "Split tunneling della rete locale",
+  "lead": "Accedi a stampanti, smart TV e altri dispositivi della tua rete locale senza disattivare la VPN.",
+  "shot_alt": "Schermata dello Split tunneling della rete locale nell'app VpnHood!",
+  "platforms_label": "Disponibile su",
+  "platforms": "Android, iOS, Windows e Linux",
+  "cta": "Scarica VpnHood! CONNECT",
+  "back_parent": "Tutte le opzioni di split tunneling",
+  "how_title": "Come funziona",
+  "how_desc": "Il traffico verso gli indirizzi locali viene inviato direttamente senza passare dal tunnel VPN: così i tuoi dispositivi restano sempre raggiungibili.",
+  "when_title": "Quando usarlo",
+  "when_desc": "Perfetto per trasmettere alla TV, stampare, accedere a un NAS o gestire la domotica sulla stessa rete Wi-Fi.",
+  "cost_title": "Cosa comporta",
+  "cost_desc": "Il traffico locale resta visibile agli altri dispositivi sulla stessa rete, esattamente come quando non usi una VPN. Sulle reti Wi-Fi pubbliche è consigliabile tenerlo disattivato."
+}

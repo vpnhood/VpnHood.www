@@ -1,0 +1,18 @@
+{
+  "meta_title": "Ülkelere Göre VPN Tünelleme | VpnHood!",
+  "meta_description": "Trafiği hedef ülkeye göre VPN üzerinden yönlendirin veya kendi ülkenizi tamamen hariç tutun. VpnHood!'da hemen kullanın.",
+  "eyebrow": "Tünelleme",
+  "title": "Ülkelere göre tünelleme",
+  "lead": "Trafiği hedef ülkeye göre VPN üzerinden veya doğrudan yönlendirin.",
+  "shot_alt": "VpnHood! uygulamasında Ülkelere göre tünelleme ekranı",
+  "platforms_label": "Kullanabileceğiniz platformlar",
+  "platforms": "Android, iOS, Windows ve Linux",
+  "cta": "VpnHood! CONNECT Edinin",
+  "back_parent": "Tüm tünelleme seçenekleri",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "Hedefler ülkeye göre eşleştirilir. Kendi ülkenizi hariç tuttuğunuzda yerel servisler tam hızla doğrudan bağlanır, yurt dışı trafiği ise tünelden geçer. Dilerseniz tam tersini yaparak yalnızca seçtiğiniz ülkeleri tünelleyebilirsiniz.",
+  "when_title": "Ne zaman kullanılır?",
+  "when_desc": "Ülkemi Hariç Tut günlük kullanım için idealdir: Yerel bankacılık, kurye ve resmi siteler kesintisiz çalışırken diğer tüm trafiği VPN güvenceye alır.",
+  "cost_title": "Dezavantajı nedir?",
+  "cost_desc": "Hariç tutulan ülkelere giden trafik, gerçek IP adresinizi bu sitelere açık eder. Hız kazanırken yaptığınız ödünç budur."
+}

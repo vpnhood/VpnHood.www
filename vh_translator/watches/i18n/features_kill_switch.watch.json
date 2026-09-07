@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "VPN Kill Switch: Block Traffic If the VPN Drops | VpnHood!",
+    "meta_description": "The kill switch blocks your internet connection the moment the VPN disconnects, so nothing leaves the device unprotected. Available in VpnHood!",
+    "eyebrow": "Feature",
+    "title": "Kill Switch",
+    "lead": "Automatically blocks the internet connection if the VPN disconnects.",
+    "shot_alt": "The Kill Switch screen in the VpnHood! app",
+    "platforms_label": "Available on",
+    "platforms": "Android only. It relies on an Android system setting that the other platforms do not expose.",
+    "cta": "Get VpnHood! CONNECT",
+    "all_features": "All features",
+    "how_title": "How it works",
+    "how_desc": "If the tunnel drops, a device would normally fall back to the ordinary connection without telling you. The kill switch blocks traffic instead, so nothing leaves the device unprotected in the gap. In Android settings it is called Block connections without VPN.",
+    "when_title": "When to turn it on",
+    "when_desc": "Leave it on whenever an accidental unprotected moment matters more to you than staying online.",
+    "cost_title": "What it costs you",
+    "cost_desc": "When the VPN drops you lose connectivity until it is back. Wi-Fi sign-in pages may not load either, so a hotel or airport network can need the switch off for a minute.",
+    "pair_title": "It needs Always On",
+    "pair_desc": "Android puts the kill switch underneath the always-on VPN setting, so the two are turned on together and work as a pair. Always On brings the tunnel back after a reboot or a change of network; the kill switch holds your traffic until it is actually back. Without it, apps can send a few requests in the seconds before the VPN is up.",
+    "pair_link": "About Always On"
+  }
+}

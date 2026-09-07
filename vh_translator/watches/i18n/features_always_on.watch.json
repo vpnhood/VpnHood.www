@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "Always-On VPN: Stay Connected After Restarts | VpnHood!",
+    "meta_description": "Always On keeps the device connected to the VPN at all times, even after restarts or network changes. Available in VpnHood!",
+    "eyebrow": "Feature",
+    "title": "Always On",
+    "lead": "Keeps the device connected to the VPN at all times, even after restarts or network changes.",
+    "shot_alt": "The Always On screen in the VpnHood! app",
+    "platforms_label": "Available on",
+    "platforms": "Android only. It relies on the Android always-on VPN setting, which the other platforms do not offer.",
+    "cta": "Get VpnHood! CONNECT",
+    "all_features": "All features",
+    "how_title": "How it works",
+    "how_desc": "Instead of reconnecting by hand after every reboot or Wi-Fi switch, the system brings the VPN back up on its own.",
+    "when_title": "When to turn it on",
+    "when_desc": "For a device that should never be online unprotected, and for anyone tired of reconnecting by hand after every reboot.",
+    "cost_title": "What it costs you",
+    "cost_desc": "The VPN runs whenever the device is on, which uses a little more battery than connecting only when you need it.",
+    "pair_title": "Pair it with the kill switch",
+    "pair_desc": "Always On gets the tunnel back up, but reconnecting takes a moment, and apps do not wait. The kill switch closes that gap by blocking traffic until the VPN is connected. Android keeps it under the same setting, so switching both on takes one extra tap.",
+    "pair_link": "About the kill switch"
+  }
+}

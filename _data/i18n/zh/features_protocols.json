@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN 协议：UDP、TCP 与 QUIC 科学上网 | VpnHood!",
+  "meta_description": "自由切换 UDP、TCP 与 QUIC 协议，轻松适应各类网络环境，科学上网更稳定。还可按需屏蔽 QUIC 以优化视频播放。尽在 VpnHood！",
+  "eyebrow": "功能",
+  "title": "连接协议",
+  "lead": "VPN 协议决定了数据在设备与服务器之间的传输方式。随时切换合适协议，轻松适应各种网络。",
+  "shot_alt": "VpnHood! 应用中的协议设置界面",
+  "platforms_label": "支持平台",
+  "platforms": "Android、iOS、Windows 及 Linux。QUIC 支持因平台而异。",
+  "cta": "获取 VpnHood! CONNECT",
+  "all_features": "全部功能",
+  "how_title": "工作原理",
+  "how_desc": "UDP 更为轻量，通常速度最快，但部分网络会对其进行限制。TCP 更加稳定可靠：理论速度稍慢，却能在 UDP 受阻时畅通无阻。QUIC 则是基于 UDP 的现代协议，在允许的网络环境下速度更胜一筹。",
+  "when_title": "何时切换",
+  "when_desc": "当网络变慢或无法连接时即可切换。优先尝试 UDP 获取更快速度，遇到网络限制时可换用 TCP。屏蔽 QUIC 能促使应用回退到标准流媒体传输，从而改善 Cloak Mode 下的视频播放体验。",
+  "cost_title": "使用成本",
+  "cost_desc": "只需重新连接即可，没有任何额外费用。协议可针对每次连接单独选择，当前协议不佳时随时换用其他协议。"
+}

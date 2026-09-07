@@ -28,6 +28,7 @@
   "stealth_label": "Zensur umgehen",
   "stealth_title": "Unerkennbar, wo andere kostenlose VPNs blockiert werden",
   "stealth_desc": "Kostenlose VPNs werden von restriktiven Netzwerken meist zuerst erkannt: Ihre Protokolle sind bekannt und lassen sich leicht sperren. VpnHood wurde speziell für solche Netzwerke entwickelt: Es tarnt den Datenverkehr als ganz normales verschlüsseltes Surfen, ganz ohne typische Muster. Ob im eingeschränkten öffentlichen WLAN, im Firmennetzwerk oder hinter staatlichen Zensurfiltern – die Verbindung bleibt zuverlässig bestehen.",
+  "stealth_link": "Kostenlose VPN-Tarife vergleichen",
   "pending_label": "Los geht's",
   "pending_title": "Sicherer und privater Zugang",
   "pending_desc": "Erleben Sie eine nahtlose und private Verbindung mit unserem kostenlosen Open-Source-VPN. Keine Registrierung, keine persönlichen Daten. Genießen Sie High-Speed-Konnektivität für all Ihre Online-Aktivitäten – ohne Bandbreiten- oder Zeitbeschränkungen. Ihr digitales Leben bleibt privat und ununterbrochen.",

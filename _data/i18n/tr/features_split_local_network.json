@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN Açıkken Yerel Cihazlara Erişin | VpnHood!",
+  "meta_description": "VPN açıkken yazıcı, TV ve yerel ağdaki diğer cihazlara erişmeye devam edin. VpnHood! ile yerel ağ tünellemesi.",
+  "eyebrow": "Tünelleme",
+  "title": "Yerel ağı hariç tutma",
+  "lead": "VPN açıkken yazıcılar, TV'ler ve yerel ağınızdaki diğer cihazlara erişmeye devam edin.",
+  "shot_alt": "VpnHood! uygulamasında Yerel ağı hariç tutma ekranı",
+  "platforms_label": "Kullanabileceğiniz platformlar",
+  "platforms": "Android, iOS, Windows ve Linux",
+  "cta": "VpnHood! CONNECT Edinin",
+  "back_parent": "Tüm tünelleme seçenekleri",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "Yerel adreslere giden trafik VPN tüneli yerine doğrudan gönderilir; böylece VPN'i kapatmadan çevrenizdeki cihazlara bağlı kalırsınız.",
+  "when_title": "Ne zaman kullanılır?",
+  "when_desc": "TV'ye ekran yansıtma, yazdırma, NAS sunucuları, akıllı ev sistemleri ve aynı Wi-Fi ağındaki diğer tüm cihazlar için idealdir.",
+  "cost_title": "Neleri göze almalısınız?",
+  "cost_desc": "Yerel trafik, VPN'den önceki gibi yerel ağa açık olur. Halka açık Wi-Fi ağlarında bu özelliği kapalı tutmak isteyebilirsiniz."
+}

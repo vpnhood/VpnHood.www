@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN-Split-Tunneling nach Apps | VpnHood!",
+  "meta_description": "Wählen Sie, welche Apps das VPN nutzen und welche sich direkt verbinden. Split-Tunneling nach Apps in VpnHood! auf Android.",
+  "eyebrow": "Split-Tunneling",
+  "title": "Split-Tunneling nach Apps",
+  "lead": "Bestimmen Sie, welche Apps das VPN nutzen und welche direkt ins Internet gehen.",
+  "shot_alt": "Der Bildschirm für Split-Tunneling nach Apps in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Nur für Android. Unter iOS, Windows und Linux lässt sich der Datenverkehr nicht pro App filtern – daher fehlt diese Option dort.",
+  "cta": "VpnHood! CONNECT holen",
+  "back_parent": "Alle Split-Tunneling-Optionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Alle installierten Apps werden aufgelistet. Wählen Sie einfach aus, welche durch das VPN geleitet oder davon ausgenommen werden sollen. Der Datenverkehr ausgeschlossener Apps berührt das VPN zu keinem Zeitpunkt.",
+  "when_title": "Typische Einsatzbereiche",
+  "when_desc": "Banking-Apps, die VPNs blockieren, Games mit Bedarf an minimaler Latenz oder Streaming-Dienste, die Ihren echten Standort erfordern.",
+  "cost_title": "Was Sie beachten sollten",
+  "cost_desc": "Ausgeschlossene Apps übertragen Daten völlig ungeschützt wie ohne VPN. Halten Sie diese Liste daher bewusst kurz."
+}

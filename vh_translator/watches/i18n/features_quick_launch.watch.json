@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "Quick Launch: Connect From the Notification Bar | VpnHood!",
+    "meta_description": "Quick Launch adds a tile to the Android quick settings panel so you can connect to the VPN in a single tap. Available in VpnHood!",
+    "eyebrow": "Feature",
+    "title": "Quick Launch",
+    "lead": "Connect to the VPN instantly from the notification bar with a single tap.",
+    "shot_alt": "The Quick Launch screen in the VpnHood! app",
+    "platforms_label": "Available on",
+    "platforms": "Android only. Quick settings tiles are an Android feature.",
+    "cta": "Get VpnHood! CONNECT",
+    "all_features": "All features",
+    "how_title": "How it works",
+    "how_desc": "Adds a VpnHood! tile to the Android quick settings panel, so connecting takes one tap from any screen without opening the app.",
+    "when_title": "When to turn it on",
+    "when_desc": "If you connect and disconnect through the day rather than staying on all the time.",
+    "cost_title": "What it costs you",
+    "cost_desc": "Nothing. It is a shortcut, not a change to how the VPN works."
+  }
+}

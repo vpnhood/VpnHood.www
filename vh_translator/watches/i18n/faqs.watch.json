@@ -6,12 +6,16 @@
     "desc": "Let's find the answers to your questions.",
     "view_all": "View All FAQs",
     "q1": "Why VpnHood?",
-    "a1": "VpnHood is a free VPN powered by the <b>VpnHood! ENGINE</b>, fully developed by the VpnHood team. It uses proprietary protocols built on open-source foundations for maximum transparency. Our open-source code is available for public review to verify its security and integrity. VpnHood is designed to optimize data transmission for high-performance connectivity and enhanced network compatibility. We prioritize your privacy by ensuring zero collection of personal information, providing a highly secure and private digital experience.",
+    "a1": "VpnHood is a free VPN powered by the <b>VpnHood! ENGINE</b>, fully developed by the VpnHood team. It uses its own protocols rather than OpenVPN or WireGuard, which is what lets it stay undetectable. Our open-source code is available for public review to verify its security and integrity. VpnHood is designed to optimize data transmission for high-performance connectivity and enhanced network compatibility. We prioritize your privacy by ensuring zero collection of personal information, providing a highly secure and private digital experience.",
     "q2": "Is VpnHood a free VPN?",
     "a2": "Yes, VpnHood offers a free VPN service without any time, traffic, or bandwidth limitations. However, you can unlock additional features by upgrading to a premium subscription. With the premium plan, you gain access to servers in more countries, faster connection speeds, and enhanced app functionality. For further information, visit the <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">plan details</a> page.",
     "q3": "VpnHood! CONNECT vs. VpnHood! CLIENT?",
     "a3": "VpnHood! CONNECT is a free VPN that users can enjoy without limitations. However, while VpnHood! CLIENT is also free, it does not include servers for direct connections. Instead, those who set up their own dedicated VPN using VpnHood! MANAGER can share this app with their users along with a Server Key for access.",
     "q4": "What platforms does VpnHood support?",
-    "a4": "VpnHood! CLIENT runs on Android, iOS (iPhone and iPad), Android TV, Windows, and Linux. VpnHood! CONNECT runs on Android, Android TV, Windows, and Linux. On Windows and Linux, VpnHood! CONNECT has no free servers; you'll need to purchase a Premium Key, which is available on the <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">pricing</a> page."
+    "a4": "VpnHood! CLIENT runs on Android, iOS (iPhone and iPad), Android TV, Windows, and Linux. VpnHood! CONNECT runs on Android, Android TV, Windows, and Linux. On Windows and Linux, VpnHood! CONNECT has no free servers; you'll need to purchase a Premium Key, which is available on the <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">pricing</a> page.",
+    "q5": "Is VpnHood open source?",
+    "a5": "Yes, all of it. VpnHood! CONNECT, VpnHood! CLIENT, the server, and the VpnHood! ENGINE behind them are published on GitHub, and the project has been audited by two independent security firms. You can read the code yourself rather than take our word for it.",
+    "q6": "Is VpnHood undetectable?",
+    "a6": "It's built for it. VpnHood uses its own protocols rather than OpenVPN or WireGuard, and shapes its traffic to look like ordinary encrypted browsing, so there's no familiar signature for a firewall or deep packet inspection to match. On networks that actively block VPNs, the connection is designed to keep working."
   }
 }

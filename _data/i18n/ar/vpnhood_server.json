@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! SERVER",
-  "meta_description": "محرك مجاني ومفتوح المصدر لشبكة VPN الخاصة بك. يعمل على Linux أو Windows أو Docker، ويتجاوز عمليات الفحص والحظر، ويعمل بوجود VpnHood! MANAGER أو بدونه.",
+  "meta_description": "محرك مجاني ومفتوح المصدر لخدمة VPN ذاتي الاستضافة. يعمل على أنظمة Linux وWindows أو عبر Docker، ويتصدى لمحاولات الحجب والفحص، مع أو بدون VpnHood! MANAGER.",
   "page_title": "VpnHood! SERVER",
   "page_desc": "محرك VPN الخاص بك. يعمل على جهازك الشخصي، ويدير حركة مرور مستخدميك، ولا يخضع لأي بنية تحتية سوى بنيتك.",
   "f_anywhere_title": "يعمل في أي مكان تستأجره",

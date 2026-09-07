@@ -1,0 +1,18 @@
+{
+  "meta_title": "Uygulamalara Göre VPN Tünelleme | VpnHood!",
+  "meta_description": "Hangi uygulamaların VPN kullanacağını, hangilerinin doğrudan bağlanacağını seçin. Android'de VpnHood! ile uygulamalara göre tünelleme.",
+  "eyebrow": "Tünelleme",
+  "title": "Uygulamalara göre tünelleme",
+  "lead": "Hangi uygulamaların VPN kullanacağını, hangilerinin doğrudan bağlanacağını seçin.",
+  "shot_alt": "VpnHood! uygulamasında uygulamalara göre tünelleme ekranı",
+  "platforms_label": "Kullanılabildiği platformlar",
+  "platforms": "Yalnızca Android. iOS, Windows ve Linux uygulama bazında trafik filtreleyemediği için bu seçenek bu platformlarda görünmez.",
+  "cta": "VpnHood! CONNECT Edinin",
+  "back_parent": "Tüm tünelleme seçenekleri",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "Cihazdaki her uygulama listelenir. Tüneli kullanacak veya tünelin dışında kalacak uygulamaları seçin; geri kalanlar tam tersi kuralı uygular. Hariç tutulan bir uygulamanın trafiği asla VPN'e girmez.",
+  "when_title": "Ne zaman kullanılır?",
+  "when_desc": "VPN üzerinden çalışmayı reddeden bir bankacılık uygulaması, mümkün olan en düşük gecikmeyi isteyen bir oyun veya gerçek konumunuzu görmesi gereken bir yayın uygulaması için idealdir.",
+  "cost_title": "Nelere dikkat edilmeli?",
+  "cost_desc": "Hariç tutulan bir uygulama, tıpkı hiç VPN kullanmıyormuşsunuz gibi tamamen korumasız kalır. Bu listeyi kısa ve amaca yönelik tutun."
+}

@@ -1,0 +1,23 @@
+{
+  "meta_title": "Split DNS : gardez vos requêtes DNS sécurisées dans le VPN | VpnHood!",
+  "meta_description": "Choisissez si vos requêtes DNS suivent vos règles de Split tunneling ou restent toujours protégées dans le VPN. Split DNS dans VpnHood!, sur toutes les plateformes.",
+  "eyebrow": "Split tunneling",
+  "title": "Split DNS",
+  "lead": "Les requêtes DNS révèlent chaque site que vous visitez. Le Split DNS vous permet de décider si elles suivent vos règles de split ou restent systématiquement protégées dans le VPN.",
+  "shot_alt": "L'écran Split DNS de l'application VpnHood!, montrant les options Toujours utiliser le VPN et Autoriser le contournement du VPN",
+  "platforms_label": "Disponible sur",
+  "platforms": "Android, iOS, Windows et Linux",
+  "cta": "Obtenir VpnHood! CONNECT",
+  "back_parent": "Toutes les options de Split tunneling",
+  "modes_title": "Deux modes au choix",
+  "always_title": "Toujours utiliser le VPN",
+  "always_desc": "Chaque requête DNS passe par le VPN, même si une règle de split devait l'exclure. Si le serveur ne peut pas la résoudre, elle est bloquée plutôt que divulguée. C'est l'option recommandée pour une confidentialité maximale.",
+  "bypass_title": "Autoriser le contournement du VPN",
+  "bypass_desc": "Le trafic DNS applique vos règles de split : un pays, un domaine ou une adresse exclus sont résolus hors du tunnel. Idéal pour accéder aux serveurs DNS internes d'une entreprise.",
+  "how_title": "Comment ça marche",
+  "how_desc": "VpnHood! identifie le trafic DNS via ses ports : 53 pour les requêtes standard et 853 pour le DNS over TLS, en TCP comme en UDP. En mode « Toujours utiliser le VPN », ces paquets sont redirigés dans le tunnel, même exclus par une règle. Le DNS over HTTPS utilisant le port web classique 443, il ne peut pas être intercepté.",
+  "when_title": "Quand l'utiliser",
+  "when_desc": "Conservez le mode « Toujours utiliser le VPN ». Passez à « Autoriser le contournement du VPN » uniquement si un résolveur local doit répondre à vos requêtes, sachant que ce réseau pourra alors les consulter.",
+  "cost_title": "Combien ça coûte ?",
+  "cost_desc": "Cela s'applique aux règles de Split tunneling gérées par VpnHood!, par pays, domaine et adresse IP. Une application exclue du VPN ne passe jamais par le tunnel : le système d'exploitation achemine donc ses requêtes avec le reste de son trafic, quel que soit ce réglage."
+}

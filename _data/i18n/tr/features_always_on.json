@@ -1,0 +1,21 @@
+{
+  "meta_title": "Always-On VPN: Yeniden Başlatmalarda Kesintisiz Bağlantı | VpnHood!",
+  "meta_description": "Always On, yeniden başlatma ve ağ değişikliklerinde bile cihazınızı VPN'e bağlı tutar. VpnHood! ile hemen kullanın.",
+  "eyebrow": "Özellik",
+  "title": "Always On",
+  "lead": "Cihazınızı her an VPN'e bağlı tutar; yeniden başlatmalarda ve ağ değişikliklerinde bile bağlantınız kopmaz.",
+  "shot_alt": "VpnHood! uygulamasındaki Always On ekranı",
+  "platforms_label": "Desteklenen platformlar",
+  "platforms": "Yalnızca Android. Diğer platformlarda bulunmayan Android'in yerleşik her zaman açık VPN ayarını kullanır.",
+  "cta": "VpnHood! CONNECT'i İndirin",
+  "all_features": "Tüm özellikler",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "Her yeniden başlatmada veya Wi-Fi değişiminde manuel bağlanmak yerine, sistem VPN bağlantısını otomatik olarak yeniden kurar.",
+  "when_title": "Ne zaman açılmalı?",
+  "when_desc": "Asla korumasız kalmaması gereken cihazlar ve her yeniden başlatmada tekrar tekrar bağlanmaktan yorulanlar için idealdir.",
+  "cost_title": "Dezavantajı nedir?",
+  "cost_desc": "Cihaz açık olduğu sürece VPN de çalışacağından, yalnızca ihtiyaç duyulduğunda bağlanmaya kıyasla biraz daha fazla pil tüketebilir.",
+  "pair_title": "Kill Switch ile birlikte kullanın",
+  "pair_desc": "Always On tüneli yeniden açar ancak yeniden bağlanmak kısa bir an sürer ve uygulamalar beklemez. Kill Switch, VPN bağlanana kadar tüm trafiği engelleyerek bu açığı kapatır. Android her iki ayarı da aynı ekranda sunduğu için ikisini birden açmak tek bir dokunuşunuza bakar.",
+  "pair_link": "Kill Switch hakkında bilgi edinin"
+}

@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN Split-Tunneling nach Domain | VpnHood!",
+  "meta_description": "Bestimmte Domains im VPN-Datenverkehr einbinden, ausschließen oder blockieren. Split-Tunneling nach Domain in VpnHood!.",
+  "eyebrow": "Split-Tunneling",
+  "title": "Split-Tunneling nach Domain",
+  "lead": "Bestimmte Domains im VPN-Datenverkehr einbinden, ausschließen oder blockieren.",
+  "shot_alt": "Die Ansicht für Split-Tunneling nach Domain in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Android, iOS, Windows und Linux",
+  "cta": "VpnHood! CONNECT holen",
+  "back_parent": "Alle Split-Tunneling-Optionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Domain eintragen und festlegen: über das VPN leiten, direkt verbinden oder komplett blockieren.",
+  "when_title": "Typische Einsatzbereiche",
+  "when_desc": "Websites, die VPN-Nutzer blockieren, interne Adressen im lokalen Netzwerk oder Domains, die auf diesem Gerät gar nicht erreichbar sein sollen.",
+  "cost_title": "Gut zu wissen",
+  "cost_desc": "Ausgeschlossene Domains sehen Ihre echte IP-Adresse. Blockierte Seiten sind komplett gesperrt – Tippfehler können den Zugriff verhindern."
+}

@@ -1,0 +1,18 @@
+{
+  "meta_title": "Túnel dividido por aplicaciones para VPN | VpnHood!",
+  "meta_description": "Elige qué aplicaciones usan la VPN y cuáles se conectan directamente. Túnel dividido por aplicaciones en VpnHood! para Android.",
+  "eyebrow": "Túnel dividido",
+  "title": "Túnel dividido por aplicaciones",
+  "lead": "Elige qué aplicaciones usan la VPN y cuáles se conectan directamente.",
+  "shot_alt": "Pantalla de túnel dividido por aplicaciones en la aplicación VpnHood!",
+  "platforms_label": "Disponible en",
+  "platforms": "Solo en Android. iOS, Windows y Linux no permiten filtrar el tráfico por aplicación, por lo que esta opción no aparece en esos sistemas.",
+  "cta": "Obtener VpnHood! CONNECT",
+  "back_parent": "Todas las opciones de túnel dividido",
+  "how_title": "Cómo funciona",
+  "how_desc": "Verás una lista con todas las aplicaciones del dispositivo. Elige cuáles deben pasar por el túnel o cuáles deben quedar fuera; el resto seguirá la regla opuesta. El tráfico de una aplicación excluida nunca pasa por la VPN.",
+  "when_title": "Cuándo usarlo",
+  "when_desc": "Una app bancaria que no funciona con VPN, un juego que necesita la menor latencia posible o una app de streaming que debe detectar tu ubicación real.",
+  "cost_title": "Qué debes tener en cuenta",
+  "cost_desc": "Una aplicación excluida queda tan expuesta como si no usaras ninguna VPN. Mantén la lista corta y añade solo lo necesario."
+}

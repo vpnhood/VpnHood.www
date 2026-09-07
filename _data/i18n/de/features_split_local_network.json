@@ -1,0 +1,18 @@
+{
+  "meta_title": "Lokale Geräte trotz VPN erreichen | VpnHood!",
+  "meta_description": "Drucker, Fernseher und andere Geräte im lokalen Netzwerk auch bei aktivem VPN nutzen. Lokales Netzwerk aufteilen in VpnHood!.",
+  "eyebrow": "Split-Tunneling",
+  "title": "Lokales Netzwerk ausschließen",
+  "lead": "Drucker, Fernseher und andere lokale Geräte im Netzwerk erreichen – auch bei eingeschaltetem VPN.",
+  "shot_alt": "Der Bereich „Lokales Netzwerk ausschließen“ in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Android, iOS, Windows und Linux",
+  "cta": "VpnHood! CONNECT holen",
+  "back_parent": "Alle Split-Tunneling-Optionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "Datenverkehr an lokale Adressen wird direkt gesendet statt durch den Tunnel. So bleiben Geräte in der Nähe erreichbar, ohne das VPN trennen zu müssen.",
+  "when_title": "Typische Anwendungsfälle",
+  "when_desc": "Streaming auf den Fernseher, Drucken, NAS-Zugriff oder Smart-Home-Zentralen – alles im selben WLAN bleibt zugänglich.",
+  "cost_title": "Gibt es Nachteile?",
+  "cost_desc": "Lokaler Datenverkehr bleibt im Heimnetzwerk sichtbar – genau wie ohne VPN. In öffentlichen WLANs empfiehlt es sich, diese Funktion zu deaktivieren."
+}

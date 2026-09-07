@@ -1,0 +1,21 @@
+{
+  "meta_title": "VPN Kill Switch: Bağlantı Kesildiğinde Trafiği Engelleyin | VpnHood!",
+  "meta_description": "Kill Switch, VPN bağlantısı koptuğu anda internet erişimini keserek verilerinizin korunmasız sızmasını önler. VpnHood!'da hemen keşfedin!",
+  "eyebrow": "Özellik",
+  "title": "Kill Switch",
+  "lead": "VPN bağlantısı kesildiğinde internet erişimini otomatik olarak engeller.",
+  "shot_alt": "VpnHood! uygulamasındaki Kill Switch ekranı",
+  "platforms_label": "Desteklenen platformlar",
+  "platforms": "Yalnızca Android. Diğer platformlarda bulunmayan özel bir Android sistem ayarını kullanır.",
+  "cta": "VpnHood! CONNECT'i Edinin",
+  "all_features": "Tüm özellikler",
+  "how_title": "Nasıl çalışır?",
+  "how_desc": "VPN bağlantısı kesilirse cihazlar normalde fark ettirmeden standart internete geri döner. Kill Switch ise trafiği anında keserek arada hiçbir bilginin korumasız sızmamasını sağlar. Android ayarlarında bu özellik \"VPN olmadan bağlantıları engelle\" olarak geçer.",
+  "when_title": "Ne zaman açmalı?",
+  "when_desc": "Bir anlık bile olsa korumasız kalmak sizin için çevrim içi kalmaktan daha önemliyse bu özelliği açık bırakın.",
+  "cost_title": "Neleri etkiler?",
+  "cost_desc": "VPN kesildiğinde yeniden bağlanana kadar internet erişiminiz durur. Otel veya havalimanlarındaki Wi-Fi giriş sayfaları da açılmayabilir; bu tür ağlara bağlanırken özelliği geçici olarak kapatmanız gerekebilir.",
+  "pair_title": "\"Her Zaman Açık\" gerektirir",
+  "pair_desc": "Android, Kill Switch'i her zaman açık VPN ayarının altına yerleştirir; bu yüzden ikisi birlikte açılır ve uyum içinde çalışır. Her Zaman Açık özelliği, cihaz yeniden başladığında veya ağ değiştiğinde bağlantıyı tekrar kurar; Kill Switch ise bağlantı sağlanana kadar trafiği durdurur. Bu olmadan, VPN açılana kadarki birkaç saniyede uygulamalar korumasız veri gönderebilir.",
+  "pair_link": "Her Zaman Açık Hakkında"
+}

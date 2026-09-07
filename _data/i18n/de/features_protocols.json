@@ -1,0 +1,18 @@
+{
+  "meta_title": "VPN-Protokolle: UDP, TCP und QUIC | VpnHood!",
+  "meta_description": "Wechseln Sie flexibel zwischen UDP, TCP und QUIC – passend zu Ihrem Netzwerk. Blockieren Sie QUIC bei Videoproblemen. Verfügbar in VpnHood!",
+  "eyebrow": "Funktion",
+  "title": "Protokolle",
+  "lead": "Ein VPN-Protokoll bestimmt, wie Ihre Daten zwischen Gerät und Server übertragen werden. Wechseln Sie nach Bedarf einfach das Protokoll.",
+  "shot_alt": "Die Protokoll-Übersicht in der VpnHood!-App",
+  "platforms_label": "Verfügbar für",
+  "platforms": "Android, iOS, Windows und Linux. Die QUIC-Verfügbarkeit variiert je nach Plattform.",
+  "cta": "VpnHood! CONNECT holen",
+  "all_features": "Alle Funktionen",
+  "how_title": "So funktioniert es",
+  "how_desc": "UDP ist schlank und meist am schnellsten, wird jedoch von manchen Netzwerken blockiert. TCP ist die verlässliche Wahl: theoretisch langsamer, kommt aber überall durch. QUIC ist ein modernes Protokoll auf UDP-Basis – noch schneller, wo es erlaubt ist.",
+  "when_title": "Wann Sie wechseln sollten",
+  "when_desc": "Wechseln Sie das Protokoll, wenn Verbindungen langsam sind oder blockiert werden. Nutzen Sie UDP für maximale Geschwindigkeit und TCP bei Verbindungsproblemen. Das Blockieren von QUIC zwingt Apps zum Standard-Streaming, was die Videowiedergabe im Cloak-Modus verbessern kann.",
+  "cost_title": "Die Kosten",
+  "cost_desc": "Nur ein kurzer Reconnect. Das Protokoll lässt sich für jede Verbindung einzeln anpassen – probieren Sie einfach ein anderes aus, wenn es mal hakt."
+}
