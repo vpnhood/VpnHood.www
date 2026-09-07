@@ -748,6 +748,21 @@ a.vh-feature-chip:hover{
     color: var(--vh-accent-ink);
 }
 
+// Panel titles take the same lavender as every other card title on the site
+// (.vh-feature-card h3, .vh-feature-list .vh-feature-title); inheriting the muted
+// body colour made them vanish into the copy, especially in dark.
+.vh-feature-panel h3{
+    color: var(--purple-120);
+}
+
+// Index-card titles are the accent, whether or not they are links: in the
+// split-tunneling grid the Split DNS card is the one card without a page of its own, and
+// the plainer heading colour made it look like a different kind of thing. Placed after the
+// rule above so it wins for the cards that carry both classes.
+.vh-feature-inline h3{
+    color: var(--vh-accent-ink);
+}
+
 // Index cards lay a small mark beside the text: the app's own feature illustration where
 // one exists, otherwise a line symbol in the site's icon disc. Flex follows the page
 // direction, so the mark sits on the left in LTR and on the right in RTL with no extra rule.
@@ -782,4 +797,110 @@ a.vh-feature-chip:hover{
 
 .vh-feature-art .vh-feature-icon{
     margin-bottom: 0;
+}
+
+// ---- Smart Proxies page ----
+// The four-step pipeline: each step's number disc sits on the card's top edge, and on
+// desktop a dashed rule runs through the gutters so the row reads as a sequence. The rule
+// is drawn at the discs' centre line, where the cards' own top borders hide it.
+.vh-pipeline{
+    position: relative;
+}
+
+.vh-pipeline > li{
+    padding-top: 24px;
+}
+
+.vh-pipeline .vh-feature-panel{
+    padding-top: 40px;
+}
+
+.vh-pipeline .vh-step-num{
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    background-color: var(--vh-surface-raised);
+    background-image: linear-gradient(rgba(var(--purple-300-rgb), .18), rgba(var(--purple-300-rgb), .18));
+    border: 1px solid var(--vh-border);
+}
+
+@media (min-width: 992px){
+    .vh-pipeline::before{
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 12.5%;
+        right: 12.5%;
+        border-top: 2px dashed var(--vh-border);
+    }
+}
+
+// The rating scale: a penalty gradient with the six quality levels the app shows, each
+// keyed to the same semantic colour the app uses for it.
+.vh-rating-scale{
+    height: 6px;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, var(--vh-ok), var(--vh-warn), var(--vh-danger));
+}
+
+.vh-rating-scale-labels{
+    display: flex;
+    justify-content: space-between;
+    margin: .4rem 0 1rem;
+    font-size: .8rem;
+    color: var(--vh-text-dim);
+}
+
+.vh-rating-ladder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-rating-ladder li{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .35rem .8rem;
+    border-radius: 999px;
+    border: 1px solid var(--vh-border);
+    font-size: .875rem;
+    color: var(--vh-text-soft);
+}
+
+.vh-rating-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--vh-rating, var(--vh-text-dim));
+}
+
+.vh-rating-excellent{ --vh-rating: var(--vh-ok); }
+.vh-rating-good{ --vh-rating: var(--vh-blue-ink); }
+.vh-rating-fair{ --vh-rating: var(--vh-warn); }
+.vh-rating-poor{ --vh-rating: var(--vh-warn); }
+.vh-rating-very-poor{ --vh-rating: var(--vh-danger); }
+.vh-rating-failed{ --vh-rating: var(--vh-danger); }
+
+.vh-rating-poor .vh-rating-dot,
+.vh-rating-very-poor .vh-rating-dot{
+    opacity: .55;
+}
+
+// The app's relay illustration beside "How it works". Transparent brand art that reads on
+// both themes, so it is not run through make-light-art.
+.vh-feature-relay{
+    display: flex;
+    justify-content: center;
+}
+
+.vh-feature-relay img{
+    width: 100%;
+    max-width: 420px;
+    height: auto;
 }
