@@ -23,6 +23,7 @@
   "row_ad_free": "Werbefrei",
   "row_resilient_servers": "Ausfallsichere Server",
   "row_windows_version": "Windows-Version",
+  "row_ios_version": "iOS-Version",
   "row_ultra_fast_server": "Ultraschnelle Server",
   "row_always_on": "Immer aktiv",
   "row_split_ips": "Split-Tunneling (nach IP-Adressen)",

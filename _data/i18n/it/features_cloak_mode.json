@@ -1,9 +1,9 @@
 {
   "meta_title": "Modalità Cloak: traffico VPN non rilevabile | VpnHood!",
-  "meta_description": "La modalità Cloak maschera il traffico VPN come normale traffico web, impedendo l'identificazione tramite deep packet inspection. Disponibile su VpnHood!",
+  "meta_description": "La modalità Cloak maschera il traffico VPN da normale traffico web, impedendo l'intercettazione da parte della deep packet inspection (DPI). Disponibile in VpnHood!",
   "eyebrow": "Funzionalità",
   "title": "Modalità Cloak",
-  "lead": "Supera i blocchi VPN mascherando il traffico come normale navigazione web, rendendolo invisibile alla deep packet inspection.",
+  "lead": "Supera i blocchi VPN mascherando il traffico come normale navigazione web, rendendolo invisibile alla deep packet inspection (DPI).",
   "shot_alt": "La schermata della modalità Cloak nell'app VpnHood!",
   "platforms_label": "Disponibile su",
   "platforms": "Android, iOS, Windows e Linux",

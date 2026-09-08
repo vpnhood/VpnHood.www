@@ -1,9 +1,9 @@
 {
   "meta_title": "Modo Camuflagem: Tráfego VPN Indetectável | VpnHood!",
-  "meta_description": "O Modo Camuflagem disfarça o tráfego VPN como navegação comum na web, driblando a inspeção profunda de pacotes (DPI). Disponível no VpnHood!",
+  "meta_description": "O Modo Camuflagem disfarça o tráfego da VPN como navegação comum, impedindo a detecção por inspeção profunda de pacotes (DPI). Disponível no VpnHood!",
   "eyebrow": "Recurso",
   "title": "Modo Camuflagem",
-  "lead": "Supera bloqueios de VPN disfarçando seu tráfego como navegação web comum, tornando-o imune à inspeção profunda de pacotes.",
+  "lead": "Supere bloqueios disfarçando o tráfego da VPN como tráfego comum de internet, tornando-o imune à inspeção profunda de pacotes (DPI).",
   "shot_alt": "A tela do Modo Camuflagem no aplicativo VpnHood!",
   "platforms_label": "Disponível para",
   "platforms": "Android, iOS, Windows e Linux",

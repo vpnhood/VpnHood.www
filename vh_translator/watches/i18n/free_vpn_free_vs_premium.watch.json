@@ -25,6 +25,7 @@
     "row_ad_free": "Ad-free",
     "row_resilient_servers": "Resilient servers",
     "row_windows_version": "Windows version",
+    "row_ios_version": "iOS version",
     "row_ultra_fast_server": "Ultra fast server",
     "row_always_on": "Always on",
     "row_split_ips": "Split tunneling by IPs",
