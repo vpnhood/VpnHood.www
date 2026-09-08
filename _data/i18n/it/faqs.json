@@ -4,15 +4,15 @@
   "desc": "Trova tutte le risposte alle tue domande.",
   "view_all": "Vedi tutte le FAQ",
   "q1": "Perché scegliere VpnHood?",
-  "a1": "VpnHood è una VPN gratuita basata su <b>VpnHood! ENGINE</b>, sviluppato interamente dal team di VpnHood. Utilizza protocolli proprietari anziché OpenVPN o WireGuard, riuscendo così a rendersi del tutto invisibile. Il nostro codice open source è liberamente consultabile per verificarne sicurezza e integrità. VpnHood ottimizza la trasmissione dati per garantire connessioni veloci e massima compatibilità di rete. Mettiamo la tua privacy al primo posto: raccogliamo zero dati personali, per offrirti un'esperienza digitale davvero sicura e protetta.",
+  "a1": "VpnHood è basato su <b>VpnHood! ENGINE</b>, sviluppato dal team di VpnHood. Unisce codice open source per client e server, split tunneling flessibile e la modalità Cloak Mode, pensata per mimetizzare il traffico VPN nella normale navigazione cifrata. VpnHood! CONNECT offre traffico gratuito e illimitato senza registrazione su Android e Android TV.",
   "q2": "VpnHood è una VPN completamente gratuita?",
   "a2": "Sì, VpnHood offre un servizio VPN gratuito senza limiti di tempo, traffico o larghezza di banda. Passando a un abbonamento Premium potrai sbloccare funzionalità aggiuntive: accesso a server in più paesi, velocità di connessione superiori e funzionalità avanzate nell'app. Per maggiori dettagli, visita la pagina con le <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">informazioni sui piani</a>.",
   "q3": "VpnHood! CONNECT vs VpnHood! CLIENT?",
-  "a3": "VpnHood! CONNECT è una VPN gratuita pronta all'uso e senza limiti. VpnHood! CLIENT è anch'essa gratuita, ma non include server per connessioni dirette: è pensata per chi crea la propria VPN con VpnHood! MANAGER e vuole condividerla con gli utenti tramite una Server Key.",
+  "a3": "VpnHood! CONNECT è una VPN gratuita da usare senza limiti. Anche VpnHood! CLIENT è gratuito, ma non include server pronti all'uso: si collega a un server VpnHood gestito da te o da una persona di fiducia, tramite una chiave di accesso.",
   "q4": "Quali piattaforme supporta VpnHood?",
-  "a4": "VpnHood! CLIENT è disponibile per Android, iOS (iPhone e iPad), Android TV, Windows e Linux. VpnHood! CONNECT è disponibile per Android, Android TV, Windows e Linux. Su Windows e Linux, VpnHood! CONNECT non include server gratuiti; è necessario acquistare una chiave Premium, disponibile alla pagina <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">Tariffe Premium</a>.",
+  "a4": "VpnHood! CLIENT è disponibile per Android, iOS (iPhone e iPad), Android TV, Windows e Linux. Anche VpnHood! CONNECT supporta Android, iOS (iPhone e iPad), Android TV, Windows e Linux. Su iOS, Windows e Linux, VpnHood! CONNECT non offre server gratuiti: serve una chiave Premium, disponibile alla pagina dei <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">prezzi</a>.",
   "q5": "VpnHood è open source?",
   "a5": "Sì, al 100%. VpnHood! CONNECT, VpnHood! CLIENT, il server e il motore VpnHood! ENGINE sono tutti disponibili su GitHub, e il progetto è stato sottoposto ad audit da due società di sicurezza indipendenti. Non devi fidarti sulla parola: puoi esaminare il codice di persona.",
   "q6": "VpnHood è davvero invisibile?",
-  "a6": "È progettato proprio per questo. VpnHood usa protocolli proprietari anziché OpenVPN o WireGuard e fa apparire il traffico come una normale navigazione web crittografata, senza lasciare firme rilevabili da firewall o sistemi di deep packet inspection. Così la tua connessione continua a funzionare anche sulle reti che bloccano le VPN."
+  "a6": "La modalità Cloak Mode di VpnHood fa apparire il traffico VPN come normale traffico HTTPS, aiutando a superare diversi blocchi VPN. Non garantisce la connessione su ogni rete: l'efficacia dipende dai sistemi di filtraggio presenti."
 }

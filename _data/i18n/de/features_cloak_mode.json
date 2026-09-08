@@ -1,9 +1,9 @@
 {
   "meta_title": "Cloak-Modus: Unauffindbarer VPN-Datenverkehr | VpnHood!",
-  "meta_description": "Der Cloak-Modus tarnt VPN-Datenverkehr als normalen Web-Traffic – ohne Signaturen für Deep Packet Inspection. Verfügbar in VpnHood!",
+  "meta_description": "Der Tarnmodus tarnt VPN-Datenverkehr als gewöhnlichen Web-Datenverkehr, sodass Deep Packet Inspection (DPI) keine Signatur erkennt. Verfügbar in VpnHood!",
   "eyebrow": "Funktion",
   "title": "Cloak-Modus",
-  "lead": "Umgeht VPN-Sperren, indem Ihr VPN-Datenverkehr als gewöhnlicher Web-Traffic getarnt wird – unsichtbar für Deep Packet Inspection.",
+  "lead": "Umgeht VPN-Sperren, indem Ihr VPN-Datenverkehr als normaler Web-Datenverkehr getarnt wird – völlig immun gegen Deep Packet Inspection (DPI).",
   "shot_alt": "Die Cloak-Modus-Ansicht in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
   "platforms": "Android, iOS, Windows und Linux",

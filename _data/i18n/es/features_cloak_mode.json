@@ -1,9 +1,9 @@
 {
   "meta_title": "Cloak Mode: tráfico VPN indetectable | VpnHood!",
-  "meta_description": "Cloak Mode camufla el tráfico VPN como tráfico web normal para esquivar la inspección profunda de paquetes. Disponible en VpnHood!",
+  "meta_description": "El Modo camuflaje disfraza el tráfico de la VPN como tráfico web normal, evitando el bloqueo por inspección profunda de paquetes (DPI). ¡Disponible en VpnHood!",
   "eyebrow": "Función",
   "title": "Cloak Mode",
-  "lead": "Supera los bloqueos de VPN camuflando tu tráfico como navegación web habitual, haciéndolo resistente a la inspección profunda de paquetes.",
+  "lead": "Supera los bloqueos de VPN camuflando tu tráfico como navegación web normal, haciéndolo indetectable ante la inspección profunda de paquetes (DPI).",
   "shot_alt": "Pantalla de Cloak Mode en la aplicación VpnHood!",
   "platforms_label": "Disponible en",
   "platforms": "Android, iOS, Windows y Linux",
