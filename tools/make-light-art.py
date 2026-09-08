@@ -110,6 +110,7 @@ SVGS = {
     "general/android-icon-grad-purple-300.svg": {"white": "#241858"},
     "general/android-tv-icon-grad-purple-300.svg": {"white": "#241858"},
     "general/windows-icon-grad-purple-300.svg": {"white": "#241858"},
+    "general/apple-icon-grad-purple-300.svg": {"white": "#241858"},
     # Off-canvas "Log In" glyph. It rides a .vh-btn-secondary, which is a light chip in
     # light mode. (go-premium-icon.svg is NOT here: its button stays brand purple.)
     "general/login-icon.svg": {"#fff": "#17123a"},

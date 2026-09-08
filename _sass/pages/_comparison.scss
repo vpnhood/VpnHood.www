@@ -249,11 +249,3 @@
         font-size: .95rem;
     }
 }
-
-// The intro sits above the full-width table, so without a measure it runs to about 130
-// characters a line. Same 830px cap the page's .section-desc uses, but the text stays
-// left-aligned: two paragraphs of centred prose read badly.
-.vh-cmp-intro{
-    max-width: 830px;
-    margin-inline: auto;
-}
