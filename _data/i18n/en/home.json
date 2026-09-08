@@ -32,7 +32,7 @@
   "f_privacy_desc": "Experience a smooth, encrypted connection that keeps your online presence confidential across various network environments.",
   "obfuscation_label": "How it works",
   "obfuscation_title": "Traffic that doesn't look like a VPN",
-  "obfuscation_desc": "Most VPNs are easy to spot. Deep packet inspection recognizes their protocols on sight, and networks that want to block them simply do. VpnHood shapes its traffic to look like ordinary encrypted browsing, so there is no signature to match, and nothing obvious to throttle or blacklist.",
+  "obfuscation_desc": "Most VPNs are easy to spot. Deep packet inspection (DPI) recognizes their protocols on sight, and networks that want to block them simply do. VpnHood shapes its traffic to look like ordinary encrypted browsing, so there is no signature to match, and nothing obvious to throttle or blacklist.",
   "resilient_label": "Incredible Feature",
   "resilient_title": "Stay connected with High-Availability servers",
   "resilient_desc": "Our advanced infrastructure is built for maximum uptime. By utilizing dynamic server management and sophisticated protocols, we ensure your secure connection remains active and reliable, providing a seamless browsing experience without interruptions.",

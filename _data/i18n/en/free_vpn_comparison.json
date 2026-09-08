@@ -4,6 +4,9 @@
   "page_label": "Free VPN comparison",
   "page_title": "VPN brands comparison in the free tier",
   "page_desc": "A detailed feature comparison of leading VPNs, focusing strictly on their free versions — so you can see exactly what you get without paying.",
+  "intro_title": "Where free VPNs usually fall short",
+  "intro_p1": "Free VPNs tend to disappoint in one of two ways. Either they meter you, with a monthly cap and a short list of countries to pick from, or they work fine at home and fail on the network you actually needed them for: the office, the campus, the hotel, the country that filters what leaves it.",
+  "intro_p2": "VpnHood! CONNECT is free with no cap on traffic and no account to create. Its client and its server are both open source, so how your traffic is handled is a matter of record rather than trust. And where a network blocks VPNs outright, Cloak Mode makes the tunnel look like ordinary web traffic, leaving no familiar signature for deep packet inspection (DPI) to match.",
   "table_region_label": "Free VPN feature comparison table",
   "table_caption": "Free-tier feature comparison of VpnHood! CONNECT, ProtonVPN, Windscribe, Hotspot Shield and NordVPN.",
   "features_col": "Features",
@@ -49,5 +52,6 @@
   "why_split_desc": "Split traffic by country, by app and by local network — control that rival free tiers simply don't offer.",
   "why_stealth_title": "Cloak Mode for blocked networks",
   "why_stealth_desc": "Turn it on where VPNs are blocked and the tunnel reads as ordinary web traffic, with no signature for deep packet inspection to match.",
-  "view_on_github": "View on GitHub"
+  "view_on_github": "View on GitHub",
+  "intro_p3": "The table below sets that against the free tiers of ProtonVPN, Windscribe, Hotspot Shield and NordVPN, row by row, with nothing from anyone's paid plan mixed in."
 }

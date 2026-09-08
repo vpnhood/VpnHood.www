@@ -38,6 +38,12 @@
     object-fit: contain;
     margin: 0 auto .6rem;
 }
+// Ours is a filled disc, edge to edge, where the competitors' marks are open shapes with
+// their own internal padding — so it needs to be drawn larger to read the same weight.
+#brandCompare .vh-cmp-hl .vh-cmp-brand-logo{
+    width: 58px;
+    height: 58px;
+}
 #brandCompare .vh-cmp-brand-name{
     display: block;
     font-size: .95rem;
@@ -218,6 +224,10 @@
         width: 36px;
         height: 36px;
     }
+    #brandCompare .vh-cmp-hl .vh-cmp-brand-logo{
+        width: 45px;
+        height: 45px;
+    }
     #brandCompare .vh-cmp-brand-name{
         font-size: .78rem;
     }
@@ -238,4 +248,12 @@
     #brandCompare .vh-cmp-text{
         font-size: .95rem;
     }
+}
+
+// The intro sits above the full-width table, so without a measure it runs to about 130
+// characters a line. Same 830px cap the page's .section-desc uses, but the text stays
+// left-aligned: two paragraphs of centred prose read badly.
+.vh-cmp-intro{
+    max-width: 830px;
+    margin-inline: auto;
 }
