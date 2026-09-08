@@ -46,5 +46,8 @@
   "why_open_source_title": "100% open source",
   "why_open_source_desc": "Both the client and the server are fully open source, so anyone can audit exactly how your traffic is handled.",
   "why_split_title": "Advanced split tunneling",
-  "why_split_desc": "Split traffic by country, by app and by local network — control that rival free tiers simply don't offer."
+  "why_split_desc": "Split traffic by country, by app and by local network — control that rival free tiers simply don't offer.",
+  "why_stealth_title": "Cloak Mode for blocked networks",
+  "why_stealth_desc": "Turn it on where VPNs are blocked and the tunnel reads as ordinary web traffic, with no signature for deep packet inspection to match.",
+  "view_on_github": "View on GitHub"
 }
