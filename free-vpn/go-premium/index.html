@@ -42,7 +42,7 @@ nav_active: free-vpn
             <div>&nbsp;</div>
             <div>&nbsp;</div>
         </div>
-        <img id="rocket" src="/assets/images/general/rocket.webp" alt="{{ t.rocket_alt }}" width="90" height="211" class="animation-translate-y"></div>
+        <img id="rocket" src="/assets/images/general/rocket.webp" alt="" width="90" height="211" class="animation-translate-y"></div>
 </div>
 
 <div id="mod-custom126" class="mod-custom custom">
@@ -118,9 +118,40 @@ nav_active: free-vpn
 
 <ul class="mt-5 small">
     <li>{{ t.note_same_features }}</li>
+    <li>{{ t.note_free_availability }}</li>
     <li>{{ t.note_usd }}</li>
     <li>{{ t.note_tax }}</li>
 </ul>
+
+<div class="section-space">
+    <div class="section-start-text mb-5" data-aos="fade-up">
+        <h2 class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
+        <p class="section-desc">{{ t.why_desc }}</p>
+    </div>
+    <ul class="row list-unstyled row-gap-4 mb-0">
+        <li class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="vh-card-dark vh-feature-panel h-100">
+                <span class="vh-feature-icon">{% include icons/shield-check.svg %}</span>
+                <h3 class="h5 mb-2">{{ t.why1_title }}</h3>
+                <p class="mb-0">{{ t.why1_desc }}</p>
+            </div>
+        </li>
+        <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="vh-card-dark vh-feature-panel h-100">
+                <span class="vh-feature-icon">{% include icons/eye-off.svg %}</span>
+                <h3 class="h5 mb-2">{{ t.why2_title }}</h3>
+                <p class="mb-0">{{ t.why2_desc }}</p>
+            </div>
+        </li>
+        <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="vh-card-dark vh-feature-panel h-100">
+                <span class="vh-feature-icon">{% include icons/check-circle.svg %}</span>
+                <h3 class="h5 mb-2">{{ t.why3_title }}</h3>
+                <p class="mb-0">{{ t.why3_desc }}</p>
+            </div>
+        </li>
+    </ul>
+</div>
 <div class="section-space">
     <div class="section-start-text" data-aos="fade-up" data-aos-duration="1000">
         <div class="section-label">

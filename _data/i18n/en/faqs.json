@@ -14,5 +14,7 @@
   "q_is_open_source": "Is VpnHood open source?",
   "a_is_open_source": "Yes, all of it. VpnHood! CONNECT, VpnHood! CLIENT, the server, and the VpnHood! ENGINE behind them are published on GitHub, and the project has been audited by two independent security firms. You can read the code yourself rather than take our word for it.",
   "q_is_undetectable": "Is VpnHood undetectable?",
-  "a_is_undetectable": "VpnHood's Cloak Mode is designed to make VPN traffic resemble ordinary HTTPS traffic, helping it avoid some VPN-detection methods. This does not guarantee that every network will allow the connection; effectiveness depends on the filtering methods in use."
+  "a_is_undetectable": "VpnHood's Cloak Mode is designed to make VPN traffic resemble ordinary HTTPS traffic, helping it avoid some VPN-detection methods. This does not guarantee that every network will allow the connection; effectiveness depends on the filtering methods in use.",
+  "q_stay_free_forever": "Can I stay on the free plan forever?",
+  "a_stay_free_forever": "Yes. The free plan has no time limit and no forced upgrade, and there is no account to create. It is funded by ads, so it is not available in China or in other countries where ads are not served. Premium is there when you want more locations, faster servers, an ad-free app and 24/7 support, and it has no such limit."
 }

@@ -21,6 +21,7 @@ all:
   - supported_platforms
   - is_open_source
   - is_undetectable
+  - stay_free_forever
 
 sets:
   home:
@@ -56,7 +57,9 @@ sets:
     - why_vpnhood
     - is_undetectable
 
+  # why_vpnhood is deliberately absent: the page carries a "Why VpnHood!" section
+  # of its own, and the same question twice on one page reads as padding.
   go_premium:
     - is_vpnhood_free
-    - why_vpnhood
+    - stay_free_forever
     - is_undetectable

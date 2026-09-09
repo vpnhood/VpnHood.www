@@ -1,9 +1,8 @@
 {
   "meta_title": "Go Premium | Unlock the Full Power of VpnHood! CONNECT",
   "meta_description": "VpnHood! CONNECT Premium plans, monthly to yearly, for maximum speed with no ads and 24/7 support. Every plan is covered by a 30-day money-back guarantee.",
-  "banner_title": "Premium pricing",
-  "banner_desc": "It's up to you to optimize your experience and achieve maximum speed and go ad-free with 24/7 support and more features, You can do it at any time.",
-  "rocket_alt": "Rocket",
+  "banner_title": "Go Premium with VpnHood! CONNECT",
+  "banner_desc": "VpnHood! CONNECT is free to use, with no traffic, bandwidth or time limits. Premium lifts everything else: more than 50 locations, ultra fast servers, five devices at once, no ads and 24/7 support.",
   "free_plan_title": "Free",
   "free_price": "$0",
   "per_month": "/month",
@@ -35,7 +34,16 @@
   "note_same_features": "The features are the same across all premium plans; only the discount amount varies.",
   "note_usd": "All amounts shown are in USD.",
   "note_tax": "Sales tax/VAT applied at checkout where applicable.",
+  "why_title": "Why VpnHood!",
+  "why_desc": "Premium is the same app and the same code as the free version, with the limits lifted. What follows is true on both plans.",
+  "why1_title": "Open source, and audited",
+  "why1_desc": "The client, the server and the VpnHood! ENGINE behind them are all published on GitHub, and the project has been audited by two independent security firms. You can read the code instead of taking our word for it.",
+  "why2_title": "Cloak Mode for blocked networks",
+  "why2_desc": "Cloak Mode makes VPN traffic resemble ordinary HTTPS traffic, which helps it through networks that block VPNs outright. How well it works depends on what the network inspects, and no connection is guaranteed to stay unblocked.",
+  "why3_title": "A free tier that is really free",
+  "why3_desc": "No account, no time limit, and no cap on traffic or bandwidth. It is funded by ads, so it is not available where ads are not served. Premium removes the ads and works everywhere.",
   "compare_label": "Compare",
-  "compare_title": "Compare Free with Premium features",
-  "compare_desc": "It's up to you to optimize your experience and achieve maximum speed and go ad-free with 24/7 support and more features, You can do it at any time."
+  "compare_title": "What Premium adds",
+  "compare_desc": "Every plan above unlocks the same list. The free app keeps unlimited traffic, unlimited bandwidth and split tunneling; Premium adds the locations, the speed, the extra devices and an app without ads.",
+  "note_free_availability": "The free plan is funded by ads, so it is not available in China or in other countries where ads are not served. Premium has no such limit."
 }
