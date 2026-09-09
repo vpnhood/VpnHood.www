@@ -6,121 +6,122 @@
     heading_class  - extra class prepended to the Free/Premium column titles (go-premium passes "h2")
 {% endcomment %}
 {% assign vh_ct_lang = page.lang | default: 'en' %}
-{% assign vh_ct = site.data.i18n[vh_ct_lang].free_vpn_free_vs_premium %}
+{% assign vh_ct_en = site.data.i18n.en.free_vpn_free_vs_premium %}
+{% assign vh_ct = site.data.i18n[vh_ct_lang].free_vpn_free_vs_premium | default: vh_ct_en %}
 {% assign vh_ct_h = include.heading | default: "h2" %}
 <div id="mod-custom122" class="mod-custom custom">
     <div id="compareTable">
     <div class="vh-card-light rounded-5 px-4">
         <div id="header" class="row gx-5" data-aos="fade-up">
             <div class="featureColumn col-md-4 col d-flex flex-column justify-content-end pb-5">
-                <{{ vh_ct_h }} class="h4 mb-0">{{ vh_ct.table_title }}</{{ vh_ct_h }}>
+                <{{ vh_ct_h }} class="h4 mb-0">{{ vh_ct.table_title | default: vh_ct_en.table_title }}</{{ vh_ct_h }}>
             </div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2 d-flex flex-column align-items-center justify-content-center gap-1 py-md-5 py-4 px-md-4 px-2">
-                <{{ vh_ct_h }} class="{% if include.heading_class %}{{ include.heading_class }} {% endif %}vh-txt-purple-300 mb-0">{{ vh_ct.free_title }}</{{ vh_ct_h }}>
-                <p class="d-md-block d-none mt-3 mb-0">{{ vh_ct.free_desc }}</p>
+                <{{ vh_ct_h }} class="{% if include.heading_class %}{{ include.heading_class }} {% endif %}vh-txt-purple-300 mb-0">{{ vh_ct.free_title | default: vh_ct_en.free_title }}</{{ vh_ct_h }}>
+                <p class="d-md-block d-none mt-3 mb-0">{{ vh_ct.free_desc | default: vh_ct_en.free_desc }}</p>
             </div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2 d-flex flex-column align-items-center justify-content-center gap-1 py-md-5 py-4 px-md-4 px-2">
-                <{{ vh_ct_h }} class="{% if include.heading_class %}{{ include.heading_class }} {% endif %}vh-txt-green-100 mb-0">{{ vh_ct.premium_title }}</{{ vh_ct_h }}>
-                <p class="d-md-block d-none mt-3 mb-0">{{ vh_ct.premium_desc }}</p>
+                <{{ vh_ct_h }} class="{% if include.heading_class %}{{ include.heading_class }} {% endif %}vh-txt-green-100 mb-0">{{ vh_ct.premium_title | default: vh_ct_en.premium_title }}</{{ vh_ct_h }}>
+                <p class="d-md-block d-none mt-3 mb-0">{{ vh_ct.premium_desc | default: vh_ct_en.premium_desc }}</p>
             </div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_unlimited_traffic }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_unlimited_traffic | default: vh_ct_en.row_unlimited_traffic }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="50">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_unlimited_bandwidth }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_unlimited_bandwidth | default: vh_ct_en.row_unlimited_bandwidth }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="60">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_countries }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/cloak-mode/">{{ vh_ct.row_cloak_mode | default: vh_ct_en.row_cloak_mode }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="70">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_apps }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/split-tunneling/by-country/">{{ vh_ct.row_split_countries | default: vh_ct_en.row_split_countries }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="80">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_change_protocols }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/split-tunneling/by-app/">{{ vh_ct.row_split_apps | default: vh_ct_en.row_split_apps }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="90">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_add_proxy }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/protocols/">{{ vh_ct.row_change_protocols | default: vh_ct_en.row_change_protocols }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_kill_switch }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/proxies/">{{ vh_ct.row_add_proxy | default: vh_ct_en.row_add_proxy }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="110">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_multilingual }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/kill-switch/">{{ vh_ct.row_kill_switch | default: vh_ct_en.row_kill_switch }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_locations }}</div>
-            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-purple-300 fs-5">{{ vh_ct.locations_free }}</span></div>
-            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-green-100 fs-5">{{ vh_ct.locations_premium }}</span></div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_multilingual | default: vh_ct_en.row_multilingual }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
+        </div>
+        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="130">
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_locations | default: vh_ct_en.row_locations }}</div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-purple-300 fs-5">{{ vh_ct.locations_free | default: vh_ct_en.locations_free }}</span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-green-100 fs-5">{{ vh_ct.locations_premium | default: vh_ct_en.locations_premium }}</span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ad_free }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ad_free | default: vh_ct_en.row_ad_free }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="50">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_resilient_servers }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_resilient_servers | default: vh_ct_en.row_resilient_servers }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="60">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_windows_version }}</div>
-            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
-            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
-        </div>
-        <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="65">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ios_version }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_premium_platforms | default: vh_ct_en.row_premium_platforms }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="70">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ultra_fast_server }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_ultra_fast_server | default: vh_ct_en.row_ultra_fast_server }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="80">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_always_on }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/always-on/">{{ vh_ct.row_always_on | default: vh_ct_en.row_always_on }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="90">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_ips }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/split-tunneling/by-ip/">{{ vh_ct.row_split_ips | default: vh_ct_en.row_split_ips }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_split_domains }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/split-tunneling/by-domain/">{{ vh_ct.row_split_domains | default: vh_ct_en.row_split_domains }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="110">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_private_dns }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/private-dns/">{{ vh_ct.row_private_dns | default: vh_ct_en.row_private_dns }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="120">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_quick_launch }}</div>
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/features/quick-launch/">{{ vh_ct.row_quick_launch | default: vh_ct_en.row_quick_launch }}</a></div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="130">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_support_247 }}</div>
+            <div class="featureColumn col-md-4 col">{{ vh_ct.row_support_247 | default: vh_ct_en.row_support_247 }}</div>
             <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="no"></span></div>
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>

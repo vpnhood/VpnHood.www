@@ -427,6 +427,23 @@
     align-items: center;
     color: var(--vh-text);
 }
+// Feature names link to their feature page. Eleven links in a dense table would
+// shout if they were styled like body links, so they keep the row's own colour and
+// carry a muted underline that firms up on hover - visible without colour alone,
+// which keeps them distinguishable for anyone who cannot see the hover state.
+.vh-cmp-link{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--purple-200-rgb), .55);
+    text-underline-offset: 3px;
+}
+
+.vh-cmp-link:hover,
+.vh-cmp-link:focus-visible{
+    color: var(--vh-accent-ink);
+    text-decoration-color: currentColor;
+}
+
 #compareTable .yes,
 #compareTable .no{
     display: inline-block;
@@ -464,7 +481,11 @@
         padding-left: .5rem;
         padding-right: .5rem;
     }
-    #compareTable #header h2{
+    // Match the heading whatever tag it is: /free-vpn/free-vs-premium/ renders h2,
+    // /free-vpn/go-premium/ renders <h3 class="h2"> (heading="h3" heading_class="h2").
+    // A bare h2 selector missed the h3 and left Bootstrap's .h2 size in place, which
+    // overflowed the 27%-wide column and ran "Premium" into the Free column.
+    #compareTable #header :is(h2, h3, h4){
         font-size: 1.05rem;
     }
     #compareTable .features-row{

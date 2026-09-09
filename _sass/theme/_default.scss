@@ -628,6 +628,21 @@ iconify-icon {
 }
 // RTL: inline icons that depict a direction (arrows) declare class="vh-rtl-mirror"
 // on their <svg> and are mirrored here so they point into the reading direction.
+// In-page anchor targets. #sp-header is position:fixed and 136px tall on desktop,
+// so a jump to #compareTable or #faq landed the section's top at y=0, i.e. entirely
+// behind the nav - the compare table lost its whole Free/Premium header row.
+#compareTable,
+#faq{
+    scroll-margin-top: 9.5rem;
+}
+
+@media (max-width: 991px){
+    #compareTable,
+    #faq{
+        scroll-margin-top: 6rem;
+    }
+}
+
 [dir="rtl"] .vh-rtl-mirror{
     transform: scaleX(-1);
 }
