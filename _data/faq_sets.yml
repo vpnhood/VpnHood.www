@@ -1,0 +1,62 @@
+# Which FAQ questions each page shows, and in what order.
+#
+# This file is STRUCTURE, not copy, which is why it lives here and not under
+# _data/i18n/: vhtranslator only walks _data/i18n/en, so these names are never
+# translated or overwritten.
+#
+# Each entry is the base name of a question/answer pair in
+# _data/i18n/<lang>/faqs.json - `is_open_source` reads `q_is_open_source` and
+# `a_is_open_source`. Add a question by adding both keys to the English file and
+# listing its base name here; a name with no matching key is skipped silently.
+#
+# `all` is the full ordered list, used by /faq/ and as the fallback when a page
+# names no set. `sets` holds the per-page selections. Pick 3-4 questions that
+# answer what a visitor to that page is actually wondering - the same six
+# answers repeated on eight URLs is near-duplicate body text.
+
+all:
+  - why_vpnhood
+  - is_vpnhood_free
+  - connect_vs_client
+  - supported_platforms
+  - is_open_source
+  - is_undetectable
+
+sets:
+  home:
+    - why_vpnhood
+    - is_vpnhood_free
+    - supported_platforms
+    - is_open_source
+
+  free_vpn:
+    - is_vpnhood_free
+    - is_undetectable
+    - supported_platforms
+    - is_open_source
+
+  comparison:
+    - is_vpnhood_free
+    - is_open_source
+    - is_undetectable
+    - connect_vs_client
+
+  download:
+    - supported_platforms
+    - is_vpnhood_free
+    - connect_vs_client
+
+  client_download:
+    - connect_vs_client
+    - supported_platforms
+    - is_open_source
+
+  free_vs_premium:
+    - is_vpnhood_free
+    - why_vpnhood
+    - is_undetectable
+
+  go_premium:
+    - is_vpnhood_free
+    - why_vpnhood
+    - is_undetectable
