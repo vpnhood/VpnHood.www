@@ -21,7 +21,7 @@
   "row_split_countries": "Split tunneling by countries",
   "row_split_apps": "Split tunneling by apps",
   "row_split_local": "Split tunneling by local network",
-  "row_server_choice": "Server location choice",
+  "row_server_choice": "Server locations <span class=\"vh-cmp-feature-sub\">(free plan)</span>",
   "row_open_source": "100% open source <span class=\"vh-cmp-feature-sub\">(server &amp; client)</span>",
   "aria_yes": "Yes",
   "aria_no": "No",
