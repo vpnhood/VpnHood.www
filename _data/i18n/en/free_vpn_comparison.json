@@ -42,7 +42,7 @@
   "why_title": "What makes VpnHood! different?",
   "why_desc": "VpnHood! CONNECT combines unlimited free traffic, open-source client and server code, flexible split tunneling and Cloak Mode. The free plan includes ads; Premium adds more locations and features.",
   "why_unlimited_title": "Unlimited traffic, no sign-up",
-  "why_unlimited_desc": "Browse without a data cap or account registration. There is no artificial bandwidth throttling, though actual speeds depend on your network and server load.",
+  "why_unlimited_desc": "Browse without a data cap or account registration. There is no artificial bandwidth throttling, though actual speeds depend on your network and server load. The free plan is funded by ads, so it is not available in every country.",
   "why_open_source_title": "100% open source",
   "why_open_source_desc": "Both the client and server code are published on GitHub for inspection. You can review the implementation and run your own server.",
   "why_split_title": "Advanced split tunneling",
