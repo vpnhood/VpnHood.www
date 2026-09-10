@@ -94,6 +94,7 @@ exclude:
   - .vs/
   - .vscode/
   - vh_translator/
+  - tools/          # build-time scripts (light art, phone mockups); they were being published as pages
 
 # No `safe: true`: the site builds in our own GitHub Actions workflow (not the legacy
 # shared Pages builder that forced safe mode), so custom plugins in _plugins/
