@@ -42,7 +42,7 @@
   "why_title": "Pourquoi choisir VpnHood! ?",
   "why_desc": "VpnHood! CONNECT associe trafic gratuit illimité, code client et serveur open source, split tunneling modulable et mode Cloak. L'offre gratuite contient des publicités ; l'offre Premium propose davantage d'emplacements et de fonctionnalités.",
   "why_unlimited_title": "Trafic illimité, sans inscription",
-  "why_unlimited_desc": "Naviguez sans limite de données ni création de compte. Aucun bridage de bande passante, la vitesse réelle dépend de votre réseau et de la charge du serveur.",
+  "why_unlimited_desc": "Naviguez sans limite de données et sans inscription. Aucun bridage de débit n'est imposé, bien que la vitesse réelle dépende de votre réseau et de la charge du serveur. L'offre gratuite étant financée par la publicité, elle n'est pas disponible dans tous les pays.",
   "why_open_source_title": "100 % open source",
   "why_open_source_desc": "Le code source du client et du serveur est accessible sur GitHub. Examinez-le librement et déployez votre propre serveur.",
   "why_split_title": "Split tunneling avancé",

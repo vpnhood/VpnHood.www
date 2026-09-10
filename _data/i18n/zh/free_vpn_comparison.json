@@ -42,7 +42,7 @@
   "why_title": "VpnHood! 为何与众不同？",
   "why_desc": "VpnHood! CONNECT 兼具无限免费流量、全开源客户端与服务端、灵活的分流设置以及 Cloak Mode 隐蔽模式。免费版含广告；升级高级版可享更多节点与高级功能。",
   "why_unlimited_title": "免注册，无限流量",
-  "why_unlimited_desc": "畅享无上限流量，无需注册账号。不人为限速，实际速度取决于您的本地网络状况及服务器负载。",
+  "why_unlimited_desc": "无需注册账号，畅享无限流量。我们绝不人为限速，实际速度取决于您的本地网络与服务器负载。免费版依靠广告支持，因此仅在部分国家和地区提供。",
   "why_open_source_title": "100% 开源",
   "why_open_source_desc": "客户端和服务端代码均在 GitHub 公开供审查。您可以随时检查技术实现，或自行搭建私有服务器。",
   "why_split_title": "高级分流功能",

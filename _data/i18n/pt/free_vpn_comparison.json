@@ -42,7 +42,7 @@
   "why_title": "O que torna o VpnHood! diferente?",
   "why_desc": "O VpnHood! CONNECT combina tráfego gratuito ilimitado, cliente e servidor de código aberto, túnel dividido flexível e Modo Cloak. O plano Grátis contém anúncios; o Premium oferece mais locais e recursos.",
   "why_unlimited_title": "Tráfego ilimitado, sem cadastro",
-  "why_unlimited_desc": "Navegue sem limites de dados ou necessidade de criar conta. Não há redução artificial de velocidade, embora a velocidade real dependa da sua rede e da carga do servidor.",
+  "why_unlimited_desc": "Navegue sem limites de dados e sem precisar criar conta. Sem redução artificial de velocidade — a rapidez real depende da sua conexão e da carga do servidor. O plano Grátis é mantido por anúncios, por isso pode não estar disponível em todos os países.",
   "why_open_source_title": "100% open source",
   "why_open_source_desc": "O código do cliente e do servidor está disponível no GitHub para auditoria. Você pode conferir a implementação e hospedar seu próprio servidor.",
   "why_split_title": "Split tunneling avançado",

@@ -1,9 +1,8 @@
 {
-  "meta_title": "Passa a Premium | Sblocca tutta la potenza di VpnHood! CONNECT",
+  "meta_title": "Tariffe Premium e Gratis vs Premium | VpnHood! CONNECT",
   "meta_description": "Piani VpnHood! CONNECT Premium, da mensili ad annuali: massima velocità, nessuna pubblicità e supporto 24/7. Ogni piano include 30 giorni di garanzia di rimborso.",
-  "banner_title": "Tariffe Premium",
-  "banner_desc": "Ottimizza la tua esperienza: vivi la massima velocità, goditi contenuti senza pubblicità, supporto 24/7 e molto altro. Fallo quando vuoi!",
-  "rocket_alt": "Razzo",
+  "banner_title": "Passa a Premium con VpnHood! CONNECT",
+  "banner_desc": "VpnHood! CONNECT è gratuito, senza limiti di traffico, banda o tempo. Il piano Premium sblocca tutto il resto: oltre 50 posizioni, server ultraveloci, 5 dispositivi contemporaneamente, niente pubblicità e supporto 24/7.",
   "free_plan_title": "Gratis",
   "free_price": "0$",
   "per_month": "/mese",
@@ -35,7 +34,16 @@
   "note_same_features": "Le funzionalità sono le stesse in tutti i piani Premium; varia solo l'entità dello sconto.",
   "note_usd": "Tutti gli importi sono espressi in USD.",
   "note_tax": "Eventuali tasse sulle vendite o IVA verranno applicate al momento del pagamento.",
+  "why_title": "Perché scegliere VpnHood!",
+  "why_desc": "Premium usa la stessa app e lo stesso codice della versione gratuita, ma senza limitazioni. Ecco i vantaggi inclusi sia nel piano Gratis che in Premium.",
+  "why1_title": "Open source e certificato",
+  "why1_desc": "Il client, il server e il motore VpnHood! ENGINE sono tutti disponibili su GitHub, con audit indipendenti eseguiti da due società di sicurezza. Puoi verificare il codice di persona, senza dover andare sulla fiducia.",
+  "why2_title": "Modalità Cloak per reti con restrizioni",
+  "why2_desc": "La modalità Cloak maschera il traffico VPN facendolo apparire come normale traffico HTTPS, aiutando a superare i blocchi più severi. L'efficacia dipende dai filtri della rete e nessun metodo garantisce uno sblocco totale continuo.",
+  "why3_title": "Un piano gratuito davvero senza limiti",
+  "why3_desc": "Nessun account, nessun limite di tempo e nessun vincolo su traffico o banda. È supportato dalla pubblicità, quindi non è disponibile nei Paesi in cui gli annunci non vengono mostrati. Con Premium elimini gli annunci e navighi ovunque.",
   "compare_label": "Confronta",
-  "compare_title": "Confronta le funzionalità Gratis e Premium",
-  "compare_desc": "Ottimizza la tua esperienza per viaggiare al massimo della velocità, senza pubblicità, con supporto 24/7 e tante funzioni in più. Puoi farlo quando vuoi."
+  "compare_title": "Cosa include il piano Premium",
+  "compare_desc": "Tutti i piani sbloccano le stesse funzionalità. La versione gratuita mantiene traffico illimitato, banda senza limiti e split tunneling; Premium aggiunge tutte le posizioni, massima velocità, più dispositivi in contemporanea e zero pubblicità.",
+  "note_free_availability": "Il piano Gratis è supportato dalla pubblicità, pertanto non è disponibile in Cina o in altri Paesi in cui gli annunci non vengono mostrati. Il piano Premium non ha questa limitazione."
 }

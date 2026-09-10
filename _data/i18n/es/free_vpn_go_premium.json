@@ -1,9 +1,8 @@
 {
-  "meta_title": "Hazte Premium | Desbloquea todo el potencial de VpnHood! CONNECT",
+  "meta_title": "Precios Premium y Gratis vs Premium | VpnHood! CONNECT",
   "meta_description": "Planes Premium de VpnHood! CONNECT, mensuales o anuales, con máxima velocidad, sin anuncios y soporte 24/7. Todos los planes incluyen garantía de devolución de 30 días.",
-  "banner_title": "Precios Premium",
-  "banner_desc": "Mejora tu experiencia al máximo con velocidad superior, sin anuncios, soporte 24/7 y muchas más funciones cuando tú quieras.",
-  "rocket_alt": "Cohete",
+  "banner_title": "Hazte Premium con VpnHood! CONNECT",
+  "banner_desc": "VpnHood! CONNECT es gratis, sin límites de tráfico, ancho de banda ni tiempo. Premium desbloquea todo lo demás: más de 50 ubicaciones, servidores ultrarrápidos, 5 dispositivos a la vez, sin anuncios y soporte 24/7.",
   "free_plan_title": "Gratis",
   "free_price": "$0",
   "per_month": "/mes",
@@ -35,7 +34,16 @@
   "note_same_features": "Las funciones son las mismas en todos los planes Premium; solo varía el descuento.",
   "note_usd": "Todos los montos se muestran en USD.",
   "note_tax": "Impuesto sobre las ventas/IVA aplicado al finalizar la compra si corresponde.",
+  "why_title": "¿Por qué VpnHood!?",
+  "why_desc": "Premium usa la misma aplicación y el mismo código que la versión gratuita, pero sin restricciones. Las siguientes ventajas se aplican tanto al plan Gratis como a Premium.",
+  "why1_title": "Código abierto y auditado",
+  "why1_desc": "El cliente, el servidor y el VpnHood! ENGINE que los impulsa están publicados en GitHub. Además, dos firmas de seguridad independientes han auditado el proyecto. Puedes revisar el código por ti mismo.",
+  "why2_title": "Modo camuflaje para redes bloqueadas",
+  "why2_desc": "El modo camuflaje hace que el tráfico VPN parezca tráfico HTTPS común, ayudando a superar redes que bloquean las VPN por completo. Su eficacia depende de la inspección de la red y ningún desbloqueo está garantizado al 100 %.",
+  "why3_title": "Un plan gratuito realmente gratis",
+  "why3_desc": "Sin cuentas, sin límites de tiempo y sin restricciones de tráfico o ancho de banda. Se financia con anuncios, por lo que no está disponible donde estos no se muestran. Premium elimina los anuncios y funciona en todo el mundo.",
   "compare_label": "Comparar",
-  "compare_title": "Compara las funciones Gratis vs Premium",
-  "compare_desc": "Optimiza tu experiencia para alcanzar la máxima velocidad, disfruta sin anuncios con soporte 24/7 y muchas más funciones. Hazlo cuando quieras."
+  "compare_title": "Lo que ofrece Premium",
+  "compare_desc": "Todos los planes anteriores desbloquean las mismas ventajas. La aplicación gratuita mantiene el tráfico ilimitado, el ancho de banda sin restricciones y el túnel dividido; Premium suma más ubicaciones, máxima velocidad, más dispositivos y una experiencia sin anuncios.",
+  "note_free_availability": "El plan gratuito se financia con anuncios, por lo que no está disponible en China ni en otros países donde no se muestran anuncios. Premium no tiene esta limitación."
 }

@@ -1,9 +1,8 @@
 {
-  "meta_title": "Passer au Premium | Libérez toute la puissance de VpnHood! CONNECT",
+  "meta_title": "Tarifs Premium et Gratuit vs Premium | VpnHood! CONNECT",
   "meta_description": "Offres VpnHood! CONNECT Premium, du mensuel à l'annuel : vitesse maximale, sans publicité et assistance 24/7. Garantie satisfait ou remboursé de 30 jours.",
-  "banner_title": "Tarifs Premium",
-  "banner_desc": "Optimisez votre expérience, atteignez une vitesse maximale et naviguez sans publicité avec un support 24/7 et bien plus de fonctionnalités. Vous pouvez passer au Premium à tout moment.",
-  "rocket_alt": "Fusée",
+  "banner_title": "Passer au Premium avec VpnHood! CONNECT",
+  "banner_desc": "VpnHood! CONNECT est gratuit, sans limite de trafic, de bande passante ou de temps. Passez au Premium pour profiter de tout le reste : plus de 50 localisations, des serveurs ultra-rapides, 5 appareils en simultané, zéro publicité et une assistance 24/7.",
   "free_plan_title": "Gratuit",
   "free_price": "$0",
   "per_month": "/mois",
@@ -35,7 +34,16 @@
   "note_same_features": "Toutes les offres Premium incluent les mêmes fonctionnalités ; seule la réduction varie.",
   "note_usd": "Tous les montants affichés sont en USD.",
   "note_tax": "Taxes de vente/TVA appliquées au paiement, le cas échéant.",
+  "why_title": "Pourquoi choisir VpnHood !",
+  "why_desc": "L'offre Premium repose sur la même application et le même code que la version gratuite, les limites en moins. Voici ce qui est garanti pour les offres Gratuit et Premium.",
+  "why1_title": "Open source et audité",
+  "why1_desc": "Le client, le serveur et le moteur VpnHood! ENGINE sont tous disponibles sur GitHub. Le projet a été audité par deux cabinets de sécurité indépendants. Ne nous croyez pas sur parole : inspectez vous-même le code.",
+  "why2_title": "Mode Cloak pour les réseaux bloqués",
+  "why2_desc": "Le mode Cloak fait passer le trafic VPN pour du trafic HTTPS ordinaire, permettant de contourner les réseaux qui bloquent totalement les VPN. L'efficacité dépend des méthodes de détection du réseau, et aucun accès n'est garanti sans interruption.",
+  "why3_title": "Une offre gratuite réellement gratuite",
+  "why3_desc": "Sans compte requis, sans limite de temps et sans plafond de données ou de bande passante. Elle est financée par la publicité et n'est donc pas disponible là où les annonces ne sont pas diffusées. L'offre Premium supprime la pub et fonctionne partout.",
   "compare_label": "Comparer",
-  "compare_title": "Comparez les fonctionnalités Gratuit vs Premium",
-  "compare_desc": "Optimisez votre expérience et profitez d'une vitesse maximale, d'une navigation sans publicité, d'un support 24h/24 et 7j/7 et de bien d'autres fonctionnalités. Vous pouvez passer au Premium à tout moment."
+  "compare_title": "Ce que l'offre Premium apporte de plus",
+  "compare_desc": "Chaque offre ci-dessus débloque les mêmes avantages. L'application gratuite conserve le trafic illimité, la bande passante illimitée et le Split tunneling ; l'offre Premium y ajoute l'accès à toutes les localisations, une vitesse maximale, plusieurs appareils connectés et la suppression des pubs.",
+  "note_free_availability": "L'offre gratuite étant financée par la publicité, elle n'est pas disponible en Chine ni dans les pays où les annonces ne sont pas diffusées. L'offre Premium ne présente aucune restriction."
 }

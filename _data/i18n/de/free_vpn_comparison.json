@@ -42,7 +42,7 @@
   "why_title": "Was macht VpnHood! besonders?",
   "why_desc": "VpnHood! CONNECT bietet unbegrenzten Datenverkehr, Open Source für Client und Server, flexibles Split-Tunneling und den Cloak Mode. Der Tarif Kostenlos wird durch Werbung finanziert; Premium bietet mehr Standorte und Funktionen.",
   "why_unlimited_title": "Unbegrenzter Datenverkehr ohne Registrierung",
-  "why_unlimited_desc": "Surfen Sie ohne Datenlimit und ohne Registrierung. Die Bandbreite wird nicht künstlich gedrosselt – die tatsächliche Geschwindigkeit hängt von Ihrem Netzwerk und der Serverauslastung ab.",
+  "why_unlimited_desc": "Surfen ohne Datenlimit und ohne Registrierung. Wir drosseln die Bandbreite nicht künstlich – die tatsächliche Geschwindigkeit hängt von Ihrem Netzwerk und der Serverauslastung ab. Der Tarif Kostenlos finanziert sich über Werbung und ist daher nicht in allen Ländern verfügbar.",
   "why_open_source_title": "100 % Open Source",
   "why_open_source_desc": "Der Code für Client und Server ist transparent auf GitHub verfügbar. So können Sie den Quellcode jederzeit prüfen und Ihren eigenen Server betreiben.",
   "why_split_title": "Fortschrittliches Split-Tunneling",

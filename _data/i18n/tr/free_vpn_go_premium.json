@@ -1,9 +1,8 @@
 {
-  "meta_title": "Premium'a Geçin | VpnHood! CONNECT'in Tüm Gücünü Keşfedin",
+  "meta_title": "Premium Fiyatlandırma ve Ücretsiz ve Premium | VpnHood! CONNECT",
   "meta_description": "VpnHood! CONNECT Premium planları ile maksimum hız, reklamsız deneyim ve 7/24 destek alın. Tüm planlar 30 gün para iade garantilidir.",
-  "banner_title": "Premium Fiyatlandırma",
-  "banner_desc": "Deneyiminizi optimize etmek, maksimum hıza ulaşmak, 7/24 destek ve ek özelliklerle reklamsız bir deneyim yaşamak tamamen sizin elinizde. İstediğiniz zaman geçiş yapın.",
-  "rocket_alt": "Roket",
+  "banner_title": "VpnHood! CONNECT ile Premium'a Geçin",
+  "banner_desc": "VpnHood! CONNECT; trafik, bant genişliği veya süre sınırı olmadan tamamen ücretsizdir. Premium ile tüm sınırları kaldırın: 50'den fazla konum, ultra hızlı sunucular, aynı anda 5 cihaz, reklamsız deneyim ve 7/24 destek.",
   "free_plan_title": "Ücretsiz",
   "free_price": "$0",
   "per_month": "/ay",
@@ -35,7 +34,16 @@
   "note_same_features": "Tüm Premium planlar aynı özellikleri sunar; yalnızca indirim oranı değişir.",
   "note_usd": "Tüm tutarlar ABD Doları (USD) cinsindendir.",
   "note_tax": "Geçerli durumlarda satış vergisi/KDV ödeme adımında uygulanır.",
+  "why_title": "Neden VpnHood!",
+  "why_desc": "Premium, ücretsiz sürümle tamamen aynı uygulamayı ve aynı altyapıyı kullanır; yalnızca sınırlar kalkar. Aşağıdaki avantajlar hem Ücretsiz hem de Premium için geçerlidir.",
+  "why1_title": "Açık kaynak ve denetlenmiş",
+  "why1_desc": "İstemci, sunucu ve arkasındaki VpnHood! ENGINE tamamen GitHub'da yayınlanmaktadır. İki bağımsız güvenlik kuruluşu tarafından denetlenen projemizde, yalnızca sözümüze güvenmek zorunda kalmaz, kodu bizzat inceleyebilirsiniz.",
+  "why2_title": "Engelli ağlar için Gizleme Modu",
+  "why2_desc": "Gizleme Modu, VPN trafiğini sıradan HTTPS trafiği gibi göstererek VPN'leri doğrudan engelleyen ağların aşılmasına yardımcı olur. Performans, ağın denetim yöntemine göre değişebilir; hiçbir bağlantının engellenmeyeceği garanti edilemez.",
+  "why3_title": "Gerçekten ücretsiz bir plan",
+  "why3_desc": "Hesap zorunluluğu yok, süre sınırı yok, trafik veya bant genişliği limiti yok. Reklamlarla desteklendiğinden reklam sunulmayan bölgelerde kullanılamaz. Premium ise reklamları kaldırır ve her yerde çalışır.",
   "compare_label": "Karşılaştır",
-  "compare_title": "Ücretsiz ve Premium özellikleri karşılaştırın",
-  "compare_desc": "Deneyiminizi optimize etmek, maksimum hıza ulaşmak, reklamsız deneyim, 7/24 destek ve daha fazlasına sahip olmak sizin elinizde. İstediğiniz zaman geçiş yapabilirsiniz."
+  "compare_title": "Premium neler kazandırır?",
+  "compare_desc": "Yukarıdaki tüm planlar aynı özellikleri sunar. Ücretsiz uygulama sınırsız trafik, sınırsız bant genişliği ve tünelleme sağlamaya devam eder; Premium ise çok daha fazla konum, yüksek hız, ek cihazlar ve reklamsız bir deneyim ekler.",
+  "note_free_availability": "Ücretsiz plan reklamlarla finanse edildiğinden Çin'de veya reklam sunulmayan diğer ülkelerde kullanılamaz. Premium için bu tür bir kısıtlama yoktur."
 }

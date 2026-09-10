@@ -1,9 +1,8 @@
 {
-  "meta_title": "Premium werden | Schalte die volle Leistung von VpnHood! CONNECT frei",
+  "meta_title": "Premium-Tarife und Kostenlos vs. Premium | VpnHood! CONNECT",
   "meta_description": "VpnHood! CONNECT Premium-Tarife von monatlich bis jährlich: Maximale Geschwindigkeit ohne Werbung und 24/7-Support – mit 30-Tage-Geld-zurück-Garantie.",
-  "banner_title": "Premium-Tarife",
-  "banner_desc": "Optimieren Sie Ihr Erlebnis: Genießen Sie maximale Geschwindigkeit, werbefreies Surfen und 24/7-Support mit vielen zusätzlichen Funktionen. Sie können jederzeit wechseln.",
-  "rocket_alt": "Rakete",
+  "banner_title": "Premium werden mit VpnHood! CONNECT",
+  "banner_desc": "VpnHood! CONNECT ist kostenlos – ohne Limits für Datenverkehr, Bandbreite oder Zeit. Premium bietet noch mehr: über 50 Standorte, ultraschnelle Server, fünf Geräte gleichzeitig, werbefrei und Support rund um die Uhr.",
   "free_plan_title": "Kostenlos",
   "free_price": "$0",
   "per_month": "/Monat",
@@ -35,7 +34,16 @@
   "note_same_features": "Alle Premium-Tarife bieten dieselben Funktionen – der Unterschied liegt nur im Rabatt.",
   "note_usd": "Alle angezeigten Beträge sind in USD.",
   "note_tax": "Umsatzsteuer/Mehrwertsteuer wird gegebenenfalls beim Checkout berechnet.",
+  "why_title": "Warum VpnHood!",
+  "why_desc": "Premium nutzt dieselbe App und denselben Code wie die kostenlose Version – nur ohne Einschränkungen. Das Folgende gilt für Kostenlos und Premium gleichermaßen.",
+  "why1_title": "Open Source und geprüft",
+  "why1_desc": "Der Client, der Server und die zugrundeliegende VpnHood! ENGINE sind auf GitHub verfügbar. Das Projekt wurde von zwei unabhängigen Sicherheitsfirmen geprüft. Überzeuge dich selbst direkt im Code.",
+  "why2_title": "Cloak-Modus für blockierte Netzwerke",
+  "why2_desc": "Der Cloak-Modus lässt VPN-Datenverkehr wie gewöhnlichen HTTPS-Datenverkehr aussehen. Das hilft in Netzwerken, die VPNs blockieren. Wie gut das funktioniert, hängt von der jeweiligen Netzwerkprüfung ab – eine dauerhafte Entsperrung lässt sich nie garantieren.",
+  "why3_title": "Ein Tarif, der wirklich kostenlos ist",
+  "why3_desc": "Kein Konto, kein Zeitlimit und keine Drosselung von Datenverkehr oder Bandbreite. Die Finanzierung erfolgt über Werbung; daher ist er nicht verfügbar, wo keine Werbung ausgespielt wird. Premium entfernt die Werbung und funktioniert überall.",
   "compare_label": "Vergleichen",
-  "compare_title": "Kostenlos vs. Premium: Funktionen im Vergleich",
-  "compare_desc": "Optimieren Sie Ihr Erlebnis für maximale Geschwindigkeit, surfen Sie werbefrei und genießen Sie 24/7-Support sowie weitere Premium-Funktionen. Ein Upgrade ist jederzeit möglich."
+  "compare_title": "Vorteile von Premium",
+  "compare_desc": "Jeder der oben genannten Tarife schaltet dieselben Vorteile frei. Die kostenlose App behält unbegrenzten Datenverkehr, unbegrenzte Bandbreite und Split-Tunneling. Premium bringt zusätzliche Standorte, mehr Speed, weitere Geräte und Werbefreiheit.",
+  "note_free_availability": "Der kostenlose Tarif finanziert sich über Anzeigen und ist daher in China und weiteren Ländern ohne Werbeausspielung nicht verfügbar. Für Premium gilt diese Einschränkung nicht."
 }
