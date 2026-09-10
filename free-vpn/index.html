@@ -269,6 +269,39 @@ nav_active: free-vpn
                             </svg>
                           </a>
                         </div>
+                        <div id="unlimited" class="section-space text-center">
+                          <div
+                            class="section-start-text mb-5"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                          >
+                            <div class="section-label">
+                              <p class="vh-txt-grad-purple-400">{{ t.unlimited_label }}</p>
+                            </div>
+                            <h2 class="section-title vh-txt-grad-purple-400">
+                              {{ t.unlimited_title }}
+                            </h2>
+                            <p class="section-desc">
+                              {{ t.unlimited_desc }}
+                            </p>
+                          </div>
+                          <div class="row row-gap-4 justify-content-center text-start">
+                            <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/check-circle.svg %}</span>
+                                <h3 class="h5 mb-2">{{ t.unlimited_data_title }}</h3>
+                                <p class="mb-0">{{ t.unlimited_data_desc }}</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                                <h3 class="h5 mb-2">{{ t.unlimited_speed_title }}</h3>
+                                <p class="mb-0">{{ t.unlimited_speed_desc }}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <div id="pendingDownload" class="section-space">
                           <div
                             class="section-start-text"

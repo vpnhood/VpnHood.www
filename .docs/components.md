@@ -39,8 +39,9 @@ The Free-vs-Premium feature table, rendered on `/free-vpn/go-premium/`
 `heading` (tag for the column titles, default `h2`; go-premium passes `h3`) and
 `heading_class` (go-premium passes `h2`). Strings from
 `_data/i18n/<lang>/free_vpn_free_vs_premium.json`, with per-key English fallback. Feature
-rows link to their `/features/` pages (`.vh-cmp-link`); plan-attribute rows (locations,
-ads, support, platforms) don't. The table stays decision-focused — rows where both plans
+rows link to their `/features/` pages and the data/speed rows to `/free-vpn/#unlimited`
+(`.vh-cmp-link`, global in `_default.scss`); the remaining plan rows (locations, ads,
+support, platforms) don't link. The table stays decision-focused — rows where both plans
 tick add little, and the "See every feature explained" link under it carries the long tail.
 Never duplicate the table markup in pages. The mobile heading rule must match every heading
 tag the include can render (`#compareTable #header :is(h2, h3, h4)`), or the `h3.h2` variant

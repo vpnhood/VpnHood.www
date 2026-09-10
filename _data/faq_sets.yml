@@ -22,6 +22,8 @@ all:
   - is_open_source
   - is_undetectable
   - stay_free_forever
+  - free_data_cap
+  - free_speed
 
 sets:
   home:
@@ -32,15 +34,17 @@ sets:
 
   free_vpn:
     - is_vpnhood_free
+    - free_data_cap
+    - free_speed
     - is_undetectable
     - supported_platforms
-    - is_open_source
 
   comparison:
     - is_vpnhood_free
+    - free_data_cap
+    - free_speed
     - is_open_source
     - is_undetectable
-    - connect_vs_client
 
   download:
     - supported_platforms
@@ -61,5 +65,7 @@ sets:
   # of its own, and the same question twice on one page reads as padding.
   go_premium:
     - is_vpnhood_free
+    - free_data_cap
+    - free_speed
     - stay_free_forever
     - is_undetectable

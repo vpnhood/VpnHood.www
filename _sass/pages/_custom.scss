@@ -427,23 +427,6 @@
     align-items: center;
     color: var(--vh-text);
 }
-// Feature names link to their feature page. Eleven links in a dense table would
-// shout if they were styled like body links, so they keep the row's own colour and
-// carry a muted underline that firms up on hover - visible without colour alone,
-// which keeps them distinguishable for anyone who cannot see the hover state.
-.vh-cmp-link{
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: rgba(var(--purple-200-rgb), .55);
-    text-underline-offset: 3px;
-}
-
-.vh-cmp-link:hover,
-.vh-cmp-link:focus-visible{
-    color: var(--vh-accent-ink);
-    text-decoration-color: currentColor;
-}
-
 #compareTable .yes,
 #compareTable .no{
     display: inline-block;

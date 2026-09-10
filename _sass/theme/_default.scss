@@ -632,15 +632,33 @@ iconify-icon {
 // so a jump to #compareTable or #faq landed the section's top at y=0, i.e. entirely
 // behind the nav - the compare table lost its whole Free/Premium header row.
 #compareTable,
-#faq{
+#faq,
+#unlimited{
     scroll-margin-top: 9.5rem;
 }
 
 @media (max-width: 991px){
     #compareTable,
-    #faq{
+    #faq,
+    #unlimited{
         scroll-margin-top: 6rem;
     }
+}
+
+// Table rows link to the page that explains them: feature rows to /features/*, the
+// data and speed rows to /free-vpn/#unlimited. Global because the compare tables live
+// on pages with different stylesheets.
+.vh-cmp-link{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--purple-200-rgb), .55);
+    text-underline-offset: 3px;
+}
+
+.vh-cmp-link:hover,
+.vh-cmp-link:focus-visible{
+    color: var(--vh-accent-ink);
+    text-decoration-color: currentColor;
 }
 
 [dir="rtl"] .vh-rtl-mirror{
