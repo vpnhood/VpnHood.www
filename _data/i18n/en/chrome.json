@@ -71,5 +71,6 @@
   "oc_features": "Features",
   "lang_change": "Change language",
   "theme_switch_to_light": "Switch to light theme",
-  "theme_switch_to_dark": "Switch to dark theme"
+  "theme_switch_to_dark": "Switch to dark theme",
+  "nav_guides": "Guides"
 }

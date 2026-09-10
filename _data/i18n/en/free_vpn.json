@@ -35,7 +35,7 @@
   "unlimited_data_title": "No data cap",
   "unlimited_data_desc": "The VpnHood! server can enforce a monthly quota per user; on the free servers none is set. Use it all month, for anything, and no counter runs down.",
   "unlimited_speed_title": "No speed cap",
-  "unlimited_speed_desc": "The server can cap speed per user too, and on the free servers it does not. What you feel is capacity, not a limit: free servers carry many more people, so your share rises and falls with how busy they are. Premium servers are more powerful and shared only among premium users, which is why they are consistently faster.",
+  "unlimited_speed_desc": "The server can cap speed per user too, and on the free servers it does not. What you feel is capacity, not a limit: free servers carry many more people, so your share rises and falls with how busy they are. Premium servers are more powerful and shared only among premium users, which is why they are consistently faster. <a href=\"/guides/vpn-speed/\">How to test your VPN speed properly</a>.",
   "pending_label": "Let's go",
   "pending_title": "Secure and Private Access",
   "pending_desc": "Enjoy a seamless and private experience with our free, open-source VPN. No registration or personal data is required. Experience high-speed connectivity for all your online activities with no speed or time limits, ensuring your digital life stays private and uninterrupted.",

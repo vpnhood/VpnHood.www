@@ -24,6 +24,7 @@ all:
   - stay_free_forever
   - free_data_cap
   - free_speed
+  - why_slower
 
 sets:
   home:
@@ -69,3 +70,8 @@ sets:
     - free_speed
     - stay_free_forever
     - is_undetectable
+
+  speed:
+    - why_slower
+    - free_speed
+    - free_data_cap

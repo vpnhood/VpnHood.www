@@ -1,0 +1,53 @@
+---
+layout: none
+i18n: guides_index
+extra_css:
+  - /assets/css/custom.css
+nav_active: resources
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <div class="section-start-text section-space-top text-center" data-aos="fade-up">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                  </div>
+                  <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                  <p class="section-desc">{{ t.lead }}</p>
+                </div>
+
+                <ul class="row list-unstyled row-gap-4 justify-content-center mt-5 mb-0">
+                  <li class="col-lg-5 col-md-6" data-aos="fade-up">
+                    <div class="vh-card-dark vh-feature-panel h-100 position-relative">
+                      <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                      <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/vpn-speed/">{{ t.speed_title }}</a></h2>
+                      <p class="mb-0">{{ t.speed_desc }}</p>
+                    </div>
+                  </li>
+                  <li class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-dark vh-feature-panel h-100">
+                      <span class="vh-feature-icon">{% include icons/list.svg %}</span>
+                      <h2 class="h5 mb-2">{{ t.more_title }}</h2>
+                      <p class="mb-0">{{ t.more_desc }}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

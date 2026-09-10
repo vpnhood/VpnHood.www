@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhSpeedArtTitle">
+<title id="vhSpeedArtTitle">A speed gauge with its needle high, over a tunnel carrying data</title>
+<defs>
+  <linearGradient id="sArc" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset=".45" stop-color="#8257f5"/>
+    <stop offset=".78" stop-color="#3ce8c8"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <linearGradient id="sDial" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="sTunnel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5" stop-opacity=".08"/>
+    <stop offset=".5" stop-color="#8257f5" stop-opacity=".55"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".08"/></linearGradient>
+  <linearGradient id="sNeedle" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#c0a4ff"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <radialGradient id="sAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="sTipGlow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".95"/>
+    <stop offset=".45" stop-color="#3ce8c8" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="sSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="sSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
+</defs>
+
+<ellipse cx="500" cy="470" rx="430" ry="400" fill="url(#sAmbient)"/>
+
+<!-- dial face -->
+<circle cx="500" cy="470" r="300" fill="url(#sDial)"/>
+<circle cx="500" cy="470" r="300" fill="none" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
+
+<!-- the sweep: 240 degrees, from lower-left round to lower-right -->
+<path d="M 288 682 A 300 300 0 1 1 712 682" fill="none" stroke="#2b1470" stroke-opacity=".9" stroke-width="46" stroke-linecap="round" transform="scale(.86) translate(81 66)"/>
+<path d="M 288 682 A 300 300 0 1 1 712 682" fill="none" stroke="url(#sArc)" stroke-width="30" stroke-linecap="round" transform="scale(.86) translate(81 66)" filter="url(#sSoft)" opacity=".55"/>
+<path d="M 288 682 A 300 300 0 1 1 712 682" fill="none" stroke="url(#sArc)" stroke-width="22" stroke-linecap="round" transform="scale(.86) translate(81 66)"/>
+
+<!-- ticks -->
+<g stroke="#c0a4ff" stroke-opacity=".55" stroke-linecap="round">
+  <g stroke-width="7">
+    <path d="M500 245 v-34" transform="rotate(-120 500 470)"/>
+    <path d="M500 245 v-34" transform="rotate(-60 500 470)"/>
+    <path d="M500 245 v-34"/>
+    <path d="M500 245 v-34" transform="rotate(60 500 470)"/>
+    <path d="M500 245 v-34" transform="rotate(120 500 470)"/>
+  </g>
+  <g stroke-width="4" stroke-opacity=".3">
+    <path d="M500 249 v-22" transform="rotate(-90 500 470)"/>
+    <path d="M500 249 v-22" transform="rotate(-30 500 470)"/>
+    <path d="M500 249 v-22" transform="rotate(30 500 470)"/>
+    <path d="M500 249 v-22" transform="rotate(90 500 470)"/>
+  </g>
+</g>
+
+<!-- needle, resting in the fast quarter -->
+<g transform="rotate(74 500 470)">
+  <circle cx="500" cy="252" r="58" fill="url(#sTipGlow)" filter="url(#sSoft)"/>
+  <path d="M492 470 L500 258 L508 470 Z" fill="url(#sNeedle)"/>
+</g>
+<circle cx="500" cy="470" r="46" fill="#150a3a" stroke="#8257f5" stroke-opacity=".6" stroke-width="3"/>
+<circle cx="500" cy="470" r="17" fill="#c0a4ff"/>
+
+<!-- tunnel beneath: data moving through, fast at the mint end -->
+<g>
+  <rect x="150" y="800" width="700" height="86" rx="43" fill="#150a3a" fill-opacity=".85" stroke="#8257f5" stroke-opacity=".3" stroke-width="2"/>
+  <rect x="150" y="800" width="700" height="86" rx="43" fill="url(#sTunnel)"/>
+  <g fill="#c0a4ff">
+    <rect x="214" y="833" width="58" height="20" rx="10" opacity=".45"/>
+    <rect x="300" y="833" width="74" height="20" rx="10" opacity=".6"/>
+    <rect x="402" y="833" width="92" height="20" rx="10" opacity=".75"/>
+  </g>
+  <g fill="#8ef7e2">
+    <rect x="522" y="833" width="110" height="20" rx="10" opacity=".85"/>
+    <rect x="660" y="833" width="132" height="20" rx="10"/>
+  </g>
+  <rect x="660" y="833" width="132" height="20" rx="10" fill="#3ce8c8" filter="url(#sSoft)" opacity=".7"/>
+</g>
+<ellipse cx="500" cy="843" rx="330" ry="70" fill="url(#sAmbient)" opacity=".55" filter="url(#sSofter)"/>
+</svg>
