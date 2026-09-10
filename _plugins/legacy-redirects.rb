@@ -16,7 +16,12 @@ module VhLegacyRedirects
   REDIRECTS = {
     # /free-vpn/features/ described five features for CONNECT only. CLIENT and CONNECT
     # now share one feature set, and /features/ explains all of them with child pages.
-    "/free-vpn/features/" => "/features/"
+    "/free-vpn/features/" => "/features/",
+    # /free-vpn/free-vs-premium/ was only the compare table that /free-vpn/go-premium/
+    # also renders. Search Console (Jun-Sep 2026) showed it ranking for brand terms at
+    # 0.7% CTR and for no "free vs premium" query at all, so the duplicate went. The
+    # "Free vs Premium" menu entry survives, pointing at /free-vpn/go-premium/#compareTable.
+    "/free-vpn/free-vs-premium/" => "/free-vpn/go-premium/"
   }.freeze
 
   class Generator < Jekyll::Generator

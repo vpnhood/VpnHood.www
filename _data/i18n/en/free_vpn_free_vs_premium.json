@@ -1,9 +1,4 @@
 {
-  "meta_title": "Free vs Premium | Compare VpnHood! CONNECT Plans",
-  "meta_description": "Compare VpnHood! CONNECT Free and Premium side by side: traffic and bandwidth limits, split tunneling by app or country, protocol choice, ads and support.",
-  "banner_title": "Compare Free with Premium features",
-  "banner_desc": "Free and Premium run the same app and the same open-source code. The table below shows exactly where they differ, from locations and speed to ads and support.",
-  "phone_alt": "VpnHood! CONNECT app on a smartphone",
   "table_title": "VPN features",
   "free_title": "Free",
   "free_desc": "No registration and no personal information. No limit on traffic, bandwidth or time. The free plan is funded by ads, so it is not available in every country.",
@@ -31,7 +26,5 @@
   "row_private_dns": "Private DNS",
   "row_quick_launch": "Quick Launch",
   "row_support_247": "24/7 Support",
-  "download_for_free": "Download for free",
-  "premium_pricing": "Premium Pricing",
   "see_all_features": "See every feature explained"
 }
