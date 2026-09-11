@@ -14,8 +14,6 @@
   "row_kill_switch": "网络断开开关",
   "row_multilingual": "多语言支持",
   "row_locations": "服务器节点 <span class=\"small vh-txt-purple-100\">(国家/地区)</span>",
-  "locations_free": "5",
-  "locations_premium": "+50",
   "row_ad_free": "无广告",
   "row_resilient_servers": "稳定可靠的服务器",
   "row_premium_platforms": "Windows、iOS 与 Linux",

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "items": {
+    "continent_europe": "Europe",
+    "continent_americas": "Americas",
+    "continent_asia": "Asia & Middle East",
+    "continent_oceania": "Oceania",
+    "tier_free": "Free",
+    "tier_premium": "Premium",
+    "country_germany": "Germany",
+    "country_france": "France",
+    "country_united_kingdom": "United Kingdom",
+    "country_poland": "Poland",
+    "country_russia": "Russia",
+    "country_united_states": "United States",
+    "country_canada": "Canada",
+    "country_mexico": "Mexico",
+    "country_brazil": "Brazil",
+    "country_argentina": "Argentina",
+    "country_uae": "United Arab Emirates",
+    "country_iraq": "Iraq",
+    "country_pakistan": "Pakistan",
+    "country_india": "India",
+    "country_singapore": "Singapore",
+    "country_australia": "Australia"
+  }
+}

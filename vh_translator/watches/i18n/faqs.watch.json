@@ -24,6 +24,10 @@
     "q_free_speed": "Do you slow down free users?",
     "a_free_speed": "No. The VpnHood! server can cap speed per user, and on the free servers it does not. What differs between the plans is capacity: free servers carry many more people, so your share of a server changes with how busy it is, while Premium servers are more powerful and shared only among premium users, which is why they are consistently faster.",
     "q_why_slower": "Why is VpnHood! slower than my normal connection?",
-    "a_why_slower": "Every VPN costs some speed: your data is encrypted and travels through one more machine before it reaches the site you asked for. Distance is usually the bigger factor, so a nearer server helps most. Cloak Mode and Smart Proxies each add overhead and can be turned off when nothing is blocking you. See the <a href=\"/guides/vpn-speed/\">speed testing guide</a> for how to measure it properly."
+    "a_why_slower": "Every VPN costs some speed: your data is encrypted and travels through one more machine before it reaches the site you asked for. Distance is usually the bigger factor, so a nearer server helps most. Cloak Mode and Smart Proxies each add overhead and can be turned off when nothing is blocking you. See the <a href=\"/guides/vpn-speed/\">speed testing guide</a> for how to measure it properly.",
+    "q_request_location": "Can I ask for a new location?",
+    "a_request_location": "Yes. Locations are added where demand shows up, and requests are how we see it. Use the <a href=\"/contact-us/\">contact page</a>, name the country, and say whether you need it for speed or to reach something specific, because that changes where the server should be.",
+    "q_many_servers_per_location": "Is each location a single server?",
+    "a_many_servers_per_location": "No. Every location is a group of servers, not one machine. You pick the country and the app picks the server inside it, going for the fastest one it can reach, so you never have to compare individual servers yourself. See <a href=\"/free-vpn/locations/\">every location</a>."
   }
 }

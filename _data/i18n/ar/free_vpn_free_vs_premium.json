@@ -14,8 +14,6 @@
   "row_kill_switch": "مفتاح الإيقاف التلقائي (Kill Switch)",
   "row_multilingual": "متعدد اللغات",
   "row_locations": "المواقع <span class=\"small vh-txt-purple-100\">(الدولة)</span>",
-  "locations_free": "5",
-  "locations_premium": "+50",
   "row_ad_free": "بدون إعلانات",
   "row_resilient_servers": "خوادم فائقة الثبات",
   "row_premium_platforms": "Windows وiOS وLinux",
