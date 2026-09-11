@@ -139,6 +139,12 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # Cheap, read-only, no dependencies. A link to the page it is on is always a
+      # mistake, and easy to add without noticing: a FAQ answer is written once
+      # and rendered on up to eight pages.
+      - name: Check for self-links
+        run: python3 tools/check-self-links.py _site
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
 

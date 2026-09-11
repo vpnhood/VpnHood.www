@@ -124,6 +124,7 @@
     // Sticky first column of the /free-vpn/comparison table: must be opaque so the
     // scrolled-under cells don't bleed through it.
     --vh-table-sticky-bg: #150e34;
+    --vh-map-dot: rgba(var(--purple-130-rgb), 0.55);       // land dots on the /free-vpn/ map
     // Vertical rhythm between page sections. 13.9vw hits exactly 200px at a
     // 1440px viewport, so every desktop screen keeps the designed spacing and
     // only narrower ones tighten, down to a 72px floor on phones.
@@ -642,7 +643,8 @@ iconify-icon {
 // behind the nav - the compare table lost its whole Free/Premium header row.
 #compareTable,
 #faq,
-#unlimited{
+#unlimited,
+#locations{
     scroll-margin-top: 9.5rem;
 }
 
@@ -1318,6 +1320,28 @@ iconify-icon {
     position: relative;
     margin: 0 auto;
     mask-image: linear-gradient(90deg,transparent 0,var(--purple-800) 20%,var(--purple-800) 80%,transparent);
+}
+/*-------------- Flag pill --------------*/
+// A round flag beside a country name: the home #flagSlider items and the list
+// under the /free-vpn/ map (_includes/location-map.html). Fully rounded, with the
+// flag tucked into the end cap, so the circle reads as part of the pill instead of
+// straining against a squarer corner.
+.vh-flag-pill{
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding-block: 4px;
+    padding-inline: 5px 14px;
+    border-radius: 999px;
+    background-color: var(--vh-surface);
+    border: 1px solid var(--vh-border);
+    color: var(--vh-text);
+    white-space: nowrap;
+}
+.vh-flag-pill img{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 /*-------------- FAQ section --------------*/
 #faq .accordion{

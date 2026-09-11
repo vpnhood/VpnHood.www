@@ -1,0 +1,54 @@
+# Server locations: the single source of truth for every country the site names.
+#
+# STRUCTURE, not copy (vhtranslator only walks _data/i18n/en, so nothing here is
+# ever translated or overwritten). The visible names live in
+# _data/i18n/en/locations.json as country_<key> / continent_<key>.
+#
+# Read by: /free-vpn/locations/ (the grid and the stat strip), the map and flag
+# pills on /free-vpn/ (_includes/location-map.html), the home page's flag slider,
+# the home globe (assets/js/globe-points.json renders the dots from lat/lng), the
+# compare table on /free-vpn/go-premium/ and the free-plan cell on
+# /free-vpn/comparison/ (both count this list). Add a country here and in the
+# names file and every one of those updates. Never hardcode a country or a count
+# in a page. The two prose mentions that still carry a literal number are the
+# locations page's meta_title ("16 Countries") and go-premium's banner ("more
+# than 15 countries"); grep for them when the list changes.
+#
+# Fields
+#   key       - suffix of the i18n name key, and the globe's country key
+#   code      - ISO 3166-1 alpha-2, lower case: names the flag in assets/images/flags/
+#   tier      - free | premium  (premium means "Premium only"; every free one is
+#               included in Premium)
+#   continent - one of the keys under `continents`
+#   lat, lng  - a representative city: places the dot on the home globe and the
+#               pin on the /free-vpn/ map (both true equirectangular, so no tuning)
+#
+# Within a continent, free countries come first: that is the order the grid shows.
+
+continents:
+  - key: europe
+  - key: americas
+  - key: asia
+  - key: oceania
+
+countries:
+  # Europe
+  - { key: germany,        code: de, tier: free,    continent: europe,   lat: 50.1,  lng: 8.7 }
+  - { key: france,         code: fr, tier: free,    continent: europe,   lat: 48.9,  lng: 2.4 }
+  - { key: united_kingdom, code: gb, tier: free,    continent: europe,   lat: 51.5,  lng: -0.1 }
+  - { key: poland,         code: pl, tier: free,    continent: europe,   lat: 52.2,  lng: 21.0 }
+  - { key: russia,         code: ru, tier: premium, continent: europe,   lat: 55.8,  lng: 37.6 }
+  # Americas
+  - { key: united_states,  code: us, tier: free,    continent: americas, lat: 39.8,  lng: -98.6 }
+  - { key: canada,         code: ca, tier: free,    continent: americas, lat: 43.7,  lng: -79.4 }
+  - { key: mexico,         code: mx, tier: premium, continent: americas, lat: 19.4,  lng: -99.1 }
+  - { key: brazil,         code: br, tier: premium, continent: americas, lat: -23.5, lng: -46.6 }
+  - { key: argentina,      code: ar, tier: premium, continent: americas, lat: -34.6, lng: -58.4 }
+  # Asia & Middle East
+  - { key: uae,            code: ae, tier: premium, continent: asia,     lat: 25.2,  lng: 55.3 }
+  - { key: iraq,           code: iq, tier: premium, continent: asia,     lat: 33.3,  lng: 44.4 }
+  - { key: pakistan,       code: pk, tier: premium, continent: asia,     lat: 30.4,  lng: 69.3 }
+  - { key: india,          code: in, tier: premium, continent: asia,     lat: 19.1,  lng: 72.9 }
+  - { key: singapore,      code: sg, tier: premium, continent: asia,     lat: 1.35,  lng: 103.8 }
+  # Oceania
+  - { key: australia,      code: au, tier: premium, continent: oceania,  lat: -33.9, lng: 151.2 }

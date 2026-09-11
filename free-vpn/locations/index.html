@@ -1,0 +1,104 @@
+---
+layout: none
+i18n: free_vpn_locations
+extra_css:
+  - /assets/css/custom.css
+nav_active: free-vpn
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{% assign tl_en = site.data.i18n.en.locations %}
+{% assign tl = site.data.i18n[vh_lang].locations | default: tl_en %}
+{% assign vh_loc_all = site.data.locations.countries | size %}
+{% assign vh_loc_free = site.data.locations.countries | where: "tier", "free" | size %}
+{% assign vh_loc_continents = site.data.locations.continents | size %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <div class="section-start-text text-center" data-aos="fade-up">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                  </div>
+                  <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                  <p class="section-desc">{{ t.lead }}</p>
+                  <ul class="vh-stat-strip list-unstyled mb-0" data-aos="fade-up" data-aos-delay="100">
+                    <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_all }}</span><span class="vh-stat-label">{{ t.stat_countries }}</span></li>
+                    <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_continents }}</span><span class="vh-stat-label">{{ t.stat_continents }}</span></li>
+                    <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_free }}</span><span class="vh-stat-label">{{ t.stat_free }}</span></li>
+                  </ul>
+                </div>
+                <div class="mt-5">
+                  {% include location-map.html pills=false %}
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.grid_title }}</h2>
+                    <p class="section-desc">{{ t.grid_desc }}</p>
+                  </div>
+                  {% include location-grid.html %}
+                  <div class="vh-card-dark vh-feature-panel vh-loc-pool text-center mt-5" data-aos="fade-up">
+                    <span class="vh-feature-icon mx-auto">{% include icons/server.svg %}</span>
+                    <h3 class="h5 mb-2">{{ t.pool_title }}</h3>
+                    <p class="mb-0">{{ t.pool_desc }}</p>
+                  </div>
+                  <p class="text-center mt-5 mb-0 small vh-loc-note" data-aos="fade-up">{{ t.note_ads }}</p>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.pick_title }}</h2>
+                    <p class="section-desc">{{ t.pick_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                        <h3 class="h5 mb-2 vh-verdict">{{ t.pick_speed_title }}</h3>
+                        <p class="mb-3">{{ t.pick_speed_desc }}</p>
+                        <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/guides/vpn-speed/">{{ t.pick_speed_link }}</a>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-by-country.svg %}</span>
+                        <h3 class="h5 mb-2 vh-verdict">{{ t.pick_reach_title }}</h3>
+                        <p class="mb-3">{{ t.pick_reach_desc }}</p>
+                        <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/features/split-tunneling/by-country/">{{ t.pick_reach_link }}</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.more_title }}</h2>
+                    <p class="section-desc">{{ t.more_desc }}</p>
+                  </div>
+                  <div class="text-center" data-aos="fade-up">
+                    <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/contact-us/">{{ t.more_cta }}</a>
+                  </div>
+                  <div class="text-center mt-5 pt-lg-4" data-aos="fade-up">
+                    <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/free-vpn/download/">{{ t.cta_download }}</a>
+                    <a class="vh-btn vh-btn-secondary ms-lg-3 mt-3 mt-lg-0" href="{{ vh_base }}/free-vpn/go-premium/">{{ t.cta_premium }}</a>
+                  </div>
+                </div>
+
+{% include faq.html set="locations" schema=false wrapper_class="section-space-top" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

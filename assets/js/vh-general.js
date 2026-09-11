@@ -11,6 +11,21 @@ function removeTopBar(){
     });
 }
 
+//---------------------- CTA click tracking ----------------------
+// One dataLayer event per click on any [data-vh-track] element, so GTM can forward
+// it to GA4 as a custom event (see .docs/components.md, "CTA tracking"). Nothing
+// here talks to Google directly, and the click itself is never delayed or blocked.
+document.addEventListener('click', function (e) {
+    const el = e.target.closest('[data-vh-track]');
+    if (!el) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: 'vh_cta_click',
+        vh_cta: el.dataset.vhTrack,
+        vh_href: el.getAttribute('href') || ''
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // The desktop mega-menu hover overlay (#vhOverlay) is now driven purely by CSS
@@ -59,9 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselContainer = document.querySelectorAll('.linear-slider-items');
 
     carouselContainer.forEach(container => {
-        // Clone the carousel content to create a continuous loop
-        const carouselItems = container.innerHTML;
-        container.innerHTML += carouselItems;
+        // Clone the carousel content to create a continuous loop. The clones are
+        // presentation only, so hide them from assistive tech or every item is
+        // announced twice.
+        const originalCount = container.children.length;
+        container.innerHTML += container.innerHTML;
+        Array.from(container.children).slice(originalCount).forEach(el => el.setAttribute('aria-hidden', 'true'));
 
         // Set up animation
         let scrollLeft = 0;

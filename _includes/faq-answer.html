@@ -1,0 +1,32 @@
+{%- comment -%}
+  One FAQ answer, ready to print. Two rewrites, both of them about links:
+
+    1. an internal link is moved onto the page's own language tree, so
+       href="/free-vpn/go-premium/" becomes href="/fa/free-vpn/go-premium/" on a
+       Persian page;
+    2. a link to the page currently being rendered is unwrapped to plain text,
+       because a link to the page you are already on is a dead end.
+
+  Rule 2 is a safety net, not a licence: an answer that links to a page is
+  usually a short version of what that page says at length, so listing it in that
+  page's own set in _data/faq_sets.yml repeats the page inside itself. Keep it
+  out of the set; see the note there.
+
+  Assumes at most ONE <a> per answer, which is what lets the unwrap find the
+  matching </a> by taking the first one after the opening tag.
+  tools/check-self-links.py enforces that invariant.
+
+  Parameters:
+    html - the raw answer string from faqs.json.
+{%- endcomment -%}
+{%- capture vh_fa_lang %}href="{{ vh_base }}/{% endcapture -%}
+{%- assign vh_fa = include.html | replace: 'href="/', vh_fa_lang -%}
+{%- capture vh_fa_self %}href="{{ page.url }}"{% endcapture -%}
+{%- if vh_fa contains vh_fa_self -%}
+  {%- assign vh_fa_attrs = vh_fa | split: vh_fa_self | last | split: '>' | first -%}
+  {%- capture vh_fa_open %}<a {{ vh_fa_self }}{{ vh_fa_attrs }}>{% endcapture -%}
+  {%- assign vh_fa_parts = vh_fa | split: vh_fa_open -%}
+  {%- assign vh_fa_rest = vh_fa_parts[1] | split: '</a>' -%}
+  {%- capture vh_fa %}{{ vh_fa_parts[0] }}{{ vh_fa_rest[0] }}{{ vh_fa_rest[1] }}{% endcapture -%}
+{%- endif -%}
+{{- vh_fa -}}

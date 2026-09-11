@@ -124,7 +124,7 @@ nav_active: free-vpn
                           </tr>
                           <tr>
                             <th scope="row"><span class="vh-cmp-feature"><svg class="vh-cmp-ico" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4-4.5 7-7.78 7-11a7 7 0 1 0-14 0c0 3.22 3 6.5 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>{{ t.row_server_choice }}</span></th>
-                            <td class="vh-cmp-hl"><span class="vh-cmp-text">{{ t.servers_vpnhood }}</span></td>
+                            {%- assign vh_loc_free = site.data.locations.countries | where: "tier", "free" | size -%}<td class="vh-cmp-hl"><span class="vh-cmp-text"><a class="vh-cmp-link" href="{{ vh_base }}/free-vpn/locations/">{{ vh_loc_free }}</a></span></td>
                             <td><span class="vh-cmp-mark vh-cmp-no" role="img" aria-label="{{ t.aria_no }}"></span></td>
                             <td><span class="vh-cmp-text">{{ t.servers_windscribe }}</span></td>
                             <td><span class="vh-cmp-mark vh-cmp-no" role="img" aria-label="{{ t.aria_no }}"></span></td>

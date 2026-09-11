@@ -1,0 +1,35 @@
+{%- comment -%}
+  Location cards on /free-vpn/locations/: an H3 per continent from
+  _data/locations.yml, with names from _data/i18n/<lang>/locations.json (per-key
+  English fallback, like the chrome). The teaser on /free-vpn/ uses
+  location-map.html instead.
+
+  Every free country is included in Premium as well, so a free card carries both
+  badges and a Premium-only card carries one: the badges list every plan a
+  country comes with, not just the cheapest.
+{%- endcomment -%}
+{%- assign vh_lg_lang = page.lang | default: 'en' -%}
+{%- assign vh_lg_en = site.data.i18n.en.locations -%}
+{%- assign vh_lg = site.data.i18n[vh_lg_lang].locations | default: vh_lg_en -%}
+{%- for vh_lg_cont in site.data.locations.continents -%}
+  {%- assign vh_lg_ck = 'continent_' | append: vh_lg_cont.key -%}
+<h3 class="h5 vh-loc-continent" data-aos="fade-up">{{ vh_lg[vh_lg_ck] | default: vh_lg_en[vh_lg_ck] }}</h3>
+  {%- assign vh_lg_in = site.data.locations.countries | where: "continent", vh_lg_cont.key %}
+<ul class="row list-unstyled row-gap-3 mb-0">
+  {%- for vh_lg_c in vh_lg_in -%}
+    {%- assign vh_lg_nk = 'country_' | append: vh_lg_c.key %}
+  <li class="col-lg-3 col-md-4 col-6" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | modulo: 4 | times: 50 }}">
+    <div class="vh-loc-card">
+      <img class="vh-loc-flag" src="/assets/images/flags/{{ vh_lg_c.code }}.svg" width="40" height="40" alt="" loading="lazy" />
+      <span class="vh-loc-name">{{ vh_lg[vh_lg_nk] | default: vh_lg_en[vh_lg_nk] }}</span>
+      <span class="vh-loc-tiers">
+        {%- if vh_lg_c.tier == "free" -%}
+        <span class="vh-loc-tier vh-loc-tier-free">{{ vh_lg.tier_free | default: vh_lg_en.tier_free }}</span>
+        {%- endif -%}
+        <span class="vh-loc-tier vh-loc-tier-premium">{{ vh_lg.tier_premium | default: vh_lg_en.tier_premium }}</span>
+      </span>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endfor -%}

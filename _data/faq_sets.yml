@@ -9,6 +9,12 @@
 # `a_is_open_source`. Add a question by adding both keys to the English file and
 # listing its base name here; a name with no matching key is skipped silently.
 #
+# NEVER list a question whose answer links to the page showing it: the link
+# renders as a link to the page you are already on, and the answer is usually a
+# short version of what that page says at length. The answers that link out are
+# is_vpnhood_free and supported_platforms (-> /free-vpn/go-premium/), why_slower
+# (-> /guides/vpn-speed/) and many_servers_per_location (-> /free-vpn/locations/).
+#
 # `all` is the full ordered list, used by /faq/ and as the fallback when a page
 # names no set. `sets` holds the per-page selections. Pick 3-4 questions that
 # answer what a visitor to that page is actually wondering - the same six
@@ -25,6 +31,8 @@ all:
   - free_data_cap
   - free_speed
   - why_slower
+  - request_location
+  - many_servers_per_location
 
 sets:
   home:
@@ -64,19 +72,30 @@ sets:
 
   # why_vpnhood is deliberately absent: the page carries a "Why VpnHood!" section
   # of its own, and the same question twice on one page reads as padding.
+  # Not is_vpnhood_free: its answer links here. stay_free_forever answers the
+  # same worry without pointing at the page it is already on.
   go_premium:
-    - is_vpnhood_free
     - free_data_cap
     - free_speed
     - stay_free_forever
     - is_undetectable
 
+  # Not why_slower: its answer links here, and the guide already covers distance,
+  # the route ceiling, Cloak Mode and Smart Proxies in full.
   speed:
-    - why_slower
     - free_speed
+    - many_servers_per_location
     - free_data_cap
 
   split_tunneling:
     - is_vpnhood_free
     - supported_platforms
     - is_open_source
+
+  # Not many_servers_per_location: the page answers it in full above the FAQ, and
+  # its answer links to this page, which would be a link to itself here.
+  locations:
+    - request_location
+    - why_slower
+    - stay_free_forever
+    - free_speed

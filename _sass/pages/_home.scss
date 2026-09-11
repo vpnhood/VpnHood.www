@@ -407,17 +407,6 @@
     background: linear-gradient(45deg, var(--purple-800) 15%, var(--purple-300) 50%, var(--purple-800) 85%);
 }
 
-#flagSlider .item {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 3px 13px;
-    border-radius: 10px;
-    background-color: var(--vh-surface);
-    border: 1px solid var(--vh-border);
-    color: var(--vh-text);
-    white-space: nowrap;
-}
 #globeWrapper{
     -webkit-mask-image: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
     mask-image: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
@@ -498,6 +487,29 @@
 @media (max-width: 575px) {
     #globeWrapper{
         height: 180px;
+    }
+}
+// The globe is masked to fade out at the bottom of its box, so it is already
+// invisible for the last ~12% of #globeWrapper and a link placed after the box
+// starts a long way below anything you can see. Pull it up into the fade. The
+// amounts track the wrapper heights above (420 / 340 / 250 / 180px), so the link
+// lands just under the last visible dots at every width.
+.vh-globe-cta{
+    margin-top: -60px;
+}
+@media (max-width: 991px) {
+    .vh-globe-cta{
+        margin-top: -48px;
+    }
+}
+@media (max-width: 767px) {
+    .vh-globe-cta{
+        margin-top: -34px;
+    }
+}
+@media (max-width: 575px) {
+    .vh-globe-cta{
+        margin-top: -24px;
     }
 }
 /*-------------- Download section --------------*/

@@ -302,6 +302,35 @@ nav_active: free-vpn
                             </div>
                           </div>
                         </div>
+                        <div id="locations" class="section-space text-center">
+                          <div
+                            class="section-start-text mb-5"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                          >
+                            <div class="section-label">
+                              <p class="vh-txt-grad-purple-400">{{ t.locations_label }}</p>
+                            </div>
+                            <h2 class="section-title vh-txt-grad-purple-400">
+                              {{ t.locations_title }}
+                            </h2>
+                            <p class="section-desc">
+                              {{ t.locations_desc }}
+                            </p>
+                            {%- assign vh_loc_all = site.data.locations.countries | size -%}
+                            {%- assign vh_loc_free = site.data.locations.countries | where: "tier", "free" | size %}
+                            <p class="vh-loc-count mb-0">
+                              <b>{{ vh_loc_free }}</b> {{ t.locations_free_label }}
+                              <span class="vh-loc-count-sep" aria-hidden="true">&middot;</span>
+                              <b>{{ vh_loc_all }}</b> {{ t.locations_premium_label }}
+                            </p>
+                          </div>
+                          {% include location-map.html %}
+                          <p class="mt-5 mb-0" data-aos="fade-up">
+                            <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/free-vpn/locations/">{{ t.locations_cta }} {% include icons/arrow-right.svg %}</a>
+                          </p>
+                        </div>
+
                         <div id="pendingDownload" class="section-space">
                           <div
                             class="section-start-text"

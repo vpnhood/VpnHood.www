@@ -7,8 +7,11 @@
   `q_is_open_source` / `a_is_open_source`. Each key falls back to English on its
   own, so a question added here shows in every language immediately instead of
   rendering blank until vhtranslator catches up. Answers may contain inline HTML
-  - Google permits a/b/strong/em/br/ul/ol/li in FAQ answers. Internal links
-  inside answers are rewritten onto the page's language tree via vh_base.
+  - Google permits a/b/strong/em/br/ul/ol/li in FAQ answers. An answer prints
+  through _includes/faq-answer.html, which moves its internal links onto the
+  page's language tree and unwraps a link to the page being rendered. Keep a
+  question out of the set of the page its answer links to all the same, or the
+  page carries a short version of itself.
 
   Parameters:
     set     - name of a list under `sets:` in _data/faq_sets.yml, e.g.
@@ -36,7 +39,6 @@
 {%- assign vh_faq_lang = page.lang | default: 'en' -%}
 {%- assign vh_faqs_en = site.data.i18n.en.faqs -%}
 {%- assign vh_faqs = site.data.i18n[vh_faq_lang].faqs | default: vh_faqs_en -%}
-{%- capture vh_href_lang %}href="{{ vh_base }}/{% endcapture -%}
 {%- comment -%} Selection: explicit keys, then a named set, then everything. {%- endcomment -%}
 {%- if include.keys -%}
   {%- assign vh_faq_list = include.keys | split: ',' -%}
@@ -55,7 +57,7 @@
       </button>
     </{{ q_level }}>
     <div id="faq-{{ vh_slug }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-      <div class="accordion-body">{{ vh_a | replace: 'href="/', vh_href_lang }}</div>
+      <div class="accordion-body">{% include faq-answer.html html=vh_a %}</div>
     </div>
   </div>
 {% endfor %}
@@ -98,10 +100,10 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {% for vh_name in vh_faq_list %}{% assign vh_slug = vh_name | strip %}{% assign vh_qk = 'q_' | append: vh_slug %}{% assign vh_ak = 'a_' | append: vh_slug %}{% assign vh_q = vh_faqs[vh_qk] | default: vh_faqs_en[vh_qk] %}{% if vh_q == nil or vh_q == '' %}{% continue %}{% endif %}{% assign vh_a = vh_faqs[vh_ak] | default: vh_faqs_en[vh_ak] | replace: 'href="/', vh_href_lang %}{% if vh_emitted > 0 %},{% endif %}{% assign vh_emitted = vh_emitted | plus: 1 %}{
+    {% for vh_name in vh_faq_list %}{% assign vh_slug = vh_name | strip %}{% assign vh_qk = 'q_' | append: vh_slug %}{% assign vh_ak = 'a_' | append: vh_slug %}{% assign vh_q = vh_faqs[vh_qk] | default: vh_faqs_en[vh_qk] %}{% if vh_q == nil or vh_q == '' %}{% continue %}{% endif %}{% assign vh_a = vh_faqs[vh_ak] | default: vh_faqs_en[vh_ak] %}{% capture vh_a_html %}{% include faq-answer.html html=vh_a %}{% endcapture %}{% if vh_emitted > 0 %},{% endif %}{% assign vh_emitted = vh_emitted | plus: 1 %}{
       "@type": "Question",
       "name": {{ vh_q | strip | jsonify }},
-      "acceptedAnswer": { "@type": "Answer", "text": {{ vh_a | strip | jsonify }} }
+      "acceptedAnswer": { "@type": "Answer", "text": {{ vh_a_html | strip | jsonify }} }
     }{% endfor %}
   ]
 }

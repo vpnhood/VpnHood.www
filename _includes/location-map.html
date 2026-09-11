@@ -1,0 +1,49 @@
+{%- comment -%}
+  The dotted world map with one pin per country in _data/locations.yml, followed
+  by the flag strip that names them: the same linear slider as the home page's
+  #flagSlider (vh-general.js loops it), one row at every width. Its flags load
+  eagerly: a lazy image inside the moving strip only starts loading as it
+  scrolls into view, so it pops in blank. The map is
+  decorative (aria-hidden, hover tooltips only), so the strip is what assistive
+  tech and phones get; the two read the same list, so they cannot disagree.
+
+  Parameters:
+    pills - default true. Pass pills=false where the page names every country
+            itself (/free-vpn/locations/ has the continent grid right under it).
+
+  The land is assets/images/general/world-dots.svg (tools/make-land-dots.py) as a
+  CSS mask: its viewBox is longitude -180..180 by latitude 84..-56, so a pin sits
+  at left = (lng + 180) / 3.6 %, top = (84 - lat) / 1.4 %. That inline style is
+  the one place data drives a position; every other rule is in
+  _sass/pages/_custom.scss (.vh-map-*) and _sass/theme/_default.scss (.vh-flag-pill).
+{%- endcomment -%}
+{%- assign vh_lm_lang = page.lang | default: 'en' -%}
+{%- assign vh_lm_en = site.data.i18n.en.locations -%}
+{%- assign vh_lm = site.data.i18n[vh_lm_lang].locations | default: vh_lm_en -%}
+<div class="vh-map" aria-hidden="true" data-aos="fade-up">
+  <div class="vh-map-land"></div>
+  {%- for vh_lm_c in site.data.locations.countries -%}
+    {%- assign vh_lm_nk = 'country_' | append: vh_lm_c.key -%}
+    {%- assign vh_lm_x = vh_lm_c.lng | plus: 180 | divided_by: 3.6 | round: 2 -%}
+    {%- assign vh_lm_y = 84 | minus: vh_lm_c.lat | divided_by: 1.4 | round: 2 %}
+  <span class="vh-map-pin vh-map-pin-{{ vh_lm_c.tier }}" style="left:{{ vh_lm_x }}%;top:{{ vh_lm_y }}%">
+    <span class="vh-map-tip"><img src="/assets/images/flags/{{ vh_lm_c.code }}.svg" width="18" height="18" alt="" loading="lazy" />{{ vh_lm[vh_lm_nk] | default: vh_lm_en[vh_lm_nk] }}</span>
+  </span>
+  {%- endfor %}
+</div>
+{%- unless include.pills == false %}
+<div class="linear-slider-wrapper mt-5" data-aos="fade-up" data-aos-delay="100">
+  <div class="linear-slider-items d-flex align-items-center gap-5" role="list">
+    {%- for vh_lm_c in site.data.locations.countries -%}
+      {%- assign vh_lm_nk = 'country_' | append: vh_lm_c.key %}
+    <div class="vh-flag-pill" role="listitem">
+      <img src="/assets/images/flags/{{ vh_lm_c.code }}.svg" width="24" height="24" alt="" />
+      <span>{{ vh_lm[vh_lm_nk] | default: vh_lm_en[vh_lm_nk] }}</span>
+      {%- if vh_lm_c.tier == "free" %}
+      <span class="vh-loc-tier vh-loc-tier-free">{{ vh_lm.tier_free | default: vh_lm_en.tier_free }}</span>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+  </div>
+</div>
+{%- endunless %}

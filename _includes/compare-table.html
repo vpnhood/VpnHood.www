@@ -71,9 +71,12 @@
             <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="yes"></span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="130">
-            <div class="featureColumn col-md-4 col">{{ vh_ct.row_locations | default: vh_ct_en.row_locations }}</div>
-            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-purple-300 fs-5">{{ vh_ct.locations_free | default: vh_ct_en.locations_free }}</span></div>
-            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-green-100 fs-5">{{ vh_ct.locations_premium | default: vh_ct_en.locations_premium }}</span></div>
+            {%- comment -%} Counts come from _data/locations.yml, so they cannot drift from the locations page. {%- endcomment -%}
+            {%- assign vh_loc_free = site.data.locations.countries | where: "tier", "free" | size -%}
+            {%- assign vh_loc_all = site.data.locations.countries | size -%}
+            <div class="featureColumn col-md-4 col"><a class="vh-cmp-link" href="{{ vh_base }}/free-vpn/locations/">{{ vh_ct.row_locations | default: vh_ct_en.row_locations }}</a></div>
+            <div class="freeColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-purple-300 fs-5">{{ vh_loc_free }}</span></div>
+            <div class="premiumColumn col-md-4 col-2 text-center px-md-4 px-2"><span class="vh-txt-green-100 fs-5">{{ vh_loc_all }}</span></div>
         </div>
         <div class="features-row row gx-5" data-aos="fade-left" data-aos-duration="800">
             <div class="featureColumn col-md-4 col">{{ vh_ct.row_ad_free | default: vh_ct_en.row_ad_free }}</div>

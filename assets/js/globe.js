@@ -25,7 +25,7 @@ var props = {
   },
   globeRadius: 200, // Radius of the globe (used for many calculations)
   dotsAmount: 20, // Amount of dots to generate and animate randomly across the lines
-  startingCountry: 'hongkong', // The key of the country to rotate the camera to during the introduction animation (and which country to start the cycle at)
+  startingCountry: 'germany', // The key of the country to rotate the camera to during the introduction animation (and which country to start the cycle at)
   colours: {
     // Filled in by applyThemeColours() before the scene is built — see themeColours.
     globeDots: null, // No need to use the Three constructor as this value is used for the HTML canvas drawing 'fillStyle' property

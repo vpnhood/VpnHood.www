@@ -738,11 +738,291 @@
     color: var(--purple-120);
 }
 
-// "Which default fits you": each title is a condition followed by the answer to it.
-// The condition keeps the quieter heading lavender; the answer steps up to the
-// high-emphasis ink so it can be read on its own while scanning.
-.vh-guide-verdict b{
+// A card title that is a condition followed by its answer ("For speed: the
+// nearest one"): the condition keeps the quieter heading lavender and the answer,
+// wrapped in <b> in the JSON, steps up to the high-emphasis ink so it can be read
+// on its own while scanning. Used by the split-tunneling guide and the
+// locations page; give any new "label: answer" title the same class.
+.vh-verdict b{
     color: var(--vh-text);
+}
+
+// Locations (/free-vpn/locations/ and the map on /free-vpn/) --------------------
+// The stat strip carries the numbers so no translated sentence has to; the counts
+// are Liquid sizes of _data/locations.yml, so they cannot drift from the grid.
+.vh-stat-strip{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 3.5rem;
+    margin-top: 2.25rem;
+}
+
+.vh-stat{
+    text-align: center;
+}
+
+.vh-stat-num{
+    display: block;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.vh-stat-label{
+    display: block;
+    margin-top: .4rem;
+    color: var(--vh-text-muted);
+    font-size: .95rem;
+}
+
+.vh-loc-continent{
+    margin: 2.5rem 0 1rem;
+    color: var(--purple-120);
+}
+
+.vh-loc-card{
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    height: 100%;
+    padding: .85rem 1rem;
+    border-radius: 16px;
+    background-color: var(--vh-surface);
+    border: 1px solid var(--vh-border);
+}
+
+.vh-loc-flag{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.vh-loc-name{
+    flex: 1;
+    min-width: 0;
+    color: var(--vh-text);
+    font-weight: 500;
+    font-size: .95rem;
+    line-height: 1.3;
+}
+
+// The badges list every plan a country comes with. Both inks clear 4.5:1 in both
+// themes; green is the free plan everywhere on the site, the accent is Premium.
+.vh-loc-tiers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: .3rem;
+    flex-shrink: 0;
+}
+
+.vh-loc-tier{
+    padding: .05rem .55rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    font-size: .72rem;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.vh-loc-tier-free{
+    color: var(--vh-green-ink);
+}
+
+.vh-loc-tier-premium{
+    color: var(--vh-accent-ink);
+}
+
+// The computed "6 free · 16 with Premium" line under the /free-vpn/ teaser heading.
+.vh-loc-count{
+    margin-top: 1rem;
+    color: var(--vh-text-muted);
+}
+
+.vh-loc-count b{
+    color: var(--vh-text);
+    font-size: 1.15em;
+}
+
+.vh-loc-count-sep{
+    margin-inline: .5rem;
+    color: var(--vh-text-dim);
+}
+
+.vh-loc-note{
+    max-width: 720px;
+    margin-inline: auto;
+    color: var(--vh-text-dim);
+}
+
+// "A location is a group of servers", under the grid: the grid shows one card per
+// country, so this is where to say a card is a pool and not a single machine.
+.vh-loc-pool{
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+// The /free-vpn/ map (_includes/location-map.html). The land is
+// assets/images/general/world-dots.svg (tools/make-land-dots.py) as a CSS mask,
+// so one file takes --vh-map-dot in both themes and needs no light variant. The
+// mask is sized 100%/100% rather than contain because the box shares the SVG's
+// 360:140 aspect ratio, which is what lets a percentage place a pin.
+.vh-map{
+    position: relative;
+    max-width: 1080px;
+    margin-inline: auto;
+    aspect-ratio: 360 / 140;
+}
+
+.vh-map-land{
+    position: absolute;
+    inset: 0;
+    background-color: var(--vh-map-dot);
+    -webkit-mask: url("/assets/images/general/world-dots.svg") center / 100% 100% no-repeat;
+    mask: url("/assets/images/general/world-dots.svg") center / 100% 100% no-repeat;
+}
+
+// A pin is a 22px hover target with a 10px dot in the middle (::after) and a
+// pulsing halo behind it (::before). left/top come from the include; the negative
+// margin centres the box on that point. Physical left, not inset-inline-start: a
+// map is not mirrored on an RTL page.
+.vh-map-pin{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    margin: -11px 0 0 -11px;
+    color: var(--vh-ok);
+}
+
+.vh-map-pin-premium{
+    color: var(--vh-accent-ink);
+}
+
+.vh-map-pin::before,
+.vh-map-pin::after{
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.vh-map-pin::after{
+    box-shadow: 0 0 0 2px var(--vh-text);
+}
+
+.vh-map-pin::before{
+    animation: vh-pin-pulse 2.6s ease-out infinite;
+}
+
+// Three phases so the network looks alive rather than blinking in unison.
+.vh-map-pin:nth-child(3n)::before{
+    animation-delay: -.9s;
+}
+
+.vh-map-pin:nth-child(3n + 1)::before{
+    animation-delay: -1.8s;
+}
+
+@keyframes vh-pin-pulse{
+    0%{
+        transform: scale(1);
+        opacity: .45;
+    }
+    100%{
+        transform: scale(3.4);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vh-map-pin::before{
+        animation: none;
+        transform: scale(2);
+        opacity: .2;
+    }
+}
+
+.vh-map-pin:hover{
+    z-index: 2;
+}
+
+.vh-map-tip{
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .15rem .6rem .15rem .25rem;
+    border-radius: 999px;
+    background-color: var(--vh-surface-raised);
+    border: 1px solid var(--vh-border);
+    color: var(--vh-text);
+    font-size: .8rem;
+    line-height: 1.5;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .15s;
+    pointer-events: none;
+}
+
+.vh-map-tip img{
+    width: 18px;
+    height: 18px;
+}
+
+.vh-map-pin:hover .vh-map-tip{
+    opacity: 1;
+    visibility: visible;
+}
+
+// The strip under the map names every country; the free ones carry the badge.
+.vh-flag-pill .vh-loc-tier{
+    margin-inline-start: .15rem;
+}
+
+@media (max-width: 575px) {
+    .vh-map-pin{
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0 -8px;
+    }
+    .vh-map-pin::before,
+    .vh-map-pin::after{
+        inset: 4px;
+    }
+    .vh-map-tip{
+        display: none;
+    }
+}
+
+// Two cards per row on a phone leaves ~150px each: flag and name share the first
+// row, the badge drops to its own row under the name, instead of the name
+// wrapping to three lines beside a squeezed badge.
+@media (max-width: 575px) {
+    .vh-loc-card{
+        flex-wrap: wrap;
+        gap: .4rem .6rem;
+        padding: .7rem .8rem;
+    }
+    .vh-loc-flag{
+        width: 30px;
+        height: 30px;
+    }
+    .vh-loc-name{
+        flex-basis: calc(100% - 30px - .6rem);
+        font-size: .9rem;
+    }
+    // Full width for the badge row: indenting it under the name left ~104px, and
+    // "Free" + "Premium" side by side need ~110px.
+    .vh-loc-tiers{
+        flex-basis: 100%;
+        justify-content: flex-start;
+    }
 }
 
 .vh-feature-hero-art img{
