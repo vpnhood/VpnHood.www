@@ -23,7 +23,6 @@
   "nav_github_project": "کد منبع در گیت‌هاب",
   "nav_github_project_sub": "متن‌باز و ممیزی‌شده توسط دو شرکت امنیتی",
   "nav_resources": "منابع",
-  "nav_blog": "وبلاگ",
   "group_support": "پشتیبانی",
   "nav_faq": "سؤالات متداول",
   "nav_github_discussion": "بحث‌های گیت‌هاب",
@@ -71,5 +70,6 @@
   "oc_features": "امکانات",
   "lang_change": "تغییر زبان",
   "theme_switch_to_light": "تغییر به حالت روشن",
-  "theme_switch_to_dark": "تغییر به حالت تاریک"
+  "theme_switch_to_dark": "تغییر به حالت تاریک",
+  "nav_guides": "راهنماها"
 }

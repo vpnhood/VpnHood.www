@@ -12,7 +12,7 @@
     "cta": "Get VpnHood! CONNECT",
     "all_features": "All features",
     "how_title": "How it works",
-    "how_desc": "Not everything benefits from a tunnel. Split tunneling routes chosen traffic outside the VPN, so a banking app keeps working, a local printer stays reachable, and bandwidth is not spent on traffic that never needed protecting.",
+    "how_desc": "Not everything benefits from a tunnel. Split tunneling routes chosen traffic outside the VPN, so a banking app keeps working, a local printer stays reachable, and bandwidth is not spent on traffic that never needed protecting. New to the idea? <a href=\"/guides/what-is-split-tunneling/\">Start with the guide</a>.",
     "when_title": "When to turn it on",
     "when_desc": "Use it when an app refuses to work over a VPN, when you want local devices like a TV or printer reachable, or when only some destinations need to be tunnelled.",
     "cost_title": "What it costs you",

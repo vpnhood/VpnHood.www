@@ -10,7 +10,7 @@
   "cta": "Obtener VpnHood! CONNECT",
   "all_features": "Todas las funciones",
   "how_title": "Cómo funciona",
-  "how_desc": "No todo necesita pasar por el túnel. El túnel dividido dirige el tráfico elegido fuera de la VPN: tu app del banco sigue funcionando, tu impresora local sigue disponible y no gastas ancho de banda en lo que no requiere protección.",
+  "how_desc": "No todo necesita pasar por el túnel. El túnel dividido desvía el tráfico que elijas fuera de la VPN, para que tu app del banco funcione, tu impresora local siga disponible y no gastes datos en tráfico que no requiere protección. ¿No sabes cómo funciona? <a href=\"/guides/what-is-split-tunneling/\">Consulta la guía</a>.",
   "when_title": "Cuándo activarlo",
   "when_desc": "Úsalo si una aplicación no funciona con VPN, si necesitas acceder a dispositivos locales como televisores o impresoras, o si solo quieres proteger ciertos destinos.",
   "cost_title": "Qué debes tener en cuenta",

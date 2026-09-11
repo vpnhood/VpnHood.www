@@ -23,7 +23,6 @@
   "nav_github_project": "التعليمات البرمجية على GitHub",
   "nav_github_project_sub": "مفتوح المصدر، وتم تدقيقه أمنياً من قبل شركتين متخصصتين",
   "nav_resources": "الموارد",
-  "nav_blog": "المدونة",
   "group_support": "الدعم",
   "nav_faq": "الأسئلة الشائعة",
   "nav_github_discussion": "مناقشات GitHub",
@@ -71,5 +70,6 @@
   "oc_features": "الميزات",
   "lang_change": "تغيير اللغة",
   "theme_switch_to_light": "التبديل إلى الوضع الفاتح",
-  "theme_switch_to_dark": "التبديل إلى الوضع الداكن"
+  "theme_switch_to_dark": "التبديل إلى الوضع الداكن",
+  "nav_guides": "الأدلة"
 }

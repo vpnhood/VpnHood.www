@@ -23,7 +23,6 @@
   "nav_github_project": "Código no GitHub",
   "nav_github_project_sub": "Open-source e auditado por duas empresas de segurança",
   "nav_resources": "Recursos",
-  "nav_blog": "Blog",
   "group_support": "Suporte",
   "nav_faq": "FAQ",
   "nav_github_discussion": "Discussão no GitHub",
@@ -71,5 +70,6 @@
   "oc_features": "Recursos",
   "lang_change": "Mudar idioma",
   "theme_switch_to_light": "Mudar para o tema claro",
-  "theme_switch_to_dark": "Mudar para o tema escuro"
+  "theme_switch_to_dark": "Mudar para o tema escuro",
+  "nav_guides": "Guias"
 }

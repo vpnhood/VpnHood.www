@@ -23,7 +23,6 @@
   "nav_github_project": "GitHub'da Açık Kaynak",
   "nav_github_project_sub": "Açık kaynaklı, iki güvenlik firması tarafından denetlendi",
   "nav_resources": "Kaynaklar",
-  "nav_blog": "Blog",
   "group_support": "Destek",
   "nav_faq": "SSS",
   "nav_github_discussion": "GitHub Tartışmaları",
@@ -71,5 +70,6 @@
   "oc_features": "Özellikler",
   "lang_change": "Dil değiştir",
   "theme_switch_to_light": "Açık temaya geç",
-  "theme_switch_to_dark": "Koyu temaya geç"
+  "theme_switch_to_dark": "Koyu temaya geç",
+  "nav_guides": "Rehberler"
 }

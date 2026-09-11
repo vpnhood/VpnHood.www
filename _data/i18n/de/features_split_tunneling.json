@@ -10,7 +10,7 @@
   "cta": "VpnHood! CONNECT holen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",
-  "how_desc": "Nicht jeder Datenverkehr muss durch den Tunnel. Split-Tunneling leitet ausgewählte Daten am VPN vorbei – so funktioniert die Banking-App weiterhin, lokale Drucker bleiben erreichbar und Sie sparen Bandbreite für das Wesentliche.",
+  "how_desc": "Nicht alles braucht einen Tunnel. Split-Tunneling leitet ausgewählten Datenverkehr am VPN vorbei – so funktioniert die Banking-App weiterhin, lokale Drucker bleiben erreichbar und Sie sparen Bandbreite für Daten, die keinen Schutz benötigen. Neu bei diesem Thema? <a href=\"/guides/what-is-split-tunneling/\">Hier geht’s zum Leitfaden</a>.",
   "when_title": "Wann es sich lohnt",
   "when_desc": "Nutzen Sie es, wenn eine App den VPN-Zugriff blockiert, Sie lokale Geräte wie Smart-TVs oder Drucker erreichen möchten oder nur bestimmte Dienste getunnelt werden sollen.",
   "cost_title": "Was es zu beachten gilt",

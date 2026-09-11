@@ -10,7 +10,7 @@
   "cta": "Scarica VpnHood! CONNECT",
   "all_features": "Tutte le funzionalità",
   "how_title": "Come funziona",
-  "how_desc": "Non tutto il traffico ha bisogno della VPN. Lo split tunneling instrada il traffico selezionato all'esterno del tunnel: così le app bancarie continuano a funzionare, la stampante locale resta accessibile e non sprechi banda per il traffico che non richiede protezione.",
+  "how_desc": "Non tutto deve passare dal tunnel. Con lo Split tunneling indirizzi il traffico scelto fuori dalla VPN: così l'app bancaria continua a funzionare, la stampante locale resta raggiungibile e non sprechi banda per ciò che non richiede protezione. Prima volta? <a href=\"/guides/what-is-split-tunneling/\">Inizia dalla guida</a>.",
   "when_title": "Quando attivarlo",
   "when_desc": "Usalo quando un'app non funziona tramite VPN, quando vuoi accedere a dispositivi locali come smart TV o stampanti, o quando solo alcune destinazioni hanno bisogno di essere instradate nel tunnel.",
   "cost_title": "A cosa prestare attenzione",

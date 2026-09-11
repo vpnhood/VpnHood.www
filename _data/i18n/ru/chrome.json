@@ -23,7 +23,6 @@
   "nav_github_project": "Исходный код на GitHub",
   "nav_github_project_sub": "Open source с аудитом от двух ИБ-компаний",
   "nav_resources": "Ресурсы",
-  "nav_blog": "Блог",
   "group_support": "Поддержка",
   "nav_faq": "Частые вопросы",
   "nav_github_discussion": "Обсуждения на GitHub",
@@ -71,5 +70,6 @@
   "oc_features": "Возможности",
   "lang_change": "Сменить язык",
   "theme_switch_to_light": "Включить светлую тему",
-  "theme_switch_to_dark": "Включить темную тему"
+  "theme_switch_to_dark": "Включить темную тему",
+  "nav_guides": "Руководства"
 }

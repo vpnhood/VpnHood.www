@@ -4,9 +4,9 @@
   "desc": "Trova tutte le risposte alle tue domande.",
   "view_all": "Vedi tutte le FAQ",
   "q_why_vpnhood": "Perché scegliere VpnHood?",
-  "a_why_vpnhood": "VpnHood è basato sul motore <b>VpnHood! ENGINE</b>, sviluppato dal team di VpnHood. Combina codice client e server open source, uno Split tunneling flessibile e la modalità Cloak Mode, progettata per far passare il traffico VPN come normale navigazione cifrata. VpnHood! CONNECT offre traffico gratuito e illimitato senza creare un account su Android e Android TV.",
+  "a_why_vpnhood": "VpnHood è basato su <b>VpnHood! ENGINE</b>, sviluppato dal team di VpnHood. Combina codice client e server open source, uno Split tunneling flessibile e la modalità Cloak Mode, pensata per mimetizzare il traffico VPN nella normale navigazione crittografata. VpnHood! CONNECT offre dati illimitati gratuiti senza registrazione dell'account su Android e Android TV.",
   "q_is_vpnhood_free": "VpnHood è una VPN gratuita?",
-  "a_is_vpnhood_free": "Sì, VpnHood offre una VPN gratuita senza limiti di tempo, traffico o larghezza di banda. Puoi sbloccare funzionalità extra passando a un abbonamento Premium: otterrai server in più paesi, velocità più elevate e funzioni avanzate. Per saperne di più, visita la pagina con i <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">dettagli dei piani</a>.",
+  "a_is_vpnhood_free": "Sì, VpnHood offre un servizio VPN gratuito senza limiti di tempo, dati o velocità. Puoi comunque sbloccare funzionalità extra passando a un abbonamento Premium: otterrai server in più paesi, velocità di connessione superiori e funzionalità avanzate nell'app. Per saperne di più, visita la pagina con i <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">dettagli sui piani</a>.",
   "q_connect_vs_client": "VpnHood! CONNECT o VpnHood! CLIENT?",
   "a_connect_vs_client": "VpnHood! CONNECT è una VPN gratuita e senza limiti con server già inclusi. VpnHood! CLIENT è anch'esso gratuito, ma non include server pubblici: si connette a un server VpnHood! gestito da te o da qualcuno di tua fiducia tramite una chiave di accesso.",
   "q_supported_platforms": "Quali piattaforme supporta VpnHood?",
@@ -16,5 +16,11 @@
   "q_is_undetectable": "VpnHood è invisibile ai blocchi?",
   "a_is_undetectable": "La modalità Cloak Mode di VpnHood maschera il traffico VPN facendolo apparire come normale traffico HTTPS, aiutando a eludere molti sistemi di rilevamento VPN. L'efficacia può variare in base alle tecniche di filtraggio della rete utilizzata.",
   "q_stay_free_forever": "Posso usare il piano Gratis per sempre?",
-  "a_stay_free_forever": "Sì. Il piano Gratis non ha limiti di tempo, non richiede la creazione di un account né obbliga a passare a un piano superiore. È sostenuto dalla pubblicità, quindi non è disponibile in Cina o nei paesi in cui non vengono mostrati annunci. Il piano Premium elimina ogni limite e offre più posizioni, server più veloci, nessuna pubblicità e supporto 24/7."
+  "a_stay_free_forever": "Sì. Il piano Gratis non ha limiti di tempo, non richiede la creazione di un account né obbliga a passare a un piano superiore. È sostenuto dalla pubblicità, quindi non è disponibile in Cina o nei paesi in cui non vengono mostrati annunci. Il piano Premium elimina ogni limite e offre più posizioni, server più veloci, nessuna pubblicità e supporto 24/7.",
+  "q_free_data_cap": "C'è un limite di dati con il piano Gratis?",
+  "a_free_data_cap": "No. Il piano Gratis non ha limiti di dati né di tempo. Il server VpnHood! può impostare una soglia mensile per utente, ma sui server gratuiti non è previsto alcun limite: navighi senza pensieri. La maggior parte delle VPN gratuite impone un limite di pochi gigabyte proprio per spingerti ad acquistare la versione a pagamento.",
+  "q_free_speed": "La velocità viene ridotta per gli utenti gratuiti?",
+  "a_free_speed": "No. Il server VpnHood! ha la capacità tecnica di limitare la velocità per utente, ma non lo fa sui server gratuiti. La vera differenza tra i piani sta nella capacità: i server gratuiti ospitano molti più utenti, quindi le prestazioni variano in base al traffico del momento. I server Premium sono più potenti e riservati esclusivamente agli abbonati Premium, garantendo così velocità elevate e costanti.",
+  "q_why_slower": "Perché VpnHood! è più lento rispetto alla mia solita connessione?",
+  "a_why_slower": "Qualsiasi VPN comporta una minima riduzione di velocità: i dati vengono crittografati e passano attraverso un server intermedio prima di raggiungere il sito richiesto. La distanza è spesso il fattore principale, quindi scegliere un server più vicino garantisce prestazioni migliori. Cloak Mode e Smart Proxy aggiungono un carico ulteriore e possono essere disattivati se non ci sono blocchi o censure. Consulta la <a href=\"/guides/vpn-speed/\">guida ai test di velocità</a> per misurarla correttamente."
 }

@@ -10,7 +10,7 @@
   "cta": "VpnHood! CONNECT'i Edinin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",
-  "how_desc": "Her trafiğin tünelden geçmesi gerekmez. Tünelleme, seçtiğiniz trafiği VPN dışına yönlendirir; böylece bankacılık uygulamanız sorunsuz çalışır, yerel yazıcınıza erişim devam eder ve koruma gerektirmeyen trafik için bant genişliği harcanmaz.",
+  "how_desc": "Her trafiğin tünelden geçmesi gerekmez. Tünelleme özelliği, seçtiğiniz trafiği VPN dışına yönlendirir; böylece bankacılık uygulamalarınız sorunsuz çalışır, yerel yazıcınıza erişiminiz kesilmez ve gereksiz trafik için bant genişliği harcamazsınız. Konu hakkında bilginiz yok mu? <a href=\"/guides/what-is-split-tunneling/\">Rehberimize göz atın</a>.",
   "when_title": "Ne zaman etkinleştirilmeli?",
   "when_desc": "Bir uygulama VPN üzerinden çalışmadığında, TV veya yazıcı gibi yerel cihazlara erişmek istediğinizde ya da yalnızca belirli hedefleri tünellemek istediğinizde kullanın.",
   "cost_title": "Neyi feda edersiniz?",

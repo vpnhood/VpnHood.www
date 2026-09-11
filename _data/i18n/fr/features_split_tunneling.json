@@ -10,7 +10,7 @@
   "cta": "Obtenir VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "how_title": "Comment ça marche",
-  "how_desc": "Tout le trafic n'a pas besoin d'être chiffré. Le Split tunneling achemine le trafic sélectionné hors du VPN : votre appli bancaire continue de fonctionner, vos imprimantes locales restent accessibles et vous économisez votre bande passante.",
+  "how_desc": "Tous vos flux n'ont pas besoin d'un tunnel. Le Split tunneling achemine le trafic choisi hors du VPN : votre application bancaire continue de fonctionner, votre imprimante locale reste accessible et vous économisez votre bande passante. Vous découvrez cette fonctionnalité ? <a href=\"/guides/what-is-split-tunneling/\">Consultez notre guide</a>.",
   "when_title": "Quand l'activer",
   "when_desc": "Activez-le lorsqu'une application bloque les VPN, pour accéder à vos appareils locaux (TV, imprimante) ou si seules certaines destinations nécessitent d'être sécurisées.",
   "cost_title": "Ce qu'il faut garder en tête",

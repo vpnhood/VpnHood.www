@@ -23,7 +23,6 @@
   "nav_github_project": "GitHub 源码",
   "nav_github_project_sub": "完全开源，并已通过两家安全公司的审计",
   "nav_resources": "资源",
-  "nav_blog": "博客",
   "group_support": "支持",
   "nav_faq": "常见问题",
   "nav_github_discussion": "GitHub 讨论",
@@ -71,5 +70,6 @@
   "oc_features": "功能",
   "lang_change": "切换语言",
   "theme_switch_to_light": "切换至浅色主题",
-  "theme_switch_to_dark": "切换至深色主题"
+  "theme_switch_to_dark": "切换至深色主题",
+  "nav_guides": "使用指南"
 }

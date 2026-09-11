@@ -4,9 +4,9 @@
   "desc": "在这里找到您想了解的答案。",
   "view_all": "查看所有常见问题",
   "q_why_vpnhood": "为什么选择 VpnHood？",
-  "a_why_vpnhood": "VpnHood 由 VpnHood 团队自主研发的 <b>VpnHood! ENGINE</b> 强力驱动。它融合了开源的客户端与服务端代码、灵活的分流功能，以及可将 VPN 流量完美伪装成普通加密网络浏览的 Cloak 模式。在 Android 和 Android TV 上，VpnHood! CONNECT 更提供无需注册即可畅享的无限免费流量。",
+  "a_why_vpnhood": "VpnHood 由 VpnHood 团队自主研发的 <b>VpnHood! ENGINE</b> 强力驱动。它融合了开源客户端与服务端代码、灵活的分流功能以及专属的伪装模式（Cloak Mode），可使 VPN 流量完美伪装为常规的加密网页浏览。此外，VpnHood! CONNECT 在 Android 和 Android TV 上提供完全免费、免注册且无限量的流量。",
   "q_is_vpnhood_free": "VpnHood 是一款免费 VPN 吗？",
-  "a_is_vpnhood_free": "是的，VpnHood 提供完全没有时间、流量或带宽限制的免费 VPN 服务。您也可以升级至高级版以解锁更多专属权益。升级高级版套餐后，您将享有更多国家与地区的服务器节点、更飞速的连接以及更强大的应用功能。欢迎访问<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">套餐详情</a>页面了解更多信息。",
+  "a_is_vpnhood_free": "是的，VpnHood 提供完全免费的 VPN 服务，无任何时长、流量或速度限制。当然，您也可以升级高级版解锁更多功能。高级版套餐支持更多国家的服务器节点、更快的连接速度以及更多专属高级功能。如需了解详情，请访问<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">套餐详情</a>页面。",
   "q_connect_vs_client": "VpnHood! CONNECT 与 VpnHood! CLIENT 有何区别？",
   "a_connect_vs_client": "VpnHood! CONNECT 是一款开箱即用、无任何限制的免费 VPN。而 VpnHood! CLIENT 虽然同样免费，但本身不附带直连服务器；它需要配合您自己或受信任者搭建的 VpnHood! 服务器，并通过其提供的访问密钥（Access Key）连接使用。",
   "q_supported_platforms": "VpnHood 支持哪些平台？",
@@ -16,5 +16,11 @@
   "q_is_undetectable": "VpnHood 能够防止被检测识别吗？",
   "a_is_undetectable": "VpnHood 的 Cloak 模式专门用于将 VPN 流量伪装成常规的 HTTPS 流量，有效绕过常见的 VPN 识别与屏蔽手段。不过，实际效果仍取决于具体的网络过滤机制，因此无法保证在所有网络环境下均不受限制。",
   "q_stay_free_forever": "我可以一直使用免费版吗？",
-  "a_stay_free_forever": "当然可以。免费版没有使用时长限制，无需注册账号，更不会强制要求升级。免费版由广告赞助支持，因此无法在无法投放广告的地区使用。如果您需要更多节点选择、更高连接速度、纯净无广告体验以及 24/7 全天候支持，随时可以升级高级版，畅享毫无限制的网络连接。"
+  "a_stay_free_forever": "当然可以。免费版没有使用时长限制，无需注册账号，更不会强制要求升级。免费版由广告赞助支持，因此无法在无法投放广告的地区使用。如果您需要更多节点选择、更高连接速度、纯净无广告体验以及 24/7 全天候支持，随时可以升级高级版，畅享毫无限制的网络连接。",
+  "q_free_data_cap": "免费版有流量上限吗？",
+  "a_free_data_cap": "没有。免费版既无流量上限，也无时间限制。虽然 VpnHood! SERVER 支持对每位用户设置月度流量限额，但免费服务器完全没有设置任何限制，您可以尽情浏览，毫无额度顾虑。大多数免费 VPN 限制几 GB 流量只是为了促使您付费升级。",
+  "q_free_speed": "会对免费用户限速吗？",
+  "a_free_speed": "不会。VpnHood! SERVER 支持对单个用户限速，但我们在免费服务器上并未开启该限制。不同套餐之间的实际区别在于承载容量：免费服务器的用户较多，因此可用带宽会随高峰期拥挤程度而变化；而高级版服务器性能更强，仅限高级版用户专享，因此连接速度更加稳定持久。",
+  "q_why_slower": "为什么使用 VpnHood! 会比正常网络慢一些？",
+  "a_why_slower": "任何 VPN 都会对网速产生一定影响：数据在到达目标网站前需要经过加密并由中转服务器转发。通常物理距离是影响速度的关键因素，因此选择距离更近的服务器效果最好。此外，伪装模式（Cloak Mode）与智能代理（Smart Proxies）也会产生额外开销，在没有网络阻断时可以将其关闭。请参阅<a href=\"/guides/vpn-speed/\">测速指南</a>了解正确的测试方法。"
 }

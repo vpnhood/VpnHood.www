@@ -4,9 +4,9 @@
   "desc": "Sorularınızın yanıtlarını hemen bulun.",
   "view_all": "Tüm Soruları Gör",
   "q_why_vpnhood": "Neden VpnHood?",
-  "a_why_vpnhood": "VpnHood, VpnHood ekibi tarafından geliştirilen <b>VpnHood! ENGINE</b> altyapısıyla çalışır. Açık kaynaklı istemci ve sunucu kodlarını, esnek tünellemeyi ve VPN trafiğini sıradan şifreli internet trafiği gibi gösteren Cloak Mode özelliğini bir araya getirir. VpnHood! CONNECT; Android ve Android TV'de hesap açmaya gerek kalmadan sınırsız, ücretsiz trafik sunar.",
+  "a_why_vpnhood": "VpnHood, ekibimiz tarafından geliştirilen <b>VpnHood! ENGINE</b> altyapısıyla çalışır. Açık kaynaklı istemci ve sunucu kodunu, esnek tünelleme özelliklerini ve VPN trafiğini sıradan şifreli web trafiği gibi gösteren Cloak Mode teknolojisini bir araya getirir. VpnHood! CONNECT, Android ve Android TV'de hesap açma zorunluluğu olmadan sınırsız ve ücretsiz veri sunar.",
   "q_is_vpnhood_free": "VpnHood ücretsiz bir VPN mi?",
-  "a_is_vpnhood_free": "Evet, VpnHood süre, trafik veya bant genişliği sınırı olmadan ücretsiz VPN hizmeti sunar. Dilerseniz Premium üyeliğe geçerek ek özelliklerin kilidini açabilirsiniz. Premium plan ile daha fazla ülkede sunucuya, daha yüksek bağlantı hızlarına ve gelişmiş uygulama özelliklerine erişirsiniz. Ayrıntılı bilgi için <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">plan ayrıntıları</a> sayfasını ziyaret edin.",
+  "a_is_vpnhood_free": "Evet, VpnHood süre, veri veya hız sınırı olmaksızın ücretsiz bir VPN hizmeti sunar. Premium aboneliğe geçerek daha fazla özelliğin kilidini açabilirsiniz. Premium planla daha fazla ülkede sunucu erişimi, daha yüksek bağlantı hızları ve gelişmiş uygulama özellikleri elde edersiniz. Ayrıntılar için <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">plan detayları</a> sayfasını ziyaret edin.",
   "q_connect_vs_client": "VpnHood! CONNECT ile VpnHood! CLIENT arasındaki fark nedir?",
   "a_connect_vs_client": "VpnHood! CONNECT, hiçbir sınırlama olmadan kullanabileceğiniz ücretsiz bir VPN'dir. VpnHood! CLIENT da ücretsizdir ancak doğrudan bağlanabileceğiniz hazır sunucular içermez. Sizin veya güvendiğiniz birinin kurduğu VpnHood! sunucusuna, size iletilen erişim anahtarıyla bağlanır.",
   "q_supported_platforms": "VpnHood hangi platformları destekliyor?",
@@ -16,5 +16,11 @@
   "q_is_undetectable": "VpnHood fark edilemez mi?",
   "a_is_undetectable": "VpnHood'un Cloak Mode özelliği, VPN trafiğini sıradan HTTPS trafiği gibi göstererek VPN engelleme yöntemlerini aşmaya yardımcı olur. Yine de her ağda bağlantı garantisi verilemez; performans kullanılan filtreleme yöntemlerine göre değişir.",
   "q_stay_free_forever": "Ücretsiz planda dilediğim kadar kalabilir miyim?",
-  "a_stay_free_forever": "Evet. Ücretsiz planda süre sınırı veya zorunlu yükseltme yoktur, hesap oluşturmanız da gerekmez. Reklamlarla desteklendiğinden Çin'de veya reklamların sunulmadığı ülkelerde kullanılamaz. Daha fazla konum, daha hızlı sunucular, reklamsız bir uygulama ve 7/24 destek istediğinizde hiçbir sınır olmadan Premium'a geçebilirsiniz."
+  "a_stay_free_forever": "Evet. Ücretsiz planda süre sınırı veya zorunlu yükseltme yoktur, hesap oluşturmanız da gerekmez. Reklamlarla desteklendiğinden Çin'de veya reklamların sunulmadığı ülkelerde kullanılamaz. Daha fazla konum, daha hızlı sunucular, reklamsız bir uygulama ve 7/24 destek istediğinizde hiçbir sınır olmadan Premium'a geçebilirsiniz.",
+  "q_free_data_cap": "Ücretsiz planda veri sınırı var mı?",
+  "a_free_data_cap": "Hayır. Ücretsiz planda veri veya süre sınırı yoktur. VpnHood! SERVER kullanıcı başına aylık kota uygulayabilir; ancak ücretsiz sunucularımızda hiçbir kota tanımlı değildir, yani internette gezinirken azalan bir limitiniz olmaz. Çoğu ücretsiz VPN, sizi ücretli sürüme yönlendirmek için birkaç gigabaytlık kota koyar.",
+  "q_free_speed": "Ücretsiz kullanıcıların hızını düşürüyor musunuz?",
+  "a_free_speed": "Hayır. VpnHood! SERVER kullanıcı başına hız sınırı koyabilir, ancak ücretsiz sunucularda bu yapılmaz. Planlar arasındaki tek fark kapasitedir: Ücretsiz sunuculardan çok daha fazla kişi yararlandığı için hızınız yoğunluğa bağlı olarak değişebilir. Premium sunucular ise daha güçlüdür ve yalnızca Premium kullanıcılara ayrılmıştır; bu sayede her zaman daha hızlıdır.",
+  "q_why_slower": "VpnHood! neden normal bağlantımdan daha yavaş?",
+  "a_why_slower": "Her VPN bağlantı hızını bir miktar etkiler: Verileriniz şifrelenir ve hedefe ulaşmadan önce aracı bir sunucudan geçer. Genellikle en belirleyici etken mesafedir, bu yüzden size en yakın sunucuya bağlanmak en iyi sonucu verir. Cloak Mode ve Akıllı Vekil Sunucular da ek bir yük getirebilir; herhangi bir engelle karşılaşmıyorsanız bunları kapatabilirsiniz. Doğru hız ölçümü için <a href=\"/guides/vpn-speed/\">hız testi kılavuzumuza</a> göz atın."
 }
