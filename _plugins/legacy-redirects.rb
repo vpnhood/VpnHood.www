@@ -21,8 +21,17 @@ module VhLegacyRedirects
     # also renders. Search Console (Jun-Sep 2026) showed it ranking for brand terms at
     # 0.7% CTR and for no "free vs premium" query at all, so the duplicate went. The
     # "Free vs Premium" menu entry survives, pointing at /free-vpn/go-premium/#compareTable.
-    "/free-vpn/free-vs-premium/" => "/free-vpn/go-premium/"
+    "/free-vpn/free-vs-premium/" => "/free-vpn/go-premium/",
+    # The blog was retired after two posts; the one worth keeping became a guide.
+    "/blog/" => "/guides/",
+    "/blog/welcome-to-the-vpnhood-blog/" => "/guides/",
+    "/blog/what-is-split-tunneling/" => "/guides/what-is-split-tunneling/"
   }.freeze
+
+  # Paths that only ever existed in English. Posts were never translated, so a
+  # /<lang>/blog/ URL never existed and a stub there would be pure noise.
+  ENGLISH_ONLY = ["/blog/", "/blog/welcome-to-the-vpnhood-blog/",
+                  "/blog/what-is-split-tunneling/"].freeze
 
   class Generator < Jekyll::Generator
     safe false
@@ -34,6 +43,8 @@ module VhLegacyRedirects
 
       REDIRECTS.each do |from, to|
         emit(site, taken, from, to, "en")
+        next if ENGLISH_ONLY.include?(from)
+
         languages.each { |lang| emit(site, taken, "/#{lang}#{from}", "/#{lang}#{to}", lang) }
       end
     end
@@ -46,8 +57,40 @@ module VhLegacyRedirects
         return
       end
 
-      site.pages << VhBlogRedirects::RedirectPage.new(site, from, to, lang)
+      site.pages << RedirectPage.new(site, from, to, lang)
       taken << from
+    end
+  end
+
+  class RedirectPage < Jekyll::PageWithoutAFile
+    def initialize(site, url, target, lang = "en")
+      super(site, site.source, "", "index.html")
+      data["permalink"] = url
+      data["sitemap"] = false # jekyll-sitemap must not advertise a redirect stub
+      data["layout"] = nil
+      self.content = <<~HTML
+        <!doctype html>
+        <html lang="#{lang}">
+          <head>
+            <meta charset="utf-8" />
+            <title>Redirecting&hellip;</title>
+            <link rel="canonical" href="#{absolute(site, target)}" />
+            <meta name="robots" content="noindex" />
+            <meta http-equiv="refresh" content="0; url=#{target}" />
+          </head>
+          <body>
+            <h1>Redirecting&hellip;</h1>
+            <p><a href="#{target}">Continue to the new location</a></p>
+          </body>
+        </html>
+      HTML
+    end
+
+    private
+
+    def absolute(site, target)
+      return target if target.start_with?("http://", "https://")
+      "#{site.config["url"]}#{target}"
     end
   end
 end

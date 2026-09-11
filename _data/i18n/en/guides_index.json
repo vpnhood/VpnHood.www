@@ -7,6 +7,6 @@
   "speed_title": "How to test your VPN speed properly",
   "speed_desc": "Take a baseline, pick the server deliberately, and read the difference honestly.",
   "read_more": "Read the guide",
-  "more_title": "More on the way",
-  "more_desc": "We are moving our how-to articles here from the GitHub wiki, a few at a time."
+  "split_title": "What is split tunneling, and when should you use it?",
+  "split_desc": "What it does, when it helps, what it costs, and which default fits your reason for using a VPN."
 }

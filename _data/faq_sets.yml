@@ -75,3 +75,8 @@ sets:
     - why_slower
     - free_speed
     - free_data_cap
+
+  split_tunneling:
+    - is_vpnhood_free
+    - supported_platforms
+    - is_open_source

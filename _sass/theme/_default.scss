@@ -537,7 +537,12 @@ iconify-icon {
     padding-top: 200px;
     padding-bottom: 200px;
 }
-.section-space + .section-space{
+// Consecutive sections share one 200px gap instead of stacking two. The FAQ
+// module's wrapper is .section-space-top, and download tables end in
+// .section-space-bottom, so both need the same collapse.
+.section-space + .section-space,
+.section-space + .section-space-top,
+.section-space-bottom + .section-space-top{
     padding-top: 0;
 }
 .section-space .section-space{

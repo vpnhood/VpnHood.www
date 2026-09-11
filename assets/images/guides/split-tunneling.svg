@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhSplitArtTitle">
+<title id="vhSplitArtTitle">Traffic leaving one device and dividing into two paths: one through a protected tunnel, one going directly</title>
+<defs>
+  <linearGradient id="tTunnel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5" stop-opacity=".15"/>
+    <stop offset=".45" stop-color="#8257f5" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".45"/></linearGradient>
+  <linearGradient id="tDirect" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c0a4ff" stop-opacity=".1"/>
+    <stop offset=".5" stop-color="#c0a4ff" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#c0a4ff" stop-opacity=".16"/></linearGradient>
+  <linearGradient id="tDevice" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset="1" stop-color="#2b1470"/></linearGradient>
+  <radialGradient id="tAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="tSplitGlow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".9"/>
+    <stop offset=".5" stop-color="#3ce8c8" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="tSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="tSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="46"/></filter>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="380" fill="url(#tAmbient)"/>
+
+<!-- the device everything starts from -->
+<g>
+  <rect x="88" y="392" width="150" height="216" rx="26" fill="url(#tDevice)" stroke="#c0a4ff" stroke-opacity=".35" stroke-width="3"/>
+  <rect x="112" y="424" width="102" height="140" rx="10" fill="#150a3a" fill-opacity=".75"/>
+  <g fill="#c0a4ff" opacity=".65">
+    <rect x="128" y="448" width="74" height="10" rx="5"/>
+    <rect x="128" y="472" width="56" height="10" rx="5"/>
+    <rect x="128" y="496" width="66" height="10" rx="5"/>
+  </g>
+  <rect x="140" y="584" width="46" height="7" rx="3.5" fill="#c0a4ff" opacity=".45"/>
+</g>
+
+<!-- the split point -->
+<circle cx="330" cy="500" r="66" fill="url(#tSplitGlow)" filter="url(#tSoft)"/>
+<path d="M238 500 H330" stroke="#c0a4ff" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+<path d="M330 500 C 392 500 392 320 454 320" stroke="#c0a4ff" stroke-width="12" stroke-linecap="round" fill="none" opacity=".8"/>
+<path d="M330 500 C 392 500 392 690 454 690" stroke="#c0a4ff" stroke-width="12" stroke-linecap="round" fill="none" opacity=".55"/>
+<circle cx="330" cy="500" r="20" fill="#8ef7e2"/>
+
+<!-- upper path: through the tunnel, protected -->
+<g>
+  <rect x="446" y="262" width="404" height="116" rx="58" fill="#150a3a" fill-opacity=".9" stroke="#8257f5" stroke-opacity=".55" stroke-width="3"/>
+  <rect x="446" y="262" width="404" height="116" rx="58" fill="url(#tTunnel)"/>
+  <g opacity=".55">
+    <path d="M506 262 v116" stroke="#8257f5" stroke-width="2"/>
+    <path d="M578 262 v116" stroke="#8257f5" stroke-width="2"/>
+    <path d="M650 262 v116" stroke="#8257f5" stroke-width="2"/>
+    <path d="M722 262 v116" stroke="#8257f5" stroke-width="2"/>
+    <path d="M794 262 v116" stroke="#8257f5" stroke-width="2"/>
+  </g>
+  <g fill="#8ef7e2">
+    <rect x="536" y="310" width="86" height="20" rx="10" opacity=".8"/>
+    <rect x="654" y="310" width="118" height="20" rx="10"/>
+  </g>
+  <rect x="654" y="310" width="118" height="20" rx="10" fill="#3ce8c8" filter="url(#tSoft)" opacity=".6"/>
+  <!-- padlock, protected -->
+  <g transform="translate(462 296)">
+    <rect x="0" y="20" width="44" height="34" rx="9" fill="#8ef7e2"/>
+    <path d="M10 20 v-8 a12 12 0 0 1 24 0 v8" fill="none" stroke="#8ef7e2" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="22" cy="36" r="5" fill="#150a3a"/>
+  </g>
+</g>
+
+<!-- lower path: straight out, unprotected -->
+<g>
+  <rect x="446" y="632" width="404" height="116" rx="58" fill="#150a3a" fill-opacity=".55" stroke="#c0a4ff" stroke-opacity=".3" stroke-width="3" stroke-dasharray="14 12"/>
+  <rect x="446" y="632" width="404" height="116" rx="58" fill="url(#tDirect)"/>
+  <g fill="#c0a4ff">
+    <rect x="536" y="680" width="86" height="20" rx="10" opacity=".5"/>
+    <rect x="654" y="680" width="118" height="20" rx="10" opacity=".62"/>
+  </g>
+  <!-- open padlock, exposed -->
+  <g transform="translate(462 666)">
+    <rect x="0" y="20" width="44" height="34" rx="9" fill="#c0a4ff" fill-opacity=".65"/>
+    <path d="M10 20 v-8 a12 12 0 0 1 24 0" fill="none" stroke="#c0a4ff" stroke-opacity=".65" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="22" cy="36" r="5" fill="#150a3a"/>
+  </g>
+</g>
+
+<ellipse cx="640" cy="320" rx="250" ry="90" fill="url(#tAmbient)" opacity=".5" filter="url(#tSofter)"/>
+</svg>

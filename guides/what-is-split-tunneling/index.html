@@ -1,0 +1,181 @@
+---
+layout: none
+i18n: guides_split_tunneling
+extra_css:
+  - /assets/css/custom.css
+nav_active: resources
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <p class="pt-4 mb-0">
+                  <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/guides/">{{ t.all_guides }}</a>
+                </p>
+
+                <div class="row align-items-center gap-lg-0 gap-5 pt-lg-4 pb-5">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                    <p class="section-desc">{{ t.lead }}</p>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-relay">
+                      <img src="/assets/images/guides/split-tunneling.svg" alt="{{ t.hero_alt }}" width="468" height="468" loading="eager" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.how_title }}</h2>
+                    <p class="section-desc">{{ t.how_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-by-app.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.how1_title }}</h3>
+                        <p class="mb-0">{{ t.how1_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-by-domain.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.how2_title }}</h3>
+                        <p class="mb-0">{{ t.how2_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-by-country.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.how3_title }}</h3>
+                        <p class="mb-0">{{ t.how3_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.helps_title }}</h2>
+                    <p class="section-desc">{{ t.helps_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-local-network.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.helps1_title }}</h3>
+                        <p class="mb-0">{{ t.helps1_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/shield-check.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.helps2_title }}</h3>
+                        <p class="mb-0">{{ t.helps2_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.helps3_title }}</h3>
+                        <p class="mb-0">{{ t.helps3_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-by-country.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.helps4_title }}</h3>
+                        <p class="mb-0">{{ t.helps4_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
+                    <p class="section-desc">{{ t.cost_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/eye-off.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.cost1_title }}</h3>
+                        <p class="mb-0">{{ t.cost1_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/spread.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.cost2_title }}</h3>
+                        <p class="mb-0">{{ t.cost2_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/alert.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.cost3_title }}</h3>
+                        <p class="mb-0">{{ t.cost3_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.default_title }}</h2>
+                    <p class="section-desc">{{ t.default_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/lock.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.default1_title }}</h3>
+                        <p class="mb-0">{{ t.default1_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/toggle.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.default2_title }}</h3>
+                        <p class="mb-0">{{ t.default2_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <p class="mt-4 mb-0" data-aos="fade-up">{{ t.default_note }}</p>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-4" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.vh_title }}</h2>
+                    <p class="section-desc">{{ t.vh_desc }}</p>
+                  </div>
+                  <div class="text-center" data-aos="fade-up">
+                    <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/features/split-tunneling/">{{ t.vh_cta }}</a>
+                    <a class="vh-btn vh-btn-secondary ms-lg-3 mt-3 mt-lg-0" href="{{ vh_base }}/free-vpn/download/">{{ t.vh_cta2 }}</a>
+                  </div>
+                </div>
+
+{% include faq.html set="split_tunneling" schema=false wrapper_class="section-space-top" %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}
