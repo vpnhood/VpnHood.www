@@ -109,8 +109,10 @@ Any element with `data-vh-track="<id>"` pushes one event to `dataLayer` when cli
 `{ event: "vh_cta_click", vh_cta: "<id>", vh_href: "<href>" }`; nothing in our code talks
 to Google directly, and the click is never delayed. Tagged today: the header's
 `header-download`, `header-go-premium`, `header-log-in` and the mobile menu's
-`menu-download`, `menu-go-premium`, `menu-log-in`. Keep ids kebab-case and
-`<place>-<action>`, so the same action in two places stays comparable.
+`menu-download`, `menu-go-premium`, `menu-log-in`, and the pricing table's
+`pricing-download`, `pricing-buy-1-month`, `pricing-buy-6-months`,
+`pricing-buy-12-months`. Keep ids kebab-case and `<place>-<action>`, so the same action
+in two places stays comparable.
 
 Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it. One-time setup:
 
@@ -124,6 +126,24 @@ Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it. One-time s
 
 Then Reports → Engagement → Events → `cta_click`, broken down by `cta_id`, answers
 "what does the header slot earn" with real clicks instead of reasoning.
+
+## Pricing — `_data/pricing.yml` + `_data/i18n/en/free_vpn_go_premium.json`
+
+Every number on `/free-vpn/go-premium/` comes from `_data/pricing.yml`: the free price,
+the undiscounted `base_price`, and one entry per plan (`billing_cycle`, `price`,
+`save_percent`, plus `months`, `total_was`, `total_now` and `save_amount` on a
+multi-month plan). Each cart URL is built from `cart_url`, `product_id` and that plan's
+`billing_cycle`, so a button cannot point at another plan's cycle. Plans are looked up by
+`key`, never by position.
+
+It is a structure file for one reason: **vhtranslator only walks `_data/i18n/en`, so a
+price here can never be rewritten by a translation pass.** The prices used to live in the
+copy file, where twelve translated copies of `$7.9` sat one bad pass away from
+disagreeing with the checkout. The sentences around the numbers stay translatable, as
+templates the page fills in: `save_percent` (`[percent]`), `save_amount` (`[amount]`) and
+`billed_multi` (`[was]`, `[now]`, `[months]`). **Placeholders use square brackets, never
+braces** — Liquid's tokenizer cannot parse a `}` inside a quoted string in a `{{ }}` tag,
+so `replace: '{p}', x` is a syntax error, not a bad substitution.
 
 ## Locations
 
