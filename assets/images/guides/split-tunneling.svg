@@ -69,7 +69,7 @@
 
 <!-- lower path: straight out, unprotected -->
 <g>
-  <rect x="446" y="632" width="404" height="116" rx="58" fill="#150a3a" fill-opacity=".55" stroke="#c0a4ff" stroke-opacity=".3" stroke-width="3" stroke-dasharray="14 12"/>
+  <rect x="446" y="632" width="404" height="116" rx="58" fill="none" stroke="#c0a4ff" stroke-opacity=".55" stroke-width="3" stroke-dasharray="14 12"/>
   <rect x="446" y="632" width="404" height="116" rx="58" fill="url(#tDirect)"/>
   <g fill="#c0a4ff">
     <rect x="536" y="680" width="86" height="20" rx="10" opacity=".5"/>

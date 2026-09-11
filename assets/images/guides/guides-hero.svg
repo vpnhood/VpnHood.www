@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhGuidesArtTitle">
+<title id="vhGuidesArtTitle">Three step cards rising along a route towards a finished marker</title>
+<defs>
+  <linearGradient id="gCard" x1=".1" y1="0" x2=".9" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="gRoute" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5" stop-opacity=".35"/>
+    <stop offset=".55" stop-color="#c0a4ff" stop-opacity=".8"/>
+    <stop offset="1" stop-color="#8ef7e2" stop-opacity=".95"/></linearGradient>
+  <radialGradient id="gAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gTip" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".95"/>
+    <stop offset=".45" stop-color="#3ce8c8" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="gSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="gSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="50"/></filter>
+</defs>
+
+<ellipse cx="500" cy="540" rx="450" ry="420" fill="url(#gAmbient)"/>
+
+<!-- the route the three steps sit on -->
+<path d="M60 900 C 300 900 260 700 480 620 C 700 540 660 320 900 214"
+      fill="none" stroke="url(#gRoute)" stroke-width="14" stroke-linecap="round" stroke-dasharray="4 34"/>
+<path d="M60 900 C 300 900 260 700 480 620 C 700 540 660 320 900 214"
+      fill="none" stroke="url(#gRoute)" stroke-width="30" stroke-linecap="round"
+      stroke-dasharray="4 34" filter="url(#gSoft)" opacity=".45"/>
+
+<!-- step one -->
+<g>
+  <rect x="70" y="650" width="250" height="165" rx="26" fill="url(#gCard)" stroke="#8257f5" stroke-opacity=".5" stroke-width="3"/>
+  <rect x="100" y="688" width="120" height="15" rx="7.5" fill="#c0a4ff" opacity=".9"/>
+  <g fill="#c0a4ff" opacity=".45">
+    <rect x="100" y="724" width="176" height="11" rx="5.5"/>
+    <rect x="100" y="750" width="138" height="11" rx="5.5"/>
+    <rect x="100" y="776" width="158" height="11" rx="5.5"/>
+  </g>
+</g>
+<circle cx="352" cy="686" r="11" fill="#c0a4ff"/>
+
+<!-- step two -->
+<g>
+  <rect x="375" y="470" width="250" height="165" rx="26" fill="url(#gCard)" stroke="#8257f5" stroke-opacity=".55" stroke-width="3"/>
+  <rect x="405" y="508" width="140" height="15" rx="7.5" fill="#c0a4ff"/>
+  <g fill="#c0a4ff" opacity=".5">
+    <rect x="405" y="544" width="176" height="11" rx="5.5"/>
+    <rect x="405" y="570" width="150" height="11" rx="5.5"/>
+    <rect x="405" y="596" width="120" height="11" rx="5.5"/>
+  </g>
+</g>
+<circle cx="658" cy="498" r="11" fill="#8ef7e2" opacity=".8"/>
+
+<!-- step three, the one that lands -->
+<g>
+  <rect x="680" y="290" width="250" height="165" rx="26" fill="url(#gCard)" stroke="#3ce8c8" stroke-opacity=".5" stroke-width="3"/>
+  <rect x="710" y="328" width="132" height="15" rx="7.5" fill="#8ef7e2"/>
+  <g fill="#8ef7e2" opacity=".45">
+    <rect x="710" y="364" width="176" height="11" rx="5.5"/>
+    <rect x="710" y="390" width="144" height="11" rx="5.5"/>
+    <rect x="710" y="416" width="164" height="11" rx="5.5"/>
+  </g>
+</g>
+
+<!-- arrival -->
+<circle cx="900" cy="214" r="78" fill="url(#gTip)" filter="url(#gSoft)"/>
+<circle cx="900" cy="214" r="46" fill="#150a3a" stroke="#8ef7e2" stroke-width="5"/>
+<path d="M877 214 L894 231 L925 198" fill="none" stroke="#8ef7e2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+<ellipse cx="470" cy="620" rx="340" ry="180" fill="url(#gAmbient)" opacity=".45" filter="url(#gSofter)"/>
+</svg>

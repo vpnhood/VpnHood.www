@@ -18,15 +18,22 @@ nav_active: resources
             <div class="com-content-article item-page">
               <div class="com-content-article__body">
 
-                <div class="section-start-text section-space-top text-center" data-aos="fade-up">
-                  <div class="section-label">
-                    <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                <div class="row align-items-center gap-lg-0 gap-5 pt-lg-5 pb-5">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                    <p class="section-desc">{{ t.lead }}</p>
                   </div>
-                  <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
-                  <p class="section-desc">{{ t.lead }}</p>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-guide-art">
+                      <img src="/assets/images/guides/guides-hero.svg" alt="{{ t.art_alt }}" width="1000" height="1000" loading="eager" />
+                    </div>
+                  </div>
                 </div>
 
-                <ul class="row list-unstyled row-gap-4 justify-content-center mt-5 mb-0">
+                <ul class="row list-unstyled row-gap-4 justify-content-center section-space-bottom mb-0">
                   <li class="col-lg-5 col-md-6" data-aos="fade-up">
                     <div class="vh-card-dark vh-feature-panel h-100 position-relative">
                       <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>

@@ -127,33 +127,40 @@ nav_active: resources
                 </div>
 
                 <div class="section-space">
-                  <div class="section-start-text mb-4" data-aos="fade-up">
-                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
-                    <p class="section-desc">{{ t.cost_desc }}</p>
-                  </div>
-                  <ul class="row list-unstyled row-gap-4 mb-0">
-                    <li class="col-lg-4 col-md-6" data-aos="fade-up">
-                      <div class="vh-card-dark vh-feature-panel h-100">
+                  <div class="row align-items-center gap-lg-0 gap-5">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                      <div class="vh-guide-art">
+                        <img src="/assets/images/guides/outside-the-tunnel.svg" alt="{{ t.cost_alt }}" width="900" height="780" loading="lazy" />
+                      </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                      <h2 class="section-title vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
+                      <p class="section-desc">{{ t.cost_desc }}</p>
+                      <ul class="list-unstyled vh-guide-points mb-0">
+                      <li>
                         <span class="vh-feature-icon">{% include icons/eye-off.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.cost1_title }}</h3>
-                        <p class="mb-0">{{ t.cost1_desc }}</p>
-                      </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <div>
+                          <h3 class="h5 mb-2">{{ t.cost1_title }}</h3>
+                          <p class="mb-0">{{ t.cost1_desc }}</p>
+                        </div>
+                      </li>
+                      <li>
                         <span class="vh-feature-icon">{% include icons/spread.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.cost2_title }}</h3>
-                        <p class="mb-0">{{ t.cost2_desc }}</p>
-                      </div>
-                    </li>
-                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <div>
+                          <h3 class="h5 mb-2">{{ t.cost2_title }}</h3>
+                          <p class="mb-0">{{ t.cost2_desc }}</p>
+                        </div>
+                      </li>
+                      <li>
                         <span class="vh-feature-icon">{% include icons/alert.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.cost3_title }}</h3>
-                        <p class="mb-0">{{ t.cost3_desc }}</p>
-                      </div>
-                    </li>
-                  </ul>
+                        <div>
+                          <h3 class="h5 mb-2">{{ t.cost3_title }}</h3>
+                          <p class="mb-0">{{ t.cost3_desc }}</p>
+                        </div>
+                      </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="section-space">
@@ -165,14 +172,14 @@ nav_active: resources
                     <li class="col-lg-6" data-aos="fade-up">
                       <div class="vh-card-dark vh-feature-panel h-100">
                         <span class="vh-feature-icon">{% include icons/lock.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.default1_title }}</h3>
+                        <h3 class="h5 mb-2 vh-guide-verdict">{{ t.default1_title }}</h3>
                         <p class="mb-0">{{ t.default1_desc }}</p>
                       </div>
                     </li>
                     <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="vh-card-dark vh-feature-panel h-100">
                         <span class="vh-feature-icon">{% include icons/toggle.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.default2_title }}</h3>
+                        <h3 class="h5 mb-2 vh-guide-verdict">{{ t.default2_title }}</h3>
                         <p class="mb-0">{{ t.default2_desc }}</p>
                       </div>
                     </li>
@@ -181,20 +188,25 @@ nav_active: resources
                 </div>
 
                 <div class="section-space">
-                  <div class="section-start-text mb-4" data-aos="fade-up">
-                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.vh_title }}</h2>
-                    <p class="section-desc">{{ t.vh_desc }}</p>
-                  </div>
-                  <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-3 mb-0" data-aos="fade-up">
-                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-app/">{{ t.how_app_title }}</a></li>
-                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-domain/">{{ t.how_domain_title }}</a></li>
-                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-ip/">{{ t.how_ip_title }}</a></li>
-                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-country/">{{ t.how_country_title }}</a></li>
-                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/local-network/">{{ t.how_local_title }}</a></li>
-                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/split-dns/">{{ t.how_dns_title }}</a></li>
-                  </ul>
-                  <div class="text-center mt-5" data-aos="fade-up">
-                    <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/features/split-tunneling/">{{ t.vh_cta }}</a>
+                  <div class="row align-items-center gap-lg-0 gap-5">
+                    <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                      <h2 class="section-title vh-txt-grad-purple-400">{{ t.vh_title }}</h2>
+                      <p class="section-desc">{{ t.vh_desc }}</p>
+                      <ul class="list-unstyled d-flex flex-wrap gap-3 mt-4 mb-0">
+                        <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-app/">{{ t.how_app_title }}</a></li>
+                        <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-domain/">{{ t.how_domain_title }}</a></li>
+                        <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-ip/">{{ t.how_ip_title }}</a></li>
+                        <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-country/">{{ t.how_country_title }}</a></li>
+                        <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/local-network/">{{ t.how_local_title }}</a></li>
+                        <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/split-dns/">{{ t.how_dns_title }}</a></li>
+                      </ul>
+                      <a class="vh-btn vh-btn-primary mt-5" href="{{ vh_base }}/features/split-tunneling/">{{ t.vh_cta }}</a>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                      <div class="vh-feature-shot">
+                        <img src="/assets/images/features/split-tunneling-app.webp" alt="{{ t.shot_alt }}" width="840" height="1615" loading="lazy" />
+                      </div>
+                    </div>
                   </div>
                 </div>
 

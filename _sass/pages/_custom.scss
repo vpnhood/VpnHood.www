@@ -701,6 +701,50 @@
     margin-inline: auto;
 }
 
+// Guides ----------------------------------------------------------------------
+// Hand-authored diagrams, brand colours on transparency: like .vh-feature-hero-art
+// they read on both themes unchanged, so no light variant and no pinned backdrop.
+.vh-guide-art{
+    max-width: 440px;
+    margin-inline: auto;
+}
+
+.vh-guide-art img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+// The three costs are one argument, not a fourth card grid on a page that already
+// has three. They stack beside the diagram instead of sitting in panels.
+.vh-guide-points{
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+}
+
+.vh-guide-points > li{
+    display: flex;
+    gap: 1.15rem;
+}
+
+.vh-guide-points .vh-feature-icon{
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.vh-guide-points h3{
+    color: var(--purple-120);
+}
+
+// "Which default fits you": each title is a condition followed by the answer to it.
+// The condition keeps the quieter heading lavender; the answer steps up to the
+// high-emphasis ink so it can be read on its own while scanning.
+.vh-guide-verdict b{
+    color: var(--vh-text);
+}
+
 .vh-feature-hero-art img{
     display: block;
     width: 100%;

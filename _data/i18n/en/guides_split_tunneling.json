@@ -33,6 +33,7 @@
   "helps4_desc": "Traffic for your own country goes out normally, so home banking and local streaming keep working, and everything else stays protected.",
   "cost_title": "What it costs you",
   "cost_desc": "This is the part that gets glossed over: anything outside the tunnel is not protected. It carries your real IP address and is visible to your network operator and your ISP, exactly as if the VPN were switched off.",
+  "cost_alt": "Two paths leaving one device: the tunnelled one is sealed and unreadable, while an observer watches the traffic left outside it carrying identity in the open",
   "cost1_title": "Excluded apps reveal your location",
   "cost1_desc": "An excluded app leaks your real address to that service, and to anyone watching the connection between you and it.",
   "cost2_title": "Exclusions can still identify you",
@@ -41,12 +42,13 @@
   "cost3_desc": "On a network you do not control, an excluded app is fully exposed to whoever runs that network.",
   "default_title": "Which default fits you",
   "default_desc": "There is no single right setting, because people use a VPN for two different reasons and the sensible starting point is the opposite in each case. Decide which one you are, then start there and adjust.",
-  "default1_title": "If you are here for privacy: tunnel everything",
+  "default1_title": "If you are here for privacy: <b>tunnel everything</b>",
   "default1_desc": "Start with the tunnel capturing everything and exclude nothing. Add an exclusion only when something actually breaks, only for that one app or destination, and take it back out when you no longer need it. Every exclusion is a hole in the thing you came for, so the list should be short and deliberate.",
-  "default2_title": "If you are here for reachability: tunnel only what is blocked",
+  "default2_title": "If you are here for reachability: <b>tunnel only what is blocked</b>",
   "default2_desc": "If the VPN exists to reach something your network blocks, the reverse is usually better: send only the blocked apps or destinations through the tunnel and let everything else take the direct route. Local services keep working, speed stays close to normal, and the tunnel carries only what needs it, which draws less attention than routing everything.",
   "default_note": "One rule holds either way: on a network you do not trust, a hotel, an airport or a café, turn exclusions off and tunnel everything. Whatever you leave outside is readable by whoever runs that network, and convenience is not worth it there.",
   "vh_title": "How VpnHood! does it",
   "vh_desc": "Each of the six has its own screen in the app, and its own page here. All of them work on Android, iOS, Windows and Linux, with one exception: splitting by app is Android only, because the other systems do not let a VPN see which app a connection belongs to. The client is open source, so you can read exactly how the routing decision is made instead of taking our word for it.",
+  "shot_alt": "The Split tunneling screen in the VpnHood! app",
   "vh_cta": "Split tunneling in VpnHood!"
 }
