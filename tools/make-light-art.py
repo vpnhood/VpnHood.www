@@ -111,9 +111,12 @@ SVGS = {
     "general/android-tv-icon-grad-purple-300.svg": {"white": "#241858"},
     "general/windows-icon-grad-purple-300.svg": {"white": "#241858"},
     "general/apple-icon-grad-purple-300.svg": {"white": "#241858"},
-    # Off-canvas "Log In" glyph. It rides a .vh-btn-secondary, which is a light chip in
-    # light mode. (go-premium-icon.svg is NOT here: its button stays brand purple.)
+    # Off-canvas "Log In" and "Go Premium" glyphs. Both ride a .vh-btn-secondary, which
+    # is a light chip in light mode, so their white has to come down with it.
+    # (download-icon.svg is NOT here: it rides the primary button, which stays brand
+    # purple in both themes, so white is correct on it either way.)
     "general/login-icon.svg": {"#fff": "#17123a"},
+    "general/go-premium-icon.svg": {"#fff": "#17123a"},
 }
 
 

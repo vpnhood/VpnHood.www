@@ -362,7 +362,7 @@ body:has(.vh-mega-menu:hover) #vhOverlay{
 // The two sit side by side at the end of #topRightMenu (and again in the mobile
 // off-canvas), so they share one box: same height, same hairline + surface, same hover.
 // Keep the shared block shared — sizing only one of them is what makes the pair read as
-// mismatched. They are deliberately quieter than the Go Premium button beside them:
+// mismatched. They are deliberately quieter than the Download button beside them:
 // always-available controls, not calls to action.
 .vh-lang-menu .dropdown-toggle,
 .vh-theme-toggle{
