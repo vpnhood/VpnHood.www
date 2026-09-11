@@ -35,7 +35,7 @@
   "tune_title": "Uygulamada neleri değiştirebilirsiniz?",
   "tune_desc": "Dört ayar fark yaratır ve her biri bir denge unsurudur.",
   "tune1_title": "Farklı bir protokol deneyin",
-  "tune1_desc": "UDP hafif ve genellikle en hızlı seçenektir, ancak bazı ağlar bunu kısıtlar. TCP, UDP'nin engellendiği yerlerde biraz hız kaybıyla da olsa çalışır. QUIC ise izin verilen yerlerde daha da hızlıdır. Protokol bağlantı bazında seçilir; değiştirmek için yeniden bağlanmanız yeterlidir.",
+  "tune1_desc": "Hafif ve genellikle en hızlı seçenek UDP'dir, ancak bazı ağlar bunu kısıtlayabilir. TCP, hızdan biraz ödün vererek UDP'nin engellendiği yerlerde bağlantı sağlar. QUIC ise izin verilen ağlarda çok daha hızlıdır. Bağlantınız kesilmeden kolayca geçiş yapabilir, sizin için en uygun olanı anında deneyebilirsiniz.",
   "tune2_title": "Hiçbir engelleme yoksa Cloak Mode'u kapatın",
   "tune2_desc": "Gizlenmiş (cloaked) trafik doğrudan tünele göre daha fazla veri yükü taşır, bu yüzden biraz daha yavaştır ve biraz daha fazla pil harcar. Tercih basittir: Engel yokken maksimum hız, engel varken kesintisiz bağlantı. Açık bir ağda buna ihtiyacınız yoktur.",
   "tune3_title": "Sunucuya doğrudan ulaşılabiliyorsa Akıllı Proxy'leri kapatın",

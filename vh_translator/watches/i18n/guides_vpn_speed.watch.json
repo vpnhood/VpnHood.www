@@ -37,7 +37,7 @@
     "tune_title": "What you can change in the app",
     "tune_desc": "Four settings move the needle, and each one is a trade rather than a free win.",
     "tune1_title": "Try another protocol",
-    "tune1_desc": "UDP is the lightweight option and usually the fastest, though some networks restrict it. TCP gets through where UDP does not, at a cost. QUIC is faster again where it is allowed. The protocol is a per-connection choice, so switching costs nothing but a reconnect.",
+    "tune1_desc": "UDP is the lightweight option and usually the fastest, though some networks restrict it. TCP gets through where UDP does not, at a cost. QUIC is faster again where it is allowed. You can switch while connected, so trying another costs nothing and interrupts nothing.",
     "tune2_title": "Turn Cloak Mode off when nothing is blocking you",
     "tune2_desc": "Cloaked traffic carries more overhead than a direct tunnel, so it is a little slower and uses slightly more battery. That is the trade: raw speed when nothing is in your way, a connection that still works when something is. On an open network you do not need it.",
     "tune3_title": "Turn Smart Proxies off when the server is reachable",

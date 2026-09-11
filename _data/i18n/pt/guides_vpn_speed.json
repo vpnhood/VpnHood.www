@@ -35,7 +35,7 @@
   "tune_title": "O que você pode ajustar no aplicativo",
   "tune_desc": "Quatro configurações fazem diferença, e cada uma envolve uma troca de prioridades.",
   "tune1_title": "Experimente outro protocolo",
-  "tune1_desc": "O UDP é leve e geralmente o mais rápido, mas pode ser bloqueado em certas redes. O TCP consegue ultrapassar restrições onde o UDP falha, com uma pequena perda de velocidade. O QUIC oferece excelente desempenho onde for permitido. A troca é feita a cada conexão, bastando reconectar.",
+  "tune1_desc": "O UDP é leve e geralmente o mais rápido, mas algumas redes o bloqueiam. O TCP passa onde o UDP falha, embora com um pouco menos de velocidade. Já o QUIC é ainda mais rápido quando permitido. Mude de protocolo mesmo conectado — sem quedas e sem complicações.",
   "tune2_title": "Desative o Modo Camuflagem se a rede estiver livre",
   "tune2_desc": "O tráfego camuflado exige mais processamento que uma conexão direta, reduzindo um pouco a velocidade e consumindo mais bateria. Essa é a troca: velocidade máxima quando o tráfego é livre, ou conexão garantida sob bloqueios. Em redes abertas, mantenha-o desligado.",
   "tune3_title": "Desative os Smart Proxies quando o servidor estiver acessível",

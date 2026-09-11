@@ -14,5 +14,5 @@
   "when_title": "Quando ativar",
   "when_desc": "Mude quando a rede estiver lenta ou não conectar. Use UDP para velocidade e TCP se houver bloqueios. Bloquear o QUIC força o streaming padrão, melhorando a reprodução de vídeo no Cloak Mode.",
   "cost_title": "Impacto no uso",
-  "cost_desc": "Apenas uma rápida reconexão. O protocolo é definido por conexão, permitindo trocar na hora se o desempenho cair."
+  "cost_desc": "Nada. A troca de protocolo acontece com a conexão ativa, permitindo testar outro na hora se o desempenho cair, sem interromper o túnel."
 }

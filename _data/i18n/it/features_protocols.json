@@ -14,5 +14,5 @@
   "when_title": "Quando usarlo",
   "when_desc": "Cambia protocollo se la connessione è lenta o non riesce a stabilirsi. Prova prima UDP per la massima velocità, oppure TCP in presenza di restrizioni. Bloccare QUIC forza le app a usare lo streaming standard, migliorando la riproduzione video in modalità Cloak.",
   "cost_title": "Costi e limitazioni",
-  "cost_desc": "Nessun costo, serve solo una riconnessione. Puoi cambiare protocollo per ogni connessione e provarne subito un altro se le prestazioni calano."
+  "cost_desc": "Niente. Il protocollo cambia direttamente sulla connessione attiva: puoi provarne un altro all'istante se le prestazioni calano, senza mai interrompere il tunnel."
 }

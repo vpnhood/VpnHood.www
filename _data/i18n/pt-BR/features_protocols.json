@@ -14,5 +14,5 @@
   "when_title": "Quando usar",
   "when_desc": "Mude de protocolo se a rede estiver lenta ou instável. Prefira UDP para velocidade e TCP para contornar bloqueios. Bloquear o QUIC força os apps a usarem streaming padrão, o que pode melhorar vídeos no Cloak Mode.",
   "cost_title": "Quanto custa",
-  "cost_desc": "Apenas o tempo de reconectar. Você escolhe o protocolo a cada conexão e pode trocar na hora se o desempenho cair."
+  "cost_desc": "Nada. A troca de protocolo acontece na conexão ativa, permitindo mudar instantaneamente se o desempenho cair, sem interromper o túnel."
 }

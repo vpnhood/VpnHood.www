@@ -35,7 +35,7 @@
   "tune_title": "Ce que vous pouvez régler dans l'application",
   "tune_desc": "Quatre réglages font la différence, chacun impliquant un compromis.",
   "tune1_title": "Changer de protocole",
-  "tune1_desc": "Léger et généralement le plus rapide, UDP est parfait, même si certains réseaux le bloquent. TCP contourne ces blocages, mais avec un débit moindre. QUIC offre d'excellentes vitesses là où il est supporté. Le choix du protocole se fait par connexion : il suffit d'une reconnexion pour en changer.",
+  "tune1_desc": "UDP est léger et généralement le plus rapide, bien que certains réseaux le bloquent. TCP passe là où UDP échoue, mais avec un débit réduit. QUIC est encore plus rapide lorsqu'il est autorisé. Changez de protocole sans vous déconnecter : testez-en un autre en toute simplicité !",
   "tune2_title": "Désactiver le Cloak Mode sans blocage",
   "tune2_desc": "Le trafic camouflé demande plus de ressources qu'un tunnel direct, ce qui réduit légèrement la vitesse et consomme un peu plus de batterie. C'est le compromis : une vitesse maximale en temps normal, ou une connexion qui passe à travers les blocages si besoin. Sur un réseau libre, désactivez-le.",
   "tune3_title": "Désactiver Smart Proxies si le serveur est accessible",

@@ -14,5 +14,5 @@
   "when_title": "Wann Sie wechseln sollten",
   "when_desc": "Wechseln Sie das Protokoll, wenn Verbindungen langsam sind oder blockiert werden. Nutzen Sie UDP für maximale Geschwindigkeit und TCP bei Verbindungsproblemen. Das Blockieren von QUIC zwingt Apps zum Standard-Streaming, was die Videowiedergabe im Cloak-Modus verbessern kann.",
   "cost_title": "Die Kosten",
-  "cost_desc": "Nur ein kurzer Reconnect. Das Protokoll lässt sich für jede Verbindung einzeln anpassen – probieren Sie einfach ein anderes aus, wenn es mal hakt."
+  "cost_desc": "Nichts. Das Protokoll wechselt bei aktiver Verbindung – so können Sie sofort ein anderes testen, falls eines langsamer wird, ohne den Tunnel zu trennen."
 }

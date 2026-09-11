@@ -35,7 +35,7 @@
   "tune_title": "Optimierungsmöglichkeiten in der App",
   "tune_desc": "Vier Einstellungen machen den Unterschied – jede davon ist ein Kompromiss zwischen Speed und Durchsatzkraft.",
   "tune1_title": "Anderes Protokoll ausprobieren",
-  "tune1_desc": "UDP ist die schlanke Option und meist am schnellsten, wird jedoch von manchen Netzwerken blockiert. TCP überwindet Sperren, wo UDP scheitert – allerdings mit Einbußen beim Speed. QUIC bietet noch mehr Leistung, sofern es erlaubt ist. Das Protokoll lässt sich für jede Verbindung individuell wählen; ein Wechsel erfordert lediglich ein kurzes Neuverbinden.",
+  "tune1_desc": "UDP ist schlank und meist am schnellsten, wird aber auf manchen Netzwerken blockiert. TCP überwindet diese Sperren zuverlässig, ist jedoch etwas langsamer. QUIC bietet dort, wo es unterstützt wird, noch mehr Speed. Du kannst das Protokoll nahtlos bei laufender Verbindung wechseln – probiere es einfach ohne Unterbrechung aus.",
   "tune2_title": "Cloak-Modus deaktivieren, wenn keine Sperren aktiv sind",
   "tune2_desc": "Getarnter Datenverkehr erzeugt mehr Protokoll-Overhead als ein direkter Tunnel, ist also etwas langsamer und benötigt minimal mehr Akku. Der Kompromiss: Maximale Geschwindigkeit im freien Netz oder eine Verbindung, die auch bei Blockaden zuverlässig funktioniert. In einem unzensierten Netzwerk wird er nicht benötigt.",
   "tune3_title": "Smart Proxies deaktivieren, wenn der Server direkt erreichbar ist",

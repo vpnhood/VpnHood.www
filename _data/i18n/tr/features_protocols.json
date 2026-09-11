@@ -14,5 +14,5 @@
   "when_title": "Ne zaman değiştirmeli?",
   "when_desc": "Ağınız yavaşladığında veya bağlantı kurulamadığında protokolü değiştirin. Hız için önce UDP'yi, bir engelle karşılaşırsanız TCP'yi deneyin. QUIC'i engellemek uygulamaları standart akışa yönlendirir; bu da Gizleme Modu'nda video oynatımını iyileştirebilir.",
   "cost_title": "Size maliyeti nedir?",
-  "cost_desc": "Yalnızca kısa bir yeniden bağlanma süresi. Protokol seçimi her bağlantıda değiştirilebilir, böylece performans düştüğünde anında diğerine geçebilirsiniz."
+  "cost_desc": "Hiçbir şey. Protokol doğrudan canlı bağlantı üzerinden değişir; böylece bir protokol yavaşladığında bağlantı kopmadan anında bir diğerine geçebilirsiniz."
 }

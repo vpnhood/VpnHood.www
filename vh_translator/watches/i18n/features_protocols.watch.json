@@ -16,6 +16,6 @@
     "when_title": "When to turn it on",
     "when_desc": "Switch when a network is slow or refusing to connect. Try UDP first for speed and TCP when something is in the way. Blocking QUIC makes apps fall back to standard streaming, which can improve video playback in Cloak Mode.",
     "cost_title": "What it costs you",
-    "cost_desc": "Nothing but a reconnect. The protocol is a per-connection choice, so you can try another the moment one underperforms."
+    "cost_desc": "Nothing. The protocol switches on the live connection, so you can try another the moment one underperforms without dropping the tunnel."
   }
 }

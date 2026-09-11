@@ -14,5 +14,5 @@
   "when_title": "Cuándo usarlo",
   "when_desc": "Cambia de protocolo si la red es lenta o no conecta. Prueba primero con UDP para mayor velocidad y usa TCP si hay bloqueos. Bloquear QUIC hace que las aplicaciones recurran al streaming estándar, lo que puede mejorar la reproducción de video en Modo Camuflaje.",
   "cost_title": "Cuánto cuesta",
-  "cost_desc": "Nada, salvo una reconexión. La elección del protocolo se hace por conexión, por lo que puedes cambiar a otro al instante si el actual no rinde bien."
+  "cost_desc": "Nada. El protocolo cambia en plena conexión activa para que puedas probar otro al instante si el actual rinde mal, sin interrumpir el túnel."
 }
