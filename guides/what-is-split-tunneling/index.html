@@ -46,25 +46,47 @@ nav_active: resources
                     <li class="col-lg-4 col-md-6" data-aos="fade-up">
                       <div class="vh-card-dark vh-feature-panel h-100">
                         <span class="vh-feature-icon">{% include icons/split-by-app.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.how1_title }}</h3>
-                        <p class="mb-0">{{ t.how1_desc }}</p>
+                        <h3 class="h5 mb-2">{{ t.how_app_title }}</h3>
+                        <p class="mb-0">{{ t.how_app_desc }}</p>
                       </div>
                     </li>
                     <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="vh-card-dark vh-feature-panel h-100">
                         <span class="vh-feature-icon">{% include icons/split-by-domain.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.how2_title }}</h3>
-                        <p class="mb-0">{{ t.how2_desc }}</p>
+                        <h3 class="h5 mb-2">{{ t.how_domain_title }}</h3>
+                        <p class="mb-0">{{ t.how_domain_desc }}</p>
                       </div>
                     </li>
                     <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                       <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-by-ip.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.how_ip_title }}</h3>
+                        <p class="mb-0">{{ t.how_ip_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
                         <span class="vh-feature-icon">{% include icons/split-by-country.svg %}</span>
-                        <h3 class="h5 mb-2">{{ t.how3_title }}</h3>
-                        <p class="mb-0">{{ t.how3_desc }}</p>
+                        <h3 class="h5 mb-2">{{ t.how_country_title }}</h3>
+                        <p class="mb-0">{{ t.how_country_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-local-network.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.how_local_title }}</h3>
+                        <p class="mb-0">{{ t.how_local_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <span class="vh-feature-icon">{% include icons/split-dns.svg %}</span>
+                        <h3 class="h5 mb-2">{{ t.how_dns_title }}</h3>
+                        <p class="mb-0">{{ t.how_dns_desc }}</p>
                       </div>
                     </li>
                   </ul>
+                  <p class="mt-4 mb-0" data-aos="fade-up">{{ t.how_note }}</p>
                 </div>
 
                 <div class="section-space">
@@ -163,9 +185,16 @@ nav_active: resources
                     <h2 class="section-title vh-txt-grad-purple-400">{{ t.vh_title }}</h2>
                     <p class="section-desc">{{ t.vh_desc }}</p>
                   </div>
-                  <div class="text-center" data-aos="fade-up">
+                  <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-3 mb-0" data-aos="fade-up">
+                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-app/">{{ t.how_app_title }}</a></li>
+                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-domain/">{{ t.how_domain_title }}</a></li>
+                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-ip/">{{ t.how_ip_title }}</a></li>
+                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/by-country/">{{ t.how_country_title }}</a></li>
+                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/local-network/">{{ t.how_local_title }}</a></li>
+                    <li><a class="vh-feature-chip" href="{{ vh_base }}/features/split-tunneling/split-dns/">{{ t.how_dns_title }}</a></li>
+                  </ul>
+                  <div class="text-center mt-5" data-aos="fade-up">
                     <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/features/split-tunneling/">{{ t.vh_cta }}</a>
-                    <a class="vh-btn vh-btn-secondary ms-lg-3 mt-3 mt-lg-0" href="{{ vh_base }}/free-vpn/download/">{{ t.vh_cta2 }}</a>
                   </div>
                 </div>
 

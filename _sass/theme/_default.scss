@@ -124,6 +124,10 @@
     // Sticky first column of the /free-vpn/comparison table: must be opaque so the
     // scrolled-under cells don't bleed through it.
     --vh-table-sticky-bg: #150e34;
+    // Vertical rhythm between page sections. 13.9vw hits exactly 200px at a
+    // 1440px viewport, so every desktop screen keeps the designed spacing and
+    // only narrower ones tighten, down to a 72px floor on phones.
+    --vh-section-gap: clamp(72px, 13.9vw, 200px);
 
     --bs-body-bg: var(--vh-page-bg);
     --bs-body-line-height: 1.9;
@@ -534,10 +538,10 @@ iconify-icon {
 }
 /*-------------- General --------------*/
 .section-space{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: var(--vh-section-gap);
+    padding-bottom: var(--vh-section-gap);
 }
-// Consecutive sections share one 200px gap instead of stacking two. The FAQ
+// Consecutive sections share one gap instead of stacking two. The FAQ
 // module's wrapper is .section-space-top, and download tables end in
 // .section-space-bottom, so both need the same collapse.
 .section-space + .section-space,
@@ -546,14 +550,14 @@ iconify-icon {
     padding-top: 0;
 }
 .section-space .section-space{
-    padding-top: 125px;
-    padding-bottom: 125px;
+    padding-top: calc(var(--vh-section-gap) * 0.625);
+    padding-bottom: calc(var(--vh-section-gap) * 0.625);
 }
 .section-space-top{
-    padding-top: 200px;
+    padding-top: var(--vh-section-gap);
 }
 .section-space-bottom{
-    padding-bottom: 200px;
+    padding-bottom: var(--vh-section-gap);
 }
 .section-start-text{
     text-align: center;
