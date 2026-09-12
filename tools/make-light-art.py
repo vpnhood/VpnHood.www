@@ -108,7 +108,6 @@ SVGS = {
     # dissolves into a light page. Flip the top stop the same way the gradient headings
     # flip (near-black into the brand purple).
     "general/android-icon-grad-purple-300.svg": {"white": "#241858"},
-    "general/android-tv-icon-grad-purple-300.svg": {"white": "#241858"},
     "general/windows-icon-grad-purple-300.svg": {"white": "#241858"},
     "general/apple-icon-grad-purple-300.svg": {"white": "#241858"},
     # Off-canvas "Log In" and "Go Premium" glyphs. Both ride a .vh-btn-secondary, which

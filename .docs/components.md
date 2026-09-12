@@ -114,15 +114,22 @@ to Google directly, and the click is never delayed. Tagged today: the header's
 `pricing-buy-12-months`. Keep ids kebab-case and `<place>-<action>`, so the same action
 in two places stays comparable.
 
-Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it. One-time setup:
+Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it. The GTM side is
+`tools/gtm-cta-tracking.json`, a container export holding the two Data Layer Variables
+(`DLV - vh_cta`, `DLV - vh_href`), the Custom Event trigger on `vh_cta_click`, and a GA4
+Event tag that sends `cta_click` with `cta_id` and `cta_href` to the property the
+container already loads (`G-DWH7NV15XQ`, read from the public `gtm.js`). One-time setup:
 
-1. **Variable** — Data Layer Variable, name `DLV - vh_cta`, variable name `vh_cta`.
-   Optionally a second one for `vh_href`.
-2. **Trigger** — Custom Event, event name `vh_cta_click`, fires on all custom events.
-3. **Tag** — Google Analytics: GA4 Event, event name `cta_click`, event parameter
-   `cta_id` = `{{DLV - vh_cta}}`, trigger = the one above.
-4. **GA4 Admin → Custom definitions** — register `cta_id` as an event-scoped custom
-   dimension, or it will not appear in reports.
+1. **GTM → Admin → Import Container** — choose the file, the default workspace,
+   **Merge**, *Rename conflicting*; review that it adds 1 tag, 1 trigger, 2 variables;
+   **Submit → Publish**.
+2. **GA4 Admin → Custom definitions** — register `cta_id` as an event-scoped custom
+   dimension (and `cta_href` if wanted), or the parameter is collected but never shown
+   in reports.
+
+The GTM API was not an option: the same restricted-scope OAuth block that stopped the
+Analytics API stops `tagmanager.edit.containers`, and an import is the supported way to
+move configuration between containers anyway.
 
 Then Reports → Engagement → Events → `cta_click`, broken down by `cta_id`, answers
 "what does the header slot earn" with real clicks instead of reasoning.
@@ -140,8 +147,9 @@ It is a structure file for one reason: **vhtranslator only walks `_data/i18n/en`
 price here can never be rewritten by a translation pass.** The prices used to live in the
 copy file, where twelve translated copies of `$7.9` sat one bad pass away from
 disagreeing with the checkout. The sentences around the numbers stay translatable, as
-templates the page fills in: `save_percent` (`[percent]`), `save_amount` (`[amount]`) and
-`billed_multi` (`[was]`, `[now]`, `[months]`). **Placeholders use square brackets, never
+templates the page fills in: `save_percent` (`[percent]`), `save_amount` (`[amount]`),
+`billed_multi` (`[was]`, `[now]`, `[months]`) and `note_usd` (`[currency]`, stated once
+under the table rather than on the crowded cards). **Placeholders use square brackets, never
 braces** — Liquid's tokenizer cannot parse a `}` inside a quoted string in a `{{ }}` tag,
 so `replace: '{p}', x` is a syntax error, not a bad substitution.
 
@@ -157,8 +165,8 @@ English fallback as the chrome. Surfaces that read the list:
 
 - `/free-vpn/locations/` - the stat strip, the map (`location-map.html` with
   `pills=false`, since the grid names everything), then the flag grid grouped by
-  continent. The three numbers are Liquid `size`s of the list, so a sentence
-  never has to carry a count.
+  continent. Its numbers are Liquid `size`s of the list, so a sentence never has
+  to carry a count.
 - `/free-vpn/` `#locations` - `_includes/location-map.html`: a dotted world map
   with a pulsing pin per country (green free, purple Premium, name in a hover
   tooltip) and, under it, the same linear slider as the home strip with a
@@ -184,7 +192,17 @@ Pacific, which put every American country's dot in the sea.
   `/free-vpn/comparison/` count the list instead of carrying a number.
 
 Add a country by adding one line to the yml, one name to the names file, and the
-flag SVG. Never hardcode a country, a flag or a count in a page. Two prose strings
-still carry a literal number and are the exceptions to grep when the list changes:
-the locations page's `meta_title` and go-premium's `banner_desc`.
+flag SVG. Never hardcode a country, a flag or a count in a page, and never write
+the **exact total**: pages compute `vh_loc_more` (the list size minus one) and say
+"more than 15 countries" in prose (go-premium's banner, the locations page lead,
+both through a `[count]` placeholder) or `15+` where space is tight (the `/free-vpn/`
+teaser line, the stat strip, and the Premium cell of the compare table, which is
+`col-2` on a phone). Written that way the claim stays true the moment a country is
+added and never reads as a hard cap, and it keeps our number modest next to rivals'
+three-figure counts, which is why the **free** count (six, no account, all included
+in Premium) is the number the pages lead with. The only literal numbers are the
+locations page's `meta_title` and `meta_description`, because meta tags cannot
+compute; grep for "15" there when the list grows. Never write "aiming for" or
+"working to cover" either: the network already sits close to every region we
+serve, so a missing country is a request, not a gap in a plan.
 

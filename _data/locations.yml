@@ -10,9 +10,15 @@
 # compare table on /free-vpn/go-premium/ and the free-plan cell on
 # /free-vpn/comparison/ (both count this list). Add a country here and in the
 # names file and every one of those updates. Never hardcode a country or a count
-# in a page. The two prose mentions that still carry a literal number are the
-# locations page's meta_title ("16 Countries") and go-premium's banner ("more
-# than 15 countries"); grep for them when the list changes.
+# in a page.
+#
+# THE EXACT TOTAL IS NEVER WRITTEN. Pages compute vh_loc_more (this list's size
+# minus one) and say "more than 15 countries" or "15+", so the claim stays true
+# the moment a country is added and never reads as a hard cap. Rivals advertise
+# three-figure counts, so the number the pages lead with is the free count: six
+# countries, no account, all included in Premium. Two strings carry a literal
+# "15" because meta tags cannot compute: meta_title and meta_description in
+# _data/i18n/en/free_vpn_locations.json. Grep for them when this list grows.
 #
 # Fields
 #   key       - suffix of the i18n name key, and the globe's country key

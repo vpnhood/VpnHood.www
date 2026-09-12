@@ -11,4 +11,5 @@ RULES
 - A version number attached to a Latin product name keeps Western digits ("Android 7.0", "Windows 10") — mixing scripts inside one term is wrong. Every other number follows the language file below, or that language's own norm, used consistently.
 - Names are fixed, prose is free. The language file below is written `English = target` in sections: NAMES (identical in every string, including mid-sentence — the things a user clicks or searches for), PROSE (preferred wording in running text: a preference, not a ban), KEYWORDS (meta_title and meta_description only) and RULES. It outranks a nicer-sounding variant, but an ordinary word is not reserved just because a name uses it.
 - Capitalization and punctuation are part of a string: one heading style, one punctuation convention (half-width vs full-width), across every file.
+- A word in square brackets ([count], [percent], [amount], [was], [now], [months], [currency]) is a placeholder the site fills in at build time: keep it exactly as written, brackets included, and never translate, reorder or drop it.
 - Tone: consumer marketing — friendly, clear, concise. Never translate word for word.

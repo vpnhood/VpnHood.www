@@ -850,7 +850,9 @@
     color: var(--vh-text-dim);
 }
 
-.vh-loc-note{
+// A quiet one-line note under a block (the ads caveat under the location grid,
+// the currency line under the pricing table).
+.vh-note{
     max-width: 720px;
     margin-inline: auto;
     color: var(--vh-text-dim);

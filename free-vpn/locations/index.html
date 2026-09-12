@@ -10,9 +10,9 @@ nav_active: free-vpn
 {% assign t = site.data.i18n[vh_lang][page.i18n] %}
 {% assign tl_en = site.data.i18n.en.locations %}
 {% assign tl = site.data.i18n[vh_lang].locations | default: tl_en %}
-{% assign vh_loc_all = site.data.locations.countries | size %}
 {% assign vh_loc_free = site.data.locations.countries | where: "tier", "free" | size %}
 {% assign vh_loc_continents = site.data.locations.continents | size %}
+{% assign vh_loc_more = site.data.locations.countries | size | minus: 1 %}
 <main id="sp-main-body">
   <div class="container">
     <div class="container-inner">
@@ -28,9 +28,9 @@ nav_active: free-vpn
                     <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
                   </div>
                   <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
-                  <p class="section-desc">{{ t.lead }}</p>
+                  <p class="section-desc">{{ t.lead | replace: '[count]', vh_loc_more }}</p>
                   <ul class="vh-stat-strip list-unstyled mb-0" data-aos="fade-up" data-aos-delay="100">
-                    <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_all }}</span><span class="vh-stat-label">{{ t.stat_countries }}</span></li>
+                    <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_more }}+</span><span class="vh-stat-label">{{ t.stat_countries }}</span></li>
                     <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_continents }}</span><span class="vh-stat-label">{{ t.stat_continents }}</span></li>
                     <li class="vh-stat"><span class="vh-stat-num vh-txt-grad-purple-400">{{ vh_loc_free }}</span><span class="vh-stat-label">{{ t.stat_free }}</span></li>
                   </ul>
@@ -50,7 +50,7 @@ nav_active: free-vpn
                     <h3 class="h5 mb-2">{{ t.pool_title }}</h3>
                     <p class="mb-0">{{ t.pool_desc }}</p>
                   </div>
-                  <p class="text-center mt-5 mb-0 small vh-loc-note" data-aos="fade-up">{{ t.note_ads }}</p>
+                  <p class="text-center mt-5 mb-0 small vh-note" data-aos="fade-up">{{ t.note_ads }}</p>
                 </div>
 
                 <div class="section-space">

@@ -8,17 +8,18 @@
 # bad pass away from disagreeing with the checkout.
 #
 # The sentences around the numbers stay translatable, as templates with
-# placeholders that the page fills in: save_percent ({percent}), save_amount
-# ({amount}) and billed_multi ({was}, {now}, {months}).
+# placeholders the page fills in: save_percent ([percent]), save_amount
+# ([amount]), billed_multi ([was], [now], [months]) and note_usd ([currency]).
+# Square brackets, not braces: Liquid cannot parse a } inside a quoted string.
 #
 # Prices are written with their symbol so a currency change is one edit here.
 # Keep them consistent with the WHMCS product: a plan's billing_cycle is the
 # billingcycle parameter of its cart URL, and product_id is the pid.
 
-# The code shown beside every price. "$" alone is ambiguous to a Canadian,
-# Australian, Singaporean or Hong Kong reader, who would otherwise only learn the
-# currency at checkout; a code is the same string in every language, so it lives
-# here and is filled into the translatable per_month label.
+# "$" alone is ambiguous to a Canadian, Australian or Singaporean reader, so the
+# page states the currency once, in the line directly under the pricing table.
+# Not on the cards: the discounted ones already carry three amounts on the price
+# row. A code is the same string in every language, so it lives here.
 currency: USD
 
 product_id: 18

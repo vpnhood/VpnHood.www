@@ -317,12 +317,12 @@ nav_active: free-vpn
                             <p class="section-desc">
                               {{ t.locations_desc }}
                             </p>
-                            {%- assign vh_loc_all = site.data.locations.countries | size -%}
                             {%- assign vh_loc_free = site.data.locations.countries | where: "tier", "free" | size %}
+                            {%- assign vh_loc_more = site.data.locations.countries | size | minus: 1 %}
                             <p class="vh-loc-count mb-0">
                               <b>{{ vh_loc_free }}</b> {{ t.locations_free_label }}
                               <span class="vh-loc-count-sep" aria-hidden="true">&middot;</span>
-                              <b>{{ vh_loc_all }}</b> {{ t.locations_premium_label }}
+                              <b>{{ vh_loc_more }}+</b> {{ t.locations_premium_label }}
                             </p>
                           </div>
                           {% include location-map.html %}
@@ -371,16 +371,6 @@ nav_active: free-vpn
                                 alt="{{ t.ios_icon_alt }}"
                               />
                               <span>{{ t.ios }}</span>
-                            </div>
-                            <div class="col-auto">
-                              <img
-                                src="/assets/images/general/android-tv-icon-grad-purple-300.svg"
-                        data-vh-light-src="/assets/images/general/android-tv-icon-grad-purple-300-light.svg"
-                                width="60"
-                                height="61"
-                                alt="{{ t.android_tv_icon_alt }}"
-                              />
-                              <span>{{ t.android_tv }}</span>
                             </div>
                             <div class="col-auto">
                               <img
