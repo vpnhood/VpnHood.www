@@ -291,13 +291,32 @@
 .options-column p{
     margin-bottom: 0;
 }
-.options-column .icon-wrapper{
-    display: inline-block;
-    background-color: rgba(var(--purple-600-rgb), 0.48);
-    border: 1px solid rgba(var(--purple-200-rgb), 0.48);
-    padding: 6px;
-    border-radius: 10px;
+// Each tile is one link (Bootstrap .stretched-link needs a positioned ancestor) and
+// carries the same feature art as the /features/ index cards, at the same 64px.
+// Hover lifts the art rather than the tile: the four tiles share one background and
+// meet at the centre, so a moving tile would open a seam against its neighbours.
+.vh-opt-tile{
+    position: relative;
 }
+.vh-opt-art{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    transition: transform .3s ease;
+}
+.vh-opt-art img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.vh-opt-tile:hover .vh-opt-art{
+    transform: translateY(-4px);
+}
+// Decorative only. It sits over the inner corners of the four option tiles, which are
+// links, so it must not take the tap.
 #connectLogoRippleWrapper{
     position: absolute;
     top: 50%;
@@ -308,6 +327,7 @@
     width: 120px;
     height: 120px;
     padding: 0;
+    pointer-events: none;
 }
 #connectLogoImg{
     box-shadow: 0 0 20px 8px rgb(var(--purple-300-rgb), 28%);
@@ -599,15 +619,15 @@
     }
 }
 
-// The four option titles link into /features/. They stay the panel's white — an accent
-// colour reads as a stray highlight against the ripple — so hover carries the affordance.
+// The four option titles take the accent, the same as the /features/ index-card titles,
+// so the tiles read as the links they are; the underline arrives on hover and focus.
 .vh-opt-link{
-    color: inherit;
+    color: var(--vh-accent-ink);
     text-decoration: none;
 }
 
 .vh-opt-link:hover,
 .vh-opt-link:focus-visible{
-    color: inherit;
+    color: var(--vh-accent-ink);
     text-decoration: underline;
 }
