@@ -37,7 +37,8 @@ else:
     assert TOKEN, tok.stderr[:400]
     print("auth: impersonating", SA)
 
-def call(method, path, body=None):
+def call(method, path, body=None, tolerate=False):
+    """tolerate=True returns None on a 4xx instead of exiting, for probing."""
     h = {"Authorization": "Bearer " + TOKEN}
     if PROJECT: h["x-goog-user-project"] = PROJECT
     data = None
@@ -45,8 +46,11 @@ def call(method, path, body=None):
         data = json.dumps(body).encode("utf-8"); h["Content-Type"] = "application/json"
     req = urllib.request.Request(API + path, data=data, method=method, headers=h)
     try:
-        with urllib.request.urlopen(req, timeout=60) as r: return json.load(r)
+        with urllib.request.urlopen(req, timeout=60) as r:
+            raw = r.read()
+            return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
+        if tolerate and 400 <= e.code < 500: return None
         raise SystemExit(f"{method} {path} -> {e.code}: {e.read().decode('utf-8', 'replace')[:600]}")
 
 # the export uses SCREAMING enums; the API wants lowerCamel
@@ -74,8 +78,21 @@ for a in accounts:
         if c.get("publicId") == CONTAINER_PUBLIC_ID: container = c
 assert container, "container not found: is the service account a user of it?"
 print("container:", container["path"], container["name"])
+# Creating a version consumes the workspace it came from ("Workspace is already submitted"),
+# so a second run has to work somewhere else. Probe the candidates with a harmless write and
+# fall back to a fresh workspace of our own.
 workspaces = call("GET", container["path"] + "/workspaces").get("workspace", [])
-ws = next((w for w in workspaces if w["name"] == "Default Workspace"), workspaces[0])
+candidates = ([w for w in workspaces if w["name"] == "Default Workspace"]
+              + [w for w in workspaces if w["name"] != "Default Workspace"])
+ws = None
+for w in candidates:
+    probe = call("POST", w["path"] + "/variables", {"name": "zz - import probe", "type": "c",
+                 "parameter": [{"type": "template", "key": "value", "value": "probe"}]}, tolerate=True)
+    if probe is not None:
+        call("DELETE", probe["path"]); ws = w; break
+if ws is None:
+    ws = call("POST", container["path"] + "/workspaces", {"name": "CTA tracking import"})
+    print("every workspace was already submitted, created a new one")
 print("workspace:", ws["path"], ws["name"])
 
 existing_vars = {v["name"]: v for v in call("GET", ws["path"] + "/variables").get("variable", [])}
