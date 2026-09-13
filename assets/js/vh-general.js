@@ -28,8 +28,62 @@ document.addEventListener('click', function (e) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // The desktop mega-menu hover overlay (#vhOverlay) is now driven purely by CSS
-    // (body:has(.vh-mega-menu:hover) #vhOverlay) — no JS handler needed.
+    // The desktop mega-menu opens on CSS :hover, and the overlay (#vhOverlay) follows it in
+    // CSS too, so the menu still works with no JS at all. JS adds the two things hover alone
+    // cannot express, both about a pointer that is on its way somewhere:
+    //
+    //   .vh-mega-hold     keeps a panel open for 250ms after the pointer leaves the item, so
+    //                     a gap the CSS hover bridge cannot predict (a wrapped header, a
+    //                     promo bar above the nav) does not close the menu mid-travel.
+    //   .vh-mega-suppress holds a panel shut for 150ms when the pointer arrives on an item
+    //                     while another panel is open. The panel is centred and far wider
+    //                     than its item, so reaching a link on its far side means crossing a
+    //                     neighbouring item: without this, that neighbour's panel took over
+    //                     and the link moved out from under the pointer.
+    //
+    // Entering a panel counts as entering its item (the panel is a descendant), which is what
+    // makes the hold self-clearing.
+    const HOLD_MS = 250, INTENT_MS = 150;
+    const megaItems = document.querySelectorAll('.vh-mega-menu');
+    const holdTimers = new Map(), intentTimers = new Map();
+    const dropHold = () => megaItems.forEach(el => {
+        clearTimeout(holdTimers.get(el));
+        el.classList.remove('vh-mega-hold');
+    });
+    const heldOther = self => [...megaItems].some(el => el !== self && el.classList.contains('vh-mega-hold'));
+    megaItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            // Re-entering this item (crossing the gap from the heading into its own panel
+            // leaves and re-enters it) ends its own hold. Suppressing here would hide the
+            // very panel the pointer just reached.
+            clearTimeout(holdTimers.get(item));
+            item.classList.remove('vh-mega-hold');
+            // Nothing else open: open at once, so a first hover never feels laggy.
+            if (!heldOther(item)) { dropHold(); return; }
+            // Another panel is still up. Wait to see whether the pointer stays here or is
+            // only passing through on its way to that panel.
+            item.classList.add('vh-mega-suppress');
+            clearTimeout(intentTimers.get(item));
+            intentTimers.set(item, setTimeout(() => {
+                item.classList.remove('vh-mega-suppress');
+                dropHold(); // it stayed: this item wins, and nothing stacks behind it
+            }, INTENT_MS));
+        });
+        item.addEventListener('mouseleave', () => {
+            clearTimeout(intentTimers.get(item));
+            item.classList.remove('vh-mega-suppress');
+            item.classList.add('vh-mega-hold');
+            clearTimeout(holdTimers.get(item));
+            holdTimers.set(item, setTimeout(() => item.classList.remove('vh-mega-hold'), HOLD_MS));
+        });
+    });
+    // Leaving the navbar entirely (the header buttons, the page below) ends the grace period
+    // at once, so a closed menu never lingers. Anything still inside `.vh-navbar` keeps it:
+    // the few pixels of pill padding between two items are not a menu item either, and
+    // dropping the hold there would close the panel while the pointer slides along the pill.
+    document.addEventListener('mouseover', e => {
+        if (!e.target.closest('.vh-navbar')) dropHold();
+    }, { passive: true });
 
     //---------------------- Star effect ----------------------
     const stars = document.querySelectorAll('.star-effect');

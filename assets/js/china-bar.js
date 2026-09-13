@@ -27,7 +27,7 @@
   // RTL pages (e.g. a CN visitor reading the Persian tree) — without this, an
   // RTL <html dir> would mirror the bar's layout and arrow.
   var BAR_HTML =
-    '<div id="mod-custom128" class="mod-custom custom" dir="ltr">' +
+    '<div id="vhChinaBar" dir="ltr">' +
       '<div id="chinaBar">' +
         '<div id="barTextWrapper">' +
           '<p class="txt-purple-l-1 me-lg-5">您想要购买高级代码吗？您在中国吗？</p>' +
@@ -48,7 +48,7 @@
   }
 
   function inject() {
-    if (document.getElementById('mod-custom128')) return;
+    if (document.getElementById('vhChinaBar')) return;
     var tmp = document.createElement('div');
     tmp.innerHTML = BAR_HTML;
     var bar = tmp.firstChild;
@@ -61,7 +61,7 @@
 
     // Keep the reserved space correct if the bar wraps/reflows on resize.
     var onResize = function () {
-      if (document.getElementById('mod-custom128')) setBarHeight(bar);
+      if (document.getElementById('vhChinaBar')) setBarHeight(bar);
     };
     window.addEventListener('resize', onResize);
 

@@ -40,8 +40,8 @@ Entry files live in `assets/css/*.scss` and need the two `---` front-matter line
 | `custom.scss` | `pages/_custom` | secondary/content pages |
 | `comparison.scss` | `pages/_comparison` | `/free-vpn/comparison/` only |
 
-Head load order: `bootstrap.css` → `helix-theme.css` → Poppins (Google Fonts) → page
-`extra_css` → `style.css` → AOS.
+Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hosted Poppins)
+→ page `extra_css` → `style.css` → `aos.css`.
 
 - Use palette/utility classes already defined in the theme (`vh-txt-grad-purple-400`,
   `vh-btn vh-btn-primary`, `section-title`, `section-space`, Bootstrap
@@ -86,7 +86,12 @@ legacy CMS `/templates`, `/media`, `/plugins` folders.
   `googletagmanager.com`)** — a CDN asset that silently fails there breaks the page for
   those users. So vendor external libs into `assets/js/vendor/` (or `assets/css`) and
   reference them locally. three.js (r87) is vendored at `assets/js/vendor/three.min.js` for
-  exactly this reason. **Known still-external (move them local when touched):** AOS JS/CSS
-  (`unpkg.com/aos@2.3.1`) and the Poppins web font (Google Fonts) — Poppins already uses
-  `display=swap` + non-blocking load so it degrades to the system font in CN, but
-  self-hosting is better. GTM is analytics and degrades gracefully, so it can stay remote.
+  exactly this reason. **Nothing is hot-linked any more.** AOS 2.3.1 is vendored as
+  `assets/css/aos.css` + `assets/js/vendor/aos.js`. Poppins is served from
+  `assets/fonts/poppins/` (15 woff2: weights 300-700 x latin, latin-ext, devanagari) through
+  the generated `assets/css/fonts.css` — rerun `python tools/fetch-fonts.py` to change the
+  weights or subsets, and never hand-edit either output. Each face keeps `font-display:swap`
+  and a `unicode-range`, so a visitor downloads only the subsets their text needs and the
+  system font shows until then. GTM is the one remote script left, and it now renders only
+  when `jekyll.environment == "production"`: a local `jekyll serve` used to send page views
+  and CTA clicks to the live GA4 property, which put our own testing in the reports.

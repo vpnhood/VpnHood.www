@@ -205,7 +205,14 @@ ul.vh-nav{
 /*----- Mega panel (absolute, full-width, shown on hover) -----*/
 .vh-mega-panel{
     position: absolute;
-    top: 100%;
+    // Anchored to the FIRST line of the header, not to its bottom edge. Below about 1400px
+    // the header row wraps: logo and nav pill on line one, the Log In / Go Premium / Download
+    // buttons on line two, all inside the fixed 136px header. `top: 100%` then opened the
+    // panel under the buttons, so the pointer had to cross a 70px strip of non-menu header
+    // to reach it and the :hover dropped on the way. The pill is centred in the 92px logo
+    // line and is 50px tall, so its bottom edge is 71px from the row's top; the panel starts
+    // 1px under it and its transparent padding-top keeps the pointer inside the item.
+    top: 72px;
     left: 50%;
     transform: translateX(-50%); // centre under the nav (panel anchors to the header .row)
     width: min(920px, 92vw);     // wide, but not the full container width
@@ -213,21 +220,38 @@ ul.vh-nav{
     display: none;
     padding-top: 20px;
 }
-// Transparent hover-bridge over the gap between the nav heading and the panel, so moving
-// the mouse from the heading down into the panel doesn't drop the :hover (panel collapse).
+// While the header is wrapped the panel covers the buttons line entirely, rather than
+// leaving "Log In / Go Pre" peeking out beside a 920px panel.
+@media (max-width: 1399px) {
+    .vh-mega-panel{
+        width: 100%;
+        padding-top: 10px; // the buttons line starts 91px down; the visible panel must start above it
+    }
+}
+// Transparent hover-bridge that overlaps the nav pill by a few pixels, so the :hover cannot
+// drop on the single row of pixels between the item's box and the panel's box.
 .vh-mega-panel:before{
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     bottom: 100%;
-    height: 34px;
+    height: 8px;
 }
-.vh-mega-menu:hover>.vh-mega-panel{
+// `.vh-mega-hold` is set by vh-general.js for 250ms after the pointer leaves the item, so a
+// layout the bridge does not cover (a wrapped header, a promo bar) still keeps the panel up
+// long enough for the pointer to reach it.
+.vh-mega-menu:is(:hover, .vh-mega-hold)>.vh-mega-panel{
     display: block;
 }
+// Set by vh-general.js for 150ms when the pointer lands on an item while another panel is
+// open, so crossing this item on the way to that panel does not swap the menu underneath the
+// pointer. Must follow the rule above: same specificity, later wins.
+.vh-mega-menu.vh-mega-suppress>.vh-mega-panel{
+    display: none;
+}
 // Animation lives on the inner panel so it doesn't override the panel's centring transform.
-.vh-mega-menu:hover .vh-mega-inner{
+.vh-mega-menu:is(:hover, .vh-mega-hold) .vh-mega-inner{
     animation: spFadeInUp 400ms ease-in;
 }
 /*Mega menu wrapper*/
@@ -267,7 +291,7 @@ ul.vh-nav{
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
 }
-body:has(.vh-mega-menu:hover) #vhOverlay{
+body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
     opacity: 1;
     visibility: visible;
 }

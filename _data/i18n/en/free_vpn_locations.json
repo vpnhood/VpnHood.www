@@ -19,7 +19,7 @@
   "pick_reach_title": "For reach: <b>the one where the content lives</b>",
   "pick_reach_desc": "If a service only works from one country, that is the country to connect from. Split tunneling by country sends just that traffic through it and leaves the rest alone.",
   "pick_reach_link": "Split tunneling by country",
-  "more_title": "Global coverage",
+  "more_title": "From the Americas to Oceania",
   "more_desc": "Servers sit close to every region and culture we serve, from the Americas to Oceania, so there is usually a country near you for speed and the right one for reach. If yours is missing, tell us which country you need, and whether it is for speed or for reaching something specific, because that changes where the server should be.",
   "more_cta": "Ask for a location",
   "note_ads": "The free plan is funded by ads, so it is not available in China or in other countries where ads are not served. That is about where you are, not where the server is. Premium has no such limit.",

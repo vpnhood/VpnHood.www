@@ -39,7 +39,7 @@ Dark is the default, light is opt-in via `<html data-theme>`. `_sass/theme/_defa
 
 ## Assets — [.docs/css-and-assets.md](.docs/css-and-assets.md)
 
-Everything is under `/assets`. The only vendored framework JS is the stock Bootstrap 5 bundle; **no jQuery**; our scripts are vanilla (`main.js`, `globe.js`, `vh-general.js`, `china-bar.js`, `lang.js`, `theme.js`). Known still-external, move local when touched: AOS from unpkg, Poppins from Google Fonts. GTM may stay remote.
+Everything is under `/assets`. The only vendored framework JS is the stock Bootstrap 5 bundle; **no jQuery**; our scripts are vanilla (`main.js`, `globe.js`, `vh-general.js`, `china-bar.js`, `lang.js`, `theme.js`). Nothing is hot-linked any more: AOS is `assets/css/aos.css` + `assets/js/vendor/aos.js`, and Poppins is self-hosted from `assets/fonts/poppins/` through `assets/css/fonts.css` (regenerate with `python tools/fetch-fonts.py`). GTM renders **only in production** (`jekyll.environment`), so a local serve never reports to the live GA4 property.
 
 ## Components — [.docs/components.md](.docs/components.md)
 
@@ -73,7 +73,7 @@ Posts come from the private `vpnhood/VpnHood.Blog` repo at build time (read-only
 - Section head: `<div class="section-start-text" data-aos="fade-up">` → `<div class="section-label"><p class="vh-txt-grad-purple-400">eyebrow</p></div>` → `<h2 class="section-title vh-txt-grad-purple-400">` → `<p class="section-desc">`. Keep the outline honest: one H1, no skipped levels.
 - Buttons: `vh-btn vh-btn-primary` / `vh-btn-secondary`; text buttons `vh-text-btn vh-txt-purple-300`. Cards: `vh-card-dark vh-feature-panel` with an `_includes/icons/*.svg` in `.vh-feature-icon`.
 - Animations are AOS (`data-aos`, `data-aos-delay`), started by the `vhPlayAnimate` event in the footer.
-- Desktop mega-menu opens on CSS hover; the mobile menu is Bootstrap Offcanvas + Collapse; the FAQ accordion is Collapse.
+- Desktop mega-menu opens on CSS hover (a 72px hover bridge spans the gap from the nav pill to the panel, and `vh-general.js` holds it open 250ms after the pointer leaves, via `.vh-mega-hold`); the mobile menu is Bootstrap Offcanvas + Collapse; the FAQ accordion is Collapse.
 - In-page anchor targets need `scroll-margin-top` — `#sp-header` is fixed and 136px tall. `#compareTable` and `#faq` already have it in `_default.scss`.
 - External `target="_blank"` links announce the new tab (`{{ tc.new_tab }}` in a `.visually-hidden` span).
 - Local builds render absolute URLs as `http://localhost:4000`; don't "fix" them.
