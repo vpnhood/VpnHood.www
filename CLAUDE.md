@@ -74,6 +74,6 @@ Posts come from the private `vpnhood/VpnHood.Blog` repo at build time (read-only
 - Buttons: `vh-btn vh-btn-primary` / `vh-btn-secondary`; text buttons `vh-text-btn vh-txt-purple-300`. Cards: `vh-card-dark vh-feature-panel` with an `_includes/icons/*.svg` in `.vh-feature-icon`.
 - Animations are AOS (`data-aos`, `data-aos-delay`), started by the `vhPlayAnimate` event in the footer.
 - Desktop mega-menu opens on CSS hover (a 72px hover bridge spans the gap from the nav pill to the panel, and `vh-general.js` holds it open 250ms after the pointer leaves, via `.vh-mega-hold`); the mobile menu is Bootstrap Offcanvas + Collapse; the FAQ accordion is Collapse.
-- In-page anchor targets need `scroll-margin-top` — `#sp-header` is fixed and 136px tall. `#compareTable` and `#faq` already have it in `_default.scss`.
+- In-page anchor targets need `scroll-margin-top` — `#sp-header` is fixed and up to 136px tall (91px on one row; the pill uses 10px item padding and the header chip is globe-only so all languages fit from 1400px up, and below 1400px the header reclaims the side margins so most still fit down to 1200px). `#compareTable` and `#faq` already have it in `_default.scss`.
 - External `target="_blank"` links announce the new tab (`{{ tc.new_tab }}` in a `.visually-hidden` span).
 - Local builds render absolute URLs as `http://localhost:4000`; don't "fix" them.

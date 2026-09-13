@@ -52,7 +52,8 @@ Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hos
   re-point.
 - Never edit anything under `_site/`. SCSS style: `//` comments, kebab-case class names.
 - In-page anchor targets need `scroll-margin-top`: `#sp-header` is `position: fixed` and
-  136px tall on desktop, so a bare `#id` jump lands the section's top behind the nav.
+  up to 136px tall on desktop (91px on one row; it wraps to two below 1200px, and in the
+  longer languages up to 1399px), so a bare `#id` jump lands the section's top behind the nav.
   `#compareTable` and `#faq` carry the rule in `_default.scss`; add any new anchor target to
   that selector list.
 

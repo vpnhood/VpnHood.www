@@ -205,11 +205,12 @@ ul.vh-nav{
 /*----- Mega panel (absolute, full-width, shown on hover) -----*/
 .vh-mega-panel{
     position: absolute;
-    // Anchored to the FIRST line of the header, not to its bottom edge. Below about 1400px
-    // the header row wraps: logo and nav pill on line one, the Log In / Go Premium / Download
-    // buttons on line two, all inside the fixed 136px header. `top: 100%` then opened the
-    // panel under the buttons, so the pointer had to cross a 70px strip of non-menu header
-    // to reach it and the :hover dropped on the way. The pill is centred in the 92px logo
+    // Anchored to the FIRST line of the header, not to its bottom edge. Below 1200px (and
+    // in the longer languages, German to Russian, up to 1399px) the header row wraps: logo
+    // and nav pill on line one, the Log In / Go Premium / Download buttons on line two, all
+    // inside the fixed 136px header. `top: 100%` then opened the panel under the buttons,
+    // so the pointer had to cross a 70px strip of non-menu header to reach it and the
+    // :hover dropped on the way. The pill is centred in the 92px logo
     // line and is 50px tall, so its bottom edge is 71px from the row's top; the panel starts
     // 1px under it and its transparent padding-top keeps the pointer inside the item.
     top: 72px;
@@ -308,7 +309,10 @@ body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
     font-size: 14px;
     line-height:40px;
     margin: 0;
-    padding: 0 17px;
+    // 10px, not the Helix 17px: with 17px the pill plus Log In / Go Premium / Download
+    // needed ~1410px in German and French, so five languages wrapped the header onto two
+    // rows at every desktop width. At 10px all thirteen fit on one row from 1400px up.
+    padding: 0 10px;
 }
 .vh-nav>.vh-nav-item>a:hover,
 .vh-nav>.vh-nav-item>span:hover {
@@ -406,6 +410,12 @@ body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
 .vh-lang-menu .dropdown-toggle{
     gap: 0.4rem;
     padding: 0 0.75rem;
+}
+// In the desktop header the pill is globe + caret only: the two-letter code cost ~30px
+// that the longer languages (German, French) need to keep the header on one row. The
+// off-canvas copy keeps the code, and the dropdown marks the current language anyway.
+#sp-header .vh-lang-menu .text-uppercase{
+    display: none;
 }
 .vh-theme-toggle{
     width: 34px;
@@ -537,6 +547,18 @@ body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
 #sp-copyright{
     font-size: 13px;
 }
+// Laptop widths (992-1399px): Bootstrap caps .container at 960/1140px, but the header
+// needs ~1125px in English and up to ~1320px in German, so the right-hand buttons wrapped
+// onto a second row and the header grew from 91px to 136px on every 1280/1366 laptop.
+// Let the header use the side margins instead: one row in every language at 1366px and
+// in all but German, French, Spanish and Russian at 1280px. Nothing is removed.
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    #sp-header .container{
+        max-width: none;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
 @media (max-width: 1199px) {
     .vh-nav>.vh-nav-item>a,
     .vh-nav>.vh-nav-item>span {
@@ -662,9 +684,10 @@ iconify-icon {
 }
 // RTL: inline icons that depict a direction (arrows) declare class="vh-rtl-mirror"
 // on their <svg> and are mirrored here so they point into the reading direction.
-// In-page anchor targets. #sp-header is position:fixed and 136px tall on desktop,
-// so a jump to #compareTable or #faq landed the section's top at y=0, i.e. entirely
-// behind the nav - the compare table lost its whole Free/Premium header row.
+// In-page anchor targets. #sp-header is position:fixed and up to 136px tall on desktop
+// (91px on one row, 136px when it wraps), so a jump to #compareTable or #faq landed the
+// section's top at y=0, i.e. entirely behind the nav - the compare table lost its whole
+// Free/Premium header row.
 #compareTable,
 #faq,
 #unlimited,
