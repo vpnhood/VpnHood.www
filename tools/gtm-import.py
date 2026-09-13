@@ -5,10 +5,10 @@
 #   python tools/gtm-import.py --dry-run     # read-only: shows what the workspace holds
 #   python tools/gtm-import.py --publish     # create what is missing, then version + publish
 #
-# Auth: impersonates gtm-www@vpnhood-tools.iam.gserviceaccount.com through your own
+# Auth: impersonates ai-agent@vpnhood-tools.iam.gserviceaccount.com through your own
 # gcloud login (the org policy forbids service account keys). You need
 # roles/iam.serviceAccountTokenCreator on that SA, and the SA needs Publish permission
-# on the container in GTM user management. A key file at ~/.secrets/gtm-www.json is
+# on the container in GTM user management. A key file at ~/.secrets/ai-agent.json is
 # used instead when one exists (--key PATH to point elsewhere).
 import io, json, os, subprocess, sys, urllib.request, urllib.error
 sys.stdout.reconfigure(encoding="utf-8")
@@ -19,11 +19,11 @@ DRY = "--dry-run" in ARGS
 CONTAINER_PUBLIC_ID = "GTM-M39NR6ZS"
 EXPORT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gtm-cta-tracking.json")
 API = "https://tagmanager.googleapis.com/tagmanager/v2/"
-SA = "gtm-www@vpnhood-tools.iam.gserviceaccount.com"
+SA = "ai-agent@vpnhood-tools.iam.gserviceaccount.com"
 SCOPES = ["https://www.googleapis.com/auth/" + s for s in
           ("tagmanager.readonly", "tagmanager.edit.containers", "tagmanager.edit.containerversions", "tagmanager.publish")]
 
-KEY = ARGS[ARGS.index("--key") + 1] if "--key" in ARGS else os.path.expanduser("~/.secrets/gtm-www.json")
+KEY = ARGS[ARGS.index("--key") + 1] if "--key" in ARGS else os.path.expanduser("~/.secrets/ai-agent.json")
 if os.path.exists(KEY) and os.path.getsize(KEY) > 0:
     from google.oauth2 import service_account
     from google.auth.transport.requests import Request

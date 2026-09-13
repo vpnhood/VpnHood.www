@@ -114,22 +114,33 @@ to Google directly, and the click is never delayed. Tagged today: the header's
 `pricing-buy-12-months`. Keep ids kebab-case and `<place>-<action>`, so the same action
 in two places stays comparable.
 
-Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it. The GTM side is
-`tools/gtm-cta-tracking.json`, a container export holding the two Data Layer Variables
-(`DLV - vh_cta`, `DLV - vh_href`), the Custom Event trigger on `vh_cta_click`, and a GA4
-Event tag that sends `cta_click` with `cta_id` and `cta_href` to the property the
-container already loads (`G-DWH7NV15XQ`, read from the public `gtm.js`). One-time setup:
+Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it, and that side is
+live: two Data Layer Variables (`DLV - vh_cta`, `DLV - vh_href`), a Custom Event trigger
+on `vh_cta_click`, and a GA4 Event tag sending `cta_click` with `cta_id` and `cta_href`
+to `G-DWH7NV15XQ` — the **www.vpnhood.com** property, `properties/371824639`, stream
+"VpnHood WebSite". Both parameters are registered there as event-scoped custom
+dimensions ("CTA id", "CTA destination"); without that a parameter is collected but never
+appears in a report, and registering one is not retroactive.
 
-1. **GTM → Admin → Import Container** — choose the file, the default workspace,
-   **Merge**, *Rename conflicting*; review that it adds 1 tag, 1 trigger, 2 variables;
-   **Submit → Publish**.
-2. **GA4 Admin → Custom definitions** — register `cta_id` as an event-scoped custom
-   dimension (and `cta_href` if wanted), or the parameter is collected but never shown
-   in reports.
+Two scripts own that configuration, so it is reproducible rather than a memory of clicks:
 
-The GTM API was not an option: the same restricted-scope OAuth block that stopped the
-Analytics API stops `tagmanager.edit.containers`, and an import is the supported way to
-move configuration between containers anyway.
+- `tools/gtm-import.py` applies `tools/gtm-cta-tracking.json` (the container export) over
+  the Tag Manager API. `--dry-run` reports what the container holds, `--publish` creates
+  what is missing and publishes a version. It is idempotent — an entity whose name exists
+  is reused — and because creating a version consumes its workspace, it probes for a
+  writable one and makes its own if every workspace is spent. Importing the JSON by hand
+  (**GTM → Admin → Import Container → Merge → *Rename conflicting* → Publish**) is the
+  same thing without the API.
+- `tools/ga4-dimensions.py` finds the property by measurement id and registers the
+  dimensions; `--create` writes, no flag reports.
+
+Both act as `ai-agent@vpnhood-tools.iam.gserviceaccount.com`, a **keyless** service
+account in the `vpnhood-tools` project: the org policy forbids service-account keys, so a
+signed-in human impersonates it (`roles/iam.serviceAccountTokenCreator` on the account)
+and the automation can never outlive that person's own access. Grant it **Publish** on the
+GTM container and **Editor** on the GA4 property — Viewer and Analyst can read but cannot
+create definitions. A plain `gcloud auth login` cannot replace it: Google blocks the Cloud
+SDK's own OAuth client from requesting Tag Manager scopes.
 
 Then Reports → Engagement → Events → `cta_click`, broken down by `cta_id`, answers
 "what does the header slot earn" with real clicks instead of reasoning.
