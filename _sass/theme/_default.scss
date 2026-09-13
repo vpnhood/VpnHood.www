@@ -241,7 +241,9 @@ ul.vh-nav{
 }
 // `.vh-mega-hold` is set by vh-general.js for 250ms after the pointer leaves the item, so a
 // layout the bridge does not cover (a wrapped header, a promo bar) still keeps the panel up
-// long enough for the pointer to reach it.
+// long enough for the pointer to reach it. The same class is the keyboard path: vh-general.js
+// sets it while the label or anything in the panel has keyboard focus (a CSS-only
+// :has(:focus-visible) drops the panel between the label's blur and the first link's focus).
 .vh-mega-menu:is(:hover, .vh-mega-hold)>.vh-mega-panel{
     display: block;
 }
@@ -299,10 +301,16 @@ body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
 #sp-logo a{
     color: var(--vh-text);
 }
-.vh-mega-toggle{
+// The Free VPN and Self-Hosted labels are links to their hub pages; Resources has no hub,
+// so its label is a <button> (focusable, so the keyboard can open its panel) styled like
+// the rest of the pill.
+button.vh-mega-toggle{
     cursor: default;
+    background: transparent;
+    border: 0;
 }
 .vh-nav>.vh-nav-item>a,
+.vh-nav>.vh-nav-item>button,
 .vh-nav>.vh-nav-item>span {
     display: inline-block;
     color: var(--vh-text-dim);
@@ -315,10 +323,19 @@ body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
     padding: 0 10px;
 }
 .vh-nav>.vh-nav-item>a:hover,
+.vh-nav>.vh-nav-item>button:hover,
 .vh-nav>.vh-nav-item>span:hover {
     color: var(--vh-text);
 }
+.vh-nav>.vh-nav-item>a:focus-visible,
+.vh-nav>.vh-nav-item>button:focus-visible{
+    color: var(--vh-text);
+    outline: 2px solid var(--vh-accent-ink);
+    outline-offset: -2px;
+    border-radius: 50px;
+}
 .vh-nav>.vh-nav-item.active>a,
+.vh-nav>.vh-nav-item.active>button,
 .vh-nav>.vh-nav-item.active>span{
     color: var(--vh-on-accent);
     font-weight: 500;
@@ -561,6 +578,7 @@ body:has(.vh-mega-menu:hover, .vh-mega-menu.vh-mega-hold) #vhOverlay{
 }
 @media (max-width: 1199px) {
     .vh-nav>.vh-nav-item>a,
+    .vh-nav>.vh-nav-item>button,
     .vh-nav>.vh-nav-item>span {
         padding-left: 8px;
         padding-right: 8px;

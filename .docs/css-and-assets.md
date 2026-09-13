@@ -61,8 +61,14 @@ Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hos
 
 The top nav lives in `header.html`/`footer.html` and is styled by the `vh-*` rules in
 `_sass/theme/_default.scss`. The **desktop mega-menu** opens on **hover via CSS**
-(`.vh-mega-menu:hover`), with the `#vhOverlay` blur driven by `body:has(.vh-mega-menu:hover)`
-— no JS. The **mobile menu** is a Bootstrap **Offcanvas** (`#mobileMenu`) with **Collapse**
+(`.vh-mega-menu:hover`) or the `.vh-mega-hold` class, with the `#vhOverlay` blur driven by
+the same `body:has(...)` selector. `vh-general.js` sets the class for pointer grace (250ms
+after the pointer leaves) and for keyboard focus (while anything in the item has
+`:focus-visible`; a CSS-only `:has(:focus-visible)` closes the panel between the label's blur
+and the first link's focus), `.vh-mega-suppress` for hover intent and Escape. The Free VPN and
+Self-Hosted
+labels are links to `/free-vpn/` and `/self-hosted-vpn/`; Resources has no hub page, so its
+label is a `<button>` styled like the pill's links. The **mobile menu** is a Bootstrap **Offcanvas** (`#mobileMenu`) with **Collapse**
 submenus (`data-bs-*`); `main.js` mirrors its open state onto the header burger
 (hamburger↔X) and lifts the header above the backdrop. The **FAQ accordion** is the other
 Bootstrap-JS feature (Collapse).

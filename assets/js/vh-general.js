@@ -28,9 +28,10 @@ document.addEventListener('click', function (e) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // The desktop mega-menu opens on CSS :hover, and the overlay (#vhOverlay) follows it in
-    // CSS too, so the menu still works with no JS at all. JS adds the two things hover alone
-    // cannot express, both about a pointer that is on its way somewhere:
+    // The desktop mega-menu opens on CSS :hover (or keyboard focus), and the overlay
+    // (#vhOverlay) follows it in CSS too, so the menu still works with no JS at all. JS adds
+    // the two things hover alone cannot express, both about a pointer that is on its way
+    // somewhere, plus Escape for the keyboard:
     //
     //   .vh-mega-hold     keeps a panel open for 250ms after the pointer leaves the item, so
     //                     a gap the CSS hover bridge cannot predict (a wrapped header, a
@@ -84,6 +85,33 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('mouseover', e => {
         if (!e.target.closest('.vh-navbar')) dropHold();
     }, { passive: true });
+    // Keyboard. The label is a link or a button, so Tab reaches it, and a keyboard focus
+    // anywhere in the item holds the panel open (:focus-visible, so a mouse click on the
+    // label never pins it). The hold is what carries the panel through the blur/focus
+    // handoff from the label into its first link: a pure CSS :has(:focus-visible) closes it
+    // between the two and the link is unfocusable when focus arrives. Escape shuts the panel
+    // via .vh-mega-suppress and returns focus to the label; the class clears once focus
+    // leaves the item, so Shift+Tab back onto the label opens it again, and so does
+    // Enter/Space on the Resources button.
+    megaItems.forEach(item => {
+        const toggle = item.querySelector('.vh-mega-toggle');
+        item.addEventListener('focusin', e => {
+            if (!e.target.matches(':focus-visible')) return;
+            clearTimeout(holdTimers.get(item));
+            item.classList.add('vh-mega-hold');
+        });
+        item.addEventListener('focusout', e => {
+            if (!item.contains(e.relatedTarget)) item.classList.remove('vh-mega-hold', 'vh-mega-suppress');
+        });
+        item.addEventListener('keydown', e => {
+            if (e.key !== 'Escape') return;
+            item.classList.add('vh-mega-suppress');
+            toggle.focus();
+        });
+        toggle.addEventListener('click', e => {
+            if (e.detail === 0) item.classList.remove('vh-mega-suppress'); // keyboard-initiated
+        });
+    });
 
     //---------------------- Star effect ----------------------
     const stars = document.querySelectorAll('.star-effect');

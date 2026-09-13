@@ -314,7 +314,7 @@
                           <li
                             class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'free-vpn' %} active{% endif %}"
                           >
-                            <span class="vh-nav-link vh-mega-toggle">{{ tc.nav_free_vpn }}</span>
+                            <a href="{{ vh_base }}/free-vpn/" class="vh-nav-link vh-mega-toggle">{{ tc.nav_free_vpn }}</a>
                             <div class="vh-mega-panel">
                               <div class="vh-mega-inner">
                                 <div class="row">
@@ -416,7 +416,7 @@
                           <li
                             class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'self-hosted' %} active{% endif %}"
                           >
-                            <span class="vh-nav-link vh-mega-toggle">{{ tc.nav_self_hosted }}</span>
+                            <a href="{{ vh_base }}/self-hosted-vpn/" class="vh-nav-link vh-mega-toggle">{{ tc.nav_self_hosted }}</a>
                             <div class="vh-mega-panel">
                               <div class="vh-mega-inner">
                                 <div class="row">
@@ -519,7 +519,7 @@
                           <li
                             class="vh-nav-item vh-mega-menu has-child-group{% if page.nav_active == 'resources' %} active{% endif %}"
                           >
-                            <span class="vh-nav-link vh-mega-toggle">{{ tc.nav_resources }}</span>
+                            <button type="button" class="vh-nav-link vh-mega-toggle">{{ tc.nav_resources }}</button>
                             <div class="vh-mega-panel">
                               <div class="vh-mega-inner">
                                 <div class="row">
