@@ -19,7 +19,7 @@
   "pick_reach_title": "Pour l'accès aux contenus : <b>le pays d'origine</b>",
   "pick_reach_desc": "Si un service n'est accessible que depuis un pays spécifique, connectez-vous à celui-ci. Le Split tunneling par pays permet d'acheminer uniquement ce trafic via le VPN sans ralentir le reste.",
   "pick_reach_link": "Split tunneling par pays",
-  "more_title": "Couverture mondiale",
+  "more_title": "Des Amériques à l'Océanie",
   "more_desc": "Nos serveurs sont déployés au plus près de chaque région, des Amériques à l'Océanie. Vous disposez ainsi toujours d'un emplacement proche pour la vitesse et adapté à vos besoins d'accès. Si votre pays manque à l'appel, faites-le nous savoir en précisant si vous cherchez la rapidité ou l'accès à un contenu spécifique, afin de nous aider à positionner le serveur idéal.",
   "more_cta": "Suggérer un pays",
   "note_ads": "L'offre gratuite étant financée par la publicité, elle n'est pas disponible en Chine ni dans les pays où les annonces ne sont pas diffusées. Cette limite dépend de votre localisation, pas de celle du serveur. L'offre Premium n'a aucune restriction.",
