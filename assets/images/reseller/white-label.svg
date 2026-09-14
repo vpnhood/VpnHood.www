@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhWhiteLabelArtTitle">
+<title id="vhWhiteLabelArtTitle">A phone with a blank app icon and an empty name plate, a price tag hanging from its corner, and three colour swatches</title>
+<defs>
+  <linearGradient id="wBody" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="wIcon" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8257f5"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <linearGradient id="wTag" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8ef7e2"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <radialGradient id="wAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="wSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="wSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="420" fill="url(#wAmbient)"/>
+
+<!-- phone -->
+<rect x="330" y="120" width="340" height="700" rx="54" fill="url(#wBody)"/>
+<rect x="330" y="120" width="340" height="700" rx="54" fill="none" stroke="#8257f5" stroke-opacity=".5" stroke-width="3"/>
+<rect x="354" y="160" width="292" height="620" rx="34" fill="#150a3a"/>
+<rect x="450" y="176" width="100" height="14" rx="7" fill="#2b1470"/>
+
+<!-- the icon slot: yours to fill -->
+<rect x="418" y="262" width="164" height="164" rx="42" fill="url(#wIcon)"/>
+<rect x="418" y="262" width="164" height="164" rx="42" fill="url(#wIcon)" filter="url(#wSoft)" opacity=".5"/>
+<rect x="404" y="248" width="192" height="192" rx="50" fill="none" stroke="#c0a4ff" stroke-opacity=".8" stroke-width="4" stroke-dasharray="14 12"/>
+
+<!-- the name plate: empty on purpose -->
+<rect x="404" y="474" width="192" height="40" rx="20" fill="#2b1470" stroke="#c0a4ff" stroke-opacity=".8" stroke-width="3" stroke-dasharray="12 10"/>
+<rect x="440" y="540" width="120" height="14" rx="7" fill="#2b1470"/>
+<rect x="470" y="570" width="60" height="14" rx="7" fill="#2b1470"/>
+
+<!-- connect button, the one thing already there -->
+<circle cx="500" cy="690" r="52" fill="#150a3a" stroke="#3ce8c8" stroke-opacity=".7" stroke-width="4"/>
+<circle cx="500" cy="690" r="52" fill="none" stroke="#3ce8c8" stroke-width="6" filter="url(#wSoft)" opacity=".5"/>
+<path d="M500 662 v30" stroke="#8ef7e2" stroke-width="9" stroke-linecap="round"/>
+<path d="M480 675 a28 28 0 1 0 40 0" fill="none" stroke="#8ef7e2" stroke-width="9" stroke-linecap="round"/>
+
+<!-- price tag hanging off the corner -->
+<path d="M652 148 C 720 120 760 160 780 210" fill="none" stroke="#c0a4ff" stroke-opacity=".8" stroke-width="5" stroke-linecap="round"/>
+<g transform="rotate(28 800 300)">
+  <path d="M740 230 h130 a26 26 0 0 1 26 26 v100 a26 26 0 0 1 -26 26 h-130 l-52 -76 z" fill="url(#wTag)"/>
+  <path d="M740 230 h130 a26 26 0 0 1 26 26 v100 a26 26 0 0 1 -26 26 h-130 l-52 -76 z" fill="url(#wTag)" filter="url(#wSoft)" opacity=".55"/>
+  <circle cx="742" cy="306" r="13" fill="#150a3a"/>
+  <rect x="784" y="292" width="76" height="14" rx="7" fill="#150a3a" fill-opacity=".55"/>
+  <rect x="784" y="318" width="48" height="14" rx="7" fill="#150a3a" fill-opacity=".35"/>
+</g>
+
+<!-- your colours -->
+<g>
+  <circle cx="150" cy="720" r="58" fill="#5b2fd6"/>
+  <circle cx="222" cy="720" r="58" fill="#8257f5" fill-opacity=".92"/>
+  <circle cx="294" cy="720" r="58" fill="#3ce8c8" fill-opacity=".92"/>
+  <circle cx="222" cy="720" r="120" fill="#8b5cf6" opacity=".22" filter="url(#wSofter)"/>
+</g>
+
+<ellipse cx="500" cy="860" rx="330" ry="66" fill="url(#wAmbient)" opacity=".6" filter="url(#wSofter)"/>
+</svg>

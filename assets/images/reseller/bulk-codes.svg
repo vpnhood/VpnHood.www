@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhBulkArtTitle">
+<title id="vhBulkArtTitle">A fanned stack of access-code cards, the front one showing a key and a code</title>
+<defs>
+  <linearGradient id="bCard" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".97"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".97"/></linearGradient>
+  <linearGradient id="bKey" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#3ce8c8"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <linearGradient id="bStrip" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5"/><stop offset="1" stop-color="#c0a4ff"/></linearGradient>
+  <radialGradient id="bAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="bSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="bSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="400" fill="url(#bAmbient)"/>
+
+<!-- the cards behind: many of these -->
+<g transform="rotate(-14 500 540)" opacity=".45">
+  <rect x="270" y="360" width="460" height="280" rx="30" fill="url(#bCard)" stroke="#8257f5" stroke-opacity=".5" stroke-width="3"/>
+</g>
+<g transform="rotate(-6 500 540)" opacity=".7">
+  <rect x="270" y="380" width="460" height="280" rx="30" fill="url(#bCard)" stroke="#8257f5" stroke-opacity=".5" stroke-width="3"/>
+</g>
+
+<!-- the front card -->
+<g transform="rotate(4 500 540)">
+  <rect x="270" y="400" width="460" height="280" rx="30" fill="url(#bCard)"/>
+  <rect x="270" y="400" width="460" height="280" rx="30" fill="none" stroke="#8257f5" stroke-opacity=".7" stroke-width="3"/>
+  <rect x="270" y="400" width="460" height="280" rx="30" fill="none" stroke="#8257f5" stroke-width="8" filter="url(#bSoft)" opacity=".35"/>
+
+  <!-- key mark -->
+  <g transform="rotate(-40 356 486)">
+    <circle cx="356" cy="486" r="30" fill="none" stroke="url(#bKey)" stroke-width="12"/>
+    <rect x="382" y="478" width="96" height="16" rx="8" fill="url(#bKey)"/>
+    <rect x="440" y="492" width="14" height="22" rx="5" fill="url(#bKey)"/>
+    <rect x="464" y="492" width="14" height="18" rx="5" fill="url(#bKey)"/>
+  </g>
+  <circle cx="356" cy="486" r="60" fill="#3ce8c8" opacity=".25" filter="url(#bSoft)"/>
+
+  <!-- the code, as a strip -->
+  <g fill="url(#bStrip)">
+    <rect x="450" y="456" width="52" height="20" rx="10"/>
+    <rect x="514" y="456" width="36" height="20" rx="10" opacity=".85"/>
+    <rect x="562" y="456" width="64" height="20" rx="10" opacity=".9"/>
+    <rect x="638" y="456" width="44" height="20" rx="10" opacity=".8"/>
+    <rect x="450" y="492" width="40" height="20" rx="10" opacity=".85"/>
+    <rect x="502" y="492" width="70" height="20" rx="10"/>
+    <rect x="584" y="492" width="48" height="20" rx="10" opacity=".8"/>
+    <rect x="644" y="492" width="38" height="20" rx="10" opacity=".9"/>
+  </g>
+
+  <!-- valid: one mint tick -->
+  <circle cx="660" cy="620" r="30" fill="#150a3a" stroke="#3ce8c8" stroke-opacity=".8" stroke-width="4"/>
+  <path d="M646 620 l10 10 l20 -22" fill="none" stroke="#8ef7e2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="316" y="596" width="180" height="16" rx="8" fill="#2b1470"/>
+  <rect x="316" y="626" width="120" height="16" rx="8" fill="#2b1470"/>
+</g>
+
+<ellipse cx="500" cy="840" rx="340" ry="66" fill="url(#bAmbient)" opacity=".6" filter="url(#bSofter)"/>
+</svg>

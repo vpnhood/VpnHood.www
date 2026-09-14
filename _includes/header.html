@@ -410,8 +410,60 @@
                               </div>
                             </div>
                           </li>
-                          <li class="vh-nav-item{% if page.nav_active == 'reseller' %} active{% endif %}">
-                            <a href="{{ vh_base }}/reseller/">{{ tc.nav_reseller }}</a>
+                          <li
+                            class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'reseller' %} active{% endif %}"
+                          >
+                            <a href="{{ vh_base }}/reseller/" class="vh-nav-link vh-mega-toggle">{{ tc.nav_reseller }}</a>
+                            <div class="vh-mega-panel">
+                              <div class="vh-mega-inner">
+                                <div class="row">
+                                  <div class="col-sm-5">
+                                    <ul class="vh-mega-group">
+                                      <li class="item-401 module">
+                                        <div class="sp-module">
+                                          <div class="sp-module-content">
+                                            <div>
+                                              <img
+                                                class="rounded-4"
+                                                src="/assets/images/general/connect-logo.svg"
+                                                width="67"
+                                                height="67"
+                                                alt="{{ tc.connect_logo_alt }}"
+                                              />
+                                              <p class="vh-txt-purple-100 mt-3 mb-0 small">{{ tc.mega_reseller_desc }}</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="col-sm-7">
+                                    <ul class="vh-mega-group">
+                                      <li class="item-402 menu_item item-header">
+                                        <a href="{{ vh_base }}/reseller/"
+                                          >{{ tc.nav_reseller_overview }}<span class="vh-mega-sub">{{ tc.nav_reseller_overview_sub }}</span></a
+                                        >
+                                      </li>
+                                      <li class="item-403 menu_item item-header">
+                                        <a href="{{ vh_base }}/reseller/partner/"
+                                          >{{ tc.nav_reseller_partner_hub }}<span class="vh-mega-sub">{{ tc.nav_reseller_partner_hub_sub }}</span></a
+                                        >
+                                      </li>
+                                      <li class="item-404 menu_item item-header">
+                                        <a href="{{ vh_base }}/reseller/white-label/"
+                                          >{{ tc.nav_reseller_white_label }}<span class="vh-mega-sub">{{ tc.nav_reseller_white_label_sub }}</span></a
+                                        >
+                                      </li>
+                                      <li class="item-405 menu_item item-header">
+                                        <a href="{{ vh_base }}/reseller/affiliate/"
+                                          >{{ tc.nav_reseller_affiliate }}<span class="vh-mega-sub">{{ tc.nav_reseller_affiliate_sub }}</span></a
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </li>
                           <li
                             class="vh-nav-item vh-mega-menu has-graphic{% if page.nav_active == 'self-hosted' %} active{% endif %}"
@@ -581,6 +633,9 @@
                                         <ul
                                           class="vh-mega-group-child"
                                         >
+                                          <li>
+                                            <a href="{{ vh_base }}/security-audit/">{{ tc.nav_security_audit }}</a>
+                                          </li>
                                           <li>
                                             <a
                                               rel="noopener noreferrer"

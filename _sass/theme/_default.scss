@@ -627,6 +627,14 @@ iconify-icon {
 .section-start-text{
     text-align: center;
 }
+// A section head owns the gap down to whatever it introduces. Without this the
+// head ends flush against the next block, and a Bootstrap .row pulls itself up
+// by its own gutter on top of that, so the first card overlaps the last line.
+// Heads that want a different gap still win (mb-* utilities carry !important),
+// and an adjacent mt-* collapses with this rather than adding to it.
+.section-start-text:not(:last-child){
+    margin-bottom: 3rem;
+}
 .section-label{
     background-color: rgba(var(--purple-600-rgb), 0.48);
     border: 1px solid rgba(var(--purple-200-rgb), 0.48);

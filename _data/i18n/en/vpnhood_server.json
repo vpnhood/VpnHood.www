@@ -10,7 +10,7 @@
   "f_engine_title": "Steadfast by design",
   "f_engine_desc": "VpnHood! ENGINE keeps the connection encrypted and stable across hostile networks, with IPv4 and IPv6 support.",
   "f_open_title": "Open-source and audited",
-  "f_open_desc": "Every line is public on GitHub, and the project has been audited by independent security firms. Nothing to take on faith.",
+  "f_open_desc": "Every line is public on GitHub, and the project has been audited by Include Security for the Open Technology Fund. Nothing to take on faith.",
   "run_label": "Your server, your call",
   "run_title": "Two ways to run it",
   "run_manager_title": "With VpnHood! MANAGER",
@@ -22,5 +22,6 @@
   "learn_more_manager": "about VpnHood! MANAGER",
   "cta": "Free, open-source, and ready for your server.",
   "github_btn": "Source on GitHub",
-  "new_tab": "(opens in new tab)"
+  "new_tab": "(opens in new tab)",
+  "audit_link": "Read about the audit"
 }

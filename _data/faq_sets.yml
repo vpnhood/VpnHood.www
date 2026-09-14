@@ -99,3 +99,13 @@ sets:
     - why_slower
     - stay_free_forever
     - free_speed
+
+  # The only set whose questions are not in `all`: /faq/ is read by people looking
+  # for a VPN, and "what is a VPN reseller program" is not their question. The three
+  # reseller_* pairs exist for this page alone. is_undetectable is shared, because it
+  # is the first thing a reseller's own customers will ask them.
+  reseller:
+    - reseller_program
+    - reseller_open_source
+    - reseller_app_cost
+    - is_undetectable

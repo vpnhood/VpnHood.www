@@ -1,0 +1,100 @@
+---
+layout: none
+i18n: security_audit
+extra_css:
+  - /assets/css/custom.css
+nav_active: resources
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <div class="row align-items-center gap-lg-0 gap-5 pt-lg-5 pb-4">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+                    <p class="section-desc mb-0">{{ t.page_desc }}</p>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-hero-art">
+                      <img src="/assets/images/security-audit/audit.svg" alt="{{ t.hero_alt }}" width="1000" height="1000" loading="eager" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-start-text mt-5 pt-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.why_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
+                  <p class="section-desc">{{ t.why_desc }}</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <h3 class="h5">{{ t.why1_title }}</h3>
+                      <p class="mb-0">{{ t.why1_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <h3 class="h5">{{ t.why2_title }}</h3>
+                      <p class="mb-0">{{ t.why2_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <h3 class="h5">{{ t.why3_title }}</h3>
+                      <p class="mb-0">{{ t.why3_desc }}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.audit_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.audit_title }}</h2>
+                </div>
+                <div class="vh-card-light rounded-4 p-4 p-md-5" data-aos="fade-up" data-aos-duration="1000">
+                  <p class="vh-audit-credit">
+                    <span class="vh-audit-credit-label">{{ t.credit_audited_by }}</span>
+                    <a href="https://includesecurity.com/" target="_blank" rel="noopener">
+                      <img src="/assets/images/security-audit/include-security.svg" alt="Include Security" width="136" height="39" loading="lazy" />
+                      <span class="visually-hidden"> {{ tc.new_tab }}</span>
+                    </a>
+                  </p>
+                  <dl class="vh-audit-facts">
+                    <dt>{{ t.fact_auditor }}</dt>
+                    <dd>{{ t.fact_auditor_value }}</dd>
+                    <dt>{{ t.fact_by }}</dt>
+                    <dd>{{ t.fact_by_value }}</dd>
+                    <dt>{{ t.fact_report }}</dt>
+                    <dd>{{ t.fact_report_value }}</dd>
+                  </dl>
+                  <a class="vh-text-btn vh-txt-purple-300 mt-4" href="https://www.opentech.fund/security-safety-audits/vpnhood-security-audit-results/" target="_blank" rel="noopener">
+                    <span>{{ t.results_link }}</span><span class="visually-hidden"> {{ tc.new_tab }}</span>
+                    <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

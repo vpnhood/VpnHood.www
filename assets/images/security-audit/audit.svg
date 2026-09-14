@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhAuditArtTitle">
+<title id="vhAuditArtTitle">A shield full of lines of code, with a magnifying glass held over it</title>
+<defs>
+  <linearGradient id="sShield" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".97"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".97"/></linearGradient>
+  <linearGradient id="sEdge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#c0a4ff"/><stop offset="1" stop-color="#5b2fd6"/></linearGradient>
+  <linearGradient id="sLens" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8ef7e2"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <radialGradient id="sAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="sSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="sSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
+  <clipPath id="sLensClip"><circle cx="690" cy="650" r="138"/></clipPath>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="430" fill="url(#sAmbient)"/>
+
+<!-- the shield: what is being examined -->
+<path d="M274 190 H616 A24 24 0 0 1 640 214 V470 C640 610, 550 700, 445 762 C340 700, 250 610, 250 470 V214 A24 24 0 0 1 274 190 Z" fill="url(#sShield)"/>
+<path d="M274 190 H616 A24 24 0 0 1 640 214 V470 C640 610, 550 700, 445 762 C340 700, 250 610, 250 470 V214 A24 24 0 0 1 274 190 Z" fill="none" stroke="url(#sEdge)" stroke-width="6"/>
+<path d="M274 190 H616 A24 24 0 0 1 640 214 V470 C640 610, 550 700, 445 762 C340 700, 250 610, 250 470 V214 A24 24 0 0 1 274 190 Z" fill="none" stroke="#8257f5" stroke-width="12" filter="url(#sSoft)" opacity=".4"/>
+
+<!-- lines of code, public and readable -->
+<g>
+  <rect x="300" y="258" width="178" height="18" rx="9" fill="#3ce8c8" fill-opacity=".9"/>
+  <rect x="494" y="258" width="88" height="18" rx="9" fill="#c0a4ff" fill-opacity=".75"/>
+  <rect x="326" y="314" width="120" height="18" rx="9" fill="#c0a4ff" fill-opacity=".7"/>
+  <rect x="462" y="314" width="146" height="18" rx="9" fill="#3ce8c8" fill-opacity=".7"/>
+  <rect x="326" y="370" width="206" height="18" rx="9" fill="#c0a4ff" fill-opacity=".55"/>
+  <rect x="300" y="426" width="138" height="18" rx="9" fill="#3ce8c8" fill-opacity=".75"/>
+  <rect x="454" y="426" width="110" height="18" rx="9" fill="#c0a4ff" fill-opacity=".6"/>
+  <rect x="326" y="482" width="162" height="18" rx="9" fill="#c0a4ff" fill-opacity=".45"/>
+  <rect x="326" y="538" width="104" height="18" rx="9" fill="#3ce8c8" fill-opacity=".45"/>
+</g>
+
+<!-- the magnifier, and the one line it picks out -->
+<circle cx="690" cy="650" r="150" fill="#150a3a" fill-opacity=".55"/>
+<g clip-path="url(#sLensClip)">
+  <rect x="560" y="586" width="180" height="26" rx="13" fill="#3ce8c8" fill-opacity=".85"/>
+  <rect x="756" y="586" width="86" height="26" rx="13" fill="#3ce8c8" fill-opacity=".55"/>
+  <rect x="584" y="638" width="212" height="26" rx="13" fill="#f2d9a2"/>
+  <rect x="584" y="638" width="212" height="26" rx="13" fill="#f2d9a2" filter="url(#sSoft)" opacity=".7"/>
+  <rect x="560" y="690" width="128" height="26" rx="13" fill="#c0a4ff" fill-opacity=".6"/>
+  <rect x="704" y="690" width="96" height="26" rx="13" fill="#c0a4ff" fill-opacity=".45"/>
+</g>
+<path d="M794 756 L892 854" stroke="#3ce8c8" stroke-width="42" stroke-linecap="round"/>
+<path d="M794 756 L892 854" stroke="url(#sLens)" stroke-width="30" stroke-linecap="round"/>
+<circle cx="690" cy="650" r="150" fill="none" stroke="url(#sLens)" stroke-width="26"/>
+<circle cx="690" cy="650" r="150" fill="none" stroke="#3ce8c8" stroke-width="14" filter="url(#sSoft)" opacity=".45"/>
+
+<ellipse cx="500" cy="880" rx="330" ry="60" fill="url(#sAmbient)" opacity=".6" filter="url(#sSofter)"/>
+</svg>

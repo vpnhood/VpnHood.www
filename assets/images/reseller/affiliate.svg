@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhAffiliateArtTitle">
+<title id="vhAffiliateArtTitle">A megaphone sending out a link, which lands as a stack of coins</title>
+<defs>
+  <linearGradient id="aHorn" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset="1" stop-color="#8257f5"/></linearGradient>
+  <linearGradient id="aBody" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="aWave" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c0a4ff"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <linearGradient id="aCoin" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8ef7e2"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <radialGradient id="aAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="aSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="aSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="420" fill="url(#aAmbient)"/>
+
+<!-- megaphone -->
+<g transform="rotate(-14 400 500)">
+  <rect x="236" y="530" width="70" height="170" rx="26" fill="url(#aBody)" stroke="#8257f5" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M220 420 L 520 300 L 520 640 L 220 540 Z" fill="url(#aHorn)"/>
+  <path d="M220 420 L 520 300 L 520 640 L 220 540 Z" fill="url(#aHorn)" filter="url(#aSoft)" opacity=".4"/>
+  <ellipse cx="220" cy="480" rx="30" ry="60" fill="#2b1470" stroke="#c0a4ff" stroke-opacity=".5" stroke-width="3"/>
+  <ellipse cx="520" cy="470" rx="42" ry="170" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".6" stroke-width="4"/>
+  <ellipse cx="520" cy="470" rx="22" ry="120" fill="#2b1470"/>
+</g>
+
+<!-- what comes out of it -->
+<g fill="none" stroke="url(#aWave)" stroke-linecap="round">
+  <path d="M600 380 A 130 130 0 0 1 600 600" stroke-width="10" stroke-opacity=".9"/>
+  <path d="M650 330 A 200 200 0 0 1 650 650" stroke-width="8" stroke-opacity=".55"/>
+  <path d="M700 280 A 270 270 0 0 1 700 700" stroke-width="6" stroke-opacity=".3"/>
+</g>
+
+<!-- the link -->
+<g transform="rotate(-45 800 250)" fill="none" stroke="#c0a4ff" stroke-width="16" stroke-linecap="round">
+  <rect x="700" y="222" width="130" height="56" rx="28"/>
+  <rect x="770" y="222" width="130" height="56" rx="28"/>
+</g>
+<g transform="rotate(-45 800 250)" fill="none" stroke="#8b5cf6" stroke-width="20" filter="url(#aSoft)" opacity=".5">
+  <rect x="700" y="222" width="130" height="56" rx="28"/>
+  <rect x="770" y="222" width="130" height="56" rx="28"/>
+</g>
+
+<!-- the coins -->
+<g>
+  <ellipse cx="790" cy="740" rx="120" ry="36" fill="#3ce8c8" opacity=".35" filter="url(#aSoft)"/>
+  <ellipse cx="790" cy="712" rx="96" ry="30" fill="#22b6d6" fill-opacity=".85"/>
+  <ellipse cx="790" cy="690" rx="96" ry="30" fill="#3ce8c8" fill-opacity=".9"/>
+  <ellipse cx="790" cy="668" rx="96" ry="30" fill="#22b6d6" fill-opacity=".9"/>
+  <ellipse cx="790" cy="646" rx="96" ry="30" fill="url(#aCoin)"/>
+  <ellipse cx="790" cy="646" rx="62" ry="18" fill="none" stroke="#150a3a" stroke-opacity=".45" stroke-width="4"/>
+</g>
+
+<ellipse cx="500" cy="860" rx="340" ry="66" fill="url(#aAmbient)" opacity=".6" filter="url(#aSofter)"/>
+</svg>

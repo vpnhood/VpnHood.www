@@ -1,0 +1,125 @@
+---
+layout: none
+i18n: reseller_affiliate
+extra_css:
+  - /assets/css/custom.css
+nav_active: reseller
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <div class="row align-items-center gap-lg-0 gap-5 pt-lg-5 pb-4">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+                    <p class="section-desc mb-0">{{ t.page_desc }}</p>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-hero-art">
+                      <img src="/assets/images/reseller/affiliate.svg" alt="{{ t.hero_alt }}" width="1000" height="1000" loading="eager" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-start-text mt-5 pt-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.how_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.how_title }}</h2>
+                  <p class="section-desc">{{ t.how_desc }}</p>
+                </div>
+                <ol class="row row-cols-1 row-cols-md-3 g-4 list-unstyled">
+                  <li class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-step-num" aria-hidden="true">1</span>
+                      <h3 class="h5">{{ t.s1_title }}</h3>
+                      <p class="mb-0">{{ t.s1_desc }}</p>
+                    </div>
+                  </li>
+                  <li class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-step-num" aria-hidden="true">2</span>
+                      <h3 class="h5">{{ t.s2_title }}</h3>
+                      <p class="mb-0">{{ t.s2_desc }}</p>
+                    </div>
+                  </li>
+                  <li class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-step-num" aria-hidden="true">3</span>
+                      <h3 class="h5">{{ t.s3_title }}</h3>
+                      <p class="mb-0">{{ t.s3_desc }}</p>
+                    </div>
+                  </li>
+                </ol>
+
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.fit_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.fit_title }}</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col" data-aos="fade-right" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <h3 class="h5">{{ t.fit_yes_title }}</h3>
+                      <ul class="vh-plain-list mb-0">
+                        <li>{{ t.fit_yes_1 }}</li>
+                        <li>{{ t.fit_yes_2 }}</li>
+                        <li>{{ t.fit_yes_3 }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-left" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <h3 class="h5">{{ t.fit_no_title }}</h3>
+                      <ul class="vh-plain-list">
+                        <li>{{ t.fit_no_1 }}</li>
+                        <li>{{ t.fit_no_2 }}</li>
+                        <li>{{ t.fit_no_3 }}</li>
+                      </ul>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto align-self-start" href="{{ vh_base }}/reseller/">
+                        <span>{{ t.fit_cta }}</span>
+                        <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.why_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
+                  <p class="section-desc mb-0">{{ t.why_desc }}</p>
+                </div>
+
+                <div class="vh-card-light rounded-4 p-4 p-md-5 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <p class="section-desc h4 fw-normal mb-4">{{ t.cta }}</p>
+                  <a class="vh-btn vh-btn-primary" href="https://account.vpnhood.com/affiliates.php" target="_blank" rel="noopener">
+                    {{ t.cta_btn }}<span class="visually-hidden"> {{ tc.new_tab }}</span>
+                  </a>
+                  <p class="mt-3 mb-0 small">{{ t.cta_note }}</p>
+                  <p class="mb-0 small">{{ t.questions }}</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

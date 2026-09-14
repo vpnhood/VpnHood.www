@@ -1257,6 +1257,202 @@ a.vh-feature-chip:hover{
     height: auto;
 }
 
+// Reseller route cards --------------------------------------------------------
+// The four ways to resell are read down a column, so every card carries the same
+// three facts in the same place: who runs it, who bills, whose brand. Each opens with
+// its own illustration (assets/images/reseller/, brand colours on transparency, so no
+// light variant) in place of the icon disc, since the four look alike as icons. The spec
+// list is a <dl> because that is what it is, and it sits at the card's foot
+// (`mt-auto` in the markup) so the lists line up across cards of unequal prose.
+// Who did the work and who published it, as their own marks. Both logos are the
+// vendors' neutral variants, legible on either theme, so neither needs a light
+// twin; height is fixed and width follows, so the two sit on one baseline.
+.vh-audit-credit{
+    margin: 0 0 2rem;
+}
+
+.vh-audit-credit-label{
+    display: block;
+    margin-bottom: .6rem;
+    color: var(--vh-text-dim);
+    font-size: 13px;
+}
+
+.vh-audit-credit img{
+    height: 34px;
+    width: auto;
+    transition: opacity 300ms;
+}
+
+.vh-audit-credit a:hover img,
+.vh-audit-credit a:focus-visible img{
+    opacity: .75;
+}
+
+// The audit's scope as a spec table: a narrow label column so the values line
+// up, hairlines between rows, and one column on a phone.
+.vh-audit-facts{
+    display: grid;
+    grid-template-columns: minmax(9rem, 15rem) 1fr;
+    margin: 0;
+}
+
+.vh-audit-facts dt,
+.vh-audit-facts dd{
+    margin: 0;
+    padding: .85rem 0;
+    border-top: 1px solid var(--vh-hairline);
+}
+
+.vh-audit-facts dt{
+    padding-inline-end: 1.5rem;
+    color: var(--vh-text-dim);
+    font-weight: 400;
+}
+
+.vh-audit-facts dd{
+    color: var(--vh-text);
+}
+
+.vh-audit-facts dt:first-of-type,
+.vh-audit-facts dt:first-of-type + dd{
+    border-top: 0;
+    padding-top: 0;
+}
+
+@media (max-width: 575.98px){
+    .vh-audit-facts{ grid-template-columns: 1fr; }
+    .vh-audit-facts dd{ border-top: 0; padding-top: 0; }
+    .vh-audit-facts dt{ padding-bottom: .2rem; }
+}
+
+// Reseller hub hero: one key, and the four ways out of it. Brand colours on
+// transparency like the route art, so one file serves both themes.
+.vh-reseller-hero-art{
+    max-width: 760px;
+    margin-inline: auto;
+}
+.vh-reseller-hero-art img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.vh-route-art{
+    width: 148px;
+    height: 148px;
+    margin-bottom: 10px;
+}
+.vh-route-art img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.vh-route-best{
+    color: var(--purple-120);
+    font-weight: 500;
+}
+// The three facts every route answers: a bullet, the question in bold, then the
+// answer a little way along. The question column sizes to its widest term, so
+// every answer starts on the same left edge and a longer translated label moves
+// all three together. The dot matches .vh-plain-list.
+.vh-route-facts{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+    column-gap: 1.35rem;
+    row-gap: 1.1rem;
+    margin: 0;
+    padding-inline-start: 1.15rem;
+    color: var(--vh-text);
+    font-size: 14px;
+}
+
+.vh-route-facts dt{
+    position: relative;
+    color: var(--vh-text);
+    font-weight: 600;
+}
+
+// A touch larger than the .vh-plain-list dot, and in the same ink as the term it
+// marks, so the pair reads as one line rather than a marker plus a label.
+.vh-route-facts dt:before{
+    content: "";
+    position: absolute;
+    top: .52em;
+    inset-inline-start: -1.15rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--vh-text);
+}
+
+.vh-route-facts dd{
+    margin: 0;
+}
+
+// On a phone the answer needs the whole width, so the pair stacks under its dot.
+@media (max-width: 575.98px){
+    .vh-route-facts{
+        grid-template-columns: 1fr;
+        row-gap: .25rem;
+    }
+
+    .vh-route-facts dd:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}
+
+// What stays in sync after a sale: an event and what it does upstream. A list, not
+// a table - four rows of two cells stack into unreadable columns on a phone.
+.vh-lifecycle{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.vh-lifecycle > li{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1.25rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--vh-hairline);
+    border-radius: 14px;
+    background: var(--vh-surface);
+}
+.vh-lifecycle > li > b{
+    flex: 0 0 200px;
+    color: var(--purple-120);
+}
+.vh-lifecycle > li > span{
+    flex: 1 1 260px;
+}
+
+// Bulleted prose inside a card. The Bootstrap default disc sits too far out and
+// too bright against a panel; this is the same idea as .vh-guide-points, one
+// level quieter.
+.vh-plain-list{
+    margin: 0;
+    padding-inline-start: 1.15rem;   // logical: the dot follows the reading direction in RTL
+    list-style: none;
+}
+.vh-plain-list > li{
+    position: relative;
+    margin-bottom: .75rem;
+}
+.vh-plain-list > li:last-child{
+    margin-bottom: 0;
+}
+.vh-plain-list > li:before{
+    content: "";
+    position: absolute;
+    top: .6em;
+    inset-inline-start: -1.15rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--purple-300);
+}
+
 // Self-hosted topology diagram -----------------------------------------------
 // A blackboard, so it stays dark in both themes on purpose - same reasoning as the
 // pinned .vh-feature-shot panel above. Generated by tools/make-topology-diagram.py.

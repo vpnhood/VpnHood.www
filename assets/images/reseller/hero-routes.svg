@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" role="img" aria-labelledby="vhResellerHeroTitle">
+<title id="vhResellerHeroTitle">A glowing key at the centre of four dotted paths, leading out to a code card, a shop, an app and a link</title>
+<defs>
+  <linearGradient id="hKey" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#3ce8c8"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <linearGradient id="hPathR" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8ef7e2"/><stop offset="1" stop-color="#8257f5"/></linearGradient>
+  <linearGradient id="hPathL" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <linearGradient id="hNode" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".97"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".97"/></linearGradient>
+  <radialGradient id="hAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".32"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hCore" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#3ce8c8" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity="0"/></radialGradient>
+  <filter id="hSoft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="hSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter>
+</defs>
+
+<ellipse cx="450" cy="190" rx="440" ry="186" fill="url(#hAmbient)"/>
+<ellipse cx="450" cy="193" rx="200" ry="140" fill="url(#hCore)"/>
+
+<!-- the four ways out -->
+<g fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 14">
+  <path d="M378 150 C 320 112, 252 92, 206 88" stroke="url(#hPathL)"/>
+  <path d="M522 150 C 580 112, 648 92, 694 88" stroke="url(#hPathR)"/>
+  <path d="M378 236 C 320 274, 252 294, 206 298" stroke="url(#hPathL)"/>
+  <path d="M522 236 C 580 274, 648 294, 694 298" stroke="url(#hPathR)"/>
+</g>
+
+<!-- codes handed out -->
+<circle cx="160" cy="86" r="50" fill="#8b5cf6" opacity=".18" filter="url(#hSoft)"/>
+<circle cx="160" cy="86" r="46" fill="url(#hNode)" stroke="#8257f5" stroke-opacity=".45" stroke-width="3"/>
+<rect x="132" y="68" width="56" height="38" rx="9" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".75" stroke-width="3"/>
+<rect x="142" y="78" width="20" height="6" rx="3" fill="#8ef7e2"/>
+<rect x="166" y="78" width="12" height="6" rx="3" fill="#c0a4ff" fill-opacity=".8"/>
+<rect x="142" y="92" width="14" height="6" rx="3" fill="#c0a4ff" fill-opacity=".8"/>
+<rect x="160" y="92" width="18" height="6" rx="3" fill="#8ef7e2" fill-opacity=".9"/>
+
+<!-- a store of your own -->
+<circle cx="740" cy="86" r="50" fill="#8b5cf6" opacity=".18" filter="url(#hSoft)"/>
+<circle cx="740" cy="86" r="46" fill="url(#hNode)" stroke="#8257f5" stroke-opacity=".45" stroke-width="3"/>
+<path d="M712 86 L726 66 L754 66 L768 86 Z" fill="#8257f5"/>
+<rect x="716" y="86" width="48" height="28" rx="4" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".75" stroke-width="3"/>
+<rect x="730" y="94" width="20" height="20" rx="3" fill="#3ce8c8" fill-opacity=".85"/>
+
+<!-- your own app -->
+<circle cx="160" cy="300" r="50" fill="#8b5cf6" opacity=".18" filter="url(#hSoft)"/>
+<circle cx="160" cy="300" r="46" fill="url(#hNode)" stroke="#8257f5" stroke-opacity=".45" stroke-width="3"/>
+<rect x="142" y="272" width="36" height="56" rx="11" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".75" stroke-width="3"/>
+<rect x="152" y="280" width="16" height="4" rx="2" fill="#2b1470"/>
+<rect x="150" y="290" width="20" height="20" rx="6" fill="url(#hKey)"/>
+<rect x="152" y="316" width="16" height="4" rx="2" fill="#2b1470"/>
+
+<!-- a link you share -->
+<circle cx="740" cy="300" r="50" fill="#8b5cf6" opacity=".18" filter="url(#hSoft)"/>
+<circle cx="740" cy="300" r="46" fill="url(#hNode)" stroke="#8257f5" stroke-opacity=".45" stroke-width="3"/>
+<g transform="rotate(-40 740 300)" fill="none" stroke="#c0a4ff" stroke-width="8" stroke-linecap="round">
+  <rect x="706" y="290" width="42" height="20" rx="10"/>
+  <rect x="732" y="290" width="42" height="20" rx="10"/>
+</g>
+
+<!-- one key, bought in volume -->
+<g stroke="#8257f5" fill="#8257f5" opacity=".55">
+  <g transform="rotate(-17 392 193)">
+    <circle cx="392" cy="193" r="38" fill="none" stroke-width="16"/>
+    <rect x="424" y="183" width="118" height="21" rx="10.5" stroke="none"/>
+  </g>
+  <g transform="rotate(17 392 193)">
+    <circle cx="392" cy="193" r="38" fill="none" stroke-width="16"/>
+    <rect x="424" y="183" width="118" height="21" rx="10.5" stroke="none"/>
+  </g>
+</g>
+<ellipse cx="450" cy="196" rx="120" ry="52" fill="#3ce8c8" opacity=".22" filter="url(#hSofter)"/>
+<g fill="url(#hKey)">
+  <circle cx="392" cy="193" r="38" fill="none" stroke="url(#hKey)" stroke-width="16"/>
+  <rect x="424" y="183" width="118" height="21" rx="10.5"/>
+  <rect x="506" y="204" width="15" height="26" rx="6"/>
+  <rect x="532" y="204" width="15" height="21" rx="6"/>
+</g>
+</svg>

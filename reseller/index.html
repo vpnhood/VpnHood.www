@@ -8,154 +8,246 @@ nav_active: reseller
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
 {% assign t = site.data.i18n[vh_lang][page.i18n] %}
-<main id="sp-main-body" >
+{% comment %} Never the exact total: "more than N" as the list grows. {% endcomment %}
+{% assign vh_loc_more = site.data.locations.countries | size | minus: 1 %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
 
-										<div class="container">
-					<div class="container-inner">
+                <div class="text-center position-relative">
+                  <div class="star-effect w-50 h-100 mx-auto">
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                  </div>
+                  <div class="section-start-text" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+                    <p class="section-desc mb-5">{{ t.page_desc }}</p>
+                  </div>
+                  <div class="vh-reseller-hero-art" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="/assets/images/reseller/hero-routes.svg" alt="{{ t.hero_alt }}" width="900" height="380" loading="eager" />
+                  </div>
+                </div>
 
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.intro_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.intro_title }}</h2>
+                  <p class="section-desc mb-3">{{ t.intro_p1 }}</p>
+                  <p class="section-desc mb-0">{{ t.intro_p2 }}</p>
+                </div>
 
+                <!-- The four routes. Each card is the same shape so they can be read down a
+                     column: what it suits, what it is, then who runs, bills and brands it. -->
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.routes_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.routes_title }}</h2>
+                  <p class="section-desc">{{ t.routes_desc }}</p>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card vh-route-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-route-art"><img src="/assets/images/reseller/bulk-codes.svg" alt="" aria-hidden="true" width="1000" height="1000" loading="lazy" /></div>
+                      <h3 class="h5">{{ t.route_codes_title }}</h3>
+                      <p class="vh-route-best">{{ t.route_codes_best }}</p>
+                      <p>{{ t.route_codes_desc }}</p>
+                      <dl class="vh-route-facts mt-auto mb-0">
+                        <dt>{{ t.route_runs_label }}</dt>
+                        <dd>{{ t.route_codes_runs }}</dd>
+                        <dt>{{ t.route_bills_label }}</dt>
+                        <dd>{{ t.route_codes_bills }}</dd>
+                        <dt>{{ t.route_brand_label }}</dt>
+                        <dd>{{ t.route_codes_brand }}</dd>
+                      </dl>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-4 align-self-start" href="{{ vh_base }}/contact-us/">
+                        <span>{{ t.route_codes_cta }}</span>
+                        <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card vh-route-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-route-art"><img src="/assets/images/reseller/partner.svg" alt="" aria-hidden="true" width="1000" height="1000" loading="lazy" /></div>
+                      <h3 class="h5">{{ t.route_store_title }}</h3>
+                      <p class="vh-route-best">{{ t.route_store_best }}</p>
+                      <p>{{ t.route_store_desc }}</p>
+                      <dl class="vh-route-facts mt-auto mb-0">
+                        <dt>{{ t.route_runs_label }}</dt>
+                        <dd>{{ t.route_store_runs }}</dd>
+                        <dt>{{ t.route_bills_label }}</dt>
+                        <dd>{{ t.route_store_bills }}</dd>
+                        <dt>{{ t.route_brand_label }}</dt>
+                        <dd>{{ t.route_store_brand }}</dd>
+                      </dl>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-4 align-self-start" href="{{ vh_base }}/reseller/partner/">
+                        <span>{{ t.route_store_cta }}</span>
+                        <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card vh-route-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-route-art"><img src="/assets/images/reseller/white-label.svg" alt="" aria-hidden="true" width="1000" height="1000" loading="lazy" /></div>
+                      <h3 class="h5">{{ t.route_brand_title }}</h3>
+                      <p class="vh-route-best">{{ t.route_brand_best }}</p>
+                      <p>{{ t.route_brand_desc }}</p>
+                      <dl class="vh-route-facts mt-auto mb-0">
+                        <dt>{{ t.route_runs_label }}</dt>
+                        <dd>{{ t.route_brand_runs }}</dd>
+                        <dt>{{ t.route_bills_label }}</dt>
+                        <dd>{{ t.route_brand_bills }}</dd>
+                        <dt>{{ t.route_brand_label }}</dt>
+                        <dd>{{ t.route_brand_brand }}</dd>
+                      </dl>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-4 align-self-start" href="{{ vh_base }}/reseller/white-label/">
+                        <span>{{ t.route_brand_cta }}</span>
+                        <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card vh-route-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-route-art"><img src="/assets/images/reseller/affiliate.svg" alt="" aria-hidden="true" width="1000" height="1000" loading="lazy" /></div>
+                      <h3 class="h5">{{ t.route_affiliate_title }}</h3>
+                      <p class="vh-route-best">{{ t.route_affiliate_best }}</p>
+                      <p>{{ t.route_affiliate_desc }}</p>
+                      <dl class="vh-route-facts mt-auto mb-0">
+                        <dt>{{ t.route_runs_label }}</dt>
+                        <dd>{{ t.route_affiliate_runs }}</dd>
+                        <dt>{{ t.route_bills_label }}</dt>
+                        <dd>{{ t.route_affiliate_bills }}</dd>
+                        <dt>{{ t.route_brand_label }}</dt>
+                        <dd>{{ t.route_affiliate_brand }}</dd>
+                      </dl>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-4 align-self-start" href="{{ vh_base }}/reseller/affiliate/">
+                        <span>{{ t.route_affiliate_cta }}</span>
+                        <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-<div class="row">
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.selling_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.selling_title }}</h2>
+                  <p class="section-desc">{{ t.selling_desc }}</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="12" rx="2"></rect><path d="M6 19h6"></path><path d="M9 15v4"></path><rect x="17" y="9" width="5" height="12" rx="1.5"></rect></svg></span>
+                      <h3 class="h5">{{ t.why_cross_platform_title }}</h3>
+                      <p class="mb-0">{{ t.why_cross_platform_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6"></path><path d="m15 6 6 6-6 6"></path></svg></span>
+                      <h3 class="h5">{{ t.why_open_source_title }}</h3>
+                      <p>{{ t.why_open_source_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/security-audit/"><span>{{ t.audit_link }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><path d="M2 2l20 20"></path></svg></span>
+                      <h3 class="h5">{{ t.why_undetectable_title }}</h3>
+                      <p class="mb-0">{{ t.why_undetectable_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+                      <h3 class="h5">{{ t.why_global_title }}</h3>
+                      <p class="mb-0">{{ t.why_global_desc | replace: '[count]', vh_loc_more }}</p>
+                    </div>
+                  </div>
+                </div>
 
-<div id="sp-component" class="col-lg-12 ">
-	<div class="sp-column ">
-		<div id="system-message-container" aria-live="polite"></div>
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.get_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.get_title }}</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"></path><path d="M16 7h6v6"></path></svg></span>
+                      <h3 class="h5">{{ t.get_pricing_title }}</h3>
+                      <p class="mb-0">{{ t.get_pricing_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18"></path><path d="M8 21h8"></path></svg></span>
+                      <h3 class="h5">{{ t.get_module_title }}</h3>
+                      <p class="mb-0">{{ t.get_module_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h10"></path><path d="M4 18h7"></path><path d="m17 14 4 4-4 4"></path></svg></span>
+                      <h3 class="h5">{{ t.get_products_title }}</h3>
+                      <p class="mb-0">{{ t.get_products_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a8 8 0 0 1 16 0v6"></path><path d="M20 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h3zM4 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H4z"></path></svg></span>
+                      <h3 class="h5">{{ t.get_support_title }}</h3>
+                      <p class="mb-0">{{ t.get_support_desc }}</p>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.start_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.start_title }}</h2>
+                </div>
+                <ol class="row row-cols-1 row-cols-md-2 g-4 list-unstyled">
+                  <li class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-step-num" aria-hidden="true">1</span>
+                      <h3 class="h5">{{ t.start_contact_title }}</h3>
+                      <p class="mb-0">{{ t.start_contact_desc }}</p>
+                    </div>
+                  </li>
+                  <li class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100">
+                      <span class="vh-step-num" aria-hidden="true">2</span>
+                      <h3 class="h5">{{ t.start_selling_title }}</h3>
+                      <p class="mb-0">{{ t.start_selling_desc }}</p>
+                    </div>
+                  </li>
+                </ol>
 
+                {% include faq.html set="reseller" schema=false wrapper_class="section-space-top" %}
 
-		<div class="com-content-article item-page">
+                <div class="vh-card-light rounded-4 p-4 p-md-5 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <p class="section-desc h4 fw-normal mb-4">{{ t.cta }}</p>
+                  <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/contact-us/">{{ t.cta_btn }}</a>
+                </div>
 
-
-
-
-
-
-
-                                <div class="com-content-article__body">
-        <div class="text-center position-relative">
-    <div class="star-effect w-50 h-100 mx-auto">
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
-    </div>
-    <div class="section-start-text" data-aos="fade-up" data-aos-duration="1000">
-        <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
-        <p class="section-desc mb-5">{{ t.page_desc }}</p>
-    </div>
-    <img src="/assets/images/general/half-globe-purple.svg" data-vh-light-src="/assets/images/general/half-globe-purple-light.svg" width="800" height="364" alt="" aria-hidden="true" class="mx-auto" data-aos="fade-up" data-aos-duration="1000"></div>
-
-<div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
-    <div class="section-label">
-        <p class="vh-txt-grad-purple-400">{{ t.why_label }}</p>
-    </div>
-    <h2 class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
-</div>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" data-aos="fade-up" data-aos-delay="100">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="12" rx="2"></rect><path d="M6 19h6"></path><path d="M9 15v4"></path><rect x="17" y="9" width="5" height="12" rx="1.5"></rect></svg></span>
-            <h3 class="h5">{{ t.why_cross_platform_title }}</h3>
-            <p class="mb-0">{{ t.why_cross_platform_desc }}</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="col" data-aos="fade-up" data-aos-delay="200">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"></path></svg></span>
-            <h3 class="h5">{{ t.why_high_speed_title }}</h3>
-            <p class="mb-0">{{ t.why_high_speed_desc }}</p>
-        </div>
-    </div>
-    <div class="col" data-aos="fade-up" data-aos-delay="100">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
-            <h3 class="h5">{{ t.why_global_title }}</h3>
-            <p class="mb-0">{{ t.why_global_desc }}</p>
-        </div>
-    </div>
-    <div class="col" data-aos="fade-up" data-aos-delay="200">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
-            <h3 class="h5">{{ t.why_security_title }}</h3>
-            <p class="mb-0">{{ t.why_security_desc }}</p>
-        </div>
-    </div>
-</div>
-
-<div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
-    <div class="section-label">
-        <p class="vh-txt-grad-purple-400">{{ t.benefits_label }}</p>
-    </div>
-    <h2 class="section-title vh-txt-grad-purple-400">{{ t.benefits_title }}</h2>
-</div>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" data-aos="fade-up" data-aos-delay="100">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"></path><path d="M16 7h6v6"></path></svg></span>
-            <h3 class="h5">{{ t.benefit_margins_title }}</h3>
-            <p class="mb-0">{{ t.benefit_margins_desc }}</p>
-        </div>
-    </div>
-    <div class="col" data-aos="fade-up" data-aos-delay="200">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a8 8 0 0 1 16 0v6"></path><path d="M20 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h3zM4 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H4z"></path></svg></span>
-            <h3 class="h5">{{ t.benefit_support_title }}</h3>
-            <p class="mb-0">{{ t.benefit_support_desc }}</p>
-        </div>
-    </div>
-    <div class="col" data-aos="fade-up" data-aos-delay="100">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg></span>
-            <h3 class="h5">{{ t.benefit_marketing_title }}</h3>
-            <p class="mb-0">{{ t.benefit_marketing_desc }}</p>
-        </div>
-    </div>
-    <div class="col" data-aos="fade-up" data-aos-delay="200">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7"></path><path d="M4 10V3"></path><path d="M12 21v-9"></path><path d="M12 8V3"></path><path d="M20 21v-5"></path><path d="M20 12V3"></path><path d="M1 14h6"></path><path d="M9 8h6"></path><path d="M17 16h6"></path></svg></span>
-            <h3 class="h5">{{ t.benefit_plans_title }}</h3>
-            <p class="mb-0">{{ t.benefit_plans_desc }}</p>
-        </div>
-    </div>
-</div>
-
-<div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
-    <div class="section-label">
-        <p class="vh-txt-grad-purple-400">{{ t.start_label }}</p>
-    </div>
-    <h2 class="section-title vh-txt-grad-purple-400">{{ t.start_title }}</h2>
-</div>
-<ol class="row row-cols-1 row-cols-md-2 g-4 list-unstyled">
-    <li class="col" data-aos="fade-up" data-aos-delay="100">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-step-num" aria-hidden="true">1</span>
-            <h3 class="h5">{{ t.start_contact_title }}</h3>
-            <p class="mb-0">{{ t.start_contact_desc }}</p>
-        </div>
-    </li>
-    <li class="col" data-aos="fade-up" data-aos-delay="200">
-        <div class="vh-card-light vh-feature-card rounded-4 p-4">
-            <span class="vh-step-num" aria-hidden="true">2</span>
-            <h3 class="h5">{{ t.start_selling_title }}</h3>
-            <p class="mb-0">{{ t.start_selling_desc }}</p>
-        </div>
-    </li>
-</ol>
-
-<div class="vh-card-light rounded-4 p-4 p-md-5 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
-    <p class="section-desc h4 fw-normal mb-4">{{ t.cta }}</p>
-    <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/contact-us/">{{ t.cta_btn }}</a>
-</div>
-     </div>
-
-
-                                    </div>
-
-
-			</div>
-</div>
-</div>
-											</div>
-				</div>
-
-	</main>
+  </div>
+</main>
 {% include footer.html %}
