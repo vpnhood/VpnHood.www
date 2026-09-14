@@ -35,7 +35,10 @@
     height: 757px;
 }
 #bannerPrivacyTitle{
-    letter-spacing: 9px;
+    // The words are separated by real spaces; the wide gap is decoration, so it
+    // rides on --vh-tracking and disappears for connected scripts.
+    letter-spacing: calc(9px * var(--vh-tracking));
+    word-spacing: calc(2rem * var(--vh-tracking));
     font-weight: 500;
 }
 #banner h1{
@@ -118,7 +121,8 @@
         width: 400px;
     }
     #bannerPrivacyTitle{
-        letter-spacing: 5px;
+        letter-spacing: calc(5px * var(--vh-tracking));
+        word-spacing: calc(1.4rem * var(--vh-tracking));
         font-weight: 400;
         font-size: 13px;
     }

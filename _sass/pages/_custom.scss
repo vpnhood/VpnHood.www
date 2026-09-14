@@ -551,7 +551,7 @@
     color: var(--vh-text);
 }
 .contact-form .form-label{
-    letter-spacing: .04em;
+    letter-spacing: calc(.04em * var(--vh-tracking));
 }
 
 // ---- Feature / step cards (reseller; reusable on any content page) ----

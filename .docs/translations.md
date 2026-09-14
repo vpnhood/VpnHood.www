@@ -82,6 +82,31 @@ columns, copyright, aria-labels) lives in `_data/i18n/<lang>/chrome.json`; `head
 assigns `tc` once per page (English fallback) and the includes render `{{ tc.* }}`. **Edit
 chrome copy there, never in the includes.**
 
+## Spacing never lives in the copy
+
+A translatable string is **words separated by real spaces**. Never carry visual spacing
+inside it — no `<span class="mx-3">` between two words, no `&nbsp;` padding, no
+`letter-spacing` helper wrapped around a word. Put the gap in CSS on the element that owns
+the phrase.
+
+The home eyebrow was the cautionary case: `"protect<span class="mx-sm-4 mx-3">your</span>privacy"`
+had no space characters at all, and the margins alone drew the gaps. In Latin that looked
+right; in Persian the translator produced
+`"از حریم خصوصی<span class="mx-sm-4 mx-3">خود</span>محافظت کنید"` and the browser shaped
+Arabic script straight across the inline boundary, so `خصوصی` + `خود` and `خود` +
+`محافظت` fused into single joined words. Copy/paste, search and screen readers were
+equally wrong in every language. The fix was `"protect your privacy"` plus `word-spacing`
+on `#bannerPrivacyTitle`.
+
+## Decorative tracking and connected scripts
+
+`letter-spacing` and `word-spacing` are Latin/Cyrillic/CJK decorations. Arabic, Persian and
+Devanagari are **connected scripts**: extra spacing tears the joined glyphs apart and reads
+as broken text. `_sass/theme/_default.scss` defines `--vh-tracking` (`1` normally, `0` under
+`[dir="rtl"]` and `[lang="hi"]`), so **every decorative letter-/word-spacing is written as
+`calc(<value> * var(--vh-tracking))`** and folds to zero there. Add a new tracked rule the
+same way; a bare `letter-spacing: 9px` is a bug in three languages.
+
 ## Verifying a copy refactor
 
 The original i18n extraction (moving every string out of page markup into

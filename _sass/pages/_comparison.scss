@@ -57,7 +57,7 @@
     padding: .15rem .55rem;
     font-size: .58rem;
     font-weight: 700;
-    letter-spacing: .09em;
+    letter-spacing: calc(.09em * var(--vh-tracking));
     text-transform: uppercase;
     color: var(--purple-800);
     background-color: var(--green-100);
@@ -79,7 +79,7 @@
 #brandCompare .vh-cmp-features-label{
     display: inline-block;
     font-size: .8rem;
-    letter-spacing: .12em;
+    letter-spacing: calc(.12em * var(--vh-tracking));
     text-transform: uppercase;
     color: var(--purple-100);
 }

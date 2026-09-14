@@ -130,10 +130,21 @@
     // only narrower ones tighten, down to a 72px floor on phones.
     --vh-section-gap: clamp(72px, 13.9vw, 200px);
 
+    // Decorative tracking multiplier. Latin/Cyrillic/CJK take the designed
+    // letter- and word-spacing; Arabic, Persian and Devanagari are connected
+    // scripts, where extra spacing tears the joined glyphs apart and reads as
+    // broken text. Every decorative `letter-spacing`/`word-spacing` must be
+    // written as `calc(<value> * var(--vh-tracking))` so it folds to 0 there.
+    --vh-tracking: 1;
+
     --bs-body-bg: var(--vh-page-bg);
     --bs-body-line-height: 1.9;
     --bs-link-color-rgb: var(--purple-300-rgb);
     --bs-link-hover-color-rgb: var(--purple-200-rgb);
+}
+[dir="rtl"],
+[lang="hi"]{
+    --vh-tracking: 0;
 }
 body{
     color: var(--vh-text-muted);
@@ -686,7 +697,7 @@ iconify-icon {
     line-height: 1.3;
     gap: 6px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: calc(2px * var(--vh-tracking));
     transition: all 0.3s ease-in-out;
 }
 .vh-text-btn:after{
