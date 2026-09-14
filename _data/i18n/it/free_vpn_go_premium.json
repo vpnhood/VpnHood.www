@@ -28,7 +28,7 @@
   "why_title": "Perché scegliere VpnHood!",
   "why_desc": "Premium usa la stessa app e lo stesso codice della versione gratuita, ma senza limitazioni. Ecco i vantaggi inclusi sia nel piano Gratis che in Premium.",
   "why1_title": "Open source e certificato",
-  "why1_desc": "Il client, il server e il motore VpnHood! ENGINE sono tutti disponibili su GitHub, con audit indipendenti eseguiti da due società di sicurezza. Puoi verificare il codice di persona, senza dover andare sulla fiducia.",
+  "why1_desc": "Il client, il server e il motore VpnHood! ENGINE sono tutti disponibili su GitHub. Il progetto è stato verificato da Include Security per il Red Team Lab dell'Open Technology Fund: non fidarti solo delle nostre parole, controlla direttamente il codice.",
   "why2_title": "Modalità Cloak per reti con restrizioni",
   "why2_desc": "La modalità Cloak maschera il traffico VPN facendolo apparire come normale traffico HTTPS, aiutando a superare i blocchi più severi. L'efficacia dipende dai filtri della rete e nessun metodo garantisce uno sblocco totale continuo.",
   "why3_title": "Un piano gratuito davvero senza limiti",
@@ -36,5 +36,6 @@
   "compare_label": "Confronta",
   "compare_title": "Cosa include il piano Premium",
   "compare_desc": "Tutti i piani qui sopra offrono le stesse opzioni. L'app gratuita mantiene dati illimitati, nessun limite di velocità e split tunneling; Premium aggiunge più posizioni, massima velocità, più dispositivi e un'app senza pubblicità.",
-  "note_free_availability": "Il piano Gratis è supportato dalla pubblicità, pertanto non è disponibile in Cina o in altri Paesi in cui gli annunci non vengono mostrati. Il piano Premium non ha questa limitazione."
+  "note_free_availability": "Il piano Gratis è supportato dalla pubblicità, pertanto non è disponibile in Cina o in altri Paesi in cui gli annunci non vengono mostrati. Il piano Premium non ha questa limitazione.",
+  "audit_link": "Leggi il report di sicurezza"
 }

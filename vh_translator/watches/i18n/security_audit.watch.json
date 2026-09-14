@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "Security Audit: Who Audited VpnHood! and What They Found | VpnHood!",
+    "meta_description": "VpnHood! was audited by Include Security in an engagement run by the Open Technology Fund's Red Team Lab. What was in scope, what came back, and the full public report.",
+    "eyebrow": "Security audit",
+    "page_title": "The VpnHood! security audit",
+    "page_desc": "VpnHood! was reviewed by <b>Include Security</b>, in an engagement commissioned and paid for by the <b>Open Technology Fund</b>'s Red Team Lab. The report was published in full, findings and all.",
+    "hero_alt": "A shield with lines of code inside it, under a magnifying glass",
+    "why_label": "Why it matters",
+    "why_title": "Open source shows you the code. An audit means somebody read it.",
+    "why_desc": "A VPN carries everything you do online, so there is really only one question worth asking about one: who has checked it? Publishing the source answers half of that. The other half is whether anyone qualified has gone looking for the mistakes.",
+    "why1_title": "Reading code is not the same as auditing it",
+    "why1_desc": "Anyone can open our repository, and we would rather they did. But finding a subtle flaw in a VPN protocol takes people who do it for a living, with paid time and a method behind them. That is what an audit buys.",
+    "why2_title": "A report, not a badge",
+    "why2_desc": "Plenty of VPNs announce an audit and never publish it. Ours is a public document on the Open Technology Fund's site, findings and severities included, with our comments on each one beside it. You read the assessment, not a summary of it.",
+    "why3_title": "Paid for by someone with no stake in the result",
+    "why3_desc": "The Open Technology Fund commissioned the engagement and paid for it. The firm doing the reviewing was not being paid by the people being reviewed, which is the part that makes a finding worth something.",
+    "audit_label": "The engagement",
+    "audit_title": "Who did it, and who paid for it",
+    "credit_audited_by": "Audited by",
+    "fact_auditor": "Auditor",
+    "fact_auditor_value": "Include Security",
+    "fact_by": "Commissioned by",
+    "fact_by_value": "The Open Technology Fund's Red Team Lab",
+    "fact_report": "Report",
+    "fact_report_value": "Published in full",
+    "results_link": "Read the results on the Open Technology Fund"
+  }
+}

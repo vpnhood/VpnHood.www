@@ -36,6 +36,7 @@
   "server_manager_title": "VpnHood! MANAGER",
   "server_manager_desc": "Zugangsschlüssel erstellen, sperren und die Nutzung überwachen – alles an einem Ort.",
   "oss_title": "Vollständig Open Source",
-  "oss_desc": "App, Engine und Server sind auf GitHub öffentlich einsehbar und wurden von zwei unabhängigen Sicherheitsfirmen geprüft. Ein VPN leitet Ihren gesamten Datenverkehr weiter – bei uns sehen Sie genau, was damit passiert.",
-  "oss_link": "Code auf GitHub ansehen"
+  "oss_desc": "App, Engine und Server sind vollständig Open Source auf GitHub verfügbar – geprüft von Include Security für das Red Team Lab des Open Technology Fund. Ein VPN sieht all deine Daten; bei uns kannst du genau nachlesen, was damit passiert.",
+  "oss_link": "Code auf GitHub ansehen",
+  "audit_link": "Mehr zum Sicherheitsaudit"
 }

@@ -28,7 +28,7 @@
   "why_title": "Por que o VpnHood!",
   "why_desc": "O Premium traz o mesmo aplicativo e o mesmo código da versão gratuita, mas sem limites. Veja o que você aproveita tanto no plano Grátis quanto no Premium.",
   "why1_title": "Código aberto e auditado",
-  "why1_desc": "O cliente, o servidor e o VpnHood! ENGINE por trás de tudo são públicos no GitHub. Além disso, o projeto foi auditado por duas empresas de segurança independentes. Não precisa só confiar na nossa palavra: confira o código você mesmo.",
+  "why1_desc": "O cliente, o servidor e o VpnHood! ENGINE são de código aberto no GitHub. Além disso, o projeto foi auditado pela Include Security para o Red Team Lab do Open Technology Fund. Você pode conferir o código por conta própria em vez de apenas confiar na nossa palavra.",
   "why2_title": "Modo Camuflagem para redes bloqueadas",
   "why2_desc": "O Modo Camuflagem faz o tráfego da VPN se parecer com o tráfego HTTPS comum, ajudando a superar redes que bloqueiam VPNs. O funcionamento depende do tipo de inspeção da rede, e nenhuma conexão tem garantia contra bloqueios.",
   "why3_title": "Um plano gratuito de verdade",
@@ -36,5 +36,6 @@
   "compare_label": "Comparar",
   "compare_title": "O que o Premium adiciona",
   "compare_desc": "Todos os planos acima liberam a mesma lista. O aplicativo grátis mantém dados ilimitados, sem limites de velocidade e túnel dividido; o Premium adiciona localizações, mais velocidade, suporte a mais dispositivos e zero anúncios.",
-  "note_free_availability": "O plano gratuito é mantido por anúncios, por isso não está disponível na China ou em outros países onde não há exibição de anúncios. O Premium não tem essa restrição."
+  "note_free_availability": "O plano gratuito é mantido por anúncios, por isso não está disponível na China ou em outros países onde não há exibição de anúncios. O Premium não tem essa restrição.",
+  "audit_link": "Leia sobre a auditoria"
 }

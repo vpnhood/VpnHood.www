@@ -36,6 +36,7 @@
   "server_manager_title": "VpnHood! MANAGER",
   "server_manager_desc": "Crea e revoca chiavi di accesso e monitora l'utilizzo, tutto da un unico posto.",
   "oss_title": "Open source, da cima a fondo",
-  "oss_desc": "L'app, l'engine e il server sono tutti disponibili su GitHub, e il progetto è stato verificato da due società di sicurezza indipendenti. Una VPN gestisce ogni tuo dato: con questa puoi verificare esattamente come lo fa.",
-  "oss_link": "Esplora il codice su GitHub"
+  "oss_desc": "L'app, il motore e il server sono tutti disponibili su GitHub, e il progetto è stato sottoposto ad audit da Include Security per il Red Team Lab dell'Open Technology Fund. Una VPN gestisce ogni pacchetto inviato: con questa puoi verificare esattamente come viene trattato.",
+  "oss_link": "Esplora il codice su GitHub",
+  "audit_link": "Leggi il report dell'audit"
 }

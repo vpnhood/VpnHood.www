@@ -36,6 +36,7 @@
   "server_manager_title": "VpnHood! MANAGER",
   "server_manager_desc": "Erişim anahtarları oluşturup iptal edin ve kullanımı tek bir yerden takip edin.",
   "oss_title": "Uçtan uca açık kaynak",
-  "oss_desc": "Uygulama, ENGINE ve SERVER'ın tümü GitHub'da herkese açıktır; ayrıca proje iki bağımsız güvenlik firması tarafından denetlenmiştir. Bir VPN gönderdiğiniz her paketi yönetir; VpnHood! ise bu paketlerle ne yapıldığını görmenizi sağlar.",
-  "oss_link": "GitHub'da kaynak kodunu inceleyin"
+  "oss_desc": "Uygulama, altyapı ve sunucu kodlarının tamamı GitHub'da açık kaynak olarak paylaşılır; projemiz Open Technology Fund bünyesindeki Red Team Lab için Include Security tarafından denetlenmiştir. Bir VPN gönderdiğiniz her veri paketini emanet alır; VpnHood ise bu verilerle ne yapıldığını bizzat görmenizi sağlar.",
+  "oss_link": "GitHub'da kaynak kodunu inceleyin",
+  "audit_link": "Denetim raporunu okuyun"
 }

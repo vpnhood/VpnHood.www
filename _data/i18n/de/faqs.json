@@ -12,7 +12,7 @@
   "q_supported_platforms": "Welche Plattformen unterstützt VpnHood?",
   "a_supported_platforms": "VpnHood! CLIENT läuft auf Android, iOS (iPhone und iPad), Windows und Linux. VpnHood! CONNECT läuft auf Android, iOS (iPhone und iPad), Windows und Linux. Unter iOS, Windows und Linux bietet VpnHood! CONNECT keine kostenlosen Server; hierfür ist ein Premium-Schlüssel erforderlich, der auf der Seite <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">Premium-Tarife</a> erhältlich ist.",
   "q_is_open_source": "Ist VpnHood Open Source?",
-  "a_is_open_source": "Ja, komplett. VpnHood! CONNECT, VpnHood! CLIENT, der SERVER und die zugrundeliegende VpnHood! ENGINE sind auf GitHub veröffentlicht. Das Projekt wurde zudem von zwei unabhängigen Sicherheitsfirmen auditiert. Du musst uns also nicht blind vertrauen, sondern kannst den Code selbst überprüfen.",
+  "a_is_open_source": "Ja, vollständig. VpnHood! CONNECT, VpnHood! CLIENT, der Server und die zugrundeliegende VpnHood! ENGINE sind auf GitHub veröffentlicht. Zudem wurde das Projekt von <a href=\"/security-audit/\">Include Security für das Red Team Lab des Open Technology Fund</a> auditiert. Sie können den Quellcode jederzeit selbst prüfen, statt uns einfach vertrauen zu müssen.",
   "q_is_undetectable": "Ist VpnHood unerkennbar?",
   "a_is_undetectable": "Der Cloak Mode von VpnHood lässt VPN-Datenverkehr wie regulären HTTPS-Datenverkehr aussehen, um typische VPN-Blockaden zu umgehen. Eine Garantie für jedes Netzwerk gibt es nicht, da der Erfolg von den jeweils eingesetzten Filtern abhängt.",
   "q_stay_free_forever": "Kann ich den kostenlosen Tarif dauerhaft nutzen?",
@@ -26,5 +26,11 @@
   "q_request_location": "Kann ich mir einen neuen Standort wünschen?",
   "a_request_location": "Ja. Wir richten neue Standorte nach Nachfrage ein. Nutzen Sie einfach unser <a href=\"/contact-us/\">Kontaktformular</a>, nennen Sie das gewünschte Land und lassen Sie uns wissen, ob es Ihnen um Geschwindigkeit oder bestimmte Inhalte geht – das hilft uns bei der optimalen Platzierung.",
   "q_many_servers_per_location": "Besteht jeder Standort nur aus einem einzelnen Server?",
-  "a_many_servers_per_location": "Nein. Hinter jedem Standort steht eine ganze Servergruppe. Sie wählen das Land, und die App verbindet Sie automatisch mit dem schnellsten verfügbaren Server – ganz ohne manuelles Vergleichen. Entdecken Sie <a href=\"/free-vpn/locations/\">alle Standorte</a>."
+  "a_many_servers_per_location": "Nein. Hinter jedem Standort steht eine ganze Servergruppe. Sie wählen das Land, und die App verbindet Sie automatisch mit dem schnellsten verfügbaren Server – ganz ohne manuelles Vergleichen. Entdecken Sie <a href=\"/free-vpn/locations/\">alle Standorte</a>.",
+  "q_reseller_program": "Was ist ein VPN-Reseller-Programm?",
+  "a_reseller_program": "Damit können Sie einen VPN-Dienst anbieten, ohne selbst einen entwickeln zu müssen. Der Anbieter stellt die Technik, die Apps und die Server bereit – Sie kümmern sich um Preise, Marketing und Ihre eigenen Kunden. Bei VpnHood! kaufen und verkaufen Sie Zugangscodes. Sie müssen weder Infrastruktur verwalten noch Software entwickeln.",
+  "q_reseller_open_source": "Warum ein Open-Source-VPN verkaufen?",
+  "a_reseller_open_source": "Weil Ihre Kunden alles selbst überprüfen können. VpnHood! CONNECT, der Server und die VpnHood! ENGINE sind unter der LGPL auf GitHub veröffentlicht und wurden von <a href=\"/security-audit/\">Include Security für das Red Team Lab des Open Technology Fund geprüft</a>. Bei Closed-Source-VPNs müssen Nutzer blind vertrauen – hier liegt der Code offen. Das erleichtert den Verkauf und sorgt für weniger Supportanfragen.",
+  "q_reseller_app_cost": "Zahlen meine Kunden für die App?",
+  "a_reseller_app_cost": "Nein. VpnHood! CONNECT steht für Android, iOS, Windows und Linux kostenlos zum Download bereit. Unter Android gibt es zudem werbefinanzierte Gratis-Server, damit Nutzer den Dienst vorab testen können. Auf iOS, Windows und Linux stehen keine kostenlosen Server zur Verfügung; dort wird ein bezahlter Tarif benötigt – und genau diesen Zugangscode verkaufen Sie."
 }

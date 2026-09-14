@@ -36,6 +36,7 @@
   "server_manager_title": "VpnHood! MANAGER",
   "server_manager_desc": "一站式创建与撤回访问密钥，并实时监控流量使用情况。",
   "oss_title": "端到端完全开源",
-  "oss_desc": "应用端、核心引擎与服务端均已在 GitHub 上开源，并经过两家独立安全公司的严格审计。VPN 接管您的全部数据流量，而我们将一切代码公开，安全透明，经得起检验。",
-  "oss_link": "在 GitHub 上查看源码"
+  "oss_desc": "应用、引擎和服务器代码均已在 GitHub 开源，并由 Include Security 为开放技术基金会（Open Technology Fund）的红队实验室完成了安全审计。普通 VPN 会接管您的所有数据包，而 VpnHood 让其处理方式完全透明可见。",
+  "oss_link": "在 GitHub 上查看源码",
+  "audit_link": "阅读审计报告"
 }

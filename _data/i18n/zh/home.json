@@ -41,7 +41,7 @@
   "open_source_shape_alt": "开源形状",
   "open_source_title": "透明安全，完全开源并经专业审计",
   "open_source_desc1": "VpnHood 完整源代码已在 GitHub 公开发布。没有黑盒程序，没有不明网络请求。您可以随时查看、审计代码，或亲自参与贡献。",
-  "open_source_desc2": "VpnHood 已通过 <b>Open Tech Fund</b> 的全面安全审计。",
+  "open_source_desc2": "VpnHood 通过了由 <b>Open Technology Fund</b> 旗下红队实验室支持、由 <b>Include Security</b> 执行的全面安全审计。",
   "github_btn": "在 GitHub 上查看项目",
   "audit_btn": "查看安全审计报告",
   "new_tab": "（在新标签页中打开）",

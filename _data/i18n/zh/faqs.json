@@ -12,7 +12,7 @@
   "q_supported_platforms": "VpnHood 支持哪些平台？",
   "a_supported_platforms": "VpnHood! CLIENT 支持 Android、iOS（iPhone 和 iPad）、Windows 及 Linux。VpnHood! CONNECT 支持 Android、iOS（iPhone 和 iPad）、Windows 及 Linux。在 iOS、Windows 和 Linux 上，VpnHood! CONNECT 不设免费服务器，您需要购买高级版密钥（Premium Key），可前往<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">定价</a>页面获取。",
   "q_is_open_source": "VpnHood 是开源的吗？",
-  "a_is_open_source": "是的，完全开源。VpnHood! CONNECT、VpnHood! CLIENT、服务端以及底层的 VpnHood! ENGINE 代码均已发布在 GitHub 上，并已通过两家独立网络安全机构的严格审计。代码公开透明，随时欢迎亲自检阅验证。",
+  "a_is_open_source": "是的，完全开源。VpnHood! CONNECT、VpnHood! CLIENT、服务器以及底层的 VpnHood! ENGINE 均已在 GitHub 上开源。该项目还通过了 <a href=\"/security-audit/\">Include Security 为 Open Technology Fund 红队实验室进行的安全审计</a>。您可以随时查阅代码，无需盲信我们的一面之词。",
   "q_is_undetectable": "VpnHood 能够防止被检测识别吗？",
   "a_is_undetectable": "VpnHood 的 Cloak 模式专门用于将 VPN 流量伪装成常规的 HTTPS 流量，有效绕过常见的 VPN 识别与屏蔽手段。不过，实际效果仍取决于具体的网络过滤机制，因此无法保证在所有网络环境下均不受限制。",
   "q_stay_free_forever": "我可以一直使用免费版吗？",
@@ -26,5 +26,11 @@
   "q_request_location": "我可以申请添加新节点吗？",
   "a_request_location": "可以。我们会根据用户需求添加新节点，您的反馈就是我们的参考。请前往<a href=\"/contact-us/\">联系我们</a>页面，注明所需国家以及主要用途（提速或访问特定内容），这有助于我们选择最佳的服务器部署位置。",
   "q_many_servers_per_location": "每个节点只有一台服务器吗？",
-  "a_many_servers_per_location": "不是。每个节点都由多台服务器组成集群，而非单台机器。您只需选择国家，应用就会自动为您连接速度最快的服务器，无需手动逐一测试。查看<a href=\"/free-vpn/locations/\">所有节点位置</a>。"
+  "a_many_servers_per_location": "不是。每个节点都由多台服务器组成集群，而非单台机器。您只需选择国家，应用就会自动为您连接速度最快的服务器，无需手动逐一测试。查看<a href=\"/free-vpn/locations/\">所有节点位置</a>。",
+  "q_reseller_program": "什么是 VPN 分销商计划？",
+  "a_reseller_program": "它让您无需自行开发即可销售 VPN 服务。服务商提供技术、应用和服务器；您只需负责定价、推广及管理客户。加入 VpnHood!，您购买并转售的仅为访问码，无需维护任何基础设施，也无需进行任何开发。",
+  "q_reseller_open_source": "为什么要分销开源 VPN？",
+  "a_reseller_open_source": "因为您的客户可以亲自验证。VpnHood! CONNECT、服务器及其底层的 VpnHood! ENGINE 均基于 LGPL 协议在 GitHub 上开源，并由 <a href=\"/security-audit/\">Include Security 完成安全审计</a>（由 Open Technology Fund 红队实验室支持）。闭源 VPN 需要客户盲信承诺，而开源 VPN 允许查阅源码，让推广更轻松、售后更省心。",
+  "q_reseller_app_cost": "我的客户需要为应用付费吗？",
+  "a_reseller_app_cost": "不需要。VpnHood! CONNECT 在 Android、iOS、Windows 和 Linux 上均可免费下载。Android 端还提供广告支持的免费服务器，方便用户先试后买。iOS、Windows 和 Linux 端不提供免费服务器，客户需要购买套餐才能连接，而您销售的正是该套餐的访问码。"
 }

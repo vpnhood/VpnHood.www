@@ -12,7 +12,7 @@
   "q_supported_platforms": "Quais plataformas o VpnHood suporta?",
   "a_supported_platforms": "O VpnHood! CLIENT funciona no Android, iOS (iPhone e iPad), Windows e Linux. O VpnHood! CONNECT funciona no Android, iOS (iPhone e iPad), Windows e Linux. No iOS, Windows e Linux, o VpnHood! CONNECT não possui servidores gratuitos; é necessário adquirir uma Chave Premium, disponível na página de <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">preços</a>.",
   "q_is_open_source": "O VpnHood é de código aberto?",
-  "a_is_open_source": "Sim, 100% de código aberto. O VpnHood! CONNECT, o VpnHood! CLIENT, o servidor e o VpnHood! ENGINE estão disponíveis no GitHub, e o projeto foi auditado por duas empresas independentes de segurança. Você mesmo pode conferir o código.",
+  "a_is_open_source": "Sim, tudo nele. O VpnHood! CONNECT, o VpnHood! CLIENT, o servidor e o VpnHood! ENGINE por trás deles estão publicados no GitHub, e o projeto foi auditado pela <a href=\"/security-audit/\">Include Security para o Red Team Lab do Open Technology Fund</a>. Você pode conferir o código por conta própria em vez de apenas confiar na nossa palavra.",
   "q_is_undetectable": "O VpnHood é indetectável?",
   "a_is_undetectable": "O Cloak Mode do VpnHood foi desenvolvido para fazer o tráfego da VPN se parecer com tráfego HTTPS comum, ajudando a contornar vários métodos de bloqueio e detecção de VPN. Isso não garante funcionamento em absolutamente todas as redes; a eficácia depende dos sistemas de filtragem utilizados.",
   "q_stay_free_forever": "Posso continuar no plano grátis para sempre?",
@@ -26,5 +26,11 @@
   "q_request_location": "Posso solicitar uma nova localização?",
   "a_request_location": "Sim. Adicionamos localizações conforme a demanda, e os pedidos nos ajudam nisso. Acesse a <a href=\"/contact-us/\">página de contato</a>, informe o país e nos diga se você precisa dele para ter mais velocidade ou para acessar algo específico, pois isso faz diferença na escolha do servidor ideal.",
   "q_many_servers_per_location": "Cada localização tem apenas um servidor?",
-  "a_many_servers_per_location": "Não. Cada localização é um grupo de servidores, não apenas uma máquina. Você escolhe o país e o aplicativo seleciona o servidor mais rápido disponível para você, sem a necessidade de testar um por um. Veja <a href=\"/free-vpn/locations/\">todas as localizações</a>."
+  "a_many_servers_per_location": "Não. Cada localização é um grupo de servidores, não apenas uma máquina. Você escolhe o país e o aplicativo seleciona o servidor mais rápido disponível para você, sem a necessidade de testar um por um. Veja <a href=\"/free-vpn/locations/\">todas as localizações</a>.",
+  "q_reseller_program": "O que é um programa de revenda de VPN?",
+  "a_reseller_program": "Ele permite que você venda um serviço de VPN sem precisar criar um do zero. O provedor fornece a tecnologia, os aplicativos e os servidores; você cuida dos preços, do marketing e dos seus próprios clientes. Com o VpnHood!, você compra e revende códigos de acesso, então não há infraestrutura para gerenciar nem nada para desenvolver.",
+  "q_reseller_open_source": "Por que revender uma VPN de código aberto?",
+  "a_reseller_open_source": "Porque seus clientes podem checar tudo. O VpnHood! CONNECT, o servidor e o VpnHood! ENGINE por trás deles estão publicados no GitHub sob a licença LGPL, e a <a href=\"/security-audit/\">Include Security os auditou</a> para o Red Team Lab do Open Technology Fund. Uma VPN de código fechado exige confiança cega; a nossa permite ler o código, facilitando as vendas e reduzindo chamados de suporte.",
+  "q_reseller_app_cost": "Meus clientes pagam pelo aplicativo?",
+  "a_reseller_app_cost": "Não. O VpnHood! CONNECT é gratuito para baixar no Android, iOS, Windows e Linux. No Android, ele também oferece servidores grátis mantidos por anúncios, permitindo que as pessoas testem antes de comprar. No iOS, Windows e Linux não há servidores grátis, então seus clientes precisam de um plano pago para conectar — e o código de acesso desse plano é exatamente o que você vende."
 }

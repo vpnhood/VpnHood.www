@@ -12,7 +12,7 @@
   "q_supported_platforms": "¿En qué plataformas funciona VpnHood?",
   "a_supported_platforms": "VpnHood! CLIENT funciona en Android, iOS (iPhone y iPad), Windows y Linux. VpnHood! CONNECT funciona en Android, iOS (iPhone y iPad), Windows y Linux. En iOS, Windows y Linux, VpnHood! CONNECT no incluye servidores gratis; necesitarás comprar una clave Premium, disponible en la página de <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">precios</a>.",
   "q_is_open_source": "¿VpnHood es de código abierto?",
-  "a_is_open_source": "Sí, al 100 %. VpnHood! CONNECT, VpnHood! CLIENT, el servidor y el VpnHood! ENGINE están publicados en GitHub. Además, dos firmas de seguridad independientes han auditado el proyecto. Puedes revisar el código por tu cuenta cuando quieras.",
+  "a_is_open_source": "Sí, al 100 %. VpnHood! CONNECT, VpnHood! CLIENT, el servidor y el VpnHood! ENGINE que los impulsa están publicados en GitHub. Además, el proyecto fue auditado por <a href=\"/security-audit/\">Include Security para el Red Team Lab de Open Technology Fund</a>. No tienes que fiarte de nuestra palabra: puedes revisar el código tú mismo.",
   "q_is_undetectable": "¿VpnHood es indetectable?",
   "a_is_undetectable": "El Cloak Mode de VpnHood hace que el tráfico VPN se asemeje al tráfico HTTPS estándar, lo que ayuda a eludir bloqueos y sistemas de detección de VPN. Esto no garantiza el acceso en todas las redes, ya que la eficacia depende de los métodos de filtrado de cada una.",
   "q_stay_free_forever": "¿Puedo usar el plan Gratis para siempre?",
@@ -26,5 +26,11 @@
   "q_request_location": "¿Puedo solicitar una nueva ubicación?",
   "a_request_location": "Sí. Añadimos ubicaciones según la demanda que recibimos. Escríbenos desde la <a href=\"/contact-us/\">página de contacto</a> indicando el país y si lo necesitas por velocidad o para acceder a algún contenido específico, ya que eso nos ayuda a elegir el mejor servidor.",
   "q_many_servers_per_location": "¿Cada ubicación es un solo servidor?",
-  "a_many_servers_per_location": "No. Cada ubicación cuenta con un grupo de servidores. Solo eliges el país y la aplicación se conecta automáticamente al más rápido, sin que tengas que comparar servidores manualmente. Consulta <a href=\"/free-vpn/locations/\">todas las ubicaciones</a>."
+  "a_many_servers_per_location": "No. Cada ubicación cuenta con un grupo de servidores. Solo eliges el país y la aplicación se conecta automáticamente al más rápido, sin que tengas que comparar servidores manualmente. Consulta <a href=\"/free-vpn/locations/\">todas las ubicaciones</a>.",
+  "q_reseller_program": "¿Qué es un programa de revendedores de VPN?",
+  "a_reseller_program": "Te permite vender un servicio de VPN sin necesidad de crearlo desde cero. El proveedor aporta la tecnología, las aplicaciones y los servidores; tú defines los precios, el marketing y gestionas a tus clientes. Con VpnHood! compras y revendes códigos de acceso, sin infraestructura que administrar ni nada que programar.",
+  "q_reseller_open_source": "¿Por qué vender una VPN de código abierto?",
+  "a_reseller_open_source": "Porque tus clientes pueden comprobarlo por sí mismos. VpnHood! CONNECT, el servidor y VpnHood! ENGINE están publicados en GitHub bajo licencia LGPL, y <a href=\"/security-audit/\">Include Security los ha auditado</a> para el Red Team Lab de Open Technology Fund. Una VPN de código cerrado exige confiar a ciegas; una de código abierto permite verificar el código, facilitando las ventas y reduciendo las dudas de soporte.",
+  "q_reseller_app_cost": "¿Mis clientes tienen que pagar por la aplicación?",
+  "a_reseller_app_cost": "No. VpnHood! CONNECT se descarga gratis en Android, iOS, Windows y Linux. En Android incluye servidores gratuitos financiados con anuncios, lo que permite probar el servicio antes de comprar. En iOS, Windows y Linux no hay servidores gratuitos: los usuarios necesitan un plan de pago para conectarse, y el código de acceso a ese plan es justamente lo que vendes."
 }

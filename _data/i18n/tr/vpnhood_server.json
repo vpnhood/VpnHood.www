@@ -10,7 +10,7 @@
   "f_engine_title": "Tasarımı gereği kesintisiz",
   "f_engine_desc": "VpnHood! ENGINE, IPv4 ve IPv6 desteğiyle en zorlu ağlarda bile bağlantınızı şifreli ve kararlı tutar.",
   "f_open_title": "Açık kaynaklı ve denetlenmiş",
-  "f_open_desc": "Tüm kodlar GitHub üzerinde halka açıktır ve projemiz bağımsız güvenlik firmaları tarafından denetlenmiştir. Güveniniz körü körüne değil, kanıta dayalıdır.",
+  "f_open_desc": "Her satırı GitHub'da herkese açıktır ve proje, Open Technology Fund adına Include Security tarafından denetlenmiştir. Körükörüne güvenmenize gerek yok.",
   "run_label": "Sunucu senin, karar senin",
   "run_title": "Çalıştırmanın iki yolu",
   "run_manager_title": "VpnHood! MANAGER ile",
@@ -22,5 +22,6 @@
   "learn_more_manager": "VpnHood! MANAGER hakkında",
   "cta": "Ücretsiz, açık kaynaklı ve kendi sunucunuz için hazır.",
   "github_btn": "GitHub'da İnceleyin",
-  "new_tab": "(yeni sekmede açılır)"
+  "new_tab": "(yeni sekmede açılır)",
+  "audit_link": "Denetim raporunu okuyun"
 }

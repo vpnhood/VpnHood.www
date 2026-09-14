@@ -10,7 +10,7 @@
   "f_engine_title": "Robuste par conception",
   "f_engine_desc": "VpnHood! ENGINE garantit une connexion chiffrée et stable sur les réseaux les plus stricts, avec prise en charge d'IPv4 et IPv6.",
   "f_open_title": "Open source et audité",
-  "f_open_desc": "Chaque ligne de code est publique sur GitHub et le projet a été audité par des experts en sécurité indépendants. Zéro opacité.",
+  "f_open_desc": "Chaque ligne de code est publique sur GitHub, et le projet a été audité par Include Security pour l'Open Technology Fund. Une transparence totale, sans zone d'ombre.",
   "run_label": "Votre serveur, vos règles",
   "run_title": "Deux modes d'utilisation",
   "run_manager_title": "Avec VpnHood! MANAGER",
@@ -22,5 +22,6 @@
   "learn_more_manager": "en savoir plus sur VpnHood! MANAGER",
   "cta": "Gratuit, open source et prêt pour votre serveur.",
   "github_btn": "Code source sur GitHub",
-  "new_tab": "(s'ouvre dans un nouvel onglet)"
+  "new_tab": "(s'ouvre dans un nouvel onglet)",
+  "audit_link": "Lire le rapport d'audit"
 }

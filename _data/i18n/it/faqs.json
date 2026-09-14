@@ -12,7 +12,7 @@
   "q_supported_platforms": "Quali piattaforme supporta VpnHood?",
   "a_supported_platforms": "VpnHood! CLIENT è disponibile per Android, iOS (iPhone e iPad), Windows e Linux. Anche VpnHood! CONNECT è disponibile per Android, iOS (iPhone e iPad), Windows e Linux. Su iOS, Windows e Linux, VpnHood! CONNECT non include server gratuiti; è necessario acquistare una Chiave Premium, disponibile nella pagina delle <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">tariffe</a>.",
   "q_is_open_source": "VpnHood è open source?",
-  "a_is_open_source": "Sì, al 100%. VpnHood! CONNECT, VpnHood! CLIENT, il server e il motore VpnHood! ENGINE sono interamente disponibili su GitHub. Il progetto è stato sottoposto a verifiche di sicurezza da parte di due società indipendenti: non devi fidarti sulla parola, puoi esaminare il codice tu stesso.",
+  "a_is_open_source": "Sì, completamente. VpnHood! CONNECT, VpnHood! CLIENT, il server e il motore VpnHood! ENGINE alla base sono disponibili su GitHub. Inoltre, il progetto è stato sottoposto ad audit da parte di <a href=\"/security-audit/\">Include Security per il Red Team Lab dell'Open Technology Fund</a>. Invece di fidarti solo della nostra parola, puoi esaminare tu stesso il codice sorgente.",
   "q_is_undetectable": "VpnHood è invisibile ai blocchi?",
   "a_is_undetectable": "La modalità Cloak Mode di VpnHood maschera il traffico VPN facendolo apparire come normale traffico HTTPS, aiutando a eludere molti sistemi di rilevamento VPN. L'efficacia può variare in base alle tecniche di filtraggio della rete utilizzata.",
   "q_stay_free_forever": "Posso usare il piano Gratis per sempre?",
@@ -26,5 +26,11 @@
   "q_request_location": "Posso richiedere una nuova posizione?",
   "a_request_location": "Sì. Aggiungiamo nuove posizioni in base alle richieste degli utenti. Scrivici dalla <a href=\"/contact-us/\">pagina dei contatti</a> indicando il paese e specificando se ti serve per maggiore velocità o per accedere a contenuti specifici: questo ci aiuta a scegliere il server ideale.",
   "q_many_servers_per_location": "Ogni posizione corrisponde a un solo server?",
-  "a_many_servers_per_location": "No. Ogni posizione comprende un gruppo di server, non una singola macchina. Tu scegli il paese e l'app seleziona automaticamente il server più veloce disponibile, senza doverti preoccupare di testarli uno per uno. Scopri <a href=\"/free-vpn/locations/\">tutte le posizioni</a>."
+  "a_many_servers_per_location": "No. Ogni posizione comprende un gruppo di server, non una singola macchina. Tu scegli il paese e l'app seleziona automaticamente il server più veloce disponibile, senza doverti preoccupare di testarli uno per uno. Scopri <a href=\"/free-vpn/locations/\">tutte le posizioni</a>.",
+  "q_reseller_program": "Cos'è un programma per rivenditori VPN?",
+  "a_reseller_program": "Ti permette di vendere un servizio VPN senza doverne creare uno da zero. Il provider fornisce la tecnologia, le app e i server; tu decidi i prezzi, ti occupi del marketing e gestisci i tuoi clienti. Con VpnHood! acquisti e rivendi codici di accesso: nessuna infrastruttura da gestire, niente da sviluppare.",
+  "q_reseller_open_source": "Perché rivendere una VPN open source?",
+  "a_reseller_open_source": "Perché i tuoi clienti possono verificarla. VpnHood! CONNECT, il server e il motore VpnHood! ENGINE sono pubblicati su GitHub con licenza LGPL e sono stati <a href=\"/security-audit/\">sottoposti ad audit da Include Security</a> per il Red Team Lab dell'Open Technology Fund. Una VPN proprietaria chiede fiducia a scatola chiusa; la nostra offre un codice aperto e verificabile, rendendo le vendite più semplici e riducendo le richieste di supporto.",
+  "q_reseller_app_cost": "I miei clienti devono pagare per l'app?",
+  "a_reseller_app_cost": "No. VpnHood! CONNECT si scarica gratis su Android, iOS, Windows e Linux. Su Android include anche server gratuiti supportati da annunci pubblicitari, così gli utenti possono provarlo prima dell'acquisto. Su iOS, Windows e Linux non ci sono server gratuiti: per connettersi serve un piano a pagamento, ed è proprio il codice di accesso per questo piano che tu andrai a vendere."
 }

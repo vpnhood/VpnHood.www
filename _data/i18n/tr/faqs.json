@@ -12,7 +12,7 @@
   "q_supported_platforms": "VpnHood hangi platformları destekliyor?",
   "a_supported_platforms": "VpnHood! CLIENT; Android, iOS (iPhone ve iPad), Windows ve Linux üzerinde çalışır. VpnHood! CONNECT de Android, iOS (iPhone ve iPad), Windows ve Linux platformlarında kullanılabilir. VpnHood! CONNECT'in iOS, Windows ve Linux sürümlerinde ücretsiz sunucu bulunmaz; bağlanmak için <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">fiyatlandırma</a> sayfamızdan bir Premium Anahtarı satın almanız gerekir.",
   "q_is_open_source": "VpnHood açık kaynaklı mı?",
-  "a_is_open_source": "Evet, baştan sona açık kaynaktır. VpnHood! CONNECT, VpnHood! CLIENT, sunucu tarafı ve bunların arkasındaki VpnHood! ENGINE GitHub üzerinde yayınlanmıştır. Proje iki bağımsız güvenlik kuruluşu tarafından denetlenmiştir. Sözümüze güvenmek yerine kodları kendiniz inceleyebilirsiniz.",
+  "a_is_open_source": "Evet, hem de tamamen. VpnHood! CONNECT, VpnHood! CLIENT, sunucu ve arkalarındaki VpnHood! ENGINE GitHub'da yayınlanmaktadır. Ayrıca proje, <a href=\"/security-audit/\">Open Technology Fund'ın Red Team Lab'i için Include Security</a> tarafından denetlenmiştir. Yalnızca sözümüze güvenmek zorunda değilsiniz; kaynak kodunu kendiniz de inceleyebilirsiniz.",
   "q_is_undetectable": "VpnHood fark edilemez mi?",
   "a_is_undetectable": "VpnHood'un Cloak Mode özelliği, VPN trafiğini sıradan HTTPS trafiği gibi göstererek VPN engelleme yöntemlerini aşmaya yardımcı olur. Yine de her ağda bağlantı garantisi verilemez; performans kullanılan filtreleme yöntemlerine göre değişir.",
   "q_stay_free_forever": "Ücretsiz planda dilediğim kadar kalabilir miyim?",
@@ -26,5 +26,11 @@
   "q_request_location": "Yeni bir konum talep edebilir miyim?",
   "a_request_location": "Evet. Konumları gelen taleplere göre ekliyoruz. <a href=\"/contact-us/\">İletişim sayfasından</a> istediğiniz ülkeyi ve bu konumu hız için mi yoksa belirli bir içeriğe erişmek için mi istediğinizi bize iletin; bu bilgi sunucuyu en doğru noktaya kurmamıza yardımcı olur.",
   "q_many_servers_per_location": "Her konum tek bir sunucudan mı oluşuyor?",
-  "a_many_servers_per_location": "Hayır. Her konum tek bir makine değil, bir sunucu kümesidir. Siz sadece ülkeyi seçersiniz; uygulama en hızlı sunucuya otomatik olarak bağlanır, böylece sunucuları tek tek karşılaştırmakla uğraşmazsınız. <a href=\"/free-vpn/locations/\">Tüm konumları inceleyin</a>."
+  "a_many_servers_per_location": "Hayır. Her konum tek bir makine değil, bir sunucu kümesidir. Siz sadece ülkeyi seçersiniz; uygulama en hızlı sunucuya otomatik olarak bağlanır, böylece sunucuları tek tek karşılaştırmakla uğraşmazsınız. <a href=\"/free-vpn/locations/\">Tüm konumları inceleyin</a>.",
+  "q_reseller_program": "VPN bayilik programı nedir?",
+  "a_reseller_program": "Sıfırdan bir sistem kurmadan kendi VPN hizmetinizi satmanızı sağlar. Sağlayıcı teknolojiyi, uygulamaları ve sunucuları sunar; fiyatlandırma, pazarlama ve müşteri yönetimi ise size aittir. VpnHood! ile satın alıp sattığınız şey yalnızca bir erişim kodudur; yani altyapı yönetimiyle veya yazılım geliştirmeyle uğraşmazsınız.",
+  "q_reseller_open_source": "Neden açık kaynaklı bir VPN satmalısınız?",
+  "a_reseller_open_source": "Çünkü müşterileriniz güvenliği bizzat doğrulayabilir. VpnHood! CONNECT, sunucu ve arkalarındaki VpnHood! ENGINE, LGPL lisansıyla GitHub'da açık kaynak olarak sunulur ve Open Technology Fund'ın Red Team Lab'i adına <a href=\"/security-audit/\">Include Security tarafından denetlenmiştir</a>. Kapalı kaynaklı VPN'ler müşterilerden sadece vaatlere güvenmesini ister; VpnHood! ise kodu inceleme şansı tanıyarak satışı kolaylaştırır ve destek taleplerini azaltır.",
+  "q_reseller_app_cost": "Müşterilerim uygulama için ücret ödüyor mu?",
+  "a_reseller_app_cost": "Hayır. VpnHood! CONNECT; Android, iOS, Windows ve Linux'ta ücretsiz olarak indirilebilir. Android'de reklam destekli ücretsiz sunucular da bulunur, böylece kullanıcılar satın almadan önce deneyebilir. iOS, Windows ve Linux'ta ücretsiz sunucu bulunmadığından müşterilerinizin bağlanmak için ücretli bir plana ihtiyacı vardır; sattığınız şey de tam olarak bu planın erişim kodudur."
 }

@@ -38,7 +38,8 @@
     "server_manager_title": "VpnHood! MANAGER",
     "server_manager_desc": "Create and revoke access keys, and watch usage, from one place.",
     "oss_title": "Open source, end to end",
-    "oss_desc": "The app, the engine and the server are all published on GitHub, and the project has been audited by two independent security firms. A VPN asks for every packet you send; this one lets you read what it does with them.",
-    "oss_link": "Read the code on GitHub"
+    "oss_desc": "The app, the engine and the server are all published on GitHub, and the project has been audited by Include Security for the Open Technology Fund's Red Team Lab. A VPN asks for every packet you send; this one lets you read what it does with them.",
+    "oss_link": "Read the code on GitHub",
+    "audit_link": "Read about the audit"
   }
 }

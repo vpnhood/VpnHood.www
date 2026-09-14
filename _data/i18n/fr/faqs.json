@@ -12,7 +12,7 @@
   "q_supported_platforms": "Quelles sont les plateformes prises en charge par VpnHood ?",
   "a_supported_platforms": "VpnHood! CLIENT fonctionne sur Android, iOS (iPhone et iPad), Windows et Linux. VpnHood! CONNECT fonctionne sur Android, iOS (iPhone et iPad), Windows et Linux. Sur iOS, Windows et Linux, VpnHood! CONNECT ne dispose pas de serveurs gratuits ; vous devrez acheter une clé Premium, disponible sur la page des <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">tarifs</a>.",
   "q_is_open_source": "VpnHood est-il open source ?",
-  "a_is_open_source": "Oui, intégralement. VpnHood! CONNECT, VpnHood! CLIENT, le serveur et le VpnHood! ENGINE sont tous publiés sur GitHub. Le projet a également été audité par deux cabinets de cybersécurité indépendants. Pas besoin de nous croire sur parole : le code est ouvert à tous.",
+  "a_is_open_source": "Oui, entièrement. VpnHood! CONNECT, VpnHood! CLIENT, le serveur et le moteur VpnHood! ENGINE qui les alimente sont tous publiés sur GitHub. Le projet a également été audité par <a href=\"/security-audit/\">Include Security pour le Red Team Lab de l'Open Technology Fund</a>. Pas besoin de nous croire sur parole : le code est accessible à tous.",
   "q_is_undetectable": "VpnHood est-il indétectable ?",
   "a_is_undetectable": "Le Mode Cloak de VpnHood fait passer le trafic VPN pour une navigation HTTPS standard afin de contourner certains systèmes de détection. Cela ne garantit pas l'accès sur tous les réseaux, l'efficacité dépendant des méthodes de filtrage appliquées.",
   "q_stay_free_forever": "Puis-je rester sur l'offre gratuite pour toujours ?",
@@ -26,5 +26,11 @@
   "q_request_location": "Puis-je demander une nouvelle localisation ?",
   "a_request_location": "Oui. Nous ajoutons des emplacements selon la demande, et vos requêtes nous guident. Utilisez la <a href=\"/contact-us/\">page de contact</a>, indiquez le pays et précisez si vous en avez besoin pour la vitesse ou pour accéder à un contenu spécifique, afin d'optimiser le choix du serveur.",
   "q_many_servers_per_location": "Chaque localisation correspond-elle à un seul serveur ?",
-  "a_many_servers_per_location": "Non. Chaque localisation regroupe plusieurs serveurs. Choisissez simplement le pays et l'application sélectionne automatiquement le serveur le plus rapide disponible, sans que vous ayez à comparer manuellement. Voir <a href=\"/free-vpn/locations/\">toutes les localisations</a>."
+  "a_many_servers_per_location": "Non. Chaque localisation regroupe plusieurs serveurs. Choisissez simplement le pays et l'application sélectionne automatiquement le serveur le plus rapide disponible, sans que vous ayez à comparer manuellement. Voir <a href=\"/free-vpn/locations/\">toutes les localisations</a>.",
+  "q_reseller_program": "Qu'est-ce qu'un programme pour revendeurs VPN ?",
+  "a_reseller_program": "Il vous permet de commercialiser un service VPN sans avoir à le concevoir. Le fournisseur met à disposition la technologie, les applications et les serveurs ; vous fixez vos prix et gérez vos clients. Avec VpnHood!, vous achetez et revendez simplement des codes d'accès : aucune infrastructure à gérer, rien à développer.",
+  "q_reseller_open_source": "Pourquoi vendre un VPN open source ?",
+  "a_reseller_open_source": "Parce que vos clients peuvent vérifier son fonctionnement. VpnHood! CONNECT, le serveur et le moteur VpnHood! ENGINE sont publiés sur GitHub sous licence LGPL, et <a href=\"/security-audit/\">Include Security les a audités</a> pour le Red Team Lab de l'Open Technology Fund. Un VPN propriétaire exige une confiance aveugle ; avec un code ouvert et transparent, la vente est plus simple et les demandes d'assistance bien plus rares.",
+  "q_reseller_app_cost": "Mes clients doivent-ils payer pour l'application ?",
+  "a_reseller_app_cost": "Non. VpnHood! CONNECT est téléchargeable gratuitement sur Android, iOS, Windows et Linux. Sur Android, des serveurs gratuits financés par la publicité permettent de tester l'application sans engagement. Sur iOS, Windows et Linux, seuls les serveurs Premium sont accessibles : vos clients ont besoin d'une offre payante pour se connecter, et c'est précisément ce code d'accès que vous leur vendez."
 }

@@ -28,7 +28,7 @@
   "why_title": "Pourquoi choisir VpnHood !",
   "why_desc": "L'offre Premium repose sur la même application et le même code que la version gratuite, les limites en moins. Voici ce qui est garanti pour les offres Gratuit et Premium.",
   "why1_title": "Open source et audité",
-  "why1_desc": "Le client, le serveur et le moteur VpnHood! ENGINE sont tous disponibles sur GitHub. Le projet a été audité par deux cabinets de sécurité indépendants. Ne nous croyez pas sur parole : inspectez vous-même le code.",
+  "why1_desc": "Le client, le serveur et le moteur VpnHood! ENGINE sont tous publiés sur GitHub, et le projet a été audité par Include Security pour le Red Team Lab de l'Open Technology Fund. Vous pouvez vérifier le code par vous-même plutôt que de nous croire sur parole.",
   "why2_title": "Mode Cloak pour les réseaux bloqués",
   "why2_desc": "Le mode Cloak fait passer le trafic VPN pour du trafic HTTPS ordinaire, permettant de contourner les réseaux qui bloquent totalement les VPN. L'efficacité dépend des méthodes de détection du réseau, et aucun accès n'est garanti sans interruption.",
   "why3_title": "Une offre gratuite réellement gratuite",
@@ -36,5 +36,6 @@
   "compare_label": "Comparer",
   "compare_title": "Ce que l'offre Premium apporte de plus",
   "compare_desc": "Chaque offre ci-dessus donne accès aux mêmes fonctionnalités. L'application gratuite conserve les données illimitées, l'absence de limite de vitesse et le split tunneling ; Premium y ajoute toutes les localisations, une vitesse maximale, plusieurs appareils et zéro publicité.",
-  "note_free_availability": "L'offre gratuite étant financée par la publicité, elle n'est pas disponible en Chine ni dans les pays où les annonces ne sont pas diffusées. L'offre Premium ne présente aucune restriction."
+  "note_free_availability": "L'offre gratuite étant financée par la publicité, elle n'est pas disponible en Chine ni dans les pays où les annonces ne sont pas diffusées. L'offre Premium ne présente aucune restriction.",
+  "audit_link": "En savoir plus sur l'audit"
 }
