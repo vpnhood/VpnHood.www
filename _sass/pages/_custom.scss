@@ -1352,10 +1352,11 @@ a.vh-feature-chip:hover{
     color: var(--purple-120);
     font-weight: 500;
 }
-// The three facts every route answers: a bullet, the question in bold, then the
-// answer a little way along. The question column sizes to its widest term, so
-// every answer starts on the same left edge and a longer translated label moves
-// all three together. The dot matches .vh-plain-list.
+// The three facts every route answers: a bullet, the term in bold, then the value
+// a little way along. The term column sizes to its widest entry, so every value
+// starts on the same left edge and a longer translated label moves all three
+// together. No colon and no question mark: the term and the value carry the card's
+// own heading/body contrast, so the pair separates by weight and ink alone.
 .vh-route-facts{
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -1389,6 +1390,7 @@ a.vh-feature-chip:hover{
 
 .vh-route-facts dd{
     margin: 0;
+    color: var(--vh-text-muted);
 }
 
 // On a phone the answer needs the whole width, so the pair stacks under its dot.
