@@ -32,5 +32,11 @@
   "q_reseller_open_source": "Why sell an open-source VPN?",
   "a_reseller_open_source": "Because your customers can check it. VpnHood! CONNECT, the server and the VpnHood! ENGINE behind them are published on GitHub under the LGPL, and <a href=\"/security-audit/\">Include Security has audited them</a> for the Open Technology Fund's Red Team Lab. A closed VPN asks buyers to trust a promise; this one lets them read the code, which makes the sale easier and the support questions fewer.",
   "q_reseller_app_cost": "Do my customers pay for the app?",
-  "a_reseller_app_cost": "No. VpnHood! CONNECT is a free download on Android, iOS, Windows and Linux. On Android it also has free servers funded by ads, so people can try it before they buy. On iOS, Windows and Linux there are no free servers, so your customers need a paid plan to connect, and the access code for that plan is what you sell."
+  "a_reseller_app_cost": "No. VpnHood! CONNECT is a free download on Android, iOS, Windows and Linux. On Android it also has free servers funded by ads, so people can try it before they buy. On iOS, Windows and Linux there are no free servers, so your customers need a paid plan to connect, and the access code for that plan is what you sell.",
+  "q_audit_independent": "Has VpnHood! been independently audited?",
+  "a_audit_independent": "Yes. Include Security reviewed the Android app, the Windows app and the VPN server, in an engagement commissioned and paid for by the Open Technology Fund's Red Team Lab. The report was published in full.",
+  "q_audit_who_paid": "Who paid for the VpnHood! security audit?",
+  "a_audit_who_paid": "The Open Technology Fund commissioned the engagement and paid for it, not us. The firm doing the reviewing was not being paid by the people being reviewed, which is the part that makes a finding worth something.",
+  "q_audit_findings": "Did the audit find any serious vulnerabilities?",
+  "a_audit_findings": "No critical or high-risk issues were found. There was one medium-risk finding, about how the Android app was signed for older Android versions, and three informational ones. All four, and our response to each, are in the published report."
 }

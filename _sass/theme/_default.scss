@@ -728,14 +728,18 @@ iconify-icon {
 #compareTable,
 #faq,
 #unlimited,
-#locations{
+#locations,
+#why,
+#engagement{
     scroll-margin-top: 9.5rem;
 }
 
 @media (max-width: 991px){
     #compareTable,
     #faq,
-    #unlimited{
+    #unlimited,
+    #why,
+    #engagement{
         scroll-margin-top: 6rem;
     }
 }

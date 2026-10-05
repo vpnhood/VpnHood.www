@@ -109,3 +109,12 @@ sets:
     - reseller_open_source
     - reseller_app_cost
     - is_undetectable
+
+  # Like the reseller_* pairs, the audit_* ones are not in `all`: /faq/ is read by
+  # people choosing a VPN, and "who paid for the audit" is a question you only ask
+  # once you are already on the audit page. No answer here links to
+  # /security-audit/, which is the page showing them.
+  security_audit:
+    - audit_independent
+    - audit_who_paid
+    - audit_findings

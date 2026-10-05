@@ -37,7 +37,7 @@ nav_active: resources
                   <div class="section-label">
                     <p class="vh-txt-grad-purple-400">{{ t.why_label }}</p>
                   </div>
-                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
+                  <h2 id="why" class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
                   <p class="section-desc">{{ t.why_desc }}</p>
                 </div>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -65,7 +65,7 @@ nav_active: resources
                   <div class="section-label">
                     <p class="vh-txt-grad-purple-400">{{ t.audit_label }}</p>
                   </div>
-                  <h2 class="section-title vh-txt-grad-purple-400">{{ t.audit_title }}</h2>
+                  <h2 id="engagement" class="section-title vh-txt-grad-purple-400">{{ t.audit_title }}</h2>
                 </div>
                 <div class="vh-card-light rounded-4 p-4 p-md-5" data-aos="fade-up" data-aos-duration="1000">
                   <p class="vh-audit-credit">
@@ -88,6 +88,8 @@ nav_active: resources
                     <svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </a>
                 </div>
+
+                {% include faq.html set="security_audit" schema=false wrapper_class="section-space-top" %}
 
               </div>
             </div>
