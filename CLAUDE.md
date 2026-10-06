@@ -20,7 +20,7 @@ This file is the binding summary. Each section links a doc in `.docs/` with the 
 
 ## Build & deploy — [.docs/build-and-deploy.md](.docs/build-and-deploy.md)
 
-`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build and commits the translations back (`[skip ci]`), syncs the legal pages from the wiki (fail-fast), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
+`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build and commits the translations back (`[skip ci]`), syncs the legal pages from the VpnHood repo (fail-fast), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
 
 ## Page anatomy
 
@@ -57,7 +57,7 @@ Strings are translated by `vhtranslator` (`vh_translator/vhtranslator.json`, 12 
 
 ## Legal pages — [.docs/legal-pages.md](.docs/legal-pages.md)
 
-Source of truth is the `vpnhood/VpnHood` GitHub wiki; CI `curl`s the `.md` into `_includes/legals/` (fail-fast, plus a weekly cron). Pages render through `legal-page.html`. English only, never `vh_base`-prefixed.
+Source of truth is `docs/legal/end-user/` in the `vpnhood/VpnHood` repo (`develop`, reviewed PRs only); CI `curl`s the `.md` into `_includes/legals/` (fail-fast, plus a weekly cron). The wiki keeps only redirect stubs — never fetch from it. Pages render through `legal-page.html`. English only, never `vh_base`-prefixed.
 
 ## Blog
 

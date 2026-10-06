@@ -1,14 +1,17 @@
-# Legal pages (privacy / terms) — synced from the GitHub wiki
+# Legal pages (privacy / terms) — synced from the VpnHood repo
 
 The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
-Source of truth is the **`vpnhood/VpnHood` GitHub wiki** (`Legal` is an index →
-`VpnHood-CLIENT-Privacy-Policy`, `VpnHood-CONNECT-Privacy-Policy`,
-`VpnHood-MANAGER-Privacy-Policy`, `VpnHood-MANAGER-Terms-of-Use`).
+Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
+the CLIENT, CONNECT and MANAGER privacy policies and terms of use, one `.md` each, named by
+website slug. They change only through reviewed PRs there, and merging to `develop` is
+publication. The wiki keeps only redirect stubs at the old page names, plus its `Legal` index
+(linked from the MANAGER web UI), which points at the URLs below — never fetch from the wiki.
 
-- The workflow step **"Sync legal pages from wiki"** `curl`s those `.md` (raw URL
-  `https://raw.githubusercontent.com/wiki/vpnhood/VpnHood/<Page>.md`) into
-  `_includes/legals/` **at build time** — no runtime fetch; the rendered HTML is static and
+- The workflow step **"Sync legal pages"** `curl`s those `.md` (raw URL
+  `https://raw.githubusercontent.com/vpnhood/VpnHood/develop/docs/legal/end-user/<slug>.md`)
+  into `_includes/legals/` under their wiki-era names (`VpnHood-MANAGER-Privacy-Policy.md`, …)
+  **at build time** — no runtime fetch; the rendered HTML is static and
   SEO-friendly. The committed `_includes/legals/*.md` are the working copy. A **weekly**
   cron rebuild keeps it synced even without a code push. It's intentionally fail-fast: if a
   fetch fails the build is skipped and Pages keeps the last deployment.

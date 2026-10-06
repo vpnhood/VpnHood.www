@@ -9,8 +9,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  # Rebuild weekly so legal pages stay synced with the GitHub wiki even when no
-  # code is pushed (the wiki can change independently of this repo).
+  # Rebuild weekly so legal pages stay synced with the VpnHood repo even when no
+  # code is pushed here (its docs/legal/ changes independently of this repo).
   schedule:
     - cron: "0 6 * * 1" # Mondays 06:00 UTC
 
@@ -48,14 +48,13 @@ jobs:
       # step fails and the build is skipped — that's fine: GitHub Pages keeps
       # serving the previous successful deployment.
       #
-      # The end-user policies live in the VpnHood repo (docs/legal/end-user/, edited
-      # via reviewed PRs — merging to develop, that repo's default branch, is
-      # publication). MANAGER's pages have not been migrated yet and still come from
-      # the GitHub wiki; move each one here as it lands — see
-      # docs/legal/end-user/README.md in the VpnHood repo.
+      # All six policies live in the VpnHood repo (docs/legal/end-user/, edited via
+      # reviewed PRs — merging to develop, that repo's default branch, is
+      # publication); see docs/legal/end-user/README.md there. The wiki keeps only
+      # redirect stubs, so nothing here may fetch from it.
       #
       # Repo file name = website slug; the include keeps the wiki-era file name so
-      # the page templates don't have to change as pages migrate.
+      # the page templates did not have to change when the pages moved.
       - name: Sync legal pages
         run: |
           sync_repo() {
@@ -67,10 +66,8 @@ jobs:
           sync_repo vpnhood-connect-privacy-policy VpnHood-CONNECT-Privacy-Policy
           sync_repo vpnhood-client-terms-of-use VpnHood-CLIENT-Terms-of-Use
           sync_repo vpnhood-connect-terms-of-use VpnHood-CONNECT-Terms-of-Use
-          for p in VpnHood-MANAGER-Privacy-Policy VpnHood-MANAGER-Terms-of-Use; do
-            curl -sfL "https://raw.githubusercontent.com/wiki/vpnhood/VpnHood/$p.md" -o "_includes/legals/$p.md"
-            echo "synced $p (wiki)"
-          done
+          sync_repo vpnhood-manager-privacy-policy VpnHood-MANAGER-Privacy-Policy
+          sync_repo vpnhood-manager-terms-of-use VpnHood-MANAGER-Terms-of-Use
 
       # Translate anything stale (source copy edited without running the translator
       # locally) so a deploy never ships untranslated strings. Incremental: the
@@ -104,7 +101,7 @@ jobs:
 
       # Push the generated translations + watches back to main so the repo stays in
       # sync and nothing is re-translated on the next publish. Scoped to the
-      # translator's own outputs (never the wiki-synced legal pages). No workflow
+      # translator's own outputs (never the synced legal pages). No workflow
       # loop: pushes made with GITHUB_TOKEN don't trigger 'push' workflows, and
       # [skip ci] is the belt-and-suspenders. This run continues deploying the
       # already-translated tree either way.
