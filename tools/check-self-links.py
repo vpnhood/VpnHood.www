@@ -157,7 +157,7 @@ def check_output(site_dir):
             continue
         html = read(os.path.join(root, "index.html"))
         if BODY_START not in html or BODY_END not in html:
-            continue  # legal pages and the blog use their own wrappers
+            continue  # legal pages use their own wrapper
         scanned += 1
         url = "/" if rel == "." else "/" + rel + "/"
         body = html[html.index(BODY_START):html.index(BODY_END)]

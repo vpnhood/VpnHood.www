@@ -1,9 +1,5 @@
 # Redirect pages for retired site URLs.
 #
-# Blog posts retire through _data/blog_redirects.yml (see _plugins/blog-redirects.rb);
-# this is the equivalent for the pages in this repo, where the map is small enough to
-# live in the plugin.
-#
 # The wrinkle a single stub would miss: every page carrying `i18n:` front matter is
 # cloned into each /<lang>/ tree by _plugins/i18n-pages.rb, so retiring one page retires
 # thirteen URLs. Each entry therefore emits a stub per language too, pointing at that

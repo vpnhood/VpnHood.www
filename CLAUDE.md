@@ -16,16 +16,15 @@ This file is the binding summary. Each section links a doc in `.docs/` with the 
 - **Every `meta_title` contains "VpnHood!"**, and [.docs/seo-and-semantic-html.md](.docs/seo-and-semantic-html.md) is binding for any markup change (a shared standard kept byte-identical with `paymenthood-www` — edit both copies together).
 - **Light-mode art comes only from `python tools/make-light-art.py`** — never hand-author a `*-light.*` file or a per-image CSS filter.
 - **Verify both themes after any markup or CSS change**; the dark theme must stay pixel-identical.
-- **`jekyll serve --watch` never reloads `_plugins/`** — restart it after a plugin edit. A `_data` change triggers a full rebuild (~15 s).
-- **Never commit blog content** — `_blog/`, `assets/images/blog/` and `_data/blog_redirects.yml` are fetched by CI and gitignored.
+- **`jekyll serve --watch` never reloads `_plugins/`** — restart it after a plugin edit. A `_data` change triggers a full rebuild (~15 s). **Generators must not stamp render-time data onto pages** — that rebuild renders fresh page objects, so the data vanishes in local preview while CI stays green.
 
 ## Build & deploy — [.docs/build-and-deploy.md](.docs/build-and-deploy.md)
 
-`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build and commits the translations back (`[skip ci]`), syncs the legal pages from the wiki (fail-fast), fetches the blog (never blocks a deploy), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
+`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build and commits the translations back (`[skip ci]`), syncs the legal pages from the wiki (fail-fast), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
 
 ## Page anatomy
 
-- Front matter: `layout: none`, `i18n: <page_key>` (names the data file), `nav_active` (`home | free-vpn | reseller | self-hosted | resources | blog`; unset when not in the nav), optional `extra_css` (list; home uses `/assets/css/home.css`, content pages `/assets/css/custom.css`), `globe: true` on home only. **No `title`/`description`** — those are the `meta_title`/`meta_description` JSON keys, injected by `_plugins/i18n-meta.rb`. Legal pages are the exception: they declare both and have no `i18n`.
+- Front matter: `layout: none`, `i18n: <page_key>` (names the data file), `nav_active` (`home | free-vpn | reseller | self-hosted | resources`; unset when not in the nav), optional `extra_css` (list; home uses `/assets/css/home.css`, content pages `/assets/css/custom.css`), `globe: true` on home only. **No `title`/`description`** — those are the `meta_title`/`meta_description` JSON keys, injected by `_plugins/i18n-meta.rb`. Legal pages are the exception: they declare both and have no `i18n`.
 - Body: `{% include header.html %}` → `{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}` → `<main id="sp-main-body">…</main>` rendering `{{ t.key }}` → `{% include footer.html %}`. Translatable attributes (`alt`, `placeholder`, `aria-label`) use `{{ t.* }}`; `class`/`href`/`data-*` never do. Inline HTML fragments (`<b>…</b>`, a whole `<a>`) may live inside a JSON string.
 - Header/footer/offcanvas text is `{{ tc.* }}` from `_data/i18n/<lang>/chrome.json`, assigned once in `header.html`. Edit chrome copy there, never in the includes.
 
@@ -60,9 +59,9 @@ Strings are translated by `vhtranslator` (`vh_translator/vhtranslator.json`, 12 
 
 Source of truth is the `vpnhood/VpnHood` GitHub wiki; CI `curl`s the `.md` into `_includes/legals/` (fail-fast, plus a weekly cron). Pages render through `legal-page.html`. English only, never `vh_base`-prefixed.
 
-## Blog — [.docs/blog.md](.docs/blog.md)
+## Blog
 
-Posts come from the private `vpnhood/VpnHood.Blog` repo at build time (read-only deploy key), re-validated with `--prune`, cached so a fetch failure never blocks a deploy. `_layouts/post.html` is the only Jekyll layout. Never test `page.image` for truthiness (every document carries the OG default); never add `BlogPosting` JSON-LD (seo-tag already does); never widen the `vpnhood-blog-publisher` App beyond Actions: write. Generators must not stamp render-time data onto pages — it vanishes under `jekyll serve`.
+The blog is a separate project (`vpnhood/VpnHood.Blog`), to be published on its own subdomain; nothing in this repo builds it. Its old `/blog/` URLs here are retired stubs in `_plugins/legacy-redirects.rb`.
 
 ## China promo bar — [.docs/china-bar-geo.md](.docs/china-bar-geo.md)
 

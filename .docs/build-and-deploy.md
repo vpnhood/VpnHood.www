@@ -19,8 +19,9 @@ The full picture behind the "Build & deploy" summary in [CLAUDE.md](../CLAUDE.md
 
 - **Pushing `main` deploys production.** The workflow builds with the pinned Jekyll and
   publishes the generated `_site` to GitHub Pages (`actions/deploy-pages`); served at
-  https://www.vpnhood.com. Triggers: `push` (publish), `workflow_dispatch` (manual, also used
-  by the blog repo), and a weekly `schedule` cron (legal sync).
+  https://www.vpnhood.com. Triggers: `push` (publish), `workflow_dispatch` (manual; the blog
+  repo still fires it after each content push, a leftover from when this site built the blog),
+  and a weekly `schedule` cron (legal sync).
 - Before building, CI runs `vhtranslator` (data-only translation; pinned via
   `.config/dotnet-tools.json`, `GEMINI_API_KEY` repo secret) so a deploy never ships
   untranslated strings — incremental via the committed watches, and the generated
@@ -70,12 +71,18 @@ at 0.7% CTR and on no "free vs premium" query at all).
 
 `jekyll-seo-tag`, `jekyll-sitemap`, plus the project plugins: `_plugins/i18n-meta.rb`
 (injects `page.title`/`page.description` from the i18n data), `_plugins/i18n-pages.rb`
-(generates the per-language page trees), `_plugins/legacy-redirects.rb`,
-`_plugins/blog-pages.rb`, `_plugins/blog-paginate.rb`, `_plugins/blog-redirects.rb`.
-**No `safe: true`** — the site builds in our own Actions workflow, not the legacy shared
+(generates the per-language page trees) and `_plugins/legacy-redirects.rb` (stubs for
+retired URLs). **No `safe: true`** — the site builds in our own Actions workflow, not the legacy shared
 Pages builder, so `_plugins/` load in CI and locally. `excerpt_separator: ""` disables
 auto-excerpts; without it, seo-tag could fall back to a page's raw body as its meta
 description whenever `meta_description` is empty.
+
+**Generators must not stamp render-time data onto pages or documents.** Set what the URL
+needs (permalink, language, title) and derive everything else in Liquid. Under `jekyll serve`,
+a rebuild triggered by a `_data` change renders page objects that are not the ones the
+generator mutated, so richer generator-set data silently vanishes — the blog plugins lost a
+paginator object and their card images this way before the blog moved out. A one-shot
+`jekyll build` never hits it, so CI stays green and only local preview breaks.
 
 ## History
 

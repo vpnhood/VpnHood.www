@@ -26,4 +26,4 @@ Source of truth is the **`vpnhood/VpnHood` GitHub wiki** (`Legal` is an index â†
   product terms md). The terms pages live under `/legal/`; the privacy pages are still at
   the root. The MANAGER terms used to be at `/terms-of-use/`, which is now a canonical +
   noindex + meta-refresh redirect stub (`sitemap: false`) to its new address â€” GitHub Pages
-  can't 301; same form as `_plugins/blog-redirects.rb`.
+  can't 301; same form as `_plugins/legacy-redirects.rb`.
