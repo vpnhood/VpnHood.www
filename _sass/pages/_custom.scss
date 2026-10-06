@@ -1326,6 +1326,65 @@ a.vh-feature-chip:hover{
     .vh-audit-facts dt{ padding-bottom: .2rem; }
 }
 
+// The install block on /vpnhood-server/: the one command, shown as a terminal rather
+// than described. Breaks a page that is otherwise nothing but rows of cards, and the
+// command is the thing someone self-hosting came to find. The window chrome is
+// decorative and hidden from the accessibility tree; the commands themselves are LTR
+// in every language, so the markup carries dir="ltr".
+.vh-terminal{
+    overflow: hidden;
+    border: 1px solid var(--vh-hairline);
+    background-color: var(--vh-surface-raised);
+}
+
+.vh-terminal-bar{
+    display: flex;
+    gap: .5rem;
+    padding: .85rem 1.1rem;
+    border-bottom: 1px solid var(--vh-hairline);
+    background-color: var(--vh-surface);
+}
+
+.vh-terminal-bar span{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--vh-text-dim);
+    opacity: .55;
+}
+
+.vh-terminal-body{
+    padding: 1.4rem 1.6rem 1.6rem;
+}
+
+.vh-terminal-caption{
+    margin: 0 0 .5rem;
+    color: var(--vh-text-dim);
+    font-size: 13px;
+}
+
+.vh-terminal-caption:not(:first-child){
+    margin-top: 1.6rem;
+}
+
+.vh-terminal pre{
+    margin: 0;
+    overflow-x: auto;
+    color: var(--vh-text);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.vh-terminal code{
+    color: inherit;
+    white-space: pre;
+}
+
+@media (max-width: 575.98px){
+    .vh-terminal-body{ padding: 1.1rem; }
+    .vh-terminal pre{ font-size: 13px; }
+}
+
 // Reseller hub hero: one key, and the four ways out of it. Brand colours on
 // transparency like the route art, so one file serves both themes.
 .vh-reseller-hero-art{
