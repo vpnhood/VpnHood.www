@@ -32,5 +32,19 @@
   "q_reseller_open_source": "¿Por qué vender una VPN de código abierto?",
   "a_reseller_open_source": "Porque tus clientes pueden comprobarlo por sí mismos. VpnHood! CONNECT, el servidor y VpnHood! ENGINE están publicados en GitHub bajo licencia LGPL, y <a href=\"/security-audit/\">Include Security los ha auditado</a> para el Red Team Lab de Open Technology Fund. Una VPN de código cerrado exige confiar a ciegas; una de código abierto permite verificar el código, facilitando las ventas y reduciendo las dudas de soporte.",
   "q_reseller_app_cost": "¿Mis clientes tienen que pagar por la aplicación?",
-  "a_reseller_app_cost": "No. VpnHood! CONNECT se descarga gratis en Android, iOS, Windows y Linux. En Android incluye servidores gratuitos financiados con anuncios, lo que permite probar el servicio antes de comprar. En iOS, Windows y Linux no hay servidores gratuitos: los usuarios necesitan un plan de pago para conectarse, y el código de acceso a ese plan es justamente lo que vendes."
+  "a_reseller_app_cost": "No. VpnHood! CONNECT se descarga gratis en Android, iOS, Windows y Linux. En Android incluye servidores gratuitos financiados con anuncios, lo que permite probar el servicio antes de comprar. En iOS, Windows y Linux no hay servidores gratuitos: los usuarios necesitan un plan de pago para conectarse, y el código de acceso a ese plan es justamente lo que vendes.",
+  "q_audit_independent": "¿Se ha auditado VpnHood! de forma independiente?",
+  "a_audit_independent": "Sí. Include Security auditó las aplicaciones de Android y Windows, así como el servidor VPN, en un análisis encargado y financiado por el Red Team Lab del Open Technology Fund. El informe completo es público.",
+  "q_audit_who_paid": "¿Quién financió la auditoría de seguridad de VpnHood!?",
+  "a_audit_who_paid": "El Open Technology Fund encargó y financió la auditoría, no nosotros. La empresa auditora no cobró de la parte evaluada, garantizando así un resultado totalmente imparcial y de confianza.",
+  "q_audit_findings": "¿Se detectaron vulnerabilidades graves durante la auditoría?",
+  "a_audit_findings": "No se encontraron problemas críticos ni de alto riesgo. Solo hubo un hallazgo de riesgo medio sobre la firma de la app de Android para versiones antiguas y tres notas informativas. Los cuatro puntos y nuestras soluciones están detallados en el informe publicado.",
+  "q_server_free": "¿VpnHood! SERVER es gratis?",
+  "a_server_free": "Sí, y además es de código abierto bajo la licencia LGPL. El único coste es el del servidor donde decidas alojarlo, en el proveedor que prefieras.",
+  "q_server_requirements": "¿Qué requisitos necesito para alojar un servidor VpnHood!?",
+  "a_server_requirements": "Un VPS o un servidor dedicado con Linux (x64 o ARM64) o Windows, o cualquier sistema compatible con Docker. Utiliza el puerto 443 por defecto y no requiere ninguna otra configuración de red.",
+  "q_server_needs_manager": "¿Necesito VpnHood! MANAGER para ejecutar un servidor?",
+  "a_server_needs_manager": "No. VpnHood! SERVER incluye un gestor básico de accesos integrado mediante archivos, por lo que un servidor puede funcionar y generar sus propias claves sin ningún panel. Usa MANAGER si necesitas un panel de control, monitorización en tiempo real, gestionar tus propios planes o balancear la carga entre varios servidores.",
+  "q_server_ip_blocked": "¿Pueden bloquear la dirección IP de mi servidor?",
+  "a_server_ip_blocked": "Sí. El modo camuflaje apenas deja huella en el tráfico, por lo que los bloqueos suelen dirigirse directamente a la dirección IP. Mantén tu servidor privado y compártelo solo con personas de confianza. Con MANAGER, en proveedores compatibles, puedes solicitar una IP nueva y liberar la anterior; las aplicaciones de tus usuarios recibirán el cambio de forma automática."
 }

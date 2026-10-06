@@ -32,5 +32,19 @@
   "q_reseller_open_source": "Neden açık kaynaklı bir VPN satmalısınız?",
   "a_reseller_open_source": "Çünkü müşterileriniz güvenliği bizzat doğrulayabilir. VpnHood! CONNECT, sunucu ve arkalarındaki VpnHood! ENGINE, LGPL lisansıyla GitHub'da açık kaynak olarak sunulur ve Open Technology Fund'ın Red Team Lab'i adına <a href=\"/security-audit/\">Include Security tarafından denetlenmiştir</a>. Kapalı kaynaklı VPN'ler müşterilerden sadece vaatlere güvenmesini ister; VpnHood! ise kodu inceleme şansı tanıyarak satışı kolaylaştırır ve destek taleplerini azaltır.",
   "q_reseller_app_cost": "Müşterilerim uygulama için ücret ödüyor mu?",
-  "a_reseller_app_cost": "Hayır. VpnHood! CONNECT; Android, iOS, Windows ve Linux'ta ücretsiz olarak indirilebilir. Android'de reklam destekli ücretsiz sunucular da bulunur, böylece kullanıcılar satın almadan önce deneyebilir. iOS, Windows ve Linux'ta ücretsiz sunucu bulunmadığından müşterilerinizin bağlanmak için ücretli bir plana ihtiyacı vardır; sattığınız şey de tam olarak bu planın erişim kodudur."
+  "a_reseller_app_cost": "Hayır. VpnHood! CONNECT; Android, iOS, Windows ve Linux'ta ücretsiz olarak indirilebilir. Android'de reklam destekli ücretsiz sunucular da bulunur, böylece kullanıcılar satın almadan önce deneyebilir. iOS, Windows ve Linux'ta ücretsiz sunucu bulunmadığından müşterilerinizin bağlanmak için ücretli bir plana ihtiyacı vardır; sattığınız şey de tam olarak bu planın erişim kodudur.",
+  "q_audit_independent": "VpnHood! bağımsız olarak denetlendi mi?",
+  "a_audit_independent": "Evet. Include Security; Android uygulamasını, Windows uygulamasını ve VPN sunucusunu denetledi. Bu denetim, Open Technology Fund bünyesindeki Red Team Lab tarafından talep edildi ve finanse edildi. Raporun tamamı kamuoyuyla paylaşıldı.",
+  "q_audit_who_paid": "VpnHood! güvenlik denetimini kim finanse etti?",
+  "a_audit_who_paid": "Denetimi biz değil, Open Technology Fund talep etti ve finanse etti. İncelemeyi yürüten bağımsız firma denetlenen taraftan ödeme almadığı için sonuçlar tamamen tarafsız ve güvenilirdir.",
+  "q_audit_findings": "Denetimde kritik bir güvenlik açığı bulundu mu?",
+  "a_audit_findings": "Kritik veya yüksek riskli hiçbir açık bulunmadı. Yalnızca Android uygulamasının eski Android sürümleri için imzalanmasıyla ilgili bir adet orta düzey bulgu ve üç bilgilendirme notu paylaşıldı. Dört bulgunun tümü ve yanıtlarımız yayınlanan raporda yer almaktadır.",
+  "q_server_free": "VpnHood! SERVER ücretsiz mi?",
+  "a_server_free": "Evet, LGPL lisansıyla tamamen açık kaynak ve ücretsizdir. Tek maliyetiniz, dilediğiniz sağlayıcıdan kiralayacağınız sunucu ücretidir.",
+  "q_server_requirements": "Bir VpnHood! sunucusu kurmak için nelere ihtiyacım var?",
+  "a_server_requirements": "Linux (x64 veya ARM64), Windows veya Docker çalıştırabilen herhangi bir VPS ya da fiziksel sunucu yeterlidir. Varsayılan olarak 443 numaralı bağlantı noktasını kullanır ve ekstra ağ yapılandırması gerektirmez.",
+  "q_server_needs_manager": "Sunucu çalıştırmak için VpnHood! MANAGER gerekli mi?",
+  "a_server_needs_manager": "Hayır. VpnHood! SERVER, dosya tabanlı dahili bir erişim yöneticisiyle gelir; bu sayede tek bir sunucu herhangi bir panele ihtiyaç duymadan çalışabilir ve anahtar üretebilir. MANAGER; yönetim paneli, canlı izleme, özel planlar ve birden fazla sunucu arasında yük dengeleme istediğinizde devreye girer.",
+  "q_server_ip_blocked": "Sunucumun IP adresi engellenebilir mi?",
+  "a_server_ip_blocked": "Evet. Gizleme Modu trafikte tespit edilebilir iz bırakmadığı için engellemeler genellikle doğrudan IP adresine yapılır. IP adresinizi gizli tutun ve yalnızca güvendiğiniz kişilerle paylaşın. MANAGER ile desteklenen sağlayıcılarda kolayca yeni bir IP adresi tanımlayabilirsiniz; kullanıcı uygulamaları bu değişikliği otomatik olarak algılar."
 }

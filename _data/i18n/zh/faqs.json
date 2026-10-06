@@ -32,5 +32,19 @@
   "q_reseller_open_source": "为什么要分销开源 VPN？",
   "a_reseller_open_source": "因为您的客户可以亲自验证。VpnHood! CONNECT、服务器及其底层的 VpnHood! ENGINE 均基于 LGPL 协议在 GitHub 上开源，并由 <a href=\"/security-audit/\">Include Security 完成安全审计</a>（由 Open Technology Fund 红队实验室支持）。闭源 VPN 需要客户盲信承诺，而开源 VPN 允许查阅源码，让推广更轻松、售后更省心。",
   "q_reseller_app_cost": "我的客户需要为应用付费吗？",
-  "a_reseller_app_cost": "不需要。VpnHood! CONNECT 在 Android、iOS、Windows 和 Linux 上均可免费下载。Android 端还提供广告支持的免费服务器，方便用户先试后买。iOS、Windows 和 Linux 端不提供免费服务器，客户需要购买套餐才能连接，而您销售的正是该套餐的访问码。"
+  "a_reseller_app_cost": "不需要。VpnHood! CONNECT 在 Android、iOS、Windows 和 Linux 上均可免费下载。Android 端还提供广告支持的免费服务器，方便用户先试后买。iOS、Windows 和 Linux 端不提供免费服务器，客户需要购买套餐才能连接，而您销售的正是该套餐的访问码。",
+  "q_audit_independent": "VpnHood! 是否通过了独立安全审计？",
+  "a_audit_independent": "是的。由开放技术基金会（Open Technology Fund）旗下的红队实验室出资并委托，安全机构 Include Security 对 Android 应用、Windows 应用及 VPN 服务器进行了全面审查。完整报告现已公开发布。",
+  "q_audit_who_paid": "谁资助了 VpnHood! 的安全审计？",
+  "a_audit_who_paid": "该项目由开放技术基金会全额出资委托，而非由我们自行付费。审计机构完全独立于受审方，从而确保了审计结果的客观与真实价值。",
+  "q_audit_findings": "审计是否发现了严重安全漏洞？",
+  "a_audit_findings": "未发现任何严重或高危漏洞。报告仅指出一项涉及旧版本 Android 签名的中危问题，以及三项信息提示。所有问题及我们的应对处理均已收录在公开报告中。",
+  "q_server_free": "VpnHood! SERVER 是否免费？",
+  "a_server_free": "完全免费，并在 LGPL 协议下开源。您只需承担自行选择的云厂商服务器租赁费用。",
+  "q_server_requirements": "运行 VpnHood! 服务器需要什么配置？",
+  "a_server_requirements": "一台运行 Linux（x64 或 ARM64）、Windows 或支持 Docker 的 VPS/独立服务器即可。默认使用 443 端口，无需额外的网络配置。",
+  "q_server_needs_manager": "运行服务器必须安装 VpnHood! MANAGER 吗？",
+  "a_server_needs_manager": "不需要。VpnHood! SERVER 内置了轻量级基于文件的访问管理，无需任何面板即可独立运行并生成密钥。仅当您需要控制面板、实时监控、自定义套餐或管理多台服务器进行负载均衡时，才需使用 MANAGER。",
+  "q_server_ip_blocked": "我的服务器 IP 还会被封锁吗？",
+  "a_server_ip_blocked": "仍有可能。隐身模式消除了绝大多数流量特征，因此被封锁通常是因为 IP 地址暴露。建议保持私用并仅与少数人分享。若搭配使用 MANAGER，在受支持的主机商处可一键更换新 IP，客户端应用将自动无缝同步更新。"
 }
