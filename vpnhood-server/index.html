@@ -31,50 +31,71 @@ nav_active: self-hosted
 
 
                                     <div class="com-content-article__body">
-        <div class="text-center position-relative mb-5 pb-5">
-    <div class="position-relative">
-        <div class="light-blob-wrapper">
-            <div class="blob blob-1" style="--blob-color: var(--green-200);">&nbsp;</div>
-            <div class="blob blob-2" style="--blob-color: var(--green-200);">&nbsp;</div>
-            <div class="blob blob-3" style="--blob-color: var(--green-100);">&nbsp;</div>
-            <div class="blob blob-4" style="--blob-color: var(--green-100);">&nbsp;</div>
-            <div class="blob blob-5" style="--blob-color: var(--green-400);">&nbsp;</div>
-            <div class="blob blob-6" style="--blob-color: var(--green-400);">&nbsp;</div>
+        <div class="row align-items-center gap-lg-0 gap-5 pt-lg-4 pb-4 mb-5">
+    <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+        <p class="section-desc mb-0">{{ t.page_desc }}</p>
+    </div>
+    <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+        <div class="vh-feature-hero-art">
+            <img src="/assets/images/vpnhood-server/server.svg" alt="{{ t.hero_alt }}" width="1000" height="1000" loading="eager" />
         </div>
-        <svg aria-hidden="true" class="position-relative d-block mx-auto my-4 vh-txt-green-200" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><path d="M6 6h.01"></path><path d="M6 18h.01"></path></svg></div>
-    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
-    <p class="section-desc">{{ t.page_desc }}</p>
+    </div>
+</div>
+<div class="section-start-text" data-aos="fade-up" data-aos-duration="1000">
+    <div class="section-label">
+        <p class="vh-txt-grad-purple-400">{{ t.features_label }}</p>
+    </div>
+    <h2 class="section-title vh-txt-grad-purple-400">{{ t.features_title }}</h2>
 </div>
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col" data-aos="fade-up" data-aos-delay="100">
         <div class="vh-card-light vh-feature-card rounded-4 p-4">
             <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></span>
-            <h2 class="h5">{{ t.f_anywhere_title }}</h2>
+            <h3 class="h5">{{ t.f_anywhere_title }}</h3>
             <p class="mb-0">{{ t.f_anywhere_desc }}</p>
         </div>
     </div>
     <div class="col" data-aos="fade-up" data-aos-delay="200">
         <div class="vh-card-light vh-feature-card rounded-4 p-4">
             <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><line x1="2" y1="2" x2="22" y2="22"></line></svg></span>
-            <h2 class="h5">{{ t.f_stealth_title }}</h2>
-            <p class="mb-0">{{ t.f_stealth_desc }}</p>
+            <h3 class="h5">{{ t.f_stealth_title }}</h3>
+            <p>{{ t.f_stealth_desc }}</p>
+            <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/features/cloak-mode/"><span>{{ t.cloak_link }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
     </div>
     <div class="col" data-aos="fade-up" data-aos-delay="100">
         <div class="vh-card-light vh-feature-card rounded-4 p-4">
             <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"></path></svg></span>
-            <h2 class="h5">{{ t.f_engine_title }}</h2>
-            <p class="mb-0">{{ t.f_engine_desc }}</p>
+            <h3 class="h5">{{ t.f_engine_title }}</h3>
+            <p>{{ t.f_engine_desc }}</p>
+            <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/features/protocols/"><span>{{ t.protocols_link }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
     </div>
     <div class="col" data-aos="fade-up" data-aos-delay="200">
         <div class="vh-card-light vh-feature-card rounded-4 p-4">
             <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
-            <h2 class="h5">{{ t.f_open_title }}</h2>
+            <h3 class="h5">{{ t.f_open_title }}</h3>
             <p>{{ t.f_open_desc }}</p>
             <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/security-audit/"><span>{{ t.audit_link }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
         </div>
     </div>
+</div>
+<div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+    <div class="section-label">
+        <p class="vh-txt-grad-purple-400">{{ t.prod_label }}</p>
+    </div>
+    <h2 class="section-title vh-txt-grad-purple-400">{{ t.prod_title }}</h2>
+    <p class="section-desc">{{ t.prod_desc }}</p>
+</div>
+<div class="vh-card-light rounded-4 p-4 p-md-5" data-aos="fade-up" data-aos-duration="1000">
+    <ul class="vh-plain-list mb-0">
+        <li>{{ t.prod_1 }}</li>
+        <li>{{ t.prod_2 }}</li>
+        <li>{{ t.prod_3 }}</li>
+        <li>{{ t.prod_4 }}</li>
+        <li>{{ t.prod_5 }}</li>
+    </ul>
 </div>
 <div class="section-start-text mt-5 pt-5 mb-5" data-aos="fade-up" data-aos-duration="1000">
     <div class="section-label">
@@ -117,6 +138,10 @@ nav_active: self-hosted
         </div>
     </div>
 </div>
+<p class="section-desc text-center mt-4 mb-0" data-aos="fade-up" data-aos-duration="1000">
+    {{ t.run_note }}
+    <a class="vh-text-btn vh-txt-purple-300 d-inline-flex ms-1" href="{{ vh_base }}/reseller/white-label/"><span>{{ t.run_note_link }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</p>
 <div class="vh-card-light rounded-4 p-4 p-md-5 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
     <p class="section-desc h4 fw-normal mb-4">{{ t.cta }}</p>
     <a class="vh-btn vh-btn-primary" href="https://github.com/vpnhood/VpnHood" target="_blank" rel="noopener">
@@ -132,7 +157,12 @@ nav_active: self-hosted
             </g>
         </svg>
     </a>
-</div>     </div>
+    <a class="vh-btn vh-btn-secondary ms-sm-2 mt-3 mt-sm-0" href="{{ vh_base }}/self-hosted-vpn/" data-vh-track="server-start-selfhosted">
+        {{ t.cta_selfhosted }}
+    </a>
+</div>
+{% include faq.html set="server" schema=false wrapper_class="section-space-top" %}
+     </div>
 
 
                                         </div>

@@ -14,3 +14,6 @@ node_modules/
 
 # Blog content, fetched from the VpnHood.Blog repo at build time (see CLAUDE.md
 # "Blog"). Never committed here — that repo is the source of truth.
+
+# Scratch notes and working files. Never committed.
+/.tmp/

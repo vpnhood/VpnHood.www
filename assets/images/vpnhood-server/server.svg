@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhServerArtTitle">
+<title id="vhServerArtTitle">A server rack with a shielded tunnel leaving it, carrying three devices</title>
+<defs>
+  <linearGradient id="vsBody" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".97"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".97"/></linearGradient>
+  <linearGradient id="vsEdge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#c0a4ff"/><stop offset="1" stop-color="#5b2fd6"/></linearGradient>
+  <linearGradient id="vsTunnel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#3ce8c8" stop-opacity=".9"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".12"/></linearGradient>
+  <linearGradient id="vsMint" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8ef7e2"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <radialGradient id="vsAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="vsSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="vsSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="46"/></filter>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="430" fill="url(#vsAmbient)"/>
+
+<!-- the tunnel: traffic leaving the rack, shaped to look like ordinary web traffic -->
+<g filter="url(#vsSofter)" opacity=".5">
+  <path d="M470 470 C 620 470 700 400 830 400" stroke="#3ce8c8" stroke-width="40" fill="none" stroke-linecap="round"/>
+  <path d="M470 530 C 620 530 700 620 830 620" stroke="#3ce8c8" stroke-width="40" fill="none" stroke-linecap="round"/>
+</g>
+<path d="M470 470 C 620 470 700 400 830 400" stroke="url(#vsTunnel)" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M470 500 C 630 500 700 510 840 510" stroke="url(#vsTunnel)" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M470 530 C 620 530 700 620 830 620" stroke="url(#vsTunnel)" stroke-width="13" fill="none" stroke-linecap="round"/>
+
+<!-- the rack itself: three stacked units on a plinth -->
+<g filter="url(#vsSoft)" opacity=".55">
+  <rect x="190" y="250" width="290" height="500" rx="34" fill="#8b5cf6"/></g>
+<rect x="190" y="250" width="290" height="500" rx="34" fill="url(#vsBody)" stroke="url(#vsEdge)" stroke-width="7"/>
+
+<g fill="none" stroke="#c0a4ff" stroke-width="6" stroke-linecap="round" opacity=".85">
+  <path d="M236 330 h120"/><path d="M236 370 h74"/>
+  <path d="M236 480 h120"/><path d="M236 520 h74"/>
+  <path d="M236 630 h120"/><path d="M236 670 h74"/>
+</g>
+<g fill="none" stroke="#5b2fd6" stroke-width="5" opacity=".8">
+  <path d="M190 410 h290"/><path d="M190 560 h290"/>
+</g>
+<g fill="url(#vsMint)">
+  <circle cx="430" cy="350" r="13"/><circle cx="430" cy="500" r="13"/><circle cx="430" cy="650" r="13"/>
+</g>
+
+<!-- plinth -->
+<rect x="150" y="770" width="370" height="26" rx="13" fill="#2b1470" stroke="url(#vsEdge)" stroke-width="5"/>
+
+<!-- the devices at the far end of the tunnel -->
+<g stroke="url(#vsEdge)" stroke-width="6" fill="url(#vsBody)">
+  <rect x="790" y="332" width="112" height="136" rx="16"/>
+  <rect x="786" y="452" width="130" height="104" rx="14"/>
+  <rect x="790" y="552" width="112" height="136" rx="16"/>
+</g>
+<g fill="#c0a4ff" opacity=".75">
+  <rect x="812" y="358" width="68" height="7" rx="3.5"/><rect x="812" y="378" width="44" height="7" rx="3.5"/>
+  <rect x="808" y="478" width="86" height="7" rx="3.5"/><rect x="808" y="498" width="54" height="7" rx="3.5"/>
+  <rect x="812" y="578" width="68" height="7" rx="3.5"/><rect x="812" y="598" width="44" height="7" rx="3.5"/>
+</g>
+
+<!-- the shield over the tunnel: the traffic is carried, not inspected -->
+<g filter="url(#vsSoft)" opacity=".5"><path d="M650 400 l74 26 v62 c0 46-32 86-74 100 -42-14-74-54-74-100 v-62z" fill="#3ce8c8"/></g>
+<path d="M650 400 l74 26 v62 c0 46-32 86-74 100 -42-14-74-54-74-100 v-62z" fill="url(#vsBody)" stroke="url(#vsMint)" stroke-width="7"/>
+<path d="M620 500 l22 24 42-52" fill="none" stroke="url(#vsMint)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

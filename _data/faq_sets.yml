@@ -118,3 +118,12 @@ sets:
     - audit_independent
     - audit_who_paid
     - audit_findings
+
+  # The server page answers "do I need MANAGER" and "can my IP be blocked" nowhere else,
+  # and both are the first thing someone self-hosting asks. Not in `all`: /faq/ is read
+  # by people choosing a VPN app, not by people renting a VPS.
+  server:
+    - server_free
+    - server_requirements
+    - server_needs_manager
+    - server_ip_blocked
