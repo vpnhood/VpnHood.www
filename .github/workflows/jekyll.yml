@@ -142,6 +142,12 @@ jobs:
       - name: Check for self-links
         run: python3 tools/check-self-links.py _site
 
+      # Every internal link, anchor and asset in all thirteen language trees must
+      # resolve. Read-only and offline: external links are never fetched. Problems
+      # on the legal pages only warn, since that text comes from the VpnHood repo.
+      - name: Check internal links
+        run: python3 tools/check-links.py _site
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
 

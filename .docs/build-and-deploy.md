@@ -28,6 +28,14 @@ The full picture behind the "Build & deploy" summary in [CLAUDE.md](../CLAUDE.md
   translations + watches are **committed back to main** by the build job (bot commit,
   `[skip ci]`; GITHUB_TOKEN pushes don't retrigger workflows), so each change is translated
   exactly once. Fail-fast like the legal sync.
+- After building, CI runs two read-only checks over `_site`, and either one failing skips the
+  deploy. `tools/check-self-links.py`: no page links to itself. `tools/check-links.py`: every
+  internal link, anchor and asset in all 13 language trees resolves, the whole page read,
+  header and footer included; links without the trailing slash, to a redirect stub, or empty
+  fail too. External links are never fetched, so a deploy does not depend on anyone else's
+  uptime. Problems on the legal pages only **warn**: that text is synced from the VpnHood
+  repo and fixed there. Run both locally after `bundle exec jekyll build`; the committed
+  `_includes/legals/` copies can lag `develop`, so refresh them first or expect stale findings.
 - Never switch Pages back to the legacy branch builder (it runs an old Jekyll).
 - A failed build never takes the site down — `deploy` has `needs: build`, so on failure
   GitHub Pages keeps serving the previous successful deployment.

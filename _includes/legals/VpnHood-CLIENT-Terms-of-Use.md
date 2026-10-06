@@ -2,105 +2,154 @@
 
 *Effective: 2026-08-31.*
 
-> **DRAFT — not yet reviewed by counsel.** One clause is deliberately unfilled: **Governing law**
-> below. Fill it and delete this note before merging, because merging to `develop` publishes this
-> page. See [README](README.md).
+These Terms of Use ("Terms") are an agreement between you and **OmegaHood LLC** ("we", "us", or
+"our") for the official **VpnHood! CLIENT** application (the "App"). By downloading or
+using the App, you agree to these Terms. If you do not agree, do not use the App.
 
-These terms are the agreement between you and **OmegaHood LLC** ("we", "us") for the **VpnHood!
-CLIENT** app. By installing or using the app, you accept them. If you do not accept them, do not
-use the app.
+Our [Privacy Policy](https://www.vpnhood.com/vpnhood-client-privacy-policy) explains how the App
+handles data. A store or platform through which you obtain the App may also impose terms that apply
+to your download and use.
 
-What the app does with your data is a separate document:
-[Privacy Policy](https://www.vpnhood.com/vpnhood-client-privacy-policy). Where the two overlap, the
-Privacy Policy governs data.
+If you obtained the App through Apple's App Store, Apple's
+[Standard EULA](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) governs your
+licence to the App instead of the "Licence and ownership" section below, and controls over these
+Terms wherever the two conflict. The rest of these Terms — including acceptable use, disclaimers,
+liability limits, and governing law — still applies to your use of the App and of anything we
+operate, and our Privacy Policy still applies.
+
+You must be at least 18 years old, or the age of legal majority where you live, to use the App.
 
 ## What CLIENT is — and what it is not
 
-**VpnHood! CLIENT is software, not a VPN service.** It ships with no servers of its own. You supply
-an access key, and the app connects to whatever server that key belongs to.
+**VpnHood! CLIENT is VPN software, not a VPN service.** It includes no VPN servers or access key.
+You provide an access key and choose the server and operator to which the App connects.
 
-That distinction decides most of this document:
+- Except where an access key expressly identifies a service operated by us, we do not operate,
+  control, endorse, or monitor the server you choose.
+- The server operator necessarily receives your connection and may be able to observe your source
+  IP address, connection times, traffic totals, and traffic that is not separately encrypted. Its
+  terms and privacy policy apply to its service.
+- We are not responsible for a third-party server's availability, security, content, conduct, or
+  handling of your data. You should use an access key only from an operator you trust.
 
-- **We do not operate the servers you connect to** (unless your key is for a service we run, in
-  which case that service's own terms also apply).
-- **We cannot see your traffic**, and we hold no connection records for it. Whoever operates the
-  server you chose does, under their policy, not ours.
-- **Choosing a server is choosing an operator.** Judge a key by who issued it. A server operator
-  can see the traffic you send through them, exactly as your internet provider could otherwise.
+We may update the App and change or discontinue features that rely on infrastructure we control.
+We do not promise to support every device, operating-system version, server, protocol, or access
+key indefinitely.
 
-We provide the app **as it is at the time you use it**, and may add, change, or withdraw features.
+## Licence and ownership
 
-## Your licence to the software
+Subject to these Terms, we grant you a limited, personal, non-exclusive, non-transferable,
+revocable licence to install and use an official build of the App on devices you own or control,
+for personal or internal business use and in accordance with the rules of the platform from which
+you obtained it.
 
-The VpnHood engine is open source under the
-[GNU Lesser General Public License v2.1](https://github.com/vpnhood/VpnHood/blob/main/LICENSE);
-that licence governs the source code and is unaffected by these terms. These terms cover the
-official VpnHood! CLIENT builds we distribute.
+The VpnHood engine is open-source software licensed under the
+[GNU Lesser General Public License v2.1](https://github.com/vpnhood/VpnHood/blob/main/LICENSE).
+That licence, and the licences identified for other open-source components, govern those components
+and are not restricted by these Terms. These Terms govern our official builds, services, names,
+logos, and other material not covered by an open-source licence.
 
-You may use the app on any device you control, for personal or business use. You may not remove or
-alter our name, marks, or notices in the official builds. Our name and logo are ours — the
-open-source licence covers the code, not the brand.
+You may not, except where an open-source licence or applicable law permits it:
 
-If you build your own version from the source, the LGPL governs it, these terms do not, and you
-must not present it as ours.
+- copy, sell, sublicense, redistribute, or commercially exploit an official build;
+- remove or alter proprietary notices from an official build;
+- use our name or branding in a way that suggests an unofficial build or service is ours; or
+- interfere with, bypass, or defeat security or access controls in the App or our infrastructure.
+
+You may modify, recompile, white-label, and redistribute a source-built version under a different
+brand, including commercially, as permitted by and subject to the applicable open-source licences.
+Those licences do not grant rights to our trademarks or branding: without our written permission,
+you may not present that version as our official product or imply that we sponsor or endorse it.
+These Terms still apply to any service we operate that you access through it.
 
 ## Acceptable use
 
-**You are responsible for what you send through the app**, and for honouring the terms of whoever
-operates the server you connect to. You must not use the app to:
+You are responsible for your use of the App, the access keys you add, and the traffic you send. You
+must comply with applicable law and with the terms of your device platform, network provider, and
+chosen VPN server operator. You must not use the App to:
 
-- do anything unlawful where you are, or where the server you selected is;
-- send spam, malware, or unsolicited bulk messages;
-- attack, scan, overload, or attempt to gain unauthorised access to any system;
-- infringe copyright or other rights.
+- break the law or help another person break the law;
+- distribute malware, spam, or unsolicited bulk communications;
+- attack, scan, disrupt, overload, or gain unauthorised access to a device, network, account, or
+  service;
+- infringe intellectual-property, privacy, or other rights; or
+- harass, threaten, exploit, or harm another person.
 
-Because we do not operate your servers, enforcement here is mostly the operator's, not ours. We may
-still withdraw features that depend on our own infrastructure — such as app updates or the
-ad-supported tier — from a user who abuses them.
+We may restrict access to features or infrastructure we control when reasonably necessary to stop
+abuse, protect users or systems, comply with law, or enforce these Terms. A third-party server
+operator applies its own enforcement rules to its service.
+
+## VPN limitations
+
+A VPN can protect traffic between your device and the VPN server, but it does not make you
+anonymous or make every connection secure. Websites and services may still identify you through
+accounts, cookies, device information, or other means. The App cannot protect traffic you exclude
+from the VPN, traffic outside the VPN tunnel, a compromised device, or information you choose to
+share. You are responsible for deciding whether the App and the server you selected are suitable
+and lawful for your needs and location.
 
 ## No warranty
 
-The app is provided **"as is" and "as available", without warranty of any kind**, express or
-implied, including merchantability, fitness for a particular purpose, and non-infringement. We do
-not warrant that any server you connect to is available, secure, honest, or lawful in your
-location, that any particular site will be reachable, or that the app will make you anonymous.
+To the maximum extent permitted by law, the App is provided **"as is" and "as available," with all
+faults and without warranties of any kind**, whether express, implied, or statutory, including
+warranties of merchantability, satisfactory quality, fitness for a particular purpose, quiet
+enjoyment, accuracy, and non-infringement. We do not warrant that the App or any server will be
+available, uninterrupted, error-free, secure, lawful in your location, or suitable for a particular
+purpose, or that any site or service will be reachable.
 
-**A VPN is not anonymity.** It moves the point at which your traffic enters the internet. Sites you
-sign in to still know who you are, and your device may identify you in ways no VPN can prevent.
+Nothing in these Terms excludes a warranty or consumer right that cannot lawfully be excluded.
 
 ## Limitation of liability
 
-To the maximum extent permitted by law, we are not liable for indirect, incidental, special,
-consequential, or punitive damages, or for lost profits, revenue, data, or goodwill, arising out of
-or relating to the app — including anything done by the operator of a server you chose to connect
-to.
+To the maximum extent permitted by law, we and our affiliates, officers, employees, agents,
+developers, contributors, and licensors will not be liable for indirect, incidental, special,
+consequential, exemplary, or punitive damages, or for loss of profits, revenue, business, data, or
+goodwill, arising from or related to the App. This includes loss caused by a third-party server or
+access key you chose.
 
-Our total liability for any claim relating to the app is limited to **the amount you paid us for it
-in the twelve months before the claim arose**, or, where you paid nothing, to zero.
+To the maximum extent permitted by applicable law, our total liability for any claims arising out
+of or relating to the App will be zero where the App was provided free of charge.
 
-Nothing here excludes liability that cannot be excluded by law — including, where they apply to
-you, your statutory consumer rights.
+These limits do not apply to fraud, wilful misconduct, death or personal injury caused by
+negligence, or any other liability that cannot lawfully be limited. Some jurisdictions do not allow
+certain exclusions or limits, so some of this section may not apply to you.
 
-## Changes to these terms
+## Suspension, termination, and changes
 
-We may update these terms. We will change the *Effective* date above, and the change history is
-public in the repository these documents are published from. Continuing to use the app after a
-change means you accept the updated terms.
+You may end these Terms at any time by stopping use of and uninstalling the App. We may suspend or
+end access to infrastructure we control if you materially breach these Terms, if required by law,
+or if we discontinue that infrastructure. Provisions that by their nature should survive will do
+so, including ownership, disclaimers, liability limits, and governing law.
 
-## Termination
+We may update these Terms when the App, law, or our business changes. We will post the updated Terms
+and change the Effective date. Where required by law, we will give additional notice before a
+material change takes effect. Changes apply prospectively. If you do not agree to an update, you
+must stop using the App.
 
-You may stop using the app at any time; uninstalling ends these terms for you, except for the
-sections that by their nature survive (acceptable use for past conduct, no warranty, limitation of
-liability, and governing law).
+## Export and sanctions compliance
 
-## Governing law
+You represent that you are not located in a country or region subject to a comprehensive U.S.
+Government embargo or designated by the U.S. Government as supporting terrorism, and that you are
+not on a U.S. Government list of prohibited or restricted parties. You must not export, re-export,
+or use the App in violation of U.S. export-control or sanctions laws or the applicable laws of the
+place where you obtained or use it, including for any prohibited end use.
 
-<!-- TODO(legal): fill in before publishing. Needs the governing jurisdiction for OmegaHood LLC and
-     the forum for disputes; a consumer in the EU/UK keeps the protections of their home
-     jurisdiction regardless of what is stated here, so the wording has to accommodate that. -->
+## Governing law and general terms
 
-*To be confirmed with counsel — see the note at the top of this page.*
+These Terms are governed by the laws of the State of California, excluding its conflict-of-law
+rules. Subject to any consumer right to bring a claim elsewhere, the state and federal courts in
+Los Angeles County, California will have exclusive jurisdiction over disputes arising from these
+Terms or the App. If you are a consumer in a jurisdiction whose mandatory laws give you additional
+rights or require a different law or forum, those mandatory rules remain unaffected.
+
+If any provision is unenforceable, it will be enforced to the greatest extent permitted and the
+remaining provisions will continue in effect. Our failure to enforce a provision is not a waiver.
+These Terms and the documents they expressly incorporate are the entire agreement about the App,
+except for any terms that cannot be superseded under applicable law or an open-source licence.
 
 ## Contact
 
-Questions about these terms: [support@vpnhood.com](mailto:support@vpnhood.com)
+Questions, notices, complaints, and legal claims concerning these Terms should be directed to:
+
+- Mailing address: 8605 Santa Monica Blvd #281050, West Hollywood, CA 90069, USA
+- Email: **[legal@vpnhood.com](mailto:legal@vpnhood.com)**

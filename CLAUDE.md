@@ -20,7 +20,7 @@ This file is the binding summary. Each section links a doc in `.docs/` with the 
 
 ## Build & deploy — [.docs/build-and-deploy.md](.docs/build-and-deploy.md)
 
-`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build and commits the translations back (`[skip ci]`), syncs the legal pages from the VpnHood repo (fail-fast), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
+`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build and commits the translations back (`[skip ci]`), syncs the legal pages from the VpnHood repo (fail-fast), fails on a self-link (`tools/check-self-links.py`) or on any internal link, anchor or asset that doesn't resolve in any of the 13 trees (`tools/check-links.py`; legal pages only warn), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
 
 ## Page anatomy
 
