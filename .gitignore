@@ -17,3 +17,6 @@ node_modules/
 
 # Scratch notes and working files. Never committed.
 /.tmp/
+
+# Working plans and private notes. Never committed — this repo is public.
+/.user/

@@ -57,13 +57,13 @@
   th,
   td {
     padding: .6rem .9rem;
-    border: 1px solid rgba(255, 255, 255, .15);
+    border: 1px solid rgba(var(--vh-text-rgb), .15);
     text-align: left;
     vertical-align: top;
   }
 
   th {
     font-weight: 600;
-    background: rgba(255, 255, 255, .05);
+    background: rgba(var(--vh-text-rgb), .05);
   }
 }
