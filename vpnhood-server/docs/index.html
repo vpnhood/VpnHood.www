@@ -1,0 +1,48 @@
+---
+layout: docs
+title: "Install VpnHood! SERVER on Linux (layout preview) | VpnHood!"
+description: "Layout preview for the documentation pages. Local only, never committed."
+extra_css:
+  - /assets/css/custom.css
+nav_active: self-hosted
+sitemap: false
+---
+<h1 class="vh-txt-grad-purple-400">Install VpnHood! SERVER on Linux</h1>
+<p class="vh-docs-lead">One command installs the server, runs it as a service and starts it. A second one prints the access key you give to your users.</p>
+
+<h2 id="requirements">Before you start</h2>
+<ul>
+  <li>A Linux machine, x64 or arm64, with a public IP address.</li>
+  <li>Root access. Without it, follow the <a href="https://github.com/vpnhood/VpnHood/wiki/How-to-run-VpnHood-Server-on-Linux-without-ROOT-access">rootless install</a> instead.</li>
+  <li>The ports your server listens on, open in its firewall.</li>
+</ul>
+
+<h2 id="install">Install</h2>
+<p>Run this as root. It downloads the latest release into <code>/opt/VpnHoodServer</code> and starts it as a service.</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh)"</code></pre>
+  </div>
+</div>
+<div class="vh-docs-note" role="note"><p>The installer uses <code>wget</code>. If your system doesn't have it, install it with your distribution's package manager first.</p></div>
+
+<h2 id="verify">Get your first access key</h2>
+<p>Generate a key, then paste it into VpnHood! CLIENT on any device to connect through your server.</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo /opt/VpnHoodServer/vhserver gen</code></pre>
+  </div>
+</div>
+<div class="vh-docs-warn" role="note"><p>Treat an access key like a password: anyone who has it can connect through your server.</p></div>
+
+<h2 id="settings">Everyday commands</h2>
+<table>
+  <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td><code>sudo /opt/VpnHoodServer/vhserver gen</code></td><td>Prints a new access key.</td></tr>
+    <tr><td><code>sudo /opt/VpnHoodServer/vhserver stop</code></td><td>Stops the server.</td></tr>
+    <tr><td><code>sudo /opt/VpnHoodServer/vhserver start</code></td><td>Starts it again.</td></tr>
+  </tbody>
+</table>

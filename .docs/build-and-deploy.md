@@ -28,6 +28,14 @@ The full picture behind the "Build & deploy" summary in [CLAUDE.md](../CLAUDE.md
   translations + watches are **committed back to main** by the build job (bot commit,
   `[skip ci]`; GITHUB_TOKEN pushes don't retrigger workflows), so each change is translated
   exactly once. Fail-fast like the legal sync.
+- Right after translating, `tools/check-placeholders.py --heal` compares every translated
+  string with its English source: each placeholder (`[amount]`, `[count]`, `[vhserver_gen]`…)
+  and `<code>` span must come back byte for byte, in any order. A translation that changed one
+  is swapped for its English source — the reader gets one English sentence, never a wrong
+  price or command — committed back with the rest, and named in a warning on the run. It stays
+  English until the source string changes; to retry sooner, delete the key from the generated
+  file. Locally, run it without `--heal` to report only (straight after an English edit, the
+  stale translations are reported too).
 - After building, CI runs two read-only checks over `_site`, and either one failing skips the
   deploy. `tools/check-self-links.py`: no page links to itself. `tools/check-links.py`: every
   internal link, anchor and asset in all 13 language trees resolves, the whole page read,

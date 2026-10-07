@@ -1,0 +1,36 @@
+{%- comment -%}
+  The trail from home to this page. Always emits the BreadcrumbList JSON-LD that
+  .docs/seo-and-semantic-html.md requires; with visible=true (docs pages) it also
+  renders the trail as a <nav>. Built from vh_base_url, the page's URL without its
+  language prefix (header.html), so a /fa/ clone gets the same trail with every
+  link put back under vh_base. A segment's name is its key in
+  _data/i18n/<lang>/nav_labels.json, then the English one, then the slug itself.
+  Emits nothing on a home page.
+{%- endcomment -%}
+{%- assign vh_nl = site.data.i18n[vh_lang].nav_labels -%}
+{%- assign vh_nl_en = site.data.i18n.en.nav_labels -%}
+{%- assign vh_bc_segs = vh_base_url | split: "/" | where_exp: "s", "s != ''" -%}
+{%- if vh_bc_segs.size > 0 -%}
+  {%- assign vh_bc_home = vh_nl.home | default: vh_nl_en.home -%}
+  {%- assign vh_bc_path = "" -%}
+  {%- assign vh_bc_lis = "" -%}
+  {%- capture vh_bc_items -%}{ "@type": "ListItem", "position": 1, "name": {{ vh_bc_home | jsonify }}, "item": "{{ site.url }}{{ vh_base }}/" }{%- endcapture -%}
+  {%- for vh_bc_seg in vh_bc_segs -%}
+    {%- assign vh_bc_path = vh_bc_path | append: "/" | append: vh_bc_seg -%}
+    {%- assign vh_bc_name = vh_nl[vh_bc_seg] -%}
+    {%- unless vh_bc_name -%}{%- assign vh_bc_name = vh_nl_en[vh_bc_seg] -%}{%- endunless -%}
+    {%- unless vh_bc_name -%}{%- assign vh_bc_name = vh_bc_seg | replace: "-", " " | capitalize -%}{%- endunless -%}
+    {%- if forloop.last -%}
+      {%- capture vh_bc_lis -%}{{ vh_bc_lis }}<li aria-current="page">{{ vh_bc_name }}</li>{%- endcapture -%}
+    {%- else -%}
+      {%- capture vh_bc_lis -%}{{ vh_bc_lis }}<li><a href="{{ vh_base }}{{ vh_bc_path }}/">{{ vh_bc_name }}</a></li>{%- endcapture -%}
+    {%- endif -%}
+    {%- capture vh_bc_items -%}{{ vh_bc_items }}, { "@type": "ListItem", "position": {{ forloop.index | plus: 1 }}, "name": {{ vh_bc_name | jsonify }}, "item": "{{ site.url }}{{ vh_base }}{{ vh_bc_path }}/" }{%- endcapture -%}
+  {%- endfor -%}
+  {%- if include.visible %}
+<nav class="vh-breadcrumb" aria-label="{{ vh_nl.aria_breadcrumb | default: vh_nl_en.aria_breadcrumb }}">
+  <ol><li><a href="{{ vh_base }}/">{{ vh_bc_home }}</a></li>{{ vh_bc_lis }}</ol>
+</nav>
+  {%- endif %}
+<script type="application/ld+json">{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{{ vh_bc_items }}] }</script>
+{%- endif -%}

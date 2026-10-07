@@ -3,3 +3,4 @@
 # Loaded on every non-home page via front matter (extra_css), before style.css.
 ---
 @use 'pages/custom';
+@use 'pages/docs';

@@ -1,0 +1,25 @@
+{%- comment -%}
+  Documentation pages: the breadcrumb, the section's sidebar and the article. A page
+  opts in with `layout: docs`; its body arrives as {{ content }}, already rendered,
+  so a translated page assigns its own `t` as every page does. The sidebar is
+  _data/docs_nav.yml keyed by the product folder; a section with no entry gets the
+  article alone.
+{%- endcomment -%}
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{%- assign vh_dn_section = vh_base_url | split: "/" | where_exp: "s", "s != ''" | first -%}
+{%- assign vh_dn = site.data.docs_nav[vh_dn_section] %}
+<main id="sp-main-body" class="vh-docs">
+  <div class="container">
+    {% include breadcrumb.html visible=true %}
+    <div class="vh-docs-grid{% unless vh_dn %} vh-docs-grid--solo{% endunless %}">
+      {%- if vh_dn %}
+      {% include docs-nav.html %}
+      {%- endif %}
+      <article class="vh-docs-article">
+{{ content }}
+      </article>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

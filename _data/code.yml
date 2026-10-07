@@ -1,0 +1,15 @@
+# Code the copy shows - commands, paths, ports, setting names - each under the
+# name the copy uses as its placeholder.
+#
+# STRUCTURE, not copy, for the same reason as pricing.yml: vhtranslator only
+# walks _data/i18n/en, so nothing here is ever sent to the translator, and a
+# command cannot come back with a translated word or Persian digits in it.
+#
+# The copy keeps the <code> tags and puts the placeholder inside them -
+# "On Linux, <code>[vhserver_gen]</code> prints a new one." - and the page fills
+# it in with replace, like the prices:
+#   t.run_solo_desc | replace: '[vhserver_gen]', site.data.code.vhserver_gen
+# A value is inserted as HTML, so write < and & as &lt; and &amp;. A whole
+# command in a terminal block stays in the page markup.
+
+vhserver_gen: vhserver gen

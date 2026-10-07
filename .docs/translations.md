@@ -107,6 +107,28 @@ as broken text. `_sass/theme/_default.scss` defines `--vh-tracking` (`1` normall
 `calc(<value> * var(--vh-tracking))`** and folds to zero there. Add a new tracked rule the
 same way; a bare `letter-spacing: 9px` is a bug in three languages.
 
+## Code never goes in the copy
+
+Anything the reader types or reads on screen — a command, flag, file path, port or setting
+name — is never written in `_data/i18n/en/`. It lives in `_data/code.yml` under a name, and
+the copy holds that name as a placeholder inside the `<code>` tags:
+`"On Linux, <code>[vhserver_gen]</code> prints a new one."` The page fills it in with
+`replace: '[vhserver_gen]', site.data.code.vhserver_gen`, exactly as go-premium fills
+`[percent]` from `pricing.yml`. The translator never sees the command, so it cannot localise a
+word or a digit in it, and the prompt needs no rule for it — the existing placeholder rule
+covers the name. A whole command in a terminal block stays in the page markup.
+
+CI checks that the name survives: `tools/check-placeholders.py --heal` runs right after the
+translator and swaps any translation whose placeholders or `<code>` spans differ from the
+English for the English string itself. The page then shows one English sentence instead of a
+wrong value, until the source string changes or someone deletes the key from the generated
+file — a missing key is always translated again.
+
+Keep the prompt short: it is sent with every batch the translator makes, in every language,
+so each line added to it is paid for on every run. Prefer a data file or a key name to an
+instruction — the model sees every key, so `step_install` and `note_wget` already say what a
+docs string is, for free.
+
 ## Verifying a copy refactor
 
 The original i18n extraction (moving every string out of page markup into

@@ -171,7 +171,7 @@ nav_active: self-hosted
         <div class="vh-card-light vh-feature-card rounded-4 p-4 d-flex flex-column">
             <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></span>
             <h3 class="h5">{{ t.run_solo_title }}</h3>
-            <p class="mb-0">{{ t.run_solo_desc }}</p>
+            <p class="mb-0">{{ t.run_solo_desc | replace: '[vhserver_gen]', site.data.code.vhserver_gen }}</p>
             <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server" target="_blank" rel="noopener noreferrer">
                 <span>{{ t.setup_guide }}</span>
                 <span class="visually-hidden"> {{ t.new_tab }}</span>

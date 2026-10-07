@@ -1,0 +1,26 @@
+{%- comment -%}
+  The docs sidebar for this page's section. _layouts/docs.html looks the section up
+  (vh_dn: _data/docs_nav.yml keyed by the product folder) and includes this only
+  when it has one. Each group is a label key and a list of pages; a page is a
+  language-neutral `url` and an optional `label` key, which defaults to the URL's
+  last segment. Labels come from nav_labels.json, so a page is called the same in
+  the sidebar as in the breadcrumb. List only pages that exist: the link check
+  fails on anything else.
+{%- endcomment -%}
+<nav class="vh-docs-nav" aria-label="{{ vh_nl.aria_docs_nav | default: vh_nl_en.aria_docs_nav }}">
+  {%- for vh_dn_group in vh_dn %}
+  {%- assign vh_dn_name = vh_nl[vh_dn_group.group] -%}
+  {%- unless vh_dn_name -%}{%- assign vh_dn_name = vh_nl_en[vh_dn_group.group] -%}{%- endunless %}
+  <p class="vh-docs-nav-group">{{ vh_dn_name }}</p>
+  <ul>
+    {%- for vh_dn_page in vh_dn_group.pages -%}
+      {%- assign vh_dn_key = vh_dn_page.label -%}
+      {%- unless vh_dn_key -%}{%- assign vh_dn_key = vh_dn_page.url | split: "/" | where_exp: "s", "s != ''" | last -%}{%- endunless -%}
+      {%- assign vh_dn_label = vh_nl[vh_dn_key] -%}
+      {%- unless vh_dn_label -%}{%- assign vh_dn_label = vh_nl_en[vh_dn_key] -%}{%- endunless -%}
+      {%- unless vh_dn_label -%}{%- assign vh_dn_label = vh_dn_key | replace: "-", " " | capitalize -%}{%- endunless %}
+    <li><a href="{{ vh_base }}{{ vh_dn_page.url }}"{% if vh_dn_page.url == vh_base_url %} aria-current="page"{% endif %}>{{ vh_dn_label }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</nav>

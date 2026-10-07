@@ -1,0 +1,229 @@
+// Documentation pages (_layouts/docs.html): the breadcrumb, a sidebar for the
+// section, and a reading column. Tokens only, so the light theme needs no rules of
+// its own; logical properties only, so the Persian and Arabic trees flip by
+// themselves. Commands use the .vh-terminal block from the server page.
+
+.vh-docs{
+    padding-top: 8.5rem;    // clear the fixed header: 91px on one row, 136px wrapped
+    padding-bottom: 6rem;
+}
+
+.vh-breadcrumb ol{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem .6rem;
+    margin: 0 0 2.5rem;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: var(--vh-text-dim);
+}
+
+.vh-breadcrumb li + li::before{
+    content: "/";
+    margin-inline-end: .6rem;
+}
+
+.vh-breadcrumb a{
+    color: var(--vh-text-muted);
+    text-decoration: none;
+}
+
+.vh-breadcrumb a:hover,
+.vh-breadcrumb a:focus-visible{
+    color: var(--vh-text);
+    text-decoration: underline;
+}
+
+.vh-breadcrumb [aria-current="page"]{
+    color: var(--vh-text);
+}
+
+.vh-docs-grid{
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 4rem;
+    align-items: start;
+}
+
+.vh-docs-grid--solo{
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.vh-docs-nav{
+    position: sticky;
+    top: 9.5rem;
+    padding-inline-end: 1.5rem;
+    border-inline-end: 1px solid var(--vh-hairline);
+}
+
+.vh-docs-nav-group{
+    margin: 0 0 .5rem;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: calc(.08em * var(--vh-tracking));
+    text-transform: uppercase;
+    color: var(--vh-text-dim);
+}
+
+.vh-docs-nav-group:not(:first-child){
+    margin-top: 1.75rem;
+}
+
+.vh-docs-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-docs-nav a{
+    display: block;
+    padding: .4rem .75rem;
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--vh-text-muted);
+    text-decoration: none;
+}
+
+.vh-docs-nav a:hover,
+.vh-docs-nav a:focus-visible,
+.vh-docs-nav a[aria-current="page"]{
+    color: var(--vh-text);
+    background-color: var(--vh-surface);
+}
+
+.vh-docs-nav a[aria-current="page"]{
+    font-weight: 600;
+}
+
+@media (max-width: 991.98px){
+    .vh-docs{ padding-top: 7rem; }
+    .vh-docs-grid{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+    .vh-docs-nav{
+        position: static;
+        padding: 0 0 1.5rem;
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--vh-hairline);
+    }
+}
+
+// The reading column: about 70 characters wide, body copy in the muted ink like
+// every other page, headings and inline code in the full one.
+.vh-docs-article{
+    max-width: 46rem;
+}
+
+.vh-docs-article h1{
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+}
+
+.vh-docs-article h2,
+.vh-docs-article h3{
+    color: var(--vh-text);
+    scroll-margin-top: 9.5rem;
+}
+
+.vh-docs-article h2{
+    margin: 3rem 0 1rem;
+    font-size: 1.6rem;
+}
+
+.vh-docs-article h3{
+    margin: 2rem 0 .75rem;
+    font-size: 1.2rem;
+}
+
+.vh-docs-article p,
+.vh-docs-article li{
+    color: var(--vh-text-muted);
+    line-height: 1.75;
+}
+
+.vh-docs-lead{
+    font-size: 1.15rem;
+}
+
+.vh-docs-article ul,
+.vh-docs-article ol{
+    margin-bottom: 1.25rem;
+    padding-inline-start: 1.4rem;
+}
+
+.vh-docs-article li{
+    margin-bottom: .4rem;
+}
+
+.vh-docs-article a:not([class]){
+    color: var(--vh-accent-ink);
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+
+.vh-docs-article :not(pre) > code{
+    padding: .1em .4em;
+    border-radius: 6px;
+    background-color: var(--vh-surface);
+    color: var(--vh-text);
+    font-size: .9em;
+}
+
+.vh-docs-article .vh-terminal{
+    margin: 1.25rem 0 1.75rem;
+}
+
+// Same grid as the legal tables, so a reference table reads the same in both.
+.vh-docs-article table{
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 0 1.5rem;
+    border-collapse: collapse;
+}
+
+.vh-docs-article th,
+.vh-docs-article td{
+    padding: .6rem .9rem;
+    border: 1px solid rgba(var(--vh-text-rgb), .15);
+    text-align: start;
+    vertical-align: top;
+    color: var(--vh-text-muted);
+}
+
+.vh-docs-article th{
+    font-weight: 600;
+    color: var(--vh-text);
+    background-color: rgba(var(--vh-text-rgb), .05);
+}
+
+// A command in a table stays on one line: on a phone the table scrolls sideways
+// rather than breaking it where it can be neither read nor copied.
+.vh-docs-article td code{
+    white-space: nowrap;
+}
+
+// A note and a warning: an edge in the accent or the warning ink, never a filled
+// banner, so a page with three of them still reads as text.
+.vh-docs-note,
+.vh-docs-warn{
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-inline-start: 3px solid var(--vh-accent-ink);
+    border-radius: 8px;
+    background-color: var(--vh-surface);
+}
+
+.vh-docs-warn{
+    border-inline-start-color: var(--vh-warn);
+}
+
+.vh-docs-note p,
+.vh-docs-warn p{
+    margin: 0;
+    color: var(--vh-text);
+}

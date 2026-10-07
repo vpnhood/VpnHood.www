@@ -1,0 +1,14 @@
+# PREVIEW DATA for the layout preview at /vpnhood-server/docs/ — local only, not committed.
+vpnhood-server:
+  - group: getting-started
+    pages:
+      - url: /vpnhood-server/docs/
+        label: install
+      - url: /vpnhood-server/docs/#requirements
+        label: requirements
+      - url: /vpnhood-server/docs/#verify
+        label: verify
+  - group: reference
+    pages:
+      - url: /vpnhood-server/docs/#settings
+        label: configuration

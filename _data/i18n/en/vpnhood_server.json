@@ -16,7 +16,7 @@
   "run_manager_title": "With VpnHood! MANAGER",
   "run_manager_desc": "The free panel installs the server for you, watches it live, and issues your access keys. Add more servers and it balances users across them. The easiest path for most people.",
   "run_solo_title": "On its own",
-  "run_solo_desc": "No panel required: a built-in file-based access manager lets a single server issue its own keys, configured from a simple settings file. On Linux, <code>vhserver gen</code> prints a new one.",
+  "run_solo_desc": "No panel required: a built-in file-based access manager lets a single server issue its own keys, configured from a simple settings file. On Linux, <code>[vhserver_gen]</code> prints a new one.",
   "setup_guide": "Setup guide: install on Windows, Linux, or Docker",
   "learn_more": "Learn more",
   "learn_more_manager": "about VpnHood! MANAGER",

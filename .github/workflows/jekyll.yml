@@ -99,6 +99,16 @@ jobs:
           dotnet tool restore
           dotnet tool run vhtranslator
 
+      # A translation must carry its English source's placeholders - [amount],
+      # [count], a command's [vhserver_gen] and the <code> tags around it - byte
+      # for byte, or the page fills in a price or a command wrong. A string that
+      # changed one is swapped for its English source (the reader gets one English
+      # sentence, never a wrong value) and committed below with the rest, so the
+      # repo holds what was deployed. Runs after a failed translation too:
+      # whatever the translator finished is checked before it is committed.
+      - name: Check placeholders in translations
+        run: python3 tools/check-placeholders.py --heal
+
       # Push the generated translations + watches back to main so the repo stays in
       # sync and nothing is re-translated on the next publish. Scoped to the
       # translator's own outputs (never the synced legal pages). No workflow

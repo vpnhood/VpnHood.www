@@ -1,0 +1,16 @@
+{
+  "aria_breadcrumb": "Breadcrumb",
+  "aria_docs_nav": "Documentation",
+  "home": "Home",
+  "docs": "Docs",
+  "vpnhood-server": "VpnHood! SERVER",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "self-hosted-vpn": "Self-hosted VPN",
+  "getting-started": "Getting started",
+  "reference": "Reference",
+  "requirements": "Requirements",
+  "install": "Install",
+  "verify": "Verify",
+  "configuration": "Configuration"
+}
