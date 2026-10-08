@@ -4,9 +4,16 @@ The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
 Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
 the CLIENT, CONNECT and MANAGER privacy policies and terms of use, one `.md` each, named by
-website slug. They change only through reviewed PRs there, and merging to `develop` is
-publication. The wiki keeps only redirect stubs at the old page names, plus its `Legal` index
-(linked from the MANAGER web UI), which points at the URLs below — never fetch from the wiki.
+website slug. They change only through reviewed PRs there, never a direct push, and merging to
+`develop` is publication. That folder's README is written for forkers; how we publish is here:
+
+- **Effective date:** a substantive change moves the document's `Effective:` line in the same PR.
+  The two MANAGER documents came over from the wiki unchanged and carry none yet; add one with
+  their next substantive change.
+- **File name = URL slug:** renaming a file there breaks its public address.
+- **The wiki** keeps only redirect stubs at the old page names, plus its `Legal` index (linked
+  from the MANAGER web UI), which points at the URLs below. Never fetch from the wiki, and never
+  edit policy text there; the stubs stay so old links keep working.
 
 - The workflow step **"Sync legal pages"** `curl`s those `.md` (raw URL
   `https://raw.githubusercontent.com/vpnhood/VpnHood/develop/docs/legal/end-user/<slug>.md`)
