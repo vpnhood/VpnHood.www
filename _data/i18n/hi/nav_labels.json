@@ -1,0 +1,16 @@
+{
+  "aria_breadcrumb": "ब्रेडक्रम्ब",
+  "aria_docs_nav": "दस्तावेज़",
+  "home": "होम",
+  "docs": "दस्तावेज़",
+  "vpnhood-server": "VpnHood! SERVER",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "self-hosted-vpn": "सेल्फ-होस्टेड VPN",
+  "getting-started": "शुरुआत करें",
+  "reference": "संदर्भ",
+  "requirements": "ज़रूरी शर्तें",
+  "install": "इंस्टॉल करें",
+  "verify": "सत्यापित करें",
+  "configuration": "कॉन्फ़िगरेशन"
+}

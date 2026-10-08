@@ -1,0 +1,16 @@
+{
+  "aria_breadcrumb": "面包屑导航",
+  "aria_docs_nav": "文档导航",
+  "home": "首页",
+  "docs": "文档",
+  "vpnhood-server": "VpnHood! SERVER",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "self-hosted-vpn": "自托管 VPN",
+  "getting-started": "快速入门",
+  "reference": "参考指南",
+  "requirements": "系统要求",
+  "install": "安装",
+  "verify": "验证",
+  "configuration": "配置"
+}

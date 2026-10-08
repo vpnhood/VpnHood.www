@@ -16,7 +16,7 @@
   "run_manager_title": "Com o VpnHood! MANAGER",
   "run_manager_desc": "O painel gratuito instala o servidor para você, monitora tudo em tempo real e emite chaves de acesso. Adicione mais servidores e ele equilibra a carga automaticamente.",
   "run_solo_title": "De forma independente",
-  "run_solo_desc": "Sem necessidade de painel: gerencie o acesso por arquivos locais para emitir chaves a partir de ajustes simples. No Linux, basta rodar <code>vhserver gen</code>.",
+  "run_solo_desc": "Sem necessidade de painel: o gerenciador de acesso integrado baseado em arquivos permite que um único servidor gere suas próprias chaves, configuradas por um arquivo simples. No Linux, <code>[vhserver_gen]</code> cria uma nova chave.",
   "setup_guide": "Guia de instalação: Windows, Linux ou Docker",
   "learn_more": "Saiba mais",
   "learn_more_manager": "sobre o VpnHood! MANAGER",

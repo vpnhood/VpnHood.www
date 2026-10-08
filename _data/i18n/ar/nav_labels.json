@@ -1,0 +1,16 @@
+{
+  "aria_breadcrumb": "مسار التنقل",
+  "aria_docs_nav": "التوثيق",
+  "home": "الرئيسية",
+  "docs": "التوثيق",
+  "vpnhood-server": "VpnHood! SERVER",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "self-hosted-vpn": "VPN ذاتي الاستضافة",
+  "getting-started": "دليل البدء",
+  "reference": "المرجع",
+  "requirements": "المتطلبات",
+  "install": "التثبيت",
+  "verify": "التحقق",
+  "configuration": "الإعدادات"
+}

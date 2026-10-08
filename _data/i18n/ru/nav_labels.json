@@ -1,0 +1,16 @@
+{
+  "aria_breadcrumb": "Навигационная цепочка",
+  "aria_docs_nav": "Документация",
+  "home": "Главная",
+  "docs": "Документация",
+  "vpnhood-server": "VpnHood! SERVER",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "self-hosted-vpn": "Собственный VPN-сервер",
+  "getting-started": "Быстрый старт",
+  "reference": "Справочник",
+  "requirements": "Требования",
+  "install": "Установка",
+  "verify": "Проверка",
+  "configuration": "Настройка"
+}

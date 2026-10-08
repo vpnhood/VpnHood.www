@@ -16,7 +16,7 @@
   "run_manager_title": "配合 VpnHood! MANAGER",
   "run_manager_desc": "免费控制面板可为您自动安装服务端、实时监控运行状态并生成访问密钥。添加多台服务器即可实现自动负载均衡。最简单易用的首选方案。",
   "run_solo_title": "独立运行",
-  "run_solo_desc": "无需控制面板：内置基于文件的访问管理功能，单个服务端通过简单的配置文件即可自行签发密钥。在 Linux 上运行 <code>vhserver gen</code> 即可生成新密钥。",
+  "run_solo_desc": "无需控制面板：内置基于文件的访问管理器，单个服务器通过简单的配置文件即可自行签发密钥。在 Linux 上，运行 <code>[vhserver_gen]</code> 即可快速生成。",
   "setup_guide": "安装指南：在 Windows、Linux 或 Docker 上部署",
   "learn_more": "了解详情",
   "learn_more_manager": "了解 VpnHood! MANAGER",

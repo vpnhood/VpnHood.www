@@ -16,7 +16,7 @@
   "run_manager_title": "Mit VpnHood! MANAGER",
   "run_manager_desc": "Das kostenlose Web-Panel installiert den Server automatisch, überwacht ihn live und erstellt Zugriffsschlüssel. Fügen Sie weitere Server hinzu, um Nutzer optimal zu verteilen. Die einfachste Lösung für fast jeden Einsatz.",
   "run_solo_title": "Ganz ohne Zusatztools",
-  "run_solo_desc": "Kein Panel erforderlich: Über eine dateibasierte Zugriffsverwaltung vergibt ein einzelner Server seine Schlüssel direkt selbst. Unter Linux genügt der Befehl <code>vhserver gen</code>, um einen neuen Schlüssel zu erstellen.",
+  "run_solo_desc": "Kein Panel erforderlich: Eine integrierte, dateibasierte Zugriffsverwaltung ermöglicht es einem einzelnen Server, eigene Schlüssel direkt über eine simple Konfigurationsdatei zu erstellen. Unter Linux genügt <code>[vhserver_gen]</code>, um einen neuen zu erzeugen.",
   "setup_guide": "Installationsanleitung für Windows, Linux oder Docker",
   "learn_more": "Mehr erfahren",
   "learn_more_manager": "Über den VpnHood! MANAGER",
