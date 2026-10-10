@@ -4,10 +4,10 @@ The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
 Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
 the CLIENT, CONNECT and MANAGER privacy policies and terms of use, one `.md` each, named by
-website slug. They change only through reviewed PRs there, never a direct push, and merging to
-`develop` is publication. That folder's README is written for forkers; how we publish is here:
+website slug. What reaches `develop` is published. That folder's README is written for forkers;
+how we publish is here:
 
-- **Effective date:** a substantive change moves the document's `Effective:` line in the same PR.
+- **Effective date:** a substantive change moves the document's `Effective:` line in the same commit.
   The two MANAGER documents came over from the wiki unchanged and carry none yet; add one with
   their next substantive change.
 - **File name = URL slug:** renaming a file there breaks its public address.
