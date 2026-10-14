@@ -83,6 +83,7 @@
     --vh-accent-ink-rgb: 91, 46, 224;
     --vh-green-ink: #046b4e;
     --vh-blue-ink: #0a6bbd;
+    --vh-code-ink: #ad1f6b;   // Bootstrap's pink, deepened: 5.0:1 even on a tinted card
     --vh-heading-grad-top: #1d1147;
 
     --vh-ok: #0d9c6f;
@@ -141,6 +142,12 @@
 }
 [data-theme="light"] .vh-bg-green-300{
     color: var(--vh-on-bright);
+}
+// The "SAVE 25%" chip also carries .text-white, which turns dark ink above, and dark on this purple
+// read muddy: white, on the theme's accent purple, a step deeper (7.2:1).
+[data-theme="light"] .vh-bg-purple-300{
+    background-color: var(--vh-accent-ink);
+    color: var(--vh-on-accent) !important;
 }
 // Same idea: the "RECOMMENDED" badge inks itself with --purple-800, which is the page
 // background — near-black on dark, near-white on light.
@@ -231,6 +238,11 @@
 [data-theme="light"] .vh-offcanvas-nav .nav-link:focus,
 [data-theme="light"] .vh-nav > .vh-nav-item.active .vh-mega-panel a[aria-current]{
     color: var(--vh-accent-ink);
+}
+// The home download card's note sits on the card's purple glow, where the copy colour is 3.0:1:
+// the card's own ink, as its "Get it now" (7.6:1).
+[data-theme="light"] #download p.small{
+    color: var(--vh-text);
 }
 // Border utilities: the mint/sky/amber hairlines vanish against white.
 [data-theme="light"] .border-green-200{

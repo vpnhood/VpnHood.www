@@ -10,11 +10,14 @@
 :root {
     color-scheme: dark;
 
-    --purple-90: #626d85;
-    --purple-90-rgb: 98, 109, 133;
+    // struck-through prices: dimmer than the body copy, about 7:1 on the plan cards
+    --purple-90: #8f9bb7;
+    --purple-90-rgb: 143, 155, 183;
 
-    --purple-100: #8f9bb7;
-    --purple-100-rgb: 143, 155, 183;
+    // the body copy: APCA Lc 74 on the page. WCAG 2's ratio overrates light text on a dark page
+    // and passed a shade that read dim (#8f9bb7: 7.4:1, Lc 48).
+    --purple-100: #c3cadb;
+    --purple-100-rgb: 195, 202, 219;
 
     --purple-120: #d4c2ff;
     --purple-120-rgb: 212, 194, 255;
@@ -116,6 +119,7 @@
     --vh-accent-ink-rgb: var(--purple-300-rgb);
     --vh-green-ink: var(--green-200);
     --vh-blue-ink: var(--blue-100);
+    --vh-code-ink: #e685b5;                               // inline <code>: Bootstrap's dark-mode pink
     --vh-heading-grad-top: #fff;                          // .vh-txt-grad-* start colour
     // States
     --vh-ok: var(--green-100);
@@ -140,7 +144,10 @@
     --bs-body-bg: var(--vh-page-bg);
     --bs-body-line-height: 1.9;
     --bs-link-color-rgb: var(--purple-300-rgb);
-    --bs-link-hover-color-rgb: var(--purple-200-rgb);
+    // a link brightens under the pointer: the darker --purple-200 faded into the page (3.1:1)
+    --bs-link-hover-color-rgb: var(--purple-130-rgb);
+    // Bootstrap themes its code pink by data-bs-theme, which this site never sets.
+    --bs-code-color: var(--vh-code-ink);
 }
 [dir="rtl"],
 [lang="hi"]{
