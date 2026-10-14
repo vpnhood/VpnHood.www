@@ -1,0 +1,23 @@
+{%- comment -%}
+  A docs section's index: the same groups and pages as its sidebar
+  (_data/docs_nav.yml), each page shown with its title and its meta_description,
+  so the summary is written once, in the page's own JSON, and translated with it.
+  Call it inside the captured article, so it looks the section up itself.
+{%- endcomment -%}
+{%- assign vh_di_section = vh_base_url | split: "/" | where_exp: "s", "s != ''" | first -%}
+{%- assign vh_di_nl = site.data.i18n[vh_lang].nav_labels -%}
+{%- assign vh_di_nl_en = site.data.i18n.en.nav_labels -%}
+{%- for vh_di_group in site.data.docs_nav[vh_di_section] %}
+<h2>{{ vh_di_nl[vh_di_group.group] | default: vh_di_nl_en[vh_di_group.group] }}</h2>
+<ul class="vh-docs-index">
+  {%- for vh_di_page in vh_di_group.pages %}
+  {%- assign vh_di_src = site.pages | where: "url", vh_di_page.url | first -%}
+  {%- assign vh_di_t = site.data.i18n[vh_lang][vh_di_src.i18n] -%}
+  {%- assign vh_di_t_en = site.data.i18n.en[vh_di_src.i18n] %}
+  <li>
+    <a href="{{ vh_base }}{{ vh_di_page.url }}">{{ vh_di_t.title | default: vh_di_t_en.title }}</a>
+    <p>{{ vh_di_t.meta_description | default: vh_di_t_en.meta_description }}</p>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endfor %}

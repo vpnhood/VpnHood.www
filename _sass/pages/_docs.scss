@@ -76,7 +76,8 @@
     list-style: none;
 }
 
-.vh-docs-nav a{
+.vh-docs-nav a,
+.vh-docs-nav [aria-current="page"]{
     display: block;
     padding: .4rem .75rem;
     border-radius: 8px;
@@ -87,12 +88,12 @@
 
 .vh-docs-nav a:hover,
 .vh-docs-nav a:focus-visible,
-.vh-docs-nav a[aria-current="page"]{
+.vh-docs-nav [aria-current="page"]{
     color: var(--vh-text);
     background-color: var(--vh-surface);
 }
 
-.vh-docs-nav a[aria-current="page"]{
+.vh-docs-nav [aria-current="page"]{
     font-weight: 600;
 }
 
@@ -172,8 +173,24 @@
     font-size: .9em;
 }
 
+// Code reads left to right in every language. Isolated, so inside a Persian or
+// Arabic sentence /opt/VpnHoodServer keeps its leading slash and -maxClient its dash
+// on the left, instead of the bidi algorithm moving them to the far end.
+.vh-docs-article code{
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
 .vh-docs-article .vh-terminal{
     margin: 1.25rem 0 1.75rem;
+}
+
+// A command wraps instead of scrolling out of sight: on a docs page the reader has to
+// see all of it, on a phone most of all. A wrapped line is still one line, so
+// copying it gives the command unbroken.
+.vh-docs-article .vh-terminal code{
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
 }
 
 // Same grid as the legal tables, so a reference table reads the same in both.
@@ -205,6 +222,97 @@
 // rather than breaking it where it can be neither read nor copied.
 .vh-docs-article td code{
     white-space: nowrap;
+}
+
+// How the pieces fit together, above a getting-started page: three steps in a row
+// with a chevron in each gap, stacked on a phone with the chevrons pointing down.
+// The icons reuse .vh-feature-icon, so they match every feature card on the site.
+.vh-docs-article .vh-docs-flow{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+    margin: 2.5rem 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-docs-article .vh-docs-flow > li{
+    position: relative;
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid var(--vh-hairline);
+    border-radius: 16px;
+    background-color: var(--vh-surface);
+}
+
+.vh-docs-flow .vh-feature-icon{
+    margin-bottom: .9rem;
+}
+
+.vh-docs-flow > li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    inset-inline-end: -1.55rem;
+    width: .65rem;
+    height: .65rem;
+    border-top: 2px solid var(--vh-text-dim);
+    border-inline-end: 2px solid var(--vh-text-dim);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+[dir="rtl"] .vh-docs-flow > li:not(:last-child)::after{
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.vh-docs-article .vh-docs-flow-title{
+    margin: 0 0 .35rem;
+    font-weight: 600;
+    color: var(--vh-text);
+}
+
+.vh-docs-article .vh-docs-flow-desc{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767.98px){
+    .vh-docs-article .vh-docs-flow{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+    .vh-docs-flow > li:not(:last-child)::after,
+    [dir="rtl"] .vh-docs-flow > li:not(:last-child)::after{
+        top: auto;
+        bottom: -1.35rem;
+        inset-inline-end: auto;
+        left: 50%;
+        border: 0;
+        border-right: 2px solid var(--vh-text-dim);
+        border-bottom: 2px solid var(--vh-text-dim);
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+
+// A section's index (_includes/docs-index.html): each page's title as a link, its
+// summary below.
+.vh-docs-article .vh-docs-index{
+    padding: 0;
+    list-style: none;
+}
+
+.vh-docs-article .vh-docs-index > li{
+    margin: 0 0 1.5rem;
+}
+
+.vh-docs-index a{
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.vh-docs-article .vh-docs-index p{
+    margin: .3rem 0 0;
 }
 
 // A note and a warning: an edge in the accent or the warning ink, never a filled

@@ -1,0 +1,106 @@
+---
+layout: none
+i18n: vpnhood_server_docs_docker
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written against VpnHood! SERVER v8.2, whose image updates itself through
+  vhsupervisor (no Watchtower container): the install script, compose file and
+  Dockerfile in the VpnHood repo (src/Apps/Server/pub/Linux-Docker/,
+  src/Apps/Server/Dockerfile) and CHANGELOG.Server.md. Whole commands are markup;
+  code inside a sentence is a placeholder from _data/code.yml, filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+<h1 class="vh-txt-grad-purple-400">{{ t.title }}</h1>
+<p class="vh-docs-lead">{{ t.lead }}</p>
+
+<h2 id="before-you-start">{{ t.before_title }}</h2>
+<ul>
+  <li>{{ t.req_machine }}</li>
+  <li>{{ t.req_root }}</li>
+  <li>{{ t.req_docker }}</li>
+  <li>{% include copy.html s=t.req_port %}</li>
+</ul>
+
+<h2 id="install">{{ t.install_title }}</h2>
+<p>{{ t.step_install_run }}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh)"</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.step_install_docker %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <p class="vh-terminal-caption">{% include copy.html s=t.caption_unattended %}</p>
+    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh) -install-docker -q"</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.step_install_storage %}</p>
+
+<h2 id="access-key">{{ t.key_title }}</h2>
+<p>{{ t.step_key_run }}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo docker exec VpnHoodServer /app/vhsupervisor gen</code></pre>
+    <p class="vh-terminal-caption">{{ t.caption_example }}</p>
+    <pre dir="ltr"><code>sudo docker exec VpnHoodServer /app/vhsupervisor gen -name Phone -maxClient 1</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.step_key_same %}</p>
+
+<h2 id="connect">{{ t.connect_title }}</h2>
+<p>{% include copy.html s=t.step_connect %}</p>
+
+<h2 id="manage">{{ t.manage_title }}</h2>
+<p>{% include copy.html s=t.manage_desc %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo docker logs VpnHoodServer
+sudo docker stop VpnHoodServer
+sudo docker start VpnHoodServer</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.manage_log %}</p>
+
+<h2 id="settings">{{ t.settings_title }}</h2>
+<p>{% include copy.html s=t.settings_file %}</p>
+<p>{% include copy.html s=t.settings_env %}</p>
+<p><a href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Server-Configuration" target="_blank" rel="noopener noreferrer">{{ t.settings_all }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+
+<h2 id="updates">{{ t.updates_title }}</h2>
+<p>{{ t.updates_auto }}</p>
+<p>{% include copy.html s=t.updates_off %}</p>
+<p>{% include copy.html s=t.updates_image %}</p>
+<div class="vh-docs-note" role="note"><p>{% include copy.html s=t.updates_old %}</p></div>
+
+<h2 id="without-installer">{{ t.manual_title }}</h2>
+<p>{{ t.manual_desc }}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo docker run -d --name VpnHoodServer --network host --restart always --stop-timeout 30 -v /opt/VpnHoodServer/storage:/app/storage vpnhood/vpnhoodserver</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.manual_update %}</p>
+
+<h2 id="manager">{{ t.manager_title }}</h2>
+<p>{% include copy.html s=t.manager_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
+  <li><a href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Server-Configuration" target="_blank" rel="noopener noreferrer">{{ t.next_config }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

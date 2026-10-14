@@ -1,12 +1,16 @@
 {%- comment -%}
-  Documentation pages: the breadcrumb, the section's sidebar and the article. A page
-  opts in with `layout: docs`; its body arrives as {{ content }}, already rendered,
-  so a translated page assigns its own `t` as every page does. The sidebar is
+  Documentation pages: the breadcrumb, the section's sidebar and the article. A docs
+  page is an ordinary page - it includes header.html first, so vh_base, tc and its own
+  `t` exist while its copy renders - and hands its article over as a capture:
+
+    {% capture vh_article %} ...headings, steps, terminal blocks... {% endcapture %}
+    {% include docs.html article=vh_article %}
+
+  Not a Jekyll layout: a layout renders after the page body, so the variables
+  header.html assigns would not exist yet when the copy needs them. The sidebar is
   _data/docs_nav.yml keyed by the product folder; a section with no entry gets the
   article alone.
 {%- endcomment -%}
-{% include header.html %}
-{% assign vh_lang = page.lang | default: 'en' %}
 {%- assign vh_dn_section = vh_base_url | split: "/" | where_exp: "s", "s != ''" | first -%}
 {%- assign vh_dn = site.data.docs_nav[vh_dn_section] %}
 <main id="sp-main-body" class="vh-docs">
@@ -17,9 +21,8 @@
       {% include docs-nav.html %}
       {%- endif %}
       <article class="vh-docs-article">
-{{ content }}
+{{ include.article }}
       </article>
     </div>
   </div>
 </main>
-{% include footer.html %}

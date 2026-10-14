@@ -1,14 +1,12 @@
-# PREVIEW DATA for the layout preview at /vpnhood-server/docs/ — local only, not committed.
+# The docs sidebar of each product, keyed by the first segment of the URL (the
+# product folder), read by _includes/docs.html. Each group names a key in
+# _data/i18n/en/nav_labels.json and lists its pages in reading order; a page's
+# label defaults to the last segment of its URL, so the sidebar and the
+# breadcrumb always call a page the same thing. The section's docs index lists
+# the same pages. List only pages that exist: the link check fails on anything
+# else.
 vpnhood-server:
   - group: getting-started
     pages:
-      - url: /vpnhood-server/docs/
-        label: install
-      - url: /vpnhood-server/docs/#requirements
-        label: requirements
-      - url: /vpnhood-server/docs/#verify
-        label: verify
-  - group: reference
-    pages:
-      - url: /vpnhood-server/docs/#settings
-        label: configuration
+      - url: /vpnhood-server/docs/install/
+      - url: /vpnhood-server/docs/docker/

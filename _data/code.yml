@@ -1,4 +1,4 @@
-# Code the copy shows - commands, paths, ports, setting names - each under the
+# Code the copy shows - commands, paths, ports, on-screen text - each under the
 # name the copy uses as its placeholder.
 #
 # STRUCTURE, not copy, for the same reason as pricing.yml: vhtranslator only
@@ -6,10 +6,46 @@
 # command cannot come back with a translated word or Persian digits in it.
 #
 # The copy keeps the <code> tags and puts the placeholder inside them -
-# "On Linux, <code>[vhserver_gen]</code> prints a new one." - and the page fills
-# it in with replace, like the prices:
-#   t.run_solo_desc | replace: '[vhserver_gen]', site.data.code.vhserver_gen
-# A value is inserted as HTML, so write < and & as &lt; and &amp;. A whole
-# command in a terminal block stays in the page markup.
+# "On Linux, <code>[vhserver_gen]</code> prints a new one." - and the page
+# renders the string through _includes/copy.html, which fills in every name
+# below. A value is inserted as HTML, so write < and & as &lt; and &amp;. A
+# whole command in a terminal block stays in the page markup.
+#
+# Every value here comes from the product: the install scripts published with
+# each VpnHood! SERVER release, and the server source in the VpnHood repo.
 
-vhserver_gen: vhserver gen
+# VpnHood! SERVER
+vhserver_gen: "vhserver gen"
+vhserver_run: "sudo /opt/VpnHoodServer/vhserver"
+vhserver_stop: "sudo /opt/VpnHoodServer/vhserver stop"
+server_dir_linux: "/opt/VpnHoodServer"
+server_service: "VpnHoodServer"
+server_updater: "VpnHoodServerUpdater"
+server_port: "443"
+autostart_prompt_linux: "Start the server at boot (Y/n)?"
+autostart_prompt_windows: "Start the server at boot (Y/n):"
+autoupdate_prompt_linux: "Keep the server up to date by itself (Y/n)?"
+autoupdate_prompt_windows: "Keep the server up to date by itself (Y/n):"
+answer_yes: "y"
+accesskey_heading: "--- AccessKey ---"
+hostendpoints_label: "HostEndPoints:"
+key_prefix: "vh://"
+server_storage: "/opt/VpnHoodServer/storage"
+server_appsettings: "/opt/VpnHoodServer/storage/appsettings.json"
+server_log: "/opt/VpnHoodServer/storage/logs/server.log"
+
+# VpnHood! SERVER in Docker (from v8.2: the image updates itself, no Watchtower)
+docker_prompt: "Install Docker (y/n)?"
+answer_no: "n"
+flag_install_docker: "-install-docker"
+docker_container: "VpnHoodServer"
+docker_image: "vpnhood/vpnhoodserver"
+docker_restart: "sudo docker restart VpnHoodServer"
+docker_network_host: "--network host"
+env_auto_update_off: "VH_AUTO_UPDATE=0"
+env_appsettings: "VH_APPSETTINGS"
+log_pull_image: "Pull the latest image!"
+old_updater_container: "VpnHoodUpdater"
+
+# VpnHood! MANAGER, as its screens say it
+manager_install_manual: "Install Manually by configuring appsettings"

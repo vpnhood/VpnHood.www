@@ -112,11 +112,14 @@ same way; a bare `letter-spacing: 9px` is a bug in three languages.
 Anything the reader types or reads on screen — a command, flag, file path, port or setting
 name — is never written in `_data/i18n/en/`. It lives in `_data/code.yml` under a name, and
 the copy holds that name as a placeholder inside the `<code>` tags:
-`"On Linux, <code>[vhserver_gen]</code> prints a new one."` The page fills it in with
-`replace: '[vhserver_gen]', site.data.code.vhserver_gen`, exactly as go-premium fills
-`[percent]` from `pricing.yml`. The translator never sees the command, so it cannot localise a
+`"On Linux, <code>[vhserver_gen]</code> prints a new one."` The page renders the string
+with `{% include copy.html s=t.run_solo_desc %}`, which replaces every name from `code.yml`
+the way go-premium fills `[percent]` from `pricing.yml`, and language-prefixes the internal
+links as `vh_href_lang` does. The translator never sees the command, so it cannot localise a
 word or a digit in it, and the prompt needs no rule for it — the existing placeholder rule
-covers the name. A whole command in a terminal block stays in the page markup.
+covers the name. A whole command in a terminal block stays in the page markup. On a docs page
+every `<code>` is isolated left-to-right (`_docs.scss`), so a path keeps its leading slash
+inside a Persian or Arabic sentence.
 
 CI checks that the name survives: `tools/check-placeholders.py --heal` runs right after the
 translator and swaps any translation whose placeholders or `<code>` spans differ from the

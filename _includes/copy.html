@@ -1,0 +1,20 @@
+{%- comment -%}
+  Renders one string of copy: every [name] from _data/code.yml becomes its code,
+  and every internal link gets the language prefix, as vh_href_lang does on the
+  other pages. The translator never sees the code - only the placeholder - so a
+  command cannot come back localised.
+
+    {% include copy.html s=t.step_linux_run %}
+
+  The copy keeps the <code> tags around the placeholder; a value is inserted as
+  HTML. A [name] that is not in code.yml (a price page's [percent]) is left for
+  the page's own replace.
+{%- endcomment -%}
+{%- assign vh_copy = include.s | replace: 'href="/', vh_href_lang -%}
+{%- if vh_copy contains '[' -%}
+  {%- for vh_code in site.data.code -%}
+    {%- assign vh_copy_token = '[' | append: vh_code[0] | append: ']' -%}
+    {%- assign vh_copy = vh_copy | replace: vh_copy_token, vh_code[1] -%}
+  {%- endfor -%}
+{%- endif -%}
+{{ vh_copy }}

@@ -1,0 +1,135 @@
+---
+layout: none
+i18n: vpnhood_server_docs_install
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Every command, path, port and option on this page comes from the install scripts
+  published with VpnHood! SERVER v8.1.849 and the server source in the VpnHood repo; the
+  installers' two questions and the bare -q are those of the release after it (VpnHood df8ff924f).
+  Whole commands are markup; code inside a sentence is a placeholder from
+  _data/code.yml, filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+<h1 class="vh-txt-grad-purple-400">{{ t.title }}</h1>
+<p class="vh-docs-lead">{{ t.lead }}</p>
+
+<ol class="vh-docs-flow" aria-label="{{ t.aria_flow }}">
+  <li>
+    <span class="vh-feature-icon">{% include icons/server.svg %}</span>
+    <p class="vh-docs-flow-title">{{ t.flow_server_title }}</p>
+    <p class="vh-docs-flow-desc">{{ t.flow_server_desc }}</p>
+  </li>
+  <li>
+    <span class="vh-feature-icon">{% include icons/key.svg %}</span>
+    <p class="vh-docs-flow-title">{{ t.flow_key_title }}</p>
+    <p class="vh-docs-flow-desc">{{ t.flow_key_desc }}</p>
+  </li>
+  <li>
+    <span class="vh-feature-icon">{% include icons/devices.svg %}</span>
+    <p class="vh-docs-flow-title">{{ t.flow_devices_title }}</p>
+    <p class="vh-docs-flow-desc">{{ t.flow_devices_desc }}</p>
+  </li>
+</ol>
+
+<h2 id="before-you-start">{{ t.before_title }}</h2>
+<ul>
+  <li>{{ t.req_machine }}</li>
+  <li>{{ t.req_admin }}</li>
+  <li>{% include copy.html s=t.req_port %}</li>
+</ul>
+
+<h2 id="linux">{{ t.linux_title }}</h2>
+<p>{% include copy.html s=t.step_linux_run %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh)"</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.step_linux_autostart %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <p class="vh-terminal-caption">{{ t.caption_unattended }}</p>
+    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh) -q"</code></pre>
+  </div>
+</div>
+
+<h2 id="windows">{{ t.windows_title }}</h2>
+<p>{{ t.step_windows_run }}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>[Net.ServicePointManager]::SecurityProtocol = "Tls,Tls11,Tls12"; iwr("https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-win-x64.ps1") -UseBasicParsing | iex;</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.step_windows_autostart %}</p>
+
+<h2 id="access-key">{{ t.key_title }}</h2>
+<p>{{ t.step_key_run }}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <p class="vh-terminal-caption">{{ t.caption_linux }}</p>
+    <pre dir="ltr"><code>sudo /opt/VpnHoodServer/vhserver gen</code></pre>
+    <p class="vh-terminal-caption">{{ t.caption_windows }}</p>
+    <pre dir="ltr"><code>cd "$env:ProgramFiles\VpnHood\VpnHoodServer"; .\vhserver.ps1 gen</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.step_key_copy %}</p>
+<p>{{ t.key_options }}</p>
+<table>
+  <thead><tr><th>{{ t.th_option }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><code>-name Phone</code></td><td>{{ t.opt_name }}</td></tr>
+    <tr><td><code>-maxClient 5</code></td><td>{{ t.opt_max_client }}</td></tr>
+    <tr><td><code>-maxTraffic 50000</code></td><td>{{ t.opt_max_traffic }}</td></tr>
+    <tr><td><code>-maxSpeed 20</code></td><td>{{ t.opt_max_speed }}</td></tr>
+    <tr><td><code>-expire 2030/01/25</code></td><td>{{ t.opt_expire }}</td></tr>
+  </tbody>
+</table>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <p class="vh-terminal-caption">{{ t.caption_example }}</p>
+    <pre dir="ltr"><code>sudo /opt/VpnHoodServer/vhserver gen -name Phone -maxClient 1 -expire 2031/01/01</code></pre>
+  </div>
+</div>
+<div class="vh-docs-warn" role="note"><p>{{ t.note_key_secret }}</p></div>
+
+<h2 id="connect">{{ t.connect_title }}</h2>
+<p>{% include copy.html s=t.step_connect %}</p>
+
+<h2 id="manage">{{ t.manage_title }}</h2>
+<p>{% include copy.html s=t.manage_linux %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo systemctl status VpnHoodServer
+sudo systemctl stop VpnHoodServer
+sudo systemctl start VpnHoodServer</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.manage_log %}</p>
+<p>{% include copy.html s=t.manage_manual %}</p>
+<p>{% include copy.html s=t.manage_windows %}</p>
+
+<h2 id="updates">{{ t.updates_title }}</h2>
+<p>{% include copy.html s=t.updates_desc %}</p>
+<p><a href="https://github.com/vpnhood/VpnHood/wiki/Disabling%E2%80%90VpnHood%E2%80%90Server%E2%80%90Auto%E2%80%90Update" target="_blank" rel="noopener noreferrer">{{ t.updates_off }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/docker/">{{ t.next_docker }}</a></li>
+  <li><a href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Server-Configuration" target="_blank" rel="noopener noreferrer">{{ t.next_config }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
+  <li><a href="https://github.com/vpnhood/VpnHood/wiki/How-to-run-VpnHood-Server-on-Linux-without-ROOT-access" target="_blank" rel="noopener noreferrer">{{ t.next_without_root }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}
