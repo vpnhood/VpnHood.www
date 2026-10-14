@@ -48,8 +48,8 @@
     --purple-100: #565472;   // body copy — 7.0:1 on the page background
     --purple-100-rgb: 86, 84, 114;
 
-    --purple-90: #77758f;    // de-emphasised / struck-through
-    --purple-90-rgb: 119, 117, 143;
+    --purple-90: #6b6985;    // struck-through prices — 5.1:1 on the plan cards
+    --purple-90-rgb: 107, 105, 133;
 
     --purple-120: #5730b8;   // card titles, off-canvas hover
     --purple-120-rgb: 87, 48, 184;
@@ -159,6 +159,8 @@
 [data-theme="light"] #brandCompare .vh-cmp-note{
     color: rgba(var(--purple-100-rgb), 0.9);
 }
+// Left so on purpose: the table's green values and ticks (--vh-ok) are 2.6:1 here, and its amber
+// values 4.2:1 on their tinted cells; --vh-green-ink would make the green 4.9:1.
 
 // ---------------------------------------------------------------------------
 // Chrome — header, mega menu, off-canvas, footer

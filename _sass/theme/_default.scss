@@ -797,6 +797,8 @@ iconify-icon {
     padding-right: 0;
 }
 
+// The white label falls under 4.5:1 where it crosses each gradient's light end (purple 4.2:1, blue
+// 1.7:1, green 2.0:1 at worst): kept so on purpose.
 .vh-btn-primary{
     border-style: none;
     padding: 10px 30px;
@@ -1414,6 +1416,7 @@ iconify-icon {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+    // The ends fade on purpose: a name there drops to about 2.3:1, and crosses the middle in full.
     mask-image: linear-gradient(90deg,transparent 0,var(--purple-800) 20%,var(--purple-800) 80%,transparent);
 }
 /*-------------- Flag pill --------------*/
