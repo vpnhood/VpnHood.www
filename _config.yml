@@ -63,6 +63,7 @@ exclude:
   - .github/
   - .vs/
   - .vscode/
+  - .tmp/           # scratch notes and screenshots; listed so `jekyll serve` stops rebuilding on every write
   - vh_translator/
   - tools/          # build-time scripts (light art, phone mockups); they were being published as pages
 

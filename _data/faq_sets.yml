@@ -13,7 +13,8 @@
 # renders as a link to the page you are already on, and the answer is usually a
 # short version of what that page says at length. The answers that link out are
 # is_vpnhood_free and supported_platforms (-> /free-vpn/go-premium/), why_slower
-# (-> /guides/vpn-speed/) and many_servers_per_location (-> /free-vpn/locations/).
+# (-> /guides/vpn-speed/), many_servers_per_location (-> /free-vpn/locations/) and
+# server_ip_blocked (-> /vpnhood-server/docs/ip-blocking/).
 #
 # `all` is the full ordered list, used by /faq/ and as the fallback when a page
 # names no set. `sets` holds the per-page selections. Pick 3-4 questions that

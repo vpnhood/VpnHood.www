@@ -1,0 +1,90 @@
+---
+layout: none
+i18n: vpnhood_server_docs_domain
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for VpnHood! SERVER v9.0.856 and the MANAGER of 2026-10-19, checked against
+  both sources. In MANAGER: Add makes a self-signed certificate, AutoSign gets Let's
+  Encrypt's through the servers' HTTP-01 listener on port 80 and renews it, and the one
+  PublicInToken certificate names every key of the farm; older keys still work while the
+  certificate they pin stays in the farm. On a standalone server: no ACME, default.pfx
+  is the only certificate, the key takes its name from it, and with IsValidHostName the
+  key pins no hash, so older keys break but newer ones survive a renewal. Split out of
+  /vpnhood-server/docs/ip-blocking/, which keeps the why. A managed server comes first,
+  before a standalone one. Linux and Docker only, and no links to the GitHub wiki. Whole
+  commands and files are markup; code inside a sentence is a placeholder from
+  _data/code.yml, filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-domain.svg" %}
+
+<h2 id="why">{{ t.why_title }}</h2>
+<p>{{ t.why_keys }}</p>
+<p>{{ t.why_ips }}</p>
+
+<h2 id="before-you-start">{{ t.before_title }}</h2>
+<ul>
+  <li>{% include copy.html s=t.req_domain %}</li>
+  <li>{{ t.req_dns }}</li>
+  <li>{% include copy.html s=t.req_port %}</li>
+</ul>
+
+<h2 id="managed">{{ t.mgr_title }}</h2>
+<ol>
+  <li>{% include copy.html s=t.mgr_add %}</li>
+  <li>{% include copy.html s=t.mgr_autosign %}</li>
+  <li>{% include copy.html s=t.mgr_token %}</li>
+</ol>
+<p>{% include copy.html s=t.mgr_keys %}</p>
+<p>{% include copy.html s=t.mgr_failed %}</p>
+<p>{% include copy.html s=t.mgr_check %}</p>
+<div class="vh-docs-note" role="note"><p>{% include copy.html s=t.mgr_server_level %}</p></div>
+
+<h2 id="standalone">{{ t.file_title }}</h2>
+<p>{% include copy.html s=t.file_cert %}</p>
+<p>{% include copy.html s=t.file_settings %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <p class="vh-terminal-caption">{{ t.caption_file }}</p>
+    <pre dir="ltr"><code>{
+  "FileAccessManager": {
+    "SslCertificatesPassword": "your-pfx-password",
+    "IsValidHostName": true
+  },
+  "ServerConfig": {
+    "LogAnonymizer": true,
+    "AddListenerIpsToNetwork": "*"
+  },
+  "LogLevel": "Information"
+}</code></pre>
+  </div>
+</div>
+<p>{{ t.file_name }}</p>
+<p>{% include copy.html s=t.file_restart %}</p>
+<p>{% include copy.html s=t.file_keys %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <p class="vh-terminal-caption">{{ t.caption_print }}</p>
+    <pre dir="ltr"><code>sudo ls /opt/VpnHoodServer/storage/access
+sudo /opt/VpnHoodServer/vhserver print 2b9d4a6e-1c3f-4e8a-9b7d-5f0e8c2a1d34</code></pre>
+  </div>
+</div>
+<p>{% include copy.html s=t.file_docker %}</p>
+<p>{{ t.file_renew }}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

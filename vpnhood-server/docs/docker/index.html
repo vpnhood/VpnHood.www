@@ -8,15 +8,18 @@ extra_css:
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 {%- comment -%}
-  Written against VpnHood! SERVER v8.2, whose image updates itself through
+  Written against VpnHood! SERVER v9.0.856, whose image updates itself through
   vhsupervisor (no Watchtower container): the install script, compose file and
   Dockerfile in the VpnHood repo (src/Apps/Server/pub/Linux-Docker/,
-  src/Apps/Server/Dockerfile) and CHANGELOG.Server.md. Whole commands are markup;
-  code inside a sentence is a placeholder from _data/code.yml, filled in by copy.html.
+  src/Apps/Server/Dockerfile), checked against the release's own VpnHoodServer.docker.sh.
+  That script takes the same -httpBaseUrl, -httpAuthorization and -managementSecret as
+  the Linux installer, so the command MANAGER shows for Linux installs a managed
+  container once its script name is changed. A managed server comes first, before a
+  standalone one. No links to the GitHub wiki. Whole commands are markup; code inside a
+  sentence is a placeholder from _data/code.yml, filled in by copy.html.
 {%- endcomment -%}
 {% capture vh_article %}
-<h1 class="vh-txt-grad-purple-400">{{ t.title }}</h1>
-<p class="vh-docs-lead">{{ t.lead }}</p>
+{% include docs-hero.html art="vpnhood-server/docs/hero-docker.svg" %}
 
 <h2 id="before-you-start">{{ t.before_title }}</h2>
 <ul>
@@ -26,7 +29,12 @@ extra_css:
   <li>{% include copy.html s=t.req_port %}</li>
 </ul>
 
-<h2 id="install">{{ t.install_title }}</h2>
+<h2 id="managed">{{ t.mgr_title }}</h2>
+<p>{% include copy.html s=t.mgr_command %}</p>
+<p>{% include copy.html s=t.mgr_existing %}</p>
+<p>{% include copy.html s=t.mgr_keys %}</p>
+
+<h2 id="standalone">{{ t.install_title }}</h2>
 <p>{{ t.step_install_run }}</p>
 <div class="vh-terminal rounded-4">
   <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -44,7 +52,7 @@ extra_css:
 </div>
 <p>{% include copy.html s=t.step_install_storage %}</p>
 
-<h2 id="access-key">{{ t.key_title }}</h2>
+<h3 id="access-key">{{ t.key_title }}</h3>
 <p>{{ t.step_key_run }}</p>
 <div class="vh-terminal rounded-4">
   <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -74,7 +82,7 @@ sudo docker start VpnHoodServer</code></pre>
 <h2 id="settings">{{ t.settings_title }}</h2>
 <p>{% include copy.html s=t.settings_file %}</p>
 <p>{% include copy.html s=t.settings_env %}</p>
-<p><a href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Server-Configuration" target="_blank" rel="noopener noreferrer">{{ t.settings_all }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+<p>{% include copy.html s=t.settings_more %}</p>
 
 <h2 id="updates">{{ t.updates_title }}</h2>
 <p>{{ t.updates_auto }}</p>
@@ -92,14 +100,11 @@ sudo docker start VpnHoodServer</code></pre>
 </div>
 <p>{% include copy.html s=t.manual_update %}</p>
 
-<h2 id="manager">{{ t.manager_title }}</h2>
-<p>{% include copy.html s=t.manager_desc %}</p>
-
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
-  <li><a href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Server-Configuration" target="_blank" rel="noopener noreferrer">{{ t.next_config }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
   <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
 </ul>
 {% endcapture %}
 {% include docs.html article=vh_article %}

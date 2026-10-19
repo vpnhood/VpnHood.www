@@ -51,7 +51,7 @@ extra_css:
                           <div class="col-lg-4" data-aos="fade-up">
                             <div class="vh-card-dark vh-feature-panel h-100">
                               <h2 class="h4 vh-txt-grad-purple-400">{{ t.how_title }}</h2>
-                              <p class="mb-0">{{ t.how_desc }}</p>
+                              <p class="mb-0">{{ t.how_desc | replace: 'href="/', vh_href_lang }}</p>
                             </div>
                           </div>
                           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">

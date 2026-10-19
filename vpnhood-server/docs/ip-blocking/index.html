@@ -1,0 +1,87 @@
+---
+layout: none
+i18n: vpnhood_server_docs_ip_blocking
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for VpnHood! SERVER v9.0.856 from a support answer, and checked against the
+  server source in the VpnHood repo: the server binds its outgoing sockets to no address
+  and has no setting for one, so the outgoing IP is the operating system's. Setting the
+  two addresses is its own task, on /vpnhood-server/docs/ip-addresses/; this page says why
+  and links there. MANAGER's screens are named as they read, and a managed server comes
+  first, before a standalone one, wherever both appear. Linux and Docker only:
+  Windows servers are rare. No links to the GitHub wiki, which is being retired. Whole
+  commands are markup; code inside a sentence is a placeholder from _data/code.yml,
+  filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-ip-blocking.svg" %}
+
+<h2 id="why">{{ t.why_title }}</h2>
+<p>{% include copy.html s=t.why_connection %}</p>
+<p>{{ t.why_traffic }}</p>
+<p>{{ t.why_keys }}</p>
+
+<h2 id="separate-ips">{{ t.split_title }}</h2>
+<p>{{ t.split_desc }}</p>
+<ul>
+  <li>{{ t.split_connection }}</li>
+  <li>{{ t.split_outgoing }}</li>
+</ul>
+<figure class="vh-topology">
+  {% include diagrams/server-two-ips.svg %}
+</figure>
+<p>{{ t.split_why }}</p>
+<p>{{ t.split_no_setting }}</p>
+
+<h3 id="second-ip">{{ t.ip_title }}</h3>
+<p>{{ t.ip_order }}</p>
+<p>{{ t.ip_which }}</p>
+
+<h3 id="outgoing-ip">{{ t.out_title }}</h3>
+<p>{% include copy.html s=t.out_linux %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>ip route get 1.1.1.1</code></pre>
+    <p class="vh-terminal-caption">{% include copy.html s=t.caption_output %}</p>
+    <pre dir="ltr"><code>1.1.1.1 via 198.51.100.1 dev eth0 src 198.51.100.20 uid 0
+    cache</code></pre>
+  </div>
+</div>
+<p>{{ t.out_linux_fix }}</p>
+<p>{{ t.out_docker }}</p>
+<div class="vh-docs-note" role="note"><p>{{ t.out_cloud }}</p></div>
+
+<h3 id="connection-ip">{{ t.conn_title }}</h3>
+<p>{{ t.conn_desc }}</p>
+<p>{% include copy.html s=t.conn_auto %}</p>
+<div class="vh-docs-warn" role="note"><p>{% include copy.html s=t.conn_keys %}</p></div>
+
+<h3 id="check">{{ t.check_title }}</h3>
+<p>{{ t.check_device }}</p>
+<p>{{ t.check_result }}</p>
+
+<h2 id="domain">{{ t.domain_title }}</h2>
+<p>{{ t.domain_desc }}</p>
+<p>{{ t.domain_follow }}</p>
+<p>{% include copy.html s=t.domain_how %}</p>
+
+<h2 id="reverse-proxy">{{ t.proxy_title }}</h2>
+<p>{{ t.proxy_desc }}</p>
+
+<h2 id="exclude-my-country">{{ t.country_title }}</h2>
+<p>{% include copy.html s=t.country_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

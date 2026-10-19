@@ -9,14 +9,18 @@ extra_css:
 {% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 {%- comment -%}
   Every command, path, port and option on this page comes from the install scripts
-  published with VpnHood! SERVER v8.1.849 and the server source in the VpnHood repo; the
-  installers' two questions and the bare -q are those of the release after it (VpnHood df8ff924f).
-  Whole commands are markup; code inside a sentence is a placeholder from
-  _data/code.yml, filled in by copy.html.
+  published with VpnHood! SERVER v9.0.856 and the server source in the VpnHood repo.
+  The managed part follows MANAGER's own screens and source: its SSH options sign in
+  and run the same installer, and the command it shows is that installer with
+  -httpBaseUrl, -httpAuthorization and -managementSecret, which also write the settings
+  the third option shows. A managed server comes first, before a standalone one. Linux
+  only, as Windows servers are rare, and no links to the GitHub wiki. The screenshot is
+  real app UI, so it has no light variant: MANAGER's own dark theme, from a test server,
+  captured at 2x. Whole commands are markup; code inside a sentence is a placeholder
+  from _data/code.yml, filled in by copy.html.
 {%- endcomment -%}
 {% capture vh_article %}
-<h1 class="vh-txt-grad-purple-400">{{ t.title }}</h1>
-<p class="vh-docs-lead">{{ t.lead }}</p>
+{% include docs-hero.html art="vpnhood-server/docs/hero-install.svg" %}
 
 <ol class="vh-docs-flow" aria-label="{{ t.aria_flow }}">
   <li>
@@ -43,7 +47,20 @@ extra_css:
   <li>{% include copy.html s=t.req_port %}</li>
 </ul>
 
-<h2 id="linux">{{ t.linux_title }}</h2>
+<h2 id="managed">{{ t.mgr_title }}</h2>
+<p>{% include copy.html s=t.mgr_add %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-server/docs/manager-install-options.webp" alt="{{ t.shot_alt }}" width="600" height="319" loading="lazy">
+</figure>
+<ul>
+  <li>{% include copy.html s=t.mgr_ssh %}</li>
+  <li>{% include copy.html s=t.mgr_command %}</li>
+  <li>{% include copy.html s=t.mgr_appsettings %}</li>
+</ul>
+<p>{% include copy.html s=t.mgr_status %}</p>
+<p>{% include copy.html s=t.mgr_keys %}</p>
+
+<h2 id="standalone">{{ t.linux_title }}</h2>
 <p>{% include copy.html s=t.step_linux_run %}</p>
 <div class="vh-terminal rounded-4">
   <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -60,25 +77,12 @@ extra_css:
   </div>
 </div>
 
-<h2 id="windows">{{ t.windows_title }}</h2>
-<p>{{ t.step_windows_run }}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <pre dir="ltr"><code>[Net.ServicePointManager]::SecurityProtocol = "Tls,Tls11,Tls12"; iwr("https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-win-x64.ps1") -UseBasicParsing | iex;</code></pre>
-  </div>
-</div>
-<p>{% include copy.html s=t.step_windows_autostart %}</p>
-
-<h2 id="access-key">{{ t.key_title }}</h2>
+<h3 id="access-key">{{ t.key_title }}</h3>
 <p>{{ t.step_key_run }}</p>
 <div class="vh-terminal rounded-4">
   <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="vh-terminal-body">
-    <p class="vh-terminal-caption">{{ t.caption_linux }}</p>
     <pre dir="ltr"><code>sudo /opt/VpnHoodServer/vhserver gen</code></pre>
-    <p class="vh-terminal-caption">{{ t.caption_windows }}</p>
-    <pre dir="ltr"><code>cd "$env:ProgramFiles\VpnHood\VpnHoodServer"; .\vhserver.ps1 gen</code></pre>
   </div>
 </div>
 <p>{% include copy.html s=t.step_key_copy %}</p>
@@ -117,18 +121,25 @@ sudo systemctl start VpnHoodServer</code></pre>
 </div>
 <p>{% include copy.html s=t.manage_log %}</p>
 <p>{% include copy.html s=t.manage_manual %}</p>
-<p>{% include copy.html s=t.manage_windows %}</p>
 
 <h2 id="updates">{{ t.updates_title }}</h2>
 <p>{% include copy.html s=t.updates_desc %}</p>
-<p><a href="https://github.com/vpnhood/VpnHood/wiki/Disabling%E2%80%90VpnHood%E2%80%90Server%E2%80%90Auto%E2%80%90Update" target="_blank" rel="noopener noreferrer">{{ t.updates_off }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
+<p>{% include copy.html s=t.updates_off %}</p>
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh) -q -noautoupdate"</code></pre>
+  </div>
+</div>
+<div class="vh-docs-note" role="note"><p>{{ t.updates_keep }}</p></div>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/docker/">{{ t.next_docker }}</a></li>
-  <li><a href="https://github.com/vpnhood/VpnHood/wiki/VpnHood-Server-Configuration" target="_blank" rel="noopener noreferrer">{{ t.next_config }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
-  <li><a href="https://github.com/vpnhood/VpnHood/wiki/How-to-run-VpnHood-Server-on-Linux-without-ROOT-access" target="_blank" rel="noopener noreferrer">{{ t.next_without_root }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
   <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/docker/">{{ t.next_docker }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
 </ul>
 {% endcapture %}
 {% include docs.html article=vh_article %}

@@ -8,10 +8,8 @@ extra_css:
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 {% capture vh_article %}
-<h1 class="vh-txt-grad-purple-400">{{ t.title }}</h1>
-<p class="vh-docs-lead">{{ t.lead }}</p>
+{% include docs-hero.html art="vpnhood-server/docs/hero-docs.svg" %}
 {% include docs-index.html %}
-<p class="mt-5">{{ t.wiki_note }} <a href="https://github.com/vpnhood/VpnHood/wiki" target="_blank" rel="noopener noreferrer">{{ t.wiki_link }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></p>
 {% endcapture %}
 {% include docs.html article=vh_article %}
 {% include footer.html %}

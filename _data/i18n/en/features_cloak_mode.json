@@ -10,7 +10,7 @@
   "cta": "Get VpnHood! CONNECT",
   "all_features": "All features",
   "how_title": "How it works",
-  "how_desc": "Most VPN protocols announce themselves. Deep packet inspection reads the shape of the traffic, recognizes the protocol on sight, and a network that wants to block VPNs simply drops it. Cloak Mode wraps the tunnel so it looks like ordinary encrypted web traffic, leaving nothing familiar for a filter to match against.",
+  "how_desc": "Most VPN protocols announce themselves. Deep packet inspection reads the shape of the traffic, recognizes the protocol on sight, and a network that wants to block VPNs simply drops it. Cloak Mode wraps the tunnel so it looks like ordinary encrypted web traffic, leaving nothing familiar for a filter to match against. It hides what the traffic is, not where it goes, so a server can still be blocked by its IP address. If you run your own, see <a href=\"/vpnhood-server/docs/ip-blocking/\">how to keep its IP from being blocked</a>.",
   "when_title": "When to turn it on",
   "when_desc": "Turn it on when a network is actively fighting VPNs: a school or office firewall, hotel and airport Wi-Fi that blocks tunnels, or a national filter. On a home connection that is not blocking anything, you do not need it.",
   "cost_title": "What it costs you",

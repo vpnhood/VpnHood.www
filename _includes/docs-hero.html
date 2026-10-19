@@ -1,0 +1,19 @@
+{%- comment -%}
+  The top of a docs page: its title and lead, and beside them, from a tablet up, the
+  page's hero art. The art only repeats what the title says, so it is decorative
+  (alt="") and holds no text, which leaves nothing in it to translate.
+  tools/make-docs-heroes.py draws it in colours that read on both themes, so it has no
+  light variant.
+
+    {% include docs-hero.html art="vpnhood-server/docs/hero-install.svg" %}
+
+  Reads the page's t.title and t.lead. The lead goes through copy.html, so it may hold
+  code placeholders and internal links.
+{%- endcomment -%}
+<header class="vh-docs-hero">
+  <div class="vh-docs-hero-text">
+    <h1 class="vh-txt-grad-purple-400">{{ t.title }}</h1>
+    <p class="vh-docs-lead">{% include copy.html s=t.lead %}</p>
+  </div>
+  <img class="vh-docs-hero-art" src="/assets/images/{{ include.art }}" alt="" width="1000" height="1000">
+</header>

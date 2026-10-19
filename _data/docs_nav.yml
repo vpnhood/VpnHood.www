@@ -10,3 +10,8 @@ vpnhood-server:
     pages:
       - url: /vpnhood-server/docs/install/
       - url: /vpnhood-server/docs/docker/
+      - url: /vpnhood-server/docs/ip-blocking/
+  - group: reference
+    pages:
+      - url: /vpnhood-server/docs/ip-addresses/
+      - url: /vpnhood-server/docs/domain/

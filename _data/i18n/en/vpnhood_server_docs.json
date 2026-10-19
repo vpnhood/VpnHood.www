@@ -1,8 +1,6 @@
 {
   "meta_title": "VpnHood! SERVER Documentation | VpnHood!",
-  "meta_description": "Guides for running your own VPN server with VpnHood! SERVER: install it on Linux or Windows, create access keys and connect your devices.",
+  "meta_description": "Guides for running your own VPN server with VpnHood! SERVER: install it on Linux or in Docker, managed or standalone, and keep its IP from being blocked.",
   "title": "VpnHood! SERVER documentation",
-  "lead": "Run your own VPN server: install it, create access keys and connect your devices.",
-  "wiki_note": "More guides, such as the full configuration reference, are on the GitHub wiki for now.",
-  "wiki_link": "Browse the wiki"
+  "lead": "Run your own VPN server, in one of two ways. A managed server is run from VpnHood! MANAGER, the free web panel, which installs it and issues its access keys. A standalone server runs on its own, from its own settings file."
 }

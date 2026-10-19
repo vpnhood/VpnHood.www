@@ -6,5 +6,9 @@
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "Getting started",
   "install": "Install",
-  "docker": "Docker"
+  "docker": "Docker",
+  "ip-blocking": "IP blocking",
+  "reference": "Reference",
+  "ip-addresses": "IP addresses",
+  "domain": "Domain name"
 }
