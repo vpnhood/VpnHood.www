@@ -3,37 +3,68 @@
 The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
 Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
-the CLIENT, CONNECT and MANAGER privacy policies and terms of use, one `.md` each, named by
-website slug. What reaches `develop` is published. That folder's README is written for forkers;
-how we publish is here:
+the CLIENT, CONNECT and MANAGER privacy policies and terms of use, one `.md` each, named
+`vpnhood-<product>-<document>.md`. What reaches `develop` is published. That folder's README is
+written for forkers; how we publish is here:
 
 - **Effective date:** a substantive change moves the document's `Effective:` line in the same commit.
-  The two MANAGER documents came over from the wiki unchanged and carry none yet; add one with
-  their next substantive change.
-- **File name = URL slug:** renaming a file there breaks its public address.
+  An edit that only changes a URL is not substantive. The two MANAGER documents came over from
+  the wiki unchanged and carry none yet; add one with their next substantive change.
+- **Never rename a source file:** the sync step fetches it by name, and two policies print the
+  GitHub history URL of their own file as their archive.
 - **The wiki** keeps only redirect stubs at the old page names, plus its `Legal` index (linked
   from the MANAGER web UI), which points at the URLs below. Never fetch from the wiki, and never
   edit policy text there; the stubs stay so old links keep working.
 
+## Addresses — permanent
+
+Every document lives at `/legal/<scope>/<document>/`, and every `/legal/<scope>/` is an index:
+
+| Address | Page |
+|---|---|
+| `/legal/` | index of everything; the footer links its `#privacy-policy` and `#terms-of-use` |
+| `/legal/vpnhood-<product>/` | the product's two documents (`_includes/legal-product-index.html`) |
+| `/legal/vpnhood-<product>/privacy-policy/` | `vpnhood-<product>-privacy-policy.md` |
+| `/legal/vpnhood-<product>/terms-of-use/` | `vpnhood-<product>-terms-of-use.md` |
+
+`<product>` is `connect`, `client` or `manager`. These addresses are printed in installed apps,
+store listings, Google's OAuth consent screen and emails, so:
+
+- **A segment under `/legal/` is never renamed or reused** for something else. A new product or
+  program gets a new scope folder (`/legal/reseller-program/terms-of-use/`); nothing moves.
+- **One printed form:** `https://www.vpnhood.com/legal/vpnhood-connect/privacy-policy/` —
+  lowercase, `www`, trailing slash. Stores, apps and consoles get exactly that string, never an
+  old address (GitHub Pages is case-sensitive, and a redirect is a hop a reviewer sees).
+- **Retired addresses redirect forever,** through both mechanisms: an entry in
+  `_plugins/legacy-redirects.rb` (in `ENGLISH_ONLY`; its stub carries the `#fragment`, which a meta
+  refresh alone drops) and a Cloudflare Single Redirect (a real 301). Never remove either.
+
+Retired so far (2026-10-19 move; before it the privacy pages sat at the root and the terms at
+`/legal/vpnhood-<product>-terms-of-use/`):
+
+| From | To |
+|---|---|
+| `/privacy-policy/`, `/terms-of-use/`, `/legal/privacy-policy/`, `/legal/terms-of-use/` | `/legal/` |
+| `/vpnhood-<product>-privacy-policy/` | `/legal/vpnhood-<product>/privacy-policy/` |
+| `/legal/vpnhood-<product>-terms-of-use/` | `/legal/vpnhood-<product>/terms-of-use/` |
+
+`/terms-of-use/` was every product's terms page before the per-product split (and may still be
+linked from checkouts), so it goes to the index, not to one product's terms.
+
+## Build
+
 - The workflow step **"Sync legal pages"** `curl`s those `.md` (raw URL
-  `https://raw.githubusercontent.com/vpnhood/VpnHood/develop/docs/legal/end-user/<slug>.md`)
+  `https://raw.githubusercontent.com/vpnhood/VpnHood/develop/docs/legal/end-user/<name>.md`)
   into `_includes/legals/` under their wiki-era names (`VpnHood-MANAGER-Privacy-Policy.md`, …)
   **at build time** — no runtime fetch; the rendered HTML is static and
   SEO-friendly. The committed `_includes/legals/*.md` are the working copy. A **weekly**
   cron rebuild keeps it synced even without a code push. It's intentionally fail-fast: if a
-  fetch fails the build is skipped and Pages keeps the last deployment.
+  fetch fails the build is skipped and Pages keeps the last deployment. So a change of addresses
+  lands here first, and the text's links change in the VpnHood repo after it is live.
 - Pages render the md via
   `{% capture md %}{% include legals/<Page>.md %}{% endcapture %}{% include legal-page.html md=md %}`;
   `legal-page.html` runs it through `markdownify`. Styled by `_sass/pages/_legal.scss`.
 - Legal pages declare `title:` and `description:` front matter and have no `i18n:` key, so
   they are never cloned into the language trees and their URLs are never `vh_base`-prefixed
-  (English only by policy). They use `nav_active: resources`.
-- URL map — each family has a static index linking to its 3 product pages:
-  `/privacy-policy/` → `/vpnhood-connect-privacy-policy/`,
-  `/vpnhood-client-privacy-policy/`, `/vpnhood-manager-privacy-policy/` (the product
-  privacy md); `/legal/terms-of-use/` → `/legal/vpnhood-connect-terms-of-use/`,
-  `/legal/vpnhood-client-terms-of-use/`, `/legal/vpnhood-manager-terms-of-use/` (the
-  product terms md). The terms pages live under `/legal/`; the privacy pages are still at
-  the root. The MANAGER terms used to be at `/terms-of-use/`, which is now a canonical +
-  noindex + meta-refresh redirect stub (`sitemap: false`) to its new address — GitHub Pages
-  can't 301; same form as `_plugins/legacy-redirects.rb`.
+  (English only by policy). They use `nav_active: resources`. The product indexes are
+  navigation only; `/legal/` keeps the short preambles of the two indexes it replaced.

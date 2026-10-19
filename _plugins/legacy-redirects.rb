@@ -21,13 +21,34 @@ module VhLegacyRedirects
     # The blog was retired after two posts; the one worth keeping became a guide.
     "/blog/" => "/guides/",
     "/blog/welcome-to-the-vpnhood-blog/" => "/guides/",
-    "/blog/what-is-split-tunneling/" => "/guides/what-is-split-tunneling/"
+    "/blog/what-is-split-tunneling/" => "/guides/what-is-split-tunneling/",
+    # Legal documents moved to /legal/<scope>/<document>/ (.docs/legal-pages.md). The old
+    # addresses are printed in installed apps, store listings and emails: never remove these.
+    # /terms-of-use/ was every product's terms page before the per-product split, so it goes
+    # to the index, not to the MANAGER terms; /legal/privacy-policy/ never existed but is the
+    # address people guess.
+    "/privacy-policy/" => "/legal/",
+    "/terms-of-use/" => "/legal/",
+    "/legal/privacy-policy/" => "/legal/",
+    "/legal/terms-of-use/" => "/legal/",
+    "/vpnhood-connect-privacy-policy/" => "/legal/vpnhood-connect/privacy-policy/",
+    "/vpnhood-client-privacy-policy/" => "/legal/vpnhood-client/privacy-policy/",
+    "/vpnhood-manager-privacy-policy/" => "/legal/vpnhood-manager/privacy-policy/",
+    "/legal/vpnhood-connect-terms-of-use/" => "/legal/vpnhood-connect/terms-of-use/",
+    "/legal/vpnhood-client-terms-of-use/" => "/legal/vpnhood-client/terms-of-use/",
+    "/legal/vpnhood-manager-terms-of-use/" => "/legal/vpnhood-manager/terms-of-use/"
   }.freeze
 
   # Paths that only ever existed in English. Posts were never translated, so a
-  # /<lang>/blog/ URL never existed and a stub there would be pure noise.
+  # /<lang>/blog/ URL never existed and a stub there would be pure noise; legal pages
+  # are English only by policy.
   ENGLISH_ONLY = ["/blog/", "/blog/welcome-to-the-vpnhood-blog/",
-                  "/blog/what-is-split-tunneling/"].freeze
+                  "/blog/what-is-split-tunneling/",
+                  "/privacy-policy/", "/terms-of-use/", "/legal/privacy-policy/",
+                  "/legal/terms-of-use/", "/vpnhood-connect-privacy-policy/",
+                  "/vpnhood-client-privacy-policy/", "/vpnhood-manager-privacy-policy/",
+                  "/legal/vpnhood-connect-terms-of-use/", "/legal/vpnhood-client-terms-of-use/",
+                  "/legal/vpnhood-manager-terms-of-use/"].freeze
 
   class Generator < Jekyll::Generator
     safe false
@@ -64,6 +85,7 @@ module VhLegacyRedirects
       data["permalink"] = url
       data["sitemap"] = false # jekyll-sitemap must not advertise a redirect stub
       data["layout"] = nil
+      # The script keeps the #fragment (a meta refresh drops it); the refresh covers no-JS.
       self.content = <<~HTML
         <!doctype html>
         <html lang="#{lang}">
@@ -72,6 +94,7 @@ module VhLegacyRedirects
             <title>Redirecting&hellip;</title>
             <link rel="canonical" href="#{absolute(site, target)}" />
             <meta name="robots" content="noindex" />
+            <script>location.replace(#{target.to_json} + location.hash)</script>
             <meta http-equiv="refresh" content="0; url=#{target}" />
           </head>
           <body>

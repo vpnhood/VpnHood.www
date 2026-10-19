@@ -53,8 +53,9 @@ jobs:
       # publication); see docs/legal/end-user/README.md there. The wiki keeps only
       # redirect stubs, so nothing here may fetch from it.
       #
-      # Repo file name = website slug; the include keeps the wiki-era file name so
-      # the page templates did not have to change when the pages moved.
+      # vpnhood-<product>-<document>.md renders at /legal/vpnhood-<product>/<document>/;
+      # never rename a source file (see .docs/legal-pages.md). The include keeps the
+      # wiki-era file name so the page templates did not have to change.
       - name: Sync legal pages
         run: |
           sync_repo() {

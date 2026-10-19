@@ -1,0 +1,32 @@
+{%- comment -%}
+  A product's legal index, /legal/<scope>/: links to its documents and back to /legal/.
+  Navigation only - every legal statement lives in the synced documents.
+
+  Usage:  {% include legal-product-index.html scope="vpnhood-connect" name="VpnHood! CONNECT" %}
+{%- endcomment -%}
+{% capture vh_arrow %}<svg aria-hidden="true" class="ms-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path></svg>{% endcapture %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+                <div class="section-start-text mb-5 pb-5" data-aos="fade-up">
+                  <h1 class="section-title vh-txt-grad-purple-400">{{ include.name }}</h1>
+                  <p class="section-desc">The privacy policy and terms of use of {{ include.name }}.</p>
+                </div>
+                <ul class="fw-semibold mb-5">
+                  <li><a href="/legal/{{ include.scope }}/privacy-policy/">Privacy Policy{{ vh_arrow }}</a></li>
+                  <li><a href="/legal/{{ include.scope }}/terms-of-use/">Terms of Use{{ vh_arrow }}</a></li>
+                </ul>
+                <p><a href="/legal/">All legal documents</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

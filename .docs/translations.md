@@ -63,8 +63,7 @@ add body-level `inLanguage` microdata.
 includes share Liquid scope). **Every internal link must be written
 `href="{{ vh_base }}/free-vpn/download/"`** so translated pages link within their own tree
 — a bare `href="/free-vpn"` on a fa page would jump back to English. Exceptions (never
-prefixed, but still trailing-slashed): legal pages (`/privacy-policy/`,
-`/legal/terms-of-use/`, `/vpnhood-*-privacy-policy/`, `/legal/vpnhood-*-terms-of-use/` —
+prefixed, but still trailing-slashed): legal pages (everything under `/legal/` —
 English only by policy). Never slashed: `/assets/...` and external URLs.
 
 **Always the trailing slash.** Jekyll serves every page as `<path>/index.html`, so
