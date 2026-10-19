@@ -53,7 +53,7 @@
   "step3_desc": "از صفحه Access Token و با محدودیت‌های دلخواه خود، یک کلید صادر کنید.",
   "step4_title": "کلید را به اشتراک بگذارید",
   "step4_desc": "هر کسی که VpnHood! CLIENT را دارد، آن را وارد می‌کند و متصل می‌شود.",
-  "manual_note": "نمی‌خواهید از پنل VpnHood! MANAGER استفاده کنید؟ VpnHood! SERVER به تنهایی هم کار می‌کند — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">آن را به صورت دستی روی ویندوز، لینوکس یا داکر نصب کنید<span class=\"visually-hidden\"> (در تب جدید باز می‌شود)</span></a>.",
+  "manual_note": "ترجیح می‌دهید از پنل VpnHood! MANAGER استفاده نکنید؟ VpnHood! SERVER می‌تواند به‌صورت سرور مستقل هم اجرا شود: <a href=\"/vpnhood-server/docs/install/#standalone\">نصب روی Linux یا Docker</a>.",
   "new_tab": "(در تب جدید باز می‌شود)",
   "cta": "VPN شما، سرور شما، قوانین شما — و اولین کلید دسترسی تنها چند دقیقه با شما فاصله دارد.",
   "cta_btn": "باز کردن VpnHood! MANAGER"

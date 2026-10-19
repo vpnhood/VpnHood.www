@@ -10,7 +10,7 @@
   "cta": "VpnHood! CONNECT holen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",
-  "how_desc": "Die meisten VPN-Protokolle geben sich sofort zu erkennen: Deep Packet Inspection erkennt das Protokoll am Datenmuster und blockiert die Verbindung direkt. Der Cloak-Modus verpackt den Tunnel so, dass er wie gewöhnlicher verschlüsselter Web-Datenverkehr aussieht – ohne jegliche Angriffspunkte für Filter.",
+  "how_desc": "Die meisten VPN-Protokolle geben sich sofort zu erkennen: Deep Packet Inspection analysiert das Muster des Datenverkehrs, erkennt das Protokoll und blockiert es mühelos. Der Cloak-Modus tarnt den Tunnel als gewöhnlichen, verschlüsselten Web-Datenverkehr – Filter finden so keine verdächtigen Merkmale mehr. Er verbirgt die Art des Datenverkehrs, nicht dessen Ziel, sodass ein Server weiterhin über seine IP-Adresse blockiert werden kann. Wenn Sie einen eigenen Server betreiben, erfahren Sie hier, <a href=\"/vpnhood-server/docs/ip-blocking/\">wie Sie IP-Sperren verhindern</a>.",
   "when_title": "Wann aktivieren?",
   "when_desc": "Aktivieren Sie ihn, wenn ein Netzwerk VPNs gezielt blockiert: in Schul- oder Firmennetzwerken, im Hotel- und Flughafen-WLAN oder bei staatlicher Zensur. Bei einer normalen Verbindung zu Hause benötigen Sie ihn nicht.",
   "cost_title": "Gibt es Nachteile?",

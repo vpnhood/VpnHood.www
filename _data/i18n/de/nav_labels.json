@@ -4,13 +4,11 @@
   "home": "Startseite",
   "docs": "Dokumentation",
   "vpnhood-server": "VpnHood! SERVER",
-  "vpnhood-manager": "VpnHood! MANAGER",
-  "vpnhood-client": "VpnHood! CLIENT",
-  "self-hosted-vpn": "Selbstgehostetes VPN",
   "getting-started": "Erste Schritte",
-  "reference": "Referenz",
-  "requirements": "Voraussetzungen",
   "install": "Installation",
-  "verify": "Überprüfung",
-  "configuration": "Konfiguration"
+  "docker": "Docker",
+  "ip-blocking": "IP-Sperren",
+  "reference": "Referenz",
+  "ip-addresses": "IP-Adressen",
+  "domain": "Domain-Name"
 }

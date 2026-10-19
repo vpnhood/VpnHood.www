@@ -13,11 +13,11 @@
   "f_open_desc": "所有代码均基于 LGPL 协议在 GitHub 上完全开源，并通过了 Include Security（受 Open Technology Fund 红队实验室委托）的安全审计。安全透明，无需盲目信任。",
   "run_label": "你的服务器，你做主",
   "run_title": "两种运行方式",
-  "run_manager_title": "配合 VpnHood! MANAGER",
+  "run_manager_title": "由 VpnHood! MANAGER 管理",
   "run_manager_desc": "免费控制面板可为您自动安装服务端、实时监控运行状态并生成访问密钥。添加多台服务器即可实现自动负载均衡。最简单易用的首选方案。",
   "run_solo_title": "独立运行",
   "run_solo_desc": "无需控制面板：内置基于文件的访问管理器，单个服务器通过简单的配置文件即可自行签发密钥。在 Linux 上，运行 <code>[vhserver_gen]</code> 即可快速生成。",
-  "setup_guide": "安装指南：在 Windows、Linux 或 Docker 上部署",
+  "setup_guide": "配置指南：在 Linux 或 Docker 中安装",
   "learn_more": "了解详情",
   "learn_more_manager": "了解 VpnHood! MANAGER",
   "cta": "免费、开源，随时可部署到您的服务器。",
@@ -50,5 +50,5 @@
   "install_desc": "在崭新的 Linux 服务器上粘贴一行命令即可。它会自动完成安装、配置并启动服务，随后即可生成您的首个访问密钥。",
   "install_caption_install": "在 Linux 上安装（x64 或 ARM64）",
   "install_caption_key": "生成访问密钥",
-  "install_guide": "Windows、Linux 和 Docker 完整配置指南"
+  "install_guide": "Linux 与 Docker 完整安装指南"
 }

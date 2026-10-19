@@ -53,7 +53,7 @@
   "step3_desc": "Сгенерируйте ключ на странице токенов доступа с нужными вам лимитами.",
   "step4_title": "Поделитесь ключом",
   "step4_desc": "Просто вставьте его в VpnHood! CLIENT — и соединение установлено.",
-  "manual_note": "Не хотите использовать панель VpnHood! MANAGER? VpnHood! SERVER может работать автономно — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">установите его вручную на Windows, Linux или Docker<span class=\"visually-hidden\"> (откроется в новой вкладке)</span></a>.",
+  "manual_note": "Не хотите использовать панель VpnHood! MANAGER? VpnHood! SERVER может работать и автономно: <a href=\"/vpnhood-server/docs/install/#standalone\">установите его на Linux или в Docker</a>.",
   "new_tab": "(откроется в новой вкладке)",
   "cta": "Ваш VPN, ваш сервер, ваши правила. Создайте первый ключ всего за пару минут!",
   "cta_btn": "Открыть VpnHood! MANAGER"

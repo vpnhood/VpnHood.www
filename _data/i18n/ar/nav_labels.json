@@ -4,13 +4,11 @@
   "home": "الرئيسية",
   "docs": "التوثيق",
   "vpnhood-server": "VpnHood! SERVER",
-  "vpnhood-manager": "VpnHood! MANAGER",
-  "vpnhood-client": "VpnHood! CLIENT",
-  "self-hosted-vpn": "VPN ذاتي الاستضافة",
   "getting-started": "دليل البدء",
-  "reference": "المرجع",
-  "requirements": "المتطلبات",
   "install": "التثبيت",
-  "verify": "التحقق",
-  "configuration": "الإعدادات"
+  "docker": "Docker",
+  "ip-blocking": "حظر عناوين IP",
+  "reference": "المرجع",
+  "ip-addresses": "عناوين IP",
+  "domain": "اسم النطاق"
 }

@@ -13,11 +13,11 @@
   "f_open_desc": "LGPL लाइसेंस के तहत GitHub पर पूरा कोड ओपन सोर्स है। Open Technology Fund के Red Team Lab के तहत Include Security द्वारा इसका ऑडिट भी किया गया है। पूरी तरह पारदर्शी और सुरक्षित।",
   "run_label": "आपका सर्वर, आपका अधिकार",
   "run_title": "इसे चलाने के दो आसान तरीके",
-  "run_manager_title": "VpnHood! MANAGER के साथ",
+  "run_manager_title": "VpnHood! MANAGER द्वारा प्रबंधित",
   "run_manager_desc": "मुफ़्त पैनल आपके लिए सर्वर इंस्टॉल करता है, लाइव मॉनिटर करता है और एक्सेस कीज़ जारी करता है। और सर्वर जोड़ें और यह यूज़र्स को उनके बीच बैलेंस करता है। ज़्यादातर लोगों के लिए सबसे आसान तरीका।",
-  "run_solo_title": "स्वतंत्र रूप से (Solo)",
+  "run_solo_title": "स्टैंडअलोन",
   "run_solo_desc": "किसी पैनल की आवश्यकता नहीं: इन-बिल्ट फ़ाइल-आधारित एक्सेस मैनेजर की मदद से एक अकेला सर्वर एक आसान सेटिंग्स फ़ाइल द्वारा अपनी की (keys) खुद जारी कर सकता है। Linux पर, <code>[vhserver_gen]</code> एक नई की तैयार करता है।",
-  "setup_guide": "सेटअप गाइड: Windows, Linux या Docker पर इंस्टॉल करें",
+  "setup_guide": "सेटअप गाइड: Linux या Docker पर इंस्टॉल करें",
   "learn_more": "और जानें",
   "learn_more_manager": "VpnHood! MANAGER के बारे में जानें",
   "cta": "मुफ्त, ओपन-सोर्स और आपके सर्वर के लिए तैयार।",
@@ -50,5 +50,5 @@
   "install_desc": "एक नई Linux मशीन पर एक लाइन पेस्ट करें। यह सर्विस को इंस्टॉल, कॉन्फ़िगर और चालू कर देता है। फिर अपनी पहली एक्सेस की (key) पाएँ।",
   "install_caption_install": "Linux (x64 या ARM64) पर इंस्टॉल करें",
   "install_caption_key": "एक्सेस की (key) जनरेट करें",
-  "install_guide": "Windows, Linux और Docker के लिए पूरी सेटअप गाइड"
+  "install_guide": "Linux और Docker के लिए पूरी सेटअप गाइड"
 }

@@ -17,7 +17,7 @@
   "f_farm_title": "Uma chave, todos os servidores",
   "f_farm_desc": "Uma farm de servidores distribui o tráfego entre todos eles, direcionando mais carga para os mais potentes. Adicione um novo servidor e ele começa a receber usuários imediatamente.",
   "f_unblock_title": "Bloqueado? Mantenha seus usuários conectados",
-  "f_unblock_desc": "Em provedores compatíveis, você pode solicitar um novo IP diretamente pelo painel e liberar o antigo. Aponte sua farm para uma URL com token e os aplicativos dos usuários atualizam o endereço sozinhos, sem que você precise reenviar nada.",
+  "f_unblock_desc": "Mude um servidor bloqueado para um novo IP no seu provedor de hospedagem e atualize o painel com o novo endereço. Aponte seu cluster para uma URL de token e os aplicativos dos seus usuários se conectam ao novo endereço automaticamente, sem precisar reenviar nada.",
   "f_tls_title": "Parece tráfego HTTPS comum",
   "f_tls_desc": "Cada farm recebe seu próprio certificado TLS. Tem um domínio? Nós emitimos e renovamos um certificado confiável via Let's Encrypt gratuitamente. Ou traga o seu próprio certificado.",
   "f_live_title": "Monitore tudo em tempo real",

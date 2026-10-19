@@ -46,5 +46,5 @@
   "q_server_needs_manager": "运行服务器必须安装 VpnHood! MANAGER 吗？",
   "a_server_needs_manager": "不需要。VpnHood! SERVER 内置了轻量级基于文件的访问管理，无需任何面板即可独立运行并生成密钥。仅当您需要控制面板、实时监控、自定义套餐或管理多台服务器进行负载均衡时，才需使用 MANAGER。",
   "q_server_ip_blocked": "我的服务器 IP 还会被封锁吗？",
-  "a_server_ip_blocked": "仍有可能。隐身模式消除了绝大多数流量特征，因此被封锁通常是因为 IP 地址暴露。建议保持私用并仅与少数人分享。若搭配使用 MANAGER，在受支持的主机商处可一键更换新 IP，客户端应用将自动无缝同步更新。"
+  "a_server_ip_blocked": "是的。Cloak 模式几乎不会在流量中留下任何指纹特征，因此服务器被封锁通常是因为其 IP 地址。建议保持私密并仅与少数人共享。使用 MANAGER，将您的服务器集群指向一个 Token URL，当您更换服务器至新 IP 时，用户的应用会自动同步新地址。<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>介绍了更多有效应对措施，例如为服务器的出站流量配置备用 IP。"
 }

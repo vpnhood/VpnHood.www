@@ -13,11 +13,11 @@
   "f_open_desc": "كل سطر برمجي متاح علنًا على GitHub بموجب ترخيص LGPL، وخضع المشروع للتدقيق الأمني بواسطة Include Security لصالح مختبر Red Team التابع لـ Open Technology Fund.",
   "run_label": "خادمك، وأنت صاحب القرار",
   "run_title": "طريقتان للتشغيل",
-  "run_manager_title": "مع VpnHood! MANAGER",
+  "run_manager_title": "تتم إدارته عبر VpnHood! MANAGER",
   "run_manager_desc": "تثبت لوحة التحكم المجانية الخادم نيابةً عنك، وتراقبه مباشرة، وتُصدر مفاتيح الوصول. يمكنك إضافة المزيد من الخوادم لتوزيع المستخدمين عليها تلقائيًا. الخيار الأسهل لمعظم المستخدمين.",
-  "run_solo_title": "تشغيل مستقل",
+  "run_solo_title": "مستقل",
   "run_solo_desc": "لا حاجة للوحة تحكم: يتيح لك نظام إدارة الوصول المدمج والقائم على الملفات إنشاء المفاتيح مباشرةً من خادم واحد عبر ملف إعدادات بسيط. وعلى Linux، يقوم الأمر <code>[vhserver_gen]</code> بإنشاء مفتاح جديد على الفور.",
-  "setup_guide": "دليل التثبيت: على Windows أو Linux أو Docker",
+  "setup_guide": "دليل الإعداد: التثبيت على Linux أو عبر Docker",
   "learn_more": "اعرف المزيد",
   "learn_more_manager": "تعرف على VpnHood!‏ MANAGER",
   "cta": "مجاني، مفتوح المصدر، وجاهز لخادومك.",
@@ -50,5 +50,5 @@
   "install_desc": "الصق سطرًا واحدًا في خادم Linux جديد؛ ليتم تثبيت الخدمة وضبطها وتشغيلها تلقائيًا، ثم استخرج مفتاح الوصول الأول بسهولة.",
   "install_caption_install": "التثبيت على Linux (بمعمارية x64 أو ARM64)",
   "install_caption_key": "إنشاء مفتاح وصول",
-  "install_guide": "دليل الإعداد الكامل لأنظمة Windows وLinux وDocker"
+  "install_guide": "دليل الإعداد الكامل لنظام Linux وDocker"
 }

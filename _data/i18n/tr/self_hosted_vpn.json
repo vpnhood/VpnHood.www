@@ -53,7 +53,7 @@
   "step3_desc": "Access Token sayfasından istediğiniz limitlerle bir anahtar oluşturun.",
   "step4_title": "Anahtarı paylaşın",
   "step4_desc": "VpnHood! CLIENT kullanan herkes anahtarı yapıştırarak bağlanabilir.",
-  "manual_note": "VpnHood! MANAGER panelini hiç kullanmak istemiyor musunuz? VpnHood! SERVER da tek başına çalışır — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">Windows, Linux veya Docker üzerinde manuel olarak kurun<span class=\"visually-hidden\"> (yeni sekmede açılır)</span></a>.",
+  "manual_note": "VpnHood! MANAGER panelini hiç kullanmak istemiyor musunuz? VpnHood! SERVER bağımsız bir sunucu olarak da çalışır: <a href=\"/vpnhood-server/docs/install/#standalone\">Linux'a veya Docker'a yükleyin</a>.",
   "new_tab": "(yeni sekmede açılır)",
   "cta": "Sizin VPN'iniz, sizin sunucunuz, sizin kurallarınız; ilk erişim anahtarınız sadece birkaç dakikanızı alır.",
   "cta_btn": "VpnHood! MANAGER'ı Aç"

@@ -10,7 +10,7 @@
   "cta": "Scarica VpnHood! CONNECT",
   "all_features": "Tutte le funzionalità",
   "how_title": "Come funziona",
-  "how_desc": "La maggior parte dei protocolli VPN è facilmente riconoscibile. La deep packet inspection analizza la struttura del traffico, rileva il protocollo e la rete blocca la connessione. La modalità Cloak maschera il tunnel facendolo apparire come normale traffico web crittografato, senza lasciare tracce identificabili dai filtri.",
+  "how_desc": "La maggior parte dei protocolli VPN si fa riconoscere subito. La Deep Packet Inspection ne analizza il traffico, identifica il protocollo all'istante e le reti che bloccano le VPN lo interrompono. La Modalità Cloak maschera il tunnel facendolo apparire come normale traffico web crittografato, senza lasciare tracce riconoscibili per i filtri. Nasconde la natura del traffico, non la destinazione, quindi un server può comunque essere bloccato tramite il suo indirizzo IP. Se gestisci un server tuo, scopri <a href=\"/vpnhood-server/docs/ip-blocking/\">come evitare che il suo IP venga bloccato</a>.",
   "when_title": "Quando attivarla",
   "when_desc": "Attivala sulle reti che bloccano attivamente le VPN: firewall scolastici o aziendali, Wi-Fi di hotel e aeroporti, oppure censure statali. Sulla rete di casa senza restrizioni non è necessaria.",
   "cost_title": "Cosa comporta",

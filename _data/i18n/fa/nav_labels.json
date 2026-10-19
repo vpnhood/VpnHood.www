@@ -4,13 +4,11 @@
   "home": "خانه",
   "docs": "مستندات",
   "vpnhood-server": "VpnHood! SERVER",
-  "vpnhood-manager": "VpnHood! MANAGER",
-  "vpnhood-client": "VpnHood! CLIENT",
-  "self-hosted-vpn": "VPN شخصی",
   "getting-started": "شروع کار",
-  "reference": "مرجع",
-  "requirements": "پیش‌نیازها",
   "install": "نصب",
-  "verify": "تأیید",
-  "configuration": "پیکربندی"
+  "docker": "Docker",
+  "ip-blocking": "مسدودسازی IP",
+  "reference": "مرجع",
+  "ip-addresses": "آدرس‌های IP",
+  "domain": "نام دامنه"
 }

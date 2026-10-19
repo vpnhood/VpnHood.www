@@ -17,7 +17,7 @@
   "f_farm_title": "Tek anahtar, tüm sunucular",
   "f_farm_desc": "Sunucu farm'ları trafiği içindeki tüm sunuculara dağıtarak en güçlü olanlara daha büyük pay verir. Yeni bir sunucu ekleyin, hemen kullanıcı taşımaya başlasın.",
   "f_unblock_title": "Engellendi mi? Kullanıcılarınız bağlantıda kalsın",
-  "f_unblock_desc": "Desteklenen sağlayıcılarda panelden yeni bir IP sipariş edip eskisini bırakabilirsiniz. Farm'ınızı bir token URL'sine yönlendirin; kullanıcılarınızın uygulamaları yeni adresi otomatik olarak algılasın, böylece kimseye tekrar anahtar göndermeniz gerekmez.",
+  "f_unblock_desc": "Engellenen bir sunucuyu barındırma sağlayıcınızdan yeni bir IP'ye taşıyıp panele yeni adresi girin. Sunucu havuzunuzu bir belirteç URL'sine yönlendirin; kullanıcıların uygulamaları yeni adresi otomatik olarak alsın, kimsenin yeniden anahtar göndermesine gerek kalmasın.",
   "f_tls_title": "Sıradan bir HTTPS gibi görünür",
   "f_tls_desc": "Her farm kendi TLS sertifikasına sahip olur. Bir alan adınız var mı? Let's Encrypt aracılığıyla güvenilir bir sertifikayı ücretsiz olarak oluşturup yeniliyoruz. İsterseniz kendi mevcut sertifikanızı da kullanabilirsiniz.",
   "f_live_title": "Her şeyi anlık olarak takip edin",

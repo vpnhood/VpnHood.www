@@ -17,7 +17,7 @@
   "f_farm_title": "Ein Schlüssel für alle Server",
   "f_farm_desc": "Eine Server-Farm verteilt den Traffic automatisch auf alle enthaltenen Server, wobei leistungsstärkere Server mehr Last übernehmen. Füge einfach einen weiteren Server hinzu, der sofort einsatzbereit ist.",
   "f_unblock_title": "Blockiert? Deine Nutzer bleiben online",
-  "f_unblock_desc": "Bei unterstützten Anbietern kannst du direkt im Dashboard eine neue IP bestellen und die alte freigeben. Verknüpfe deine Farm mit einer Token-URL, und die Apps deiner Nutzer übernehmen die neue Adresse automatisch – du musst nichts neu versenden.",
+  "f_unblock_desc": "Ziehen Sie einen blockierten Server einfach auf eine neue IP Ihres Hosting-Anbieters um und hinterlegen Sie die neue Adresse im Panel. Verknüpfen Sie Ihre Serverfarm mit einer Token-URL, und die Apps Ihrer Nutzer übernehmen die neue Adresse automatisch – ganz ohne manuelles Eingreifen.",
   "f_tls_title": "Sieht aus wie gewöhnliches HTTPS",
   "f_tls_desc": "Jede Farm erhält ein eigenes TLS-Zertifikat. Du hast eine Domain? Wir stellen kostenlos ein vertrauenswürdiges Zertifikat über Let's Encrypt aus und erneuern es automatisch. Alternativ nutzt du einfach dein eigenes.",
   "f_live_title": "Alles in Echtzeit im Blick",

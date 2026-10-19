@@ -4,13 +4,11 @@
   "home": "Ana Sayfa",
   "docs": "Belgeler",
   "vpnhood-server": "VpnHood! SERVER",
-  "vpnhood-manager": "VpnHood! MANAGER",
-  "vpnhood-client": "VpnHood! CLIENT",
-  "self-hosted-vpn": "Kendi Sunucunda VPN",
   "getting-started": "Başlarken",
-  "reference": "Referans",
-  "requirements": "Gereksinimler",
   "install": "Kurulum",
-  "verify": "Doğrulama",
-  "configuration": "Yapılandırma"
+  "docker": "Docker",
+  "ip-blocking": "IP engelleme",
+  "reference": "Referans",
+  "ip-addresses": "IP adresleri",
+  "domain": "Alan adı"
 }

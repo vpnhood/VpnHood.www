@@ -13,11 +13,11 @@
   "f_open_desc": "Il codice è interamente pubblico su GitHub con licenza LGPL ed è stato sottoposto ad audit da Include Security per il Red Team Lab dell'Open Technology Fund. Massima trasparenza.",
   "run_label": "Il tuo server, le tue regole",
   "run_title": "Due modalità di utilizzo",
-  "run_manager_title": "Con VpnHood! MANAGER",
+  "run_manager_title": "Gestito con VpnHood! MANAGER",
   "run_manager_desc": "Il pannello gratuito installa il server, ne monitora lo stato in tempo reale e genera le chiavi di accesso. Se aggiungi altri server, bilancia automaticamente gli utenti: la scelta più semplice per tutti.",
-  "run_solo_title": "In autonomia",
+  "run_solo_title": "Autonomo",
   "run_solo_desc": "Nessun pannello necessario: la gestione accessi integrata basata su file consente a un singolo server di generare le proprie chiavi, configurate da un semplice file di impostazioni. Su Linux, <code>[vhserver_gen]</code> ne crea subito una nuova.",
-  "setup_guide": "Guida all'installazione: Windows, Linux o Docker",
+  "setup_guide": "Guida alla configurazione: installa su Linux o Docker",
   "learn_more": "Scopri di più",
   "learn_more_manager": "scopri VpnHood! MANAGER",
   "cta": "Gratuito, open source e pronto per il tuo server.",
@@ -50,5 +50,5 @@
   "install_desc": "Incolla una sola riga su un server Linux pulito: installa il servizio, lo configura e lo avvia. Dopodiché genera la tua prima chiave di accesso.",
   "install_caption_install": "Installa su Linux (x64 o ARM64)",
   "install_caption_key": "Genera una chiave di accesso",
-  "install_guide": "Guida completa alla configurazione per Windows, Linux e Docker"
+  "install_guide": "Guida completa alla configurazione per Linux e Docker"
 }

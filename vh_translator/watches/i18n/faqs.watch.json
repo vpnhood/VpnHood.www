@@ -48,6 +48,6 @@
     "q_server_needs_manager": "Do I need VpnHood! MANAGER to run a server?",
     "a_server_needs_manager": "No. VpnHood! SERVER ships with a small built-in file-based access manager, so one server can run and issue its own keys with no panel at all. MANAGER is what you add when you want a dashboard, live monitoring, your own plans, and several servers sharing the load.",
     "q_server_ip_blocked": "Can my server's IP address still be blocked?",
-    "a_server_ip_blocked": "Yes. Cloak Mode leaves little in the traffic to fingerprint, so what usually gets a server blocked is its IP address. Keep it private and share it with few people. With MANAGER, on supported hosts, you can order a fresh IP and release the old one, and your users' apps pick up the change on their own."
+    "a_server_ip_blocked": "Yes. Cloak Mode leaves little in the traffic to fingerprint, so what usually gets a server blocked is its IP address. Keep it private and share it with few people. With MANAGER, point your server farm at a token URL, and when you move the server to a fresh IP, your users' apps pick up the new address on their own. <a href=\"/vpnhood-server/docs/ip-blocking/\">Keep your server's IP address from being blocked</a> shows what else helps, starting with a second IP for the server's outgoing traffic."
   }
 }

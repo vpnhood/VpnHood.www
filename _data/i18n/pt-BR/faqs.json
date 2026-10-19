@@ -46,5 +46,5 @@
   "q_server_needs_manager": "Preciso do VpnHood! MANAGER para rodar um servidor?",
   "a_server_needs_manager": "Não. O VpnHood! SERVER já vem com um gerenciador de acesso simples integrado, permitindo gerar chaves e rodar sem nenhum painel externo. Use o MANAGER apenas se quiser painel de controle, monitoramento em tempo real, planos personalizados e balanceamento de carga entre vários servidores.",
   "q_server_ip_blocked": "O IP do meu servidor ainda pode ser bloqueado?",
-  "a_server_ip_blocked": "Sim. O Cloak Mode não deixa rastros no tráfego, então o que costuma ser bloqueado é o próprio IP. Mantenha-o privado e compartilhe com poucas pessoas. Com o MANAGER, nos provedores compatíveis, você pode trocar de IP com facilidade — e os aplicativos dos seus usuários atualizam tudo automaticamente."
+  "a_server_ip_blocked": "Sim. O Cloak Mode praticamente não deixa rastros no tráfego, então o que costuma causar o bloqueio é o endereço IP do servidor. Mantenha-o privado e compartilhe-o com poucas pessoas. Com o MANAGER, você pode apontar seus servidores para uma URL de token; assim, ao mudar para um novo IP, os aplicativos dos usuários atualizam o endereço sozinhos. O guia <a href=\"/vpnhood-server/docs/ip-blocking/\">Evite o bloqueio do IP do seu servidor</a> mostra outras soluções úteis, a começar pelo uso de um segundo IP para o tráfego de saída."
 }

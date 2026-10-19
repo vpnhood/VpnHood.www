@@ -10,7 +10,7 @@
   "cta": "Baixar VpnHood! CONNECT",
   "all_features": "Todos os recursos",
   "how_title": "Como funciona",
-  "how_desc": "A maioria dos protocolos VPN se identifica abertamente. A inspeção profunda de pacotes (DPI) analisa o padrão do tráfego, reconhece o protocolo na hora e bloqueia a conexão. O Modo Camuflagem mascara o túnel para que pareça tráfego web criptografado comum, sem deixar rastros para os filtros detectarem.",
+  "how_desc": "A maioria dos protocolos de VPN se revela facilmente. A inspeção profunda de pacotes (DPI) analisa o padrão do tráfego, identifica a VPN de imediato e permite o bloqueio da conexão. O Modo Invisível protege o túnel para que ele pareça tráfego web criptografado comum, sem deixar pistas para os filtros. Ele oculta o tipo de tráfego, mas não o destino — ou seja, o IP do servidor ainda pode ser bloqueado. Se você gerencia o seu próprio servidor, confira <a href=\"/vpnhood-server/docs/ip-blocking/\">como evitar o bloqueio de IP</a>.",
   "when_title": "Quando ativar",
   "when_desc": "Ative quando a rede bloquear VPNs ativamente: em firewalls de escolas ou empresas, redes Wi-Fi de hotéis e aeroportos ou em filtros nacionais de censura. Na sua conexão doméstica, sem bloqueios, você não precisa dele.",
   "cost_title": "Qual é o impacto?",

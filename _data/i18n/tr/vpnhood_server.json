@@ -13,11 +13,11 @@
   "f_open_desc": "Her kod satırı LGPL lisansıyla GitHub'da açıktır. Proje, Open Technology Fund bünyesindeki Red Team Lab için Include Security tarafından denetlenmiştir.",
   "run_label": "Sunucu senin, karar senin",
   "run_title": "Çalıştırmanın iki yolu",
-  "run_manager_title": "VpnHood! MANAGER ile",
+  "run_manager_title": "VpnHood! MANAGER ile Yönetilen",
   "run_manager_desc": "Ücretsiz yönetim paneli sunucuyu sizin için kurar, canlı izler ve erişim anahtarları oluşturur. Birden fazla sunucu eklediğinizde kullanıcı yükünü otomatik dengeler.",
-  "run_solo_title": "Tek başına",
+  "run_solo_title": "Bağımsız",
   "run_solo_desc": "Panele gerek yok: Yerleşik ve dosya tabanlı erişim yöneticisi sayesinde tek bir sunucu, basit bir ayar dosyası üzerinden kendi anahtarlarını oluşturabilir. Linux'ta <code>[vhserver_gen]</code> komutu yeni bir anahtar üretir.",
-  "setup_guide": "Kurulum kılavuzu: Windows, Linux veya Docker üzerinde kurulum yapın",
+  "setup_guide": "Kurulum kılavuzu: Linux veya Docker'a kurun",
   "learn_more": "Daha fazla bilgi edinin",
   "learn_more_manager": "VpnHood! MANAGER hakkında",
   "cta": "Ücretsiz, açık kaynaklı ve kendi sunucunuz için hazır.",
@@ -50,5 +50,5 @@
   "install_desc": "Temiz bir Linux sunucusuna tek bir satır yapıştırın. Servisi otomatik olarak kurar, yapılandırır ve başlatır. Ardından ilk erişim anahtarınızı hemen oluşturun.",
   "install_caption_install": "Linux'a kurun (x64 veya ARM64)",
   "install_caption_key": "Erişim anahtarı oluşturun",
-  "install_guide": "Windows, Linux ve Docker için kapsamlı kurulum kılavuzu"
+  "install_guide": "Linux ve Docker için eksiksiz kurulum kılavuzu"
 }

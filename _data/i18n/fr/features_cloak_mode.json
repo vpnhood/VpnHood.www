@@ -10,7 +10,7 @@
   "cta": "Obtenir VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "how_title": "Comment ça marche",
-  "how_desc": "La plupart des protocoles VPN s'identifient ouvertement. L'inspection approfondie des paquets analyse l'allure du trafic, repère immédiatement le protocole et coupe la connexion. Le mode Cloak camoufle le tunnel pour le faire passer pour du trafic web chiffré classique, ne laissant aucune signature identifiable pour les pare-feux.",
+  "how_desc": "La plupart des protocoles VPN sont facilement repérables. L'inspection approfondie des paquets (DPI) analyse le trafic, identifie le protocole et bloque aussitôt la connexion. Le Mode Furtif dissimule le tunnel sous l'apparence d'un trafic web chiffré ordinaire, contournant ainsi les filtres de détection. Il masque la nature de vos données, mais pas leur destination : un serveur peut donc toujours être bloqué par son adresse IP. Si vous hébergez votre propre serveur, découvrez <a href=\"/vpnhood-server/docs/ip-blocking/\">comment éviter le blocage de son IP</a>.",
   "when_title": "Quand l'activer",
   "when_desc": "Activez-le lorsqu'un réseau bloque activement les VPN : pare-feu d'école ou d'entreprise, Wi-Fi d'hôtel ou d'aéroport, ou encore censure nationale. Sur un réseau domestique standard qui ne filtre rien, il est inutile.",
   "cost_title": "L'impact sur votre connexion",

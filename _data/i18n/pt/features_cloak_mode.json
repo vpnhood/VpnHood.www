@@ -10,7 +10,7 @@
   "cta": "Baixar VpnHood! CONNECT",
   "all_features": "Todos os recursos",
   "how_title": "Como funciona",
-  "how_desc": "A maioria dos protocolos de VPN é facilmente identificada. A inspeção profunda de pacotes (DPI) analisa o padrão do tráfego, reconhece o protocolo na hora e bloqueia a conexão. O Modo Camuflagem encapsula o túnel para que ele se pareça com tráfego web criptografado comum, sem deixar rastros para os filtros de rede.",
+  "how_desc": "A maioria dos protocolos de VPN se denuncia facilmente. A inspeção profunda de pacotes (DPI) analisa o tráfego, reconhece o protocolo na hora e bloqueia a conexão. O Cloak Mode disfarça o túnel como tráfego comum da web criptografado, sem deixar rastros para os filtros detectarem. Ele oculta o tipo de tráfego, mas não o destino — por isso, o IP do servidor ainda pode ser bloqueado. Se você gerencia seu próprio servidor, veja <a href=\"/vpnhood-server/docs/ip-blocking/\">como evitar o bloqueio de IP</a>.",
   "when_title": "Quando ativar",
   "when_desc": "Ative quando uma rede estiver bloqueando ativamente conexões VPN: firewalls de escolas ou empresas, Wi-Fi de hotéis e aeroportos, ou censura governamental. Em redes domésticas sem restrições, não é necessário ativá-lo.",
   "cost_title": "Impacto no desempenho",

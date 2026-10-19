@@ -17,7 +17,7 @@
   "f_farm_title": "Una sola chiave per tutti i server",
   "f_farm_desc": "Una server farm distribuisce il traffico tra tutti i server inclusi, ottimizzando le prestazioni. Aggiungi un nuovo server e inizierà a gestire gli utenti immediatamente.",
   "f_unblock_title": "Bloccato? Mantieni i tuoi utenti connessi",
-  "f_unblock_desc": "Con gli hosting compatibili, puoi richiedere un nuovo IP direttamente dal pannello e rilasciare quello vecchio. Collega la farm a un URL token e le app dei tuoi utenti rileveranno il nuovo indirizzo in autonomia, senza dover reinviare nulla.",
+  "f_unblock_desc": "Sposta un server bloccato su un nuovo IP del tuo provider di hosting e aggiorna l'indirizzo nel pannello. Collega la tua server farm a un URL con token e le app degli utenti rileveranno il nuovo indirizzo in automatico, senza dover inviare di nuovo le configurazioni.",
   "f_tls_title": "Sembra normale traffico HTTPS",
   "f_tls_desc": "Ogni farm riceve il proprio certificato TLS. Hai un dominio? Emettiamo e rinnoviamo gratuitamente un certificato affidabile tramite Let's Encrypt, oppure puoi usare il tuo.",
   "f_live_title": "Monitora tutto in tempo reale",

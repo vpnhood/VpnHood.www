@@ -53,7 +53,7 @@
   "step3_desc": "Gere uma chave na página Access Token com os limites que você escolher.",
   "step4_title": "Compartilhe a chave",
   "step4_desc": "Qualquer pessoa com o VpnHood! CLIENT pode colá-la e conectar-se instantaneamente.",
-  "manual_note": "Prefere não usar o painel VpnHood! MANAGER? O VpnHood! SERVER também funciona sozinho — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">instale-o manualmente no Windows, Linux ou Docker<span class=\"visually-hidden\"> (abre em uma nova aba)</span></a>.",
+  "manual_note": "Prefere não usar o painel do VpnHood! MANAGER? O VpnHood! SERVER também funciona como servidor independente: <a href=\"/vpnhood-server/docs/install/#standalone\">instale no Linux ou via Docker</a>.",
   "new_tab": "(abre em uma nova aba)",
   "cta": "Sua VPN, seu servidor, suas regras — e a primeira chave de acesso está a minutos de distância.",
   "cta_btn": "Abrir o VpnHood! MANAGER"

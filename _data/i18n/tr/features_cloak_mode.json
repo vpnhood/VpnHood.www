@@ -10,7 +10,7 @@
   "cta": "VpnHood! CONNECT Edinin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",
-  "how_desc": "Çoğu VPN protokolü kendini hemen ele verir. Derin paket incelemesi (DPI) trafik biçimini analiz edip protokolü tanır ve ağ engellemesi varsa bağlantıyı keser. Cloak Mode, tüneli sıradan şifreli web trafiği gibi sararak filtrelerin tanıyabileceği hiçbir iz bırakmaz.",
+  "how_desc": "Çoğu VPN protokolü kendini belli eder. Derin paket inceleme (DPI) trafik modelini okur, protokolü anında tanır ve VPN'leri engellemek isteyen bir ağ bağlantıyı doğrudan keser. Gizleme Modu tüneli sıradan, şifreli bir web trafiği gibi göstererek filtrelerin tanıyabileceği hiçbir iz bırakmaz. Trafiğin türünü gizler ancak nereye gittiğini gizlemez; bu yüzden bir sunucu IP adresi üzerinden yine de engellenebilir. Kendi sunucunuzu yönetiyorsanız, <a href=\"/vpnhood-server/docs/ip-blocking/\">IP adresinin engellenmesini nasıl önleyeceğinizi öğrenin</a>.",
   "when_title": "Ne zaman açılmalı?",
   "when_desc": "Ağ VPN kullanımını aktif olarak engellediğinde açın: okul veya iş yeri güvenlik duvarları, VPN'leri engelleyen otel ve havaalanı Wi-Fi ağları ya da ulusal sansür filtreleri. Herhangi bir engelleme olmayan ev ağınızda buna ihtiyacınız yoktur.",
   "cost_title": "Dezavantajı nedir?",

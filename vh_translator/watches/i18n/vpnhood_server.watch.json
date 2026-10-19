@@ -15,11 +15,11 @@
     "f_open_desc": "Every line is public on GitHub under the LGPL, and the project has been audited by Include Security for the Open Technology Fund's Red Team Lab. Nothing to take on faith.",
     "run_label": "Your server, your call",
     "run_title": "Two ways to run it",
-    "run_manager_title": "With VpnHood! MANAGER",
+    "run_manager_title": "Managed by VpnHood! MANAGER",
     "run_manager_desc": "The free panel installs the server for you, watches it live, and issues your access keys. Add more servers and it balances users across them. The easiest path for most people.",
-    "run_solo_title": "On its own",
+    "run_solo_title": "Standalone",
     "run_solo_desc": "No panel required: a built-in file-based access manager lets a single server issue its own keys, configured from a simple settings file. On Linux, <code>[vhserver_gen]</code> prints a new one.",
-    "setup_guide": "Setup guide: install on Windows, Linux, or Docker",
+    "setup_guide": "Setup guide: install on Linux or in Docker",
     "learn_more": "Learn more",
     "learn_more_manager": "about VpnHood! MANAGER",
     "cta": "Free, open-source, and ready for your server.",
@@ -52,6 +52,6 @@
     "install_desc": "Paste one line on a fresh Linux box. It installs the service, configures it, and starts it. Then ask it for your first access key.",
     "install_caption_install": "Install on Linux (x64 or ARM64)",
     "install_caption_key": "Generate an access key",
-    "install_guide": "Full setup guide for Windows, Linux and Docker"
+    "install_guide": "Full setup guide for Linux and Docker"
   }
 }

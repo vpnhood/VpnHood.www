@@ -4,13 +4,11 @@
   "home": "Главная",
   "docs": "Документация",
   "vpnhood-server": "VpnHood! SERVER",
-  "vpnhood-manager": "VpnHood! MANAGER",
-  "vpnhood-client": "VpnHood! CLIENT",
-  "self-hosted-vpn": "Собственный VPN-сервер",
   "getting-started": "Быстрый старт",
-  "reference": "Справочник",
-  "requirements": "Требования",
   "install": "Установка",
-  "verify": "Проверка",
-  "configuration": "Настройка"
+  "docker": "Docker",
+  "ip-blocking": "Блокировка по IP",
+  "reference": "Справочник",
+  "ip-addresses": "IP-адреса",
+  "domain": "Доменное имя"
 }

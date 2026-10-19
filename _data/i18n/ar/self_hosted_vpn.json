@@ -53,7 +53,7 @@
   "step3_desc": "أنشئ مفتاحاً من صفحة رموز الوصول بالصلاحيات التي تفضلها.",
   "step4_title": "شارك المفتاح",
   "step4_desc": "يمكن لأي شخص لديه VpnHood! CLIENT لصقه والاتصال فوراً.",
-  "manual_note": "ألا تفضل استخدام لوحة VpnHood! MANAGER نهائياً؟ يعمل VpnHood! SERVER أيضاً بمفرده — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">قم بتثبيته يدويًا على نظام ويندوز أو لينكس أو دوكر<span class=\"visually-hidden\"> (يفتح في علامة تبويب جديدة)</span></a>.",
+  "manual_note": "ألا تفضّل استخدام لوحة VpnHood! MANAGER مطلقاً؟ يمكن تشغيل VpnHood! SERVER كخادم مستقل أيضاً: <a href=\"/vpnhood-server/docs/install/#standalone\">قم بتثبيته على Linux أو عبر Docker</a>.",
   "new_tab": "(يفتح في علامة تبويب جديدة)",
   "cta": "شبكة VPN الخاصة بك، وخادمك، وقواعدك — ومفتاح الوصول الأول أصبح جاهزاً خلال دقائق.",
   "cta_btn": "افتح VpnHood!‎ MANAGER"

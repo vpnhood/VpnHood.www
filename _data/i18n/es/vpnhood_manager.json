@@ -17,7 +17,7 @@
   "f_farm_title": "Una clave para todos los servidores",
   "f_farm_desc": "Una granja de servidores reparte el tráfico entre todos ellos, dando mayor carga a los más potentes. Añade un nuevo servidor y empezará a gestionar usuarios de inmediato.",
   "f_unblock_title": "¿Bloqueados? Mantén a tus usuarios conectados",
-  "f_unblock_desc": "En los proveedores compatibles, puedes solicitar una nueva IP desde el panel y liberar la antigua. Configura tu granja con una URL de token y las aplicaciones de tus usuarios detectarán la nueva dirección automáticamente, sin que tengas que reenviar nada.",
+  "f_unblock_desc": "Mueve un servidor bloqueado a una nueva IP con tu proveedor de hosting y actualiza la dirección en el panel. Vincula tu granja a una URL de token y las aplicaciones de tus usuarios se actualizarán solas, sin necesidad de reenviar nada.",
   "f_tls_title": "Parece tráfico HTTPS convencional",
   "f_tls_desc": "Cada granja cuenta con su propio certificado TLS. ¿Tienes un dominio? Emitimos y renovamos uno de confianza de forma gratuita a través de Let's Encrypt. O si lo prefieres, trae tu propio certificado.",
   "f_live_title": "Contrólalo todo en tiempo real",

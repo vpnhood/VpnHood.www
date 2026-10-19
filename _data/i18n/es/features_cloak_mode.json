@@ -10,7 +10,7 @@
   "cta": "Obtener VpnHood! CONNECT",
   "all_features": "Todas las funciones",
   "how_title": "Cómo funciona",
-  "how_desc": "La mayoría de los protocolos VPN se delatan fácilmente. La inspección profunda de paquetes analiza el tráfico, detecta el protocolo y la red lo bloquea de inmediato. Cloak Mode camufla el túnel para que parezca tráfico web cifrado normal, sin dejar firmas reconocibles para los filtros.",
+  "how_desc": "La mayoría de los protocolos VPN son fáciles de detectar. La inspección profunda de paquetes analiza la forma del tráfico, reconoce el protocolo al instante y la red que busca bloquear las VPN simplemente lo corta. Cloak Mode camufla el túnel para que parezca tráfico web cifrado habitual, sin dejar ningún patrón reconocible para los filtros. Oculta el tipo de tráfico, no su destino, por lo que un servidor aún puede ser bloqueado por su dirección IP. Si administras el tuyo, descubre <a href=\"/vpnhood-server/docs/ip-blocking/\">cómo evitar que bloqueen su IP</a>.",
   "when_title": "Cuándo activarlo",
   "when_desc": "Actívalo cuando una red restrinja las VPN de forma activa: cortafuegos de centros educativos o empresas, redes wifi de hoteles y aeropuertos, o censura nacional. En la conexión de tu casa, donde nada está bloqueado, no lo necesitas.",
   "cost_title": "Qué implica usarlo",

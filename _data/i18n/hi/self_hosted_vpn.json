@@ -53,7 +53,7 @@
   "step3_desc": "Access Token पेज से अपनी पसंद की सीमाओं के साथ एक की (key) जारी करें।",
   "step4_title": "की (key) शेयर करें",
   "step4_desc": "VpnHood! CLIENT रखने वाला कोई भी व्यक्ति इसे पेस्ट करके कनेक्ट हो सकता है।",
-  "manual_note": "क्या आप VpnHood! MANAGER पैनल का इस्तेमाल नहीं करना चाहते? VpnHood! SERVER अकेले भी काम कर सकता है — <a href=\"https://github.com/vpnhood/VpnHood/wiki/Install-VpnHood-Server\" target=\"_blank\" rel=\"noopener noreferrer\">इसे Windows, Linux या Docker पर मैन्युअल रूप से इंस्टॉल करें<span class=\"visually-hidden\"> (नया टैब खुलता है)</span></a>।",
+  "manual_note": "VpnHood! MANAGER पैनल का इस्तेमाल नहीं करना चाहते? VpnHood! SERVER स्टैंडअलोन सर्वर के रूप में भी चलता है: <a href=\"/vpnhood-server/docs/install/#standalone\">इसे Linux पर या Docker में इंस्टॉल करें</a>।",
   "new_tab": "(नए टैब में खुलता है)",
   "cta": "आपका VPN, आपका सर्वर, आपके नियम — और पहली एक्सेस की बस कुछ ही मिनटों की दूरी पर है।",
   "cta_btn": "VpnHood! MANAGER खोलें"
