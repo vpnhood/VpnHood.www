@@ -51,6 +51,18 @@ Retired so far (2026-10-19 move; before it the privacy pages sat at the root and
 `/terms-of-use/` was every product's terms page before the per-product split (and may still be
 linked from checkouts), so it goes to the index, not to one product's terms.
 
+The Cloudflare side (zone `vpnhood.com`, phase `http_request_dynamic_redirect`; Free plan, 10
+rules, 7 used): three Single Redirects, 301, query string kept. Each matches only the exact old
+paths, with or without the trailing slash, compared with `lower(http.request.uri.path) in {...}`;
+the two per-product rules build the target with
+`wildcard_replace(lower(http.request.uri.path), "<old pattern>", "<new pattern>")`.
+
+| Rule id | Matches | Target |
+|---|---|---|
+| `aaa2859784b940be842c6005c7cd8188` | the four retired indexes | `https://www.vpnhood.com/legal/` |
+| `195de098903b4a2c825a2a38f98b29a0` | `/vpnhood-{connect,client,manager}-privacy-policy` | `/legal/vpnhood-${1}/privacy-policy/` |
+| `eb53fb465ef44c158bd921e3c92546ec` | `/legal/vpnhood-{connect,client,manager}-terms-of-use` | `/legal/vpnhood-${1}/terms-of-use/` |
+
 ## Build
 
 - The workflow step **"Sync legal pages"** `curl`s those `.md` (raw URL
