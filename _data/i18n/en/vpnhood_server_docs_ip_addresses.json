@@ -33,7 +33,7 @@
   "keys_title": "Keys you have already given out",
   "keys_desc": "A key carries the addresses it was made with, so an app holding an older key keeps trying the old address. Each app picks up the current key by itself whenever it connects, so after a change, keep the server listening on the old address for a few days, then remove it.",
   "keys_how": "On a managed server, keep it as an access point with <b>[manager_mode]</b> <b>[manager_private]</b> and <b>[manager_listen]</b> <b>[manager_yes]</b>: apps get the new key because <b>[manager_push_token]</b> is on by default. On a standalone server, keep the old address in <code>[setting_tcp_endpoints]</code> only.",
-  "keys_lost": "An app that can no longer reach the old address needs a new key from you. With a <a href=\"/vpnhood-server/docs/domain/\">domain name</a> and a certificate from a certificate authority, keys find a new address through DNS, so a change does not break them.",
+  "keys_lost": "An app that can no longer reach the old address needs a new key from you. Behind a <a href=\"/vpnhood-server/docs/reverse-proxy/\">reverse proxy</a>, apps connect to the proxy, so your server's address can change without breaking their keys.",
   "next_title": "Next steps",
   "next_blocking": "Keep your server's IP address from being blocked",
   "next_install": "Install VpnHood! SERVER",

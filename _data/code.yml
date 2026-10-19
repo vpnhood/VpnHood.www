@@ -76,7 +76,7 @@ old_updater_container: "VpnHoodUpdater"
 ip_connection_example: "203.0.113.10"
 ip_outgoing_example: "198.51.100.20"
 # and a name from the domains set aside for documentation (RFC 2606)
-domain_example: "vpn.example.com"
+domain_example: "app.example.com"
 
 # The operating system, as its commands print it
 route_src: "src"
@@ -120,6 +120,15 @@ manager_signature: "Signature"
 manager_ca_signed: "CA Signed"
 manager_visibility: "Visibility"
 manager_farm_token_urls: "Farm Token Urls"
+
+# Cloudflare, the reverse proxy the docs use as their example, as its dashboard says it,
+# and the HTTPS ports its proxy passes on
+cloudflare_proxied: "Proxied"
+cloudflare_ssl_tls: "SSL/TLS"
+cloudflare_full_strict: "Full (strict)"
+cloudflare_flexible: "Flexible"
+cloudflare_always_https: "Always Use HTTPS"
+cloudflare_https_ports: "443, 2053, 2083, 2087, 2096, 8443"
 
 # Where a managed server reaches VpnHood! MANAGER, over HTTPS (the -httpBaseUrl of the
 # install command MANAGER shows)

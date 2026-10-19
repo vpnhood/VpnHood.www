@@ -261,6 +261,27 @@ def domain() -> None:
     a.render("domain")
 
 
+def reverse_proxy() -> None:
+    """Reverse proxy: a cloud in front takes the apps' connections and passes them to the server behind it."""
+    a = Art("dhProxy")
+    a.ambient(cy=470)
+    # the apps' connections, coming in from the left and ending inside the cloud
+    for y, lit in ((300, False), (400, True), (500, False)):
+        a.lane(40, y - 30, 260, 60)
+        a.add(f'<circle cx="{110}" cy="{y}" r="15" fill="{MINT if lit else LILAC}" opacity="{.95 if lit else .5}"/>')
+    # the one way on: from the cloud down to the server
+    a.add(f'<path d="M 520 560 V 660" stroke="{TEAL}" stroke-width="30" stroke-linecap="round" filter="{a.url("Soft")}" opacity=".55"/>',
+          f'<path d="M 520 560 V 660" stroke="{MINT}" stroke-width="12" stroke-dasharray="2 26" stroke-linecap="round"/>')
+    # the server, behind the proxy and out of the apps' sight
+    a.server_unit(310, 680, 420, 120, rim=False, lit=True)
+    # the proxy: a cloud of three bumps on a flat base
+    a.solid('<path d="M 330 560 A 110 110 0 0 1 330 340 A 170 170 0 0 1 640 300 A 135 135 0 0 1 730 560 Z" {fill} {stroke}/>', width=12)
+    a.bar(400, 450, 220, 22, fill=MINT, opacity=.9, glow=True)
+    a.bar(400, 500, 160, 16, fill=LILAC, opacity=.42)
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("reverse-proxy")
+
+
 if __name__ == "__main__":
     docs()
     install()
@@ -268,3 +289,4 @@ if __name__ == "__main__":
     ip_blocking()
     ip_addresses()
     domain()
+    reverse_proxy()

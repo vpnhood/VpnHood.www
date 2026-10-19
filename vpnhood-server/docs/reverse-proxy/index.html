@@ -1,0 +1,101 @@
+---
+layout: none
+i18n: vpnhood_server_docs_reverse_proxy
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for VpnHood! SERVER v9.0.856 and the MANAGER of 2026-10-19 from the wiki's
+  "How to Configure VpnHood Using a Reverse Proxy such as Cloudflare", whose MANAGER screens
+  no longer exist, and checked against both sources. Reverse proxies only, such as
+  Cloudflare, which the server owner sets up (owner, 2026-10-19): an ordinary proxy, which a
+  user sets in the app, is a different thing and does not belong on server pages, and
+  neither does a TCP relay in front of the server. The proxy decrypts the connection and
+  sees inside the tunnel, as TCP streams carry no encryption of their own inside TLS (only
+  UDP does). The client tunnels over WebSocket by default, accepts any certificate that
+  chains to an authority for the name, else the hash in its key, and looks the domain up
+  only when the key marks it a valid host name; the domain's answers and the key's
+  addresses are tried in a shuffled order, so an address left in the key is used as often
+  as the proxy. A failed lookup falls back to the key's addresses. MANAGER builds a farm
+  key with no address only from a validated certificate; a standalone server always puts
+  its addresses in its keys. Behind a proxy that sends X-Forwarded-For, the server
+  withholds its UDP and QUIC ports. The server answers ACME on plain HTTP port 80 only. A
+  managed server comes first, before a standalone one. No links to the GitHub wiki. Code
+  inside a sentence is a placeholder from _data/code.yml, filled in by copy.html;
+  Cloudflare's labels live there too. The diagram is drawn twice by
+  tools/make-docs-diagrams.py: left to right from a tablet up, top to bottom on a phone.
+  The screenshot is the Access Points of the MANAGER docs test server, its addresses set to
+  Private for the shot, with numbered markers matching the steps above it (owner,
+  2026-10-19); how to retake it is in Vh/.user/docs/manager-test-projects.md.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-reverse-proxy.svg" %}
+
+<h2 id="how-it-works">{{ t.how_title }}</h2>
+<p>{{ t.how_proxy }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/reverse-proxy.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/reverse-proxy-tall.svg %}
+</figure>
+<p>{{ t.how_reach }}</p>
+<p>{{ t.how_keys }}</p>
+
+<h2 id="keep-in-mind">{{ t.limits_title }}</h2>
+<ul>
+  <li>{{ t.limit_block }}</li>
+  <li>{{ t.limit_dns }}</li>
+  <li>{{ t.limit_private }}</li>
+  <li>{{ t.limit_tcp }}</li>
+  <li>{{ t.limit_terms }}</li>
+</ul>
+
+<h2 id="before-you-start">{{ t.before_title }}</h2>
+<ul>
+  <li>{% include copy.html s=t.req_cert %}</li>
+  <li>{{ t.req_one_server }}</li>
+  <li>{% include copy.html s=t.req_port %}</li>
+</ul>
+
+<h2 id="proxy">{{ t.proxy_title }}</h2>
+<ol>
+  <li>{% include copy.html s=t.proxy_record %}</li>
+  <li>{% include copy.html s=t.proxy_ssl %}</li>
+</ol>
+<p>{% include copy.html s=t.proxy_renew %}</p>
+
+<h2 id="managed">{{ t.mgr_title }}</h2>
+<p>{% include copy.html s=t.mgr_cert %}</p>
+<p>{% include copy.html s=t.mgr_hide %}</p>
+<ol>
+  <li>{% include copy.html s=t.mgr_step_auto %}</li>
+  <li>{% include copy.html s=t.mgr_step_mode %}</li>
+  <li>{% include copy.html s=t.mgr_step_listen %}</li>
+</ol>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-server/docs/manager-access-points-proxy.webp" alt="{{ t.shot_alt }}" width="800" height="355" loading="lazy">
+  <figcaption>{{ t.shot_caption }}</figcaption>
+</figure>
+<p>{% include copy.html s=t.mgr_hide_ca %}</p>
+<p>{% include copy.html s=t.mgr_keep %}</p>
+<p>{% include copy.html s=t.mgr_keys %}</p>
+<div class="vh-docs-note" role="note"><p>{{ t.mgr_farm }}</p></div>
+
+<h2 id="standalone">{{ t.file_title }}</h2>
+<p>{% include copy.html s=t.file_cert %}</p>
+<p>{{ t.file_keys }}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

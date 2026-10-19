@@ -334,6 +334,12 @@
     margin: 2rem auto 2.5rem;
 }
 
+// Its left-to-right twin takes the whole column; the page shows it from a tablet up and
+// the tall one below (d-none d-md-block / d-md-none).
+.vh-docs-article .vh-topology-wide{
+    max-width: none;
+}
+
 // A screenshot of the real app UI, in the app's own dark theme: never light art, so
 // both themes show the same pixels and _light.scss only lifts it with a shadow. The
 // file is captured at 2x and its width and height attributes give the app's own size,

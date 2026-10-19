@@ -15,7 +15,10 @@ extra_css:
   certificate they pin stays in the farm. On a standalone server: no ACME, default.pfx
   is the only certificate, the key takes its name from it, and with IsValidHostName the
   key pins no hash, so older keys break but newer ones survive a renewal. Split out of
-  /vpnhood-server/docs/ip-blocking/, which keeps the why. A managed server comes first,
+  /vpnhood-server/docs/ip-blocking/, which keeps the why. The page sells the trusted
+  certificate, not the domain as a way to connect: a domain leads to the same address,
+  and only a reverse proxy gets apps past a blocked one (owner, 2026-10-19), so it says
+  nothing of moving the server and pointing the domain at it. A managed server comes first,
   before a standalone one. Linux and Docker only, and no links to the GitHub wiki. Whole
   commands and files are markup; code inside a sentence is a placeholder from
   _data/code.yml, filled in by copy.html.
@@ -25,7 +28,7 @@ extra_css:
 
 <h2 id="why">{{ t.why_title }}</h2>
 <p>{{ t.why_keys }}</p>
-<p>{{ t.why_ips }}</p>
+<p>{% include copy.html s=t.why_ips %}</p>
 
 <h2 id="before-you-start">{{ t.before_title }}</h2>
 <ul>
@@ -81,6 +84,7 @@ sudo /opt/VpnHoodServer/vhserver print 2b9d4a6e-1c3f-4e8a-9b7d-5f0e8c2a1d34</cod
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/reverse-proxy/">{{ t.next_proxy }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>

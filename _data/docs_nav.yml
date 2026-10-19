@@ -15,3 +15,4 @@ vpnhood-server:
     pages:
       - url: /vpnhood-server/docs/ip-addresses/
       - url: /vpnhood-server/docs/domain/
+      - url: /vpnhood-server/docs/reverse-proxy/

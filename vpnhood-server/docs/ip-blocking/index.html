@@ -13,7 +13,11 @@ extra_css:
   and has no setting for one, so the outgoing IP is the operating system's. Setting the
   two addresses is its own task, on /vpnhood-server/docs/ip-addresses/; this page says why
   and links there. MANAGER's screens are named as they read, and a managed server comes
-  first, before a standalone one, wherever both appear. Linux and Docker only:
+  first, before a standalone one, wherever both appear. A domain is offered for its
+  trusted certificate, not as a way past a blocked IP: it leads to the same address, and
+  only a reverse proxy puts another one in front (owner, 2026-10-19). There is no advice
+  to keep local sites off the server: a censor can watch from servers it runs abroad
+  (owner, 2026-10-19). Linux and Docker only:
   Windows servers are rare. No links to the GitHub wiki, which is being retired. Whole
   commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.
@@ -32,8 +36,11 @@ extra_css:
   <li>{{ t.split_connection }}</li>
   <li>{{ t.split_outgoing }}</li>
 </ul>
-<figure class="vh-topology">
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
   {% include diagrams/server-two-ips.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/server-two-ips-tall.svg %}
 </figure>
 <p>{{ t.split_why }}</p>
 <p>{{ t.split_no_setting }}</p>
@@ -73,9 +80,7 @@ extra_css:
 
 <h2 id="reverse-proxy">{{ t.proxy_title }}</h2>
 <p>{{ t.proxy_desc }}</p>
-
-<h2 id="exclude-my-country">{{ t.country_title }}</h2>
-<p>{% include copy.html s=t.country_desc %}</p>
+<p>{% include copy.html s=t.proxy_how %}</p>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
