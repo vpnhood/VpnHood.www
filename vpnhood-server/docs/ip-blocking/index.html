@@ -17,7 +17,9 @@ extra_css:
   trusted certificate, not as a way past a blocked IP: it leads to the same address, and
   only a reverse proxy puts another one in front (owner, 2026-10-19). There is no advice
   to keep local sites off the server: a censor can watch from servers it runs abroad
-  (owner, 2026-10-19). Linux and Docker only:
+  (owner, 2026-10-19). No Cloak Mode either: it hides the protocol, not the server's
+  address, and it is the user's setting, not the server owner's (owner, 2026-10-19); a
+  connection that is recognized gets the trusted certificate. Linux and Docker only:
   Windows servers are rare. No links to the GitHub wiki, which is being retired. Whole
   commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.

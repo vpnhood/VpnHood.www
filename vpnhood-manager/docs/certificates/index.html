@@ -1,0 +1,86 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_certificates
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The first page of the MANAGER docs (owner, 2026-10-19): what a farm's certificates are and
+  what each setting does, so the server pages keep only their short steps and link here.
+  Written for the MANAGER of 2026-10-19 (access server v4.0.414, origin/development; the
+  console's develop) and read from both sources: Add creates a self-signed certificate,
+  Public and Manual, and binds it to the server it was added from; Upload takes a PFX with
+  an exportable key, defaults to Private in the console, and is always farm-wide; a new
+  certificate for a domain the farm has replaces the old one and keeps its visibility if
+  higher; every non-DomainOnly certificate goes to its servers whatever its visibility, and
+  a server picks one by SNI; the token carries the PublicInToken certificate's name and
+  hash, with IsValidHostName from its CA signature; a self-signed token certificate needs a
+  PublicInToken address; Push token to clients sends keys only while a farm server has a
+  PublicInToken address; Priority only orders redirect domains; AutoSign uses Let's Encrypt
+  over HTTP-01 on port 80 through any farm server, MANAGER checks the token first, renews 30
+  days before expiry on a daily job, and falls back to Manual after six failures in a row.
+  Its screenshots are the MANAGER docs test farm as it is (Vh/.user/docs/
+  manager-test-projects.md), in MANAGER's dark theme. MANAGER's screen text is a placeholder
+  from _data/code.yml, filled in by copy.html. No links to the GitHub wiki.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-certificates.svg" %}
+
+<h2 id="where">{{ t.where_title }}</h2>
+<p>{% include copy.html s=t.where_card %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/certificates-card.webp" alt="{{ t.shot_card_alt }}" width="600" height="270" loading="lazy">
+  <figcaption>{{ t.shot_card_caption }}</figcaption>
+</figure>
+<p>{{ t.where_new }}</p>
+<p>{{ t.where_server }}</p>
+
+<h2 id="settings">{{ t.settings_title }}</h2>
+<p>{{ t.settings_open }}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/certificate-dialog.webp" alt="{{ t.shot_dialog_alt }}" width="600" height="573" loading="lazy">
+  <figcaption>{{ t.shot_dialog_caption }}</figcaption>
+</figure>
+<ul>
+  <li>{% include copy.html s=t.set_visibility %}</li>
+  <li>{% include copy.html s=t.set_signing %}</li>
+  <li>{% include copy.html s=t.set_used_by %}</li>
+  <li>{% include copy.html s=t.set_priority %}</li>
+  <li>{% include copy.html s=t.set_signature %}</li>
+  <li>{% include copy.html s=t.set_description %}</li>
+</ul>
+
+<h2 id="add">{{ t.add_title }}</h2>
+<p>{% include copy.html s=t.add_how %}</p>
+<p>{{ t.add_server }}</p>
+<p>{% include copy.html s=t.add_trusted %}</p>
+
+<h2 id="autosign">{{ t.autosign_title }}</h2>
+<p>{% include copy.html s=t.autosign_how %}</p>
+<p>{{ t.autosign_renew }}</p>
+<p>{% include copy.html s=t.autosign_failed %}</p>
+
+<h2 id="upload">{{ t.upload_title }}</h2>
+<p>{% include copy.html s=t.upload_how %}</p>
+<p>{% include copy.html s=t.upload_farm %}</p>
+
+<h2 id="keys">{{ t.keys_title }}</h2>
+<p>{% include copy.html s=t.keys_carry %}</p>
+<p>{% include copy.html s=t.keys_change %}</p>
+<p>{% include copy.html s=t.keys_replace %}</p>
+
+<h2 id="delete">{{ t.delete_title }}</h2>
+<p>{% include copy.html s=t.delete_rules %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/reverse-proxy/">{{ t.next_proxy }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/">{{ t.next_docs }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

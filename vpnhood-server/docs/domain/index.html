@@ -24,7 +24,7 @@ extra_css:
   _data/code.yml, filled in by copy.html. The screenshot is the certificate dialog of the
   MANAGER docs test farm, with numbered markers matching the steps above it (owner,
   2026-10-19). That certificate is self-signed for a made-up name, so the values of a
-  validated AutoSign certificate for app.example.com were written onto the open dialog
+  validated AutoSign certificate for server1.example.com were written onto the open dialog
   before the capture, as CertificateCard.razor renders them; how to retake it is in
   Vh/.user/docs/manager-test-projects.md.
 {%- endcomment -%}
@@ -53,6 +53,7 @@ extra_css:
   <img src="/assets/images/vpnhood-server/docs/manager-certificate-autosign.webp" alt="{{ t.shot_alt }}" width="600" height="573" loading="lazy">
   <figcaption>{{ t.shot_caption }}</figcaption>
 </figure>
+<p>{% include copy.html s=t.mgr_more %}</p>
 <p>{% include copy.html s=t.mgr_keys %}</p>
 <p>{% include copy.html s=t.mgr_failed %}</p>
 <p>{% include copy.html s=t.mgr_check %}</p>

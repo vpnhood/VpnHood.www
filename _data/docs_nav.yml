@@ -16,3 +16,7 @@ vpnhood-server:
       - url: /vpnhood-server/docs/ip-addresses/
       - url: /vpnhood-server/docs/domain/
       - url: /vpnhood-server/docs/reverse-proxy/
+vpnhood-manager:
+  - group: reference
+    pages:
+      - url: /vpnhood-manager/docs/certificates/

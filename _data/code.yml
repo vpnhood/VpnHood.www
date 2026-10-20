@@ -76,7 +76,7 @@ old_updater_container: "VpnHoodUpdater"
 ip_connection_example: "203.0.113.10"
 ip_outgoing_example: "198.51.100.20"
 # and a name from the domains set aside for documentation (RFC 2606)
-domain_example: "app.example.com"
+domain_example: "server1.example.com"
 
 # The operating system, as its commands print it
 route_src: "src"
@@ -120,6 +120,19 @@ manager_signature: "Signature"
 manager_ca_signed: "CA Signed"
 manager_visibility: "Visibility"
 manager_farm_token_urls: "Farm Token Urls"
+manager_upload: "Upload"
+manager_domain_only: "DomainOnly"
+manager_used_by: "Used By"
+manager_server_farm: "Server Farm"
+manager_priority: "Priority"
+manager_priority_normal: "Normal"
+manager_priority_low: "Low"
+manager_priority_lowest: "Lowest"
+manager_self_signed: "Self-Signed"
+manager_validating: "Validating..."
+manager_certificate_password: "Certificate Password"
+manager_description: "Description"
+manager_delete: "Delete"
 
 # Cloudflare, the reverse proxy the docs use as their example, as its dashboard says it,
 # and the HTTPS ports its proxy passes on

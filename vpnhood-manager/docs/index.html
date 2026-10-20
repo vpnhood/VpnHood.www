@@ -1,0 +1,20 @@
+---
+layout: none
+i18n: vpnhood_manager_docs
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The MANAGER docs index (owner, 2026-10-19): MANAGER's own screens get their own section,
+  and the server pages keep only the short steps of a managed server, linking here for what
+  each setting means. Lists the pages of _data/docs_nav.yml's vpnhood-manager entry.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-docs.svg" %}
+{% include docs-index.html %}
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

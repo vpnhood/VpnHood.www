@@ -361,9 +361,10 @@ def reverse_proxy() -> None:
              txt(XP, YP + 36, T("diagram_proxy_sub"), 16, CHALK_DIM)]
     # in through your domain, then on to the server
     x_in = XP - CLOUD_SIZE / 2 - 12
+    lx = (XU + x_in) / 2 + 6            # the domain's slot: between the elbow's corner and the cloud
     parts += [elbow([(XU, YB - 42), (XU, YA), (x_in, YA)]),
-              txt((XU + x_in) / 2, YA - 18, T("diagram_domain"), 21, MINT),
-              txt((XU + x_in) / 2, YA + 32, CODE("domain_example"), 19),
+              txt(lx, YA - 18, T("diagram_domain"), 21, MINT),
+              txt(lx, YA + 32, CODE("domain_example"), 18),
               elbow([(XP + CLOUD_SIZE / 2 + 14, YA), (XS, YA), (XS, YB - RACK_H / 2 - 14)])]
     blocked_route(parts, (XU + 58, YB), (XS - RACK_W / 2 - 14, YB), True, T, CODE,
                   ((XU + XS) / 2, YB - 26, "middle", 64))
@@ -377,7 +378,7 @@ def reverse_proxy() -> None:
     seed(13)
     W, H = 560, 760
     X, YU, YS = 110, 84, 556            # users and server, on the direct route
-    XP, YP = 390, 300                   # the proxy's cloud
+    XP, YP = 410, 300                   # the proxy's cloud, clear of the longest "blocked"
     parts = [people(X, YU), rack(X, YS, RACK_W, RACK_H), cloud(XP, YP, CLOUD_SIZE),
              txt(XP, YP + 12, T("diagram_proxy"), 23),
              txt(XP, YP + 36, T("diagram_proxy_sub"), 16, CHALK_DIM)]
