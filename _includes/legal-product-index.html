@@ -3,6 +3,7 @@
   Navigation only - every legal statement lives in the synced documents.
 
   Usage:  {% include legal-product-index.html scope="vpnhood-connect" name="VpnHood! CONNECT" %}
+          terms="false" for a scope with a privacy policy only (the website).
 {%- endcomment -%}
 {% capture vh_arrow %}<svg aria-hidden="true" class="ms-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path></svg>{% endcapture %}
 <main id="sp-main-body">
@@ -15,11 +16,13 @@
               <div class="com-content-article__body">
                 <div class="section-start-text mb-5 pb-5" data-aos="fade-up">
                   <h1 class="section-title vh-txt-grad-purple-400">{{ include.name }}</h1>
-                  <p class="section-desc">The privacy policy and terms of use of {{ include.name }}.</p>
+                  <p class="section-desc">{% if include.terms == "false" %}The privacy policy{% else %}The privacy policy and terms of use{% endif %} of {{ include.name }}.</p>
                 </div>
                 <ul class="fw-semibold mb-5">
                   <li><a href="/legal/{{ include.scope }}/privacy-policy/">Privacy Policy{{ vh_arrow }}</a></li>
+                  {%- if include.terms != "false" %}
                   <li><a href="/legal/{{ include.scope }}/terms-of-use/">Terms of Use{{ vh_arrow }}</a></li>
+                  {%- endif %}
                 </ul>
                 <p><a href="/legal/">All legal documents</a></p>
               </div>

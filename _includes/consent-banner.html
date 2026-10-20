@@ -1,0 +1,12 @@
+{%- comment -%}
+  The analytics consent banner. /assets/js/consent-banner.js shows it only to visitors in
+  window.vhConsentRegions (header.html) who have not chosen yet, and again from the footer's
+  "Cookie settings". Accept and Decline look the same: refusing is as easy as agreeing.
+{%- endcomment -%}
+<div id="vhConsent" class="vh-consent" role="dialog" aria-labelledby="vhConsentText" hidden>
+  <p id="vhConsentText" class="mb-3">{{ tc.consent_text }} <a href="/legal/website/privacy-policy/">{{ tc.consent_more }}</a></p>
+  <div class="d-flex flex-wrap gap-3">
+    <button type="button" class="vh-btn-secondary" data-vh-consent="denied">{{ tc.consent_decline }}</button>
+    <button type="button" class="vh-btn-secondary" data-vh-consent="granted">{{ tc.consent_accept }}</button>
+  </div>
+</div>

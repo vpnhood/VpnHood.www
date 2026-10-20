@@ -3,8 +3,8 @@
 The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
 Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
-the CLIENT, CONNECT and MANAGER privacy policies and terms of use, one `.md` each, named
-`vpnhood-<product>-<document>.md`. What reaches `develop` is published. That folder's README is
+the CLIENT, CONNECT and MANAGER privacy policies and terms of use, plus the website's privacy
+policy, one `.md` each, named `<scope>-<document>.md`. What reaches `develop` is published. That folder's README is
 written for forkers; how we publish is here:
 
 - **Effective date:** a substantive change moves the document's `Effective:` line in the same commit.
@@ -26,8 +26,11 @@ Every document lives at `/legal/<scope>/<document>/`, and every `/legal/<scope>/
 | `/legal/vpnhood-<product>/` | the product's two documents (`_includes/legal-product-index.html`) |
 | `/legal/vpnhood-<product>/privacy-policy/` | `vpnhood-<product>-privacy-policy.md` |
 | `/legal/vpnhood-<product>/terms-of-use/` | `vpnhood-<product>-terms-of-use.md` |
+| `/legal/website/` | the website's one document (same include, `terms="false"`) |
+| `/legal/website/privacy-policy/` | `website-privacy-policy.md` |
 
-`<product>` is `connect`, `client` or `manager`. These addresses are printed in installed apps,
+`<product>` is `connect`, `client` or `manager`. A new source file is pushed to the VpnHood repo
+before its `sync_repo` line lands here, or the fail-fast sync stops every build. These addresses are printed in installed apps,
 store listings, Google's OAuth consent screen and emails, so:
 
 - **A segment under `/legal/` is never renamed or reused** for something else. A new product or
@@ -78,5 +81,5 @@ the two per-product rules build the target with
   `legal-page.html` runs it through `markdownify`. Styled by `_sass/pages/_legal.scss`.
 - Legal pages declare `title:` and `description:` front matter and have no `i18n:` key, so
   they are never cloned into the language trees and their URLs are never `vh_base`-prefixed
-  (English only by policy). They use `nav_active: resources`. The product indexes are
-  navigation only; `/legal/` keeps the short preambles of the two indexes it replaced.
+  (English only by policy). They use `nav_active: resources`. The indexes are navigation only:
+  every legal statement lives in the synced documents.

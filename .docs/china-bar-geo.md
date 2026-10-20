@@ -23,11 +23,12 @@ the visitors the free tier cannot serve.
 How `assets/js/china-bar.js` decides a visitor is in China. Read this before changing the
 geo source or endpoint.
 
-### Source order (`detect()`)
+### Source order (`window.vhCountry` in `header.html`, shared with the analytics consent)
 
 1. `?geo=CN` query param — manual preview/testing.
 2. `localStorage vh_geo` — sticky manual override.
-3. Cloudflare `/cdn-cgi/trace` (`loc=CN`) — production. **Always read from the apex
+3. `sessionStorage vh_country` — the answer of an earlier page in this session.
+4. Cloudflare `/cdn-cgi/trace` (`loc=CN`) — production. **Always read from the apex
    `https://vpnhood.com/cdn-cgi/trace`** (a cross-origin request).
 
 ### Why always the apex (and not same-origin)

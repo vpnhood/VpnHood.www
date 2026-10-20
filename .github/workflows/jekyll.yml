@@ -53,7 +53,7 @@ jobs:
       # publication); see docs/legal/end-user/README.md there. The wiki keeps only
       # redirect stubs, so nothing here may fetch from it.
       #
-      # vpnhood-<product>-<document>.md renders at /legal/vpnhood-<product>/<document>/;
+      # <scope>-<document>.md renders at /legal/<scope>/<document>/ (scope = vpnhood-<product> or website);
       # never rename a source file (see .docs/legal-pages.md). The include keeps the
       # wiki-era file name so the page templates did not have to change.
       - name: Sync legal pages
@@ -69,6 +69,7 @@ jobs:
           sync_repo vpnhood-connect-terms-of-use VpnHood-CONNECT-Terms-of-Use
           sync_repo vpnhood-manager-privacy-policy VpnHood-MANAGER-Privacy-Policy
           sync_repo vpnhood-manager-terms-of-use VpnHood-MANAGER-Terms-of-Use
+          sync_repo website-privacy-policy VpnHood-WEBSITE-Privacy-Policy
 
       # Translate anything stale (source copy edited without running the translator
       # locally) so a deploy never ships untranslated strings. Incremental: the

@@ -145,6 +145,23 @@ SDK's own OAuth client from requesting Tag Manager scopes.
 Then Reports → Engagement → Events → `cta_click`, broken down by `cta_id`, answers
 "what does the header slot earn" with real clicks instead of reasoning.
 
+## Analytics consent — `_includes/consent-banner.html` + `assets/js/consent-banner.js`
+
+Visitors in the EU/EEA, the UK and Switzerland (`window.vhConsentRegions` in `header.html`)
+get Tag Manager only after they press **Accept**; everyone else gets it at once, with no
+banner, as before. The country comes from `window.vhCountry` (also `header.html`): the
+Cloudflare lookup the China bar uses, done once per session (`sessionStorage vh_country`).
+An unknown country (lookup failed) loads nothing and shows nothing. The choice is
+`localStorage vh_consent` (`granted` / `denied`); "Cookie settings" in the footer reopens the
+banner and appears only in those regions or after a choice. Declining after an Accept deletes
+the `_ga*` cookies and reloads. After an Accept, the loader tells Google analytics is granted
+and the ad signals are denied (Consent Mode), since the site has no ads. There is no GTM
+`<noscript>` iframe: without JavaScript there is no banner to ask.
+
+Preview with `?geo=DE` (banner) or `?geo=US` (none); clear `vh_consent` to see it again. A
+local build never loads GTM, so the banner can be clicked safely. The website's privacy
+notice (`/legal/website/privacy-policy/`) describes this; change both together.
+
 ## Pricing — `_data/pricing.yml` + `_data/i18n/en/free_vpn_go_premium.json`
 
 Every number on `/free-vpn/go-premium/` comes from `_data/pricing.yml`: the free price,

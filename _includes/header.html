@@ -33,21 +33,68 @@
       })();
     </script>
 
+    <!-- The visitor's country, looked up once per session at our Cloudflare edge and shared by the
+         China bar and the analytics consent; ?geo=XX or localStorage vh_geo override it for
+         previews. Visitors in vhConsentRegions (the EU/EEA, the UK, Switzerland) get Google Tag
+         Manager only after accepting the banner (consent-banner.js). See .docs/components.md,
+         "Analytics consent", and .docs/china-bar-geo.md for why the lookup reads the apex. -->
+    <script>
+      (function (w) {
+        w.vhConsentRegions = ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE",
+          "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES",
+          "SE", "IS", "LI", "NO", "GB", "CH"];
+        w.vhCountry = (function () {
+          var c = null;
+          try {
+            c = new URLSearchParams(location.search).get("geo") || localStorage.getItem("vh_geo") ||
+              sessionStorage.getItem("vh_country");
+          } catch (e) {}
+          if (c) return Promise.resolve(String(c).toUpperCase());
+          return fetch("https://vpnhood.com/cdn-cgi/trace", { cache: "no-store" })
+            .then(function (r) { return r.ok ? r.text() : ""; })
+            .then(function (t) {
+              var m = /(?:^|\n)loc=([A-Z]{2})/.exec(t || "");
+              if (m) try { sessionStorage.setItem("vh_country", m[1]); } catch (e) {}
+              return m ? m[1] : null;
+            })
+            .catch(function () { return null; });
+        })();
+      })(window);
+    </script>
+
     <!-- Google Tag Manager. Production only: a local `jekyll serve` would otherwise send
          page views and every [data-vh-track] CTA click to the live GA4 property, so our own
-         testing would show up as real traffic. CI builds with JEKYLL_ENV=production. -->
+         testing would show up as real traffic. CI builds with JEKYLL_ENV=production.
+         Loaded at once outside the consent regions; inside them only after an Accept (kept in
+         localStorage vh_consent), and an unknown country waits too. -->
     {%- if jekyll.environment == "production" %}
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-M39NR6ZS");
+      (function (w, d) {
+        w.vhLoadGtm = function (consented) {
+          if (w.vhGtmLoaded) return;
+          w.vhGtmLoaded = true;
+          w.dataLayer = w.dataLayer || [];
+          if (consented) {
+            // What the visitor accepted is analytics; the site has no ads.
+            (function () { w.dataLayer.push(arguments); })("consent", "default", {
+              analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied",
+              ad_personalization: "denied" });
+          }
+          w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName("script")[0],
+            j = d.createElement("script");
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M39NR6ZS";
+          f.parentNode.insertBefore(j, f);
+        };
+        var choice = null;
+        try { choice = localStorage.getItem("vh_consent"); } catch (e) {}
+        if (choice === "granted") return w.vhLoadGtm(true);
+        if (choice === "denied") return;
+        w.vhCountry.then(function (c) {
+          if (c && w.vhConsentRegions.indexOf(c) < 0) w.vhLoadGtm(false);
+        });
+      })(window, document);
     </script>
     {%- endif %}
     <!-- End Google Tag Manager -->
@@ -235,17 +282,8 @@
   <body
     class="site helix-ultimate hu en-us {{ vh_dir }} sticky-header layout-fluid offcanvas-init offcanvs-position-left"
   >
-    <!-- Google Tag Manager (noscript) -->
-    {%- if jekyll.environment == "production" %}
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-M39NR6ZS"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    {%- endif %}
+    <!-- No GTM <noscript> iframe: without JavaScript there is no consent banner, so it would
+         track visitors in the consent regions who never agreed. -->
 
     <div class="sp-pre-loader">
       <div class="circle-two"><span></span></div>

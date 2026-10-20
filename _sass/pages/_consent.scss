@@ -1,0 +1,39 @@
+// Analytics consent banner (_includes/consent-banner.html; shown by /assets/js/consent-banner.js
+// in the consent regions only): an opaque card pinned to the bottom corner, above the page and the
+// China bar, below the offcanvas menu.
+
+.vh-consent {
+  position: fixed;
+  bottom: 16px;
+  inset-inline-end: 16px;
+  max-width: 420px;
+  z-index: 1001; // above the China bar (1000); below the offcanvas menu (10000)
+  padding: 20px 24px;
+  border-radius: 16px;
+  background-color: var(--vh-surface-raised);
+  border: 1px solid var(--vh-border);
+  color: var(--vh-text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  .vh-btn-secondary {
+    flex: 1 1 0; // Accept and Decline the same size
+  }
+}
+
+@media (max-width: 575.98px) {
+  .vh-consent {
+    inset-inline: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+}
+
+// The footer's "Cookie settings" is a button styled like the footer links beside it.
+.vh-consent-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}

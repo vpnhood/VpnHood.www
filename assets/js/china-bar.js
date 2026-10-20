@@ -13,11 +13,9 @@
  * copy, no c-hood.com link), and the link carries rel="nofollow" as a backstop.
  * This is legitimate geo-targeting (all CN users see it), not cloaking.
  *
- * Geo source (in order):
- *   1. ?geo=CN query param     -> manual preview/testing
- *   2. localStorage 'vh_geo'   -> sticky manual override
- *   3. Cloudflare /cdn-cgi/trace (loc=CN) -> production; always read from the apex
- *      vpnhood.com (cross-origin) since the site's host may not be proxied (see detect())
+ * Geo source: window.vhCountry, the lookup header.html shares with the analytics
+ * consent (in order: ?geo=CN query param, localStorage 'vh_geo', the session's
+ * cached answer, then Cloudflare /cdn-cgi/trace read from the apex vpnhood.com).
  *
  * Closing the bar only removes it for the current page view; it reappears on the
  * next load if the visitor is still in CN (no persisted dismissal).
@@ -77,34 +75,11 @@
   }
 
   function detect() {
-    // 1 & 2: manual override for preview/testing.
-    var override = null;
-    try {
-      override = new URLSearchParams(window.location.search).get('geo') ||
-                 localStorage.getItem('vh_geo');
-    } catch (e) {}
-    if (override) {
-      if (String(override).toUpperCase() === 'CN') inject();
-      return;
-    }
-    // 3: production geolocation via the Cloudflare edge — always the apex
-    // vpnhood.com/cdn-cgi/trace (a cross-origin read; the apex sends
-    // Access-Control-Allow-Origin:* so the browser allows it). We DON'T use
-    // same-origin /cdn-cgi/trace because the site's host (www) isn't necessarily
-    // proxied — on a DNS-only host that 404s on GitHub Pages. The apex is kept
-    // behind Cloudflare, so geo always resolves there. Using OUR apex rather than
-    // www.cloudflare.com matters for China: apex is the SAME Cloudflare zone as
-    // the site (so its CN reachability tracks the site itself), whereas
-    // cloudflare.com is a separate zone the GFW can block independently — which
-    // would lose detection for the exact audience the bar targets.
-    // See .docs/china-bar-geo.md.
-    fetch('https://vpnhood.com/cdn-cgi/trace', { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.text() : ''; })
-      .then(function (text) {
-        var m = /(?:^|\n)loc=([A-Z]{2})/.exec(text || '');
-        if (m && m[1] === 'CN') inject();
-      })
-      .catch(function () { /* not reachable / offline: no bar */ });
+    // Not reachable / offline resolves to null: no bar. Why the lookup reads the apex
+    // vpnhood.com and not same-origin or cloudflare.com: .docs/china-bar-geo.md.
+    window.vhCountry.then(function (country) {
+      if (country === 'CN') inject();
+    });
   }
 
   if (document.readyState === 'loading') {
