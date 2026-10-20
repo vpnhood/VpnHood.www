@@ -29,7 +29,7 @@
   "settings_title": "تغيير الإعدادات",
   "settings_file": "يقرأ الخادم إعداداته من <code>[server_appsettings]</code>. عدّل الملف، ثم أعد تشغيل الحاوية باستخدام <code>[docker_restart]</code>.",
   "settings_env": "إذا تعذر عليك تعديل الملف، ضع محتوى appsettings.json بالكامل في متغير البيئة <code>[env_appsettings]</code>، وسيستخدمه الخادم بدلاً من الملف.",
-  "settings_more": "يستعرض دليلا <a href=\"/vpnhood-server/docs/ip-addresses/\">تعيين عناوين IP لخادمك</a> و<a href=\"/vpnhood-server/docs/domain/\">الاتصال عبر اسم نطاق</a> أهم الإعدادات التي قد تحتاج لتغييرها.",
+  "settings_more": "يشرح لك دليلا <a href=\"/vpnhood-server/docs/ip-addresses/\">تعيين عناوين IP للخادم</a> و<a href=\"/vpnhood-server/docs/domain/\">استخدام اسم نطاق وشهادة موثوقة</a> أهم الإعدادات التي قد تحتاج لتعديلها.",
   "updates_title": "التحديثات",
   "updates_auto": "يُحدّث الخادم نفسه تلقائياً داخل الحاوية؛ حيث يتحقق من وجود إصدارات جديدة عند بدء التشغيل وكل 12 ساعة، ثم يُعاد تشغيله بالنسخة الجديدة.",
   "updates_off": "للبقاء على إصدار محدد، اضبط <code>[env_auto_update_off]</code> في بيئة الحاوية.",

@@ -10,5 +10,6 @@
   "ip-blocking": "Bloqueio de IP",
   "reference": "Referência",
   "ip-addresses": "Endereços IP",
-  "domain": "Nome de domínio"
+  "domain": "Nome de domínio",
+  "reverse-proxy": "Proxy reverso"
 }

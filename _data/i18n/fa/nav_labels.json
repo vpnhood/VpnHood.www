@@ -10,5 +10,6 @@
   "ip-blocking": "مسدودسازی IP",
   "reference": "مرجع",
   "ip-addresses": "آدرس‌های IP",
-  "domain": "نام دامنه"
+  "domain": "نام دامنه",
+  "reverse-proxy": "پروکسی معکوس"
 }

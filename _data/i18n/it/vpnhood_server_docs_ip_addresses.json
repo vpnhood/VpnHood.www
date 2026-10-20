@@ -33,7 +33,7 @@
   "keys_title": "Chiavi già distribuite",
   "keys_desc": "Ogni chiave contiene gli indirizzi configurati al momento della creazione, quindi un'app con una chiave precedente continuerà a tentare l'accesso al vecchio indirizzo. Poiché le app aggiornano la chiave attuale a ogni connessione, mantieni il server in ascolto sul vecchio indirizzo per qualche giorno prima di rimuoverlo.",
   "keys_how": "Su un server gestito, mantienilo come punto di accesso con <b>[manager_mode]</b> <b>[manager_private]</b> e <b>[manager_listen]</b> <b>[manager_yes]</b>: le app riceveranno la nuova chiave poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita. Su un server autonomo, mantieni il vecchio indirizzo unicamente in <code>[setting_tcp_endpoints]</code>.",
-  "keys_lost": "Se un'app non riesce più a raggiungere il vecchio indirizzo, dovrai fornirle una nuova chiave. Con un <a href=\"/vpnhood-server/docs/domain/\">nome di dominio</a> e un certificato emesso da un'autorità di certificazione, le chiavi individuano il nuovo indirizzo tramite DNS, evitando interruzioni di servizio.",
+  "keys_lost": "Se l'app non riesce più a raggiungere il vecchio indirizzo, dovrai fornirle una nuova chiave. Con un <a href=\"/vpnhood-server/docs/reverse-proxy/\">reverse proxy</a>, le app si collegano direttamente al proxy: così puoi cambiare l'indirizzo del server senza rendere inutilizzabili le chiavi.",
   "next_title": "Passaggi successivi",
   "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato",
   "next_install": "Installa VpnHood! SERVER",

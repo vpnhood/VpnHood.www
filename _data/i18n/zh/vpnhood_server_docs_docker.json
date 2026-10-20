@@ -29,7 +29,7 @@
   "settings_title": "更改设置",
   "settings_file": "服务器从 <code>[server_appsettings]</code> 读取配置。修改该文件后，运行 <code>[docker_restart]</code> 重启容器即可生效。",
   "settings_env": "如果无法直接编辑文件，可将 appsettings.json 的全部内容传入环境变量 <code>[env_appsettings]</code>，服务器将优先使用该配置。",
-  "settings_more": "请参阅<a href=\"/vpnhood-server/docs/ip-addresses/\">设置服务器 IP 地址</a>与<a href=\"/vpnhood-server/docs/domain/\">通过域名连接</a>，了解最常用的配置选项。",
+  "settings_more": "请参阅<a href=\"/vpnhood-server/docs/ip-addresses/\">设置服务器 IP 地址</a>与<a href=\"/vpnhood-server/docs/domain/\">使用域名与受信任证书</a>，了解最常用的配置选项。",
   "updates_title": "更新",
   "updates_auto": "服务器会在容器内部自动更新。它在启动时以及每隔 12 小时都会检查新版本，并自动重启切换至最新版。",
   "updates_off": "如需固定当前版本，请在容器环境变量中设置 <code>[env_auto_update_off]</code>。",

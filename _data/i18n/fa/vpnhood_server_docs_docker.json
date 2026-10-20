@@ -29,7 +29,7 @@
   "settings_title": "تغییر تنظیمات",
   "settings_file": "سرور تنظیمات خود را از <code>[server_appsettings]</code> می‌خواند. فایل را ویرایش کنید و سپس کانتینر را با <code>[docker_restart]</code> دوباره راه‌اندازی نمایید.",
   "settings_env": "اگر امکان ویرایش فایل را ندارید، کل محتوای appsettings.json را در متغیر محیطی <code>[env_appsettings]</code> قرار دهید تا سرور از آن استفاده کند.",
-  "settings_more": "راهنماهای <a href=\"/vpnhood-server/docs/ip-addresses/\">تنظیم آدرس‌های IP سرور</a> و <a href=\"/vpnhood-server/docs/domain/\">اتصال از طریق دامنه</a> پرکاربردترین تنظیمات را مرحله‌به‌مرحله توضیح می‌دهند.",
+  "settings_more": "راهنماهای <a href=\"/vpnhood-server/docs/ip-addresses/\">تنظیم آدرس‌های IP سرور</a> و <a href=\"/vpnhood-server/docs/domain/\">استفاده از دامنه و گواهی معتبر</a>، مهم‌ترین تنظیماتی را که احتمالاً تغییر خواهید داد گام‌به‌گام توضیح می‌دهند.",
   "updates_title": "به‌روزرسانی‌ها",
   "updates_auto": "سرور درون کانتینر به‌طور خودکار به‌روزرسانی می‌شود. هنگام اجرا و سپس هر ۱۲ ساعت نسخه‌های جدید را بررسی می‌کند و با نسخه جدید بازنشانی می‌شود.",
   "updates_off": "برای ثابت ماندن روی یک نسخه، <code>[env_auto_update_off]</code> را در متغیرهای محیطی کانتینر تنظیم کنید.",

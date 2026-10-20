@@ -10,5 +10,6 @@
   "ip-blocking": "IP 封锁",
   "reference": "参考指南",
   "ip-addresses": "IP 地址",
-  "domain": "域名"
+  "domain": "域名",
+  "reverse-proxy": "反向代理"
 }

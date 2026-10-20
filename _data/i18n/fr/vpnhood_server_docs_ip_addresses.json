@@ -33,7 +33,7 @@
   "keys_title": "Clés déjà distribuées",
   "keys_desc": "Une clé intègre les adresses définies lors de sa création ; une application dotée d'une ancienne clé continuera donc de solliciter l'ancienne adresse. Comme chaque application récupère automatiquement la clé à jour lors de sa connexion, laissez le serveur écouter sur l'ancienne adresse pendant quelques jours avant de la supprimer.",
   "keys_how": "Sur un serveur géré, conservez-la comme point d'accès avec <b>[manager_mode]</b> sur <b>[manager_private]</b> et <b>[manager_listen]</b> sur <b>[manager_yes]</b> : les applications recevront la nouvelle clé grâce à <b>[manager_push_token]</b> actif par défaut. Sur un serveur autonome, conservez l'ancienne adresse uniquement dans <code>[setting_tcp_endpoints]</code>.",
-  "keys_lost": "Si une application ne parvient plus à joindre l'ancienne adresse, vous devrez lui fournir une nouvelle clé. Avec un <a href=\"/vpnhood-server/docs/domain/\">nom de domaine</a> et un certificat délivré par une autorité de certification, les clés localisent la nouvelle adresse via le DNS, évitant ainsi toute interruption.",
+  "keys_lost": "Une application qui ne peut plus joindre l'ancienne adresse a besoin d'une nouvelle clé. Derrière un <a href=\"/vpnhood-server/docs/reverse-proxy/\">reverse proxy</a>, les applications se connectent directement au proxy : vous pouvez ainsi changer l'adresse de votre serveur sans invalider leurs clés.",
   "next_title": "Étapes suivantes",
   "next_blocking": "Protéger l'adresse IP de votre serveur contre le blocage",
   "next_install": "Installer VpnHood! SERVER",

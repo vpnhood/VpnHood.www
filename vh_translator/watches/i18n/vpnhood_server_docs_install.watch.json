@@ -55,7 +55,7 @@
     "next_manager": "Manage many servers and keys from a web panel with VpnHood! MANAGER",
     "next_docker": "Run the server in Docker instead",
     "next_addresses": "Set the IP addresses the server listens on and puts in its keys",
-    "next_domain": "Connect through a domain name",
+    "next_domain": "Use a domain name and a trusted certificate",
     "next_blocking": "Keep your server's IP address from being blocked"
   }
 }

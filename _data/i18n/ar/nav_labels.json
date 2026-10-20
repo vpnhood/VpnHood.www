@@ -10,5 +10,6 @@
   "ip-blocking": "حظر عناوين IP",
   "reference": "المرجع",
   "ip-addresses": "عناوين IP",
-  "domain": "اسم النطاق"
+  "domain": "اسم النطاق",
+  "reverse-proxy": "بروكسي عكسي"
 }

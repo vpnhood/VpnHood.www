@@ -10,5 +10,6 @@
   "ip-blocking": "IP-Sperren",
   "reference": "Referenz",
   "ip-addresses": "IP-Adressen",
-  "domain": "Domain-Name"
+  "domain": "Domain-Name",
+  "reverse-proxy": "Reverse-Proxy"
 }

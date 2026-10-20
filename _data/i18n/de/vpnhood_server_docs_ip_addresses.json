@@ -33,7 +33,7 @@
   "keys_title": "Bereits ausgegebene Schlüssel",
   "keys_desc": "Ein Schlüssel enthält immer die Adressen, mit denen er erstellt wurde. Apps mit älteren Schlüsseln versuchen daher weiterhin, die frühere Adresse zu erreichen. Da jede App bei der Verbindung den aktuellen Schlüssel automatisch abruft, empfiehlt es sich, den Server nach einer Änderung noch ein paar Tage auf der alten Adresse lauschen zu lassen, bevor man sie entfernt.",
   "keys_how": "Auf einem verwalteten Server behalten Sie sie als Zugangspunkt mit <b>[manager_mode]</b> <b>[manager_private]</b> und <b>[manager_listen]</b> <b>[manager_yes]</b> bei: Apps erhalten den neuen Schlüssel automatisch, da <b>[manager_push_token]</b> standardmäßig aktiviert ist. Auf einem eigenständigen Server belassen Sie die alte Adresse einfach ausschließlich in <code>[setting_tcp_endpoints]</code>.",
-  "keys_lost": "Eine App, die die alte Adresse nicht mehr erreicht, benötigt einen neuen Schlüssel von Ihnen. Mit einem <a href=\"/vpnhood-server/docs/domain/\">Domain-Namen</a> und einem Zertifikat einer Zertifizierungsstelle finden Schlüssel neue Adressen direkt über DNS – so bleiben Änderungen unterbrechungsfrei.",
+  "keys_lost": "Kann eine App die alte Adresse nicht mehr erreichen, benötigt sie einen neuen Schlüssel von Ihnen. Hinter einem <a href=\"/vpnhood-server/docs/reverse-proxy/\">Reverse Proxy</a> verbinden sich Apps mit dem Proxy – so kann sich die Serveradresse ändern, ohne dass bestehende Schlüssel ungültig werden.",
   "next_title": "Nächste Schritte",
   "next_blocking": "IP-Sperren auf Ihrem Server verhindern",
   "next_install": "VpnHood! SERVER installieren",

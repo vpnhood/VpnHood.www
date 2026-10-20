@@ -33,7 +33,7 @@
   "keys_title": "Daha önce dağıtılan anahtarlar",
   "keys_desc": "Bir anahtar, oluşturulduğu adresleri barındırır; bu yüzden eski anahtara sahip bir uygulama eski adresi denemeye devam eder. Uygulamalar her bağlandığında güncel anahtarı otomatik olarak alır. Bu nedenle, değişiklik sonrasında sunucunun eski adresi birkaç gün daha dinlemesini sağlayın, ardından adresi kaldırın.",
   "keys_how": "Yönetilen bir sunucuda, adresi <b>[manager_mode]</b> <b>[manager_private]</b> ve <b>[manager_listen]</b> <b>[manager_yes]</b> olarak erişim noktası biçiminde tutun: <b>[manager_push_token]</b> varsayılan olarak açık olduğundan uygulamalar yeni anahtarı otomatik alır. Bağımsız bir sunucuda ise eski adresi yalnızca <code>[setting_tcp_endpoints]</code> içinde tutun.",
-  "keys_lost": "Eski adrese artık ulaşamayan bir uygulamanın sizden yeni bir anahtar alması gerekir. Bir <a href=\"/vpnhood-server/docs/domain/\">alan adı</a> ve yetkili bir kuruluştan alınan sertifika ile anahtarlar yeni adresi DNS üzerinden bulur, böylece adres değişiklikleri bağlantınızı kesmez.",
+  "keys_lost": "Eski adrese artık ulaşamayan bir uygulama için sizden yeni bir anahtar gerekir. <a href=\"/vpnhood-server/docs/reverse-proxy/\">Ters proxy</a> arkasında ise uygulamalar proxy'ye bağlanır; böylece sunucu adresiniz değişse bile anahtarlar geçersiz kalmaz.",
   "next_title": "Sonraki adımlar",
   "next_blocking": "Sunucunuzun IP adresinin engellenmesini önleyin",
   "next_install": "VpnHood! SERVER'ı Kurun",

@@ -10,5 +10,6 @@
   "ip-blocking": "Блокировка по IP",
   "reference": "Справочник",
   "ip-addresses": "IP-адреса",
-  "domain": "Доменное имя"
+  "domain": "Доменное имя",
+  "reverse-proxy": "Обратный прокси"
 }

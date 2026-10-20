@@ -53,6 +53,6 @@
   "next_manager": "Gestisci più server e chiavi da un unico pannello web con VpnHood! MANAGER",
   "next_docker": "Esegui invece il server su Docker",
   "next_addresses": "Imposta gli indirizzi IP su cui il server ascolta e che include nelle chiavi",
-  "next_domain": "Connettiti tramite un nome di dominio",
+  "next_domain": "Usa un nome di dominio e un certificato attendibile",
   "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato"
 }

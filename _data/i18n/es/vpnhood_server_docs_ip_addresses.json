@@ -33,7 +33,7 @@
   "keys_title": "Claves ya distribuidas",
   "keys_desc": "Cada clave conserva las direcciones con las que se creó, por lo que una aplicación con una clave anterior seguirá intentando conectar a la dirección antigua. Como las aplicaciones actualizan su clave automáticamente al conectarse, mantén el servidor escuchando en la dirección antigua durante unos días tras el cambio antes de eliminarla.",
   "keys_how": "En un servidor administrado, consérvala como punto de acceso con <b>[manager_mode]</b> <b>[manager_private]</b> y <b>[manager_listen]</b> <b>[manager_yes]</b>: las aplicaciones recibirán la nueva clave porque <b>[manager_push_token]</b> está activo por defecto. En un servidor independiente, mantén la dirección antigua únicamente en <code>[setting_tcp_endpoints]</code>.",
-  "keys_lost": "Si una aplicación ya no puede conectar con la dirección antigua, necesitará una nueva clave. Con un <a href=\"/vpnhood-server/docs/domain/\">nombre de dominio</a> y un certificado emitido por una autoridad de certificación, las claves resuelven la nueva dirección por DNS, evitando que los cambios las dejen sin servicio.",
+  "keys_lost": "Si una aplicación ya no puede conectarse a la dirección anterior, necesitará una clave nueva. Con un <a href=\"/vpnhood-server/docs/reverse-proxy/\">proxy inverso</a>, las aplicaciones se conectan al proxy, lo que permite cambiar la dirección de tu servidor sin invalidar sus claves.",
   "next_title": "Pasos siguientes",
   "next_blocking": "Evita el bloqueo de la IP de tu servidor",
   "next_install": "Instalar VpnHood! SERVER",

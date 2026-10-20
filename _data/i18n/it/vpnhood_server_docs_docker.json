@@ -29,7 +29,7 @@
   "settings_title": "Modifica le impostazioni",
   "settings_file": "Il server legge la propria configurazione da <code>[server_appsettings]</code>. Modifica il file, quindi riavvia il container con <code>[docker_restart]</code>.",
   "settings_env": "Se non puoi modificare un file, inserisci l'intero contenuto di appsettings.json nella variabile d'ambiente <code>[env_appsettings]</code>. Il server la userà al posto del file.",
-  "settings_more": "Le guide <a href=\"/vpnhood-server/docs/ip-addresses/\">Configura gli indirizzi IP del server</a> e <a href=\"/vpnhood-server/docs/domain/\">Connettiti tramite un nome di dominio</a> illustrano le impostazioni modificate più di frequente.",
+  "settings_more": "Scopri le impostazioni più utilizzate nelle guide <a href=\"/vpnhood-server/docs/ip-addresses/\">Configura gli indirizzi IP del server</a> e <a href=\"/vpnhood-server/docs/domain/\">Usa un nome di dominio e un certificato attendibile</a>.",
   "updates_title": "Aggiornamenti",
   "updates_auto": "Il server si aggiorna automaticamente all'interno del container. Verifica la presenza di nuove versioni all'avvio e ogni 12 ore, riavviandosi con la versione aggiornata.",
   "updates_off": "Per mantenere una versione specifica, imposta <code>[env_auto_update_off]</code> nell'ambiente del container.",

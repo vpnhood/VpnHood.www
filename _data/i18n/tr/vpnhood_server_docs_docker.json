@@ -29,7 +29,7 @@
   "settings_title": "Ayarları değiştirin",
   "settings_file": "Sunucu ayarlarını <code>[server_appsettings]</code> dosyasından okur. Dosyayı düzenleyin, ardından kapsayıcıyı <code>[docker_restart]</code> ile yeniden başlatın.",
   "settings_env": "Dosya düzenleyemediğiniz durumlarda, appsettings.json dosyasının tüm içeriğini <code>[env_appsettings]</code> ortam değişkenine ekleyin. Sunucu bu içeriği dosya yerine kullanacaktır.",
-  "settings_more": "<a href=\"/vpnhood-server/docs/ip-addresses/\">Sunucunuzun IP adreslerini ayarlayın</a> ve <a href=\"/vpnhood-server/docs/domain/\">Bir alan adı üzerinden bağlanın</a> rehberleri, en sık değiştireceğiniz ayarları adım adım gösterir.",
+  "settings_more": "En çok ihtiyaç duyacağınız ayarlar için <a href=\"/vpnhood-server/docs/ip-addresses/\">Sunucunuzun IP adreslerini belirleyin</a> ve <a href=\"/vpnhood-server/docs/domain/\">Alan adı ve güvenilir sertifika kullanın</a> rehberlerine göz atın.",
   "updates_title": "Güncellemeler",
   "updates_auto": "Sunucu, kapsayıcı içinde kendini otomatik olarak günceller. Başlatıldığında ve her 12 saatte bir yeni sürümleri denetler, ardından yeni sürüme geçer.",
   "updates_off": "Belirli bir sürümde kalmak için kapsayıcının ortam değişkenlerine <code>[env_auto_update_off]</code> değerini ekleyin.",

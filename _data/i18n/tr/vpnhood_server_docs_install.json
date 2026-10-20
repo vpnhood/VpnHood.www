@@ -53,6 +53,6 @@
   "next_manager": "VpnHood! MANAGER ile bir web panelinden birden çok sunucuyu ve anahtarı yönetin",
   "next_docker": "Sunucuyu Docker üzerinde çalıştırın",
   "next_addresses": "Sunucunun dinlediği ve anahtarlarına eklediği IP adreslerini belirleyin",
-  "next_domain": "Bir alan adı üzerinden bağlanın",
+  "next_domain": "Bir alan adı ve güvenilir bir sertifika kullanın",
   "next_blocking": "Sunucunuzun IP adresinin engellenmesini önleyin"
 }

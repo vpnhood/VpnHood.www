@@ -53,6 +53,6 @@
   "next_manager": "使用 VpnHood! MANAGER 通过 Web 控制台管理多台服务器与访问凭据",
   "next_docker": "改用 Docker 运行服务器",
   "next_addresses": "设置服务器监听并在访问凭据中包含的 IP 地址",
-  "next_domain": "通过域名连接",
+  "next_domain": "使用自定义域名与可信证书",
   "next_blocking": "防止服务器 IP 地址被封锁"
 }

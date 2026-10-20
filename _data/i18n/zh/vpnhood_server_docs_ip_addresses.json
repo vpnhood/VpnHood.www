@@ -33,7 +33,7 @@
   "keys_title": "已分发的密钥处理",
   "keys_desc": "密钥包含生成时指定的地址，因此持有旧密钥的应用会继续尝试连接旧地址。应用每次连接都会自动获取最新密钥，因此更改后请让服务器继续监听旧地址几天，然后再将其移除。",
   "keys_how": "在受管服务器上，将其保留为接入点，并设为 <b>[manager_mode]</b> <b>[manager_private]</b> 与 <b>[manager_listen]</b> <b>[manager_yes]</b>：由于 <b>[manager_push_token]</b> 默认开启，应用会自动获取新密钥。在独立服务器上，只需将旧地址保留在 <code>[setting_tcp_endpoints]</code> 中即可。",
-  "keys_lost": "如果应用已无法连接旧地址，则需要重新获取新密钥。若绑定了<a href=\"/vpnhood-server/docs/domain/\">域名</a>并配置了 CA 证书，密钥就能通过 DNS 解析获取新地址，IP 变更也不会导致连接中断。",
+  "keys_lost": "若应用无法访问旧地址，则需要重新获取新密钥。通过配置<a href=\"/vpnhood-server/docs/reverse-proxy/\">反向代理</a>，应用只需连接代理服务器，这样即使您的服务器地址发生变更，已分发的密钥也依然有效。",
   "next_title": "后续步骤",
   "next_blocking": "防止服务器 IP 地址被封锁",
   "next_install": "安装 VpnHood! SERVER",

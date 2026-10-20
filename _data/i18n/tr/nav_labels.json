@@ -10,5 +10,6 @@
   "ip-blocking": "IP engelleme",
   "reference": "Referans",
   "ip-addresses": "IP adresleri",
-  "domain": "Alan adı"
+  "domain": "Alan adı",
+  "reverse-proxy": "Ters proxy"
 }
