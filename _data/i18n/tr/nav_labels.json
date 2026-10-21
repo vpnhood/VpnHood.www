@@ -11,5 +11,7 @@
   "reference": "Referans",
   "ip-addresses": "IP adresleri",
   "domain": "Alan adı",
-  "reverse-proxy": "Ters proxy"
+  "reverse-proxy": "Ters proxy",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "Sertifikalar"
 }

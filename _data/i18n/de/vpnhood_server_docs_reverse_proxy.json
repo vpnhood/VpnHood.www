@@ -42,7 +42,7 @@
   "shot_caption": "Beide Serveradressen sind nicht in den Schlüsseln enthalten, der Server lauscht jedoch weiterhin auf ihnen.",
   "mgr_hide_ca": "MANAGER erlaubt Schlüssel ohne Adresse nur, wenn das Zertifikat <b>[manager_ca_signed]</b> anzeigt. Unter <a href=\"/vpnhood-server/docs/ip-addresses/#managed\">IP-Adressen des Servers festlegen</a> werden die einzelnen Einstellungen erklärt.",
   "mgr_keep": "Bleibt <b>[manager_public_in_token]</b> aktiv, verbleiben die Adressen in den Schlüsseln, und Apps nutzen sie ebenso wie den Proxy. So hält der Proxy Ihre Nutzer verbunden, selbst wenn eine Adresse blockiert wird.",
-  "mgr_keys": "Apps mit einem älteren Schlüssel erhalten beim nächsten Verbindungsaufbau automatisch den neuen, da <b>[manager_push_token]</b> standardmäßig aktiviert ist.",
+  "mgr_keys": "Apps mit einem älteren Schlüssel nutzen diesen und die zugehörigen Serveradressen weiter: <b>[manager_push_token]</b> sendet Apps nur dann einen neuen Schlüssel, solange einer der Server der Server-Farm eine <b>[manager_public_in_token]</b>-Adresse hat. Kopieren Sie die neuen Schlüssel aus dem MANAGER und geben Sie sie an Ihre Nutzer weiter.",
   "mgr_farm": "Die Domain verweist auf einen Server. In einer Server-Farm erreicht jede über den Proxy eingehende App daher denselben Server.",
   "file_title": "Auf einem Standalone-Server",
   "file_cert": "Stellen Sie sicher, dass der Server das Zertifikat der Domain verwendet und <code>[setting_is_valid_host_name]</code> auf <code>[json_true]</code> gesetzt ist. Wie das geht, zeigt <a href=\"/vpnhood-server/docs/domain/#standalone\">Einen Domainnamen und ein vertrauenswürdiges Zertifikat nutzen</a>. Neu erstellte Schlüssel enthalten die Domain, die von den Apps aufgelöst wird.",

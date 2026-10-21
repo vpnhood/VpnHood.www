@@ -11,5 +11,7 @@
   "reference": "संदर्भ",
   "ip-addresses": "IP पते",
   "domain": "डोमेन नाम",
-  "reverse-proxy": "रिवर्स प्रॉक्सी"
+  "reverse-proxy": "रिवर्स प्रॉक्सी",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "प्रमाणपत्र"
 }

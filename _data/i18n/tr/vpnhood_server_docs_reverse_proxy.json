@@ -42,7 +42,7 @@
   "shot_caption": "Sunucunun her iki adresi de anahtarlardan çıkarılmıştır, ancak sunucu bu adresleri dinlemeye devam eder.",
   "mgr_hide_ca": "MANAGER, yalnızca sertifikada <b>[manager_ca_signed]</b> yazdığında adressiz anahtarlara izin verir. Her ayarın açıklaması için <a href=\"/vpnhood-server/docs/ip-addresses/#managed\">Sunucunuzun IP adreslerini belirleyin</a> sayfasına göz atın.",
   "mgr_keep": "<b>[manager_public_in_token]</b> olarak bırakıldığında adresler anahtarlarda kalır; uygulamalar hem bunları hem de proxy'yi kullanır. Böylece bir adres engellendiğinde proxy kullanıcılarınızın bağlı kalmasını sağlar.",
-  "mgr_keys": "<b>[manager_push_token]</b> varsayılan olarak açık olduğundan, eski anahtara sahip uygulamalar bir sonraki bağlantılarında yeni anahtarı otomatik olarak alır.",
+  "mgr_keys": "Eski anahtara sahip uygulamalar bu anahtarı ve ilişkili sunucu adreslerini kullanmaya devam eder: <b>[manager_push_token]</b>, yalnızca sunucu grubundaki sunuculardan birinin bir <b>[manager_public_in_token]</b> adresi olduğunda uygulamalara yeni bir anahtar gönderir. Yeni anahtarları MANAGER'dan kopyalayıp kullanıcılarınızla paylaşın.",
   "mgr_farm": "Alan adı tek bir sunucuya yönlendirilir; bu nedenle birden çok sunucudan oluşan bir grupta proxy üzerinden gelen tüm uygulamalar aynı sunucuya ulaşır.",
   "file_title": "Bağımsız bir sunucuda",
   "file_cert": "Sunucunun alan adı sertifikasını kullandığından ve <code>[setting_is_valid_host_name]</code> değerinin <code>[json_true]</code> olarak ayarlandığından emin olun. Adımlar için <a href=\"/vpnhood-server/docs/domain/#standalone\">Alan adı ve güvenilir sertifika kullanın</a> kılavuzuna bakın. Bu işlemden sonra oluşturulan anahtarlar alan adını içerir ve uygulamalar bu adresi çözer.",

@@ -42,7 +42,7 @@
   "shot_caption": "Ambos os endereços do servidor estão fora das chaves, e o servidor continua escutando neles.",
   "mgr_hide_ca": "O MANAGER permite chaves sem endereço apenas enquanto o certificado estiver como <b>[manager_ca_signed]</b>. O guia <a href=\"/vpnhood-server/docs/ip-addresses/#managed\">Defina os endereços IP do seu servidor</a> explica cada configuração.",
   "mgr_keep": "Mantendo em <b>[manager_public_in_token]</b>, os endereços continuam nas chaves, e os aplicativos usam tanto eles quanto o proxy. Assim, o proxy mantém seus usuários conectados mesmo se um endereço for bloqueado.",
-  "mgr_keys": "Os aplicativos com chaves antigas recebem a nova na próxima conexão, pois a opção <b>[manager_push_token]</b> vem ativada por padrão.",
+  "mgr_keys": "Aplicativos com uma chave antiga continuam usando ela e os endereços do servidor associados: o <b>[manager_push_token]</b> só envia uma nova chave aos aplicativos se um dos servidores do cluster tiver um endereço <b>[manager_public_in_token]</b>. Copie as novas chaves no MANAGER e compartilhe-as com seus usuários.",
   "mgr_farm": "O domínio aponta para um único servidor; portanto, em um cluster com vários servidores, todos os aplicativos que passam pelo proxy chegam ao mesmo destino.",
   "file_title": "Em um servidor independente",
   "file_cert": "Confirme se o servidor usa o certificado do domínio, com <code>[setting_is_valid_host_name]</code> definido como <code>[json_true]</code>: o guia <a href=\"/vpnhood-server/docs/domain/#standalone\">Use um nome de domínio e um certificado confiável</a> mostra como fazer. As chaves criadas a partir de então incluirão o domínio, e os aplicativos farão a busca.",

@@ -11,5 +11,7 @@
   "reference": "Referência",
   "ip-addresses": "Endereços IP",
   "domain": "Nome de domínio",
-  "reverse-proxy": "Proxy reverso"
+  "reverse-proxy": "Proxy reverso",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "Certificados"
 }

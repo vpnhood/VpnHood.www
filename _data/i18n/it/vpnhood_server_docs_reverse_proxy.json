@@ -42,7 +42,7 @@
   "shot_caption": "Entrambi gli indirizzi del server sono esclusi dalle chiavi, ma il server continua ad ascoltare su di essi.",
   "mgr_hide_ca": "MANAGER consente chiavi senza indirizzo solo se il certificato è impostato su <b>[manager_ca_signed]</b>. La guida <a href=\"/vpnhood-server/docs/ip-addresses/#managed\">Imposta gli indirizzi IP del server</a> illustra ciascuna opzione.",
   "mgr_keep": "Se lasci l'impostazione su <b>[manager_public_in_token]</b>, gli indirizzi rimangono nelle chiavi e le app useranno sia questi sia il proxy. In questo modo, il proxy mantiene connessi gli utenti anche se un indirizzo viene bloccato.",
-  "mgr_keys": "Le app con una chiave precedente riceveranno quella nuova alla connessione successiva, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita.",
+  "mgr_keys": "Le app che usano una chiave precedente continueranno a utilizzarla insieme agli indirizzi del server: <b>[manager_push_token]</b> invia alle app una nuova chiave solo se uno dei server della farm ha un indirizzo <b>[manager_public_in_token]</b>. Copia le nuove chiavi da MANAGER e inviale ai tuoi utenti.",
   "mgr_farm": "Il dominio punta a un singolo server: in una server farm, tutte le app che passano dal proxy raggiungeranno la stessa macchina.",
   "file_title": "Su un server standalone",
   "file_cert": "Verifica che il server utilizzi il certificato del dominio, con <code>[setting_is_valid_host_name]</code> impostato su <code>[json_true]</code>: scopri come nella guida <a href=\"/vpnhood-server/docs/domain/#standalone\">Usa un nome di dominio e un certificato attendibile</a>. Le chiavi generate successivamente includeranno il dominio e le app lo risolveranno automaticamente.",

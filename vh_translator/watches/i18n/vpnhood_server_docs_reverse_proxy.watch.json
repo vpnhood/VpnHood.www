@@ -44,7 +44,7 @@
     "shot_caption": "Both of the server's addresses are out of the keys, and the server still listens on them.",
     "mgr_hide_ca": "MANAGER allows keys without an address only while the certificate reads <b>[manager_ca_signed]</b>. <a href=\"/vpnhood-server/docs/ip-addresses/#managed\">Set your server's IP addresses</a> explains each setting.",
     "mgr_keep": "Left at <b>[manager_public_in_token]</b>, the addresses stay in the keys, and apps use them and the proxy alike. The proxy then keeps your users connected when an address is blocked.",
-    "mgr_keys": "Apps holding an older key get the new one the next time they connect, as <b>[manager_push_token]</b> is on by default.",
+    "mgr_keys": "Apps holding an older key keep using it, and the server's addresses with it: <b>[manager_push_token]</b> sends apps a new key only while one of the farm's servers has a <b>[manager_public_in_token]</b> address. Copy the new keys from MANAGER and give them to your users.",
     "mgr_farm": "The domain leads to one server, so in a farm of several servers, every app that comes through the proxy reaches the same one.",
     "file_title": "On a standalone server",
     "file_cert": "Check that the server uses the domain's certificate, with <code>[setting_is_valid_host_name]</code> set to <code>[json_true]</code>: <a href=\"/vpnhood-server/docs/domain/#standalone\">Use a domain name and a trusted certificate</a> shows how. Keys made since then carry the domain, and apps look it up.",

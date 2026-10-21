@@ -11,5 +11,7 @@
   "reference": "Справочник",
   "ip-addresses": "IP-адреса",
   "domain": "Доменное имя",
-  "reverse-proxy": "Обратный прокси"
+  "reverse-proxy": "Обратный прокси",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "Сертификаты"
 }

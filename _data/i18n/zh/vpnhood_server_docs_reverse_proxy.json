@@ -42,7 +42,7 @@
   "shot_caption": "服务器的两个地址均已从密钥中移除，但服务器仍会监听这些地址。",
   "mgr_hide_ca": "仅当证书显示为 <b>[manager_ca_signed]</b> 时，MANAGER 才允许生成不含地址的密钥。<a href=\"/vpnhood-server/docs/ip-addresses/#managed\">设置服务器的 IP 地址</a>中详细说明了各项设置。",
   "mgr_keep": "如果保持为 <b>[manager_public_in_token]</b>，地址将保留在密钥中，应用可同时使用直连地址与代理。当某个地址被封锁时，代理能确保用户连接不中断。",
-  "mgr_keys": "由于 <b>[manager_push_token]</b> 默认开启，持有旧密钥的应用会在下次连接时自动获取新密钥。",
+  "mgr_keys": "持有旧密钥的应用将继续使用该密钥及对应的服务器地址：仅当服务器集群中的某台服务器具备 <b>[manager_public_in_token]</b> 地址时，<b>[manager_push_token]</b> 才会向应用推送新密钥。请从 MANAGER 中复制新密钥并分发给您的用户。",
   "mgr_farm": "该域名指向单一服务器，因此在多台服务器组成的集群中，所有通过代理访问的应用都会连接到同一台服务器。",
   "file_title": "在独立服务器上",
   "file_cert": "请确保服务器使用该域名的证书，并将 <code>[setting_is_valid_host_name]</code> 设为 <code>[json_true]</code>：<a href=\"/vpnhood-server/docs/domain/#standalone\">使用域名和受信任的证书</a>中介绍了具体操作。此后生成的密钥都会包含该域名，应用会解析并使用它。",

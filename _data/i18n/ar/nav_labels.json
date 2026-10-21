@@ -11,5 +11,7 @@
   "reference": "المرجع",
   "ip-addresses": "عناوين IP",
   "domain": "اسم النطاق",
-  "reverse-proxy": "بروكسي عكسي"
+  "reverse-proxy": "بروكسي عكسي",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "الشهادات"
 }

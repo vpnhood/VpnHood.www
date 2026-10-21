@@ -11,5 +11,7 @@
   "reference": "مرجع",
   "ip-addresses": "آدرس‌های IP",
   "domain": "نام دامنه",
-  "reverse-proxy": "پروکسی معکوس"
+  "reverse-proxy": "پروکسی معکوس",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "گواهی‌ها"
 }

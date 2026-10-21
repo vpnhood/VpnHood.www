@@ -42,7 +42,7 @@
   "shot_caption": "Ambas direcciones del servidor están fuera de las claves, y el servidor sigue escuchando en ellas.",
   "mgr_hide_ca": "MANAGER permite claves sin dirección solo si el certificado indica <b>[manager_ca_signed]</b>. En <a href=\"/vpnhood-server/docs/ip-addresses/#managed\">Configura las direcciones IP de tu servidor</a> se explica cada ajuste.",
   "mgr_keep": "Si se deja en <b>[manager_public_in_token]</b>, las direcciones permanecen en las claves y las aplicaciones usan tanto estas como el proxy. De este modo, el proxy mantiene conectados a tus usuarios si se bloquea una dirección.",
-  "mgr_keys": "Las aplicaciones con una clave anterior reciben la nueva la próxima vez que se conectan, ya que <b>[manager_push_token]</b> está activado de forma predeterminada.",
+  "mgr_keys": "Las aplicaciones con una clave anterior seguirán usándola, junto con las direcciones del servidor asociadas: <b>[manager_push_token]</b> solo enviará una clave nueva si alguno de los servidores del grupo tiene una dirección <b>[manager_public_in_token]</b>. Copia las nuevas claves desde MANAGER y compártelas con tus usuarios.",
   "mgr_farm": "El dominio apunta a un único servidor, por lo que, en un grupo de varios servidores, todas las aplicaciones que se conectan a través del proxy acceden al mismo.",
   "file_title": "En un servidor independiente",
   "file_cert": "Comprueba que el servidor utilice el certificado del dominio, con <code>[setting_is_valid_host_name]</code> configurado en <code>[json_true]</code>: <a href=\"/vpnhood-server/docs/domain/#standalone\">Usa un nombre de dominio y un certificado de confianza</a> explica cómo hacerlo. Las claves generadas desde entonces incluyen el dominio, y las aplicaciones lo consultan.",

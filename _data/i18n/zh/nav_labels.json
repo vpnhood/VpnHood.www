@@ -11,5 +11,7 @@
   "reference": "参考指南",
   "ip-addresses": "IP 地址",
   "domain": "域名",
-  "reverse-proxy": "反向代理"
+  "reverse-proxy": "反向代理",
+  "vpnhood-manager": "VpnHood! MANAGER",
+  "certificates": "证书"
 }

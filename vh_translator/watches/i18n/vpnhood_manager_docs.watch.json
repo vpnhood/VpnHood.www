@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "VpnHood! MANAGER Documentation | VpnHood!",
+    "meta_description": "How to use VpnHood! MANAGER, the free web panel that installs your VPN servers, runs them in server farms and issues their access keys.",
+    "title": "VpnHood! MANAGER documentation",
+    "lead": "VpnHood! MANAGER is the free web panel that installs your servers, runs them in server farms and issues their access keys. These pages explain its screens. To set up a server, start with the <a href=\"/vpnhood-server/docs/\">VpnHood! SERVER documentation</a>."
+  }
+}
