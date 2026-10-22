@@ -14,6 +14,7 @@
   "req_machine": "Une machine avec une IP publique, sous Linux en x64 ou arm64.",
   "req_admin": "Un accès root. L'installation utilisant sudo, celui-ci doit être présent même si vous êtes connecté en root.",
   "req_port": "Le port TCP <code>[server_port]</code> ouvert, tant sur le pare-feu de la machine que chez votre hébergeur. C'est le port d'écoute du serveur.",
+  "req_udp": "Le port UDP du serveur doit également être ouvert pour les appareils utilisant UDP, sous peine de bloquer leur trafic. Un serveur autonome choisit ce port lors de son premier démarrage, l'enregistre dans <code>[server_udp_port_file]</code> et l'indique dans ses journaux. Sur un serveur géré, il s'agit du port <b>[manager_udp_port]</b> de son adresse dans MANAGER.",
   "mgr_title": "Installer un serveur géré",
   "mgr_add": "VpnHood! MANAGER installe le serveur pour vous et génère ses clés d'accès. Dans MANAGER, ouvrez <b>[manager_servers]</b>, cliquez sur <b>[manager_add]</b>, nommez le serveur et validez avec <b>[manager_create]</b>. MANAGER propose ensuite les options d'installation :",
   "shot_alt": "Les options proposées par VpnHood! MANAGER pour installer un nouveau serveur",

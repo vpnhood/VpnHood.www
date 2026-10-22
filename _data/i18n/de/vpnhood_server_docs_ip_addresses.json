@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> definiert die Adressen und Ports für die Zugriffsschlüssel. Verwenden Sie nur echte Adressen: <code>[ip_any_v4]</code> oder <code>[ip_any_v6]</code> verhindern den Serverstart.",
   "caption_file": "Vollständige Konfiguration: Der Server lauscht auf allen Adressen und trägt <code>[ip_connection_example]</code> in die Schlüssel ein",
   "file_one_ip": "Um nur auf einer bestimmten Adresse zu lauschen (etwa bei einer separaten ausgehenden IP), tragen Sie diese auch in <code>[setting_tcp_endpoints]</code> ein. Außerhalb von Docker bindet der Server die Adresse bei Bedarf automatisch an das System.",
-  "file_udp": "Falls Sie auch <code>[setting_udp_endpoints]</code> oder <code>[setting_quic_endpoints]</code> nutzen, verwenden Sie dieselbe Adresse wie für TCP.",
+  "file_udp": "UDP nutzt standardmäßig dieselben Adressen wie TCP. Wenn Sie <code>[setting_udp_endpoints]</code> oder <code>[setting_quic_endpoints]</code> manuell festlegen, weisen Sie ihnen dieselbe Adresse wie für TCP zu.",
   "file_nat": "In Cloud-Umgebungen mit rein privaten Adressen (wie AWS, Google Cloud, Azure oder Oracle Cloud) lauschen Sie auf der privaten oder allen Adressen und tragen die öffentliche IP in <code>[setting_public_endpoints]</code> ein.",
   "file_restart": "Starten Sie den Server anschließend mit <code>[server_restart_linux]</code> neu (bzw. mit <code>[docker_restart]</code> unter Docker). Erstellen Sie zum Prüfen einen Schlüssel mit <code>[vhserver_gen]</code>: Die Zeile <code>[hostendpoints_label]</code> zeigt die genutzten Adressen.",
   "mgr_title": "Auf einem verwalteten Server",

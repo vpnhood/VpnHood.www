@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code>, erişim anahtarlarına eklenecek adresleri ve portları listeler. Yalnızca gerçek adresler kullanın: Burada <code>[ip_any_v4]</code> veya <code>[ip_any_v6]</code> kullanılması sunucunun başlamasını engeller.",
   "caption_file": "Tüm dosya: Sunucu tüm adresleri dinler ve anahtarlara <code>[ip_connection_example]</code> yazar",
   "file_one_ip": "Yalnızca tek bir adresi dinlemek için (ayrılmış giden IP'de olduğu gibi), bu adresi <code>[setting_tcp_endpoints]</code> bölümüne de ekleyin. Docker dışındaki ortamlarda sunucu, dinlediği adresi makinenin ağına henüz tanımlanmamışsa kendiliğinden ekler.",
-  "file_udp": "<code>[setting_udp_endpoints]</code> veya <code>[setting_quic_endpoints]</code> kullanıyorsanız, bunlara da TCP ile aynı adresi tanımlayın.",
+  "file_udp": "UDP varsayılan olarak TCP adreslerini dinler. <code>[setting_udp_endpoints]</code> veya <code>[setting_quic_endpoints]</code> ayarlarını kendiniz yapılandırıyorsanız TCP ile aynı adresi verin.",
   "file_nat": "AWS, Google Cloud, Azure veya Oracle Cloud gibi makinenin yalnızca özel (private) adreslere sahip olduğu bulut ortamlarında, özel adresi ya da tüm adresleri dinleyin ve genel (public) IP'yi <code>[setting_public_endpoints]</code> alanına yazın.",
   "file_restart": "Ardından sunucuyu <code>[server_restart_linux]</code> komutuyla ya da Docker ortamında <code>[docker_restart]</code> ile yeniden başlatın. Kontrol etmek için <code>[vhserver_gen]</code> ile bir anahtar oluşturun: <code>[hostendpoints_label]</code> satırı taşıdığı adresleri gösterir.",
   "mgr_title": "Yönetilen bir sunucuda",

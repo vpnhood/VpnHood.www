@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> define las direcciones y puertos que se incluirán en las claves de acceso. Utiliza únicamente direcciones reales: introducir <code>[ip_any_v4]</code> o <code>[ip_any_v6]</code> impedirá que el servidor se inicie.",
   "caption_file": "Archivo completo: el servidor escucha en todas las direcciones e incluye <code>[ip_connection_example]</code> en las claves",
   "file_one_ip": "Para escuchar solo en una dirección específica, como ocurre con una IP saliente dedicada, agrégala también a <code>[setting_tcp_endpoints]</code>. Fuera de Docker, el servidor añade automáticamente a la red del equipo la dirección en la que escucha si aún no está configurada.",
-  "file_udp": "Si también usas <code>[setting_udp_endpoints]</code> o <code>[setting_quic_endpoints]</code>, asígnales la misma dirección configurada para TCP.",
+  "file_udp": "UDP escucha de forma predeterminada en las direcciones de TCP. Si configuras <code>[setting_udp_endpoints]</code> o <code>[setting_quic_endpoints]</code> manualmente, asígnales la misma dirección que a TCP.",
   "file_nat": "En entornos en la nube donde el equipo solo tiene direcciones privadas (como AWS, Google Cloud, Azure u Oracle Cloud), escucha en la dirección privada o en todas, y coloca la IP pública en <code>[setting_public_endpoints]</code>.",
   "file_restart": "A continuación, reinicia el servidor con <code>[server_restart_linux]</code> o con <code>[docker_restart]</code> si usas Docker. Para verificarlo, crea una clave con <code>[vhserver_gen]</code>: la línea <code>[hostendpoints_label]</code> mostrará las direcciones asignadas.",
   "mgr_title": "En un servidor administrado",

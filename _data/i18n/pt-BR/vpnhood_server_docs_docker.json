@@ -8,6 +8,7 @@
   "req_root": "Acesso root.",
   "req_docker": "Docker com o plugin compose. O instalador pode configurá-lo automaticamente no Ubuntu, Debian e distribuições derivadas.",
   "req_port": "Porta TCP <code>[server_port]</code> liberada, tanto no firewall da máquina quanto no do provedor de hospedagem. O contêiner usa a rede do host diretamente, ouvindo nessa porta.",
+  "req_udp": "A porta UDP do servidor abre da mesma forma para dispositivos que usam UDP — uma porta fechada bloqueia o tráfego deles. Um servidor independente escolhe essa porta na primeira inicialização, salva em <code>[server_udp_port_file]</code> e a exibe no log. Em um servidor gerenciado, ela corresponde à <b>[manager_udp_port]</b> do seu endereço no MANAGER.",
   "mgr_title": "Instalar um servidor gerenciado",
   "mgr_command": "No VpnHood! MANAGER, abra <b>[manager_servers]</b>, selecione <b>[manager_add]</b>, dê um nome ao servidor e clique em <b>[manager_create]</b>. Nas opções de instalação, escolha <b>[manager_install_command]</b>. No comando exibido pelo MANAGER, altere <code>[installer_linux]</code> para <code>[installer_docker]</code> e execute-o na máquina. Ele instalará o contêiner pré-configurado para conectar ao MANAGER e fará a mesma pergunta da instalação avulsa abaixo.",
   "mgr_existing": "Para um contêiner já criado, escolha <b>[manager_install_manual]</b>. Salve as configurações exibidas pelo MANAGER como <code>[server_appsettings]</code> no host e reinicie o contêiner com <code>[docker_restart]</code>.",

@@ -16,7 +16,7 @@
   "file_public": "يحدد <code>[setting_public_endpoints]</code> العناوين والمنافذ المضمنة في مفاتيح الوصول. استخدم عناوين فعلية فقط؛ فاستخدام <code>[ip_any_v4]</code> أو <code>[ip_any_v6]</code> هنا سيمنع الخادم من العمل.",
   "caption_file": "الملف كاملاً: يستمع الخادم لجميع العناوين ويضع <code>[ip_connection_example]</code> داخل المفاتيح",
   "file_one_ip": "للاستماع إلى عنوان واحد فقط، كما هو الحال مع استخدام IP صادر منفصل، أضف ذلك العنوان أيضاً إلى <code>[setting_tcp_endpoints]</code>. خارج بيئة Docker، يُضيف الخادم العنوان الذي يستمع إليه إلى شبكة الجهاز تلقائياً إذا لم يكن مضافاً بالفعل.",
-  "file_udp": "إذا كنت تستخدم أيضاً <code>[setting_udp_endpoints]</code> أو <code>[setting_quic_endpoints]</code>، فامنحها نفس عنوان TCP.",
+  "file_udp": "يستمع UDP تلقائيًا إلى نفس عناوين TCP. إذا قمت بتعيين <code>[setting_udp_endpoints]</code> أو <code>[setting_quic_endpoints]</code> يدويًا، فاحرص على منحهما نفس عنوان TCP.",
   "file_nat": "على السحابات التي تمنح الجهاز عناوين خاصة فقط مثل AWS أو Google Cloud أو Azure أو Oracle Cloud، اجعل الخادم يستمع إلى العنوان الخاص أو إلى جميع العناوين، ثم ضع عنوان IP العام في <code>[setting_public_endpoints]</code>.",
   "file_restart": "بعد ذلك، أعد تشغيل الخادم عبر <code>[server_restart_linux]</code>، أو باستخدام <code>[docker_restart]</code> داخل Docker. للتحقق، أنشئ مفتاحاً عبر <code>[vhserver_gen]</code>، وستجد العناوين المضمنة موضحة في سطر <code>[hostendpoints_label]</code>.",
   "mgr_title": "على خادم مُدار",

@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> — адреса и порты, добавляемые в ключи доступа. Указывайте только реальные адреса: значения <code>[ip_any_v4]</code> или <code>[ip_any_v6]</code> не позволят серверу запуститься.",
   "caption_file": "Пример файла: сервер слушает все адреса и добавляет в ключи <code>[ip_connection_example]</code>",
   "file_one_ip": "Чтобы сервер ожидал подключения только на одном адресе (например, при отдельном исходящем IP), укажите его и в <code>[setting_tcp_endpoints]</code>. При установке без Docker сервер сам добавит этот адрес в систему, если его еще нет.",
-  "file_udp": "Если используются параметры <code>[setting_udp_endpoints]</code> или <code>[setting_quic_endpoints]</code>, укажите для них тот же адрес, что и для TCP.",
+  "file_udp": "По умолчанию UDP слушает те же адреса, что и TCP. Если вы настраиваете <code>[setting_udp_endpoints]</code> или <code>[setting_quic_endpoints]</code> вручную, укажите для них тот же адрес, что и для TCP.",
   "file_nat": "В облачных сервисах с приватными адресами (AWS, Google Cloud, Azure или Oracle Cloud) настройте входящие подключения на приватный адрес или на все адреса сразу, а публичный IP укажите в <code>[setting_public_endpoints]</code>.",
   "file_restart": "Затем перезапустите сервер командой <code>[server_restart_linux]</code> или <code>[docker_restart]</code> в Docker. Для проверки создайте ключ с помощью <code>[vhserver_gen]</code>: назначенные адреса будут показаны в строке <code>[hostendpoints_label]</code>.",
   "mgr_title": "На управляемом сервере",

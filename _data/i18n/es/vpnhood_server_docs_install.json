@@ -14,6 +14,7 @@
   "req_machine": "Una máquina con IP pública que ejecute Linux en x64 o arm64.",
   "req_admin": "Acceso root. Los comandos de instalación usan sudo, por lo que debe estar disponible aunque inicies sesión como root.",
   "req_port": "Puerto TCP <code>[server_port]</code> abierto, tanto en el cortafuegos de la máquina como en el de tu proveedor. Es el puerto en el que escucha el servidor.",
+  "req_udp": "El puerto UDP del servidor se abre de la misma manera para los dispositivos que usan UDP: si está cerrado, no tendrán tráfico. Un servidor independiente elige este puerto en su primer inicio, lo guarda en <code>[server_udp_port_file]</code> y lo indica en su registro. En un servidor administrado, corresponde al <b>[manager_udp_port]</b> de su dirección en MANAGER.",
   "mgr_title": "Instalar un servidor administrado",
   "mgr_add": "VpnHood! MANAGER instala el servidor por ti y genera sus claves de acceso. En MANAGER, ve a <b>[manager_servers]</b>, selecciona <b>[manager_add]</b>, ponle un nombre al servidor y elige <b>[manager_create]</b>. MANAGER te mostrará las opciones de instalación:",
   "shot_alt": "Opciones que ofrece VpnHood! MANAGER para instalar un nuevo servidor",

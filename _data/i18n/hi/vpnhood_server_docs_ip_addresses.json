@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> उन पतों और पोर्ट्स की सूची देता है जो एक्सेस कीज़ में जाते हैं। सिर्फ़ असली पतों का इस्तेमाल करें: यहाँ <code>[ip_any_v4]</code> या <code>[ip_any_v6]</code> डालने से सर्वर चालू नहीं होगा।",
   "caption_file": "पूरी फ़ाइल: सर्वर हर पते पर सुनता है और कीज़ में <code>[ip_connection_example]</code> जोड़ता है",
   "file_one_ip": "सिर्फ़ एक पते पर सुनने के लिए (जैसे अलग आउटगोइंग IP के साथ), उस पते को <code>[setting_tcp_endpoints]</code> में भी जोड़ें। Docker के बाहर, अगर मशीन के पास वह पता पहले से नहीं है, तो सर्वर उसे मशीन के नेटवर्क में अपने-आप जोड़ देता है।",
-  "file_udp": "अगर आप <code>[setting_udp_endpoints]</code> या <code>[setting_quic_endpoints]</code> का भी इस्तेमाल करते हैं, तो उन्हें भी वही पता दें जो TCP को दिया है।",
+  "file_udp": "डिफ़ॉल्ट रूप से UDP, TCP के पतों (addresses) पर ही सुनता है। यदि आप <code>[setting_udp_endpoints]</code> या <code>[setting_quic_endpoints]</code> को खुद सेट करते हैं, तो उन्हें TCP वाला ही पता दें।",
   "file_nat": "ऐसे क्लाउड पर जहाँ मशीन के पास सिर्फ़ प्राइवेट पते हों (जैसे AWS, Google Cloud, Azure या Oracle Cloud), प्राइवेट पते या हर पते पर सुनें, और <code>[setting_public_endpoints]</code> में पब्लिक IP डालें।",
   "file_restart": "फिर Linux पर <code>[server_restart_linux]</code> से, या Docker में <code>[docker_restart]</code> से सर्वर को रीस्टार्ट करें। पुष्टि के लिए <code>[vhserver_gen]</code> से एक की बनाएं: लाइन <code>[hostendpoints_label]</code> में शामिल पते दिखेंगे।",
   "mgr_title": "मैनेज्ड सर्वर पर",

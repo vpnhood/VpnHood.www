@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> elenca gli indirizzi e le porte inclusi nelle chiavi di accesso. Usa solo indirizzi reali: inserire <code>[ip_any_v4]</code> o <code>[ip_any_v6]</code> impedirà l'avvio del server.",
   "caption_file": "Il file completo: il server è in ascolto su tutti gli indirizzi e inserisce <code>[ip_connection_example]</code> nelle chiavi",
   "file_one_ip": "Per ascoltare su un solo indirizzo, come nel caso di un IP in uscita separato, specifica quell'indirizzo anche in <code>[setting_tcp_endpoints]</code>. Fuori da Docker, se l'indirizzo non è ancora configurato sulla macchina, il server lo aggiunge automaticamente alla rete.",
-  "file_udp": "Se usi anche <code>[setting_udp_endpoints]</code> o <code>[setting_quic_endpoints]</code>, assegna loro lo stesso indirizzo impostato per TCP.",
+  "file_udp": "Per impostazione predefinita, UDP è in ascolto sugli stessi indirizzi di TCP. Se configuri manualmente <code>[setting_udp_endpoints]</code> o <code>[setting_quic_endpoints]</code>, assegna loro lo stesso indirizzo di TCP.",
   "file_nat": "Nei servizi cloud in cui la macchina ha solo indirizzi privati (come AWS, Google Cloud, Azure o Oracle Cloud), imposta l'ascolto sull'indirizzo privato o su tutti gli indirizzi, e inserisci l'IP pubblico in <code>[setting_public_endpoints]</code>.",
   "file_restart": "Riavvia quindi il server con <code>[server_restart_linux]</code> o con <code>[docker_restart]</code> su Docker. Per verificare, genera una chiave con <code>[vhserver_gen]</code>: la riga <code>[hostendpoints_label]</code> mostrerà gli indirizzi assegnati.",
   "mgr_title": "Su un server gestito",

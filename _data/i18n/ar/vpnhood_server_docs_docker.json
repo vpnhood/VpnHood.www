@@ -8,6 +8,7 @@
   "req_root": "صلاحيات Root.",
   "req_docker": "برنامج Docker مع إضافة compose. يمكن لأداة التثبيت تثبيته تلقائيًا على Ubuntu وDebian والتوزيعات المبنية عليهما.",
   "req_port": "منفذ TCP المفتوح <code>[server_port]</code>، في الجدار الناري للجهاز ولدى مزود الاستضافة معًا. تشارك الحاوية شبكة المضيف، لذا يستمع الخادم مباشرةً إلى منفذ المضيف.",
+  "req_udp": "يُفتح منفذ UDP في الخادم بالطريقة نفسها للأجهزة التي تعتمد على UDP؛ فإغلاقه يحرمها من حركة المرور. يحدد الخادم المستقل هذا المنفذ تلقائياً عند تشغيله الأول ويحفظه في <code>[server_udp_port_file]</code>، كما يظهر في ملف السجل. أما في الخوادم المُدارة، فهو <b>[manager_udp_port]</b> ضمن عنوانه في MANAGER.",
   "mgr_title": "تثبيت خادم مُدار",
   "mgr_command": "في VpnHood! MANAGER، افتح <b>[manager_servers]</b>، واختر <b>[manager_add]</b>، ثم حدد اسم الخادم واختر <b>[manager_create]</b>. من بين خيارات التثبيت، حدد <b>[manager_install_command]</b>. في الأمر الذي يظهر لك في MANAGER، استبدل <code>[installer_linux]</code> بـ <code>[installer_docker]</code>، ثم نفّذه على الجهاز. سيقوم بتثبيت الحاوية بالإعدادات التي تربط الخادم بـ MANAGER، ويطرح السؤال الموضح في التثبيت المستقل أدناه.",
   "mgr_existing": "بالنسبة لحاوية أنشأتها مسبقًا، اختر <b>[manager_install_manual]</b> بدلًا من ذلك. احفظ الإعدادات التي يعرضها MANAGER باسم <code>[server_appsettings]</code> على المضيف، ثم أعد تشغيل الحاوية باستخدام <code>[docker_restart]</code>.",

@@ -16,7 +16,7 @@
   "file_public": "گزینه <code>[setting_public_endpoints]</code> آدرس‌ها و پورت‌هایی را تعیین می‌کند که در کلیدهای دسترسی قرار می‌گیرند. فقط از آدرس‌های واقعی استفاده کنید: وارد کردن <code>[ip_any_v4]</code> یا <code>[ip_any_v6]</code> در اینجا مانع راه‌اندازی سرور می‌شود.",
   "caption_file": "نمای کامل فایل: سرور روی تمام آدرس‌ها به اتصالات گوش می‌دهد و <code>[ip_connection_example]</code> را در کلیدها قرار می‌دهد",
   "file_one_ip": "برای گوش دادن به اتصالات تنها روی یک آدرس مشخص (مانند حالت استفاده از IP خروجی مجزا)، همان آدرس را در <code>[setting_tcp_endpoints]</code> وارد کنید. در خارج از محیط Docker، اگر این آدرس هنوز روی شبکه دستگاه تعریف نشده باشد، سرور خودبه‌خود آن را اضافه می‌کند.",
-  "file_udp": "در صورت استفاده از <code>[setting_udp_endpoints]</code> یا <code>[setting_quic_endpoints]</code>، آدرسی مشابه با TCP برای آن‌ها تعیین کنید.",
+  "file_udp": "‏UDP به‌طور پیش‌فرض به آدرس‌های TCP گوش می‌دهد. اگر خودتان <code>[setting_udp_endpoints]</code> یا <code>[setting_quic_endpoints]</code> را تنظیم می‌کنید، همان آدرس TCP را برای آن‌ها قرار دهید.",
   "file_nat": "در سرورهای ابری که دستگاه فقط آدرس خصوصی دارد (مانند AWS ،Google Cloud ،Azure یا Oracle Cloud)، به اتصالات روی آدرس خصوصی یا تمام آدرس‌ها گوش دهید و IP عمومی را در <code>[setting_public_endpoints]</code> وارد کنید.",
   "file_restart": "سپس سرور را با دستور <code>[server_restart_linux]</code> (یا در Docker با <code>[docker_restart]</code>) ری‌استارت کنید. برای بررسی، یک کلید با <code>[vhserver_gen]</code> بسازید: خط <code>[hostendpoints_label]</code> آدرس‌های ثبت‌شده را نشان می‌دهد.",
   "mgr_title": "در یک سرور مدیریت‌شده",

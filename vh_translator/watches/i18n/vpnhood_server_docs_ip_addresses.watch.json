@@ -18,7 +18,7 @@
     "file_public": "<code>[setting_public_endpoints]</code> lists the addresses and ports that go into access keys. Use real addresses only: <code>[ip_any_v4]</code> or <code>[ip_any_v6]</code> here stops the server from starting.",
     "caption_file": "The whole file: the server listens on every address and puts <code>[ip_connection_example]</code> in the keys",
     "file_one_ip": "To listen on one address only, as with a separate outgoing IP, put that address in <code>[setting_tcp_endpoints]</code> as well. Outside Docker, the server adds an address it listens on to the machine's network by itself, if the machine does not have it yet.",
-    "file_udp": "If you also use <code>[setting_udp_endpoints]</code> or <code>[setting_quic_endpoints]</code>, give them the same address as TCP.",
+    "file_udp": "UDP listens on the addresses of TCP by default. If you set <code>[setting_udp_endpoints]</code> or <code>[setting_quic_endpoints]</code> yourself, give them the same address as TCP.",
     "file_nat": "On a cloud where the machine has only private addresses, such as AWS, Google Cloud, Azure or Oracle Cloud, listen on the private address, or on every address, and put the public IP in <code>[setting_public_endpoints]</code>.",
     "file_restart": "Then restart the server with <code>[server_restart_linux]</code>, or with <code>[docker_restart]</code> in Docker. To check, create a key with <code>[vhserver_gen]</code>: the line <code>[hostendpoints_label]</code> shows the addresses it carries.",
     "mgr_title": "On a managed server",

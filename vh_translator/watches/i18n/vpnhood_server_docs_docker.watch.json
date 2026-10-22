@@ -10,6 +10,7 @@
     "req_root": "Root access.",
     "req_docker": "Docker with its compose plugin. The installer can install it for you on Ubuntu, Debian and the distributions based on them.",
     "req_port": "TCP port <code>[server_port]</code> open, both in the machine's firewall and in your hosting provider's. The container shares the host's network, so the server listens on the host's port directly.",
+    "req_udp": "The server's UDP port open the same way, for the devices that use UDP: a closed port leaves them without traffic. A standalone server picks this port at its first start and keeps it in <code>[server_udp_port_file]</code>, and its log names it. On a managed server, it is the <b>[manager_udp_port]</b> of its address in MANAGER.",
     "mgr_title": "Install a managed server",
     "mgr_command": "In VpnHood! MANAGER, open <b>[manager_servers]</b>, select <b>[manager_add]</b>, name the server and select <b>[manager_create]</b>. Among the ways to install it, choose <b>[manager_install_command]</b>. In the command MANAGER shows, change <code>[installer_linux]</code> to <code>[installer_docker]</code>, then run it on the machine. It installs the container with the settings that connect the server to MANAGER, and asks the question the standalone install below asks.",
     "mgr_existing": "For a container you created already, choose <b>[manager_install_manual]</b> instead. Save the settings MANAGER shows as <code>[server_appsettings]</code> on the host, then restart the container with <code>[docker_restart]</code>.",

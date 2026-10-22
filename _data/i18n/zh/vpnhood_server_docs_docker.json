@@ -8,6 +8,7 @@
   "req_root": "Root 权限。",
   "req_docker": "Docker 及其 Compose 插件。在 Ubuntu、Debian 及基于它们的发行版上，安装程序可自动为您安装。",
   "req_port": "确保本机的防火墙和云服务商的安全组已放行 TCP 端口 <code>[server_port]</code>。由于容器共享宿主机网络，服务端将直接监听宿主机的对应端口。",
+  "req_udp": "服务器的 UDP 端口也需同样保持开放，以供使用 UDP 的设备正常连接；端口关闭将导致其无法传输流量。独立服务器会在首次启动时自动选择该端口，并记录在 <code>[server_udp_port_file]</code> 及其日志中。对于托管服务器，该端口即为 MANAGER 中其地址所对应的 <b>[manager_udp_port]</b>。",
   "mgr_title": "安装受管服务端",
   "mgr_command": "在 VpnHood! MANAGER 中，打开 <b>[manager_servers]</b>，选择 <b>[manager_add]</b>，为服务端命名并选择 <b>[manager_create]</b>。在安装方式中选择 <b>[manager_install_command]</b>。在 MANAGER 显示的命令中，将 <code>[installer_linux]</code> 替换为 <code>[installer_docker]</code>，然后在服务器上运行。该命令会应用连接 MANAGER 的配置来安装容器，并提示下方独立安装中出现的相同问题。",
   "mgr_existing": "对于已经创建的容器，请改选 <b>[manager_install_manual]</b>。将 MANAGER 显示的配置在宿主机上保存为 <code>[server_appsettings]</code>，然后使用 <code>[docker_restart]</code> 重启容器即可。",

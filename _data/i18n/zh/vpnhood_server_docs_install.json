@@ -14,6 +14,7 @@
   "req_machine": "一台拥有公网 IP 地址的 Linux 服务器（支持 x64 或 arm64 架构）。",
   "req_admin": "Root 权限。安装命令需要通过 sudo 运行，因此即使您以 root 身份登录，系统上也必须安装 sudo。",
   "req_port": "开放 TCP 端口 <code>[server_port]</code>（需同时在服务器系统防火墙和服务商的安全组中放行）。该端口为服务器监听端口。",
+  "req_udp": "对于使用 UDP 的设备，服务器的 UDP 端口也需以相同方式开放：端口关闭会导致这些设备无法传输流量。独立服务器在首次启动时会自动选取此端口并保存在 <code>[server_udp_port_file]</code> 中，日志中也会显示该端口。在受管服务器上，该端口即为 MANAGER 中其地址所对应的 <b>[manager_udp_port]</b>。",
   "mgr_title": "安装受管服务器",
   "mgr_add": "VpnHood! MANAGER 会自动为您配置服务器并分发访问密钥。在 MANAGER 中，打开 <b>[manager_servers]</b>，点击 <b>[manager_add]</b>，输入服务器名称并点击 <b>[manager_create]</b>。随后 MANAGER 将提供以下安装方式：",
   "shot_alt": "VpnHood! MANAGER 提供的多种新服务器安装方式",

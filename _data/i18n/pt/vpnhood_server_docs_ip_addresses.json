@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> lista os endereços e portas incluídos nas chaves de acesso. Use apenas endereços reais: <code>[ip_any_v4]</code> ou <code>[ip_any_v6]</code> aqui impedem a inicialização.",
   "caption_file": "Arquivo completo: o servidor escuta em todos os endereços e inclui <code>[ip_connection_example]</code> nas chaves",
   "file_one_ip": "Para escutar apenas em um endereço (como ao usar um IP de saída dedicado), adicione-o também em <code>[setting_tcp_endpoints]</code>. Fora do Docker, o servidor adiciona esse endereço à rede da máquina automaticamente, se necessário.",
-  "file_udp": "Se usar também <code>[setting_udp_endpoints]</code> ou <code>[setting_quic_endpoints]</code>, defina o mesmo endereço do TCP.",
+  "file_udp": "Por padrão, o UDP escuta nos mesmos endereços do TCP. Se você configurar <code>[setting_udp_endpoints]</code> ou <code>[setting_quic_endpoints]</code> manualmente, use o mesmo endereço do TCP.",
   "file_nat": "Em provedores de nuvem onde a máquina tem apenas IPs privados (como AWS, Google Cloud, Azure ou Oracle Cloud), escute no IP privado ou em todos os endereços, e informe o IP público em <code>[setting_public_endpoints]</code>.",
   "file_restart": "Reinicie o servidor com <code>[server_restart_linux]</code> ou com <code>[docker_restart]</code> no Docker. Para verificar, gere uma chave com <code>[vhserver_gen]</code>: a linha <code>[hostendpoints_label]</code> exibirá os endereços configurados.",
   "mgr_title": "Em um servidor gerenciado",

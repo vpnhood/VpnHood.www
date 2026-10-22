@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code> liste les adresses et ports intégrés aux clés d'accès. Renseignez uniquement des adresses réelles : indiquer <code>[ip_any_v4]</code> ou <code>[ip_any_v6]</code> empêchera le serveur de démarrer.",
   "caption_file": "Fichier complet : le serveur écoute sur toutes les adresses et intègre <code>[ip_connection_example]</code> dans les clés",
   "file_one_ip": "Pour écouter sur une seule adresse, comme avec une IP sortante dédiée, indiquez également cette adresse dans <code>[setting_tcp_endpoints]</code>. Hors environnement Docker, le serveur configure automatiquement sur la machine toute adresse d'écoute manquante.",
-  "file_udp": "Si vous utilisez aussi <code>[setting_udp_endpoints]</code> ou <code>[setting_quic_endpoints]</code>, attribuez-leur la même adresse que pour le protocole TCP.",
+  "file_udp": "Par défaut, UDP écoute sur les mêmes adresses que TCP. Si vous définissez vous-même <code>[setting_udp_endpoints]</code> ou <code>[setting_quic_endpoints]</code>, attribuez-leur la même adresse que TCP.",
   "file_nat": "Dans un cloud où la machine ne dispose que d'adresses privées (AWS, Google Cloud, Azure ou Oracle Cloud), écoutez sur l'adresse privée ou sur toutes les adresses, puis renseignez l'adresse IP publique dans <code>[setting_public_endpoints]</code>.",
   "file_restart": "Redémarrez ensuite le serveur avec <code>[server_restart_linux]</code>, ou avec <code>[docker_restart]</code> sous Docker. Pour vérifier la configuration, générez une clé avec <code>[vhserver_gen]</code> : la ligne <code>[hostendpoints_label]</code> affiche les adresses associées.",
   "mgr_title": "Sur un serveur géré",

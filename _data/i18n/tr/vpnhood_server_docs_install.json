@@ -14,6 +14,7 @@
   "req_machine": "Genel IP adresine sahip, x64 veya arm64 mimarili bir Linux makinesi.",
   "req_admin": "Root erişimi. Kurulum komutları sudo aracılığıyla çalışır; bu yüzden root olarak giriş yapsanız bile makinede sudo yüklü olmalıdır.",
   "req_port": "Hem makinenin hem de barındırma sağlayıcınızın güvenlik duvarında TCP <code>[server_port]</code> portu açık olmalıdır. Bu port, sunucunun dinleme yaptığı porttur.",
+  "req_udp": "UDP kullanan cihazlar için sunucunun UDP portunu da aynı şekilde açın; kapalı bir port bu cihazların trafiğini engeller. Bağımsız bir sunucu bu portu ilk başlatmada belirler, <code>[server_udp_port_file]</code> dosyasında saklar ve günlüğünde belirtir. Yönetilen bir sunucuda ise bu, MANAGER'daki adresinin <b>[manager_udp_port]</b> portudur.",
   "mgr_title": "Yönetilen sunucu kurulumu",
   "mgr_add": "VpnHood! MANAGER, sunucuyu sizin için kurar ve erişim anahtarlarını oluşturur. MANAGER içinde <b>[manager_servers]</b> bölümünü açın, <b>[manager_add]</b> seçeneğine tıklayın, sunucunuza bir ad verip <b>[manager_create]</b> butonuna basın. MANAGER ardından kurulum yöntemlerini gösterir:",
   "shot_alt": "VpnHood! MANAGER tarafından sunulan yeni sunucu kurulum yöntemleri",

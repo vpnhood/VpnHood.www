@@ -16,7 +16,7 @@
   "file_public": "<code>[setting_public_endpoints]</code>：指定写入访问密钥的地址和端口。此处必须填写实际可访问的公网地址；填入 <code>[ip_any_v4]</code> 或 <code>[ip_any_v6]</code> 会导致服务器无法启动。",
   "caption_file": "完整配置文件示例：服务器监听所有地址，并在密钥中使用 <code>[ip_connection_example]</code>",
   "file_one_ip": "若仅需监听特定地址（例如使用独立出站 IP），请将该地址同时填入 <code>[setting_tcp_endpoints]</code>。在非 Docker 环境下，如果系统尚未绑定该监听地址，服务器会自动将其添加到网络接口中。",
-  "file_udp": "如果同时启用了 <code>[setting_udp_endpoints]</code> 或 <code>[setting_quic_endpoints]</code>，请为它们配置与 TCP 相同的地址。",
+  "file_udp": "UDP 默认监听与 TCP 相同的地址。如果您自行配置 <code>[setting_udp_endpoints]</code> 或 <code>[setting_quic_endpoints]</code>，请将其设置为与 TCP 相同的地址。",
   "file_nat": "在仅分配内网 IP 的云服务器上（如 AWS、Google Cloud、Azure 或 Oracle Cloud），请监听内网地址或所有地址，并将公网 IP 填入 <code>[setting_public_endpoints]</code>。",
   "file_restart": "修改后，使用 <code>[server_restart_linux]</code> 重启服务器（Docker 环境请使用 <code>[docker_restart]</code>）。可通过 <code>[vhserver_gen]</code> 生成测试密钥进行验证：<code>[hostendpoints_label]</code> 一行会显示密钥中包含的地址。",
   "mgr_title": "在受管服务器上",
