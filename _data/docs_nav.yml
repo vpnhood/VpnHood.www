@@ -5,6 +5,16 @@
 # breadcrumb always call a page the same thing. The section's docs index lists
 # the same pages. List only pages that exist: the link check fails on anything
 # else.
+self-hosted-vpn:
+  - group: start-here
+    pages:
+      - url: /self-hosted-vpn/docs/how-it-works/
+  - group: products
+    pages:
+      - url: /vpnhood-server/docs/
+        label: vpnhood-server
+      - url: /vpnhood-manager/docs/
+        label: vpnhood-manager
 vpnhood-server:
   - group: getting-started
     pages:
@@ -13,10 +23,15 @@ vpnhood-server:
       - url: /vpnhood-server/docs/ip-blocking/
   - group: reference
     pages:
+      - url: /vpnhood-server/docs/installer-options/
       - url: /vpnhood-server/docs/ip-addresses/
       - url: /vpnhood-server/docs/domain/
       - url: /vpnhood-server/docs/reverse-proxy/
 vpnhood-manager:
+  - group: getting-started
+    pages:
+      - url: /vpnhood-manager/docs/add-server/
   - group: reference
     pages:
+      - url: /vpnhood-manager/docs/access-points/
       - url: /vpnhood-manager/docs/certificates/

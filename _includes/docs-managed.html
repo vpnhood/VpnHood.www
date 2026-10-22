@@ -1,0 +1,26 @@
+{%- comment -%}
+  The VpnHood! MANAGER promo on a VpnHood! SERVER docs page. MANAGER's steps live only in its
+  own docs (owner, 2026-10-22), so a server page shows a standalone server's steps, and this
+  card offers MANAGER right before them, as the easier way to do the same job: a headline, a
+  line on what MANAGER does instead, and a button to the MANAGER page that shows how.
+
+    {% include docs-managed.html href="/vpnhood-manager/docs/add-server/" %}
+
+  Right before the page's <h2 id="standalone">, never at its top (owner, 2026-10-22). It reads
+  the page's mgr_box_title, mgr_box_desc (through copy.html) and mgr_box_cta, each falling back
+  to English: a card with no words in it does not degrade. href is the MANAGER page, without
+  the language prefix, which the include adds. The art is decorative (alt=""); the button is
+  tagged for CTA tracking as docs-start-manager.
+{%- endcomment -%}
+{%- assign vh_dm_en = site.data.i18n.en[page.i18n] -%}
+{%- assign vh_dm_title = t.mgr_box_title | default: vh_dm_en.mgr_box_title -%}
+{%- assign vh_dm_desc = t.mgr_box_desc | default: vh_dm_en.mgr_box_desc -%}
+{%- assign vh_dm_cta = t.mgr_box_cta | default: vh_dm_en.mgr_box_cta -%}
+<aside class="vh-docs-managed">
+  <img class="vh-docs-managed-art" src="/assets/images/vpnhood-manager/docs/promo-manager.svg" alt="" width="112" height="112" loading="lazy">
+  <div>
+    <p class="vh-docs-managed-title">{{ vh_dm_title }}</p>
+    <p>{% include copy.html s=vh_dm_desc %}</p>
+    <a class="vh-btn vh-btn-primary" href="{{ vh_base }}{{ include.href }}" data-vh-track="docs-start-manager"><span>{{ vh_dm_cta }}</span>{% include icons/arrow-right.svg %}</a>
+  </div>
+</aside>

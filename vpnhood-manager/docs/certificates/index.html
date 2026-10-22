@@ -23,8 +23,13 @@ extra_css:
   over HTTP-01 on port 80 through any farm server, MANAGER checks the token first, renews 30
   days before expiry on a daily job, and falls back to Manual after six failures in a row.
   Its screenshots are the MANAGER docs test farm as it is (Vh/.user/docs/
-  manager-test-projects.md), in MANAGER's dark theme. MANAGER's screen text is a placeholder
-  from _data/code.yml, filled in by copy.html. No links to the GitHub wiki.
+  manager-test-projects.md), in MANAGER's dark theme. "Use your own domain" moved here from
+  the SERVER docs' domain/ page, whose MANAGER promo now links to it (owner, 2026-10-22),
+  with its screenshot: that certificate is self-signed for a made-up name, so the values of
+  a validated AutoSign certificate for server1.example.com were written onto the open dialog
+  before the capture, as CertificateCard.razor renders them, with numbered markers matching
+  the steps. MANAGER's screen text is a placeholder from _data/code.yml, filled in by
+  copy.html. No links to the GitHub wiki.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-manager/docs/hero-certificates.svg" %}
@@ -37,6 +42,27 @@ extra_css:
 </figure>
 <p>{{ t.where_new }}</p>
 <p>{{ t.where_server }}</p>
+
+<h2 id="domain">{{ t.domain_title }}</h2>
+<p>{{ t.domain_intro }}</p>
+<ul>
+  <li>{% include copy.html s=t.domain_req_name %}</li>
+  <li>{{ t.domain_req_dns }}</li>
+  <li>{% include copy.html s=t.domain_req_port %}</li>
+</ul>
+<p>{% include copy.html s=t.domain_add %}</p>
+<ol>
+  <li>{% include copy.html s=t.domain_autosign %}</li>
+  <li>{% include copy.html s=t.domain_signed %}</li>
+  <li>{% include copy.html s=t.domain_token %}</li>
+</ol>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/certificate-autosign.webp" alt="{{ t.shot_domain_alt }}" width="600" height="573" loading="lazy">
+  <figcaption>{{ t.shot_domain_caption }}</figcaption>
+</figure>
+<p>{% include copy.html s=t.domain_keys %}</p>
+<p>{% include copy.html s=t.domain_failed %}</p>
+<p>{% include copy.html s=t.domain_check %}</p>
 
 <h2 id="settings">{{ t.settings_title }}</h2>
 <p>{{ t.settings_open }}</p>
@@ -77,9 +103,8 @@ extra_css:
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/access-points/">{{ t.next_access_points }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/reverse-proxy/">{{ t.next_proxy }}</a></li>
-  <li><a href="{{ vh_base }}/vpnhood-manager/docs/">{{ t.next_docs }}</a></li>
 </ul>
 {% endcapture %}
 {% include docs.html article=vh_article %}

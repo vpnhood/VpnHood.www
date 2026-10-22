@@ -5,6 +5,7 @@ Writes, under `_includes/diagrams/`:
 
   server-two-ips.svg, server-two-ips-tall.svg    /vpnhood-server/docs/ip-blocking/
   reverse-proxy.svg, reverse-proxy-tall.svg      /vpnhood-server/docs/reverse-proxy/
+  how-it-works.svg, how-it-works-tall.svg        /self-hosted-vpn/docs/how-it-works/
 
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
@@ -41,6 +42,8 @@ Each diagram states one idea and no more:
                   websites can flag is never the one in the access keys.
   reverse-proxy   apps that find the proxy through your domain go around a blocked server
                   address.
+  how-it-works    devices reach your server through an encrypted tunnel, and websites see
+                  your server, not your users.
 
 Run from the repo root:  python tools/make-docs-diagrams.py
 """
@@ -396,6 +399,66 @@ def reverse_proxy() -> None:
     render("reverse-proxy-tall", *REVERSE_PROXY, W, H, "vhRevProxyTall", parts)
 
 
+# ===========================================================================
+# how-it-works - the tunnel to your server, and on from there
+# ===========================================================================
+HOW = ("self_hosted_vpn_docs_how_it_works", "vh_how_en")
+
+
+def how_it_works() -> None:
+    T, _ = strings(HOW[1])
+
+    # --- left to right: users, the tunnel, the server, websites -------------------------
+    seed(17)
+    W, H = 920, 300
+    Y = 92
+    XU, XS, XW = 120, 460, 800
+    pl, pr = XS - RACK_W / 2, XS + RACK_W / 2
+    parts = [people(XU, Y), rack(XS, Y, RACK_W, RACK_H), globe(XW, Y)]
+    # the tunnel: a double line around the arrow, as on the guides' pictures
+    x1, x2 = XU + 58, pl - 14
+    parts += [line(x1, Y - 11, x2 - 6, Y - 11, MINT, 2.0), line(x1, Y + 11, x2 - 6, Y + 11, MINT, 2.0),
+              arrow(x1 + 10, Y, x2, Y, MINT)]
+    m = (x1 + x2) / 2
+    parts += [txt(m, Y - 26, T("diagram_tunnel"), 20, MINT),
+              txt(m, Y + 40, T("diagram_tunnel_sub"), 17, CHALK_DIM)]
+    x1, x2 = pr + 14, XW - 56
+    m = (x1 + x2) / 2
+    parts += [arrow(x1, Y, x2, Y, VIOLET), txt(m, Y - 18, T("diagram_out"), 20, VIOLET)]
+    for x, name, sub in ((XU, "diagram_users", "diagram_users_sub"),
+                         (XS, "diagram_server", "diagram_server_sub"),
+                         (XW, "diagram_websites", None)):
+        parts.append(txt(x, Y + 98, T(name), 24))
+        if sub:
+            parts.append(txt(x, Y + 124, T(sub), 16, CHALK_DIM))
+    parts.append(txt(W / 2, H - 30, T("diagram_caption"), 20, AMBER))
+    render("how-it-works", *HOW, W, H, "vhHow", parts)
+
+    # --- top to bottom: icons down the left, their labels beside them ----------------
+    seed(17)
+    W, H = 560, 640
+    X, TX = 104, 186
+    YU, YS, YW = 84, 316, 530
+    pt, pb = YS - RACK_H / 2, YS + RACK_H / 2
+    parts = [people(X, YU), rack(X, YS, RACK_W, RACK_H), globe(X, YW)]
+    y1, y2 = YU + 44, pt - 14
+    parts += [line(X - 11, y1, X - 11, y2 - 6, MINT, 2.0), line(X + 11, y1, X + 11, y2 - 6, MINT, 2.0),
+              arrow(X, y1 + 10, X, y2, MINT)]
+    m = (y1 + y2) / 2
+    parts += [txt(TX, m - 2, T("diagram_tunnel"), 21, MINT, "start"),
+              txt(TX, m + 24, T("diagram_tunnel_sub"), 17, CHALK_DIM, "start")]
+    y1, y2 = pb + 14, YW - 56
+    parts += [arrow(X, y1, X, y2, VIOLET), txt(TX, (y1 + y2) / 2 + 7, T("diagram_out"), 21, VIOLET, "start")]
+    for y, name, sub in ((YU, "diagram_users", "diagram_users_sub"),
+                         (YS, "diagram_server", "diagram_server_sub")):
+        parts += [txt(TX, y - 2, T(name), 24, CHALK, "start"),
+                  txt(TX, y + 24, T(sub), 16, CHALK_DIM, "start")]
+    parts.append(txt(TX, YW + 8, T("diagram_websites"), 24, CHALK, "start"))
+    parts.append(txt(W / 2, H - 32, T("diagram_caption"), 19, AMBER))
+    render("how-it-works-tall", *HOW, W, H, "vhHowTall", parts)
+
+
 if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
+    how_it_works()

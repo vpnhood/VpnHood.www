@@ -88,14 +88,10 @@ nav_active: self-hosted
     <h2 class="section-title vh-txt-grad-purple-400">{{ t.install_title }}</h2>
     <p class="section-desc">{{ t.install_desc }}</p>
 </div>
-<div class="vh-terminal rounded-4" data-aos="fade-up" data-aos-duration="1000">
-    <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div class="vh-terminal-body">
-        <p class="vh-terminal-caption">{{ t.install_caption_install }}</p>
-        <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh)"</code></pre>
-        <p class="vh-terminal-caption">{{ t.install_caption_key }}</p>
-        <pre dir="ltr"><code>sudo /opt/VpnHoodServer/vhserver gen</code></pre>
-    </div>
+<div data-aos="fade-up" data-aos-duration="1000">
+    {% include terminal.html
+        caption=t.install_caption_install cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh)"'
+        caption2=t.install_caption_key cmd2='sudo /opt/VpnHoodServer/vhserver gen' %}
 </div>
 <p class="text-center mt-4">
     <a class="vh-text-btn vh-txt-purple-300 d-inline-flex" href="{{ vh_base }}/vpnhood-server/docs/install/#standalone"><span>{{ t.install_guide }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>

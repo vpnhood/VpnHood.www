@@ -188,6 +188,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    //---------------------- Copy buttons ----------------------
+    // The copy buttons of _includes/terminal.html ship hidden, so a page without JS never
+    // shows one that does nothing. A button copies the <pre> beside it through the
+    // clipboard API, or, in a browser without one, by selecting the text and copying the
+    // selection; when both fail, the text stays selected for the visitor to copy. The
+    // button only swaps its icon, so a status region reads out "copied" too, in the words
+    // the include put in data-vh-label-done.
+    const copyButtons = document.querySelectorAll('[data-vh-copy]');
+    if (copyButtons.length) {
+        const copyStatus = document.createElement('div');
+        copyStatus.className = 'visually-hidden';
+        copyStatus.setAttribute('role', 'status');
+        document.body.append(copyStatus);
+        const copyTimers = new Map();
+        const copySelection = pre => {
+            const range = document.createRange();
+            range.selectNodeContents(pre);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            let copied = false;
+            try { copied = document.execCommand('copy'); } catch (e) { }
+            if (copied) selection.removeAllRanges();
+            return copied;
+        };
+        copyButtons.forEach(btn => {
+            const pre = btn.parentElement.querySelector('pre');
+            btn.hidden = false;
+            btn.addEventListener('click', () => {
+                const copy = navigator.clipboard
+                    ? navigator.clipboard.writeText(pre.textContent).catch(() => copySelection(pre) || Promise.reject())
+                    : (copySelection(pre) ? Promise.resolve() : Promise.reject());
+                copy.then(() => {
+                    btn.classList.add('vh-copied');
+                    copyStatus.textContent = btn.dataset.vhLabelDone;
+                    clearTimeout(copyTimers.get(btn));
+                    copyTimers.set(btn, setTimeout(() => {
+                        btn.classList.remove('vh-copied');
+                        copyStatus.textContent = '';
+                    }, 2000));
+                }, () => { });
+            });
+        });
+    }
+
+
     //---------------------- Multi text writer ----------------------
     // Each .multiTextWriter is rendered by _includes/multi-text-writer.html
     // together with a hidden <ul class="multi-text-writer-words"> holding the

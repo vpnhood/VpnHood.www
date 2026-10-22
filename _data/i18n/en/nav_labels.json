@@ -3,15 +3,22 @@
   "aria_docs_nav": "Documentation",
   "home": "Home",
   "docs": "Docs",
+  "self-hosted-vpn": "Self-hosted VPN",
+  "start-here": "Start here",
+  "how-it-works": "How it works",
+  "products": "Products",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "Getting started",
   "install": "Install",
   "docker": "Docker",
   "ip-blocking": "IP blocking",
   "reference": "Reference",
+  "installer-options": "Installer options",
   "ip-addresses": "IP addresses",
   "domain": "Domain name",
   "reverse-proxy": "Reverse proxy",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "Certificates"
+  "certificates": "Certificates",
+  "add-server": "Add a server",
+  "access-points": "Access points"
 }

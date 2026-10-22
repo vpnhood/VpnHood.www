@@ -1,0 +1,20 @@
+---
+layout: none
+i18n: self_hosted_vpn_docs
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The operator docs hub (docs plan, phase 6): the site chrome's Documentation link lands
+  here, in place of the GitHub wiki's home. It lists how VpnHood works, then each
+  product's docs index, from _data/docs_nav.yml like any docs section.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="self-hosted-vpn/docs/hero-docs.svg" %}
+{% include docs-index.html %}
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

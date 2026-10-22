@@ -22,14 +22,13 @@ extra_css:
   as the proxy. A failed lookup falls back to the key's addresses. MANAGER builds a farm
   key with no address only from a validated certificate; a standalone server always puts
   its addresses in its keys. Behind a proxy that sends X-Forwarded-For, the server
-  withholds its UDP and QUIC ports. The server answers ACME on plain HTTP port 80 only. A
-  managed server comes first, before a standalone one. No links to the GitHub wiki. Code
-  inside a sentence is a placeholder from _data/code.yml, filled in by copy.html;
-  Cloudflare's labels live there too. The diagram is drawn twice by
-  tools/make-docs-diagrams.py: left to right from a tablet up, top to bottom on a phone.
-  The screenshot is the Access Points of the MANAGER docs test server, its addresses set to
-  Private for the shot, with numbered markers matching the steps above it (owner,
-  2026-10-19); how to retake it is in Vh/.user/docs/manager-test-projects.md.
+  withholds its UDP and QUIC ports. The server answers ACME on plain HTTP port 80 only. The
+  proxy's own steps serve both kinds of server; a managed server's steps in MANAGER, with
+  their screenshot, moved to /vpnhood-manager/docs/access-points/#reverse-proxy, and the MANAGER
+  promo right before the standalone steps links there (owner, 2026-10-22). No links to the GitHub wiki. Code inside a
+  sentence is a placeholder from _data/code.yml, filled in by copy.html; Cloudflare's labels
+  live there too. The diagram is drawn twice by tools/make-docs-diagrams.py: left to right
+  from a tablet up, top to bottom on a phone.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-server/docs/hero-reverse-proxy.svg" %}
@@ -68,22 +67,7 @@ extra_css:
 </ol>
 <p>{% include copy.html s=t.proxy_renew %}</p>
 
-<h2 id="managed">{{ t.mgr_title }}</h2>
-<p>{% include copy.html s=t.mgr_cert %}</p>
-<p>{% include copy.html s=t.mgr_hide %}</p>
-<ol>
-  <li>{% include copy.html s=t.mgr_step_auto %}</li>
-  <li>{% include copy.html s=t.mgr_step_mode %}</li>
-  <li>{% include copy.html s=t.mgr_step_listen %}</li>
-</ol>
-<figure class="vh-docs-shot">
-  <img src="/assets/images/vpnhood-server/docs/manager-access-points-proxy.webp" alt="{{ t.shot_alt }}" width="800" height="355" loading="lazy">
-  <figcaption>{{ t.shot_caption }}</figcaption>
-</figure>
-<p>{% include copy.html s=t.mgr_hide_ca %}</p>
-<p>{% include copy.html s=t.mgr_keys %}</p>
-<p>{% include copy.html s=t.mgr_keep %}</p>
-<div class="vh-docs-note" role="note"><p>{{ t.mgr_farm }}</p></div>
+{% include docs-managed.html href="/vpnhood-manager/docs/access-points/#reverse-proxy" %}
 
 <h2 id="standalone">{{ t.file_title }}</h2>
 <p>{% include copy.html s=t.file_cert %}</p>
@@ -91,7 +75,6 @@ extra_css:
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>

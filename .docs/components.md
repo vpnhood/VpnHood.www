@@ -62,6 +62,54 @@ The self-typing text loop (currently the Premium card on `/free-vpn/`). Pass `ke
 the copy is translatable and empty/missing keys are skipped. **Never hardcode typed phrases
 in JS.**
 
+## Terminal — `_includes/terminal.html`
+
+Every command, file and command output on the site sits in a terminal window, and every
+command and file in it has a copy button. **Never hand-write `.vh-terminal` markup** — a
+command shown any other way has no button.
+
+    {% include terminal.html cmd='sudo /opt/VpnHoodServer/vhserver gen' %}
+    {% include terminal.html caption=t.caption_example cmd='sudo /opt/VpnHoodServer/vhserver gen -name Phone' %}
+
+A window has up to four parts, top to bottom. Each part may have a `caption` (copy, rendered
+through `copy.html`), `cmd` (commands, one per line, each with its own button), `code` (a
+file, copied whole) and `output` (shown, never copied); the next parts' names end in `2`, `3`
+and `4` (`caption2`, `cmd2`...). One button per command is deliberate: a block of alternatives
+(`status`, `stop`, `start`) copied as one would run all three.
+
+Write a command as it is typed (`<(`, never `&lt;(`); the include escapes it. A quoted
+parameter may hold double quotes and span lines; text with a single quote in it goes through
+a `{% capture %}` (the include's header shows how).
+
+The buttons ship `hidden`, and `vh-general.js` shows them. A click copies the `<pre>` through
+the clipboard API, or, in a browser without one, by selecting the text and copying the
+selection; a tick shows for two seconds, and a `role="status"` region reads out
+`copied_to_clipboard`. The two labels (`copy_to_clipboard`, `copied_to_clipboard` in
+`chrome.json`) fall back to English per key, as the theme toggle's do. Each row is
+`dir="ltr"` like the code in it, so the button sits at the end of the line in every
+language. Styles: `.vh-terminal*` and `.vh-copy-btn` in `_custom.scss`; a docs page wraps a
+long command instead of scrolling it (`_docs.scss`).
+
+## MANAGER promo — `_includes/docs-managed.html`
+
+MANAGER's steps live only in the MANAGER docs (owner, 2026-10-22). A SERVER docs page that
+has a MANAGER counterpart shows a standalone server's steps, and offers MANAGER right before
+them with this card — never at the top of the page (owner, the same day):
+
+    {% include docs-managed.html href="/vpnhood-manager/docs/add-server/" %}
+    <h2 id="standalone">…
+
+The card is a headline, a line on what MANAGER does instead and a button to the MANAGER page,
+from the page's `mgr_box_title`, `mgr_box_desc` and `mgr_box_cta`, each with a per-key English
+fallback. Write them benefit first, as "Easily add, manage and monitor your servers with
+VpnHood! MANAGER" does. `href` is the MANAGER page without the language prefix. The pairs
+today: `install/` and `docker/` → `add-server/` (`#docker`), `domain/` →
+`certificates/#domain`, `ip-addresses/` → `access-points/`, `reverse-proxy/` →
+`access-points/#reverse-proxy`. The look is its own, so it never reads as a note: the brand's
+violet-to-mint rim and a tint of both, a glow, the site's primary button, and the art
+`vpnhood-manager/docs/promo-manager.svg` from `tools/make-docs-heroes.py` (hidden on a phone).
+Styles: `.vh-docs-managed` in `_docs.scss`. The button is tagged `docs-start-manager`.
+
 ## Theme toggle — `_includes/theme-toggle.html` + `assets/js/theme.js`
 
 See [colour-themes.md](colour-themes.md).
@@ -111,7 +159,8 @@ to Google directly, and the click is never delayed. Tagged today: the header's
 `header-download`, `header-go-premium`, `header-log-in` and the mobile menu's
 `menu-download`, `menu-go-premium`, `menu-log-in`, and the pricing table's
 `pricing-download`, `pricing-buy-1-month`, `pricing-buy-6-months`,
-`pricing-buy-12-months`. Keep ids kebab-case and `<place>-<action>`, so the same action
+`pricing-buy-12-months`, and the server docs' MANAGER promo, `docs-start-manager` (its
+`vh_href` names the MANAGER page). Keep ids kebab-case and `<place>-<action>`, so the same action
 in two places stays comparable.
 
 Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it, and that side is

@@ -49,6 +49,8 @@
   "proxy_desc": "If the connection IP is blocked anyway, put the server behind a reverse proxy such as Cloudflare. Apps then connect to the proxy, and the server's own address can stay out of the keys. Whether the proxy itself stays reachable depends on the country and the network.",
   "proxy_how": "<a href=\"/vpnhood-server/docs/reverse-proxy/\">Put your server behind a reverse proxy</a> shows how, and what to weigh first.",
   "next_title": "Next steps",
-  "next_install": "Install VpnHood! SERVER",
+  "next_addresses": "Set the IP addresses the server listens on and puts in its keys",
+  "next_domain": "Use a domain name and a trusted certificate",
+  "next_proxy": "Put your server behind a reverse proxy",
   "next_manager": "Manage many servers and keys from a web panel with VpnHood! MANAGER"
 }

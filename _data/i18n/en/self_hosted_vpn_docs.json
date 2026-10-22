@@ -1,0 +1,6 @@
+{
+  "meta_title": "Self-Hosted VPN Documentation | VpnHood!",
+  "meta_description": "How to run your own VPN with VpnHood: how it works, VpnHood! SERVER on Linux or in Docker, and VpnHood! MANAGER, the free web panel that runs your servers and issues their access keys.",
+  "title": "VpnHood! documentation",
+  "lead": "Everything you need to run your own VPN. VpnHood! SERVER carries your users' traffic, and VpnHood! MANAGER, the free web panel, can run your servers for you. Your users connect with the <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> app and an access key you give them."
+}

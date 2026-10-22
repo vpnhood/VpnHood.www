@@ -1,0 +1,67 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_add_server
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Moved here from the SERVER docs' install/ and docker/ pages, whose MANAGER promo, right
+  before their standalone steps, now links here (owner, 2026-10-22: MANAGER's steps live in
+  MANAGER's docs). The facts are theirs, checked against MANAGER's screens and source and the
+  v9.0.856 installers: the
+  SSH options sign in and run the same installer, and the command MANAGER shows is that
+  installer with -httpBaseUrl, -httpAuthorization and -managementSecret, which also write
+  the settings the third option shows. VpnHoodServer.docker.sh takes the same three, so
+  the Linux command installs a managed container once its script name is changed. The
+  screenshot is real app UI, so it has no light variant: MANAGER's own dark theme, a test
+  server's INSTALL dialog, captured at 2x (Vh/.user/docs/manager-test-projects.md). MANAGER's
+  screen text is a placeholder from _data/code.yml, filled in by copy.html. No links to the
+  GitHub wiki.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-add-server.svg" %}
+
+<h2 id="before-you-start">{{ t.before_title }}</h2>
+<ul>
+  <li>{{ t.req_machine }}</li>
+  <li>{% include copy.html s=t.req_port %}</li>
+  <li>{% include copy.html s=t.req_ssh %}</li>
+  <li>{{ t.req_docker }}</li>
+</ul>
+
+<h2 id="add">{{ t.add_title }}</h2>
+<p>{% include copy.html s=t.add_how %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/install-options.webp" alt="{{ t.shot_alt }}" width="600" height="319" loading="lazy">
+</figure>
+<ul>
+  <li>{% include copy.html s=t.opt_ssh %}</li>
+  <li>{% include copy.html s=t.opt_command %}</li>
+  <li>{% include copy.html s=t.opt_windows %}</li>
+  <li>{% include copy.html s=t.opt_manual %}</li>
+</ul>
+
+<h2 id="docker">{{ t.docker_title }}</h2>
+<p>{% include copy.html s=t.docker_command %}</p>
+<p>{% include copy.html s=t.docker_existing %}</p>
+
+<h2 id="status">{{ t.status_title }}</h2>
+<p>{% include copy.html s=t.status_desc %}</p>
+
+<h2 id="access-keys">{{ t.keys_title }}</h2>
+<p>{% include copy.html s=t.keys_desc %}</p>
+
+<h2 id="day-to-day">{{ t.run_title }}</h2>
+<p>{% include copy.html s=t.run_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/access-points/">{{ t.next_access_points }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/certificates/#domain">{{ t.next_domain }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

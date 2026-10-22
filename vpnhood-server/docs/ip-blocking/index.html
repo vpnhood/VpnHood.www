@@ -53,15 +53,9 @@ extra_css:
 
 <h3 id="outgoing-ip">{{ t.out_title }}</h3>
 <p>{% include copy.html s=t.out_linux %}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <pre dir="ltr"><code>ip route get 1.1.1.1</code></pre>
-    <p class="vh-terminal-caption">{% include copy.html s=t.caption_output %}</p>
-    <pre dir="ltr"><code>1.1.1.1 via 198.51.100.1 dev eth0 src 198.51.100.20 uid 0
-    cache</code></pre>
-  </div>
-</div>
+{% include terminal.html cmd='ip route get 1.1.1.1'
+  caption2=t.caption_output output2='1.1.1.1 via 198.51.100.1 dev eth0 src 198.51.100.20 uid 0
+    cache' %}
 <p>{{ t.out_linux_fix }}</p>
 <p>{{ t.out_docker }}</p>
 <div class="vh-docs-note" role="note"><p>{{ t.out_cloud }}</p></div>
@@ -86,8 +80,10 @@ extra_css:
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/reverse-proxy/">{{ t.next_proxy }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
 </ul>
 {% endcapture %}
 {% include docs.html article=vh_article %}

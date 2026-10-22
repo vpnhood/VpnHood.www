@@ -116,7 +116,7 @@ with `{% include copy.html s=t.run_solo_desc %}`, which replaces every name from
 the way go-premium fills `[percent]` from `pricing.yml`, and language-prefixes the internal
 links as `vh_href_lang` does. The translator never sees the command, so it cannot localise a
 word or a digit in it, and the prompt needs no rule for it — the existing placeholder rule
-covers the name. A whole command in a terminal block stays in the page markup. On a docs page
+covers the name. A whole command stays in the page, in `_includes/terminal.html`. On a docs page
 every `<code>` is isolated left-to-right (`_docs.scss`), so a path keeps its leading slash
 inside a Persian or Arabic sentence.
 

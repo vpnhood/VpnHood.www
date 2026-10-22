@@ -1326,11 +1326,10 @@ a.vh-feature-chip:hover{
     .vh-audit-facts dt{ padding-bottom: .2rem; }
 }
 
-// The install block on /vpnhood-server/: the one command, shown as a terminal rather
-// than described. Breaks a page that is otherwise nothing but rows of cards, and the
-// command is the thing someone self-hosting came to find. The window chrome is
-// decorative and hidden from the accessibility tree; the commands themselves are LTR
-// in every language, so the markup carries dir="ltr".
+// The terminal window (_includes/terminal.html), first drawn for the install block on
+// /vpnhood-server/ and now around every command, file and command output on the site.
+// The window chrome is decorative and hidden from the accessibility tree; the code is
+// LTR in every language, so the markup carries dir="ltr".
 .vh-terminal{
     overflow: hidden;
     border: 1px solid var(--vh-hairline);
@@ -1383,6 +1382,56 @@ a.vh-feature-chip:hover{
 @media (max-width: 575.98px){
     .vh-terminal-body{ padding: 1.1rem; }
     .vh-terminal pre{ font-size: 13px; }
+}
+
+// A command or a file with its copy button. The row is dir="ltr" like its code, so in
+// every language the button sits at the end of the first line and the code wraps or
+// scrolls clear of it. The button is a quiet icon until it is pointed at, and shows a
+// tick for two seconds once it has copied (vh-general.js).
+.vh-terminal-copy{
+    position: relative;
+    padding-inline-end: 2.25rem;
+}
+
+// Commands one per line, each with its own button: the gap keeps the buttons apart.
+.vh-terminal-copy + .vh-terminal-copy{
+    margin-top: .6rem;
+}
+
+.vh-copy-btn{
+    position: absolute;
+    top: -2px;              // centred on the first line
+    inset-inline-end: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: var(--vh-text-dim);
+    transition: color .2s ease, background-color .2s ease;
+}
+
+.vh-copy-btn:hover,
+.vh-copy-btn:focus-visible{
+    color: var(--vh-text);
+    background-color: var(--vh-surface);
+}
+
+.vh-copy-tick,
+.vh-copied .vh-copy-icon{
+    display: none;
+}
+
+.vh-copied .vh-copy-tick{
+    display: block;
+}
+
+.vh-copy-btn.vh-copied{
+    color: var(--vh-green-ink);
 }
 
 // Reseller hub hero: one key, and the four ways out of it. Brand colours on

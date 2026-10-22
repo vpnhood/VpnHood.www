@@ -1,8 +1,8 @@
 // Documentation pages (_includes/docs.html): the breadcrumb, a sidebar for the
 // section, and a reading column. Tokens only, so the light theme needs no rules of
 // its own but a shadow under a screenshot; logical properties only, so the Persian
-// and Arabic trees flip by themselves. Commands use the .vh-terminal block from the
-// server page.
+// and Arabic trees flip by themselves. Commands sit in _includes/terminal.html, styled in
+// _custom.scss.
 
 .vh-docs{
     padding-top: 8.5rem;    // clear the fixed header: 91px on one row, 136px wrapped
@@ -382,6 +382,48 @@
 
 .vh-docs-article .vh-docs-index p{
     margin: .3rem 0 0;
+}
+
+// The VpnHood! MANAGER promo on a SERVER docs page (_includes/docs-managed.html), right
+// before the standalone steps it offers to replace. Drawn in the brand's violet-to-mint, the
+// rim of the docs art, over a tint of both on an opaque card, with a violet glow: it has to
+// read as the other way to do the job, apart from the notes and steps around it.
+.vh-docs-article .vh-docs-managed{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2.5rem 0 3rem;
+    padding: 1.5rem 1.75rem;
+    border: 1.5px solid transparent;
+    border-radius: 20px;
+    background:
+        linear-gradient(120deg, rgba(var(--purple-300-rgb), .2), rgba(var(--green-300-rgb), .08)) padding-box,
+        linear-gradient(var(--vh-surface-raised), var(--vh-surface-raised)) padding-box,
+        linear-gradient(120deg, var(--purple-300), var(--green-300)) border-box;
+    box-shadow: 0 18px 50px -24px rgba(var(--purple-300-rgb), .6);
+}
+
+.vh-docs-managed-art{
+    flex: none;
+    width: 112px;
+    height: auto;
+}
+
+.vh-docs-article .vh-docs-managed p{
+    margin: 0 0 1.1rem;
+}
+
+.vh-docs-article .vh-docs-managed .vh-docs-managed-title{
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--vh-text);
+}
+
+@media (max-width: 575.98px){
+    .vh-docs-article .vh-docs-managed{ padding: 1.25rem; }
+    .vh-docs-managed-art{ display: none; }
 }
 
 // A note and a warning: an edge in the accent or the warning ink, never a filled

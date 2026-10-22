@@ -1,0 +1,71 @@
+---
+layout: none
+i18n: self_hosted_vpn_docs_how_it_works
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Re-authored from the wiki's How-does-VpnHood-work (docs plan, phase 6), which described the
+  2023 transport: per-stream SOCKS-like proxying with only the TLS Hello encrypted. Checked on
+  2026-10-22 against the VpnHood repo's develop (SERVER v9.0.859; the CLIENT's v8.1.841 tag
+  for what differs): TCP goes as packets by default (the server's TUN adapter and NAT), and
+  one request per connection only in Cloak Mode, on a proxy-only server (Docker) or with
+  split by domain (ClientSession.CalcUseTcpProxy); every byte is inside TLS or QUIC, UDP
+  datagrams are AES-GCM (StreamHeadCryptor went in 2023); framing is WebSocket over TLS;
+  the certificate passes by CA chain for the key's host name or by the key's pinned hash
+  (ConnectorService); DNS is forced into the tunnel by default (SplitDnsMode.IncludeAll);
+  the server refuses its own and local addresses (NetFilter); anything that is not a
+  VpnHood request gets HTTP 401. Not said, on purpose: client platforms by name, the
+  number of packet channels, timeouts.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="self-hosted-vpn/docs/hero-how-it-works.svg" %}
+
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/how-it-works.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/how-it-works-tall.svg %}
+</figure>
+
+<h2 id="device">{{ t.device_title }}</h2>
+<p>{{ t.device_capture }}</p>
+<p>{% include copy.html s=t.device_split %}</p>
+<p>{{ t.device_dns }}</p>
+
+<h2 id="tunnel">{{ t.tunnel_title }}</h2>
+<p>{% include copy.html s=t.tunnel_tls %}</p>
+<p>{% include copy.html s=t.tunnel_cert %}</p>
+<p>{% include copy.html s=t.tunnel_protocols %}</p>
+<p>{{ t.tunnel_probe }}</p>
+
+<h2 id="tcp">{{ t.tcp_title }}</h2>
+<p>{{ t.tcp_packets }}</p>
+<p>{% include copy.html s=t.tcp_cloak %}</p>
+<p>{{ t.tcp_forced }}</p>
+
+<h2 id="udp-and-ping">{{ t.udp_title }}</h2>
+<p>{{ t.udp_desc }}</p>
+
+<h2 id="server">{{ t.server_title }}</h2>
+<p>{{ t.server_adapter }}</p>
+<p>{{ t.server_filter }}</p>
+<p>{% include copy.html s=t.server_ports %}</p>
+<p>{% include copy.html s=t.server_manager %}</p>
+
+<h2 id="access-key">{{ t.key_title }}</h2>
+<p>{% include copy.html s=t.key_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/docker/">{{ t.next_docker }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

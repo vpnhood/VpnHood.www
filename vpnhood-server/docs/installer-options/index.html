@@ -1,0 +1,68 @@
+---
+layout: none
+i18n: vpnhood_server_docs_installer_options
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The install pages are quick starts (owner, 2026-10-22), so the installers' questions and
+  their options for a script live here, and install/ and docker/ link here once. Checked
+  against the v9.0.859 release's VpnHoodServer-linux-x64.sh and VpnHoodServer.docker.sh,
+  which match their sources in the VpnHood repo (pub/lib/vh-installer/linux/,
+  src/Apps/Server/pub/Linux-Docker/). Only the options a reader types: those the Linux
+  installer's -help lists, and the Docker installer's -install-docker and -q (it has no
+  -help). Left out: -packageUrl, -packageFile, -versionTag, -destination and -container,
+  which the updater passes; the Docker installer's -composeUrl and -composeFile; and
+  v9.0.859's -autostart and -autoupdate, which the next release drops. MANAGER's three are
+  named, not explained: MANAGER's command fills them in, and its steps live in its docs.
+  Whole commands are markup; code inside a sentence is a placeholder from _data/code.yml,
+  filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-installer-options.svg" %}
+
+<h2 id="linux">{{ t.linux_title }}</h2>
+<p>{% include copy.html s=t.linux_questions %}</p>
+<table>
+  <thead><tr><th>{{ t.th_option }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><code>-q</code></td><td>{{ t.opt_q }}</td></tr>
+    <tr><td><code>-noautostart</code></td><td>{% include copy.html s=t.opt_no_autostart %}</td></tr>
+    <tr><td><code>-noautoupdate</code></td><td>{{ t.opt_no_autoupdate }}</td></tr>
+    <tr><td><code>-help</code></td><td>{{ t.opt_help }}</td></tr>
+  </tbody>
+</table>
+<p>{{ t.linux_add }}</p>
+{% include terminal.html caption=t.caption_linux cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh) -q"' %}
+<p>{% include copy.html s=t.linux_change %}</p>
+
+<h2 id="docker">{{ t.docker_title }}</h2>
+<p>{% include copy.html s=t.docker_question %}</p>
+<table>
+  <thead><tr><th>{{ t.th_option }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><code>-install-docker</code></td><td>{{ t.opt_install_docker }}</td></tr>
+    <tr><td><code>-q</code></td><td>{% include copy.html s=t.opt_docker_q %}</td></tr>
+  </tbody>
+</table>
+{% include terminal.html caption=t.caption_docker cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh) -install-docker -q"' %}
+
+<h2 id="manager">{{ t.manager_title }}</h2>
+<p>{% include copy.html s=t.manager_desc %}</p>
+
+<h2 id="uninstaller">{{ t.uninstaller_title }}</h2>
+<p>{% include copy.html s=t.uninstaller_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li>{% include copy.html s=t.next_keys %}</li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

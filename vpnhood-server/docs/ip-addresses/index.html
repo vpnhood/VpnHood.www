@@ -11,13 +11,12 @@ extra_css:
   Written for VpnHood! SERVER v9.0.856, checked against the server source in the VpnHood
   repo and the release's own appsettings.json: TcpEndPoints and PublicEndPoints live under
   FileAccessManager, an empty PublicEndPoints is filled by an outgoing lookup, and a
-  wildcard in it stops the server. The managed part names MANAGER's screens as they read,
-  and comes first, before the standalone one, here and everywhere both appear. The screenshot
-  is real app UI, so it has no light variant: MANAGER's own dark theme (it follows the
-  system colour scheme), a test server's Access Points card 800px wide, captured at 2x and
-  cropped below the switch, saved as lossless WebP. Linux and Docker only, and no links to
-  the GitHub wiki. Whole commands and files are markup; code inside a sentence is a
-  placeholder from _data/code.yml, filled in by copy.html.
+  wildcard in it stops the server. A managed server's addresses are its access points in
+  MANAGER, explained with their screenshot on /vpnhood-manager/docs/access-points/, and the
+  MANAGER promo right before the standalone steps links there (owner, 2026-10-22); this page is for a standalone server.
+  Linux and Docker only, and no links to the GitHub wiki. Whole commands and files are
+  markup; code inside a sentence is a placeholder from _data/code.yml, filled in by
+  copy.html.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-server/docs/hero-ip-addresses.svg" %}
@@ -32,21 +31,7 @@ extra_css:
   <li>{% include copy.html s=t.when_lookup %}</li>
 </ul>
 
-<h2 id="managed">{{ t.mgr_title }}</h2>
-<p>{% include copy.html s=t.mgr_where %}</p>
-<figure class="vh-docs-shot">
-  <img src="/assets/images/vpnhood-server/docs/manager-access-points.webp" alt="{{ t.shot_alt }}" width="800" height="355" loading="lazy">
-  <figcaption>{% include copy.html s=t.shot_caption %}</figcaption>
-</figure>
-<p>{% include copy.html s=t.mgr_auto %}</p>
-<p>{{ t.mgr_fields }}</p>
-<ul>
-  <li>{% include copy.html s=t.mgr_mode %}</li>
-  <li>{% include copy.html s=t.mgr_listen %}</li>
-</ul>
-<p>{% include copy.html s=t.mgr_ports %}</p>
-<p>{% include copy.html s=t.mgr_nat %}</p>
-<p>{% include copy.html s=t.mgr_check %}</p>
+{% include docs-managed.html href="/vpnhood-manager/docs/access-points/" %}
 
 <h2 id="standalone">{{ t.file_title }}</h2>
 <p>{% include copy.html s=t.file_desc %}</p>
@@ -54,11 +39,7 @@ extra_css:
   <li>{% include copy.html s=t.file_tcp %}</li>
   <li>{% include copy.html s=t.file_public %}</li>
 </ul>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <p class="vh-terminal-caption">{% include copy.html s=t.caption_file %}</p>
-    <pre dir="ltr"><code>{
+{% include terminal.html caption=t.caption_file code='{
   "FileAccessManager": {
     "TcpEndPoints": [ "0.0.0.0:443", "[::]:443" ],
     "PublicEndPoints": [ "203.0.113.10:443" ],
@@ -69,9 +50,7 @@ extra_css:
     "AddListenerIpsToNetwork": "*"
   },
   "LogLevel": "Information"
-}</code></pre>
-  </div>
-</div>
+}' %}
 <p>{% include copy.html s=t.file_one_ip %}</p>
 <p>{% include copy.html s=t.file_udp %}</p>
 <p>{% include copy.html s=t.file_nat %}</p>
@@ -85,8 +64,8 @@ extra_css:
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
 </ul>
 {% endcapture %}
 {% include docs.html article=vh_article %}

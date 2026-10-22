@@ -12,11 +12,14 @@ extra_css:
   vhsupervisor (no Watchtower container): the install script, compose file and
   Dockerfile in the VpnHood repo (src/Apps/Server/pub/Linux-Docker/,
   src/Apps/Server/Dockerfile), checked against the release's own VpnHoodServer.docker.sh.
-  That script takes the same -httpBaseUrl, -httpAuthorization and -managementSecret as
-  the Linux installer, so the command MANAGER shows for Linux installs a managed
-  container once its script name is changed. A managed server comes first, before a
-  standalone one. No links to the GitHub wiki. Whole commands are markup; code inside a
-  sentence is a placeholder from _data/code.yml, filled in by copy.html.
+  A managed container is installed from MANAGER, whose steps live in its own docs: the
+  MANAGER promo right before the standalone steps links to
+  /vpnhood-manager/docs/add-server/#docker (owner, 2026-10-22), and this page installs a
+  standalone server. It is a quick start (owner, 2026-10-22): the installer's question and
+  its -install-docker and -q live on installer-options/#docker, linked once from the
+  standalone steps. No links to the GitHub wiki.
+  Whole commands are markup; code inside a sentence is a placeholder from
+  _data/code.yml, filled in by copy.html.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-server/docs/hero-docker.svg" %}
@@ -30,39 +33,18 @@ extra_css:
   <li>{% include copy.html s=t.req_udp %}</li>
 </ul>
 
-<h2 id="managed">{{ t.mgr_title }}</h2>
-<p>{% include copy.html s=t.mgr_command %}</p>
-<p>{% include copy.html s=t.mgr_existing %}</p>
-<p>{% include copy.html s=t.mgr_keys %}</p>
+{% include docs-managed.html href="/vpnhood-manager/docs/add-server/#docker" %}
 
 <h2 id="standalone">{{ t.install_title }}</h2>
 <p>{{ t.step_install_run }}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh)"</code></pre>
-  </div>
-</div>
-<p>{% include copy.html s=t.step_install_docker %}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <p class="vh-terminal-caption">{% include copy.html s=t.caption_unattended %}</p>
-    <pre dir="ltr"><code>sudo su -c "bash &lt;( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh) -install-docker -q"</code></pre>
-  </div>
-</div>
+{% include terminal.html cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh)"' %}
+<p>{% include copy.html s=t.step_install_options %}</p>
 <p>{% include copy.html s=t.step_install_storage %}</p>
 
 <h3 id="access-key">{{ t.key_title }}</h3>
 <p>{{ t.step_key_run }}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <pre dir="ltr"><code>sudo docker exec VpnHoodServer /app/vhsupervisor gen</code></pre>
-    <p class="vh-terminal-caption">{{ t.caption_example }}</p>
-    <pre dir="ltr"><code>sudo docker exec VpnHoodServer /app/vhsupervisor gen -name Phone -maxClient 1</code></pre>
-  </div>
-</div>
+{% include terminal.html cmd='sudo docker exec VpnHoodServer /app/vhsupervisor gen'
+  caption2=t.caption_example cmd2='sudo docker exec VpnHoodServer /app/vhsupervisor gen -name Phone -maxClient 1' %}
 <p>{% include copy.html s=t.step_key_same %}</p>
 
 <h2 id="connect">{{ t.connect_title }}</h2>
@@ -70,14 +52,9 @@ extra_css:
 
 <h2 id="manage">{{ t.manage_title }}</h2>
 <p>{% include copy.html s=t.manage_desc %}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <pre dir="ltr"><code>sudo docker logs VpnHoodServer
+{% include terminal.html cmd='sudo docker logs VpnHoodServer
 sudo docker stop VpnHoodServer
-sudo docker start VpnHoodServer</code></pre>
-  </div>
-</div>
+sudo docker start VpnHoodServer' %}
 <p>{% include copy.html s=t.manage_log %}</p>
 
 <h2 id="settings">{{ t.settings_title }}</h2>
@@ -91,21 +68,22 @@ sudo docker start VpnHoodServer</code></pre>
 <p>{% include copy.html s=t.updates_image %}</p>
 <div class="vh-docs-note" role="note"><p>{% include copy.html s=t.updates_old %}</p></div>
 
+<h2 id="uninstall">{{ t.uninstall_title }}</h2>
+<p>{% include copy.html s=t.uninstall_run %}</p>
+{% include terminal.html cmd='sudo docker rm -f VpnHoodServer && sudo docker rmi vpnhood/vpnhoodserver'
+  caption2=t.uninstall_caption_purge cmd2='sudo rm -rf /opt/VpnHoodServer' %}
+
 <h2 id="without-installer">{{ t.manual_title }}</h2>
 <p>{{ t.manual_desc }}</p>
-<div class="vh-terminal rounded-4">
-  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="vh-terminal-body">
-    <pre dir="ltr"><code>sudo docker run -d --name VpnHoodServer --network host --restart always --stop-timeout 30 -v /opt/VpnHoodServer/storage:/app/storage vpnhood/vpnhoodserver</code></pre>
-  </div>
-</div>
+{% include terminal.html cmd='sudo docker run -d --name VpnHoodServer --network host --restart always --stop-timeout 30 -v /opt/VpnHoodServer/storage:/app/storage vpnhood/vpnhoodserver' %}
 <p>{% include copy.html s=t.manual_update %}</p>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
-  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
-  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/">{{ t.next_manager }}</a></li>
 </ul>
 {% endcapture %}
 {% include docs.html article=vh_article %}

@@ -1,0 +1,68 @@
+{%- comment -%}
+  A terminal window: the one way the site shows a command, a file or what a command
+  prints, with a copy button on every command and file. Never hand-write .vh-terminal
+  markup - a command shown any other way has no button.
+
+    {% include terminal.html cmd='sudo /opt/VpnHoodServer/vhserver gen' %}
+    {% include terminal.html caption=t.caption_example cmd='sudo /opt/VpnHoodServer/vhserver gen -name Phone' %}
+
+  A window has up to four parts, drawn top to bottom, and each part any of:
+
+    caption   a line of copy above the part; it goes through copy.html, so it may
+              hold [name] placeholders and links
+    cmd       commands, one per line, each with its own button, so a block of
+              alternatives (status, stop, start) never copies as one
+    code      a file or other text, copied whole with one button
+    output    what a command prints: shown, never copied
+
+  The first part's names are bare; the next ones end in 2, 3 and 4 (caption2, cmd2...),
+  for a second step in the same window.
+
+  Write a command as it is typed - the include escapes it, so <( stays <(. A quoted
+  parameter may hold double quotes and span lines; text with a single quote in it goes
+  through a capture instead:
+
+    {% capture vh_file %}...{% endcapture %}
+    {% include terminal.html caption=t.caption_file code=vh_file %}
+
+  The buttons ship hidden, and vh-general.js shows them and copies. Their two labels
+  fall back to English per key, as theme-toggle.html's do: an unnamed button does not
+  degrade.
+{%- endcomment -%}
+{%- assign vh_term_copy = tc.copy_to_clipboard | default: site.data.i18n.en.chrome.copy_to_clipboard -%}
+{%- assign vh_term_copied = tc.copied_to_clipboard | default: site.data.i18n.en.chrome.copied_to_clipboard -%}
+{%- capture vh_term_btn -%}
+<button type="button" class="vh-copy-btn" data-vh-copy data-vh-label-done="{{ vh_term_copied }}" aria-label="{{ vh_term_copy }}" title="{{ vh_term_copy }}" hidden><svg class="vh-copy-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg><svg class="vh-copy-tick" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></button>
+{%- endcapture -%}
+<div class="vh-terminal rounded-4">
+  <div class="vh-terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="vh-terminal-body">
+{%- for vh_term_i in (1..4) -%}
+  {%- assign vh_term_n = '' -%}
+  {%- if vh_term_i > 1 -%}{%- assign vh_term_n = vh_term_i | append: '' -%}{%- endif -%}
+  {%- assign vh_term_key = 'caption' | append: vh_term_n -%}
+  {%- assign vh_term_part = include[vh_term_key] | strip -%}
+  {%- if vh_term_part != '' %}
+    <p class="vh-terminal-caption">{% include copy.html s=vh_term_part %}</p>
+  {%- endif -%}
+  {%- assign vh_term_key = 'cmd' | append: vh_term_n -%}
+  {%- assign vh_term_lines = include[vh_term_key] | newline_to_br | split: '<br />' -%}
+  {%- for vh_term_line in vh_term_lines -%}
+    {%- assign vh_term_cmd = vh_term_line | strip -%}
+    {%- if vh_term_cmd != '' %}
+    <div class="vh-terminal-copy" dir="ltr"><pre><code>{{ vh_term_cmd | escape }}</code></pre>{{ vh_term_btn }}</div>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign vh_term_key = 'code' | append: vh_term_n -%}
+  {%- assign vh_term_part = include[vh_term_key] | strip -%}
+  {%- if vh_term_part != '' %}
+    <div class="vh-terminal-copy" dir="ltr"><pre><code>{{ vh_term_part | escape }}</code></pre>{{ vh_term_btn }}</div>
+  {%- endif -%}
+  {%- assign vh_term_key = 'output' | append: vh_term_n -%}
+  {%- assign vh_term_part = include[vh_term_key] | strip -%}
+  {%- if vh_term_part != '' %}
+    <pre dir="ltr"><code>{{ vh_term_part | escape }}</code></pre>
+  {%- endif -%}
+{%- endfor %}
+  </div>
+</div>
