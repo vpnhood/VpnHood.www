@@ -17,7 +17,9 @@ extra_css:
   NAT is WinNAT, which translates IPv4 only, so there IPv6 TCP goes by the client's TCP proxy.
   This page is a quick start (owner, 2026-10-22): the installer's two questions and its
   options for a script live on installer-options/, which the standalone steps link to once;
-  Updates says only which answer turns updates off. The uninstaller, vhuninstall, is placed
+  Updates says only which answer turns updates off. Before you start asks only for TCP: apps
+  use TCP unless switched to UDP, so the server's UDP port is on ip-addresses/ (owner,
+  2026-10-22). The uninstaller, vhuninstall, is placed
   beside the launcher since v9.0.856 (and on older servers by their next update); it keeps
   the storage unless -purge. No links to the GitHub wiki. Whole commands are markup; code
   inside a sentence is a placeholder from _data/code.yml, filled in by copy.html.
@@ -48,7 +50,6 @@ extra_css:
   <li>{{ t.req_machine }}</li>
   <li>{{ t.req_admin }}</li>
   <li>{% include copy.html s=t.req_port %}</li>
-  <li>{% include copy.html s=t.req_udp %}</li>
 </ul>
 
 {% include docs-managed.html href="/vpnhood-manager/docs/add-server/" %}

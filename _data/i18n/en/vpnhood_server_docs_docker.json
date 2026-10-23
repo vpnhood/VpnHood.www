@@ -8,7 +8,6 @@
   "req_root": "Root access.",
   "req_docker": "Docker with its compose plugin. The installer can install it for you on Ubuntu, Debian and the distributions based on them.",
   "req_port": "TCP port <code>[server_port]</code> open, both in the machine's firewall and in your hosting provider's. The container shares the host's network, so the server listens on the host's port directly.",
-  "req_udp": "The server's UDP port open the same way, for the devices that use UDP: a closed port leaves them without traffic. The server picks this port at its first start and keeps it in <code>[server_udp_port_file]</code>, and its log names it.",
   "mgr_box_title": "Easily add, manage and monitor your servers with VpnHood! MANAGER",
   "mgr_box_desc": "Instead of running the commands below, let the free web panel install the server's container for you. It issues the access keys, and shows each server's status and what each key uses.",
   "mgr_box_cta": "Add a server with MANAGER",

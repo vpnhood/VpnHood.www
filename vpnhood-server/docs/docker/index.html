@@ -17,7 +17,8 @@ extra_css:
   /vpnhood-manager/docs/add-server/#docker (owner, 2026-10-22), and this page installs a
   standalone server. It is a quick start (owner, 2026-10-22): the installer's question and
   its -install-docker and -q live on installer-options/#docker, linked once from the
-  standalone steps. No links to the GitHub wiki.
+  standalone steps. Before you start asks only for TCP: apps use TCP unless switched to UDP,
+  so the server's UDP port is on ip-addresses/ (owner, 2026-10-22). No links to the GitHub wiki.
   Whole commands are markup; code inside a sentence is a placeholder from
   _data/code.yml, filled in by copy.html.
 {%- endcomment -%}
@@ -30,7 +31,6 @@ extra_css:
   <li>{{ t.req_root }}</li>
   <li>{{ t.req_docker }}</li>
   <li>{% include copy.html s=t.req_port %}</li>
-  <li>{% include copy.html s=t.req_udp %}</li>
 </ul>
 
 {% include docs-managed.html href="/vpnhood-manager/docs/add-server/#docker" %}

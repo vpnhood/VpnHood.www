@@ -5,7 +5,7 @@
   "lead": "Add a server to VpnHood! MANAGER, and MANAGER installs VpnHood! SERVER on it for you, or gives you the one command that does. The server then connects to MANAGER, which issues its access keys.",
   "before_title": "Before you start",
   "req_machine": "A machine with a public IP address, running Linux on x64 or arm64, with root access. The install commands run through sudo, so it has to be on the machine even if you sign in as root.",
-  "req_port": "TCP port <code>[server_port]</code> open, both in the machine's firewall and in your hosting provider's, and the server's UDP port open the same way, for the devices that use UDP: a closed port leaves them without traffic. The UDP port is the <b>[manager_udp_port]</b> of the server's <a href=\"/vpnhood-manager/docs/access-points/\">access point</a>.",
+  "req_port": "TCP port <code>[server_port]</code> open, both in the machine's firewall and in your hosting provider's.",
   "req_ssh": "For MANAGER to install the server over SSH, the machine's SSH port open to MANAGER: <code>[port_ssh]</code>, unless you changed it.",
   "req_docker": "For Docker, Docker with its compose plugin. The installer can install it for you on Ubuntu, Debian and the distributions based on them.",
   "add_title": "Add the server",

@@ -52,9 +52,12 @@ extra_css:
   "LogLevel": "Information"
 }' %}
 <p>{% include copy.html s=t.file_one_ip %}</p>
-<p>{% include copy.html s=t.file_udp %}</p>
 <p>{% include copy.html s=t.file_nat %}</p>
 <p>{% include copy.html s=t.file_restart %}</p>
+
+<h3 id="udp">{{ t.udp_title }}</h3>
+<p>{% include copy.html s=t.file_udp %}</p>
+<p>{{ t.file_udp_port }}</p>
 
 <h2 id="old-keys">{{ t.keys_title }}</h2>
 <p>{{ t.keys_desc }}</p>
