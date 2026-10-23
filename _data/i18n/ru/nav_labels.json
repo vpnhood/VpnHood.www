@@ -3,15 +3,22 @@
   "aria_docs_nav": "Документация",
   "home": "Главная",
   "docs": "Документация",
+  "self-hosted-vpn": "Собственный VPN-сервер",
+  "start-here": "С чего начать",
+  "how-it-works": "Как это работает",
+  "products": "Продукты",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "Быстрый старт",
   "install": "Установка",
   "docker": "Docker",
   "ip-blocking": "Блокировка по IP",
   "reference": "Справочник",
+  "installer-options": "Параметры установки",
   "ip-addresses": "IP-адреса",
   "domain": "Доменное имя",
   "reverse-proxy": "Обратный прокси",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "Сертификаты"
+  "certificates": "Сертификаты",
+  "add-server": "Добавить сервер",
+  "access-points": "Точки доступа"
 }

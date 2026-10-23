@@ -1,0 +1,6 @@
+{
+  "meta_title": "Documentación de VPN autohospedada | VpnHood!",
+  "meta_description": "Cómo crear tu propia VPN con VpnHood: funcionamiento, VpnHood! SERVER en Linux o Docker, y VpnHood! MANAGER, el panel web gratuito para gestionar servidores y claves de acceso.",
+  "title": "Documentación de VpnHood!",
+  "lead": "Todo lo que necesitas para crear tu propia VPN. VpnHood! SERVER gestiona el tráfico de tus usuarios y VpnHood! MANAGER, el panel web gratuito, administra tus servidores. Tus usuarios se conectan con la aplicación <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> y una clave de acceso que tú les proporcionas."
+}

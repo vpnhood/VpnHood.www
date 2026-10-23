@@ -3,15 +3,22 @@
   "aria_docs_nav": "文档导航",
   "home": "首页",
   "docs": "文档",
+  "self-hosted-vpn": "自托管 VPN",
+  "start-here": "新手入门",
+  "how-it-works": "运作原理",
+  "products": "产品",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "快速入门",
   "install": "安装",
   "docker": "Docker",
   "ip-blocking": "IP 封锁",
   "reference": "参考指南",
+  "installer-options": "安装选项",
   "ip-addresses": "IP 地址",
   "domain": "域名",
   "reverse-proxy": "反向代理",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "证书"
+  "certificates": "证书",
+  "add-server": "添加服务器",
+  "access-points": "接入点"
 }

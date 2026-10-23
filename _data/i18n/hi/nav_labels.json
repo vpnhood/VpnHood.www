@@ -3,15 +3,22 @@
   "aria_docs_nav": "दस्तावेज़",
   "home": "होम",
   "docs": "दस्तावेज़",
+  "self-hosted-vpn": "सेल्फ-होस्टेड VPN",
+  "start-here": "यहाँ से शुरू करें",
+  "how-it-works": "यह कैसे काम करता है",
+  "products": "प्रोडक्ट्स",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "शुरुआत करें",
   "install": "इंस्टॉल करें",
   "docker": "Docker",
   "ip-blocking": "IP ब्लॉकिंग",
   "reference": "संदर्भ",
+  "installer-options": "इंस्टॉलर विकल्प",
   "ip-addresses": "IP पते",
   "domain": "डोमेन नाम",
   "reverse-proxy": "रिवर्स प्रॉक्सी",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "प्रमाणपत्र"
+  "certificates": "प्रमाणपत्र",
+  "add-server": "सर्वर जोड़ें",
+  "access-points": "एक्सेस पॉइंट्स"
 }

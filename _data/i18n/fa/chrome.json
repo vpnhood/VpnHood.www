@@ -87,5 +87,7 @@
   "lang_change": "تغییر زبان",
   "theme_switch_to_light": "تغییر به حالت روشن",
   "theme_switch_to_dark": "تغییر به حالت تاریک",
+  "copy_to_clipboard": "کپی در کلیپ‌بورد",
+  "copied_to_clipboard": "در کلیپ‌بورد کپی شد",
   "nav_guides": "راهنماها"
 }

@@ -49,6 +49,8 @@
   "proxy_desc": "Si la IP de conexión se bloquea de todos modos, coloca el servidor detrás de un proxy inverso como Cloudflare. Así, las aplicaciones se conectarán al proxy y la dirección real del servidor no aparecerá en las claves. Que el proxy siga accesible dependerá del país y del proveedor de red.",
   "proxy_how": "<a href=\"/vpnhood-server/docs/reverse-proxy/\">Poner el servidor detrás de un proxy inverso</a> te muestra los pasos a seguir y qué aspectos considerar antes.",
   "next_title": "Pasos siguientes",
-  "next_install": "Instalar VpnHood! SERVER",
+  "next_addresses": "Configura las direcciones IP en las que escucha el servidor y que incluye en sus claves",
+  "next_domain": "Usa un nombre de dominio y un certificado de confianza",
+  "next_proxy": "Coloca tu servidor detrás de un proxy inverso",
   "next_manager": "Administra múltiples servidores y claves desde un panel web con VpnHood! MANAGER"
 }

@@ -87,5 +87,7 @@
   "lang_change": "تغيير اللغة",
   "theme_switch_to_light": "التبديل إلى الوضع الفاتح",
   "theme_switch_to_dark": "التبديل إلى الوضع الداكن",
+  "copy_to_clipboard": "نسخ إلى الحافظة",
+  "copied_to_clipboard": "تم النسخ إلى الحافظة",
   "nav_guides": "الأدلة"
 }

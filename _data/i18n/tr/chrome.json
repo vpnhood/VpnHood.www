@@ -87,5 +87,7 @@
   "lang_change": "Dil değiştir",
   "theme_switch_to_light": "Açık temaya geç",
   "theme_switch_to_dark": "Koyu temaya geç",
+  "copy_to_clipboard": "Panoya kopyalayın",
+  "copied_to_clipboard": "Panoya kopyalandı",
   "nav_guides": "Rehberler"
 }

@@ -2,5 +2,5 @@
   "meta_title": "VpnHood! MANAGER Dokümantasyonu | VpnHood!",
   "meta_description": "VPN sunucularınızı kuran, sunucu çiftliklerinde çalıştıran ve erişim anahtarları oluşturan ücretsiz web paneli VpnHood! MANAGER kullanım kılavuzu.",
   "title": "VpnHood! MANAGER dokümantasyonu",
-  "lead": "VpnHood! MANAGER; sunucularınızı kuran, sunucu çiftliklerinde çalıştıran ve erişim anahtarları oluşturan ücretsiz bir web panelidir. Bu sayfalarda panel arayüzleri açıklanmaktadır. Bir sunucu kurmak için <a href=\"/vpnhood-server/docs/\">VpnHood! SERVER dokümantasyonu</a> ile başlayın."
+  "lead": "VpnHood! MANAGER; sunucularınızı kuran, sunucu çiftliklerinde çalıştıran ve erişim anahtarları oluşturan ücretsiz web panelidir. Bu sayfalarda panel ekranları anlatılmaktadır. İlk sunucunuzu kurmak için <a href=\"/vpnhood-manager/docs/add-server/\">Sunucu ekle</a> bölümünden başlayın."
 }

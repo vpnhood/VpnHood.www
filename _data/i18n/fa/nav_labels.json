@@ -3,15 +3,22 @@
   "aria_docs_nav": "مستندات",
   "home": "خانه",
   "docs": "مستندات",
+  "self-hosted-vpn": "VPN شخصی",
+  "start-here": "از اینجا شروع کنید",
+  "how-it-works": "نحوه کارکرد",
+  "products": "محصولات",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "شروع کار",
   "install": "نصب",
   "docker": "Docker",
   "ip-blocking": "مسدودسازی IP",
   "reference": "مرجع",
+  "installer-options": "گزینه‌های نصب",
   "ip-addresses": "آدرس‌های IP",
   "domain": "نام دامنه",
   "reverse-proxy": "پروکسی معکوس",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "گواهی‌ها"
+  "certificates": "گواهی‌ها",
+  "add-server": "افزودن سرور",
+  "access-points": "نقاط دسترسی"
 }

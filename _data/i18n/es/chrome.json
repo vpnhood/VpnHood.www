@@ -87,5 +87,7 @@
   "lang_change": "Cambiar idioma",
   "theme_switch_to_light": "Cambiar al modo claro",
   "theme_switch_to_dark": "Cambiar al modo oscuro",
+  "copy_to_clipboard": "Copiar al portapapeles",
+  "copied_to_clipboard": "Copiado al portapapeles",
   "nav_guides": "Guías"
 }

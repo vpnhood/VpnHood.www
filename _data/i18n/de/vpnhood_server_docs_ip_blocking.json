@@ -49,6 +49,8 @@
   "proxy_desc": "Wird die Verbindungs-IP dennoch blockiert, schalten Sie einen Reverse-Proxy wie Cloudflare vor Ihren Server. Die Apps verbinden sich dann mit dem Proxy, und die eigentliche Serveradresse bleibt verborgen. Ob der Proxy selbst erreichbar bleibt, hängt vom jeweiligen Land und Netzwerk ab.",
   "proxy_how": "<a href=\"/vpnhood-server/docs/reverse-proxy/\">Server hinter einen Reverse-Proxy schalten</a> zeigt die Einrichtung und was Sie vorher beachten sollten.",
   "next_title": "Nächste Schritte",
-  "next_install": "VpnHood! SERVER installieren",
+  "next_addresses": "IP-Adressen für Server-Verbindungen und Schlüssel festlegen",
+  "next_domain": "Eigene Domain und vertrauenswürdiges Zertifikat nutzen",
+  "next_proxy": "Server hinter einem Reverse-Proxy betreiben",
   "next_manager": "Mehrere Server und Schlüssel bequem über ein Web-Panel mit VpnHood! MANAGER verwalten"
 }

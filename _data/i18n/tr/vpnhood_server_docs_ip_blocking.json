@@ -49,6 +49,8 @@
   "proxy_desc": "Bağlantı IP'si buna rağmen engelleniyorsa, sunucuyu Cloudflare gibi bir ters proxy'nin arkasına alın. Böylece uygulamalar proxy'ye bağlanır ve sunucunun kendi adresi anahtarlarda yer almaz. Proxy'nin erişilebilir kalıp kalmaması ise ülkeye ve ağa bağlıdır.",
   "proxy_how": "<a href=\"/vpnhood-server/docs/reverse-proxy/\">Sunucunuzu bir ters proxy arkasına alın</a> kılavuzunda bunun nasıl yapıldığını ve öncelikle neleri değerlendirmeniz gerektiğini görün.",
   "next_title": "Sonraki adımlar",
-  "next_install": "VpnHood! SERVER Kurulumu Yapın",
+  "next_addresses": "Sunucunun dinleyeceği ve anahtarlara ekleyeceği IP adreslerini belirleyin",
+  "next_domain": "Bir alan adı ve güvenilir bir sertifika kullanın",
+  "next_proxy": "Sunucunuzu bir ters proxy (reverse proxy) arkasına yerleştirin",
   "next_manager": "VpnHood! MANAGER ile birden fazla sunucuyu ve anahtarı tek bir web panelinden yönetin"
 }

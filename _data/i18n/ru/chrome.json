@@ -87,5 +87,7 @@
   "lang_change": "Сменить язык",
   "theme_switch_to_light": "Включить светлую тему",
   "theme_switch_to_dark": "Включить темную тему",
+  "copy_to_clipboard": "Скопировать",
+  "copied_to_clipboard": "Скопировано",
   "nav_guides": "Руководства"
 }

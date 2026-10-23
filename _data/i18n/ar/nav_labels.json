@@ -3,15 +3,22 @@
   "aria_docs_nav": "التوثيق",
   "home": "الرئيسية",
   "docs": "التوثيق",
+  "self-hosted-vpn": "VPN ذاتي الاستضافة",
+  "start-here": "ابدأ هنا",
+  "how-it-works": "كيف يعمل",
+  "products": "المنتجات",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "دليل البدء",
   "install": "التثبيت",
   "docker": "Docker",
   "ip-blocking": "حظر عناوين IP",
   "reference": "المرجع",
+  "installer-options": "خيارات التثبيت",
   "ip-addresses": "عناوين IP",
   "domain": "اسم النطاق",
   "reverse-proxy": "بروكسي عكسي",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "الشهادات"
+  "certificates": "الشهادات",
+  "add-server": "إضافة خادم",
+  "access-points": "نقاط الوصول"
 }

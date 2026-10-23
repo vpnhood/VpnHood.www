@@ -3,15 +3,22 @@
   "aria_docs_nav": "Belgeler",
   "home": "Ana Sayfa",
   "docs": "Belgeler",
+  "self-hosted-vpn": "Kendi Sunucunda VPN",
+  "start-here": "Buradan başlayın",
+  "how-it-works": "Nasıl çalışır?",
+  "products": "Ürünler",
   "vpnhood-server": "VpnHood! SERVER",
   "getting-started": "Başlarken",
   "install": "Kurulum",
   "docker": "Docker",
   "ip-blocking": "IP engelleme",
   "reference": "Referans",
+  "installer-options": "Yükleyici seçenekleri",
   "ip-addresses": "IP adresleri",
   "domain": "Alan adı",
   "reverse-proxy": "Ters proxy",
   "vpnhood-manager": "VpnHood! MANAGER",
-  "certificates": "Sertifikalar"
+  "certificates": "Sertifikalar",
+  "add-server": "Sunucu ekleyin",
+  "access-points": "Erişim noktaları"
 }

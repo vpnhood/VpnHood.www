@@ -2,5 +2,5 @@
   "meta_title": "VpnHood! MANAGER 使用文档 | 科学上网自建首选 VpnHood!",
   "meta_description": "探索 VpnHood! MANAGER 使用教程：免费 Web 控制面板，助您轻松安装管理 VPN 服务器集群、分发访问密钥，实现高效稳定的科学上网。",
   "title": "VpnHood! MANAGER 文档",
-  "lead": "VpnHood! MANAGER 是一款免费的 Web 控制面板，用于安装服务器、管理服务器集群并签发访问密钥。以下内容将带您了解各个控制界面。如需配置服务器，请先参阅 <a href=\"/vpnhood-server/docs/\">VpnHood! SERVER 文档</a>。"
+  "lead": "VpnHood! MANAGER 是一款免费的 Web 控制面板，可用于一键安装服务器、组建服务器集群并分发访问密钥。本文档将带您了解各个功能界面。若要配置您的第一台服务器，请从<a href=\"/vpnhood-manager/docs/add-server/\">添加服务器</a>开始。"
 }

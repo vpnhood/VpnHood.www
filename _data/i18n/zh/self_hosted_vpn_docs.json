@@ -1,0 +1,6 @@
+{
+  "meta_title": "自托管 VPN 文档 | VpnHood! 科学上网指南",
+  "meta_description": "了解如何使用 VpnHood 搭建专属自托管 VPN 科学上网：运行原理、Linux 或 Docker 部署 VpnHood! SERVER，以及使用免费网页控制面板 VpnHood! MANAGER 管理服务器与签发访问密钥。",
+  "title": "VpnHood! 文档",
+  "lead": "搭建自托管 VPN 所需的一切尽在此处。VpnHood! SERVER 承载用户流量，免费网页控制面板 VpnHood! MANAGER 助您轻松管理服务器。用户只需使用您提供的访问密钥，即可通过 <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> 应用一键连接。"
+}

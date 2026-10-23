@@ -1,0 +1,6 @@
+{
+  "meta_title": "Selbstgehostetes VPN – Dokumentation | VpnHood!",
+  "meta_description": "Eigenes VPN mit VpnHood betreiben: Funktionsweise, VpnHood! SERVER unter Linux oder Docker sowie VpnHood! MANAGER zur einfachen Verwaltung und Zugriffsschlüssel-Erstellung.",
+  "title": "VpnHood! Dokumentation",
+  "lead": "Alles, was Sie für Ihr eigenes VPN brauchen. VpnHood! SERVER leitet den Datenverkehr Ihrer Nutzer weiter, während VpnHood! MANAGER als kostenloses Web-Panel die Serververwaltung übernimmt. Ihre Nutzer verbinden sich einfach über die <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> App mit einem von Ihnen bereitgestellten Zugriffsschlüssel."
+}

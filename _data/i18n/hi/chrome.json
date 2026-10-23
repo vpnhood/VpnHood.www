@@ -87,5 +87,7 @@
   "lang_change": "भाषा बदलें",
   "theme_switch_to_light": "लाइट थीम पर स्विच करें",
   "theme_switch_to_dark": "डार्क थीम पर स्विच करें",
+  "copy_to_clipboard": "क्लिपबोर्ड पर कॉपी करें",
+  "copied_to_clipboard": "क्लिपबोर्ड पर कॉपी किया गया",
   "nav_guides": "गाइड्स"
 }

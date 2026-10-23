@@ -49,6 +49,8 @@
   "proxy_desc": "如果连接 IP 依然被封，可将服务器置于 Cloudflare 等反向代理之后。这样应用将直接连接代理节点，服务器真实地址也不会出现在访问凭证中。反向代理本身的可用性取决于当地网络环境。",
   "proxy_how": "查看<a href=\"/vpnhood-server/docs/reverse-proxy/\">将服务器置于反向代理之后</a>，了解配置步骤与关键注意事项。",
   "next_title": "后续步骤",
-  "next_install": "安装 VpnHood! SERVER",
+  "next_addresses": "设置服务器监听及写入访问密钥的 IP 地址",
+  "next_domain": "使用自定义域名与受信任的证书",
+  "next_proxy": "将服务器置于反向代理之后",
   "next_manager": "使用 VpnHood! MANAGER Web 控制面板集中管理多台服务器与密钥"
 }

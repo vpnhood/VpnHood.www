@@ -87,5 +87,7 @@
   "lang_change": "切换语言",
   "theme_switch_to_light": "切换至浅色主题",
   "theme_switch_to_dark": "切换至深色主题",
+  "copy_to_clipboard": "复制到剪贴板",
+  "copied_to_clipboard": "已复制到剪贴板",
   "nav_guides": "使用指南"
 }
