@@ -2,7 +2,7 @@
 
 Marketing site for VpnHood (free, secure, open-source VPN). Static **Jekyll** site ported from a **Helix Ultimate** (Joomla) template: every page is a standalone `index.html` with front matter (`layout: none`) that includes a shared header/footer. The folder path **is** the URL (`free-vpn/download/index.html` → `/free-vpn/download/`); no `.html` URLs, no `permalink:`. The page chrome (`#sp-header`/`#sp-footer`/`.body-wrapper`) and `assets/css/helix-theme.css` are still Helix.
 
-This file is the binding summary. Each section links a doc in `.docs/` with the full explanation, history and troubleshooting — read it before changing that area.
+This file is the binding summary of what every task needs. Each area's rules live in `.claude/rules/` and load on their own when a file of that area is read or edited; each links a doc in `.docs/` with the full explanation, history and troubleshooting — read it before changing that area.
 
 ## Hard rules
 
@@ -18,6 +18,18 @@ This file is the binding summary. Each section links a doc in `.docs/` with the 
 - **Verify both themes after any markup or CSS change**; the dark theme must stay pixel-identical.
 - **`jekyll serve --watch` never reloads `_plugins/`** — restart it after a plugin edit. A `_data` change triggers a full rebuild (~15 s). **Generators must not stamp render-time data onto pages** — that rebuild renders fresh page objects, so the data vanishes in local preview while CI stays green.
 
+## Area rules — `.claude/rules/`
+
+Loaded automatically by file path. When a task touches an area before any of its files has been opened (a question, a plan), read the rule file first.
+
+- [translations.md](.claude/rules/translations.md) — vhtranslator, LRM, spacing inside strings, per-key fallback
+- [css-and-assets.md](.claude/rules/css-and-assets.md) — SCSS layout, vendored framework CSS/JS, fonts, GTM
+- [colour-themes.md](.claude/rules/colour-themes.md) — dark/light tokens, `_light.scss`, theme bootstrap
+- [components.md](.claude/rules/components.md) — FAQ, compare table, prices, code, terminal, locations, MANAGER promo, breadcrumb, CTA tracking, consent
+- [markup-patterns.md](.claude/rules/markup-patterns.md) — section heads, buttons, cards, AOS, mega-menu, anchors
+- [legal-pages.md](.claude/rules/legal-pages.md) — synced from the VpnHood repo, `/legal/` addresses are permanent
+- [china-bar.md](.claude/rules/china-bar.md) — `loc=CN` promo bar
+
 ## Build & deploy — [.docs/build-and-deploy.md](.docs/build-and-deploy.md)
 
 `bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build, swaps any translation that changed a placeholder for its English source (`tools/check-placeholders.py --heal`) and commits the translations back (`[skip ci]`), syncs the legal pages from the VpnHood repo (fail-fast), fails on a self-link (`tools/check-self-links.py`) or on any internal link, anchor or asset that doesn't resolve in any of the 13 trees (`tools/check-links.py`; legal pages only warn), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
@@ -28,56 +40,6 @@ This file is the binding summary. Each section links a doc in `.docs/` with the 
 - Body: `{% include header.html %}` → `{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}` → `<main id="sp-main-body">…</main>` rendering `{{ t.key }}` → `{% include footer.html %}`. Translatable attributes (`alt`, `placeholder`, `aria-label`) use `{{ t.* }}`; `class`/`href`/`data-*` never do. Inline HTML fragments (`<b>…</b>`, a whole `<a>`) may live inside a JSON string.
 - Header/footer/offcanvas text is `{{ tc.* }}` from `_data/i18n/<lang>/chrome.json`, assigned once in `header.html`. Edit chrome copy there, never in the includes.
 
-## CSS — [.docs/css-and-assets.md](.docs/css-and-assets.md)
-
-Framework CSS is vendored: Bootstrap 5.3.3 compiled from `_sass/vendor/bootstrap/` via `assets/css/bootstrap.scss` (variables go in `_sass/vendor/_bootstrap-overrides.scss`), Helix stays the static `helix-theme.css`. Our CSS is SCSS in `_sass/`: `style.scss` on every page (`theme/_default` + `pages/_china-bar` + `pages/_legal` + `theme/_light` **last**), `home.scss` (home), `custom.scss` (content pages), `comparison.scss` (`/free-vpn/comparison/`). Reach for existing classes (`vh-txt-grad-purple-400`, `vh-btn vh-btn-primary`, `section-title`, `section-space`, Bootstrap utilities) before writing CSS; the same visual pattern uses the same class on every page; new rules go in the relevant `_sass/pages/` partial, never inline. `//` comments, kebab-case names.
-
-## Colour themes — [.docs/colour-themes.md](.docs/colour-themes.md)
-
-Dark is the default, light is opt-in via `<html data-theme>`. `_sass/theme/_default.scss` holds the brand ramp and the `--vh-*` tokens; `_sass/theme/_light.scss` holds the **entire** light theme and is imported last, so page partials stay single-theme. Text uses `--vh-accent-ink` / `--vh-green-ink` / `--vh-blue-ink` (4.5:1); fills keep the raw ramp. The theme bootstrap at the top of `header.html` must stay inline and blocking. Preview with `?vh_theme=light|dark`. Never convert anything showing the real app UI to light art.
-
-## Assets — [.docs/css-and-assets.md](.docs/css-and-assets.md)
-
-Everything is under `/assets`. The only vendored framework JS is the stock Bootstrap 5 bundle; **no jQuery**; our scripts are vanilla (`main.js`, `globe.js`, `vh-general.js`, `china-bar.js`, `lang.js`, `theme.js`). Nothing is hot-linked any more: AOS is `assets/css/aos.css` + `assets/js/vendor/aos.js`, and Poppins is self-hosted from `assets/fonts/poppins/` through `assets/css/fonts.css` (regenerate with `python tools/fetch-fonts.py`). GTM renders **only in production** (`jekyll.environment`), so a local serve never reports to the live GA4 property.
-
-## Components — [.docs/components.md](.docs/components.md)
-
-- **FAQ** `_includes/faq.html`: name-keyed pairs (`q_is_open_source`/`a_is_open_source`) in `faqs.json`; **which questions a page shows, and in what order, lives in `_data/faq_sets.yml`** (`set="go_premium"`); per-key English fallback; only `/faq` emits the FAQPage JSON-LD, every other caller passes `schema=false`. Never hand-write accordion markup or FAQ schema in a page.
-- **Compare table** `_includes/compare-table.html`: rendered on `/free-vpn/go-premium/`; strings from `free_vpn_free_vs_premium.json`; feature rows link to their `/features/` pages. Never duplicate the table markup.
-- **Typewriter** `_includes/multi-text-writer.html`: `keys="a,b,c"` from the page's JSON; never hardcode phrases in JS.
-- **Theme toggle** and **language selector** are each rendered twice (header + mobile offcanvas); the second caller **must** pass its own `id`. The selector renders nothing until a second language exists.
-- **Prices** live in `_data/pricing.yml` (one entry per plan, plus the cart URL and product id), read by `/free-vpn/go-premium/`; the sentences around them are translatable templates with `[percent]`/`[amount]`/`[was]`/`[now]`/`[months]`/`[currency]` placeholders. Never put a price in `_data/i18n/` — the translator rewrites those files. Liquid cannot parse `}` inside a quoted string, so placeholders use square brackets.
-- **Code** — a command, path, port or setting name in a sentence — lives in `_data/code.yml` the same way: the copy holds `<code>[name]</code>` and the page renders the string with `{% include copy.html s=t.key %}`, which fills in every name and language-prefixes the internal links. Never write code in `_data/i18n/` — the translator would see it. A whole command stays in the page, in a terminal (below). CI swaps any translation that changed a placeholder for its English source (`tools/check-placeholders.py`).
-- **Terminal** `_includes/terminal.html`: every command, file and command output on the site — `{% include terminal.html caption=t.key cmd='sudo …' %}`. Each command (one per line) and each `code` file gets a copy button; `output` gets none. Write a command as it is typed; the include escapes it. Never hand-write `.vh-terminal` markup — a command shown any other way has no copy button.
-- **Locations** live in `_data/locations.yml` (tier, continent, lat/lng) with names in `_data/i18n/en/locations.json`; `/free-vpn/locations/`, the `/free-vpn/` map, the home flag strip, the home globe dots and both comparison tables all read from it. Land dots for the globe and the map come only from `python tools/make-land-dots.py`. Never hardcode a country, a flag or a count, and never write the **exact total**: pages say "more than 15 countries" / `15+` through `vh_loc_more` (list size minus one), so the claim stays true as the list grows. The **free** count is stated exactly, on purpose. The only literal numbers are the locations page's meta title and description.
-- **MANAGER promo** `_includes/docs-managed.html`: MANAGER's steps live only in the MANAGER docs (owner, 2026-10-22). A SERVER docs page with a MANAGER counterpart shows only a standalone server's steps, and puts this card right before its `<h2 id="standalone">` — never at the top of the page — with `href=` the MANAGER page; its copy is the page's `mgr_box_title`, `mgr_box_desc` and `mgr_box_cta`, benefit first ("Easily add, manage and monitor…"). Never write MANAGER steps into a server page.
-- **Breadcrumb** `_includes/breadcrumb.html`: the trail from `vh_base_url`, each segment named by its key in `nav_labels.json` (per-key English fallback, then the slug); always emits the BreadcrumbList JSON-LD, and the visible trail only with `visible=true` (docs pages). The docs sidebar names a page by the same key, so the two always agree.
-- **CTA tracking**: `data-vh-track="<place>-<action>"` on a link pushes `vh_cta_click` to `dataLayer`; GTM forwards it to GA4 (setup in the doc). Tag a new CTA rather than adding a second listener.
-- **Analytics consent**: in the EU/EEA, the UK and Switzerland GTM loads only after the cookie banner's Accept; elsewhere at once, with no banner. Never load GTM or another tracker outside `vhLoadGtm` in `header.html`.
-- `header.html` / `footer.html` are shared by every page — make edits there deliberate.
-
-## Translations — [.docs/translations.md](.docs/translations.md)
-
-Strings are translated by `vhtranslator` (`vh_translator/vhtranslator.json`, 12 languages, incremental via the committed watches); pages are cloned per language at build time by `_plugins/i18n-pages.rb` (opt out with `translate: false`). Fixes to a translation go in `vh_translator/prompt.txt` or `prompts/<lang>.prompt.txt`, never in the generated folder. **Never put an LRM in English source** — use `dir="ltr"` on the element. **Never encode spacing inside a string** (a `<span class="mx-3">` between two words, a padding `&nbsp;`) — words are separated by real spaces and the gap belongs in CSS, or the browser joins Arabic/Persian glyphs straight across the inline boundary; decorative `letter-spacing`/`word-spacing` is always `calc(<value> * var(--vh-tracking))`, which folds to 0 for the connected scripts (`fa`, `ar`, `hi`). A new key renders blank in other languages until CI translates it, so an include that reads data falls back per key (`{{ t.x | default: t_en.x }}`), as `faq.html`, `compare-table.html` and the chrome do. Keep `vh_translator/prompt.txt` short — it is sent with every batch in every language — and prefer a data file or a key name to a new rule. Preview with `?vh_lang=fa`.
-
-## Legal pages — [.docs/legal-pages.md](.docs/legal-pages.md)
-
-Source of truth is `docs/legal/end-user/` in the `vpnhood/VpnHood` repo (`develop`); CI `curl`s the `.md` into `_includes/legals/` (fail-fast, plus a weekly cron). The wiki keeps only redirect stubs — never fetch from it. Pages render through `legal-page.html`. English only, never `vh_base`-prefixed. Every document lives at `/legal/<scope>/<document>/` (`/legal/vpnhood-connect/privacy-policy/`); those addresses are printed in apps and stores, so a `/legal/` segment is never renamed or reused, and a retired one keeps its plugin stub and Cloudflare 301 forever.
-
 ## Blog
 
 The blog is a separate project (`vpnhood/VpnHood.Blog`), to be published on its own subdomain; nothing in this repo builds it. Its old `/blog/` URLs here are retired stubs in `_plugins/legacy-redirects.rb`.
-
-## China promo bar — [.docs/china-bar-geo.md](.docs/china-bar-geo.md)
-
-`assets/js/china-bar.js` injects the bar only when the Cloudflare apex reports `loc=CN`; nothing CN-specific is in the static HTML. Preview with `?geo=CN`. Works only behind Cloudflare — `/cdn-cgi/trace` 404s on localhost and raw github.io.
-
-## Markup patterns
-
-- Section head: `<div class="section-start-text" data-aos="fade-up">` → `<div class="section-label"><p class="vh-txt-grad-purple-400">eyebrow</p></div>` → `<h2 class="section-title vh-txt-grad-purple-400">` → `<p class="section-desc">`. Keep the outline honest: one H1, no skipped levels.
-- Buttons: `vh-btn vh-btn-primary` / `vh-btn-secondary`; text buttons `vh-text-btn vh-txt-purple-300`. Cards: `vh-card-dark vh-feature-panel` with an `_includes/icons/*.svg` in `.vh-feature-icon`.
-- Animations are AOS (`data-aos`, `data-aos-delay`), started by the `vhPlayAnimate` event in the footer.
-- Desktop mega-menu opens on CSS hover (a 72px hover bridge spans the gap from the nav pill to the panel) or keyboard focus (`vh-general.js` sets `.vh-mega-hold` while anything in the item has `:focus-visible`, holds it 250ms after the pointer leaves, and closes it on Escape). The Free VPN and Self-Hosted labels are links to their hub pages; Resources has no hub, so its label is a `<button>`. The mobile menu is Bootstrap Offcanvas + Collapse; the FAQ accordion is Collapse.
-- In-page anchor targets need `scroll-margin-top` — `#sp-header` is fixed and up to 136px tall (91px on one row; the pill uses 10px item padding and the header chip is globe-only so all languages fit from 1400px up, and below 1400px the header reclaims the side margins so most still fit down to 1200px). `#compareTable` and `#faq` already have it in `_default.scss`.
-- External `target="_blank"` links announce the new tab (`{{ tc.new_tab }}` in a `.visually-hidden` span).
-- Local builds render absolute URLs as `http://localhost:4000`; don't "fix" them.
