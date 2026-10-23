@@ -145,18 +145,17 @@
     line-height: 1.75;
 }
 
-.vh-docs-lead{
-    font-size: 1.15rem;
-}
-
 // The top of a docs page (_includes/docs-hero.html): the title and the lead, with the
 // page's hero art beside them from a tablet up. On a phone the art steps aside, so the
-// title and the steps start where they always did.
+// title and the steps start where they always did. A hairline closes it, so the lead
+// reads as the page's introduction rather than its first paragraph.
 .vh-docs-hero{
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--vh-hairline);
 }
 
 .vh-docs-hero-text{
@@ -164,8 +163,20 @@
     min-width: 0;
 }
 
+// The lead: larger and lighter than the body copy, in the headings' ink, and set closer,
+// as a larger size wants
 .vh-docs-article .vh-docs-hero-text .vh-docs-lead{
     margin-bottom: 0;
+    color: var(--vh-text);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-wrap: pretty;
+}
+
+// The hairline above is its space already
+.vh-docs-article .vh-docs-hero + h2{
+    margin-top: 0;
 }
 
 .vh-docs-hero-art{
