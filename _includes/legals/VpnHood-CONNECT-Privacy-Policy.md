@@ -1,14 +1,16 @@
 # VpnHood! CONNECT - Privacy Policy
 
-*Effective: 2026-08-31.*
+*Effective: 2026-10-11.*
 
 **OmegaHood LLC** ("we", "us", or "our") is the controller of the data described in this policy. This policy applies to the official **VpnHood! CONNECT** app and to the VPN servers we operate. Unlike VpnHood! CLIENT, CONNECT comes with its own built-in access and does not let you add another provider's server, so the servers you use are ours and this policy covers them.
 
 This policy describes what the app collects, what it never collects, and what our servers record. We do not use or share your information except as described here.
 
+We never sell your data on any platform. In the App Store build, none of it reaches a third party at all, except where a legal obligation described below requires it.
+
 ## What VpnHood! CONNECT Collects
 
-Except on iOS, the app can collect **pseudonymous usage and diagnostic data** and send it to Google Analytics through Firebase. It is linked to the Client ID described below, not to your name or contact details. Examples are how often the app is launched, which screens are used, the operating system version, connection results, and the technical text of error messages. The iOS build does not load Google Analytics or Firebase and does not offer Firebase-based report uploads.
+Except on iOS, the app can collect **pseudonymous usage and diagnostic data** and send it to Google Analytics, through Firebase on the Google Play build. It is linked to the Client ID described below and, on the Google Play build, to your device's advertising ID, not to your name or contact details. Examples are how often the app is launched, which screens are used, the operating system version, connection results, and the technical text of error messages. While analytics is on, our VPN servers also report the usage of your connections to Google Analytics, linked to the same Client ID. The iOS build does not load Google Analytics or Firebase, and its connections are not reported.
 
 Some data depends on **where you installed the app from**, because those builds contain different components:
 
@@ -17,8 +19,7 @@ Some data depends on **where you installed the app from**, because those builds 
 | Pseudonymous analytics | no | yes | yes | yes |
 | Crash reports | no | no | yes | no |
 | Advertisements | no | no | yes | no |
-| Optional sign-in and purchases | yes | no | yes | no |
-| Install attribution | no | no | no | in China only |
+| Optional sign-in and purchases | yes | yes | yes | yes |
 
 ### Your Client ID
 
@@ -26,86 +27,97 @@ The app identifies itself with a **Client ID**. It is never your device's serial
 
 What that underlying value is depends on your platform:
 
-- **iOS and Linux** — a random value created inside the app on first launch, so deleting and reinstalling the app produces a brand-new Client ID.
-- **Android and Windows** — derived from an identifier the operating system already provides, so it **stays the same if you reinstall the app**. On Android it changes when the device is factory reset; on Windows it follows your Windows user account.
+- **Android** — derived from the Android ID, a value Android gives the app, so it **stays the same if you reinstall the app** and changes when the device is factory reset.
+- **iOS, Windows, and Linux** — a random value created inside the app when it first runs. On iOS, deleting and reinstalling the app produces a brand-new Client ID; on Windows and Linux it is kept with the app's data, so updating or reinstalling the app keeps it. A Windows installation updated from an earlier version keeps the Client ID it had, which was derived from your Windows user account.
 
 The Client ID labels analytics on builds that support analytics and is sent to our VPN servers for session management, quotas, and abuse prevention.
 
 ### You can turn analytics off
 
-On builds that support analytics, it is controlled by **Settings → Privacy → "Share anonymous usage data"** in the app. It is on by default; turning it off stops analytics events **and crash reports** from being sent, takes effect immediately, and is remembered for later launches. Turning it off also disables in-app bug-report and feedback sending, since those use the same channel. The iOS build has no analytics collection to turn on.
+On builds that support analytics, it is controlled by **Settings → Privacy → "Share anonymous usage data"** in the app. It is on by default, except in the European Economic Area, the United Kingdom and Switzerland, as your device's region setting or your connection tells: there it stays off until you agree, and the app asks you once, with a box you tick yourself. Turning it off stops analytics events **and crash reports** from being sent, takes effect immediately, and is remembered for later launches; what our VPN servers report stops from your next connection. Turning it off also keeps the ratings you give in the app out of the analytics; your last rating, without any text you added, still reaches our servers with your next connection, so the app stops asking for one (see [Log Data](#log-data-our-vpn-servers)). The iOS build has no analytics collection to turn on.
 
 ### Technical information
 
 On builds with analytics, when analytics is on, the following is collected:
 
 - Client ID (the identifier described above)
+- Your device's advertising ID, on the Google Play build, so Google can tell which of our ad campaigns an install came from; you can reset or delete it in your device's ads settings
+- Where the app was installed from, on the Google Play build: the store listing or link that led to the install
 - VpnHood version
-- Country (derived by Google from the connection, not reported by the app)
+- Country, from your device's region setting or your connection — never a precise location
 - Language
 - OS name and version
 - Device model (if applicable)
 - Device architecture and browser engine
 - Session start time and duration, and the app screens you visit
 - Connection results — the server location you chose, whether the connection succeeded, and the server address used
-- The amount of traffic (bytes sent and received) and the number of connections, reported periodically while connected
+- Usage totals: the amount of VPN traffic and the number of connections, never what they carried; our VPN servers report them too, with the server used and the access key's identifier and name
+- Ad results, on the Google Play build: which ad network served an ad, and whether it was shown, clicked, closed, or failed
+- A rating you give in the app, with any text you add
 - Error messages shown by the app (their English technical text)
 
 ### Crash reports (Google Play build)
 
 The Google Play build sends automatic crash reports through Google Firebase Crashlytics. A crash report contains the technical details of the failure and device information; it never includes your browsing activity or the content of your traffic.
 
-Crash reports follow the same switch as analytics, and your choice is remembered from one launch to the next. The single exception is the very first start of a fresh install: the crash handler has to be in place before your settings can be read, so a crash during that first startup — exactly the kind we most need to fix — is still reported.
+Crash reports follow the same switch as analytics, though turning it off takes effect for them the next time the app starts. Your choice is remembered from one launch to the next.
 
 ### Advertisements (Google Play build)
 
-The Google Play build shows advertisements, including rewarded ads you may choose to watch to extend a session. Ads are delivered by **Google AdMob**, which collects its own data under Google's policies to select and measure ads. Advertising is not part of the pseudonymous analytics above and is not controlled by the analytics switch. Ads are not shown in every country. You can limit ad personalisation in your Google account settings and in your device's ads settings.
+The Google Play build shows advertisements, including rewarded ads you may choose to watch to extend a session. Ads are delivered by **Google AdMob**, which collects its own data under Google's policies to select and measure ads. AdMob's own data collection is not controlled by the analytics switch; the ad results our analytics record (above) are. Ads are not shown in every country. You can limit ad personalisation in your Google account settings and in your device's ads settings.
 
-### Optional sign-in and purchases (App Store and Google Play builds)
+In the European Economic Area, the United Kingdom and Switzerland, the app first asks you, in Google's own form, whether AdMob may use your data for ads, such as to personalise them. If you say no, you still see ads, but they are not personalised. You can change your answer at any time in **Settings → Privacy → Ad privacy choices**.
 
-You can use the app without an account. Signing in is only ever needed to buy or restore a subscription, and each build offers the one sign-in its platform provides:
+### Optional sign-in and purchases
+
+You can use the app without an account. Signing in is only ever needed to buy or restore a subscription. Every build can sign in with an email address and a password on our account website, and the store builds also offer their platform's own sign-in:
 
 - **App Store build (iOS)** — **Sign in with Apple**. We receive your **email address**, which may be a private relay address that Apple generates for you (`…@privaterelay.appleid.com`) if you choose to hide your real one; a relay address works exactly as well for us. Payments are processed by **Apple**; we never see your card details.
 - **Google Play build (Android)** — **Sign in with Google**. We receive your **email address and basic public profile information** from Google. Payments are processed by **Google Play**; we never see your card details.
+- **Windows, Linux, and our website's Android build** — the email address and password of your account on our website. The app lists the plans and you buy on our website, where payments are processed by our payment providers; we never see your card details.
 
-Either way we store that email address with your account so your subscription follows you across your devices, and you can delete it at any time — see [Delete Your Account](#delete-your-account). The Windows and Linux builds have no sign-in and no in-app purchases.
+In every case we store that email address with your account so your subscription follows you across your devices, and you can delete it at any time — see [Delete Your Account](#delete-your-account).
 
-### Install attribution (website build for Android, China only)
+When the app talks to our account website, the website logs each request with its time and your IP address, and keeps that log for **30 days** to protect sign-in against abuse and to look into faults. The website also keeps your account's history — your sign-ins and the changes made to the account, each with its time and IP address — for as long as the account exists; deleting the account erases it.
 
-The Android build downloaded from our website contains **AppsFlyer**, which tells us which campaign or link an install came from — necessary where Google Play is unavailable. It starts **only if your device region is China**; everywhere else it is skipped and sends nothing. Advertising identifiers are explicitly disabled for it. The App Store, Google Play, Windows, and Linux builds do not contain it.
+When you write to our support, we keep your messages, with your email address and the IP address you wrote from, to answer you and to look back on earlier requests. Deleting your account deletes them, including those you sent from its email address without signing in.
 
 ## Log Data (our VPN servers)
 
 When you connect, our servers record what any VPN server must see to run the service:
 
 - Your Client ID and the access your app uses to connect
-- The technical information listed above
+- Your app version, operating system and browser engine, the server location you chose, and the country we look up from your IP address
+- The rating you last gave in the app, if any, without its text, so the app stops asking for one
 - The amount of traffic (bytes sent and received), used for accounting and quotas
-- Your email address, if you have signed in
-- Your IP address and connection activity — the time and your client endpoint (IP address & port) — kept in server log files for **30 days** from the moment each entry is written, then deleted. These log files are never backed up. If our hosting provider forwards a "Notice of Claimed Infringement," we use them to trace the connection back to whoever made it, so we can notify or suspend them. Free use has no account behind it to suspend, so there the address itself is the only thing that lets us stop the abuse — which is why we keep it.
+- Your IP address and connection activity — the time, your client endpoint (IP address & port), and the port each connection goes to — kept in server log files for **30 days** from the moment each entry is written, then deleted. These log files are never backed up. If our hosting provider forwards a "Notice of Claimed Infringement," we use them to trace the connection back to whoever made it, so we can notify or suspend them. Free use has no account behind it to suspend, so there the address itself is the only thing that lets us stop the abuse — which is why we keep it.
 
 **One exception to the 30 days.** If we receive a legal preservation request, or a claim we have to defend, the records it covers stop expiring until the matter is resolved. That is the only thing that keeps an entry past its 30 days, and it applies whether or not the account behind it still exists — destroying records after being formally put on notice is not something we are permitted to do.
 
-**Important!** We do not record your browsing. Our servers never inspect your traffic for the domains or URLs you visit, and we do not record the addresses your connections go to. There is nothing about your destinations to log, store, or hand over. Our code is open source, so you can verify this for yourself.
+**Important!** We do not record your browsing. Our servers never inspect your traffic for the domains or URLs you visit, and we do not record the addresses your connections go to: the connection records above keep a connection's port and, in place of its address, a token that cannot be turned back into it, like those in the diagnostic logs below. Our code is open source, so you can verify this for yourself.
 
-**Diagnostic logs.** Apart from the connection records above, our servers keep technical logs used to find faults — failed connections, protocol errors, and the like. These are kept for **14 days** from the moment each entry is written, then deleted, and they are never backed up.
+**Diagnostic logs.** Apart from the connection records above, our servers keep technical logs used to find faults — failed connections, protocol errors, and the like. These are kept for **30 days** from the moment each entry is written, then deleted, and they are never backed up. They also note each session you start, with your IP address, as the connection records do.
 
-Network addresses inside them are not written down as addresses. Each one is replaced by a short token produced with a random key that is created when the server process starts, exists only in memory, and is never saved anywhere. The same address gives the same token while that process runs, which is what lets an engineer follow one connection through a file; when the process stops, the key ceases to exist, so nothing afterwards can turn a token back into an address — not us, not anyone we hand a file to. Tokens from two different runs cannot be matched to each other either. Addresses that identify nobody are left readable, because they help us diagnose faults and reveal nothing: loopback and private-range addresses, which belong to a machine's own network and point at no one on the internet.
+Other network addresses in them are replaced by tokens that nobody, including us, can turn back into addresses. Local network addresses stay readable, as they identify nobody.
 
 When you use the **Split Domain** feature, the app reads domain names on your device to decide which traffic to send through the VPN. That happens inside the app, on your device, and is never sent to us.
 
-Connection activity stays only in server log files; it never enters our database. Our database stores the technical information associated with your Client ID, and your email address if you signed in.
+Connection activity stays only in server log files; it never enters our database. Our database keeps the rest of what is listed at the start of this section, linked to your Client ID. We also count these records together to see how the service is used, on every platform, iOS included; that stays with us and is shared with no one.
 
 ## Delete Your Account
 
 If you have signed in, you can permanently delete your account at any time:
 
 - **In the app**: Account page → **Delete my account**.
-- **Without the app**: follow the steps on our [account deletion page](https://www.vpnhood.com/user-account-deletion-request).
+- **Without the app**: follow the steps on our [account deletion page](https://www.vpnhood.com/user-account-deletion-request/).
+- **By email**: if you can do neither — you only ever signed in in the app, so our website has no
+  password for you — write to **[legal@vpnhood.com](mailto:legal@vpnhood.com)** from the address you
+  sign in with, and we delete the account for you.
 
 Deletion applies everywhere at once: you are signed out on all devices, your sign-in identity and
 email address are erased, and there is no way to restore the account — signing in again later
-creates a new, empty one. Premium granted by the account ends with it on every device. A premium
+creates a new, empty one. Premium granted by the account ends with it on every device; a device
+that is offline or not in use at the time notices the next time it reaches our account website. A premium
 code you bought is still yours — it keeps working until the period you paid for ends, and anyone
 you shared it with is unaffected — but a code the account had applied for you leaves your devices
 together with the account: enter it again, or import it into a new account, to keep using it. A
@@ -131,31 +143,32 @@ What deletion does **not** do:
   change that — cancel the subscription in the store if you do not want it back.
 - It does not erase invoices, and does not strip the name off them. We are legally required to
   keep financial records, and a financial record has to say who bought — so invoices keep the name
-  they were issued with, frozen exactly as issued. They are kept because tax law requires it, for
+  they were issued with. They are kept because tax law requires it, for
   as long as that law requires, and are used for nothing else: not for support, not for marketing,
-  only to satisfy that legal obligation.
-- **It does not erase everything the same instant.** Residual copies may remain for up to **30 days**
-  after deletion, after which they expire: connection records already written to our server log
-  files run out their own 30 days, and our database backups roll over within the same period.
-  Records held under a legal preservation request are the one exception, and are kept until the
-  matter is resolved.
+  only to satisfy that legal obligation. The notices our payment processors send us about a
+  payment are kept with its invoice, for the same reason and as long.
+- **It does not erase everything the same instant.** Connection records already written to our
+  server log files run out their own 30 days, and residual copies may remain in our backups and
+  system logs for a limited period. Records held under a legal preservation request are kept until
+  the matter is resolved.
 
 Companies that processed your data in their own right — your sign-in provider, the app store that
 billed you, and payment processors — retain their own records under their own published policies.
 
-Separately from deletion: if we process a refund for a purchase made **on our website**, we keep an
-anonymous one-way hash of the refunded account's email address for up to **24 months**, used only to
-evaluate future refund requests (fraud prevention). It cannot be turned back into your address and
-survives account deletion. Refunds of app-store purchases are decided by the store and leave no such
+Separately from deletion: if we refund a purchase made **on our website** in full, we keep a
+pseudonymous one-way hash of the refunded account's email address for up to **24 months**, used only
+to evaluate future refund requests (fraud prevention). It is a one-way hash: it cannot be turned back
+into your address, but checked against a given address it shows whether that address was refunded
+before. It survives account deletion. Partial refunds
+are not recorded, and refunds of app-store purchases are decided by the store and leave no such
 record with us.
 
 ## Service Providers
 
 These companies process data on our behalf or in their own right, and only for the purposes described above:
 
-- **Google LLC** — Google Analytics/Firebase (pseudonymous analytics, non-iOS builds), Firebase Crashlytics (crash reports, Google Play build), Firebase storage (reports and ratings you send from non-iOS builds), AdMob (advertising, Google Play build), and Google Sign-In and Google Play billing (optional accounts and purchases, Google Play build)
+- **Google LLC** — Google Analytics, through Firebase on the Google Play build (pseudonymous analytics and ratings, non-iOS builds, and the advertising ID, Google Play build), Firebase Crashlytics (crash reports, Google Play build), Google Forms (feedback you choose to send), AdMob (advertising, Google Play build), and Google Sign-In and Google Play billing (optional accounts and purchases, Google Play build)
 - **Apple Inc.** — Sign in with Apple and App Store billing (optional accounts and purchases, App Store build)
-- **AppsFlyer** — install attribution, website build for Android only
 - **Hosting and payment providers** — infrastructure needed to run the VPN and account services, and payment processing for website purchases
 
 They are obliged not to use the data for any purpose other than the one we assign them, except where they act as independent controllers under their own published policies (advertising and payments).
@@ -165,13 +178,13 @@ They are obliged not to use the data for any purpose other than the one we assig
 Where data-protection law requires a legal basis, we rely on:
 
 - **performance of a contract** to provide VPN sessions, accounts, subscriptions, support, and purchases you request;
-- **consent**, where the law requires it, for analytics, crash reports, and the reports you choose to send; you may withdraw it at any time by turning analytics off. Where the law permits opt-out analytics instead, we rely on the legitimate interests below;
-- **legitimate interests** in securing the Service, enforcing quotas, preventing fraud and abuse, diagnosing faults, and improving reliability; and
+- **consent**, where the law requires it, for analytics and crash reports, and for AdMob's use of your data for ads; you may withdraw it at any time by turning analytics off, or under Ad privacy choices. Where the law permits opt-out analytics instead, we rely on the legitimate interests below;
+- **legitimate interests** in securing the Service, enforcing quotas, preventing fraud and abuse, diagnosing faults, improving reliability, and counting from our servers' own records how the Service is used; and
 - **legal obligations and legal claims** for tax and accounting records, lawful requests, preservation duties, and establishing, exercising, or defending claims.
 
 ## How Long We Keep Data
 
-Connection logs are kept for 30 days and diagnostic server logs for 14 days, subject to the legal-preservation exception described above. Account information is kept while the account exists and is deleted as described under "Delete Your Account"; backups roll over within 30 days. Invoices are kept for the period required by tax law, and the refund-prevention hash described above is kept for up to 24 months. Analytics is kept under the retention setting configured for our Google Analytics property and is then deleted or aggregated. A report or message you send is kept until the issue is resolved and then only as long as reasonably needed for support, security, or a legal claim.
+Connection logs, diagnostic server logs and the account website's request log are kept for 30 days, subject to the legal-preservation exception described above. Account information is kept while the account exists and is deleted as described under "Delete Your Account". Invoices are kept for the period required by tax law, and the refund-prevention hash described above is kept for up to 24 months. Analytics is kept under the retention setting configured for our Google Analytics property and is then deleted or aggregated. Feedback, a message, or a log you send us is kept until the issue is resolved and then only as long as reasonably needed for support, security, or a legal claim.
 
 ## International Transfers
 
@@ -189,11 +202,11 @@ The `QUERY_ALL_PACKAGES` permission is used to allow the user to select which ap
 
 Our services are not directed to anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If we discover that a minor has provided us with personal information, we immediately delete it from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take the necessary actions.
 
-## Client Feedback & Bug Report
+## Client Feedback & the App's Log
 
-On builds where in-app reporting is available, the app lets you send us feedback, a rating, or a diagnostic log file to help solve technical issues. **Nothing is ever sent automatically** — a report leaves your device only when you press the send button. An email field is optionally available if you would like a response from us. Firebase-based report sending is not available in the iOS build.
+Sending feedback opens our feedback form, on Google Forms, in your browser. The app keeps a diagnostic log file on your device and sends it nowhere: you can read it in the app and share it yourself, for example with our support, to help solve a technical issue.
 
-The log file contains basic technical information and never the content of your traffic. Network addresses in it — yours, and those of the servers your device connected to — are replaced by tokens the same way as on our servers, using a key created inside the app that is never saved and never sent with the file, so the copy you send us cannot be turned back into addresses by us or by anybody else. Local network addresses stay readable, as they identify nobody. If you switch on verbose diagnostics yourself while reproducing a problem, the file can additionally contain host names in a shortened form.
+The log file contains basic technical information and never the content of your traffic. Network addresses in it — yours, and those of the servers your device connected to — are replaced by tokens that nobody, including us, can turn back into addresses. Local network addresses stay readable, as they identify nobody. If you switch on verbose diagnostics yourself while reproducing a problem, the file can additionally contain host names in a shortened form.
 
 ## Changes to This Privacy Policy
 
