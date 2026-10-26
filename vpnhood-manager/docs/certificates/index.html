@@ -18,8 +18,9 @@ extra_css:
   higher; every non-DomainOnly certificate goes to its servers whatever its visibility, and
   a server picks one by SNI; the token carries the PublicInToken certificate's name and
   hash, with IsValidHostName from its CA signature; a self-signed token certificate needs a
-  PublicInToken address; Push token to clients sends keys only while a farm server has a
-  PublicInToken address; Priority only orders redirect domains; AutoSign uses Let's Encrypt
+  PublicInToken address; Push token to clients sends a key that carries only the domain when
+  an app connects, and one with addresses once every server in it is ready (the agent's
+  197dffdd, on production since 4.0.419); Priority only orders redirect domains; AutoSign uses Let's Encrypt
   over HTTP-01 on port 80 through any farm server, MANAGER checks the token first, renews 30
   days before expiry on a daily job, and falls back to Manual after six failures in a row.
   Its screenshots are the MANAGER docs test farm as it is (Vh/.user/docs/

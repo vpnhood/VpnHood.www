@@ -14,8 +14,9 @@ extra_css:
   and checked against its source:
   Automatic Configuration is on for every new server and locks the list; Mode decides who
   gets an address and Listen whether the server listens on it; MANAGER builds a farm key
-  with no address only from a validated certificate; Push token to clients sends keys only
-  while a farm server has a PublicInToken address. The screenshots are real app UI, so they
+  with no address only from a validated certificate; Push token to clients sends a key that
+  carries only the domain when an app connects, and one with addresses once every server in
+  it is ready (the agent's 197dffdd, on production since 4.0.419). The screenshots are real app UI, so they
   have no light variant: MANAGER's own dark theme, a test server's Access Points card 800px
   wide, captured at 2x and cropped below the switch; the second has its addresses set to
   Private, with numbered markers matching the steps above it (owner, 2026-10-19). How to
