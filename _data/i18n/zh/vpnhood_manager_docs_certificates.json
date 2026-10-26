@@ -46,7 +46,7 @@
   "upload_farm": "上传的证书默认供整个集群使用，即使从单个服务器页面上传也是如此。如需仅限单台服务器使用，可在上传后修改其 <b>[manager_used_by]</b>。",
   "keys_title": "密钥中的证书",
   "keys_carry": "集群密钥包含其 <b>[manager_public_in_token]</b> 证书的域名和指纹。若是 <b>[manager_ca_signed]</b> 证书，应用会解析该域名并接受任何由权威机构签名的证书；若是 <b>[manager_self_signed]</b> 证书，应用仅接受该特定证书，且必须有服务器地址才能连接：此时 MANAGER 要求集群中至少有一台服务器配置了 <b>[manager_public_in_token]</b> 地址。",
-  "keys_change": "将 <b>[manager_public_in_token]</b> 分配给新证书后，原证书仍会以 <b>[manager_public]</b> 状态保留在服务器上，确保旧密钥可继续连接。由于 <b>[manager_push_token]</b> 默认开启，应用连接时会自动获取新密钥，但前提是集群中至少有一台服务器配置了 <b>[manager_public_in_token]</b> 地址。",
+  "keys_change": "将 <b>[manager_public_in_token]</b> 分配给另一个证书后，旧证书将作为 <b>[manager_public]</b> 保留在服务器上，以便旧密钥继续连接。由于默认已开启 <b>[manager_push_token]</b>，应用在连接时会自动获取新密钥。",
   "keys_replace": "为集群已有的域名添加或上传新证书会替换并删除旧证书。新证书会继承旧证书较高的 <b>[manager_visibility]</b> 设置，确保续期证书留在密钥中。若新证书为 <b>[manager_ca_signed]</b>，旧密钥仍可正常使用；若为自签名证书，则需向用户分发新密钥。",
   "delete_title": "删除证书",
   "delete_rules": "在证书对话框中选择 <b>[manager_delete]</b>。MANAGER 不允许删除已写入密钥的证书，或集群全范围使用的最后一张证书：请先将 <b>[manager_public_in_token]</b> 分配给其他证书，或先添加一张新证书。",

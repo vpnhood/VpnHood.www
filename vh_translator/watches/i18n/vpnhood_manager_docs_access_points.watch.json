@@ -31,7 +31,7 @@
     "shot_proxy_alt": "The Access Points of a server in VpnHood! MANAGER, set for a reverse proxy: Automatic Configuration off (1), and each address with Mode Private (2) and Listen Yes (3)",
     "shot_proxy_caption": "Both of the server's addresses are out of the keys, and the server still listens on them.",
     "proxy_ca": "MANAGER allows keys without an address only while the certificate reads <b>[manager_ca_signed]</b>.",
-    "proxy_keys": "Apps holding an older key keep using it, and the server's addresses with it: <b>[manager_push_token]</b> sends apps a new key only while one of the farm's servers has a <b>[manager_public_in_token]</b> address. Copy the new keys from MANAGER and give them to your users.",
+    "proxy_keys": "Apps holding an older key get the new one when they connect, as <b>[manager_push_token]</b> is on by default.",
     "proxy_keep": "Left at <b>[manager_public_in_token]</b>, the addresses stay in the keys, and apps use them and the proxy alike. The proxy then keeps your users connected when an address is blocked.",
     "proxy_farm": "The domain leads to one server, so in a farm of several servers, every app that comes through the proxy reaches the same one.",
     "next_title": "Next steps",

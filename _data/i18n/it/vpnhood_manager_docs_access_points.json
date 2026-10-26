@@ -29,7 +29,7 @@
   "shot_proxy_alt": "I punti di accesso di un server in VpnHood! MANAGER configurati per un reverse proxy: Configurazione automatica disattivata (1), e ogni indirizzo con Modalità Privata (2) e In ascolto Sì (3)",
   "shot_proxy_caption": "Entrambi gli indirizzi del server sono esclusi dalle chiavi, ma il server rimane regolarmente in ascolto su di essi.",
   "proxy_ca": "MANAGER consente chiavi senza indirizzo solo se lo stato del certificato è <b>[manager_ca_signed]</b>.",
-  "proxy_keys": "Le app con una chiave precedente continueranno a utilizzarla, insieme agli indirizzi del server: <b>[manager_push_token]</b> invia una nuova chiave solo se uno dei server della farm ha un indirizzo <b>[manager_public_in_token]</b>. Copia le nuove chiavi da MANAGER e distribuiscile ai tuoi utenti.",
+  "proxy_keys": "Le app con una chiave precedente ricevono automaticamente quella nuova alla connessione, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita.",
   "proxy_keep": "Se mantenuti su <b>[manager_public_in_token]</b>, gli indirizzi rimangono nelle chiavi e le app useranno sia questi sia il proxy. In questo modo, il proxy garantisce la connessione degli utenti anche qualora un indirizzo venisse bloccato.",
   "proxy_farm": "Il dominio punta a un unico server: in una farm con più server, tutte le app che transitano dal proxy raggiungeranno sempre lo stesso.",
   "next_title": "Passaggi successivi",

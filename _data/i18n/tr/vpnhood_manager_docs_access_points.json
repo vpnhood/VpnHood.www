@@ -29,7 +29,7 @@
   "shot_proxy_alt": "VpnHood! MANAGER'da ters proxy için yapılandırılmış sunucu Erişim Noktaları: Otomatik Yapılandırma kapalı (1) ve her adres için Mod Özel (2) ve Dinleme Evet (3)",
   "shot_proxy_caption": "Sunucunun her iki adresi de anahtarlardan kaldırıldı; sunucu bu adresleri dinlemeye devam ediyor.",
   "proxy_ca": "MANAGER, adressiz anahtarlara yalnızca sertifikada <b>[manager_ca_signed]</b> yazdığı sürece izin verir.",
-  "proxy_keys": "Eski bir anahtara sahip olan uygulamalar bu anahtarı ve sunucu adreslerini kullanmaya devam eder: <b>[manager_push_token]</b>, uygulamalara yeni bir anahtarı yalnızca sunucu grubundaki sunuculardan birinde <b>[manager_public_in_token]</b> bir adres varsa gönderir. MANAGER üzerinden yeni anahtarları kopyalayıp kullanıcılarınızla paylaşın.",
+  "proxy_keys": "<b>[manager_push_token]</b> özelliği varsayılan olarak açık olduğundan, eski anahtara sahip uygulamalar bağlandıklarında otomatik olarak yeni anahtarı alır.",
   "proxy_keep": "<b>[manager_public_in_token]</b> olarak bırakıldığında adresler anahtarlarda kalır; uygulamalar hem bu adresleri hem de proxy'yi kullanır. Böylece bir adres engellendiğinde proxy, kullanıcılarınızın bağlı kalmasını sağlar.",
   "proxy_farm": "Alan adı tek bir sunucuya yönlendirildiğinden, birden fazla sunucudan oluşan bir grupta proxy üzerinden gelen tüm uygulamalar aynı sunucuya ulaşır.",
   "next_title": "Sonraki adımlar",

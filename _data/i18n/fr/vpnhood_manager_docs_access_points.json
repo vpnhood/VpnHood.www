@@ -29,7 +29,7 @@
   "shot_proxy_alt": "Points d'accès d'un serveur dans VpnHood! MANAGER configurés pour un reverse proxy : Configuration automatique désactivée (1), avec chaque adresse en Mode Privé (2) et Écoute Oui (3)",
   "shot_proxy_caption": "Les deux adresses du serveur sont exclues des clés, tandis que le serveur reste à leur écoute.",
   "proxy_ca": "MANAGER autorise les clés sans adresse uniquement lorsque le certificat indique <b>[manager_ca_signed]</b>.",
-  "proxy_keys": "Les applications disposant d'une ancienne clé continuent de l'utiliser avec les adresses du serveur associées : <b>[manager_push_token]</b> transmet une nouvelle clé uniquement si l'un des serveurs de la ferme possède une adresse <b>[manager_public_in_token]</b>. Copiez les nouvelles clés depuis MANAGER et partagez-les avec vos utilisateurs.",
+  "proxy_keys": "Les applications utilisant une ancienne clé reçoivent automatiquement la nouvelle lors de la connexion, car <b>[manager_push_token]</b> est activé par défaut.",
   "proxy_keep": "En laissant <b>[manager_public_in_token]</b>, les adresses restent dans les clés et les applications peuvent utiliser indifféremment ces adresses ou le proxy. Le proxy permet ainsi à vos utilisateurs de rester connectés si une adresse directe est bloquée.",
   "proxy_farm": "Le nom de domaine pointant vers un seul serveur, toutes les connexions passant par le proxy aboutiront à ce même serveur, même au sein d'une ferme de serveurs.",
   "next_title": "Étapes suivantes",

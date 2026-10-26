@@ -29,7 +29,7 @@
   "shot_proxy_alt": "Puntos de acceso de un servidor en VpnHood! MANAGER configurados para proxy inverso: Configuración automática desactivada (1), y cada dirección con Modo Privado (2) y Escuchar Sí (3)",
   "shot_proxy_caption": "Ambas direcciones del servidor quedan fuera de las claves mientras el servidor continúa escuchando en ellas.",
   "proxy_ca": "MANAGER solo permite claves sin dirección si el certificado figura como <b>[manager_ca_signed]</b>.",
-  "proxy_keys": "Las aplicaciones con una clave anterior seguirán usándola junto con las direcciones del servidor: <b>[manager_push_token]</b> solo envía claves nuevas si al menos un servidor de la granja tiene una dirección <b>[manager_public_in_token]</b>. Copia las nuevas claves desde MANAGER y compártelas con tus usuarios.",
+  "proxy_keys": "Las aplicaciones con una clave anterior reciben la nueva al conectarse, ya que <b>[manager_push_token]</b> está activado de forma predeterminada.",
   "proxy_keep": "Si se mantienen como <b>[manager_public_in_token]</b>, las direcciones seguirán en las claves y las aplicaciones podrán usar tanto las direcciones directas como el proxy. Así, el proxy mantendrá conectados a los usuarios si se bloquea alguna dirección.",
   "proxy_farm": "El dominio apunta a un único servidor; por lo tanto, en una granja con varios servidores, todas las aplicaciones que se conecten a través del proxy llegarán siempre al mismo.",
   "next_title": "Siguientes pasos",

@@ -29,7 +29,7 @@
   "shot_proxy_alt": "Pontos de Acesso de um servidor no VpnHood! MANAGER configurados para proxy reverso: Configuração Automática desativada (1), e cada endereço com Modo Privado (2) e Escutar Sim (3)",
   "shot_proxy_caption": "Ambos os endereços do servidor foram removidos das chaves, mas o servidor continua ouvindo conexões por eles.",
   "proxy_ca": "O MANAGER permite chaves sem endereço apenas quando o certificado exibir <b>[manager_ca_signed]</b>.",
-  "proxy_keys": "Os aplicativos com chaves antigas continuam usando-as junto com os endereços do servidor: o <b>[manager_push_token]</b> só envia uma nova chave aos aplicativos se um dos servidores do farm tiver um endereço <b>[manager_public_in_token]</b>. Copie as novas chaves do MANAGER e compartilhe-as com seus usuários.",
+  "proxy_keys": "Aplicativos com uma chave antiga recebem a nova ao se conectar, pois <b>[manager_push_token]</b> vem ativado por padrão.",
   "proxy_keep": "Se forem mantidos em <b>[manager_public_in_token]</b>, os endereços permanecem nas chaves, e os aplicativos podem usar tanto eles quanto o proxy. Dessa forma, o proxy garante a conexão dos seus usuários caso um endereço seja bloqueado.",
   "proxy_farm": "O domínio direciona para um único servidor; portanto, em um farm com vários servidores, todos os aplicativos que passarem pelo proxy chegarão ao mesmo servidor.",
   "next_title": "Próximas etapas",
