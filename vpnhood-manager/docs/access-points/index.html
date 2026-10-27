@@ -16,7 +16,11 @@ extra_css:
   gets an address and Listen whether the server listens on it; MANAGER builds a farm key
   with no address only from a validated certificate; Push token to clients sends a key that
   carries only the domain when an app connects, and one with addresses once every server in
-  it is ready (the agent's 197dffdd, on production since 4.0.419). The screenshots are real app UI, so they
+  it is ready (the agent's 197dffdd, on production since 4.0.419). The proxies a server
+  trusts to name a user's address are its server profile's settings, set as server-profiles/
+  shows; MANAGER applies no default of its own, so a profile that leaves them out trusts
+  Cloudflare, the server's default (the server release after v9.0.859, and a MANAGER on its
+  packages, which drops a setting its package lacks). The screenshots are real app UI, so they
   have no light variant: MANAGER's own dark theme, a test server's Access Points card 800px
   wide, captured at 2x and cropped below the switch; the second has its addresses set to
   Private, with numbered markers matching the steps above it (owner, 2026-10-19). How to
@@ -67,6 +71,7 @@ extra_css:
 <p>{% include copy.html s=t.proxy_ca %}</p>
 <p>{% include copy.html s=t.proxy_keys %}</p>
 <p>{% include copy.html s=t.proxy_keep %}</p>
+<p>{% include copy.html s=t.proxy_addresses %}</p>
 <div class="vh-docs-note" role="note"><p>{{ t.proxy_farm }}</p></div>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>

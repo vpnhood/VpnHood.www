@@ -12,8 +12,12 @@ extra_css:
   server source in the VpnHood repo: the server binds its outgoing sockets to no address
   and has no setting for one, so the outgoing IP is the operating system's. Setting the
   two addresses is its own task, on /vpnhood-server/docs/ip-addresses/; this page says why
-  and links there. MANAGER's screens are named as they read, and a managed server comes
-  first, before a standalone one, wherever both appear. A domain is offered for its
+  and links there. A managed server comes first, before a standalone one, wherever both
+  appear, and MANAGER's steps live in MANAGER's docs: the censored-network settings' on
+  /vpnhood-manager/docs/server-profiles/, which the MANAGER promo before the standalone
+  steps links to (owner, 2026-10-22 and 2026-10-27). A probe that sends no name gets a
+  server's first certificate: MANAGER sends the validated ones first, and a standalone
+  server has one. A domain is offered for its
   trusted certificate, not as a way past a blocked IP: it leads to the same address, and
   only a reverse proxy puts another one in front (owner, 2026-10-19). There is no advice
   to keep local sites off the server: a censor can watch from servers it runs abroad
@@ -86,7 +90,6 @@ extra_css:
   <li>{% include copy.html s=t.censored_channels %}</li>
   <li>{% include copy.html s=t.censored_drop %}</li>
 </ul>
-<p>{% include copy.html s=t.censored_manager %}</p>
 {% include terminal.html caption=t.caption_censored code='{
   "Session": {
     "AllowTcpPacket": false,
@@ -95,6 +98,10 @@ extra_css:
   "UdpEndPoints": [],
   "QuicEndPoints": []
 }' %}
+
+{% include docs-managed.html href="/vpnhood-manager/docs/server-profiles/#censored-network" %}
+
+<h2 id="standalone">{{ t.file_title }}</h2>
 <p>{% include copy.html s=t.censored_standalone %}</p>
 
 <h2 id="reverse-proxy">{{ t.proxy_title }}</h2>

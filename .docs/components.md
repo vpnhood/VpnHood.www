@@ -105,8 +105,9 @@ fallback. Write them benefit first, as "Easily add, manage and monitor your serv
 VpnHood! MANAGER" does. `href` is the MANAGER page without the language prefix. The pairs
 today: `install/` and `docker/` → `add-server/` (`#docker`), `domain/` →
 `certificates/#domain`, `ip-addresses/` → `access-points/`, `reverse-proxy/` →
-`access-points/#reverse-proxy`. The look is its own, so it never reads as a note: the brand's
-violet-to-mint rim and a tint of both, a glow, the site's primary button, and the art
+`access-points/#reverse-proxy`, `ip-blocking/` → `server-profiles/#censored-network`. The
+look is its own, so it never reads as a note: the brand's violet-to-mint rim and a tint of
+both, a glow, the site's primary button, and the art
 `vpnhood-manager/docs/promo-manager.svg` from `tools/make-docs-heroes.py` (hidden on a phone).
 Styles: `.vh-docs-managed` in `_docs.scss`. The button is tagged `docs-start-manager`.
 

@@ -22,7 +22,12 @@ extra_css:
   as the proxy. A failed lookup falls back to the key's addresses. MANAGER builds a farm
   key with no address only from a validated certificate; a standalone server always puts
   its addresses in its keys. Behind a proxy that sends X-Forwarded-For, the server
-  withholds its UDP and QUIC ports. The server answers ACME on plain HTTP port 80 only. The
+  withholds its UDP and QUIC ports, whether it trusts the proxy or not. It takes the user's
+  address from that header only from Cloudflare's published addresses, which it fetches at
+  start and daily, and never in a Worker's request, whose script anyone may write; from
+  CloudFront's only when ReverseProxyProviders names it, as edge code on any AWS account
+  writes the header unmarked; and from the ranges in ReverseProxyIpRanges (the server
+  release after v9.0.859). The server answers ACME on plain HTTP port 80 only. The
   proxy's own steps serve both kinds of server; a managed server's steps in MANAGER, with
   their screenshot, moved to /vpnhood-manager/docs/access-points/#reverse-proxy, and the MANAGER
   promo right before the standalone steps links there (owner, 2026-10-22). No links to the GitHub wiki. Code inside a
@@ -67,11 +72,27 @@ extra_css:
 </ol>
 <p>{% include copy.html s=t.proxy_renew %}</p>
 
+<h2 id="addresses">{{ t.addresses_title }}</h2>
+<p>{% include copy.html s=t.addresses_desc %}</p>
+<ul>
+  <li>{{ t.addresses_cloudflare }}</li>
+  <li>{% include copy.html s=t.addresses_cloudfront %}</li>
+  <li>{% include copy.html s=t.addresses_other %}</li>
+</ul>
+{% include terminal.html caption=t.caption_addresses code='{
+  "ReverseProxyIpRanges": [
+    "192.0.2.0/24"
+  ]
+}' %}
+<p>{% include copy.html s=t.addresses_none %}</p>
+<p>{{ t.addresses_log }}</p>
+
 {% include docs-managed.html href="/vpnhood-manager/docs/access-points/#reverse-proxy" %}
 
 <h2 id="standalone">{{ t.file_title }}</h2>
 <p>{% include copy.html s=t.file_cert %}</p>
 <p>{{ t.file_keys }}</p>
+<p>{% include copy.html s=t.file_addresses %}</p>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>

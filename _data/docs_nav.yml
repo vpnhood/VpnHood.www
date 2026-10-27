@@ -35,3 +35,4 @@ vpnhood-manager:
     pages:
       - url: /vpnhood-manager/docs/access-points/
       - url: /vpnhood-manager/docs/certificates/
+      - url: /vpnhood-manager/docs/server-profiles/

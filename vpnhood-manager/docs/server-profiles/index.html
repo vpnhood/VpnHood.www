@@ -1,0 +1,65 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_server_profiles
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  MANAGER's steps for a server setting live here, and a SERVER page whose settings a
+  profile carries offers MANAGER with its promo, linking here (owner, 2026-10-22 and
+  2026-10-27): the SERVER pages keep what each setting means, and this page links to them.
+  Written for the MANAGER of 2026-10-27 (the access server's develop and its console's) and
+  read from both sources: Server Profiles sits under Settings in the project menu; every
+  project gets a default profile, which a new farm takes unless given another, and which
+  can be neither renamed nor deleted; a profile a farm uses can't be deleted; a farm's card
+  names its profile, links to it and changes it; a profile's card sets General, Network
+  Filter and Tracking, and Advanced edit shows its ServerConfig as JSON, with OK and Cancel;
+  the console and MANAGER both read it into their package's ServerConfig, so a setting the
+  package lacks, or a misspelled one, is dropped; ServerProfileService refuses the settings
+  MANAGER sets per server (ConfigCode, TcpEndPoints, UDP or QUIC endpoints other than empty,
+  the session sync and timeout, UpdateStatusInterval, ServerSecret), small buffers, both TCP
+  ways off, and the users' QUIC or UDP off with TCP packets on; a changed profile
+  reconfigures every server of its farms (ServerConfigureService.ReconfigServers). The
+  reverse proxies are trusted by the server's own default, as MANAGER applies none.
+  MANAGER's screen text is a placeholder from _data/code.yml, filled in by copy.html. No
+  links to the GitHub wiki.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-server-profiles.svg" %}
+
+<h2 id="where">{{ t.where_title }}</h2>
+<p>{% include copy.html s=t.where_desc %}</p>
+<p>{% include copy.html s=t.where_farm %}</p>
+
+<h2 id="settings">{{ t.settings_title }}</h2>
+<p>{% include copy.html s=t.settings_card %}</p>
+<p>{{ t.settings_send }}</p>
+<p>{% include copy.html s=t.settings_refused %}</p>
+<p>{% include copy.html s=t.settings_dropped %}</p>
+
+<h2 id="censored-network">{{ t.censored_title }}</h2>
+<p>{% include copy.html s=t.censored_desc %}</p>
+{% include terminal.html caption=t.caption_censored code='{
+  "Session": {
+    "AllowTcpPacket": false,
+    "AllowQuicPacket": false
+  },
+  "UdpEndPoints": [],
+  "QuicEndPoints": []
+}' %}
+<p>{% include copy.html s=t.censored_refused %}</p>
+
+<h2 id="reverse-proxy">{{ t.proxy_title }}</h2>
+<p>{% include copy.html s=t.proxy_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/certificates/#domain">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/access-points/#reverse-proxy">{{ t.next_proxy }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

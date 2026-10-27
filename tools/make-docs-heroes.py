@@ -435,6 +435,26 @@ def access_points() -> None:
     a.render("access-points", product="vpnhood-manager")
 
 
+def server_profiles() -> None:
+    """Server profiles: one card of settings, and the servers of a farm it reaches, each lit."""
+    a = Art("dhMgrProf")
+    a.ambient(cy=470)
+    # the profile: a heading and its settings as switches, one of them off
+    a.solid('<rect x="110" y="250" width="420" height="440" rx="40" {fill} {stroke}/>', width=10)
+    a.bar(160, 305, 200, 24, fill=MINT, opacity=.9, glow=True)
+    for n, on in enumerate((True, False, True)):
+        y = 372 + n * 100
+        switch(a, 160, y, on)
+        a.bar(310, y + 22, 170 - n * 30, 18, fill=LILAC, opacity=.4)
+    # its settings reach every server of the farm
+    for y in (300, 470, 640):
+        a.add(f'<path d="M 548 470 C 585 470 575 {y} 612 {y}" fill="none" stroke="{MINT}" stroke-width="10" stroke-dasharray="2 22" stroke-linecap="round" opacity=".9"/>')
+    for y in (235, 405, 575):
+        a.server_unit(625, y, 265, 130, rim=False, lit=True)
+    a.ambient(cy=870, rx=320, ry=60, opacity=.45)
+    a.render("server-profiles", product="vpnhood-manager")
+
+
 def phone(a: Art, x, y, w, h, lit_rows: int = 1) -> None:
     """A phone: its body, a speaker slot and app rows on the screen, the first ones lit."""
     a.solid(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{w * .2:.0f}" {{fill}} {{stroke}}/>', width=10)
@@ -500,4 +520,5 @@ if __name__ == "__main__":
     add_server()
     access_points()
     certificates()
+    server_profiles()
     manager_promo()

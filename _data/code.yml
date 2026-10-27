@@ -59,6 +59,10 @@ setting_ssl_password: "SslCertificatesPassword"
 setting_allow_tcp_packet: "AllowTcpPacket"
 setting_allow_quic_packet: "AllowQuicPacket"
 setting_allow_udp_packet: "AllowUdpPacket"
+setting_allow_tcp_proxy: "AllowTcpProxy"
+setting_reverse_proxy_providers: "ReverseProxyProviders"
+setting_reverse_proxy_ip_ranges: "ReverseProxyIpRanges"
+json_providers_cloudfront: '["Cloudflare", "CloudFront"]'
 json_true: "true"
 json_false: "false"
 json_empty_list: "[]"
@@ -84,9 +88,11 @@ old_updater_container: "VpnHoodUpdater"
 
 # Example addresses, from the ranges set aside for documentation (RFC 5737), so no
 # reader's real server is ever named. The /vpnhood-server/docs/ip-blocking/ copy, its
-# commands and its diagram (tools/make-docs-diagrams.py) all use these two.
+# commands and its diagram (tools/make-docs-diagrams.py) all use these two; a reverse
+# proxy's range takes the third, so it never holds either of them.
 ip_connection_example: "203.0.113.10"
 ip_outgoing_example: "198.51.100.20"
+ip_range_example: "192.0.2.0/24"
 # and a name from the domains set aside for documentation (RFC 2606)
 domain_example: "server1.example.com"
 domain_api_example: "api.example.com"
@@ -140,6 +146,12 @@ manager_used_by: "Used By"
 manager_server_farm: "Server Farm"
 manager_server_profiles: "Server Profiles"
 manager_advanced_edit: "Advanced edit"
+manager_settings: "Settings"
+manager_server_profile: "Server Profile"
+manager_general: "General"
+manager_network_filter: "Network Filter"
+manager_tracking: "Tracking"
+manager_ok: "OK"
 manager_priority: "Priority"
 manager_priority_normal: "Normal"
 manager_priority_low: "Low"
@@ -158,6 +170,8 @@ cloudflare_full_strict: "Full (strict)"
 cloudflare_flexible: "Flexible"
 cloudflare_always_https: "Always Use HTTPS"
 cloudflare_https_ports: "443, 2053, 2083, 2087, 2096, 8443"
+# the header a reverse proxy names each user's own address in
+header_x_forwarded_for: "X-Forwarded-For"
 
 # Where a managed server reaches VpnHood! MANAGER, over HTTPS (the -httpBaseUrl of the
 # install command MANAGER shows)

@@ -31,6 +31,7 @@
   "proxy_ca": "MANAGER allows keys without an address only while the certificate reads <b>[manager_ca_signed]</b>.",
   "proxy_keys": "Apps holding an older key get the new one when they connect, as <b>[manager_push_token]</b> is on by default.",
   "proxy_keep": "Left at <b>[manager_public_in_token]</b>, the addresses stay in the keys, and apps use them and the proxy alike. The proxy then keeps your users connected when an address is blocked.",
+  "proxy_addresses": "Your servers trust Cloudflare to name each user's address. Behind another proxy, give them its addresses in the farm's server profile, as <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Server profiles</a> shows.",
   "proxy_farm": "The domain leads to one server, so in a farm of several servers, every app that comes through the proxy reaches the same one.",
   "next_title": "Next steps",
   "next_domain": "Use your own domain with a trusted certificate"
