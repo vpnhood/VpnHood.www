@@ -17,9 +17,12 @@ extra_css:
   trusted certificate, not as a way past a blocked IP: it leads to the same address, and
   only a reverse proxy puts another one in front (owner, 2026-10-19). There is no advice
   to keep local sites off the server: a censor can watch from servers it runs abroad
-  (owner, 2026-10-19). No Cloak Mode either: it hides the protocol, not the server's
-  address, and it is the user's setting, not the server owner's (owner, 2026-10-19); a
-  connection that is recognized gets the trusted certificate. Linux and Docker only:
+  (owner, 2026-10-19). The censored-network settings are the server's, enforced on every
+  user: without Cloak Mode the server ignores AllowQuicPacket and AllowUdpPacket, the
+  users' QUIC and UDP, which are not the server's own UDP and QUIC that the empty lists
+  turn off. A trusted
+  certificate's host name hints at no VPN, as certificate logs are public, and is never
+  a wildcard, which MANAGER refuses. Linux and Docker only:
   Windows servers are rare. No links to the GitHub wiki, which is being retired. Whole
   commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.
@@ -71,8 +74,28 @@ extra_css:
 
 <h2 id="domain">{{ t.domain_title }}</h2>
 <p>{{ t.domain_desc }}</p>
+<p>{% include copy.html s=t.domain_name %}</p>
+<p>{% include copy.html s=t.domain_keys %}</p>
 <p>{{ t.domain_follow }}</p>
 <p>{% include copy.html s=t.domain_how %}</p>
+
+<h2 id="censored-network">{{ t.censored_title }}</h2>
+<p>{{ t.censored_desc }}</p>
+<ul>
+  <li>{% include copy.html s=t.censored_cloak %}</li>
+  <li>{% include copy.html s=t.censored_channels %}</li>
+  <li>{% include copy.html s=t.censored_drop %}</li>
+</ul>
+<p>{% include copy.html s=t.censored_manager %}</p>
+{% include terminal.html caption=t.caption_censored code='{
+  "Session": {
+    "AllowTcpPacket": false,
+    "AllowQuicPacket": false
+  },
+  "UdpEndPoints": [],
+  "QuicEndPoints": []
+}' %}
+<p>{% include copy.html s=t.censored_standalone %}</p>
 
 <h2 id="reverse-proxy">{{ t.proxy_title }}</h2>
 <p>{{ t.proxy_desc }}</p>
