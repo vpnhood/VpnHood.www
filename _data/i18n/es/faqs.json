@@ -16,7 +16,7 @@
   "q_is_undetectable": "¿VpnHood es indetectable?",
   "a_is_undetectable": "El Modo Camuflaje de VpnHood está diseñado para que el tráfico VPN se asemeje al tráfico HTTPS habitual, lo que le ayuda a eludir algunos métodos de detección de VPN. Esto no garantiza que todas las redes permitan la conexión; la eficacia depende de los métodos de filtrado que se utilicen.",
   "q_stay_free_forever": "¿Puedo usar el plan Gratis para siempre?",
-  "a_stay_free_forever": "Sí. El plan Gratis no tiene límite de tiempo ni te obliga a pagar, y ni siquiera necesitas crear una cuenta. Se financia con anuncios, por lo que no está disponible en China ni en otros países donde no se muestran anuncios. El plan Premium está disponible cuando quieras más ubicaciones, servidores más rápidos, una aplicación sin anuncios y soporte 24/7, sin restricciones geográficas.",
+  "a_stay_free_forever": "Sí. El plan Gratis no tiene límite de tiempo ni te obliga a pagar, y ni siquiera necesitas crear una cuenta. Se financia con anuncios, por lo que no está disponible en China, en Rusia ni en otros países donde no se muestran anuncios. El plan Premium está disponible cuando quieras más ubicaciones, servidores más rápidos, una aplicación sin anuncios y soporte 24/7, sin restricciones geográficas.",
   "q_free_data_cap": "¿El plan Gratis tiene límite de datos?",
   "a_free_data_cap": "No. El plan Gratis no tiene límite de datos ni de tiempo. Aunque VpnHood! SERVER permite fijar un límite mensual por usuario, en los servidores gratuitos no aplicamos ninguno, así que puedes navegar sin preocuparte por el consumo. La mayoría de las VPN gratuitas limitan a unos pocos gigabytes para forzar la suscripción de pago.",
   "q_free_speed": "¿Se reduce la velocidad a los usuarios del plan Gratis?",

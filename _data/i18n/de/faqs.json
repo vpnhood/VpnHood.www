@@ -16,7 +16,7 @@
   "q_is_undetectable": "Ist VpnHood unerkennbar?",
   "a_is_undetectable": "Der Tarnmodus von VpnHood soll VPN-Datenverkehr wie gewöhnlichen HTTPS-Datenverkehr aussehen lassen und ihm so helfen, einigen Methoden der VPN-Erkennung zu entgehen. Eine Garantie, dass jedes Netzwerk die Verbindung zulässt, gibt es nicht; die Wirksamkeit hängt von den eingesetzten Filtermethoden ab.",
   "q_stay_free_forever": "Kann ich den kostenlosen Tarif dauerhaft nutzen?",
-  "a_stay_free_forever": "Ja. Der Tarif Kostenlos hat kein Zeitlimit, keinen Upgrade-Zwang und erfordert kein Konto. Er finanziert sich über Werbung und ist daher in China oder Ländern ohne Werbeausspielung nicht verfügbar. Mit Premium erhalten Sie jederzeit mehr Standorte, schnellere Server, eine werbefreie App sowie 24/7-Support – ganz ohne Einschränkungen.",
+  "a_stay_free_forever": "Ja. Der Tarif Kostenlos hat kein Zeitlimit, keinen Upgrade-Zwang und erfordert kein Konto. Er finanziert sich über Werbung und ist daher in China, Russland oder anderen Ländern ohne Werbeausspielung nicht verfügbar. Mit Premium erhalten Sie jederzeit mehr Standorte, schnellere Server, eine werbefreie App sowie 24/7-Support – ganz ohne Einschränkungen.",
   "q_free_data_cap": "Gibt es im kostenlosen Tarif ein Datenlimit?",
   "a_free_data_cap": "Nein. Der kostenlose Tarif hat weder Datenlimit noch Zeitbegrenzung. VpnHood! SERVER kann zwar ein monatliches Kontingent pro Nutzer festlegen, auf den kostenlosen Servern ist jedoch keines aktiviert – es läuft also nichts ab, während Sie surfen. Die meisten kostenlosen VPNs drosseln nach wenigen Gigabyte, um das Upgrade zu verkaufen.",
   "q_free_speed": "Wird die Geschwindigkeit für kostenlose Nutzer gedrosselt?",

@@ -16,7 +16,7 @@
   "q_is_undetectable": "O VpnHood é indetectável?",
   "a_is_undetectable": "O Modo invisível do VpnHood foi criado para fazer o tráfego da VPN se parecer com tráfego HTTPS comum, ajudando-o a evitar alguns métodos de detecção de VPN. Isso não garante que todas as redes permitam a conexão; a eficácia depende dos métodos de filtragem em uso.",
   "q_stay_free_forever": "Posso continuar no plano grátis para sempre?",
-  "a_stay_free_forever": "Sim. O plano Grátis não tem limite de tempo nem obriga você a fazer upgrade, além de não exigir cadastro. Ele é mantido por anúncios, por isso não está disponível na China ou em países onde anúncios não são exibidos. O plano Premium está disponível para quem quer mais locais, servidores mais velozes, aplicativo sem anúncios e suporte 24/7, sem nenhuma restrição.",
+  "a_stay_free_forever": "Sim. O plano Grátis não tem limite de tempo nem obriga você a fazer upgrade, além de não exigir cadastro. Ele é mantido por anúncios, por isso não está disponível na China, na Rússia ou em países onde anúncios não são exibidos. O plano Premium está disponível para quem quer mais locais, servidores mais velozes, aplicativo sem anúncios e suporte 24/7, sem nenhuma restrição.",
   "q_free_data_cap": "Existe limite de dados no plano Grátis?",
   "a_free_data_cap": "Não. O plano Grátis não tem limite de dados nem de tempo. Embora o servidor do VpnHood! permita definir cotas mensais por usuário, nenhum limite é ativado nos servidores gratuitos — você pode navegar à vontade sem contagem regressiva. A maioria das VPNs gratuitas limita o uso a poucos gigabytes apenas para forçar a compra de um plano pago.",
   "q_free_speed": "A velocidade é reduzida para usuários do plano Grátis?",

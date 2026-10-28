@@ -16,7 +16,7 @@
   "q_is_undetectable": "VpnHood fark edilemez mi?",
   "a_is_undetectable": "VpnHood'un Kamufle Modu, VPN trafiğini sıradan HTTPS trafiğine benzetmek üzere tasarlanmıştır; bu da trafiğin bazı VPN tespit yöntemlerinden kaçmasına yardımcı olur. Ancak bu, her ağın bağlantıya izin vereceğini garanti etmez; etkinliği kullanılan filtreleme yöntemlerine bağlıdır.",
   "q_stay_free_forever": "Ücretsiz planda dilediğim kadar kalabilir miyim?",
-  "a_stay_free_forever": "Evet. Ücretsiz planda süre sınırı veya zorunlu yükseltme yoktur, hesap oluşturmanız da gerekmez. Reklamlarla desteklendiğinden Çin'de veya reklamların sunulmadığı ülkelerde kullanılamaz. Daha fazla konum, daha hızlı sunucular, reklamsız bir uygulama ve 7/24 destek istediğinizde hiçbir sınır olmadan Premium'a geçebilirsiniz.",
+  "a_stay_free_forever": "Evet. Ücretsiz planda süre sınırı veya zorunlu yükseltme yoktur, hesap oluşturmanız da gerekmez. Reklamlarla desteklendiğinden Çin'de, Rusya'da veya reklamların sunulmadığı diğer ülkelerde kullanılamaz. Daha fazla konum, daha hızlı sunucular, reklamsız bir uygulama ve 7/24 destek istediğinizde hiçbir sınır olmadan Premium'a geçebilirsiniz.",
   "q_free_data_cap": "Ücretsiz planda veri sınırı var mı?",
   "a_free_data_cap": "Hayır. Ücretsiz planda veri veya süre sınırı yoktur. VpnHood! SERVER kullanıcı başına aylık kota uygulayabilir; ancak ücretsiz sunucularımızda hiçbir kota tanımlı değildir, yani internette gezinirken azalan bir limitiniz olmaz. Çoğu ücretsiz VPN, sizi ücretli sürüme yönlendirmek için birkaç gigabaytlık kota koyar.",
   "q_free_speed": "Ücretsiz kullanıcıların hızını düşürüyor musunuz?",

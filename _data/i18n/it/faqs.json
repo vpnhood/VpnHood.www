@@ -16,7 +16,7 @@
   "q_is_undetectable": "VpnHood è invisibile ai blocchi?",
   "a_is_undetectable": "La Modalità camuffamento di VpnHood è progettata per far somigliare il traffico VPN a normale traffico HTTPS, aiutandolo a sfuggire ad alcuni metodi di rilevamento delle VPN. Questo non garantisce che ogni rete consenta la connessione: l'efficacia dipende dai metodi di filtraggio in uso.",
   "q_stay_free_forever": "Posso usare il piano Gratis per sempre?",
-  "a_stay_free_forever": "Sì. Il piano Gratis non ha limiti di tempo, non richiede la creazione di un account né obbliga a passare a un piano superiore. È sostenuto dalla pubblicità, quindi non è disponibile in Cina o nei paesi in cui non vengono mostrati annunci. Il piano Premium elimina ogni limite e offre più posizioni, server più veloci, nessuna pubblicità e supporto 24/7.",
+  "a_stay_free_forever": "Sì. Il piano Gratis non ha limiti di tempo, non richiede la creazione di un account né obbliga a passare a un piano superiore. È sostenuto dalla pubblicità, quindi non è disponibile in Cina, in Russia o negli altri paesi in cui non vengono mostrati annunci. Il piano Premium elimina ogni limite e offre più posizioni, server più veloci, nessuna pubblicità e supporto 24/7.",
   "q_free_data_cap": "C'è un limite di dati con il piano Gratis?",
   "a_free_data_cap": "No. Il piano Gratis non ha limiti di dati né di tempo. Il server VpnHood! può impostare una soglia mensile per utente, ma sui server gratuiti non è previsto alcun limite: navighi senza pensieri. La maggior parte delle VPN gratuite impone un limite di pochi gigabyte proprio per spingerti ad acquistare la versione a pagamento.",
   "q_free_speed": "La velocità viene ridotta per gli utenti gratuiti?",

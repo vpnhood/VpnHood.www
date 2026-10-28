@@ -66,6 +66,11 @@
     margin-top: 25px;
     margin-bottom: 35px;
 }
+// The free plan's availability, in small print under the download button (owner, 2026-10-28).
+#bannerFreeNote{
+    max-width: 34rem;
+    color: var(--vh-text-dim);
+}
 // .list-check-icon moved to theme/_default.scss — it is used beyond the home
 // banner now (vpnhood-client feature list), and _light.scss already themes it.
 #phoneMockupWrapper{
