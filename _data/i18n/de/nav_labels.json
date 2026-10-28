@@ -13,13 +13,13 @@
   "docker": "Docker",
   "ip-blocking": "IP-Sperren",
   "reference": "Referenz",
-  "installer-options": "Installationsoptionen",
+  "installer-options": "Installer-Optionen",
   "ip-addresses": "IP-Adressen",
   "domain": "Domain-Name",
   "reverse-proxy": "Reverse-Proxy",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Zertifikate",
   "add-server": "Server hinzufügen",
-  "access-points": "Zugangspunkte",
+  "access-points": "Access Points",
   "server-profiles": "Serverprofile"
 }

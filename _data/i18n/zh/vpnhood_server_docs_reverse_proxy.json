@@ -25,7 +25,7 @@
   "limit_tcp": "<b>仅限 TCP：</b> 通过代理连接的应用无法使用服务器提供的 UDP 和 QUIC 端口。",
   "limit_terms": "<b>服务条款：</b> 请确认您的服务商条款是否允许 VPN 流量。通常供 50 人左右的小规模群体使用不会有问题。",
   "before_title": "准备工作",
-  "req_cert": "一个顶级域名或二级域名，并在服务器上配置由受信任证书颁发机构（CA）签发的证书：请参考<a href=\"/vpnhood-server/docs/domain/\">使用域名与受信任证书</a>。在域名解析记录直接指向服务器时，请先完成此配置。",
+  "req_cert": "一个顶级域名或二级域名，并在服务器上配置由受信任证书颁发机构（CA）签发的证书：请参考<a href=\"/vpnhood-server/docs/domain/\">使用域名和受信任的证书</a>。在域名解析记录直接指向服务器时，请先完成此配置。",
   "req_one_server": "域名后仅关联单台服务器。若解析记录指向两台服务器，可能导致同一会话的连接被分散转发，从而中断连接。",
   "req_port": "服务器需监听 TCP 端口 <code>[server_port]</code>，或反向代理支持转发的其他端口。Cloudflare 仅支持在 <code>[cloudflare_https_ports]</code> 上转发 HTTPS 流量。",
   "proxy_title": "开启代理",
@@ -49,6 +49,6 @@
   "file_addresses": "如果您的服务器需要<a href=\"#addresses\">用户的地址</a>中的设置，请将它们放在 <code>[server_appsettings]</code> 中的 <code>[setting_file_access_manager]</code> 下，然后重启服务器。",
   "next_title": "后续步骤",
   "next_addresses": "设置服务器监听并写入密钥的 IP 地址",
-  "next_blocking": "防止服务器的 IP 地址被封锁",
+  "next_blocking": "防止服务器 IP 地址被封锁",
   "next_manager": "通过 VpnHood! MANAGER 网页控制面板管理多台服务器与密钥"
 }

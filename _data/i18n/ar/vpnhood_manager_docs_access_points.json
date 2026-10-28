@@ -21,7 +21,7 @@
   "change_title": "تغيير العنوان",
   "change_desc": "يتضمن المفتاح العناوين التي أُنشئ بها، لذا يستمر التطبيق الذي يحمل مفتاحاً قديماً في محاولة الاتصال بالعنوان القديم. احتفظ بالعنوان القديم لبضعة أيام كنقطة وصول مع ضبط <b>[manager_mode]</b> على <b>[manager_private]</b> و<b>[manager_listen]</b> على <b>[manager_yes]</b>: ستتلقى التطبيقات المفتاح الجديد تلقائياً بمجرد الاتصال لأن خيار <b>[manager_push_token]</b> مفعّل افتراضياً. بعد ذلك، يمكنك إزالته بأمان.",
   "proxy_title": "خلف بروكسي عكسي",
-  "proxy_first": "فعّل البروكسي أولاً، كما هو موضح في دليل <a href=\"/vpnhood-server/docs/reverse-proxy/\">وضع خادمك خلف بروكسي عكسي</a>. ثم تحقق من شهادة المزرعة الخاصة بالنطاق: يجب أن تظهر تحت <b>[manager_signature]</b> كـ <b>[manager_ca_signed]</b>، وتكون حالة <b>[manager_visibility]</b> هي <b>[manager_public_in_token]</b>، تماماً كما في خطوات <a href=\"/vpnhood-manager/docs/certificates/#domain\">استخدام نطاقك الخاص</a>. بعد ذلك، ستتضمن المفاتيح اسم النطاق وستتعرف عليه التطبيقات تلقائياً.",
+  "proxy_first": "فعّل البروكسي أولاً، كما هو موضح في دليل <a href=\"/vpnhood-server/docs/reverse-proxy/\">تشغيل خادمك خلف بروكسي عكسي</a>. ثم تحقق من شهادة المزرعة الخاصة بالنطاق: يجب أن تظهر تحت <b>[manager_signature]</b> كـ <b>[manager_ca_signed]</b>، وتكون حالة <b>[manager_visibility]</b> هي <b>[manager_public_in_token]</b>، تماماً كما في خطوات <a href=\"/vpnhood-manager/docs/certificates/#domain\">استخدام نطاقك الخاص</a>. بعد ذلك، ستتضمن المفاتيح اسم النطاق وستتعرف عليه التطبيقات تلقائياً.",
   "proxy_hide": "لتوجيه كل التطبيقات عبر البروكسي، استبعد عناوين الخادم المباشرة من المفاتيح:",
   "proxy_step_auto": "عطّل <b>[manager_auto_config]</b>.",
   "proxy_step_mode": "عدّل كل عنوان، واضبط <b>[manager_mode]</b> على <b>[manager_private]</b>.",

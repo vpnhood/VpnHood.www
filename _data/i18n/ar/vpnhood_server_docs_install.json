@@ -19,7 +19,7 @@
   "mgr_box_cta": "إضافة خادم باستخدام MANAGER",
   "linux_title": "تثبيت خادم مستقل",
   "step_linux_run": "شغّل هذا الأمر. سيتعرف تلقائيًا على معمارية الجهاز (x64 أو arm64) ويثبّت الخادم في <code>[server_dir_linux]</code>.",
-  "step_linux_options": "للتثبيت عبر البرامج النصية (Scripts) دون مطالبات، راجع <a href=\"/vpnhood-server/docs/installer-options/\">خيارات أداة التثبيت</a>.",
+  "step_linux_options": "للتثبيت عبر البرامج النصية (Scripts) دون مطالبات، راجع <a href=\"/vpnhood-server/docs/installer-options/\">خيارات برنامج التثبيت</a>.",
   "key_title": "أنشئ مفتاح الوصول الأول",
   "step_key_run": "لا يسمح الخادم المستقل إلا للأجهزة التي تحمل مفتاح وصول تم إنشاؤه من خلاله. شغّل هذا الأمر على الخادم لإنشاء مفتاح.",
   "step_key_copy": "يظهر المفتاح تحت <code>[accesskey_heading]</code> ويبدأ بـ <code>[key_prefix]</code>؛ انسخ السطر بالكامل. وقبله ببضعة أسطر، يجب أن يعرض <code>[hostendpoints_label]</code> عنوان IP العام لخادمك.",
@@ -49,6 +49,6 @@
   "next_title": "الخطوات التالية",
   "next_manager": "أدِر خوادم ومفاتيح متعددة من لوحة تحكم ويب باستخدام VpnHood! MANAGER",
   "next_addresses": "عيّن عناوين IP التي يستمع لها الخادم ويضمنها في مفاتيحه",
-  "next_domain": "استخدم اسم نطاق وشهادة موثوقة",
+  "next_domain": "استخدام اسم نطاق وشهادة موثوقة",
   "next_blocking": "احمِ عنوان IP الخاص بخادمك من الحظر"
 }

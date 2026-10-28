@@ -19,7 +19,7 @@
   "mgr_box_cta": "Ajouter un serveur avec MANAGER",
   "linux_title": "Installer un serveur autonome",
   "step_linux_run": "Exécutez cette commande. Elle détecte l'architecture (x64 ou arm64) et installe le serveur dans <code>[server_dir_linux]</code>.",
-  "step_linux_options": "Pour une installation via script sans invites interactives, consultez les <a href=\"/vpnhood-server/docs/installer-options/\">options du programme d'installation</a>.",
+  "step_linux_options": "Pour une installation via script sans invites interactives, consultez <a href=\"/vpnhood-server/docs/installer-options/\">Options d'installation</a>.",
   "key_title": "Créer votre première clé d'accès",
   "step_key_run": "Un serveur autonome autorise uniquement les appareils munis d'une clé d'accès qu'il a lui-même générée. Exécutez cette commande sur le serveur pour en créer une.",
   "step_key_copy": "La clé s'affiche sous <code>[accesskey_heading]</code> et commence par <code>[key_prefix]</code> ; copiez toute la ligne. Quelques lignes plus haut, <code>[hostendpoints_label]</code> doit indiquer l'adresse IP publique de votre serveur.",

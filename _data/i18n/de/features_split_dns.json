@@ -1,9 +1,9 @@
 {
-  "meta_title": "Split DNS: DNS-Anfragen sicher im VPN behalten | VpnHood!",
-  "meta_description": "Bestimmen Sie, ob DNS-Anfragen Ihren Split-Tunneling-Regeln folgen oder stets im VPN bleiben. Split DNS in VpnHood! auf allen Plattformen.",
+  "meta_title": "Split-DNS: DNS-Anfragen sicher im VPN behalten | VpnHood!",
+  "meta_description": "Bestimmen Sie, ob DNS-Anfragen Ihren Split-Tunneling-Regeln folgen oder stets im VPN bleiben. Split-DNS in VpnHood! auf allen Plattformen.",
   "eyebrow": "Split-Tunneling",
-  "title": "Split DNS",
-  "lead": "DNS-Anfragen zeigen jede Website, die Sie aufrufen. Split DNS bestimmt, ob sie wie jeder andere Datenverkehr den Split-Regeln folgen oder immer sicher im VPN bleiben.",
+  "title": "Split-DNS",
+  "lead": "DNS-Anfragen zeigen jede Website, die Sie aufrufen. Split-DNS bestimmt, ob sie wie jeder andere Datenverkehr den Split-Regeln folgen oder immer sicher im VPN bleiben.",
   "shot_alt": "Der Split-DNS-Bildschirm in der VpnHood!-App mit den Optionen „Always use VPN“ und „Allow Bypass VPN“",
   "platforms_label": "Verfügbar für",
   "platforms": "Android, iOS, Windows und Linux",

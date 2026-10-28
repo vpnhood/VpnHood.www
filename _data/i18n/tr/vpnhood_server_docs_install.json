@@ -19,7 +19,7 @@
   "mgr_box_cta": "MANAGER ile sunucu ekleyin",
   "linux_title": "Bağımsız bir sunucu kurun",
   "step_linux_run": "Bu komutu çalıştırın. Makinenin x64 mü yoksa arm64 mü olduğunu otomatik algılar ve sunucuyu <code>[server_dir_linux]</code> dizinine kurar.",
-  "step_linux_options": "Kurulum istemleriyle karşılaşmadan bir komut dosyası (script) üzerinden yüklemek için <a href=\"/vpnhood-server/docs/installer-options/\">Kurulum seçenekleri</a> sayfasına bakın.",
+  "step_linux_options": "Kurulum istemleriyle karşılaşmadan bir komut dosyası (script) üzerinden yüklemek için <a href=\"/vpnhood-server/docs/installer-options/\">Yükleyici seçenekleri</a> sayfasına bakın.",
   "key_title": "İlk erişim anahtarınızı oluşturun",
   "step_key_run": "Bağımsız bir sunucu, yalnızca kendi ürettiği erişim anahtarına sahip cihazlara izin verir. Anahtar oluşturmak için bunu sunucuda çalıştırın.",
   "step_key_copy": "Anahtar <code>[accesskey_heading]</code> altında gösterilir ve <code>[key_prefix]</code> ile başlar; satırın tamamını kopyalayın. Birkaç satır üstte yer alan <code>[hostendpoints_label]</code> kısmında sunucunuzun genel IP adresi görünmelidir.",
@@ -49,6 +49,6 @@
   "next_title": "Sonraki adımlar",
   "next_manager": "VpnHood! MANAGER ile bir web panelinden birden çok sunucuyu ve anahtarı yönetin",
   "next_addresses": "Sunucunun dinlediği ve anahtarlarına eklediği IP adreslerini belirleyin",
-  "next_domain": "Bir alan adı ve güvenilir bir sertifika kullanın",
+  "next_domain": "Alan adı ve güvenilir sertifika kullanın",
   "next_blocking": "Sunucunuzun IP adresinin engellenmesini önleyin"
 }

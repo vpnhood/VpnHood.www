@@ -1,7 +1,7 @@
 {
   "meta_title": "Configura VpnHood! SERVER dietro un reverse proxy come Cloudflare | VpnHood!",
   "meta_description": "IP del server bloccato? Configura VpnHood! SERVER dietro un reverse proxy come Cloudflare, su un server gestito o standalone, e scopri cosa vede il proxy.",
-  "title": "Proteggi il tuo server dietro un reverse proxy",
+  "title": "Metti il tuo server dietro un reverse proxy",
   "lead": "Se una rete blocca l'indirizzo IP del tuo server, non potrà fermare le app che non si connettono direttamente ad esso. Con un reverse proxy come Cloudflare, le app si collegano al proxy, che poi inoltra la connessione al tuo server.",
   "how_title": "Come funziona",
   "how_proxy": "Il tuo dominio punta al proxy invece che al tuo server. Le app cercano il dominio e si connettono al proxy, che decifra la connessione (proprio come fa con qualsiasi sito web che gestisce) e la cifra di nuovo verso il tuo server. Il loro traffico viaggia tramite WebSocket, che Cloudflare inoltra. Puoi usare anche un altro reverse proxy, purché inoltri WebSocket e raggiunga il tuo server tramite TLS; in questo caso il tuo server ha bisogno degli indirizzi di quel proxy, come mostrato in <a href=\"#addresses\">Indirizzi dei tuoi utenti</a>.",
@@ -49,6 +49,6 @@
   "file_addresses": "Se il tuo server ha bisogno delle impostazioni indicate in <a href=\"#addresses\">Indirizzi dei tuoi utenti</a>, inseriscile sotto <code>[setting_file_access_manager]</code> in <code>[server_appsettings]</code>, poi riavvia il server.",
   "next_title": "Passaggi successivi",
   "next_addresses": "Configura gli indirizzi IP su cui il server ascolta e che include nelle chiavi",
-  "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato",
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server",
   "next_manager": "Gestisci più server e chiavi da un pannello web con VpnHood! MANAGER"
 }

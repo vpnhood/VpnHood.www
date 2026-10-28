@@ -52,5 +52,5 @@
   "delete_rules": "Selecione <b>[manager_delete]</b> na caixa de diálogo do certificado. O MANAGER não permite excluir o certificado que está nas chaves, nem o último certificado usado por todo o farm: antes, atribua <b>[manager_public_in_token]</b> a outro certificado ou adicione um.",
   "next_title": "Próximos passos",
   "next_access_points": "Defina os endereços em que seus servidores escutam e adicione-os às chaves",
-  "next_proxy": "Colocar seu servidor atrás de um proxy reverso"
+  "next_proxy": "Coloque seu servidor atrás de um proxy reverso"
 }

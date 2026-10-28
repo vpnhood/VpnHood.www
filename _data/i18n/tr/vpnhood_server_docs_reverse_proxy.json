@@ -25,7 +25,7 @@
   "limit_tcp": "<b>Yalnızca TCP:</b> Sunucunuz, proxy üzerinden gelen uygulamalara UDP ve QUIC bağlantı noktalarını sunmaz.",
   "limit_terms": "<b>Kullanım Koşulları:</b> Sağlayıcınızın koşullarının VPN trafiğine izin verdiğinden emin olun. Yaklaşık 50 veya daha az kullanıcıdan oluşan küçük bir grup genellikle sorun oluşturmaz.",
   "before_title": "Başlamadan önce",
-  "req_cert": "Sunucunuzda bir sertifika yetkilisinden (CA) alınmış sertifikaya sahip bir alan adı veya alt alan adı: <a href=\"/vpnhood-server/docs/domain/\">Alan adı ve güvenilir sertifika kullanma</a> kılavuzunda adımları bulabilirsiniz. Bu işlemi alan adı kaydı doğrudan sunucuyu gösterirken önceden yapın.",
+  "req_cert": "Sunucunuzda bir sertifika yetkilisinden (CA) alınmış sertifikaya sahip bir alan adı veya alt alan adı: <a href=\"/vpnhood-server/docs/domain/\">Alan adı ve güvenilir sertifika kullanın</a> kılavuzunda adımları bulabilirsiniz. Bu işlemi alan adı kaydı doğrudan sunucuyu gösterirken önceden yapın.",
   "req_one_server": "Alan adının arkasında tek bir sunucu olmalıdır. İki sunucuya yönlendiren kayıtlar, tek bir oturumun bağlantılarını her iki sunucuya da dağıtabilir ve oturum kopabilir.",
   "req_port": "Sunucunun TCP <code>[server_port]</code> bağlantı noktasını veya proxy'nin ilettiği başka bir bağlantı noktasını dinlemesi gerekir. Cloudflare, HTTPS trafiğini yalnızca <code>[cloudflare_https_ports]</code> üzerinden iletir.",
   "proxy_title": "Proxy'yi etkinleştirin",

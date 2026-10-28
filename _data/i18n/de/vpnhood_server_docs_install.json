@@ -1,7 +1,7 @@
 {
   "meta_title": "VpnHood! SERVER unter Linux installieren | VpnHood!",
   "meta_description": "Installieren Sie VpnHood! SERVER mit einem Befehl unter Linux und erstellen Sie dann die Zugangsschlüssel, mit denen sich Ihre Geräte verbinden – oder lassen Sie VpnHood! MANAGER die Installation für Sie übernehmen.",
-  "title": "VpnHood! SERVER auf Linux installieren",
+  "title": "VpnHood! SERVER unter Linux installieren",
   "lead": "Betreiben Sie Ihren eigenen VPN-Server auf jedem Linux-System mit öffentlicher IP-Adresse. VpnHood! MANAGER kann ihn für Sie als verwalteten Server installieren, oder ein einziger Befehl installiert ihn als eigenständigen Server.",
   "aria_flow": "So funktioniert es",
   "flow_server_title": "Ihr Server",
@@ -18,8 +18,8 @@
   "mgr_box_desc": "Statt die folgenden Befehle auszuführen, lassen Sie das kostenlose Web-Panel den Server für Sie installieren. Es stellt die Zugangsschlüssel aus und zeigt den Status jedes Servers sowie die Nutzung jedes Schlüssels.",
   "mgr_box_cta": "Server mit MANAGER hinzufügen",
   "linux_title": "Eigenständigen Server installieren",
-  "step_linux_run": "Führe diesen Befehl aus. Er erkennt automatisch x64 oder arm64 und installiert den Server unter <code>[server_dir_linux]</code>.",
-  "step_linux_options": "Für eine automatisierte Skript-Installation ohne Rückfragen siehe <a href=\"/vpnhood-server/docs/installer-options/\">Installationsoptionen</a>.",
+  "step_linux_run": "Führen Sie diesen Befehl aus. Er erkennt automatisch x64 oder arm64 und installiert den Server unter <code>[server_dir_linux]</code>.",
+  "step_linux_options": "Für eine automatisierte Skript-Installation ohne Rückfragen siehe <a href=\"/vpnhood-server/docs/installer-options/\">Installer-Optionen</a>.",
   "key_title": "Ersten Zugangsschlüssel erstellen",
   "step_key_run": "Ein eigenständiger Server gewährt nur Geräten Zugriff, die über einen von ihm erstellten Zugangsschlüssel verfügen. Führen Sie diesen Befehl auf dem Server aus, um einen Schlüssel zu erstellen.",
   "step_key_copy": "Der Schlüssel wird unter <code>[accesskey_heading]</code> ausgegeben und beginnt mit <code>[key_prefix]</code>; kopieren Sie die gesamte Zeile. Einige Zeilen darüber sollte unter <code>[hostendpoints_label]</code> die öffentliche IP-Adresse Ihres Servers stehen.",
@@ -49,6 +49,6 @@
   "next_title": "Nächste Schritte",
   "next_manager": "Mehrere Server und Schlüssel bequem über das Web-Panel mit VpnHood! MANAGER verwalten",
   "next_addresses": "IP-Adressen festlegen, auf denen der Server lauscht und die in den Schlüsseln hinterlegt werden",
-  "next_domain": "Eigene Domain und vertrauenswürdiges Zertifikat nutzen",
-  "next_blocking": "IP-Adresse Ihres Servers vor Sperren schützen"
+  "next_domain": "Domainnamen und vertrauenswürdiges Zertifikat nutzen",
+  "next_blocking": "Server-IP-Adresse vor Sperren schützen"
 }

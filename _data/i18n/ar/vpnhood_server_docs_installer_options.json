@@ -26,6 +26,6 @@
   "next_title": "الخطوات التالية",
   "next_keys": "أنشئ مفاتيح الوصول التي تتصل بها أجهزتك، <a href=\"/vpnhood-server/docs/install/#access-key\">على Linux</a> أو <a href=\"/vpnhood-server/docs/docker/#access-key\">في Docker</a>",
   "next_addresses": "عيّن عناوين IP التي يستمع إليها الخادم ويضمّنها في مفاتيحه",
-  "next_domain": "استخدم اسم نطاق وشهادة موثوقة",
+  "next_domain": "استخدام اسم نطاق وشهادة موثوقة",
   "next_blocking": "احمِ عنوان IP الخاص بخادمك من الحظر"
 }

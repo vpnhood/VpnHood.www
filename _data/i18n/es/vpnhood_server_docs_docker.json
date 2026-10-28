@@ -42,6 +42,6 @@
   "next_title": "Pasos siguientes",
   "next_manager": "Gestiona varios servidores y claves desde un panel web con VpnHood! MANAGER",
   "next_addresses": "Configura las direcciones IP en las que escucha el servidor y que incluye en sus claves",
-  "next_domain": "Usar un nombre de dominio y un certificado de confianza",
+  "next_domain": "Usa un nombre de dominio y un certificado de confianza",
   "next_blocking": "Evita que bloqueen la dirección IP de tu servidor"
 }

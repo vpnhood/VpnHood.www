@@ -11,7 +11,7 @@
   "row_split_apps": "النفق المقسم حسب التطبيقات",
   "row_change_protocols": "تغيير البروتوكولات",
   "row_add_proxy": "البروكسيات الذكية",
-  "row_kill_switch": "مفتاح الإيقاف التلقائي (Kill Switch)",
+  "row_kill_switch": "Kill Switch",
   "row_multilingual": "متعدد اللغات",
   "row_locations": "المواقع <span class=\"small vh-txt-purple-100\">(الدولة)</span>",
   "row_ad_free": "بدون إعلانات",

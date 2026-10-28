@@ -29,7 +29,7 @@
   "keys_how": "Mantén la dirección anterior solo en <code>[setting_tcp_endpoints]</code> para que el servidor siga escuchando en ella sin incluirla más en las claves.",
   "keys_lost": "Si una aplicación ya no puede conectarse a la dirección anterior, necesitará una clave nueva. Con un <a href=\"/vpnhood-server/docs/reverse-proxy/\">proxy inverso</a>, las aplicaciones se conectan al proxy, lo que permite cambiar la dirección de tu servidor sin invalidar sus claves.",
   "next_title": "Pasos siguientes",
-  "next_blocking": "Evita el bloqueo de la IP de tu servidor",
-  "next_domain": "Usar un nombre de dominio y un certificado de confianza",
+  "next_blocking": "Evita que bloqueen la dirección IP de tu servidor",
+  "next_domain": "Usa un nombre de dominio y un certificado de confianza",
   "next_manager": "Administra múltiples servidores y claves desde un panel web con VpnHood! MANAGER"
 }

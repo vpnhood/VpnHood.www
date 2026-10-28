@@ -50,7 +50,7 @@
   "options_desc": "Prenez le contrôle total de votre sécurité en ligne et libérez tout son potentiel grâce à des options avancées, conçues sur mesure pour vos besoins spécifiques, garantissant une expérience optimisée et sécurisée.",
   "opt_protocols_title": "Protocoles",
   "opt_protocols_desc": "Incluant TCP et UDP, optimisés pour une connectivité stable et à haute vitesse.",
-  "opt_split_title": "Split Tunneling",
+  "opt_split_title": "Split tunneling",
   "opt_split_desc": "Divisez le trafic par pays, applications, adresses IP et domaines pour économiser des données et optimiser la vitesse.",
   "opt_dns_title": "DNS privé",
   "opt_dns_desc": "Gérez la résolution des adresses de sites web en configurant le DNS privé et le DNS de l'adaptateur.",

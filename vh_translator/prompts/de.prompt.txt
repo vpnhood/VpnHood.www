@@ -6,6 +6,7 @@ Premium = Premium (never translated, never "Premium-Version")
 Free (plan name) = Kostenlos
 Kill Switch = Kill Switch
 Private DNS = Privates DNS
+Split DNS = Split-DNS (hyphenated, like Split-Tunneling)
 Split tunneling = Split-Tunneling
 Go premium = Premium werden
 Premium Pricing = Premium-Tarife
@@ -13,7 +14,7 @@ Features = Funktionen
 Self-Hosted VPN = Selbstgehostetes VPN (one word)
 Download Now = Jetzt herunterladen
 (opens in new tab) = (öffnet in neuem Tab)
-Split tunneling by apps / by countries = Split-Tunneling nach Apps / nach Ländern
+Split tunneling by app / by country = Split-Tunneling nach Apps / nach Ländern
 Frequently Asked Questions = Häufig gestellte Fragen
 Learn more = Mehr erfahren
 Free vs Premium = Kostenlos vs. Premium
@@ -42,3 +43,4 @@ sign-up / no account = ohne Registrierung.
 RULES
 - Percentages take a space: "100 % kostenlos", never "100%".
 - Buttons use the infinitive ("Jetzt herunterladen"), never the Sie-imperative, on all buttons.
+- Address the reader as Sie everywhere else (Sie, Ihr, Ihnen; "Laden Sie … herunter"), never du, dich, dir, dein.

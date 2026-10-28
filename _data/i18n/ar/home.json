@@ -54,7 +54,7 @@
   "opt_split_desc": "قم بتقسيم حركة البيانات حسب الدول، التطبيقات، عناوين IP، والنطاقات لتوفير البيانات ومضاعفة السرعة.",
   "opt_dns_title": "DNS خاص",
   "opt_dns_desc": "تحكم في كيفية حل عناوين المواقع عبر إعدادات DNS الخاص ومحول DNS.",
-  "opt_kill_title": "مفتاح الإيقاف الطارئ",
+  "opt_kill_title": "Kill Switch",
   "opt_kill_desc": "يقطع اتصال الإنترنت تلقائياً فور انقطاع VPN لحماية خصوصيتك.",
   "connect_logo_alt": "شعار VpnHood! CONNECT",
   "ripple_alt_1": "صورة التموج 1",

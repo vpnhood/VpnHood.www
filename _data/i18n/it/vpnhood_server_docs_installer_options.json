@@ -20,12 +20,12 @@
   "opt_docker_q": "Nessuna richiesta: Docker viene installato solo specificando <code>[flag_install_docker]</code>.",
   "caption_docker": "Esempio: esecuzione in uno script, con installazione automatica di Docker se non presente",
   "manager_title": "Opzioni inserite da MANAGER",
-  "manager_desc": "Entrambi i programmi di installazione supportano <code>[flag_http_base_url]</code>, <code>[flag_http_authorization]</code> e <code>[flag_management_secret]</code>. Sostituiscono il file <code>[server_appsettings]</code> con uno che collega il server a VpnHood! MANAGER, rendendolo un server gestito. Non occorre digitarle: il comando mostrato da MANAGER le include già, come spiegato in <a href=\"/vpnhood-manager/docs/add-server/\">Aggiungere un server</a>.",
+  "manager_desc": "Entrambi i programmi di installazione supportano <code>[flag_http_base_url]</code>, <code>[flag_http_authorization]</code> e <code>[flag_management_secret]</code>. Sostituiscono il file <code>[server_appsettings]</code> con uno che collega il server a VpnHood! MANAGER, rendendolo un server gestito. Non occorre digitarle: il comando mostrato da MANAGER le include già, come spiegato in <a href=\"/vpnhood-manager/docs/add-server/\">Aggiungi un server</a>.",
   "uninstaller_title": "Disinstallazione",
   "uninstaller_desc": "Il programma di disinstallazione per server non Docker supporta l'opzione <code>[flag_purge]</code>, che elimina anche impostazioni, chiavi di accesso e certificati del server. Consulta la sezione <a href=\"/vpnhood-server/docs/install/#uninstall\">Disinstallazione</a>.",
   "next_title": "Passaggi successivi",
   "next_keys": "Crea le chiavi di accesso per connettere i tuoi dispositivi, <a href=\"/vpnhood-server/docs/install/#access-key\">su Linux</a> o <a href=\"/vpnhood-server/docs/docker/#access-key\">in Docker</a>",
   "next_addresses": "Imposta gli indirizzi IP su cui il server è in ascolto e da includere nelle chiavi",
   "next_domain": "Usa un nome di dominio e un certificato attendibile",
-  "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato"
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server"
 }

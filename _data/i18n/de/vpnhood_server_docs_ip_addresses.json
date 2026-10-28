@@ -29,7 +29,7 @@
   "keys_how": "Belassen Sie die alte Adresse nur in <code>[setting_tcp_endpoints]</code>: So nimmt der Server weiterhin Verbindungen darüber an, übernimmt sie aber nicht mehr in die Schlüssel.",
   "keys_lost": "Kann eine App die alte Adresse nicht mehr erreichen, benötigt sie einen neuen Schlüssel von Ihnen. Hinter einem <a href=\"/vpnhood-server/docs/reverse-proxy/\">Reverse-Proxy</a> verbinden sich Apps mit dem Proxy – so kann sich die Adresse Ihres Servers ändern, ohne dass ihre Schlüssel ungültig werden.",
   "next_title": "Nächste Schritte",
-  "next_blocking": "IP-Sperren auf Ihrem Server verhindern",
-  "next_domain": "Einen Domainnamen und ein vertrauenswürdiges Zertifikat verwenden",
+  "next_blocking": "Server-IP-Adresse vor Sperren schützen",
+  "next_domain": "Domainnamen und vertrauenswürdiges Zertifikat nutzen",
   "next_manager": "Mehrere Server und Schlüssel über ein Web-Panel verwalten – mit VpnHood! MANAGER"
 }

@@ -27,7 +27,7 @@
   "settings_title": "Alterar as configurações",
   "settings_file": "O servidor lê as configurações em <code>[server_appsettings]</code>. Edite o arquivo e reinicie o contêiner com <code>[docker_restart]</code>.",
   "settings_env": "Se não for possível editar o arquivo, insira todo o conteúdo de appsettings.json na variável de ambiente <code>[env_appsettings]</code>. O servidor a usará no lugar do arquivo.",
-  "settings_more": "<a href=\"/vpnhood-server/docs/ip-addresses/\">Configure os endereços IP do seu servidor</a> e <a href=\"/vpnhood-server/docs/domain/\">Use um nome de domínio e um certificado confiável</a> para ver o passo a passo das configurações mais comuns.",
+  "settings_more": "<a href=\"/vpnhood-server/docs/ip-addresses/\">Defina os endereços IP do seu servidor</a> e <a href=\"/vpnhood-server/docs/domain/\">Use um nome de domínio e um certificado confiável</a> para ver o passo a passo das configurações mais comuns.",
   "updates_title": "Atualizações",
   "updates_auto": "O servidor se atualiza automaticamente dentro do contêiner. Ele verifica se há novas versões ao iniciar e a cada 12 horas, reiniciando na nova versão.",
   "updates_off": "Para manter uma versão fixa, defina <code>[env_auto_update_off]</code> nas variáveis de ambiente do contêiner.",
@@ -42,6 +42,6 @@
   "next_title": "Próximas etapas",
   "next_manager": "Gerencie vários servidores e chaves em um painel web com o VpnHood! MANAGER",
   "next_addresses": "Defina os endereços IP em que o servidor escuta e inclui nas chaves",
-  "next_domain": "Usar um nome de domínio e um certificado confiável",
-  "next_blocking": "Evitar o bloqueio do IP do seu servidor"
+  "next_domain": "Use um nome de domínio e um certificado confiável",
+  "next_blocking": "Evite o bloqueio do endereço IP do seu servidor"
 }

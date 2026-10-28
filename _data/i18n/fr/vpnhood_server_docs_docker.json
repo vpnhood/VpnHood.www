@@ -13,7 +13,7 @@
   "mgr_box_cta": "Ajouter un serveur avec MANAGER",
   "install_title": "Installer un serveur autonome",
   "step_install_run": "Exécutez cette commande. Elle vous proposera d'installer Docker si nécessaire, téléchargera le fichier compose et démarrera le conteneur du serveur.",
-  "step_install_options": "Pour une installation automatisée par script (sans invite), consultez les <a href=\"/vpnhood-server/docs/installer-options/#docker\">options d'installation</a>.",
+  "step_install_options": "Pour une installation automatisée par script (sans invite), consultez <a href=\"/vpnhood-server/docs/installer-options/#docker\">Options d'installation</a>.",
   "step_install_storage": "Le serveur conserve ses paramètres, ses clés et ses journaux dans <code>[server_storage]</code> sur l'hôte, afin de ne rien perdre lors de la réinitialisation du conteneur.",
   "key_title": "Créer une clé d'accès",
   "step_key_run": "Exécutez ceci sur la machine. La clé est générée à l'intérieur du conteneur du serveur pour appliquer directement ses paramètres.",
@@ -27,7 +27,7 @@
   "settings_title": "Modifier les paramètres",
   "settings_file": "Le serveur lit sa configuration depuis <code>[server_appsettings]</code>. Modifiez ce fichier, puis redémarrez le conteneur à l'aide de <code>[docker_restart]</code>.",
   "settings_env": "S'il vous est impossible de modifier un fichier, définissez plutôt tout le contenu d'un appsettings.json dans la variable d'environnement <code>[env_appsettings]</code>. Le serveur l'utilisera alors à la place du fichier.",
-  "settings_more": "Consultez <a href=\"/vpnhood-server/docs/ip-addresses/\">Configurer les adresses IP de votre serveur</a> et <a href=\"/vpnhood-server/docs/domain/\">Utiliser un nom de domaine et un certificat approuvé</a> pour découvrir les paramètres les plus courants.",
+  "settings_more": "Consultez <a href=\"/vpnhood-server/docs/ip-addresses/\">Définir les adresses IP de votre serveur</a> et <a href=\"/vpnhood-server/docs/domain/\">Utiliser un nom de domaine et un certificat de confiance</a> pour découvrir les paramètres les plus courants.",
   "updates_title": "Mises à jour",
   "updates_auto": "Le serveur se met à jour automatiquement dans le conteneur. Il vérifie la disponibilité d'une nouvelle version au démarrage ainsi que toutes les 12 heures, puis redémarre avec la mise à jour.",
   "updates_off": "Pour conserver une version précise, définissez <code>[env_auto_update_off]</code> dans l'environnement du conteneur.",
@@ -42,6 +42,6 @@
   "next_title": "Étapes suivantes",
   "next_manager": "Gérez plusieurs serveurs et clés depuis une interface web avec VpnHood! MANAGER",
   "next_addresses": "Définir les adresses IP d'écoute du serveur et celles intégrées aux clés",
-  "next_domain": "Utiliser un nom de domaine et un certificat approuvé",
-  "next_blocking": "Protéger l'adresse IP de votre serveur contre le blocage"
+  "next_domain": "Utiliser un nom de domaine et un certificat de confiance",
+  "next_blocking": "Éviter le blocage de l'adresse IP de votre serveur"
 }

@@ -1,7 +1,7 @@
 {
   "meta_title": "Adicione um domínio e certificado confiável ao VpnHood! SERVER | VpnHood!",
   "meta_description": "Configure no VpnHood! SERVER um nome de domínio com um certificado de uma autoridade certificadora, em um servidor gerenciado ou independente, para que a conexão pareça a visita a um site comum.",
-  "title": "Use um domínio e um certificado confiável",
+  "title": "Use um nome de domínio e um certificado confiável",
   "lead": "Por padrão, o servidor usa um certificado autoassinado genérico. Adicione seu próprio domínio com um certificado emitido por uma autoridade certificadora para que sua conexão pareça uma visita normal a um site comum.",
   "why_title": "O que isso muda",
   "why_keys": "Os aplicativos validam o certificado como um navegador, checando a autoridade emissora e o nome. Assim, as chaves continuam funcionando mesmo após a renovação do certificado.",
@@ -25,6 +25,6 @@
   "next_title": "Próximos passos",
   "next_proxy": "Coloque seu servidor atrás de um proxy reverso",
   "next_addresses": "Defina os endereços IP que o servidor escuta e inclui nas chaves",
-  "next_blocking": "Evite que o endereço IP do seu servidor seja bloqueado",
+  "next_blocking": "Evite o bloqueio do endereço IP do seu servidor",
   "next_manager": "Gerencie múltiplos servidores e chaves em um painel web com o VpnHood! MANAGER"
 }

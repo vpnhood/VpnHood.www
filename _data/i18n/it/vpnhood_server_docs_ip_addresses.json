@@ -29,7 +29,7 @@
   "keys_how": "Mantieni il vecchio indirizzo solo in <code>[setting_tcp_endpoints]</code>: il server continuerà a rimanere in ascolto, ma non lo includerà più nelle nuove chiavi.",
   "keys_lost": "Se l'app non riesce più a raggiungere il vecchio indirizzo, dovrai fornirle una nuova chiave. Con un <a href=\"/vpnhood-server/docs/reverse-proxy/\">reverse proxy</a>, le app si collegano direttamente al proxy: così puoi cambiare l'indirizzo del server senza rendere inutilizzabili le chiavi.",
   "next_title": "Passaggi successivi",
-  "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato",
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server",
   "next_domain": "Usa un nome di dominio e un certificato attendibile",
   "next_manager": "Gestisci molteplici server e chiavi da un unico pannello web con VpnHood! MANAGER"
 }

@@ -27,5 +27,5 @@
   "next_keys": "अपने डिवाइसेस को कनेक्ट करने के लिए एक्सेस कीज़ बनाएं, <a href=\"/vpnhood-server/docs/install/#access-key\">Linux पर</a> या <a href=\"/vpnhood-server/docs/docker/#access-key\">Docker में</a>",
   "next_addresses": "वे IP एड्रेस सेट करें जिन पर सर्वर सुनता है और उन्हें अपनी कीज़ में जोड़ता है",
   "next_domain": "डोमेन नाम और विश्वसनीय सर्टिफ़िकेट का उपयोग करें",
-  "next_blocking": "अपने सर्वर के IP एड्रेस को ब्लॉक होने से बचाएं"
+  "next_blocking": "अपने सर्वर का IP पता ब्लॉक होने से बचाएं"
 }

@@ -35,7 +35,7 @@
   "unlimited_data_title": "Données illimitées",
   "unlimited_data_desc": "Le serveur VpnHood! peut imposer un quota mensuel par utilisateur, mais aucun n'est configuré sur les serveurs gratuits. Utilisez-le tout le mois, pour tout ce que vous voulez, sans aucun décompte.",
   "unlimited_speed_title": "Vitesse non bridée",
-  "unlimited_speed_desc": "Le serveur peut aussi brider la vitesse par utilisateur, ce que nous ne faisons pas sur les serveurs gratuits. Les variations de débit dépendent uniquement de la capacité globale : les serveurs gratuits accueillent davantage de personnes, la bande passante fluctue donc selon l'affluence. Les serveurs Premium, plus puissants et réservés aux utilisateurs Premium, offrent une vitesse nettement plus stable et rapide. <a href=\"/guides/vpn-speed/\">Comment bien tester la vitesse de votre VPN</a>.",
+  "unlimited_speed_desc": "Le serveur peut aussi brider la vitesse par utilisateur, ce que nous ne faisons pas sur les serveurs gratuits. Les variations de débit dépendent uniquement de la capacité globale : les serveurs gratuits accueillent davantage de personnes, la bande passante fluctue donc selon l'affluence. Les serveurs Premium, plus puissants et réservés aux utilisateurs Premium, offrent une vitesse nettement plus stable et rapide. <a href=\"/guides/vpn-speed/\">Comment bien tester la vitesse de son VPN</a>.",
   "locations_label": "Localisations",
   "locations_title": "Choisissez votre pays de connexion",
   "locations_desc": "Tous les pays gratuits sont inclus dans Premium. Choisissez le plus proche pour la vitesse, ou le pays de votre choix pour accéder à vos contenus.",

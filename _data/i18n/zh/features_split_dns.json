@@ -3,7 +3,7 @@
   "meta_description": "自由选择让 DNS 查询遵循分流规则，或始终保留在 VPN 隧道内。VpnHood! DNS 分流功能，全平台支持，科学上网更私密安全。",
   "eyebrow": "分流",
   "title": "DNS 分流",
-  "lead": "DNS 查询会暴露你访问的每个网站。DNS 分流功能让你决定：是让查询与其他流量一样遵循分流规则，还是始终留在 VPN 内保护隐私。",
+  "lead": "DNS 查询会暴露您访问的每个网站。DNS 分流功能让您决定：是让查询与其他流量一样遵循分流规则，还是始终留在 VPN 内保护隐私。",
   "shot_alt": "VpnHood! 应用中的 DNS 分流设置界面，显示“始终使用 VPN”和“允许绕过 VPN”选项",
   "platforms_label": "支持平台",
   "platforms": "Android、iOS、Windows 和 Linux",

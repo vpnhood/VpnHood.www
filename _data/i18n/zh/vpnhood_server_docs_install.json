@@ -38,7 +38,7 @@
   "manage_title": "启动与停止服务器",
   "manage_linux": "无论受管还是独立，服务器都作为 <code>[server_service]</code> 服务运行。",
   "manage_log": "日志位于 <code>[server_log]</code>。",
-  "manage_manual": "如果未安装为系统服务，可手动运行 <code>[vhserver_run]</code> 启动。它将持续运行，直到你在另一个终端中使用 <code>[vhserver_stop]</code> 停止它。",
+  "manage_manual": "如果未安装为系统服务，可手动运行 <code>[vhserver_run]</code> 启动。它将持续运行，直到您在另一个终端中使用 <code>[vhserver_stop]</code> 停止它。",
   "updates_title": "更新",
   "updates_desc": "除非在安装时已禁用，否则服务器会自动更新至最新版本：<code>[server_updater]</code> 服务会每 12 小时检查一次更新。",
   "updates_off": "如需关闭自动更新，请重新运行独立安装命令，并在出现 <code>[autoupdate_prompt_linux]</code> 时输入 <code>[answer_no]</code>。安装程序会保留您的选择和配置，服务器将保持当前版本，直到您手动更新。",
@@ -49,6 +49,6 @@
   "next_title": "后续步骤",
   "next_manager": "通过 VpnHood! MANAGER 网页控制面板管理多台服务器与密钥",
   "next_addresses": "设置服务器监听并在访问凭据中包含的 IP 地址",
-  "next_domain": "使用自定义域名与可信证书",
+  "next_domain": "使用域名和受信任的证书",
   "next_blocking": "防止服务器 IP 地址被封锁"
 }

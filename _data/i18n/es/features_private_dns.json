@@ -22,7 +22,7 @@
   "b5_title": "DNS de adaptador en cualquier plataforma",
   "b5_desc": "¿Prefieres otro resolvedor en lugar del predeterminado? Introduce tus propios servidores DNS y el túnel los usará en cualquier plataforma, a menos que el servidor imponga los suyos.",
   "b6_title": "El DNS no sale del túnel",
-  "b6_desc": "Al configurar el DNS para que use siempre la VPN, cualquier consulta que una regla enviaría fuera se queda dentro del túnel; si el servidor no responde, se descarta para evitar filtraciones. Si excluyes una aplicación de la VPN, sus consultas saldrán junto con el resto de su tráfico.",
+  "b6_desc": "Al configurar el DNS dividido para que use siempre la VPN, cualquier consulta que una regla de país, dominio o IP enviaría fuera del túnel se queda dentro; si el servidor no responde, se descarta para evitar filtraciones. Si excluyes una aplicación de la VPN, sus consultas saldrán junto con el resto de su tráfico.",
   "how_title": "Cómo funciona",
   "how_desc": "Para abrir un sitio, tu dispositivo solicita su dirección a un servidor DNS. El DNS estándar viaja sin cifrar por el puerto 53; el DNS privado usa TLS por el puerto 853. VpnHood! procesa ambos sin interrupciones, puede mantenerlos dentro del túnel y envía tus consultas cifradas al resolvedor que elijas.",
   "when_title": "Cuándo activarlo",

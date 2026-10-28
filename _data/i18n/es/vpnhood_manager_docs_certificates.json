@@ -52,5 +52,5 @@
   "delete_rules": "Selecciona <b>[manager_delete]</b> en su cuadro de diálogo. MANAGER no permite eliminar el certificado incluido en las claves ni el último certificado que use toda la granja: asigna primero <b>[manager_public_in_token]</b> a otro certificado o añade uno nuevo.",
   "next_title": "Pasos siguientes",
   "next_access_points": "Configura las direcciones en las que escuchan tus servidores y añádelas a sus claves",
-  "next_proxy": "Configurar el servidor detrás de un proxy inverso"
+  "next_proxy": "Pon tu servidor detrás de un proxy inverso"
 }

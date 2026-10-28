@@ -38,7 +38,7 @@
   "unlimited_speed_desc": "Der Server könnte auch die Bandbreite pro Nutzer drosseln, tut dies auf den kostenlosen Servern aber nicht. Schwankungen liegen allein an der Gesamtauslastung: Kostenlose Server teilen sich viele Nutzer gleichzeitig. Premium-Server bieten mehr Leistung und stehen exklusiv Premium-Nutzern zur Verfügung – darum sind sie dauerhaft schneller. <a href=\"/guides/vpn-speed/\">So testen Sie Ihre VPN-Geschwindigkeit richtig</a>.",
   "locations_label": "Standorte",
   "locations_title": "Wählen Sie Ihren virtuellen Standort",
-  "locations_desc": "Alle kostenlosen Länder sind auch in Premium enthalten. Wähle den nächsten Standort für maximale Geschwindigkeit oder deinen Wunschort für weltweiten Zugriff.",
+  "locations_desc": "Alle kostenlosen Länder sind auch in Premium enthalten. Wählen Sie den nächsten Standort für maximale Geschwindigkeit oder Ihren Wunschort für weltweiten Zugriff.",
   "locations_free_label": "Kostenlos",
   "locations_premium_label": "Mit Premium",
   "locations_cta": "Alle Standorte anzeigen",

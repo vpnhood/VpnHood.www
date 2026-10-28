@@ -25,7 +25,7 @@
   "limit_tcp": "<b>Apenas TCP:</b> Seu servidor não disponibiliza portas UDP e QUIC para aplicativos que chegam pelo proxy.",
   "limit_terms": "<b>Termos de uso:</b> Verifique se os termos do seu provedor permitem tráfego de VPN. Grupos pequenos de usuários, com cerca de 50 ou menos, normalmente não enfrentam problemas.",
   "before_title": "Antes de começar",
-  "req_cert": "Um domínio ou subdomínio, com certificado de uma autoridade certificadora no seu servidor: o guia <a href=\"/vpnhood-server/docs/domain/\">Usar um nome de domínio e um certificado confiável</a> mostra como fazer. Configure isso primeiro, enquanto o registro do domínio ainda aponta diretamente para o servidor.",
+  "req_cert": "Um domínio ou subdomínio, com certificado de uma autoridade certificadora no seu servidor: o guia <a href=\"/vpnhood-server/docs/domain/\">Use um nome de domínio e um certificado confiável</a> mostra como fazer. Configure isso primeiro, enquanto o registro do domínio ainda aponta diretamente para o servidor.",
   "req_one_server": "Um único servidor associado ao domínio. Registros que apontam para dois servidores podem distribuir conexões da mesma sessão entre eles, interrompendo a sessão.",
   "req_port": "O servidor escutando na porta TCP <code>[server_port]</code> ou em outra porta repassada pelo proxy. A Cloudflare encaminha HTTPS apenas em <code>[cloudflare_https_ports]</code>.",
   "proxy_title": "Ativar o proxy",
@@ -49,6 +49,6 @@
   "file_addresses": "Se o seu servidor precisar das configurações da seção <a href=\"#addresses\">Endereços dos seus usuários</a>, coloque-as sob <code>[setting_file_access_manager]</code> em <code>[server_appsettings]</code> e reinicie o servidor.",
   "next_title": "Próximos passos",
   "next_addresses": "Defina os endereços IP em que o servidor escuta e adiciona às chaves",
-  "next_blocking": "Evite que o endereço IP do seu servidor seja bloqueado",
+  "next_blocking": "Evite o bloqueio do endereço IP do seu servidor",
   "next_manager": "Gerencie vários servidores e chaves em um painel web com o VpnHood! MANAGER"
 }

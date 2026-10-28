@@ -52,5 +52,5 @@
   "delete_rules": "Wählen Sie im Dialogfenster <b>[manager_delete]</b>. Das in den Schlüsseln hinterlegte Zertifikat oder das letzte von der gesamten Farm genutzte Zertifikat lässt sich nicht löschen: Weisen Sie <b>[manager_public_in_token]</b> zuvor einem anderen Zertifikat zu oder fügen Sie ein neues hinzu.",
   "next_title": "Nächste Schritte",
   "next_access_points": "Adressen festlegen, auf denen Ihre Server lauschen und die in die Schlüssel übernommen werden",
-  "next_proxy": "Server hinter einen Reverse-Proxy schalten"
+  "next_proxy": "Ihren Server hinter einen Reverse-Proxy schalten"
 }

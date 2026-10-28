@@ -44,7 +44,7 @@
   "mgr_box_desc": "Un serveur autonome inclut toujours ses propres adresses dans ses clés. Dans l'interface web gratuite, vous les retirez en quelques clics, pour que chaque application se connecte via le proxy.",
   "mgr_box_cta": "Configurer dans MANAGER",
   "file_title": "Sur un serveur autonome",
-  "file_cert": "Vérifiez que le serveur utilise bien le certificat du domaine, avec <code>[setting_is_valid_host_name]</code> défini sur <code>[json_true]</code> : le guide <a href=\"/vpnhood-server/docs/domain/#standalone\">Utiliser un nom de domaine et un certificat approuvé</a> vous montre comment faire. Les clés créées ensuite intègrent le domaine, que les applications interrogent directement.",
+  "file_cert": "Vérifiez que le serveur utilise bien le certificat du domaine, avec <code>[setting_is_valid_host_name]</code> défini sur <code>[json_true]</code> : le guide <a href=\"/vpnhood-server/docs/domain/#standalone\">Utiliser un nom de domaine et un certificat de confiance</a> vous montre comment faire. Les clés créées ensuite intègrent le domaine, que les applications interrogent directement.",
   "file_keys": "Un serveur autonome inclut systématiquement ses propres adresses dans ses clés, aux côtés du domaine ; les applications utilisent donc indifféremment l'un ou l'autre. Le proxy assure la continuité de connexion de vos utilisateurs si une adresse est bloquée, mais toute personne possédant une clé peut voir l'adresse.",
   "file_addresses": "Si votre serveur a besoin des paramètres de la section <a href=\"#addresses\">Adresses de vos utilisateurs</a>, placez-les sous <code>[setting_file_access_manager]</code> dans <code>[server_appsettings]</code>, puis redémarrez le serveur.",
   "next_title": "Étapes suivantes",

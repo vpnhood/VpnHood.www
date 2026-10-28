@@ -19,7 +19,7 @@
   "mgr_box_cta": "Aggiungi un server con MANAGER",
   "linux_title": "Installa un server standalone",
   "step_linux_run": "Esegui questo comando. Rileverà se l'architettura è x64 o arm64 e installerà il server in <code>[server_dir_linux]</code>.",
-  "step_linux_options": "Per eseguire l'installazione tramite script senza prompt interattivi, vedi <a href=\"/vpnhood-server/docs/installer-options/\">Opzioni di installazione</a>.",
+  "step_linux_options": "Per eseguire l'installazione tramite script senza prompt interattivi, vedi <a href=\"/vpnhood-server/docs/installer-options/\">Opzioni del programma di installazione</a>.",
   "key_title": "Crea la tua prima chiave di accesso",
   "step_key_run": "Un server standalone consente l'accesso solo ai dispositivi dotati di una chiave di accesso generata dal server stesso. Esegui questo comando sul server per crearne una.",
   "step_key_copy": "La chiave viene mostrata sotto <code>[accesskey_heading]</code> e inizia con <code>[key_prefix]</code>: copia l'intera riga. Qualche riga più in alto, <code>[hostendpoints_label]</code> dovrebbe indicare l'indirizzo IP pubblico del tuo server.",
@@ -50,5 +50,5 @@
   "next_manager": "Gestisci più server e chiavi da un unico pannello web con VpnHood! MANAGER",
   "next_addresses": "Imposta gli indirizzi IP su cui il server ascolta e che include nelle chiavi",
   "next_domain": "Usa un nome di dominio e un certificato attendibile",
-  "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato"
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server"
 }

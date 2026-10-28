@@ -13,7 +13,7 @@
   "docker": "Docker",
   "ip-blocking": "IP 封锁",
   "reference": "参考指南",
-  "installer-options": "安装选项",
+  "installer-options": "安装程序选项",
   "ip-addresses": "IP 地址",
   "domain": "域名",
   "reverse-proxy": "反向代理",

@@ -25,7 +25,7 @@
   "limit_tcp": "<b>Solo TCP:</b> Tu servidor no ofrece sus puertos UDP y QUIC a las aplicaciones que se conectan a través del proxy.",
   "limit_terms": "<b>Términos de servicio:</b> Comprueba que las condiciones de tu proveedor permitan el tráfico VPN. Por lo general, un grupo reducido de usuarios (unos 50 o menos) no supone ningún problema.",
   "before_title": "Antes de empezar",
-  "req_cert": "Un dominio o subdominio con un certificado de una autoridad de certificación en tu servidor: consulta <a href=\"/vpnhood-server/docs/domain/\">Usar un nombre de dominio y un certificado de confianza</a> para ver cómo hacerlo. Configúralo primero, mientras el registro del dominio apunte directamente al servidor.",
+  "req_cert": "Un dominio o subdominio con un certificado de una autoridad de certificación en tu servidor: consulta <a href=\"/vpnhood-server/docs/domain/\">Usa un nombre de dominio y un certificado de confianza</a> para ver cómo hacerlo. Configúralo primero, mientras el registro del dominio apunte directamente al servidor.",
   "req_one_server": "Un único servidor detrás del dominio. Si los registros apuntan a dos servidores, las conexiones de una misma sesión pueden repartirse entre ambos e interrumpir la sesión.",
   "req_port": "El servidor debe escuchar en el puerto TCP <code>[server_port]</code> o en otro puerto compatible con el proxy. Cloudflare solo admite tráfico HTTPS en <code>[cloudflare_https_ports]</code>.",
   "proxy_title": "Activar el proxy",

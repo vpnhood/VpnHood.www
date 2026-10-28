@@ -30,6 +30,6 @@
   "keys_lost": "Eski adrese artık ulaşamayan bir uygulamanın sizden yeni bir anahtar alması gerekir. Bir <a href=\"/vpnhood-server/docs/reverse-proxy/\">ters proxy</a> arkasında ise uygulamalar proxy'ye bağlanır; böylece sunucunuzun adresi, uygulamaların anahtarlarını geçersiz kılmadan değişebilir.",
   "next_title": "Sonraki adımlar",
   "next_blocking": "Sunucunuzun IP adresinin engellenmesini önleyin",
-  "next_domain": "Bir alan adı ve güvenilir bir sertifika kullanın",
+  "next_domain": "Alan adı ve güvenilir sertifika kullanın",
   "next_manager": "VpnHood! MANAGER ile çok sayıda sunucuyu ve anahtarı tek bir web panelinden yönetin"
 }

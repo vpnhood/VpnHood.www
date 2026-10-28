@@ -29,7 +29,7 @@
   "keys_how": "Conservez l'ancienne adresse uniquement dans <code>[setting_tcp_endpoints]</code> : le serveur continuera de l'écouter sans l'inclure dans les clés.",
   "keys_lost": "Une application qui ne peut plus joindre l'ancienne adresse a besoin d'une nouvelle clé. Derrière un <a href=\"/vpnhood-server/docs/reverse-proxy/\">reverse proxy</a>, les applications se connectent directement au proxy : vous pouvez ainsi changer l'adresse de votre serveur sans invalider leurs clés.",
   "next_title": "Étapes suivantes",
-  "next_blocking": "Protéger l'adresse IP de votre serveur contre le blocage",
+  "next_blocking": "Éviter le blocage de l'adresse IP de votre serveur",
   "next_domain": "Utiliser un nom de domaine et un certificat de confiance",
   "next_manager": "Gérer plusieurs serveurs et clés depuis une interface web avec VpnHood! MANAGER"
 }

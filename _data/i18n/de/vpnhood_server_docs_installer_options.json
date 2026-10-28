@@ -26,6 +26,6 @@
   "next_title": "Nächste Schritte",
   "next_keys": "Erstellen Sie die Zugangsschlüssel, mit denen sich Ihre Geräte verbinden – <a href=\"/vpnhood-server/docs/install/#access-key\">unter Linux</a> oder <a href=\"/vpnhood-server/docs/docker/#access-key\">in Docker</a>",
   "next_addresses": "Legen Sie die IP-Adressen fest, auf denen der Server lauscht und die in den Schlüsseln verwendet werden",
-  "next_domain": "Nutzen Sie einen Domainnamen und ein vertrauenswürdiges Zertifikat",
-  "next_blocking": "Schützen Sie die IP-Adresse Ihres Servers vor Blockaden"
+  "next_domain": "Domainnamen und vertrauenswürdiges Zertifikat nutzen",
+  "next_blocking": "Server-IP-Adresse vor Sperren schützen"
 }

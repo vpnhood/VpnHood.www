@@ -6,6 +6,7 @@ Premium = ویژه (never پرمیوم / پریمیوم — transliterations, no
 Free (plan name) = رایگان
 Kill Switch = Kill Switch
 Private DNS = DNS اختصاصی
+Split DNS = DNS تفکیکی (DNS stays Latin, like Split tunneling = تونل‌زنی تفکیکی)
 Split tunneling = تونل‌زنی تفکیکی
 Go premium = ارتقا به نسخه ویژه
 Premium Pricing = تعرفه‌های ویژه
@@ -13,7 +14,7 @@ Features = امکانات
 Self-Hosted VPN = VPN شخصی
 Download Now = همین حالا دانلود کنید (NOT دانلود رایگان — that is "Download for free")
 (opens in new tab) = (در تب جدید باز می‌شود)
-Split tunneling by apps / by countries = تونل‌زنی تفکیکی بر اساس اپلیکیشن‌ها / بر اساس کشورها
+Split tunneling by app / by country = تونل‌زنی تفکیکی بر اساس اپلیکیشن‌ها / بر اساس کشورها
 Frequently Asked Questions = سؤالات متداول
 Global Server Network = شبکه جهانی سرورها
 Learn more = بیشتر بدانید

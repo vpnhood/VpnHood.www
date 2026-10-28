@@ -13,7 +13,7 @@
   "mgr_box_cta": "Aggiungi un server con MANAGER",
   "install_title": "Installa un server standalone",
   "step_install_run": "Esegui questo comando. Ti chiederà se installare Docker, quindi scaricherà il file compose e avvierà il container del server.",
-  "step_install_options": "Per un'installazione tramite script senza richieste interattive, consulta le <a href=\"/vpnhood-server/docs/installer-options/#docker\">Opzioni di installazione</a>.",
+  "step_install_options": "Per un'installazione tramite script senza richieste interattive, consulta le <a href=\"/vpnhood-server/docs/installer-options/#docker\">Opzioni del programma di installazione</a>.",
   "step_install_storage": "Il server memorizza impostazioni, chiavi e log in <code>[server_storage]</code> sull'host, preservandoli anche in caso di rimozione o aggiornamento del container.",
   "key_title": "Crea una chiave di accesso",
   "step_key_run": "Esegui questo comando sulla macchina. La chiave viene generata all'interno del container del server, applicandone direttamente le impostazioni.",
@@ -27,7 +27,7 @@
   "settings_title": "Modifica le impostazioni",
   "settings_file": "Il server legge la propria configurazione da <code>[server_appsettings]</code>. Modifica il file, quindi riavvia il container con <code>[docker_restart]</code>.",
   "settings_env": "Se non puoi modificare un file, inserisci l'intero contenuto di appsettings.json nella variabile d'ambiente <code>[env_appsettings]</code>. Il server la userà al posto del file.",
-  "settings_more": "Scopri le impostazioni più utilizzate nelle guide <a href=\"/vpnhood-server/docs/ip-addresses/\">Configura gli indirizzi IP del server</a> e <a href=\"/vpnhood-server/docs/domain/\">Usa un nome di dominio e un certificato attendibile</a>.",
+  "settings_more": "Scopri le impostazioni più utilizzate nelle guide <a href=\"/vpnhood-server/docs/ip-addresses/\">Imposta gli indirizzi IP del tuo server</a> e <a href=\"/vpnhood-server/docs/domain/\">Usa un nome di dominio e un certificato attendibile</a>.",
   "updates_title": "Aggiornamenti",
   "updates_auto": "Il server si aggiorna automaticamente all'interno del container. Verifica la presenza di nuove versioni all'avvio e ogni 12 ore, riavviandosi con la versione aggiornata.",
   "updates_off": "Per mantenere una versione specifica, imposta <code>[env_auto_update_off]</code> nell'ambiente del container.",
@@ -43,5 +43,5 @@
   "next_manager": "Gestisci più server e chiavi da un pannello web con VpnHood! MANAGER",
   "next_addresses": "Configura gli indirizzi IP su cui il server è in ascolto e da includere nelle chiavi",
   "next_domain": "Usa un nome di dominio e un certificato attendibile",
-  "next_blocking": "Evita che l'indirizzo IP del tuo server venga bloccato"
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server"
 }

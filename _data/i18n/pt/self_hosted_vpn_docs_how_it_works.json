@@ -32,13 +32,13 @@
   "server_title": "No servidor",
   "server_adapter": "Instalado no Linux, o VpnHood! SERVER utiliza um adaptador de rede próprio e encaminha pacotes para a internet via NAT, funcionando como um roteador. Em contêineres Docker sem esse adaptador, o servidor funciona como um proxy: os aplicativos enviam conexões TCP individualmente por requisição, e o servidor gerencia cada conexão, socket UDP e ping. A troca para esse modo é feita automaticamente pelo aplicativo.",
   "server_filter": "Em qualquer um dos modos, ele nunca encaminha tráfego para os seus próprios endereços nem para as redes locais onde está conectado.",
-  "server_ports": "É preciso manter a porta TCP aberta, além da porta UDP definida na primeira inicialização para clientes em UDP. O QUIC vem desativado por padrão. Veja como localizar sua porta UDP em <a href=\"/vpnhood-server/docs/ip-addresses/#udp\">Definir os endereços IP do servidor</a>.",
+  "server_ports": "É preciso manter a porta TCP aberta, além da porta UDP definida na primeira inicialização para clientes em UDP. O QUIC vem desativado por padrão. Veja como localizar sua porta UDP em <a href=\"/vpnhood-server/docs/ip-addresses/#udp\">Defina os endereços IP do seu servidor</a>.",
   "server_manager": "Um servidor gerenciado se conecta ao VpnHood! MANAGER via HTTPS, em <code>[manager_agent_host]</code>, para validar cada chave quando um aplicativo se conecta e informar o uso de cada uma. O MANAGER nunca se conecta ao servidor, e os aplicativos nunca falam com o MANAGER. O MANAGER também pode encaminhar um aplicativo para outro servidor do farm. Um servidor independente valida as chaves com base nos próprios arquivos.",
   "key_title": "O que contém uma chave de acesso",
-  "key_desc": "A chave de acesso contém tudo que o aplicativo necessita para localizar e validar seu servidor: domínio, endereços IP, porta, identificação ou impressão digital do certificado e o segredo da chave. Trata-se de um formato codificado, não criptografado: quem tiver a chave poderá ler os endereços do servidor e se conectar. Compartilhe chaves apenas com pessoas de confiança e confira <a href=\"/vpnhood-server/docs/ip-blocking/\">Como evitar o bloqueio do IP do seu servidor</a> para entender os riscos de exposição de endereço.",
+  "key_desc": "A chave de acesso contém tudo que o aplicativo necessita para localizar e validar seu servidor: domínio, endereços IP, porta, identificação ou impressão digital do certificado e o segredo da chave. Trata-se de um formato codificado, não criptografado: quem tiver a chave poderá ler os endereços do servidor e se conectar. Compartilhe chaves apenas com pessoas de confiança e confira <a href=\"/vpnhood-server/docs/ip-blocking/\">Evite o bloqueio do endereço IP do seu servidor</a> para entender os riscos de exposição de endereço.",
   "next_title": "Próximos passos",
   "next_install": "Instalar o VpnHood! SERVER no Linux",
   "next_docker": "Instalar o VpnHood! SERVER com Docker",
-  "next_blocking": "Evite o bloqueio do IP do seu servidor",
+  "next_blocking": "Evite o bloqueio do endereço IP do seu servidor",
   "next_manager": "Gerencie vários servidores e chaves pelo painel web com o VpnHood! MANAGER"
 }

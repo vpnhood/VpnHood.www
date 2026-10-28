@@ -17,7 +17,7 @@
   "cost_desc": "Hariç tuttuğunuz trafik VPN tarafından korunmaz. Amaç zaten budur; yine de hangi trafiği dışarıda bıraktığınızı bilinçli seçmenizde fayda var.",
   "kinds_title": "Neleri ayırabilirsiniz?",
   "kinds_desc": "Her seçeneğin uygulama içinde ayrı bir ekranı, burada da ayrı bir sayfası bulunur.",
-  "split_dns_title": "Split DNS",
+  "split_dns_title": "Bölünmüş DNS",
   "split_dns_desc": "DNS sorgularının tünelleme kurallarınızı mı takip edeceğine yoksa her zaman VPN içinde mi kalacağına karar verin.",
   "by_app_title": "Uygulamaya göre",
   "by_app_short": "Hangi uygulamaların VPN'i kullanacağını, hangilerinin doğrudan bağlanacağını seçin.",

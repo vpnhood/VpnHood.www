@@ -36,7 +36,7 @@
   "out_cloud": "Sui cloud in cui la macchina dispone solo di indirizzi privati (come AWS, Google Cloud, Azure o Oracle Cloud), ogni IP pubblico è associato a uno privato. Usa gli indirizzi privati sulla macchina e ovunque il server resti in ascolto, e l'IP pubblico di connessione all'interno delle chiavi.",
   "conn_title": "Configura il server per usare l'IP di connessione",
   "conn_desc": "Imposta VpnHood! SERVER in modo che ascolti solo sull'IP di connessione e inserisca solo questo indirizzo nelle chiavi di accesso. In questo modo l'IP in uscita non risponderà come server VPN, nemmeno se sottoposto a scansione.",
-  "conn_auto": "Configura entrambi manualmente: se lasciato a sé, sia su server gestiti che standalone, il server rileva l'indirizzo dal traffico in uscita, finendo per usare l'IP in uscita. Consulta <a href=\"/vpnhood-server/docs/ip-addresses/\">Configura gli indirizzi IP del server</a> per scoprire come fare.",
+  "conn_auto": "Configura entrambi manualmente: se lasciato a sé, sia su server gestiti che standalone, il server rileva l'indirizzo dal traffico in uscita, finendo per usare l'IP in uscita. Consulta <a href=\"/vpnhood-server/docs/ip-addresses/\">Imposta gli indirizzi IP del tuo server</a> per scoprire come fare.",
   "conn_keys": "Le chiavi già distribuite contengono il vecchio indirizzo. <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">Mantieni il server in ascolto su di esso per qualche giorno</a>, così le app scaricheranno automaticamente la nuova chiave, poi rimuovilo: fino ad allora, l'IP in uscita risponderà ancora come server VPN.",
   "check_title": "Verifica il risultato",
   "check_device": "Connettiti da un dispositivo e verifica il tuo indirizzo IP su un qualsiasi sito che lo mostri. Dovresti visualizzare l'IP in uscita.",
@@ -60,10 +60,10 @@
   "censored_standalone": "Inserisci le <a href=\"#censored-network\">impostazioni per una rete censurata</a> sotto <code>[setting_file_access_manager]</code> in <code>[server_appsettings]</code>, poi riavvia il server.",
   "proxy_title": "Configura il server dietro un reverse proxy",
   "proxy_desc": "Se l'IP di connessione viene comunque bloccato, posiziona il server dietro un reverse proxy come Cloudflare. Le app si collegheranno al proxy, tenendo nascosto l'indirizzo reale del server dalle chiavi. L'effettiva raggiungibilità del proxy dipenderà poi dal paese e dalla rete.",
-  "proxy_how": "La guida <a href=\"/vpnhood-server/docs/reverse-proxy/\">Configura il server dietro un reverse proxy</a> illustra i passaggi e gli aspetti da valutare.",
+  "proxy_how": "La guida <a href=\"/vpnhood-server/docs/reverse-proxy/\">Metti il tuo server dietro un reverse proxy</a> illustra i passaggi e gli aspetti da valutare.",
   "next_title": "Passaggi successivi",
   "next_addresses": "Configura gli indirizzi IP su cui il server ascolta e che include nelle chiavi",
   "next_domain": "Usa un nome di dominio e un certificato attendibile",
-  "next_proxy": "Proteggi il tuo server dietro un reverse proxy",
+  "next_proxy": "Metti il tuo server dietro un reverse proxy",
   "next_manager": "Gestisci più server e chiavi da un pannello web con VpnHood! MANAGER"
 }

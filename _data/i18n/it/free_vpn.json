@@ -35,7 +35,7 @@
   "unlimited_data_title": "Nessun limite di dati",
   "unlimited_data_desc": "I server VpnHood! possono impostare una soglia mensile per utente, ma sui nostri server gratuiti non c'è alcun limite. Usala per tutto il mese, per qualsiasi cosa, senza consumare contatori.",
   "unlimited_speed_title": "Nessun limite di velocità",
-  "unlimited_speed_desc": "I server possono limitare la banda dei singoli utenti, ma sui nostri server gratuiti non lo fanno. Le variazioni dipendono solo dal traffico: i server gratuiti ospitano molti utenti contemporaneamente, quindi la velocità varia in base all'affollamento. I server Premium sono più potenti e riservati agli utenti abbonati, garantendo prestazioni sempre elevate. <a href=\"/guides/vpn-speed/\">Come testare correttamente la velocità della tua VPN</a>.",
+  "unlimited_speed_desc": "I server possono limitare la banda dei singoli utenti, ma sui nostri server gratuiti non lo fanno. Le variazioni dipendono solo dal traffico: i server gratuiti ospitano molti utenti contemporaneamente, quindi la velocità varia in base all'affollamento. I server Premium sono più potenti e riservati agli utenti abbonati, garantendo prestazioni sempre elevate. <a href=\"/guides/vpn-speed/\">Come testare correttamente la velocità della VPN</a>.",
   "locations_label": "Posizioni",
   "locations_title": "Scegli da dove connetterti",
   "locations_desc": "Tutti i paesi gratuiti sono inclusi anche in Premium. Scegli la posizione più vicina per la massima velocità o collegati ovunque si trovino i contenuti che desideri.",

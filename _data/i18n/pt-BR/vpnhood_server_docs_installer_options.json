@@ -27,5 +27,5 @@
   "next_keys": "Crie as chaves de acesso usadas pelos seus dispositivos para conectar, <a href=\"/vpnhood-server/docs/install/#access-key\">no Linux</a> ou <a href=\"/vpnhood-server/docs/docker/#access-key\">no Docker</a>",
   "next_addresses": "Defina os endereços IP que o servidor escuta e inclui em suas chaves",
   "next_domain": "Use um nome de domínio e um certificado confiável",
-  "next_blocking": "Evite que o endereço IP do seu servidor seja bloqueado"
+  "next_blocking": "Evite o bloqueio do endereço IP do seu servidor"
 }

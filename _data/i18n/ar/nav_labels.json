@@ -13,7 +13,7 @@
   "docker": "Docker",
   "ip-blocking": "حظر عناوين IP",
   "reference": "المرجع",
-  "installer-options": "خيارات التثبيت",
+  "installer-options": "خيارات برنامج التثبيت",
   "ip-addresses": "عناوين IP",
   "domain": "اسم النطاق",
   "reverse-proxy": "بروكسي عكسي",

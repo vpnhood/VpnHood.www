@@ -23,8 +23,8 @@
   "file_docker": "In Docker, esegui lo stesso comando tramite <code>[docker_exec_supervisor]</code>, come per <code>[vhserver_gen]</code>.",
   "file_renew": "Le nuove chiavi includono il dominio e non dipendono più dal certificato specifico, continuando a funzionare anche dopo il rinnovo: basterà sostituire il file e riavviare il server.",
   "next_title": "Passaggi successivi",
-  "next_proxy": "Configura il server dietro un reverse proxy",
+  "next_proxy": "Metti il tuo server dietro un reverse proxy",
   "next_addresses": "Configura gli indirizzi IP su cui il server rimane in ascolto e che include nelle chiavi",
-  "next_blocking": "Proteggi l'indirizzo IP del server da eventuali blocchi",
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server",
   "next_manager": "Gestisci più server e chiavi da un unico pannello web con VpnHood! MANAGER"
 }

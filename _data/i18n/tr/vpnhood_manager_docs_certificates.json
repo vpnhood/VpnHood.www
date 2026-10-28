@@ -52,5 +52,5 @@
   "delete_rules": "Sertifikanın iletişim kutusunda <b>[manager_delete]</b> öğesini seçin. MANAGER, anahtarlarda yer alan sertifikayı veya çiftlik genelinde kullanılan son sertifikayı silmenize izin vermez: Önce <b>[manager_public_in_token]</b> değerini başka bir sertifikaya atayın ya da yeni bir sertifika ekleyin.",
   "next_title": "Sonraki adımlar",
   "next_access_points": "Sunucularınızın dinleyeceği adresleri belirleyin ve anahtarlara ekleyin",
-  "next_proxy": "Sunucunuzu bir ters proxy arkasına yerleştirin"
+  "next_proxy": "Sunucunuzu bir ters proxy arkasına alın"
 }

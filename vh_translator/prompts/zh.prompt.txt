@@ -6,6 +6,7 @@ Premium = 高级版
 Free (plan name) = 免费版
 Kill Switch = 断网保护
 Private DNS = 私有 DNS
+Split DNS = DNS 分流
 Split tunneling = 分流
 Go premium = 升级高级版
 Premium Pricing = 高级版定价
@@ -13,7 +14,7 @@ Features = 功能
 Self-Hosted VPN = 自托管 VPN
 Download Now = 立即下载
 (opens in new tab) = （在新标签页中打开）
-Split tunneling by apps / by countries = 按应用分流 / 按国家分流
+Split tunneling by app / by country = 按应用分流 / 按国家分流
 Frequently Asked Questions = 常见问题
 Learn more = 了解更多
 Free vs Premium = 免费版与高级版
@@ -41,6 +42,7 @@ no sign-up = 免注册, servers = 节点, speed test = 测速. Never add a claim
 make (no 首选, 最好). Everywhere else keep VPN as in NAMES and servers as 服务器.
 Never use 翻墙回国 or 回国: that is the opposite service (getting back INTO China).
 RULES
+- Address the reader as 您 everywhere (您, 您的), never 你.
 - Full-width punctuation in Chinese text — （）、，。： — never half-width; never mixed.
 - One space between Chinese characters and Latin words or numbers: "免费 VPN",
   "Android 7.0 及以上", "100% 免费".

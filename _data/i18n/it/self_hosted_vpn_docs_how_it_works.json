@@ -32,13 +32,13 @@
   "server_title": "Sul server",
   "server_adapter": "Installato su Linux, VpnHood! SERVER sfrutta una scheda di rete dedicata e inoltra i pacchetti verso Internet tramite NAT, come un vero router. Nei container Docker, dove questa interfaccia non è presente, il server funziona come un proxy: le app inviano TCP con una richiesta per connessione, mentre il server gestisce autonomamente ogni connessione, socket UDP e ping. Il passaggio avviene in modo del tutto automatico.",
   "server_filter": "In entrambe le modalità, il server blocca qualsiasi inoltro verso i propri indirizzi o verso le reti locali a cui è collegato.",
-  "server_ports": "Richiede la porta TCP aperta e la porta UDP assegnata al primo avvio per le app configurate su UDP. Il protocollo QUIC è disattivato per impostazione predefinita. Consulta <a href=\"/vpnhood-server/docs/ip-addresses/#udp\">Configurare gli indirizzi IP del server</a> per individuare la porta UDP.",
+  "server_ports": "Richiede la porta TCP aperta e la porta UDP assegnata al primo avvio per le app configurate su UDP. Il protocollo QUIC è disattivato per impostazione predefinita. Consulta <a href=\"/vpnhood-server/docs/ip-addresses/#udp\">Imposta gli indirizzi IP del tuo server</a> per individuare la porta UDP.",
   "server_manager": "Un server gestito contatta VpnHood! MANAGER via HTTPS, all'indirizzo <code>[manager_agent_host]</code>, per verificare ogni chiave quando un'app si connette e per comunicare quanto usa ciascuna. MANAGER non si connette mai al server e le app non comunicano mai con MANAGER. MANAGER può anche indirizzare un'app verso un altro server della farm. Un server standalone verifica invece le chiavi in base ai propri file.",
   "key_title": "Cosa contiene una chiave di accesso",
-  "key_desc": "Una chiave di accesso include tutto il necessario affinché l'app riconosca e consideri sicuro il tuo server: nome di dominio, indirizzi IP, porta, nome o fingerprint del certificato e il segreto della chiave. I dati sono codificati, non crittografati: chiunque possieda una chiave può visualizzare gli indirizzi del server e connettersi. Condividi le chiavi solo con utenti fidati e scopri <a href=\"/vpnhood-server/docs/ip-blocking/\">come proteggere l'indirizzo IP del tuo server dal blocco</a> per comprendere i rischi legati all'esposizione degli indirizzi.",
+  "key_desc": "Una chiave di accesso include tutto il necessario affinché l'app riconosca e consideri sicuro il tuo server: nome di dominio, indirizzi IP, porta, nome o fingerprint del certificato e il segreto della chiave. I dati sono codificati, non crittografati: chiunque possieda una chiave può visualizzare gli indirizzi del server e connettersi. Condividi le chiavi solo con utenti fidati e consulta <a href=\"/vpnhood-server/docs/ip-blocking/\">Evita il blocco dell'indirizzo IP del tuo server</a> per comprendere i rischi legati all'esposizione degli indirizzi.",
   "next_title": "Passaggi successivi",
   "next_install": "Installa VpnHood! SERVER su Linux",
   "next_docker": "Installa VpnHood! SERVER con Docker",
-  "next_blocking": "Evita che l'IP del tuo server venga bloccato",
+  "next_blocking": "Evita il blocco dell'indirizzo IP del tuo server",
   "next_manager": "Gestisci più server e chiavi da un pannello web con VpnHood! MANAGER"
 }

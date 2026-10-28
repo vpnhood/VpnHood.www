@@ -49,6 +49,6 @@
   "file_addresses": "अगर आपके सर्वर को <a href=\"#addresses\">आपके यूज़र्स के पते</a> में दी गई सेटिंग्स की ज़रूरत है, तो उन्हें <code>[server_appsettings]</code> में <code>[setting_file_access_manager]</code> के तहत डालें, फिर सर्वर रीस्टार्ट करें।",
   "next_title": "अगले कदम",
   "next_addresses": "वे IP पते सेट करें जिन पर सर्वर ऐक्टिव रहता है और जिन्हें वह अपनी कीज़ में जोड़ता है",
-  "next_blocking": "अपने सर्वर के IP पते को ब्लॉक होने से बचाएं",
+  "next_blocking": "अपने सर्वर का IP पता ब्लॉक होने से बचाएं",
   "next_manager": "VpnHood! MANAGER के साथ एक ही वेब पैनल से कई सर्वर्स और कीज़ मैनेज करें"
 }

@@ -49,6 +49,6 @@
   "next_title": "Próximos passos",
   "next_manager": "Gerencie vários servidores e chaves em um painel web com o VpnHood! MANAGER",
   "next_addresses": "Defina os endereços IP em que o servidor escuta e inclui nas chaves",
-  "next_domain": "Use um domínio e um certificado confiável",
-  "next_blocking": "Evite que o endereço IP do seu servidor seja bloqueado"
+  "next_domain": "Use um nome de domínio e um certificado confiável",
+  "next_blocking": "Evite o bloqueio do endereço IP do seu servidor"
 }

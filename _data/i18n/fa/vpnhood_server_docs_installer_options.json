@@ -26,6 +26,6 @@
   "next_title": "مراحل بعدی",
   "next_keys": "کلیدهای دسترسی مورد نیاز برای اتصال دستگاه‌ها را ایجاد کنید؛ <a href=\"/vpnhood-server/docs/install/#access-key\">در Linux</a> یا <a href=\"/vpnhood-server/docs/docker/#access-key\">در Docker</a>",
   "next_addresses": "آدرس‌های IP که سرور روی آن‌ها گوش می‌دهد و در کلیدها قرار می‌گیرند را تنظیم کنید",
-  "next_domain": "از یک دامنه و گواهی معتبر استفاده کنید",
-  "next_blocking": "از مسدود شدن آدرس IP سرور خود جلوگیری کنید"
+  "next_domain": "استفاده از دامنه و گواهی معتبر",
+  "next_blocking": "جلوگیری از مسدود شدن آدرس IP سرور"
 }

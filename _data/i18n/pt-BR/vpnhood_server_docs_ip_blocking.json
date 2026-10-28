@@ -60,7 +60,7 @@
   "censored_standalone": "Coloque as <a href=\"#censored-network\">configurações para uma rede censurada</a> sob <code>[setting_file_access_manager]</code> em <code>[server_appsettings]</code> e reinicie o servidor.",
   "proxy_title": "Colocar o servidor atrás de um proxy reverso",
   "proxy_desc": "Se o IP de conexão for bloqueado mesmo assim, coloque o servidor atrás de um proxy reverso como a Cloudflare. Dessa forma, os aplicativos se conectam ao proxy, e o endereço real do servidor não precisa constar nas chaves. A disponibilidade do proxy vai depender do país e da rede.",
-  "proxy_how": "Confira em <a href=\"/vpnhood-server/docs/reverse-proxy/\">Colocar o servidor atrás de um proxy reverso</a> como configurar e o que considerar antes de começar.",
+  "proxy_how": "Confira em <a href=\"/vpnhood-server/docs/reverse-proxy/\">Coloque seu servidor atrás de um proxy reverso</a> como configurar e o que considerar antes de começar.",
   "next_title": "Próximos passos",
   "next_addresses": "Defina os endereços IP que o servidor escuta e inclui nas chaves",
   "next_domain": "Use um nome de domínio e um certificado confiável",

@@ -36,7 +36,7 @@
   "out_cloud": "AWS, Google Cloud, Azure veya Oracle Cloud gibi sunucunun yalnızca özel (private) IP aldığı bulut platformlarında, her genel (public) IP bu özel adreslerden biriyle eşleşir. Sunucu üzerinde ve dinleme ayarlarında özel IP adreslerini; anahtarlara eklenecek genel bağlantı adresinde ise genel IP'yi kullanın.",
   "conn_title": "Sunucuyu bağlantı IP'sini kullanacak şekilde ayarlayın",
   "conn_desc": "VpnHood! SERVER'ı yalnızca bağlantı IP'sini dinleyecek ve erişim anahtarlarına sadece bu adresi ekleyecek şekilde yapılandırın. Böylece çıkış IP'si taranıp sorgulansa bile bir VPN sunucusu olarak yanıt vermez.",
-  "conn_auto": "Her iki adresi de kendiniz belirleyin: Kendi haline bırakıldığında sunucu (yönetilen veya bağımsız fark etmeksizin) adresini giden trafik üzerinden öğrenir ve çıkış IP'sini seçer. Adımları görmek için <a href=\"/vpnhood-server/docs/ip-addresses/\">Sunucunuzun IP adreslerini ayarlayın</a> sayfasına göz atın.",
+  "conn_auto": "Her iki adresi de kendiniz belirleyin: Kendi haline bırakıldığında sunucu (yönetilen veya bağımsız fark etmeksizin) adresini giden trafik üzerinden öğrenir ve çıkış IP'sini seçer. Adımları görmek için <a href=\"/vpnhood-server/docs/ip-addresses/\">Sunucunuzun IP adreslerini belirleyin</a> sayfasına göz atın.",
   "conn_keys": "Daha önce dağıttığınız anahtarlar eski adresi taşır. Uygulamaların yeni anahtarı otomatik olarak alabilmesi için <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">sunucunun bu adresi birkaç gün daha dinlemesini sağlayın</a>, ardından kaldırın: Kaldırana kadar çıkış IP'si bir VPN sunucusu olarak yanıt vermeye devam eder.",
   "check_title": "Sonucu kontrol edin",
   "check_device": "Bir cihazdan bağlanın ve IP adresinizi gösteren herhangi bir siteden kontrol edin. Çıkış IP'nizi görmelisiniz.",
@@ -46,7 +46,7 @@
   "domain_name": "VPN'i çağrıştırmayan bir ana bilgisayar adı seçin, örneğin <code>[domain_api_example]</code>. Güvenilir bir sertifikadaki adlar herkes tarafından görülebilir, çünkü bir sertifika yetkilisinin verdiği her sertifika herkese açık kayıtlara girer. Joker karakterli (wildcard) bir sertifika yerine yalnızca bu ad için bir sertifika kullanın: VpnHood! MANAGER joker karakterli sertifikaları kabul etmez, kullanıcılarınızın uygulamaları da adı zaten şifresiz gönderir.",
   "domain_keys": "Kullanıcılarınızın anahtarlarının bu adı taşımasını sağlayın. Bu durumda kullanıcılarınızın uygulamalarıyla aynı adı gönderen bir tarama bu sertifikayı alır; hiç ad göndermeyen bir tarama da aynı sertifikayı alır, çünkü bir sunucu önce kendi güvenilir sertifikasını sunar.",
   "domain_follow": "Yine de bir alan adı kullanıcılarınızın engellenmiş bir adresi aşmasını sağlamaz: Çünkü aynı sunucuyu işaret eder ve anahtarlar sunucunun IP adresini taşımaya devam eder. Yalnızca bir ters proxy sunucunun önüne farklı adresler yerleştirebilir.",
-  "domain_how": "<a href=\"/vpnhood-server/docs/domain/\">Alan adı ve güvenilir sertifika kullanımı</a>, bunun hem yönetilen hem de bağımsız sunucularda nasıl yapılacağını gösterir.",
+  "domain_how": "<a href=\"/vpnhood-server/docs/domain/\">Alan adı ve güvenilir sertifika kullanın</a> sayfası, bunun hem yönetilen hem de bağımsız sunucularda nasıl yapılacağını gösterir.",
   "censored_title": "Sansürlü bir ağ için ayarlar",
   "censored_desc": "VPN sunucularını engelleyen bir ağda aşağıdaki ayarlar, uygulamalarında ne seçili olursa olsun sunucunun tüm kullanıcıları için aynı anda, sunucunuza yapılan her bağlantıyı bir web sitesi ziyaretine daha çok benzetir:",
   "censored_cloak": "<b>Herkes için Kamufle Modu.</b> <code>[setting_allow_tcp_packet]</code> değeri <code>[json_false]</code> olarak ayarlandığında her uygulama trafiğini Kamufle Modu'nun yaptığı gibi taşır. Uygulamalar Kamufle Modu'nu kendiliğinden açar ve sunucunun bunu zorunlu kıldığını gösterir.",
@@ -63,7 +63,7 @@
   "proxy_how": "<a href=\"/vpnhood-server/docs/reverse-proxy/\">Sunucunuzu bir ters proxy arkasına alın</a> kılavuzunda bunun nasıl yapıldığını ve öncelikle neleri değerlendirmeniz gerektiğini görün.",
   "next_title": "Sonraki adımlar",
   "next_addresses": "Sunucunun dinleyeceği ve anahtarlara ekleyeceği IP adreslerini belirleyin",
-  "next_domain": "Bir alan adı ve güvenilir bir sertifika kullanın",
+  "next_domain": "Alan adı ve güvenilir sertifika kullanın",
   "next_proxy": "Sunucunuzu bir ters proxy arkasına alın",
   "next_manager": "VpnHood! MANAGER ile birden fazla sunucuyu ve anahtarı tek bir web panelinden yönetin"
 }

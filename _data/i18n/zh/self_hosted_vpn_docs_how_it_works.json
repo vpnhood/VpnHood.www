@@ -32,13 +32,13 @@
   "server_title": "服务器端机制",
   "server_adapter": "安装在 Linux 上的 VpnHood! SERVER 拥有独立的网络适配器，并像路由器一样通过 NAT 将数据包转发到互联网。Docker 容器由于没有此类适配器，因此服务器会作为代理运行：应用按每个连接发送单个 TCP 请求，服务器则自行建立连接、UDP 套接字并处理 Ping。应用会自动切换至该模式。",
   "server_filter": "无论采用哪种方式，它都不会将流量转发至服务器自身的地址或其所在的局域网。",
-  "server_ports": "服务器需要开放 TCP 端口，以及在首次启动时为设置为 UDP 的应用所选取的 UDP 端口。QUIC 默认处于关闭状态，除非您手动开启。请参阅<a href=\"/vpnhood-server/docs/ip-addresses/#udp\">配置服务器 IP 地址</a>了解如何查找 UDP 端口。",
+  "server_ports": "服务器需要开放 TCP 端口，以及在首次启动时为设置为 UDP 的应用所选取的 UDP 端口。QUIC 默认处于关闭状态，除非您手动开启。请参阅<a href=\"/vpnhood-server/docs/ip-addresses/#udp\">设置服务器 IP 地址</a>了解如何查找 UDP 端口。",
   "server_manager": "受管服务器通过 HTTPS 访问 <code>[manager_agent_host]</code> 处的 VpnHood! MANAGER，以便在应用连接时验证密钥并上报使用情况。MANAGER 从不主动连接服务器，应用也从不直接与 MANAGER 通信。此外，MANAGER 还可以将应用引导至服务器集群中的其他服务器。独立服务器则直接通过本地文件验证密钥。",
   "key_title": "访问密钥包含的内容",
   "key_desc": "访问密钥包含应用寻找并信任服务器所需的全部信息：域名、IP 地址、端口、证书名称或指纹，以及密钥自身的凭据。密钥经过编码但未加密：任何持有密钥的人都可以读取其中的服务器地址并进行连接。请仅将密钥提供给您的受信任用户，并参阅<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>了解网络可能如何处理已知地址。",
   "next_title": "后续步骤",
   "next_install": "在 Linux 上安装 VpnHood! SERVER",
   "next_docker": "使用 Docker 安装 VpnHood! SERVER",
-  "next_blocking": "有效防止服务器 IP 地址被封锁",
+  "next_blocking": "防止服务器 IP 地址被封锁",
   "next_manager": "通过 VpnHood! MANAGER 网页控制面板轻松管理多台服务器与密钥"
 }

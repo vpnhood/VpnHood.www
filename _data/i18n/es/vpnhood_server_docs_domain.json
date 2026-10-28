@@ -23,7 +23,7 @@
   "file_docker": "En Docker, ejecuta el mismo comando mediante <code>[docker_exec_supervisor]</code>, igual que con <code>[vhserver_gen]</code>.",
   "file_renew": "Las nuevas claves incluyen el dominio y ya no dependen del certificado en sí, por lo que seguirán funcionando al renovarlo: solo reemplaza el archivo y reinicia el servidor.",
   "next_title": "Próximos pasos",
-  "next_proxy": "Colocar el servidor detrás de un proxy inverso",
+  "next_proxy": "Pon tu servidor detrás de un proxy inverso",
   "next_addresses": "Configura las direcciones IP en las que escucha el servidor y que se incluyen en sus claves",
   "next_blocking": "Evita que bloqueen la dirección IP de tu servidor",
   "next_manager": "Administra múltiples servidores y claves desde un panel web con VpnHood! MANAGER"

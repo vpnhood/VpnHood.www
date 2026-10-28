@@ -26,6 +26,6 @@
   "next_title": "后续步骤",
   "next_keys": "创建供设备连接的访问密钥，支持 <a href=\"/vpnhood-server/docs/install/#access-key\">Linux</a> 或 <a href=\"/vpnhood-server/docs/docker/#access-key\">Docker</a> 环境",
   "next_addresses": "设置服务器监听并在密钥中包含的 IP 地址",
-  "next_domain": "配置自定义域名与受信任证书",
+  "next_domain": "使用域名和受信任的证书",
   "next_blocking": "防止服务器 IP 地址被封锁"
 }

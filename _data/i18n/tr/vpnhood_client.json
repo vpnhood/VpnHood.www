@@ -20,7 +20,7 @@
   "engine_cloak_desc": "Tüneli sıradan bir web trafiği gibi maskeler; böylece denetimler yalnızca standart bir web sunucusu yanıtı görür.",
   "engine_proxies_title": "Akıllı Proxy'ler",
   "engine_proxies_desc": "Doğrudan bağlantı engellendiğinde sunucunuza SOCKS veya HTTP proxy'leri üzerinden erişin.",
-  "engine_split_title": "Bölünmüş tünelleme",
+  "engine_split_title": "Bölünmüş Tünelleme",
   "engine_split_desc": "Uygulamaya, IP adresine, alan adına veya ülkeye göre VPN üzerinden neyin geçeceğini belirleyin.",
   "engine_dns_title": "Özel DNS",
   "engine_dns_desc": "Sorguları hangi sunucunun çözeceğine karar verin ve DNS isteklerini tünelin içinde tutun.",

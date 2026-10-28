@@ -13,7 +13,7 @@
   "mgr_box_cta": "أضف خادمًا عبر MANAGER",
   "install_title": "تثبيت خادم مستقل",
   "step_install_run": "شغّل هذا الأمر. سيسألك عما إذا كنت تريد تثبيت Docker، ثم ينزّل ملف compose ويبدأ تشغيل حاوية الخادم.",
-  "step_install_options": "لتثبيته عبر برنامج نصي تلقائي وبدون مطالبات تأكيد، راجع <a href=\"/vpnhood-server/docs/installer-options/#docker\">خيارات أداة التثبيت</a>.",
+  "step_install_options": "لتثبيته عبر برنامج نصي تلقائي وبدون مطالبات تأكيد، راجع <a href=\"/vpnhood-server/docs/installer-options/#docker\">خيارات برنامج التثبيت</a>.",
   "step_install_storage": "يحتفظ الخادم بإعداداته ومفاتيحه وسجلاته في <code>[server_storage]</code> على الجهاز المضيف، لتبقى محفوظة حتى عند ترقية الحاوية أو إزالتها.",
   "key_title": "إنشاء مفتاح وصول",
   "step_key_run": "نفّذ هذا الأمر على الجهاز. يتم إنشاء المفتاح داخل حاوية الخادم، لذا فهو يعتمد إعدادات الخادم نفسها مباشرةً.",
@@ -27,7 +27,7 @@
   "settings_title": "تغيير الإعدادات",
   "settings_file": "يقرأ الخادم إعداداته من <code>[server_appsettings]</code>. عدّل الملف، ثم أعد تشغيل الحاوية باستخدام <code>[docker_restart]</code>.",
   "settings_env": "إذا تعذر عليك تعديل الملف، ضع محتوى appsettings.json بالكامل في متغير البيئة <code>[env_appsettings]</code>، وسيستخدمه الخادم بدلاً من الملف.",
-  "settings_more": "يشرح لك دليلا <a href=\"/vpnhood-server/docs/ip-addresses/\">تعيين عناوين IP للخادم</a> و<a href=\"/vpnhood-server/docs/domain/\">استخدام اسم نطاق وشهادة موثوقة</a> أهم الإعدادات التي قد تحتاج لتعديلها.",
+  "settings_more": "يشرح لك دليلا <a href=\"/vpnhood-server/docs/ip-addresses/\">تعيين عناوين IP لخادمك</a> و<a href=\"/vpnhood-server/docs/domain/\">استخدام اسم نطاق وشهادة موثوقة</a> أهم الإعدادات التي قد تحتاج لتعديلها.",
   "updates_title": "التحديثات",
   "updates_auto": "يُحدّث الخادم نفسه تلقائياً داخل الحاوية؛ حيث يتحقق من وجود إصدارات جديدة عند بدء التشغيل وكل 12 ساعة، ثم يُعاد تشغيله بالنسخة الجديدة.",
   "updates_off": "للبقاء على إصدار محدد، اضبط <code>[env_auto_update_off]</code> في بيئة الحاوية.",
@@ -42,6 +42,6 @@
   "next_title": "الخطوات التالية",
   "next_manager": "أدِر خوادم ومفاتيح متعددة عبر لوحة تحكم ويب مع VpnHood! MANAGER",
   "next_addresses": "عيّن عناوين IP التي يستمع إليها الخادم ويضمّنها في مفاتيحه",
-  "next_domain": "استخدم اسم نطاق وشهادة موثوقة",
+  "next_domain": "استخدام اسم نطاق وشهادة موثوقة",
   "next_blocking": "احمِ عنوان IP الخاص بخادمك من الحظر"
 }

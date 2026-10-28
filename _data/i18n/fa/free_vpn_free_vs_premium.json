@@ -11,7 +11,7 @@
   "row_split_apps": "تونل‌زنی تفکیکی بر اساس اپلیکیشن‌ها",
   "row_change_protocols": "تغییر پروتکل‌ها",
   "row_add_proxy": "پروکسی‌های هوشمند",
-  "row_kill_switch": "کلید قطع اضطراری (Kill Switch)",
+  "row_kill_switch": "Kill Switch",
   "row_multilingual": "چندزبانه",
   "row_locations": "لوکیشن‌ها <span class=\"small vh-txt-purple-100\">(کشور)</span>",
   "row_ad_free": "بدون تبلیغات",

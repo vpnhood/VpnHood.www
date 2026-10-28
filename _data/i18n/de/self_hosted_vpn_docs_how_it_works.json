@@ -32,13 +32,13 @@
   "server_title": "Auf dem Server",
   "server_adapter": "Unter Linux installiert nutzt VpnHood! SERVER einen eigenen Netzwerkadapter und leitet Datenpakete per NAT wie ein Router ins Internet weiter. Ein Docker-Container besitzt keinen solchen Adapter; dort arbeitet der Server als Proxy: Apps übertragen TCP-Verbindungen anfragebasiert, und der Server öffnet jede Verbindung, jeden UDP-Socket und Ping selbst. Apps wechseln automatisch in diesen Modus.",
   "server_filter": "In beiden Fällen wird niemals Datenverkehr an die eigenen IP-Adressen oder das lokale Netzwerk weitergeleitet.",
-  "server_ports": "Erfordert einen offenen TCP-Port sowie den beim ersten Start festgelegten UDP-Port für Apps im UDP-Modus. QUIC ist standardmäßig deaktiviert. Unter <a href=\"/vpnhood-server/docs/ip-addresses/#udp\">Server-IP-Adressen einrichten</a> erfahren Sie, wie Sie den UDP-Port ermitteln.",
+  "server_ports": "Erfordert einen offenen TCP-Port sowie den beim ersten Start festgelegten UDP-Port für Apps im UDP-Modus. QUIC ist standardmäßig deaktiviert. Unter <a href=\"/vpnhood-server/docs/ip-addresses/#udp\">IP-Adressen Ihres Servers festlegen</a> erfahren Sie, wie Sie den UDP-Port ermitteln.",
   "server_manager": "Ein verwalteter Server erreicht VpnHood! MANAGER über HTTPS unter <code>[manager_agent_host]</code>, um bei jeder App-Verbindung die Schlüssel zu prüfen und die Nutzung zu erfassen. MANAGER stellt nie direkte Verbindungen zum Server her, und Apps kommunizieren nie direkt mit MANAGER. MANAGER kann eine App auch an einen anderen Server im Cluster weiterleiten. Ein eigenständiger Server prüft Schlüssel direkt anhand lokaler Dateien.",
   "key_title": "Aufbau eines Zugangsschlüssels",
-  "key_desc": "Ein Zugangsschlüssel enthält alle Angaben, die die App zur Erkennung Ihres Servers benötigt: Domainname, IP-Adressen, Port, Name oder Fingerabdruck des Zertifikats sowie ein Schlüssel-Geheimnis. Der Schlüssel ist lediglich kodiert, nicht verschlüsselt: Jeder mit einem Schlüssel kann die Adressen Ihres Servers einsehen und sich verbinden. Geben Sie Schlüssel nur an vertrauenswürdige Nutzer weiter. Erfahren Sie unter <a href=\"/vpnhood-server/docs/ip-blocking/\">Sperrung von Server-IP-Adressen verhindern</a>, wie Sie Ihre Adressen schützen.",
+  "key_desc": "Ein Zugangsschlüssel enthält alle Angaben, die die App zur Erkennung Ihres Servers benötigt: Domainname, IP-Adressen, Port, Name oder Fingerabdruck des Zertifikats sowie ein Schlüssel-Geheimnis. Der Schlüssel ist lediglich kodiert, nicht verschlüsselt: Jeder mit einem Schlüssel kann die Adressen Ihres Servers einsehen und sich verbinden. Geben Sie Schlüssel nur an vertrauenswürdige Nutzer weiter. Erfahren Sie unter <a href=\"/vpnhood-server/docs/ip-blocking/\">Server-IP-Adresse vor Sperren schützen</a>, wie Sie Ihre Adressen schützen.",
   "next_title": "Nächste Schritte",
   "next_install": "VpnHood! SERVER unter Linux installieren",
   "next_docker": "VpnHood! SERVER mit Docker installieren",
-  "next_blocking": "Schütze die IP-Adresse deines Servers vor Blockaden",
-  "next_manager": "Verwalte mehrere Server und Schlüssel über ein Web-Panel mit VpnHood! MANAGER"
+  "next_blocking": "Server-IP-Adresse vor Sperren schützen",
+  "next_manager": "Mehrere Server und Schlüssel über ein Web-Panel mit VpnHood! MANAGER verwalten"
 }

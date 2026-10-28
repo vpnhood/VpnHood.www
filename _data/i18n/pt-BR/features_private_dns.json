@@ -22,7 +22,7 @@
   "b5_title": "DNS do adaptador em qualquer plataforma",
   "b5_desc": "Prefere outro resolvedor além do padrão do servidor? Adicione seus próprios servidores DNS e o túnel os usará em qualquer plataforma — a menos que o servidor de conexão exija o seu próprio.",
   "b6_title": "O DNS permanece protegido no túnel",
-  "b6_desc": "Ao configurar o Split DNS para usar sempre a VPN, qualquer consulta que seria desviada por regras de país, domínio ou IP continua dentro do túnel — e é bloqueada em vez de vazar se o servidor não puder responder. Aplicativos excluídos da VPN operam fora do túnel por completo, enviando suas consultas junto com o tráfego comum.",
+  "b6_desc": "Ao configurar o DNS dividido para usar sempre a VPN, qualquer consulta que seria desviada por regras de país, domínio ou IP continua dentro do túnel — e é bloqueada em vez de vazar se o servidor não puder responder. Aplicativos excluídos da VPN operam fora do túnel por completo, enviando suas consultas junto com o tráfego comum.",
   "how_title": "Como funciona",
   "how_desc": "Antes de acessar um site, seu dispositivo consulta um servidor DNS para obter o endereço. O DNS comum trafega sem criptografia pela porta 53; o DNS privado protege essa consulta via TLS na porta 853. O VpnHood! trata ambos como tráfego DNS: eles nunca são descartados, podem ser retidos no túnel e as consultas criptografadas chegam intactas ao resolvedor escolhido.",
   "when_title": "Quando ativar",

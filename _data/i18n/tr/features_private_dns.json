@@ -22,7 +22,7 @@
   "b5_title": "Her platformda Bağdaştırıcı DNS desteği",
   "b5_desc": "Sunucunun varsayılanı yerine başka bir DNS mi tercih ediyorsunuz? Kendi DNS sunucularınızı girin; bağlandığınız sunucu aksini zorunlu kılmadıkça tünel her platformda bunları kullansın.",
   "b6_title": "DNS her zaman tünelin içinde kalır",
-  "b6_desc": "DNS tünelleme her zaman VPN kullanacak şekilde ayarlandığında; bir ülke, alan adı veya IP kuralının normalde tünel dışına yönlendireceği sorgular tünel içinde tutulur. Sunucu yanıt veremediğinde ise sızıntı yaşanmaması için sorgu engellenir. VPN kapsamı dışında bıraktığınız bir uygulama tamamen tünel dışındadır; bu nedenle sorguları diğer trafiğiyle birlikte dışarıdan iletilir.",
+  "b6_desc": "Bölünmüş DNS her zaman VPN kullanacak şekilde ayarlandığında; bir ülke, alan adı veya IP kuralının normalde tünel dışına yönlendireceği sorgular tünel içinde tutulur. Sunucu yanıt veremediğinde ise sızıntı yaşanmaması için sorgu engellenir. VPN kapsamı dışında bıraktığınız bir uygulama tamamen tünel dışındadır; bu nedenle sorguları diğer trafiğiyle birlikte dışarıdan iletilir.",
   "how_title": "Nasıl çalışır?",
   "how_desc": "Cihazınız bir siteye ulaşmadan önce adresi bir DNS sunucusuna sorar. Standart DNS şifresiz olarak 53 numaralı bağlantı noktasından iletilir; Özel DNS ise aynı sorguyu 853 numaralı bağlantı noktasında TLS ile şifreler. VpnHood! her ikisini de DNS trafiği olarak işler: Asla düşürülmezler, tünelde kalmaya zorlanabilirler ve şifrelenmiş sorgular seçtiğiniz sunucuya değiştirilmeden iletilir.",
   "when_title": "Ne zaman etkinleştirilmeli?",
