@@ -12,7 +12,12 @@ extra_css:
   promo, right before their standalone steps, now links here (owner, 2026-10-22: MANAGER's
   steps live in MANAGER's docs). The facts are theirs, written for the MANAGER of 2026-10-19
   and checked against its source:
-  Automatic Configuration is on for every new server and locks the list; Mode decides who
+  Automatic Configuration is on for every new server and locks the list. It takes the
+  machine's own addresses as Private with Listen, and the one a web service sees the
+  server's outgoing traffic come from (the server's IPAddressUtil: Cloudflare, then
+  my-ip.io) as Public without Listen, PublicInToken for the first of each IP version unless
+  another server of the farm has one (the agent's BuildServerAccessPoints). So behind a NAT
+  gateway it puts the gateway's address in the keys (owner, 2026-10-28). Mode decides who
   gets an address and Listen whether the server listens on it; MANAGER builds a farm key
   with no address only from a validated certificate; Push token to clients sends a key that
   carries only the domain when an app connects, and one with addresses once every server in
