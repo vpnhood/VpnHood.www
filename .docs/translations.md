@@ -3,9 +3,30 @@
 The full picture behind the "Translations" summary in [CLAUDE.md](../CLAUDE.md). Only
 **strings** are ever translated; pages are generated. Two halves:
 
-## 1. Strings — `vhtranslator`
+## 1. Strings — by hand before each commit, `vhtranslator` as the fallback
 
-VpnHood.Tools.ResourceTranslator, classic folder mode; config at
+**Translate by hand before every commit** (owner, 2026-10-28). Every new or changed English
+key is translated in the same change, in all 12 languages, following
+`vh_translator/prompts/<lang>.prompt.txt`; the translator's CI run only fills what is left.
+Its batches had mixed one concept's words within a page (three Persian words for "reverse
+proxy", du and Sie in German) and broken links whose text is a page title; a hand translation
+keeps to the glossary. The steps:
+
+1. `dotnet tool run vhtranslator -- --show-changes` lists the keys whose English is new or
+   changed since the watches (no API key needed).
+2. Write each translation into `_data/i18n/<lang>/<file>.json` as the tool would: English key
+   order, two-space JSON with no trailing newline, non-ASCII written as is except U+00A0
+   (` `); every `[placeholder]`, `<code>` span and tag kept; in `fa`/`ar` an LRM after a
+   Latin word's `!`/`?` when an RTL word or the end of the string follows (see below).
+3. `dotnet tool run vhtranslator -- --ignore-changes` rewrites the watches to the current
+   English (no API key, no target file touched), so CI translates nothing.
+
+A key you leave for CI must be **missing** from the target file before step 3: a missing key
+is always translated, but a stale one is not once the watches say its English is current. A
+fix that follows from a rule (a name, a term, the register) also goes in the language's
+prompt, so the fallback keeps to it.
+
+The tool: VpnHood.Tools.ResourceTranslator, classic folder mode; config at
 `vh_translator/vhtranslator.json` (`base: _data/i18n/en`, currently 12 target languages).
 It translates the English data folder file-by-file, key-by-key (incremental via committed
 watches) into sibling folders (`_data/i18n/fa/…`). This includes each page's
@@ -22,13 +43,10 @@ logo/preloader in `header.html`).
 
 CI runs the translator before every deploy and commits results back (see
 [build-and-deploy.md](build-and-deploy.md)). Translator bookkeeping lives in
-`vh_translator/watches/i18n/<file>.watch.json` — commit it.
+`vh_translator/watches/i18n/<file>.watch.json` — commit it. A hand edit in
+`_data/i18n/<lang>/` survives the translator until that key's English changes.
 
-**Never hand-edit generated data folders** (`_data/i18n/<lang>/` — overwritten by the tool).
-Fixes go in `vh_translator/prompt.txt`, or `vh_translator/prompts/<lang>.prompt.txt` for one
-language; per-key edits in the generated JSON survive until the source key changes.
-
-**New keys lag translation.** Between an English edit and the next CI run, a new key does
+**A key left to CI lags.** Until the next CI run, a new key you did not translate does
 not exist in the other languages, and a bare `{{ t.new_key }}` renders empty there. Any
 include that reads data therefore falls back per key — `{{ t.x | default: t_en.x }}` — as
 `faq.html`, `compare-table.html` and the chrome strings do. Renaming a key is the same as
