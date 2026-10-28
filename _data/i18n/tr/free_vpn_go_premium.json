@@ -29,13 +29,13 @@
   "why_desc": "Premium, ücretsiz sürümle tamamen aynı uygulamayı ve aynı altyapıyı kullanır; yalnızca sınırlar kalkar. Aşağıdaki avantajlar hem Ücretsiz hem de Premium için geçerlidir.",
   "why1_title": "Açık kaynak ve denetlenmiş",
   "why1_desc": "İstemci, sunucu ve altyapıdaki VpnHood! ENGINE tamamen açık kaynak olarak GitHub'da yer alır. Proje, Open Technology Fund'ın Red Team Lab programı kapsamında Include Security tarafından denetlenmiştir. Sadece sözümüze güvenmek zorunda değilsiniz; kaynak kodlarını kendiniz inceleyebilirsiniz.",
-  "why2_title": "Engelli ağlar için Gizleme Modu",
-  "why2_desc": "Gizleme Modu, VPN trafiğini sıradan HTTPS trafiği gibi göstererek VPN'leri doğrudan engelleyen ağların aşılmasına yardımcı olur. Performans, ağın denetim yöntemine göre değişebilir; hiçbir bağlantının engellenmeyeceği garanti edilemez.",
+  "why2_title": "Engellenen ağlar için Kamufle Modu",
+  "why2_desc": "Kamufle Modu, VPN trafiğini sıradan HTTPS trafiğine benzetir; bu da trafiğin VPN'leri tamamen engelleyen ağlardan geçmesine yardımcı olur. Ne kadar iyi çalıştığı ağın neleri denetlediğine bağlıdır ve hiçbir bağlantının engellenmeden kalacağı garanti edilemez.",
   "why3_title": "Gerçekten ücretsiz bir plan",
   "why3_desc": "Hesap açmak yok; süre, veri veya hız sınırı yok. Reklamlarla desteklendiğinden, reklam gösterilmeyen yerlerde kullanılamaz. Premium ise reklamları kaldırır ve her yerde çalışır.",
   "compare_label": "Karşılaştır",
   "compare_title": "Premium neler kazandırır?",
-  "compare_desc": "Yukarıdaki her plan aynı avantajları sunar. Ücretsiz uygulama sınırsız veri, limitsiz hız ve tünelleme özelliklerini korur; Premium ise ekstra konumlar, yüksek hız, daha fazla cihaz ve reklamsız bir deneyim kazandırır.",
+  "compare_desc": "Yukarıdaki her plan aynı avantajları sunar. Ücretsiz uygulama sınırsız veri, limitsiz hız ve bölünmüş tünelleme özelliklerini korur; Premium ise ekstra konumlar, yüksek hız, daha fazla cihaz ve reklamsız bir deneyim kazandırır.",
   "note_free_availability": "Ücretsiz plan reklamlarla finanse edildiğinden Çin'de veya reklam sunulmayan diğer ülkelerde kullanılamaz. Premium için bu tür bir kısıtlama yoktur.",
   "audit_link": "Denetim raporunu inceleyin"
 }

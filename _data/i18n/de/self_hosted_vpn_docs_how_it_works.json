@@ -1,6 +1,6 @@
 {
   "meta_title": "So funktioniert VpnHood!: Tunnel, TCP, UDP und DNS | VpnHood!",
-  "meta_description": "Wie eine VpnHood-App Datenverkehr zum VpnHood! SERVER und ins Internet leitet: verschlüsselter Tunnel, TCP als Pakete oder im Cloak-Modus, UDP, Ping und DNS.",
+  "meta_description": "Wie eine VpnHood-App den Datenverkehr eines Geräts zu Ihrem VpnHood! SERVER und weiter ins Internet leitet: der verschlüsselte Tunnel, TCP als Pakete oder im Tarnmodus, UDP, Ping und DNS – und was der Server damit macht.",
   "title": "So funktioniert VpnHood",
   "lead": "Eine VpnHood-App leitet den Datenverkehr des Geräts durch einen verschlüsselten Tunnel zu Ihrem Server – und dieser weiter ins Internet. So fließt der Datenverkehr von Anfang bis Ende.",
   "diagram_title": "Der Weg des Datenverkehrs",
@@ -25,8 +25,8 @@
   "tunnel_probe": "Anfragen an Ihren Server, die nicht von einer VpnHood-App stammen, erhalten lediglich einen HTTP-Fehler – genau wie eine Website, die eine Anmeldung erfordert.",
   "tcp_title": "TCP: Als Pakete oder Anfrage für Anfrage",
   "tcp_packets": "Standardmäßig überträgt die App TCP als Pakete durch den Tunnel. Ihr Server leitet sie über seinen eigenen Netzwerkadapter wie ein Router weiter. Das ist die schnellste und akkuschonendste Methode.",
-  "tcp_cloak": "Im <a href=\"/features/cloak-mode/\">Cloak-Modus</a> beendet die App stattdessen jede Verbindung lokal auf dem Gerät und bittet Ihren Server in einer separaten Anfrage, diese aufzubauen. Ihr Server stellt die Verbindung zur Website selbst her und leitet die Daten weiter. Für das Netzwerk sieht der Datenverkehr nicht mehr wie ein durchgehender VPN-Tunnel aus, sondern wie reguläre Browseranfragen. Dies kostet minimal Tempo sowie Akku, und die App nutzt bestehende Verbindungen effizient für die nächste Anfrage wieder.",
-  "tcp_forced": "Die App nutzt diese Methode auch ohne Cloak-Modus: wenn der Server keinen eigenen Netzwerkadapter hat (wie in Docker) oder wenn der Datenverkehr nach Domains aufgeteilt wird.",
+  "tcp_cloak": "Im <a href=\"/features/cloak-mode/\">Tarnmodus</a> beendet die App jede Verbindung stattdessen auf dem Gerät und bittet Ihren Server in einer eigenen Anfrage, sie zu öffnen. Ihr Server verbindet sich selbst mit der Website und leitet die Daten in beide Richtungen weiter. Für ein Netzwerk sieht der Datenverkehr dann nicht mehr wie ein langer Tunnel aus, sondern wie die einzelnen Anfragen eines Browsers. Das kostet etwas Geschwindigkeit und Akku, und die App verwendet die Verbindung jeder abgeschlossenen Anfrage für die nächste wieder.",
+  "tcp_forced": "Die App arbeitet auch ohne Tarnmodus so: wenn Ihr Server keinen eigenen Netzwerkadapter hat, wie in Docker, und solange ein Nutzer den Datenverkehr nach Domains aufteilt.",
   "udp_title": "UDP und Ping",
   "udp_desc": "UDP wird unabhängig vom gewählten Protokoll immer paketbasiert durch den Tunnel übertragen. Dasselbe gilt für Pings: Die App leitet Echo-Requests weiter und verwirft andere ICMP-Pakete. Ihr Server sendet beides über seinen Netzwerkadapter weiter – oder wickelt Pings bei fehlendem Adapter eigenständig über eigene Sockets für das Gerät ab.",
   "server_title": "Auf dem Server",

@@ -23,7 +23,7 @@
   "keys_title": "Crie chaves de acesso",
   "keys_desc": "Crie as chaves de acesso para os seus dispositivos em <b>[manager_access_tokens]</b>. Depois, instale o <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> em cada aparelho, adicione a chave e conecte-se.",
   "run_title": "No dia a dia",
-  "run_desc": "Um servidor gerenciado é o mesmo VpnHood! SERVER da versão avulsa; ele funciona, gera registros e atualiza do mesmo jeito. Veja como <a href=\"/vpnhood-server/docs/install/#manage\">iniciar e parar o servidor</a> ou como <a href=\"/vpnhood-server/docs/docker/#manage\">iniciar, parar e monitorar o servidor</a> no Docker.",
+  "run_desc": "Um servidor gerenciado é o mesmo VpnHood! SERVER que um independente, então funciona, registra logs e se atualiza da mesma forma: veja <a href=\"/vpnhood-server/docs/install/#manage\">Iniciar e parar o servidor</a> ou, no Docker, <a href=\"/vpnhood-server/docs/docker/#manage\">Iniciar, parar e verificar o servidor</a>.",
   "next_title": "Próximos passos",
   "next_access_points": "Defina os endereços em que o servidor escuta e inclui nas chaves de acesso",
   "next_domain": "Use seu próprio domínio com um certificado confiável nos servidores"

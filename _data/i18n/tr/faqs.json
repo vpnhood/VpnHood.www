@@ -4,7 +4,7 @@
   "desc": "Sorularınızın yanıtlarını hemen bulun.",
   "view_all": "Tüm Soruları Gör",
   "q_why_vpnhood": "Neden VpnHood?",
-  "a_why_vpnhood": "VpnHood, VpnHood ekibi tarafından geliştirilen <b>VpnHood! ENGINE</b> altyapısıyla çalışır. Açık kaynaklı istemci ve sunucu kodunu, esnek tünelleme seçeneklerini ve VPN trafiğini sıradan şifreli web trafiği gibi gösteren Gizleme Modu'nu bir araya getirir. VpnHood! CONNECT, Android'de hesap açmanıza gerek kalmadan sınırsız ve ücretsiz veri sunar.",
+  "a_why_vpnhood": "VpnHood, VpnHood ekibi tarafından geliştirilen <b>VpnHood! ENGINE</b> altyapısıyla çalışır. Açık kaynaklı istemci ve sunucu kodunu, esnek bölünmüş tünelleme seçeneklerini ve VPN trafiğinin sıradan şifreli web trafiği arasında göze çarpmamasına yardımcı olacak şekilde tasarlanan Kamufle Modu'nu bir araya getirir. VpnHood! CONNECT, Android'de hesap açmanıza gerek kalmadan sınırsız ve ücretsiz veri sunar.",
   "q_is_vpnhood_free": "VpnHood ücretsiz bir VPN mi?",
   "a_is_vpnhood_free": "Evet, VpnHood süre, veri veya hız sınırı olmaksızın ücretsiz bir VPN hizmeti sunar. Premium aboneliğe geçerek daha fazla özelliğin kilidini açabilirsiniz. Premium planla daha fazla ülkede sunucu erişimi, daha yüksek bağlantı hızları ve gelişmiş uygulama özellikleri elde edersiniz. Ayrıntılar için <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">plan detayları</a> sayfasını ziyaret edin.",
   "q_connect_vs_client": "VpnHood! CONNECT ile VpnHood! CLIENT arasındaki fark nedir?",
@@ -14,7 +14,7 @@
   "q_is_open_source": "VpnHood açık kaynaklı mı?",
   "a_is_open_source": "Evet, hem de tamamen. VpnHood! CONNECT, VpnHood! CLIENT, sunucu ve arkalarındaki VpnHood! ENGINE GitHub'da yayınlanmaktadır. Ayrıca proje, <a href=\"/security-audit/\">Open Technology Fund'ın Red Team Lab'i için Include Security</a> tarafından denetlenmiştir. Yalnızca sözümüze güvenmek zorunda değilsiniz; kaynak kodunu kendiniz de inceleyebilirsiniz.",
   "q_is_undetectable": "VpnHood fark edilemez mi?",
-  "a_is_undetectable": "VpnHood'un Cloak Mode özelliği, VPN trafiğini sıradan HTTPS trafiği gibi göstererek VPN engelleme yöntemlerini aşmaya yardımcı olur. Yine de her ağda bağlantı garantisi verilemez; performans kullanılan filtreleme yöntemlerine göre değişir.",
+  "a_is_undetectable": "VpnHood'un Kamufle Modu, VPN trafiğini sıradan HTTPS trafiğine benzetmek üzere tasarlanmıştır; bu da trafiğin bazı VPN tespit yöntemlerinden kaçmasına yardımcı olur. Ancak bu, her ağın bağlantıya izin vereceğini garanti etmez; etkinliği kullanılan filtreleme yöntemlerine bağlıdır.",
   "q_stay_free_forever": "Ücretsiz planda dilediğim kadar kalabilir miyim?",
   "a_stay_free_forever": "Evet. Ücretsiz planda süre sınırı veya zorunlu yükseltme yoktur, hesap oluşturmanız da gerekmez. Reklamlarla desteklendiğinden Çin'de veya reklamların sunulmadığı ülkelerde kullanılamaz. Daha fazla konum, daha hızlı sunucular, reklamsız bir uygulama ve 7/24 destek istediğinizde hiçbir sınır olmadan Premium'a geçebilirsiniz.",
   "q_free_data_cap": "Ücretsiz planda veri sınırı var mı?",
@@ -22,7 +22,7 @@
   "q_free_speed": "Ücretsiz kullanıcıların hızını düşürüyor musunuz?",
   "a_free_speed": "Hayır. VpnHood! SERVER kullanıcı başına hız sınırı koyabilir, ancak ücretsiz sunucularda bu yapılmaz. Planlar arasındaki tek fark kapasitedir: Ücretsiz sunuculardan çok daha fazla kişi yararlandığı için hızınız yoğunluğa bağlı olarak değişebilir. Premium sunucular ise daha güçlüdür ve yalnızca Premium kullanıcılara ayrılmıştır; bu sayede her zaman daha hızlıdır.",
   "q_why_slower": "VpnHood! neden normal bağlantımdan daha yavaş?",
-  "a_why_slower": "Her VPN bağlantı hızını bir miktar etkiler: Verileriniz şifrelenir ve hedefe ulaşmadan önce aracı bir sunucudan geçer. Genellikle en belirleyici etken mesafedir, bu yüzden size en yakın sunucuya bağlanmak en iyi sonucu verir. Cloak Mode ve Akıllı Vekil Sunucular da ek bir yük getirebilir; herhangi bir engelle karşılaşmıyorsanız bunları kapatabilirsiniz. Doğru hız ölçümü için <a href=\"/guides/vpn-speed/\">hız testi kılavuzumuza</a> göz atın.",
+  "a_why_slower": "Her VPN bağlantı hızını bir miktar etkiler: Verileriniz şifrelenir ve istediğiniz siteye ulaşmadan önce fazladan bir makineden geçer. Genellikle daha büyük etken mesafedir; bu yüzden en çok işe yarayan, daha yakın bir sunucudur. Kamufle Modu ve Akıllı Proxy'lerin her biri ek yük getirir; sizi engelleyen bir şey yokken bunları kapatabilirsiniz. Doğru hız ölçümü için <a href=\"/guides/vpn-speed/\">hız testi kılavuzumuza</a> göz atın.",
   "q_request_location": "Yeni bir konum talep edebilir miyim?",
   "a_request_location": "Evet. Konumları gelen taleplere göre ekliyoruz. <a href=\"/contact-us/\">İletişim sayfasından</a> istediğiniz ülkeyi ve bu konumu hız için mi yoksa belirli bir içeriğe erişmek için mi istediğinizi bize iletin; bu bilgi sunucuyu en doğru noktaya kurmamıza yardımcı olur.",
   "q_many_servers_per_location": "Her konum tek bir sunucudan mı oluşuyor?",
@@ -46,5 +46,5 @@
   "q_server_needs_manager": "Sunucu çalıştırmak için VpnHood! MANAGER gerekli mi?",
   "a_server_needs_manager": "Hayır. VpnHood! SERVER, dosya tabanlı dahili bir erişim yöneticisiyle gelir; bu sayede tek bir sunucu herhangi bir panele ihtiyaç duymadan çalışabilir ve anahtar üretebilir. MANAGER; yönetim paneli, canlı izleme, özel planlar ve birden fazla sunucu arasında yük dengeleme istediğinizde devreye girer.",
   "q_server_ip_blocked": "Sunucumun IP adresi engellenebilir mi?",
-  "a_server_ip_blocked": "Evet. Gizleme Modu (Cloak Mode) trafikte neredeyse hiç iz bırakmaz; bu yüzden sunucuların engellenme sebebi genellikle IP adresidir. IP adresinizi gizli tutun ve az sayıda kişiyle paylaşın. MANAGER ile sunucu grubunuzu tek bir belirteç (token) bağlantısına yönlendirebilirsiniz; sunucunuzu yeni bir IP'ye taşıdığınızda kullanıcılarınızın uygulamaları yeni adresi otomatik olarak alır. Sunucunun giden trafiği için ikinci bir IP kullanmak gibi diğer etkili yöntemler için <a href=\"/vpnhood-server/docs/ip-blocking/\">Sunucunuzun IP adresinin engellenmesini önleyin</a> sayfasına göz atın."
+  "a_server_ip_blocked": "Evet. Kamufle Modu trafikte parmak izi çıkarılabilecek pek az şey bırakır; bu yüzden bir sunucunun engellenmesine genellikle IP adresi yol açar. IP adresini gizli tutun ve az sayıda kişiyle paylaşın. MANAGER ile sunucu çiftliğinizi bir token URL'sine yönlendirin; sunucuyu yeni bir IP'ye taşıdığınızda kullanıcılarınızın uygulamaları yeni adresi kendiliğinden alır. Başka nelerin işe yaradığını, sunucunun giden trafiği için ikinci bir IP'den başlayarak <a href=\"/vpnhood-server/docs/ip-blocking/\">Sunucunuzun IP adresinin engellenmesini önleyin</a> sayfasında bulabilirsiniz."
 }

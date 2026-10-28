@@ -26,5 +26,5 @@
   "next_proxy": "Placer votre serveur derrière un reverse proxy",
   "next_addresses": "Définir les adresses IP sur lesquelles le serveur écoute et qu'il inclut dans ses clés",
   "next_blocking": "Éviter le blocage de l'adresse IP de votre serveur",
-  "next_manager": "Gérer plusieurs serveurs et clés depuis un panneau web avec VpnHood! MANAGER"
+  "next_manager": "Gérer plusieurs serveurs et clés depuis une interface web avec VpnHood! MANAGER"
 }

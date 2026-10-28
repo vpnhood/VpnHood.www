@@ -1,0 +1,23 @@
+{
+  "meta_title": "Profils de serveur : les paramètres de vos serveurs dans VpnHood! MANAGER | VpnHood!",
+  "meta_description": "Appliquez les mêmes paramètres à tous les serveurs d'une ferme avec un profil de serveur dans VpnHood! MANAGER, notamment ceux pour un réseau censuré et pour un reverse proxy.",
+  "title": "Profils de serveur",
+  "lead": "Un profil de serveur contient les paramètres de vos serveurs. Chaque ferme de serveurs en utilise un, et VpnHood! MANAGER envoie les paramètres de ce profil à chaque serveur de la ferme : vous les modifiez ainsi en un seul endroit.",
+  "where_title": "Où les trouver",
+  "where_desc": "Ouvrez <b>[manager_settings]</b> et sélectionnez <b>[manager_server_profiles]</b>. Chaque projet dispose dès le départ d'un profil par défaut, qu'une nouvelle ferme de serveurs utilise, sauf si vous en choisissez un autre. Le profil par défaut ne peut être ni renommé ni supprimé, et aucun profil utilisé par une ferme ne peut être supprimé.",
+  "where_farm": "Dans <b>[manager_server_farms]</b>, la page d'une ferme indique son profil sous <b>[manager_server_profile]</b> : sélectionnez le nom pour ouvrir le profil, ou modifiez-le pour en attribuer un autre à la ferme.",
+  "settings_title": "Modifier les paramètres d'un profil",
+  "settings_card": "La page d'un profil permet de définir les paramètres courants sous <b>[manager_general]</b>, <b>[manager_network_filter]</b> et <b>[manager_tracking]</b>. Pour tout autre paramètre, sélectionnez <b>[manager_advanced_edit]</b> : les paramètres des serveurs s'affichent alors au format JSON, sous les mêmes noms que sur un serveur autonome. Modifiez-les et sélectionnez <b>[manager_ok]</b>.",
+  "settings_send": "MANAGER envoie les nouveaux paramètres à chaque serveur des fermes qui utilisent le profil.",
+  "settings_refused": "MANAGER refuse les quelques paramètres qu'il définit lui-même pour chaque serveur, et son message indique le paramètre en cause. <code>[setting_udp_endpoints]</code> et <code>[setting_quic_endpoints]</code> n'acceptent que <code>[json_empty_list]</code>, qui désactive UDP ou QUIC sur les serveurs du profil : leurs ports sont propres à chaque serveur et se définissent dans ses <a href=\"/vpnhood-manager/docs/access-points/\">points d'accès</a>.",
+  "settings_dropped": "MANAGER ne conserve que les paramètres qu'il connaît et supprime tous les autres à l'enregistrement, y compris un paramètre au nom mal orthographié : rouvrez donc <b>[manager_advanced_edit]</b> pour vérifier les vôtres.",
+  "censored_title": "Paramètres pour un réseau censuré",
+  "censored_desc": "Sur un réseau qui bloque les serveurs VPN, le profil d'une ferme applique les paramètres pour un réseau censuré à tous ses serveurs à la fois. Le guide <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Éviter le blocage de l'adresse IP de votre serveur</a> explique chacun d'eux et ce qu'il coûte à vos utilisateurs. Dans <b>[manager_advanced_edit]</b>, définissez :",
+  "caption_censored": "Mode furtif pour tous, ni UDP ni QUIC vers les serveurs, et QUIC de vos utilisateurs rejeté",
+  "censored_refused": "MANAGER refuse que <code>[setting_allow_quic_packet]</code> ou <code>[setting_allow_udp_packet]</code> soit désactivé tant que <code>[setting_allow_tcp_packet]</code> est activé, car les serveurs achemineraient ce trafic de toute façon. Il refuse aussi que <code>[setting_allow_tcp_packet]</code> et <code>[setting_allow_tcp_proxy]</code> soient tous deux désactivés, ce qui ne laisserait à TCP aucun moyen de passer.",
+  "proxy_title": "Derrière un reverse proxy",
+  "proxy_desc": "Vos serveurs font confiance à Cloudflare pour leur indiquer l'adresse de chaque utilisateur. Derrière un autre reverse proxy, ouvrez <b>[manager_advanced_edit]</b> et ajoutez les paramètres présentés dans la section <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Adresses de vos utilisateurs</a>.",
+  "next_title": "Étapes suivantes",
+  "next_domain": "Utiliser votre propre domaine avec un certificat approuvé",
+  "next_proxy": "Faire passer chaque application par un reverse proxy"
+}

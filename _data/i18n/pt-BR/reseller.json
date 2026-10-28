@@ -50,7 +50,7 @@
   "why_open_source_title": "Código aberto e auditado",
   "why_open_source_desc": "O VpnHood! CONNECT, o servidor e a VpnHood! ENGINE por trás deles estão no GitHub sob a licença LGPL e foram auditados pela Include Security para o Red Team Lab do Open Technology Fund. O seu cliente pode conferir o código diretamente e nenhuma taxa de licença compromete a sua margem.",
   "why_undetectable_title": "Protocolo indetectável",
-  "why_undetectable_desc": "O Cloak Mode foi projetado para fazer o tráfego da VPN parecer uma navegação comum em HTTPS, sem deixar assinaturas para a inspeção profunda de pacotes (DPI). Em regiões onde as VPNs comuns são bloqueadas, é isso que mantém seus clientes ativos.",
+  "why_undetectable_desc": "O Modo invisível foi projetado para fazer o tráfego da VPN se parecer com uma navegação HTTPS comum, sem deixar assinaturas para a inspeção profunda de pacotes (DPI) reconhecer. Em mercados onde as VPNs comuns deixam de funcionar, é por isso que os clientes continuam assinando.",
   "why_global_title": "Localizações que realmente atraem clientes",
   "why_global_desc": "Um código de acesso Premium conecta a servidores em mais de [count] países nos cinco continentes — e a rede continua crescendo sem você precisar fazer nada.",
   "get_label": "Parceria",

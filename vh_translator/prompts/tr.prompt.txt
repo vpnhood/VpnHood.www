@@ -6,17 +6,29 @@ Premium = Premium (never translated; suffixes take an apostrophe: Premium'a, Pre
 Free (plan name) = Ücretsiz
 Kill Switch = Kill Switch
 Private DNS = Özel DNS
-Split tunneling = tünelleme
+Split tunneling = Bölünmüş tünelleme (the app's label; never tünelleme alone)
 Go premium = Premium'a Geç
 Premium Pricing = Premium Fiyatlandırma
 Features = Özellikler
 Self-Hosted VPN = Kendi Sunucunda VPN
 Download Now = Hemen İndir
 (opens in new tab) = (yeni sekmede açılır)
-Split tunneling by apps / by countries = Uygulamalara göre tünelleme / Ülkelere göre tünelleme
+Split tunneling by apps / by countries = Uygulamalara göre bölünmüş tünelleme / Ülkelere göre bölünmüş tünelleme
 Frequently Asked Questions = Sıkça Sorulan Sorular
 Learn more = Daha fazla bilgi edinin
 Free vs Premium = Ücretsiz ve Premium
+Cloak Mode = Kamufle Modu (never Gizleme Modu, never Cloak Mode in a Turkish sentence)
+Quick Launch = Hızlı Başlat
+Always On = Her Zaman Açık
+Smart Proxies = Akıllı Proxy'ler (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = ters proxy
+farm / server farm = çiftlik / sunucu çiftliği (never havuz / grup)
+access key = erişim anahtarı · certificate = sertifika · firewall = güvenlik duvarı
+container = konteyner (never kapsayıcı)
+standalone = bağımsız · managed = yönetilen · web panel = web paneli
+server profile = sunucu profili (plural sunucu profilleri)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = özellikler · app = uygulama · traffic = trafik

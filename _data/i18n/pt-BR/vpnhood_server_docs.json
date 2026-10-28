@@ -2,5 +2,5 @@
   "meta_title": "Documentação do VpnHood! SERVER | VpnHood!",
   "meta_description": "Aprenda a criar seu próprio servidor VPN com o VpnHood! SERVER: instale no Linux ou Docker, gerenciado ou independente, e evite bloqueios de IP.",
   "title": "Documentação do VpnHood! SERVER",
-  "lead": "Tenha seu próprio servidor VPN de duas formas simples. Use um servidor gerenciado pelo VpnHood! MANAGER — o painel web gratuito que cuida da instalação e das chaves de acesso (veja o passo a passo na <a href=\"/vpnhood-manager/docs/\">documentação do VpnHood! MANAGER</a>) — ou configure um servidor autônomo com seu próprio arquivo de ajustes, como mostramos nestas páginas."
+  "lead": "Tenha seu próprio servidor VPN de uma destas duas formas. Um servidor gerenciado é operado pelo VpnHood! MANAGER, o painel web gratuito, que o instala e emite as chaves de acesso dele: os passos estão na <a href=\"/vpnhood-manager/docs/\">documentação do VpnHood! MANAGER</a>. Um servidor independente funciona por conta própria, a partir do próprio arquivo de configurações, e estas páginas mostram como."
 }

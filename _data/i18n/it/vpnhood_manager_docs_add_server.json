@@ -23,7 +23,7 @@
   "keys_title": "Crea chiavi di accesso",
   "keys_desc": "Crea le chiavi di accesso per i tuoi dispositivi nella sezione <b>[manager_access_tokens]</b>. Poi installa <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> su ciascun dispositivo, aggiungi una chiave e connettiti.",
   "run_title": "Gestione quotidiana",
-  "run_desc": "Un server gestito è lo stesso VpnHood! SERVER di uno autonomo: si avvia, registra log e si aggiorna nello stesso modo. Consulta <a href=\"/vpnhood-server/docs/install/#manage\">Avviare e arrestare il server</a> oppure <a href=\"/vpnhood-server/docs/docker/#manage\">Avviare, arrestare e controllare il server</a> su Docker.",
+  "run_desc": "Un server gestito è lo stesso VpnHood! SERVER di uno standalone, quindi funziona, scrive i log e si aggiorna allo stesso modo: consulta <a href=\"/vpnhood-server/docs/install/#manage\">Avvia e arresta il server</a> oppure, in Docker, <a href=\"/vpnhood-server/docs/docker/#manage\">Avvia, arresta e controlla il server</a>.",
   "next_title": "Passaggi successivi",
   "next_access_points": "Imposta gli indirizzi su cui il server è in ascolto e che inserisce nelle chiavi",
   "next_domain": "Associa ai tuoi server un dominio personalizzato con un certificato attendibile"

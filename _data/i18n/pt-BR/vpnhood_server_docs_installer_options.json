@@ -4,7 +4,7 @@
   "title": "Opções do instalador",
   "lead": "Os comandos de instalação exibem perguntas interativas. Use os parâmetros para respondê-las com antecedência e permitir que um script faça a instalação automática.",
   "linux_title": "Instalador para Linux",
-  "linux_questions": "O <a href=\"/vpnhood-server/docs/install/#standalone\">comando de instalação direta</a> faz duas perguntas: <code>[autostart_prompt_linux]</code> e <code>[autoupdate_prompt_linux]</code>. Pressionar Enter seleciona a letra maiúscula padrão: \"sim\" em novas instalações ou mantém a configuração atual em servidores já existentes.",
+  "linux_questions": "O <a href=\"/vpnhood-server/docs/install/#standalone\">comando de instalação do servidor independente</a> faz duas perguntas: <code>[autostart_prompt_linux]</code> e <code>[autoupdate_prompt_linux]</code>. A tecla Enter escolhe a letra maiúscula: sim em uma nova instalação e, em um servidor já instalado, a configuração atual.",
   "th_option": "Opção",
   "th_effect": "O que faz",
   "opt_q": "Sem perguntas (modo silencioso). Sem os dois parâmetros abaixo, uma nova instalação iniciará com o sistema e se atualizará automaticamente; servidores já existentes mantêm suas preferências.",

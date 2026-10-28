@@ -15,7 +15,7 @@
   "f_plans_title": "Verkaufe Tarife, keine Server",
   "f_plans_desc": "Leg einmal fest, was ein Tarif beinhaltet: Anzahl der Geräte, monatliches Datenvolumen, Geschwindigkeit und Laufzeit. Danach kannst du beliebig viele Schlüssel dafür ausstellen.",
   "f_farm_title": "Ein Schlüssel für alle Server",
-  "f_farm_desc": "Eine Server-Farm verteilt den Traffic automatisch auf alle enthaltenen Server, wobei leistungsstärkere Server mehr Last übernehmen. Füge einfach einen weiteren Server hinzu, der sofort einsatzbereit ist.",
+  "f_farm_desc": "Eine Serverfarm verteilt den Datenverkehr auf alle ihre Server, wobei die leistungsstärksten den größten Anteil übernehmen. Füge einen weiteren Server hinzu, und er nimmt sofort Nutzer auf.",
   "f_unblock_title": "Blockiert? Deine Nutzer bleiben online",
   "f_unblock_desc": "Ziehen Sie einen blockierten Server einfach auf eine neue IP Ihres Hosting-Anbieters um und hinterlegen Sie die neue Adresse im Panel. Verknüpfen Sie Ihre Serverfarm mit einer Token-URL, und die Apps Ihrer Nutzer übernehmen die neue Adresse automatisch – ganz ohne manuelles Eingreifen.",
   "f_tls_title": "Sieht aus wie gewöhnliches HTTPS",

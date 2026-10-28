@@ -63,5 +63,5 @@
   "when_title": "Ne zaman kullanılmalı?",
   "when_desc": "Sunucu trafiği sadece denetlenmekle kalmayıp doğrudan engellendiğinde. Bir ağ sunucu adresini tamamen engellerse, proxy bağlantınız için alternatif bir giriş yolu sağlar.",
   "cost_title": "Olası dezavantajları nelerdir?",
-  "cost_desc": "SOCKS ve HTTP proxyleri kendilerine özgü dijital izler taşır ve güvenlik duvarları tarafından kolayca engellenebilir. Bu nedenle proxy, gizlenmekten ziyade bir erişim kapısıdır. Tam gizlilik için Cloak Mode kullanın."
+  "cost_desc": "SOCKS ve HTTP proxy'leri kendilerine özgü bir parmak izi taşır ve güvenlik duvarları tarafından kolayca engellenebilir. Bu nedenle proxy, fark edilmeden geçmenin değil, erişim sağlamanın bir yoludur. Gizlenmek için kullanılacak araç Kamufle Modu'dur."
 }

@@ -1,10 +1,10 @@
 {
   "meta_title": "Always-On VPN: Yeniden Başlatmalarda Kesintisiz Bağlantı | VpnHood!",
-  "meta_description": "Always On, yeniden başlatma ve ağ değişikliklerinde bile cihazınızı VPN'e bağlı tutar. VpnHood! ile hemen kullanın.",
+  "meta_description": "Her Zaman Açık, yeniden başlatmalardan veya ağ değişikliklerinden sonra bile cihazı her an VPN'e bağlı tutar. VpnHood!'da.",
   "eyebrow": "Özellik",
-  "title": "Always On",
+  "title": "Her Zaman Açık",
   "lead": "Cihazınızı her an VPN'e bağlı tutar; yeniden başlatmalarda ve ağ değişikliklerinde bile bağlantınız kopmaz.",
-  "shot_alt": "VpnHood! uygulamasındaki Always On ekranı",
+  "shot_alt": "VpnHood! uygulamasındaki Her Zaman Açık ekranı",
   "platforms_label": "Desteklenen platformlar",
   "platforms": "Yalnızca Android. Diğer platformlarda bulunmayan Android'in yerleşik her zaman açık VPN ayarını kullanır.",
   "cta": "VpnHood! CONNECT'i İndirin",
@@ -16,6 +16,6 @@
   "cost_title": "Dezavantajı nedir?",
   "cost_desc": "Cihaz açık olduğu sürece VPN de çalışacağından, yalnızca ihtiyaç duyulduğunda bağlanmaya kıyasla biraz daha fazla pil tüketebilir.",
   "pair_title": "Kill Switch ile birlikte kullanın",
-  "pair_desc": "Always On tüneli yeniden açar ancak yeniden bağlanmak kısa bir an sürer ve uygulamalar beklemez. Kill Switch, VPN bağlanana kadar tüm trafiği engelleyerek bu açığı kapatır. Android her iki ayarı da aynı ekranda sunduğu için ikisini birden açmak tek bir dokunuşunuza bakar.",
+  "pair_desc": "Her Zaman Açık, tüneli yeniden kurar; ancak yeniden bağlanmak kısa bir an sürer ve uygulamalar beklemez. Kill Switch, VPN bağlanana kadar trafiği engelleyerek bu açığı kapatır. Android, Kill Switch'i de aynı ayarın altında tuttuğu için ikisini birden açmak yalnızca fazladan bir dokunuş gerektirir.",
   "pair_link": "Kill Switch hakkında bilgi edinin"
 }

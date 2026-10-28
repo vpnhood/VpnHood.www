@@ -5,7 +5,7 @@
   "lead": "Añade un servidor a VpnHood! MANAGER y este instalará VpnHood! SERVER automáticamente, o te facilitará el comando para hacerlo. El servidor se conectará a MANAGER, que generará sus claves de acceso.",
   "before_title": "Antes de empezar",
   "req_machine": "Una máquina con IP pública, Linux en x64 o arm64 y acceso root. Los comandos de instalación usan sudo, por lo que debe estar presente en el sistema aunque inicies sesión como root.",
-  "req_port": "El puerto TCP <code>[server_port]</code> abierto, tanto en el firewall del equipo como en el de tu proveedor de alojamiento.",
+  "req_port": "El puerto TCP <code>[server_port]</code> abierto, tanto en el cortafuegos del equipo como en el de tu proveedor de alojamiento.",
   "req_ssh": "Para que MANAGER instale el servidor mediante SSH, el puerto SSH debe estar abierto para MANAGER: <code>[port_ssh]</code>, salvo que lo hayas cambiado.",
   "req_docker": "Para Docker, Docker con su plugin compose. El instalador puede configurarlo automáticamente en Ubuntu, Debian y distribuciones derivadas.",
   "add_title": "Añadir el servidor",

@@ -17,11 +17,25 @@ Split tunneling by apps / by countries = Split tunneling per app / per paese
 Frequently Asked Questions = Domande frequenti
 Learn more = Scopri di più
 Free vs Premium = Gratis vs Premium
+Cloak Mode = Modalità camuffamento (never Modalità Mascheramento / Modalità Cloak / Cloak Mode)
+Quick Launch = Avvio rapido
+Always On = Always On
+Smart Proxies = Proxy intelligenti (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = reverse proxy (never proxy inverso)
+farm / server farm = farm / server farm
+access key = chiave di accesso · certificate = certificato · container = container · firewall = firewall
+standalone = standalone (never autonomo) · managed = gestito · web panel = pannello web
+server profile = profilo server (plural profili server)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = funzionalità (not "funzioni")
 support = supporto (not "assistenza")
 plan = piano/piani · reseller = rivenditore
 
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Italians search "VPN gratis" and "VPN gratis senza registrazione". In those two keys: Free VPN
+= VPN gratis, no registration / no sign-up / no account = senza registrazione.
 RULES
 - "gratuito/gratuita" is an ordinary adjective for prose; the plan itself is always "Gratis".

@@ -15,7 +15,7 @@
   "when_desc": "Mantenha ativado sempre que sua privacidade for prioridade e você não puder arriscar ficar desprotegido, mesmo que por instantes.",
   "cost_title": "O que muda no uso",
   "cost_desc": "Se a VPN cair, você fica sem internet até que ela reconecte. Telas de login de redes Wi-Fi (como em hotéis ou aeroportos) também podem não carregar, exigindo desativar o recurso por um instante.",
-  "pair_title": "Requer o modo Sempre ativo",
-  "pair_desc": "No Android, o Kill Switch fica dentro da opção de VPN sempre ativa — os dois funcionam em conjunto. O modo Sempre ativo reconecta o túnel após reiniciar ou trocar de rede, e o Kill Switch segura o tráfego até que ela volte. Sem ele, aplicativos poderiam vazar dados nesses breves segundos de reconexão.",
-  "pair_link": "Sobre o modo Sempre ativo"
+  "pair_title": "Requer o Sempre ligado",
+  "pair_desc": "No Android, o Kill Switch fica logo abaixo da opção VPN sempre ativa, então os dois são ativados juntos e funcionam como um par. O Sempre ligado restabelece o túnel após uma reinicialização ou troca de rede; o Kill Switch retém seu tráfego até que o túnel volte de fato. Sem o Kill Switch, os aplicativos podem enviar algumas solicitações nos segundos antes de a VPN se conectar.",
+  "pair_link": "Sobre o Sempre ligado"
 }

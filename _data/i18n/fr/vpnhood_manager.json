@@ -17,7 +17,7 @@
   "f_farm_title": "Une seule clé pour tous vos serveurs",
   "f_farm_desc": "Une ferme de serveurs répartit automatiquement le trafic entre toutes les machines, privilégiant les plus puissantes. Ajoutez un nouveau serveur et il prend immédiatement en charge les utilisateurs.",
   "f_unblock_title": "Bloqué ? Gardez vos utilisateurs connectés",
-  "f_unblock_desc": "Remplacez l'IP d'un serveur bloqué par une nouvelle fournie par votre hébergeur et mettez à jour votre panneau. Liez votre serveur à une URL de token : les applications de vos utilisateurs s'adaptent automatiquement, sans que vous n'ayez rien à renvoyer.",
+  "f_unblock_desc": "Déplacez un serveur bloqué vers une nouvelle IP fournie par votre hébergeur et indiquez sa nouvelle adresse dans l'interface. Associez votre ferme à une URL de jeton : les applications de vos utilisateurs récupèrent d'elles-mêmes la nouvelle adresse, et personne n'a rien à renvoyer.",
   "f_tls_title": "Un trafic semblable à du HTTPS classique",
   "f_tls_desc": "Chaque ferme dispose de son propre certificat TLS. Vous possédez un domaine ? Nous émettons et renouvelons gratuitement un certificat sécurisé via Let's Encrypt. Vous pouvez aussi importer votre propre certificat.",
   "f_live_title": "Suivez tout en direct",

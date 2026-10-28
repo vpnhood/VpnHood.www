@@ -18,6 +18,18 @@ Frequently Asked Questions = سؤالات متداول
 Global Server Network = شبکه جهانی سرورها
 Learn more = بیشتر بدانید
 Free vs Premium = رایگان در برابر ویژه
+Cloak Mode = حالت مخفی (never حالت استتار, never Cloak Mode in a Persian sentence, never حالت Cloak Mode)
+Quick Launch = راه‌اندازی سریع
+Always On = همیشه روشن
+Smart Proxies = پروکسی‌های هوشمند (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = پروکسی معکوس (never ریورس پروکسی, never reverse proxy)
+proxy = پروکسی (never پراکسی)
+farm / server farm = فارم / فارم سرور (never مزرعه, never farm)
+access key = کلید دسترسی · certificate = گواهی · container = کانتینر · firewall = فایروال
+standalone = مستقل · managed = مدیریت‌شده · web panel = پنل وب
+server profile = پروفایل سرور (plural پروفایل‌های سرور)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = ویژه / نسخه ویژه / اشتراک ویژه, whichever the sentence needs
@@ -25,15 +37,17 @@ feature(s) = امکانات (not ویژگی‌ها / قابلیت‌ها)
 app = اپلیکیشن (not برنامه)
 traffic = ترافیک · server = سرور · plan = پلن · open source = متن‌باز
 
-KEYWORDS — meta_title and meta_description keys ONLY.
-Iranians search for "فیلترشکن", not "وی‌پی‌ان". In those two keys render "VPN" / "Free VPN"
-as فیلترشکن — "Download Free VPN" = دانلود فیلترشکن رایگان, "free, secure, open-source VPN"
-= فیلترشکن رایگان، امن و متن‌باز. Add پرسرعت where the English says fast; "فیلترشکن رایگان و
-پرسرعت" is the phrase people search. Everywhere else keep VPN as in NAMES. Never write
-وی‌پی‌ان anywhere: the Persian word is فیلترشکن, otherwise leave VPN in Latin.
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Iranians search "وی پی ان" (the top query) and "فیلترشکن" far more than "VPN". In those two
+keys render "VPN" / "Free VPN" as فیلترشکن or وی پی ان (spaced exactly so): "Download Free
+VPN" = دانلود فیلترشکن رایگان, "free, secure, open-source VPN" = فیلترشکن رایگان، امن و
+متن‌باز. Add پرسرعت where the English says fast. Platforms are searched in Persian script, so
+here write Android, Windows, iOS, Linux as اندروید، ویندوز، آیفون، لینوکس, and "direct download" as دانلود
+با لینک مستقیم. In every other key all of these stay as RULES says.
 RULES
-- "VpnHood" is Latin in every sentence. Never وی‌پی‌ان‌هود.
-- Platform names stay Latin: Windows, Android, Android TV, Linux — never ویندوز / اندروید.
+- Outside KEYWORDS, names and acronyms are Latin in every sentence: VpnHood, Windows, Android,
+  Linux, Docker, GitHub, Google, Instagram, LinkedIn, X, .NET, VPN, IP — never وی‌پی‌ان‌هود، ایکس،
+  ویندوز، اندروید، لینوکس، داکر، گیت‌هاب، گوگل، اینستاگرام، لینکدین، دات‌نت، وی‌پی‌ان، آی‌پی.
 - Persian digits (۰۱۲۳) everywhere the site already uses them: prices (۷.۹ دلار), plans
   (۱۲ ماهه), discounts (۲۵٪), counts (۵ دستگاه), the copyright year. The ONE exception is a
   version number attached to a Latin platform name — "Android 7.0", "Windows 10" — which

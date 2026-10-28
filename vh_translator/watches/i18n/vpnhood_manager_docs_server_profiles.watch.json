@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "Server Profiles: Your Servers' Settings in VpnHood! MANAGER | VpnHood!",
+    "meta_description": "Give all the servers of a farm the same settings with a server profile in VpnHood! MANAGER, the settings for a censored network and for a reverse proxy among them.",
+    "title": "Server profiles",
+    "lead": "A server profile holds the settings of your servers. Each server farm uses one, and VpnHood! MANAGER sends its settings to every server of the farm, so you change them in one place.",
+    "where_title": "Where to find them",
+    "where_desc": "Open <b>[manager_settings]</b> and select <b>[manager_server_profiles]</b>. Every project starts with a default profile, which a new server farm uses unless you choose another. The default profile can be neither renamed nor deleted, and no profile that a farm uses can be deleted.",
+    "where_farm": "A farm's page in <b>[manager_server_farms]</b> names its profile under <b>[manager_server_profile]</b>: select the name to open the profile, or edit it to give the farm another one.",
+    "settings_title": "Change a profile's settings",
+    "settings_card": "A profile's page sets the common ones under <b>[manager_general]</b>, <b>[manager_network_filter]</b> and <b>[manager_tracking]</b>. For any other, select <b>[manager_advanced_edit]</b>: it shows the servers' settings as JSON, under the same names as on a standalone server. Change them and select <b>[manager_ok]</b>.",
+    "settings_send": "MANAGER sends the new settings to every server of the farms that use the profile.",
+    "settings_refused": "MANAGER refuses the few settings it sets for each server itself, and its message names the setting. <code>[setting_udp_endpoints]</code> and <code>[setting_quic_endpoints]</code> take only <code>[json_empty_list]</code>, which turns UDP or QUIC off on the profile's servers: their ports are each server's own, set in its <a href=\"/vpnhood-manager/docs/access-points/\">access points</a>.",
+    "settings_dropped": "MANAGER keeps only the settings it knows and drops any other as you save, a misspelled name too, so open <b>[manager_advanced_edit]</b> again to check yours.",
+    "censored_title": "Settings for a censored network",
+    "censored_desc": "On a network that blocks VPN servers, a farm's profile gives all of its servers the settings for a censored network at once. <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Keep your server's IP address from being blocked</a> explains each, and what it costs your users. In <b>[manager_advanced_edit]</b>, set:",
+    "caption_censored": "Cloak Mode for everyone, no UDP and no QUIC to the servers, and your users' QUIC dropped",
+    "censored_refused": "MANAGER refuses <code>[setting_allow_quic_packet]</code> or <code>[setting_allow_udp_packet]</code> off while <code>[setting_allow_tcp_packet]</code> is on, as the servers would carry them anyway. It refuses <code>[setting_allow_tcp_packet]</code> and <code>[setting_allow_tcp_proxy]</code> both off too, which leaves TCP no way through.",
+    "proxy_title": "Behind a reverse proxy",
+    "proxy_desc": "Your servers trust Cloudflare to name each user's address. Behind another reverse proxy, open <b>[manager_advanced_edit]</b> and add the settings that <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Your users' addresses</a> shows.",
+    "next_title": "Next steps",
+    "next_domain": "Use your own domain with a trusted certificate",
+    "next_proxy": "Send every app through a reverse proxy"
+  }
+}

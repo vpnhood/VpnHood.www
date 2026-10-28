@@ -63,5 +63,5 @@
   "when_title": "Cuándo activarlo",
   "when_desc": "Cuando no se pueda acceder al servidor, no solo cuando el tráfico sea inspeccionado. Si una red bloquea la dirección del servidor, un proxy ofrece una vía alternativa de acceso.",
   "cost_title": "Qué debes tener en cuenta",
-  "cost_desc": "Los proxies SOCKS y HTTP tienen su propia huella digital y los firewalls pueden bloquearlos con facilidad. Por eso, un proxy sirve para acceder, no para pasar desapercibido. Para camuflarte, usa el Modo Camuflaje."
+  "cost_desc": "Los proxies SOCKS y HTTP tienen su propia huella digital y los cortafuegos pueden bloquearlos con facilidad. Por eso, un proxy sirve para entrar, no para pasar desapercibido. Para eso está el Modo Camuflaje."
 }

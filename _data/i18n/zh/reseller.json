@@ -50,7 +50,7 @@
   "why_open_source_title": "开源透明，通过安全审计",
   "why_open_source_desc": "VpnHood! CONNECT、服务端以及背后的 VpnHood! ENGINE 均在 GitHub 上基于 LGPL 协议开源，并已通过 Include Security 为开放技术基金会（OTF）红队实验室进行的安全审计。客户可以直接查阅代码而无需口头承诺，您也无需支付任何许可费，利润全归自己。",
   "why_undetectable_title": "无法被探测的伪装协议",
-  "why_undetectable_desc": "Cloak Mode 专为混淆 VPN 流量而设计，使其与普通 HTTPS 浏览无异，深度包检测（DPI）根本无从匹配特征。在普通 VPN 频频失效的地区，这就是客户长期续费的关键。",
+  "why_undetectable_desc": "伪装模式旨在让 VPN 流量看起来像普通的 HTTPS 浏览，使深度包检测（DPI）无特征可匹配。在普通 VPN 无法使用的市场，这正是客户持续订阅的原因。",
   "why_global_title": "极具吸引力的全球节点",
   "why_global_desc": "一个高级版访问码即可畅连跨越五大洲 [count] 多个国家的服务器，且节点列表还在持续增加，无需您费心维护。",
   "get_label": "合作模式",

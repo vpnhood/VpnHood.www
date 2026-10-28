@@ -1,6 +1,6 @@
 {
   "meta_title": "Defina o endereço IP do seu servidor nas chaves de acesso | VpnHood!",
-  "meta_description": "Escolha o endereço IP em que o VpnHood! SERVER opera e o que ele inclui nas chaves de acesso, gerenciado no VpnHood! MANAGER ou avulso.",
+  "meta_description": "Escolha o endereço IP em que o VpnHood! SERVER escuta e o que ele coloca nas chaves de acesso, em um servidor gerenciado no VpnHood! MANAGER ou em um independente.",
   "title": "Defina os endereços IP do seu servidor",
   "lead": "Uma chave de acesso informa aos aplicativos a qual endereço se conectar. O servidor costuma identificar isso automaticamente, mas em uma máquina com múltiplos IPs pode ser preciso defini-lo: o endereço em que o servidor escuta e o endereço inserido nas chaves.",
   "auto_title": "Como o servidor identifica seu endereço",

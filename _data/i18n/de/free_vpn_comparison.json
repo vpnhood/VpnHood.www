@@ -39,14 +39,14 @@
   "download_for_free": "Kostenlos herunterladen",
   "explore_all_features": "Alle Funktionen entdecken",
   "why_title": "Was macht VpnHood! besonders?",
-  "why_desc": "VpnHood! CONNECT vereint unbegrenztes kostenloses Datenvolumen, Open-Source-Code für Client und Server, flexibles Split-Tunneling und den Cloak Mode. Der kostenlose Tarif ist werbefinanziert; Premium bietet zusätzliche Standorte und Funktionen.",
+  "why_desc": "VpnHood! CONNECT vereint unbegrenztes kostenloses Datenvolumen, Open-Source-Code für Client und Server, flexibles Split-Tunneling und den Tarnmodus. Der kostenlose Tarif ist werbefinanziert; Premium bietet zusätzliche Standorte und Funktionen.",
   "why_unlimited_title": "Unbegrenztes Datenvolumen, ohne Registrierung",
   "why_unlimited_desc": "Surfen ganz ohne Datenlimit oder Kontoerstellung. Es gibt keine Geschwindigkeitsbegrenzungen, wobei die tatsächliche Geschwindigkeit von Ihrem Netzwerk und der Serverauslastung abhängt. Der kostenlose Tarif finanziert sich durch Werbung und ist daher nicht in jedem Land verfügbar.",
   "why_open_source_title": "100 % Open Source",
   "why_open_source_desc": "Der Code für Client und Server ist transparent auf GitHub verfügbar. So können Sie den Quellcode jederzeit prüfen und Ihren eigenen Server betreiben.",
   "why_split_title": "Fortschrittliches Split-Tunneling",
   "why_split_desc": "Bestimmen Sie flexibel nach Ländern, Apps oder lokalem Netzwerk, welcher Datenverkehr über das VPN läuft, und passen Sie Ihre Verbindung optimal an.",
-  "why_stealth_title": "Cloak Mode für blockierte Netzwerke",
-  "why_stealth_desc": "Der Cloak Mode lässt Ihren VPN-Datenverkehr wie gewöhnlichen HTTPS-Datenverkehr aussehen. Die Wirkung hängt von den jeweiligen Filtermethoden des Netzwerks ab; eine unblockierte Verbindung kann nicht garantiert werden.",
+  "why_stealth_title": "Tarnmodus für blockierte Netzwerke",
+  "why_stealth_desc": "Der Tarnmodus hilft, VPN-Datenverkehr wie gewöhnlichen HTTPS-Datenverkehr aussehen zu lassen. Die Wirkung hängt von den Filtermethoden des Netzwerks ab; keine Verbindung bleibt garantiert ungesperrt.",
   "view_on_github": "Auf GitHub ansehen"
 }

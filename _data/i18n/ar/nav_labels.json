@@ -20,5 +20,6 @@
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "الشهادات",
   "add-server": "إضافة خادم",
-  "access-points": "نقاط الوصول"
+  "access-points": "نقاط الوصول",
+  "server-profiles": "ملفات تعريف الخوادم"
 }

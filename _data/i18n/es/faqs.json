@@ -4,7 +4,7 @@
   "desc": "Encuentra respuestas a todas tus dudas.",
   "view_all": "Ver todas las preguntas",
   "q_why_vpnhood": "¿Por qué VpnHood?",
-  "a_why_vpnhood": "VpnHood funciona con el <b>VpnHood! ENGINE</b>, desarrollado por el equipo de VpnHood. Combina código cliente y servidor de código abierto, un túnel dividido flexible y el Modo Cloak, diseñado para camuflar el tráfico VPN como navegación cifrada habitual. VpnHood! CONNECT ofrece datos ilimitados gratis y sin registros en Android.",
+  "a_why_vpnhood": "VpnHood funciona con el <b>VpnHood! ENGINE</b>, desarrollado por el equipo de VpnHood. Combina código cliente y servidor de código abierto, un túnel dividido flexible y el Modo Camuflaje, diseñado para ayudar a que el tráfico VPN se confunda con la navegación cifrada habitual. VpnHood! CONNECT ofrece datos ilimitados gratis y sin registro en Android.",
   "q_is_vpnhood_free": "¿VpnHood es una VPN gratuita?",
   "a_is_vpnhood_free": "Sí, VpnHood ofrece una VPN gratuita sin límites de tiempo, datos ni velocidad. Además, puedes acceder a más funciones pasando a Premium: servidores en más países, conexiones más rápidas y mejoras en la aplicación. Consulta más información en la página de <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">detalles del plan</a>.",
   "q_connect_vs_client": "¿VpnHood! CONNECT o VpnHood! CLIENT?",
@@ -14,7 +14,7 @@
   "q_is_open_source": "¿VpnHood es de código abierto?",
   "a_is_open_source": "Sí, al 100 %. VpnHood! CONNECT, VpnHood! CLIENT, el servidor y el VpnHood! ENGINE que los impulsa están publicados en GitHub. Además, el proyecto fue auditado por <a href=\"/security-audit/\">Include Security para el Red Team Lab de Open Technology Fund</a>. No tienes que fiarte de nuestra palabra: puedes revisar el código tú mismo.",
   "q_is_undetectable": "¿VpnHood es indetectable?",
-  "a_is_undetectable": "El Cloak Mode de VpnHood hace que el tráfico VPN se asemeje al tráfico HTTPS estándar, lo que ayuda a eludir bloqueos y sistemas de detección de VPN. Esto no garantiza el acceso en todas las redes, ya que la eficacia depende de los métodos de filtrado de cada una.",
+  "a_is_undetectable": "El Modo Camuflaje de VpnHood está diseñado para que el tráfico VPN se asemeje al tráfico HTTPS habitual, lo que le ayuda a eludir algunos métodos de detección de VPN. Esto no garantiza que todas las redes permitan la conexión; la eficacia depende de los métodos de filtrado que se utilicen.",
   "q_stay_free_forever": "¿Puedo usar el plan Gratis para siempre?",
   "a_stay_free_forever": "Sí. El plan Gratis no tiene límite de tiempo ni te obliga a pagar, y ni siquiera necesitas crear una cuenta. Se financia con anuncios, por lo que no está disponible en China ni en otros países donde no se muestran anuncios. El plan Premium está disponible cuando quieras más ubicaciones, servidores más rápidos, una aplicación sin anuncios y soporte 24/7, sin restricciones geográficas.",
   "q_free_data_cap": "¿El plan Gratis tiene límite de datos?",
@@ -22,7 +22,7 @@
   "q_free_speed": "¿Se reduce la velocidad a los usuarios del plan Gratis?",
   "a_free_speed": "No. VpnHood! SERVER permite limitar la velocidad por usuario, pero no lo aplicamos en los servidores gratuitos. La diferencia entre planes radica en la capacidad: los servidores gratuitos albergan a muchos más usuarios, por lo que el rendimiento varía según la congestión. Los servidores Premium son más potentes y exclusivos para usuarios Premium, ofreciendo una mayor velocidad de forma constante.",
   "q_why_slower": "¿Por qué VpnHood! es más lento que mi conexión habitual?",
-  "a_why_slower": "Cualquier VPN reduce un poco la velocidad: tus datos se cifran y pasan por un servidor intermedio antes de llegar a su destino. La distancia suele ser el factor determinante, por lo que elegir un servidor cercano siempre ayuda. Funciones como Cloak Mode o Smart Proxies añaden algo de carga y pueden desactivarse si no sufres bloqueos. Consulta nuestra <a href=\"/guides/vpn-speed/\">guía para medir la velocidad</a> y comprueba el rendimiento real.",
+  "a_why_slower": "Cualquier VPN reduce un poco la velocidad: tus datos se cifran y pasan por un servidor intermedio antes de llegar a su destino. La distancia suele ser el factor principal, así que lo que más ayuda es un servidor cercano. El Modo Camuflaje y los Proxies inteligentes añaden cada uno algo de carga, y puedes desactivarlos cuando nada te bloquea. Consulta la <a href=\"/guides/vpn-speed/\">guía para medir la velocidad</a> para saber cómo hacerlo correctamente.",
   "q_request_location": "¿Puedo solicitar una nueva ubicación?",
   "a_request_location": "Sí. Añadimos ubicaciones según la demanda que recibimos. Escríbenos desde la <a href=\"/contact-us/\">página de contacto</a> indicando el país y si lo necesitas por velocidad o para acceder a algún contenido específico, ya que eso nos ayuda a elegir el mejor servidor.",
   "q_many_servers_per_location": "¿Cada ubicación es un solo servidor?",
@@ -46,5 +46,5 @@
   "q_server_needs_manager": "¿Necesito VpnHood! MANAGER para ejecutar un servidor?",
   "a_server_needs_manager": "No. VpnHood! SERVER incluye un gestor básico de accesos integrado mediante archivos, por lo que un servidor puede funcionar y generar sus propias claves sin ningún panel. Usa MANAGER si necesitas un panel de control, monitorización en tiempo real, gestionar tus propios planes o balancear la carga entre varios servidores.",
   "q_server_ip_blocked": "¿Pueden bloquear la dirección IP de mi servidor?",
-  "a_server_ip_blocked": "Sí. El modo Cloak deja muy pocas huellas en el tráfico, por lo que los bloqueos suelen deberse a la dirección IP del servidor. Mantenla privada y compártela con pocas personas. Con MANAGER, vincula tu granja de servidores a una URL de token; así, si cambias el servidor a una IP nueva, las aplicaciones de tus usuarios la detectarán de forma automática. En <a href=\"/vpnhood-server/docs/ip-blocking/\">Evitar que bloqueen la dirección IP de tu servidor</a> te mostramos más soluciones, empezando por usar una segunda IP para el tráfico saliente del servidor."
+  "a_server_ip_blocked": "Sí. El Modo Camuflaje deja muy pocas huellas en el tráfico, por lo que los bloqueos suelen deberse a la dirección IP del servidor. Mantenla privada y compártela con pocas personas. Con MANAGER, vincula tu granja de servidores a una URL de token; así, si cambias el servidor a una IP nueva, las aplicaciones de tus usuarios la detectarán de forma automática. En <a href=\"/vpnhood-server/docs/ip-blocking/\">Evitar que bloqueen la dirección IP de tu servidor</a> te mostramos más soluciones, empezando por usar una segunda IP para el tráfico saliente del servidor."
 }

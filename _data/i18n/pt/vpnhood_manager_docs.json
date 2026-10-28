@@ -1,6 +1,6 @@
 {
   "meta_title": "Documentação do VpnHood! MANAGER | VpnHood!",
-  "meta_description": "Aprenda a usar o VpnHood! MANAGER, o painel web grátis para instalar servidores VPN, gerenciar clusters e criar chaves de acesso.",
+  "meta_description": "Aprenda a usar o VpnHood! MANAGER, o painel web grátis que instala seus servidores VPN, os executa em farms de servidores e emite as chaves de acesso.",
   "title": "Documentação do VpnHood! MANAGER",
-  "lead": "O VpnHood! MANAGER é o painel web gratuito que instala seus servidores, gerencia seus clusters e emite chaves de acesso. Estas páginas explicam suas telas. Para configurar seu primeiro servidor, comece por <a href=\"/vpnhood-manager/docs/add-server/\">Adicionar um servidor</a>."
+  "lead": "O VpnHood! MANAGER é o painel web gratuito que instala seus servidores, os executa em farms de servidores e emite as chaves de acesso. Estas páginas explicam suas telas. Para configurar seu primeiro servidor, comece por <a href=\"/vpnhood-manager/docs/add-server/\">Adicionar um servidor</a>."
 }

@@ -1,0 +1,23 @@
+{
+  "meta_title": "Perfiles de servidor: ajustes de tus servidores en VpnHood! MANAGER | VpnHood!",
+  "meta_description": "Aplica los mismos ajustes a todos los servidores de una granja con un perfil de servidor en VpnHood! MANAGER, entre ellos los ajustes para una red censurada y para un proxy inverso.",
+  "title": "Perfiles de servidor",
+  "lead": "Un perfil de servidor contiene los ajustes de tus servidores. Cada granja de servidores usa uno, y VpnHood! MANAGER envía sus ajustes a todos los servidores de la granja, así que los cambias en un solo lugar.",
+  "where_title": "Dónde encontrarlos",
+  "where_desc": "Abre <b>[manager_settings]</b> y selecciona <b>[manager_server_profiles]</b>. Cada proyecto empieza con un perfil predeterminado, que usa cualquier granja de servidores nueva a menos que elijas otro. El perfil predeterminado no se puede renombrar ni eliminar, y no se puede eliminar ningún perfil que use una granja.",
+  "where_farm": "La página de una granja en <b>[manager_server_farms]</b> indica su perfil en <b>[manager_server_profile]</b>: selecciona el nombre para abrir el perfil, o edítalo para asignar otro a la granja.",
+  "settings_title": "Cambiar los ajustes de un perfil",
+  "settings_card": "En la página de un perfil, los ajustes habituales se configuran en <b>[manager_general]</b>, <b>[manager_network_filter]</b> y <b>[manager_tracking]</b>. Para cualquier otro, selecciona <b>[manager_advanced_edit]</b>: muestra los ajustes de los servidores en formato JSON, con los mismos nombres que en un servidor independiente. Cámbialos y selecciona <b>[manager_ok]</b>.",
+  "settings_send": "MANAGER envía los nuevos ajustes a todos los servidores de las granjas que usan el perfil.",
+  "settings_refused": "MANAGER rechaza los pocos ajustes que él mismo configura para cada servidor, y su mensaje indica de qué ajuste se trata. <code>[setting_udp_endpoints]</code> y <code>[setting_quic_endpoints]</code> solo aceptan <code>[json_empty_list]</code>, que desactiva UDP o QUIC en los servidores del perfil: sus puertos son propios de cada servidor y se configuran en sus <a href=\"/vpnhood-manager/docs/access-points/\">puntos de acceso</a>.",
+  "settings_dropped": "MANAGER conserva solo los ajustes que conoce y descarta cualquier otro al guardar, incluso uno con el nombre mal escrito, así que vuelve a abrir <b>[manager_advanced_edit]</b> para comprobar los tuyos.",
+  "censored_title": "Ajustes para una red censurada",
+  "censored_desc": "En una red que bloquea los servidores VPN, el perfil de una granja aplica a la vez a todos sus servidores los ajustes para una red censurada. En <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Evita que bloqueen la dirección IP de tu servidor</a> se explica cada uno de ellos y lo que les cuesta a tus usuarios. En <b>[manager_advanced_edit]</b>, configura:",
+  "caption_censored": "Modo Camuflaje para todos, sin UDP ni QUIC hacia los servidores y con el QUIC de tus usuarios descartado",
+  "censored_refused": "MANAGER rechaza <code>[setting_allow_quic_packet]</code> o <code>[setting_allow_udp_packet]</code> desactivados mientras <code>[setting_allow_tcp_packet]</code> esté activado, ya que los servidores transportarían ese tráfico de todos modos. También rechaza <code>[setting_allow_tcp_packet]</code> y <code>[setting_allow_tcp_proxy]</code> desactivados a la vez, lo que deja al tráfico TCP sin ninguna vía de paso.",
+  "proxy_title": "Detrás de un proxy inverso",
+  "proxy_desc": "Tus servidores confían en que Cloudflare indique la dirección de cada usuario. Detrás de otro proxy inverso, abre <b>[manager_advanced_edit]</b> y añade los ajustes que se muestran en <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Direcciones de tus usuarios</a>.",
+  "next_title": "Siguientes pasos",
+  "next_domain": "Usa tu propio dominio con un certificado de confianza",
+  "next_proxy": "Dirige todas las aplicaciones a través de un proxy inverso"
+}

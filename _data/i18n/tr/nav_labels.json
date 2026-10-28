@@ -20,5 +20,6 @@
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Sertifikalar",
   "add-server": "Sunucu ekleyin",
-  "access-points": "Erişim noktaları"
+  "access-points": "Erişim noktaları",
+  "server-profiles": "Sunucu profilleri"
 }

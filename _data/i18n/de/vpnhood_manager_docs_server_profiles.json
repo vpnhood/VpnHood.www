@@ -1,0 +1,23 @@
+{
+  "meta_title": "Serverprofile: Einstellungen Ihrer Server in VpnHood! MANAGER | VpnHood!",
+  "meta_description": "Weisen Sie allen Servern einer Farm mit einem Serverprofil in VpnHood! MANAGER dieselben Einstellungen zu – darunter die für ein zensiertes Netzwerk und für einen Reverse-Proxy.",
+  "title": "Serverprofile",
+  "lead": "Ein Serverprofil enthält die Einstellungen Ihrer Server. Jede Serverfarm nutzt eines, und VpnHood! MANAGER sendet die Einstellungen des Profils an jeden Server der Farm – so ändern Sie sie an einer einzigen Stelle.",
+  "where_title": "Wo sie zu finden sind",
+  "where_desc": "Öffnen Sie <b>[manager_settings]</b> und wählen Sie <b>[manager_server_profiles]</b>. Jedes Projekt hat von Beginn an ein Standardprofil, das eine neue Serverfarm nutzt, sofern Sie kein anderes wählen. Das Standardprofil lässt sich weder umbenennen noch löschen, und kein Profil, das von einer Farm genutzt wird, kann gelöscht werden.",
+  "where_farm": "Die Seite einer Farm in <b>[manager_server_farms]</b> nennt ihr Profil unter <b>[manager_server_profile]</b>: Wählen Sie den Namen, um das Profil zu öffnen, oder bearbeiten Sie es, um der Farm ein anderes zuzuweisen.",
+  "settings_title": "Einstellungen eines Profils ändern",
+  "settings_card": "Auf der Seite eines Profils legen Sie die gängigen Einstellungen unter <b>[manager_general]</b>, <b>[manager_network_filter]</b> und <b>[manager_tracking]</b> fest. Für alle anderen wählen Sie <b>[manager_advanced_edit]</b>: Dort werden die Einstellungen der Server als JSON angezeigt, unter denselben Namen wie auf einem eigenständigen Server. Ändern Sie sie und wählen Sie <b>[manager_ok]</b>.",
+  "settings_send": "MANAGER sendet die neuen Einstellungen an jeden Server der Farmen, die das Profil nutzen.",
+  "settings_refused": "MANAGER lehnt die wenigen Einstellungen ab, die er für jeden Server selbst festlegt, und seine Meldung nennt die betreffende Einstellung. <code>[setting_udp_endpoints]</code> und <code>[setting_quic_endpoints]</code> akzeptieren nur <code>[json_empty_list]</code>, was UDP bzw. QUIC auf den Servern des Profils abschaltet: Deren Ports gehören zum jeweiligen Server und werden in dessen <a href=\"/vpnhood-manager/docs/access-points/\">Access Points</a> festgelegt.",
+  "settings_dropped": "MANAGER behält nur die Einstellungen, die er kennt, und verwirft beim Speichern alle anderen, auch eine Einstellung mit falsch geschriebenem Namen. Öffnen Sie daher <b>[manager_advanced_edit]</b> erneut, um Ihre Einstellungen zu prüfen.",
+  "censored_title": "Einstellungen für ein zensiertes Netzwerk",
+  "censored_desc": "In einem Netzwerk, das VPN-Server sperrt, weist das Profil einer Farm allen ihren Servern auf einmal die Einstellungen für ein zensiertes Netzwerk zu. Die Anleitung <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Server-IP-Adresse vor Sperren schützen</a> erklärt jede einzelne davon und was sie Ihre Nutzer kostet. Legen Sie unter <b>[manager_advanced_edit]</b> Folgendes fest:",
+  "caption_censored": "Tarnmodus für alle, kein UDP und kein QUIC zu den Servern sowie verworfenes QUIC Ihrer Nutzer",
+  "censored_refused": "MANAGER lehnt ein ausgeschaltetes <code>[setting_allow_quic_packet]</code> oder <code>[setting_allow_udp_packet]</code> ab, solange <code>[setting_allow_tcp_packet]</code> eingeschaltet ist, da die Server QUIC bzw. UDP ohnehin übertragen würden. Ebenso lehnt er <code>[setting_allow_tcp_packet]</code> und <code>[setting_allow_tcp_proxy]</code> ab, wenn beide ausgeschaltet sind, denn dann bliebe für TCP kein Weg hindurch.",
+  "proxy_title": "Hinter einem Reverse-Proxy",
+  "proxy_desc": "Ihre Server vertrauen darauf, dass Cloudflare ihnen die Adresse jedes Nutzers nennt. Hinter einem anderen Reverse-Proxy öffnen Sie <b>[manager_advanced_edit]</b> und fügen die Einstellungen hinzu, die unter <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Adressen Ihrer Nutzer</a> aufgeführt sind.",
+  "next_title": "Nächste Schritte",
+  "next_domain": "Eigene Domain mit einem vertrauenswürdigen Zertifikat verwenden",
+  "next_proxy": "Jede App über einen Reverse-Proxy leiten"
+}

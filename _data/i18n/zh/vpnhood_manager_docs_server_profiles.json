@@ -1,0 +1,23 @@
+{
+  "meta_title": "服务器配置方案：VpnHood! MANAGER 中的节点设置 | VpnHood!",
+  "meta_description": "借助 VpnHood! MANAGER 中的服务器配置方案，让集群中的所有节点使用相同的设置，其中包括适用于受审查网络和反向代理的设置。",
+  "title": "服务器配置方案",
+  "lead": "服务器配置方案保存着您的服务器设置。每个服务器集群都使用一个配置方案，VpnHood! MANAGER 会将其中的设置发送到该集群的每台服务器，因此您只需在一处修改。",
+  "where_title": "查看位置",
+  "where_desc": "打开 <b>[manager_settings]</b> 并选择 <b>[manager_server_profiles]</b>。每个项目一开始都有一个默认配置方案，新建的服务器集群会使用它，除非您另选其他配置方案。默认配置方案既不能重命名，也不能删除；任何正被集群使用的配置方案也都无法删除。",
+  "where_farm": "<b>[manager_server_farms]</b> 中的集群页面会在 <b>[manager_server_profile]</b> 下显示其配置方案的名称：选择该名称即可打开配置方案，或编辑此项，为集群换用另一个配置方案。",
+  "settings_title": "更改配置方案的设置",
+  "settings_card": "配置方案页面可在 <b>[manager_general]</b>、<b>[manager_network_filter]</b> 和 <b>[manager_tracking]</b> 下设置常用选项。如需更改任何其他设置，请选择 <b>[manager_advanced_edit]</b>：它会以 JSON 格式显示服务器的设置，名称与独立服务器上的相同。修改后选择 <b>[manager_ok]</b>。",
+  "settings_send": "MANAGER 会将新设置发送到使用该配置方案的各个集群中的每台服务器。",
+  "settings_refused": "MANAGER 会拒绝接受它为每台服务器自行设定的少数几项设置，并在提示信息中指明是哪项设置。<code>[setting_udp_endpoints]</code> 和 <code>[setting_quic_endpoints]</code> 只接受 <code>[json_empty_list]</code>，这会在使用该配置方案的服务器上关闭 UDP 或 QUIC：它们的端口属于每台服务器自身，在该服务器的<a href=\"/vpnhood-manager/docs/access-points/\">接入点</a>中设置。",
+  "settings_dropped": "MANAGER 只保留它能识别的设置，保存时会丢弃其他所有设置，拼写错误的名称也不例外，因此请再次打开 <b>[manager_advanced_edit]</b> 检查您的设置。",
+  "censored_title": "适用于受审查网络的设置",
+  "censored_desc": "在封锁 VPN 服务器的网络中，集群的配置方案可以一次性为该集群的所有服务器提供适用于受审查网络的设置。<a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">防止服务器 IP 地址被封锁</a>逐一说明了每项设置，以及它会让用户付出的代价。在 <b>[manager_advanced_edit]</b> 中设置：",
+  "caption_censored": "对所有用户启用伪装模式、连接服务器时不使用 UDP 和 QUIC，并丢弃用户的 QUIC 流量",
+  "censored_refused": "MANAGER 会拒绝在 <code>[setting_allow_tcp_packet]</code> 开启时关闭 <code>[setting_allow_quic_packet]</code> 或 <code>[setting_allow_udp_packet]</code> 的设置，因为服务器无论如何都会传输这些流量。它也会拒绝将 <code>[setting_allow_tcp_packet]</code> 和 <code>[setting_allow_tcp_proxy]</code> 同时关闭的设置，因为这样 TCP 流量将无法通过。",
+  "proxy_title": "位于反向代理之后",
+  "proxy_desc": "您的服务器信任 Cloudflare 告知的每个用户的地址。若位于其他反向代理之后，请打开 <b>[manager_advanced_edit]</b>，添加<a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">用户的地址</a>中所示的设置。",
+  "next_title": "后续步骤",
+  "next_domain": "使用带有受信任证书的自定义域名",
+  "next_proxy": "让所有应用都通过反向代理连接"
+}

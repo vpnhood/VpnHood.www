@@ -17,6 +17,19 @@ Split tunneling by apps / by countries = ऐप्स के अनुसार 
 Frequently Asked Questions = अक्सर पूछे जाने वाले सवाल
 Learn more = और जानें
 Free vs Premium = मुफ़्त बनाम प्रीमियम
+Cloak Mode = क्लोक मोड (never "Cloak Mode" in a Hindi sentence)
+Quick Launch = त्वरित लॉन्च
+Always On = हमेशा चालू (in running text: हमेशा चालू फ़ीचर; bare in titles and table rows)
+Smart Proxies = स्मार्ट प्रॉक्सी (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = रिवर्स प्रॉक्सी · proxy = प्रॉक्सी
+farm / server farm = फ़ार्म / सर्वर फ़ार्म
+access key = एक्सेस की (never "access key", never ऐक्सेस, never कुंजी)
+certificate = सर्टिफ़िकेट (with the nukta; never सर्टिफिकेट, never प्रमाणपत्र) · trusted certificate = विश्वसनीय सर्टिफ़िकेट
+container = कंटेनर · firewall = फ़ायरवॉल
+standalone = स्टैंडअलोन · managed = मैनेज्ड (never प्रबंधित) · web panel = वेब पैनल
+server profile = सर्वर प्रोफ़ाइल
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = फ़ीचर्स · app = ऐप · traffic = ट्रैफ़िक · server = सर्वर
@@ -25,4 +38,5 @@ plan = प्लान · reseller = रीसेलर · open source = ओप�
 RULES
 - Devanagari or Latin only. Never emit Arabic, Cyrillic, Hangul or CJK characters — past
   outputs mixed those in mid-word and had to be repaired by hand.
-- "VPN" stays Latin; never वीपीएन.
+- Names and acronyms stay Latin: VpnHood, Android, Windows, Linux, Docker, VPN, IP, DNS —
+  never एंड्रॉइड, विंडोज, लिनक्स, डॉकर, वीपीएन, आईपी, डीएनएस.

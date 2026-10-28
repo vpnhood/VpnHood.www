@@ -12,7 +12,7 @@
   "how_title": "Comment ça marche",
   "how_desc": "UDP est léger et généralement le plus rapide, bien que certains réseaux le limitent. TCP privilégie la fiabilité : un peu plus lent en théorie, mais il passe là où UDP est bloqué. QUIC est un protocole moderne basé sur UDP, encore plus rapide là où il est autorisé.",
   "when_title": "Quand l'utiliser",
-  "when_desc": "Changez de protocole si la connexion est lente ou bloquée. Choisissez d'abord UDP pour la vitesse, puis TCP en cas de restriction. Bloquer QUIC force les applications à utiliser le streaming standard, ce qui peut améliorer la lecture vidéo en Cloak Mode.",
+  "when_desc": "Changez de protocole si la connexion est lente ou bloquée. Choisissez d'abord UDP pour la vitesse, puis TCP en cas de restriction. Bloquer QUIC force les applications à revenir au streaming standard, ce qui peut améliorer la lecture vidéo en mode furtif.",
   "cost_title": "Combien ça coûte",
   "cost_desc": "Rien du tout. Le protocole bascule instantanément sans couper le tunnel : changez à tout moment si les performances faiblissent."
 }

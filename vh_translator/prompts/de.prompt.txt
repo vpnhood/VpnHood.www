@@ -17,12 +17,28 @@ Split tunneling by apps / by countries = Split-Tunneling nach Apps / nach Lände
 Frequently Asked Questions = Häufig gestellte Fragen
 Learn more = Mehr erfahren
 Free vs Premium = Kostenlos vs. Premium
+Cloak Mode = Tarnmodus (one word; never Tarn-Modus, Cloak-Modus, Cloak Mode in a German sentence)
+Quick Launch = Schnellstart
+Always On = Immer an (in quotes in running text: „Immer an“ stellt …; bare in titles and table rows)
+Smart Proxies = Smart Proxies (the feature page's own title)
+Android's always-on VPN setting = „Durchgehend aktives VPN“ (Android's own label)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = Reverse-Proxy (der; plural Reverse-Proxys)
+farm / server farm = Farm / Serverfarm (never Server-Farm)
+access key = Zugangsschlüssel (never Zugriffsschlüssel)
+certificate = Zertifikat · container = Container · firewall = Firewall
+standalone = eigenständig (never standalone) · managed = verwaltet · web panel = Web-Panel
+server profile = Serverprofil (plural Serverprofile)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 traffic = Datenverkehr (not "Traffic")
 reseller = Reseller (not "Wiederverkäufer")
 plan = Tarif/Tarife (not "Plan" or "Abo") · app = App · open source = Open Source
 
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Germans add "ohne Registrierung" to VPN searches. In those two keys: no registration / no
+sign-up / no account = ohne Registrierung.
 RULES
 - Percentages take a space: "100 % kostenlos", never "100%".
 - Buttons use the infinitive ("Jetzt herunterladen"), never the Sie-imperative, on all buttons.

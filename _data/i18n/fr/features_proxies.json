@@ -63,5 +63,5 @@
   "when_title": "Quand l'activer",
   "when_desc": "Lorsque le serveur lui-même est inaccessible, et pas seulement surveillé. Si un réseau bloque l'adresse du serveur, un proxy offre une autre voie d'accès.",
   "cost_title": "Ce que cela implique",
-  "cost_desc": "Les proxys SOCKS et HTTP ont leur propre signature et sont faciles à bloquer par les pare-feu. Un proxy sert donc à contourner un blocage, pas à passer inaperçu. Pour la discrétion, utilisez le mode Cloak."
+  "cost_desc": "Les proxys SOCKS et HTTP ont leur propre signature et sont faciles à bloquer par les pare-feu. Un proxy sert donc à contourner un blocage, pas à passer inaperçu. Pour la discrétion, utilisez le mode furtif."
 }

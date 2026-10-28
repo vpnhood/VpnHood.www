@@ -27,7 +27,7 @@
   "keys_title": "Daha önce dağıtılan anahtarlar",
   "keys_desc": "Bir anahtar, oluşturulduğu adresleri barındırır; bu yüzden eski anahtara sahip bir uygulama eski adresi denemeye devam eder. Uygulamalar her bağlandığında güncel anahtarı otomatik olarak alır. Bu nedenle, değişiklik sonrasında sunucunun eski adresi birkaç gün daha dinlemesini sağlayın, ardından adresi kaldırın.",
   "keys_how": "Eski adresi yalnızca <code>[setting_tcp_endpoints]</code> içinde tutun; böylece sunucu bu adresi dinlemeye devam eder ancak artık anahtarlara eklemez.",
-  "keys_lost": "Eski adrese artık ulaşamayan bir uygulama için sizden yeni bir anahtar gerekir. <a href=\"/vpnhood-server/docs/reverse-proxy/\">Ters proxy</a> arkasında ise uygulamalar proxy'ye bağlanır; böylece sunucu adresiniz değişse bile anahtarlar geçersiz kalmaz.",
+  "keys_lost": "Eski adrese artık ulaşamayan bir uygulamanın sizden yeni bir anahtar alması gerekir. Bir <a href=\"/vpnhood-server/docs/reverse-proxy/\">ters proxy</a> arkasında ise uygulamalar proxy'ye bağlanır; böylece sunucunuzun adresi, uygulamaların anahtarlarını geçersiz kılmadan değişebilir.",
   "next_title": "Sonraki adımlar",
   "next_blocking": "Sunucunuzun IP adresinin engellenmesini önleyin",
   "next_domain": "Bir alan adı ve güvenilir bir sertifika kullanın",

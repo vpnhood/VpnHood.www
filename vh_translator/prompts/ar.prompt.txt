@@ -17,6 +17,18 @@ Split tunneling by apps / by countries = النفق المقسم حسب التط
 Frequently Asked Questions = الأسئلة الشائعة
 Learn more = اعرف المزيد
 Free vs Premium = المجاني مقابل المميز
+Cloak Mode = وضع التخفي (never وضع التمويه, never وضع Cloak Mode)
+Quick Launch = التشغيل السريع
+Always On = دائمًا متصل (in running text: ميزة دائمًا متصل; bare in titles and table rows)
+Smart Proxies = البروكسيات الذكية (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+proxy = بروكسي (never وكيل) · reverse proxy = بروكسي عكسي
+farm / server farm = مزرعة / مزرعة خوادم
+access key = مفتاح الوصول (plural مفاتيح الوصول)
+certificate = شهادة · container = حاوية · firewall = جدار الحماية
+standalone = مستقل · managed = مُدار · web panel = لوحة تحكم ويب
+server profile = ملف تعريف الخادم (plural ملفات تعريف الخوادم)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = المميزة, or المدفوعة when the sentence is about paying rather than the tier's name
@@ -24,8 +36,14 @@ feature(s) = الميزات (not المميزات, which means "advantages")
 app = التطبيق · traffic = حركة المرور · plan = باقة/باقات · reseller = موزّع
 open source = مفتوح المصدر
 
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Arabic speakers type "VPN" in Latin with Arabic words around it: "vpn مجاني", "خوادم vpn
+مجانية", "تحميل vpn مجاني", "vpn بدون تسجيل". In those two keys: Free VPN = VPN مجاني, free
+servers = خوادم VPN مجانية, download = تحميل, no registration / no sign-up = بدون تسجيل.
 RULES
 - Product words stay Latin: "VpnHood! SERVER", never خادم VpnHood!.
+- Every other name stays Latin too: Windows, Android, Linux, Docker, GitHub, Google Play,
+  Instagram, LinkedIn — never ويندوز، أندرويد، لينكس، دوكر، جيت هاب، جوجل بلاي، إنستغرام، لينكد إن.
 - Western digits throughout ("100%", "30", "Android 7.0"), as the rest of the Arabic copy
   already does — never ٠١٢٣.
 - Stable spelling across files: الآن (never الان), أنشئ, حمّل with the shadda.

@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! MANAGER में सर्वर जोड़ें | VpnHood!",
-  "meta_description": "VpnHood! MANAGER में सर्वर जोड़ें और SSH या Linux/Docker पर एक कमांड से VpnHood! SERVER इंस्टॉल करवाएं, फिर उसकी एक्सेस की (access keys) बनाएं।",
+  "meta_description": "VpnHood! MANAGER में सर्वर जोड़ें और उसे आपके लिए VpnHood! SERVER इंस्टॉल करने दें, SSH के ज़रिए या Linux पर अथवा Docker में एक कमांड से, फिर उसकी एक्सेस कीज़ बनाएं।",
   "title": "सर्वर जोड़ें",
   "lead": "VpnHood! MANAGER में सर्वर जोड़ें, और MANAGER उस पर आपके लिए VpnHood! SERVER इंस्टॉल कर देगा या वह सिंगल कमांड देगा। इसके बाद सर्वर MANAGER से कनेक्ट हो जाता है, जहां से एक्सेस की जारी की जाती हैं।",
   "before_title": "शुरू करने से पहले",
@@ -20,7 +20,7 @@
   "docker_existing": "पहले से बनाए गए कंटेनर के लिए, <b>[manager_install_manual]</b> चुनें। MANAGER द्वारा दिखाई गई सेटिंग्स को होस्ट पर <code>[server_appsettings]</code> के रूप में सेव करें, फिर <code>[docker_restart]</code> से कंटेनर रीस्टार्ट करें।",
   "status_title": "जांचें कि यह कनेक्ट हो रहा है",
   "status_desc": "सर्वर HTTPS के ज़रिए MANAGER से <code>[manager_agent_host]</code> पर कनेक्ट होता है। कनेक्ट होते ही, इसका स्टेटस <b>[manager_not_installed]</b> से बदलकर <b>[manager_idle]</b> हो जाता है, और डिवाइस कनेक्ट होने पर <b>[manager_active]</b> हो जाता है। इंस्टॉलेशन विकल्प फिर से देखने के लिए, सर्वर खोलें और <b>[manager_install]</b> चुनें, या इंस्टॉल होने के बाद <b>[manager_reinstall]</b> चुनें।",
-  "keys_title": "एक्सेस की (Access keys) बनाएं",
+  "keys_title": "एक्सेस कीज़ बनाएं",
   "keys_desc": "<b>[manager_access_tokens]</b> में जाकर अपने डिवाइसों के लिए एक्सेस की बनाएं। फिर हर डिवाइस पर <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> इंस्टॉल करें, की जोड़ें और कनेक्ट करें।",
   "run_title": "दैनिक उपयोग",
   "run_desc": "एक मैनेज्ड सर्वर भी स्टैंडअलोन VpnHood! SERVER की तरह ही काम करता है, इसलिए यह उसी तरह चलता है, लॉग तैयार करता है और अपडेट होता है: देखें <a href=\"/vpnhood-server/docs/install/#manage\">सर्वर शुरू और बंद करना</a>, या Docker में <a href=\"/vpnhood-server/docs/docker/#manage\">सर्वर शुरू करना, बंद करना और जांचना</a>।",

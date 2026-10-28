@@ -17,11 +17,27 @@ Split tunneling by apps / by countries = Túnel dividido por aplicaciones / por 
 Frequently Asked Questions = Preguntas frecuentes
 Learn more = Más información
 Free vs Premium = Gratis vs Premium
+Cloak Mode = Modo Camuflaje (never Modo Furtivo / Modo Oculto / Modo Cloak / Cloak Mode)
+Quick Launch = Inicio rápido
+Always On = Siempre encendido (in running text: la función Siempre encendido; bare in titles and table rows)
+Smart Proxies = Proxies inteligentes (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = proxy inverso
+farm / server farm = granja / granja de servidores (never grupo de servidores)
+access key = clave de acceso · certificate = certificado · container = contenedor
+firewall = cortafuegos (never firewall)
+standalone = independiente · managed = administrado (never gestionado) · web panel = panel web
+server profile = perfil de servidor (plural perfiles de servidor)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = funciones (not "características")
 open source = código abierto (not "open source")
 app = aplicación · plan = plan/planes · reseller = revendedor
 
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Spanish speakers search "VPN gratis sin registro" above all, then "VPN indetectable". In those
+two keys: Free VPN = VPN gratis, no registration / no sign-up / no account = sin registro,
+undetectable = indetectable.
 RULES
 - Buttons use the infinitive ("Descargar ahora"), never the tú imperative ("Descárgalo").

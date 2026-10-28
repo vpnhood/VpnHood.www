@@ -17,8 +17,24 @@ Split tunneling by apps / by countries = Túnel dividido por aplicativos / por p
 Frequently Asked Questions = Perguntas frequentes
 Learn more = Saiba mais
 Free vs Premium = Grátis vs Premium
+Cloak Mode = Modo invisível (never Modo Camuflagem / Modo Cloak / Cloak Mode)
+Quick Launch = Início rápido
+Always On = Sempre ligado
+Smart Proxies = Proxies inteligentes (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = proxy reverso
+farm / server farm = o farm / o farm de servidores (masculine; never cluster, never fazenda)
+access key = chave de acesso · certificate = certificado · container = contêiner · firewall = firewall
+standalone = independente (never autônomo, never avulso) · managed = gerenciado · web panel = painel web
+server profile = perfil de servidor (plural perfis de servidor)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = recursos · download (verb) = baixar (not "descarregar")
 open source = código aberto (not "open source")
 app = aplicativo · plan = plano/planos · reseller = revendedor
+
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026: the /pt/
+pages are found with Brazilian searches). People search "VPN grátis", "VPN grátis sem cadastro",
+"baixar VPN grátis" and "VPN de código aberto". In those two keys: Free VPN = VPN grátis, no
+registration / no sign-up / no account = sem cadastro, unlimited data = sem limite de dados.

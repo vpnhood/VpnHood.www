@@ -31,6 +31,7 @@
   "proxy_ca": "MANAGER consente chiavi senza indirizzo solo se lo stato del certificato è <b>[manager_ca_signed]</b>.",
   "proxy_keys": "Le app con una chiave precedente ricevono automaticamente quella nuova alla connessione, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita.",
   "proxy_keep": "Se mantenuti su <b>[manager_public_in_token]</b>, gli indirizzi rimangono nelle chiavi e le app useranno sia questi sia il proxy. In questo modo, il proxy garantisce la connessione degli utenti anche qualora un indirizzo venisse bloccato.",
+  "proxy_addresses": "I tuoi server si fidano di Cloudflare quando indica l'indirizzo di ciascun utente. Dietro un altro proxy, fornisci loro gli indirizzi di quel proxy nel profilo server della farm, come mostrato in <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Profili server</a>.",
   "proxy_farm": "Il dominio punta a un unico server: in una farm con più server, tutte le app che transitano dal proxy raggiungeranno sempre lo stesso.",
   "next_title": "Passaggi successivi",
   "next_domain": "Usa il tuo dominio con un certificato attendibile"

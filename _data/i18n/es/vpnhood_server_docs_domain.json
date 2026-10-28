@@ -1,6 +1,6 @@
 {
   "meta_title": "Asigna un nombre de dominio y un certificado de confianza a VpnHood! SERVER | VpnHood!",
-  "meta_description": "Configura tu VpnHood! SERVER con un dominio y certificado CA oficial, en servidores gestionados o independientes, para camuflar el tráfico como visitas web estándar.",
+  "meta_description": "Asigna a VpnHood! SERVER un nombre de dominio con un certificado de una autoridad de certificación, en un servidor administrado o en uno independiente, para que conectarse a él parezca una visita a un sitio web normal.",
   "title": "Usa un nombre de dominio y un certificado de confianza",
   "lead": "De forma predeterminada, el servidor usa un certificado autofirmado con un nombre ficticio. Asígnale un dominio propio con un certificado de una autoridad de certificación para que el tráfico parezca una visita web estándar.",
   "why_title": "Qué ventajas aporta",

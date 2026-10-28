@@ -1,5 +1,5 @@
 {
-  "meta_title": "高级版定价与免费版与高级版对比 | VpnHood! CONNECT 科学上网首选",
+  "meta_title": "高级版定价，免费版与高级版对比 | VpnHood! CONNECT 科学上网",
   "meta_description": "VpnHood! CONNECT 高级版套餐提供月度至年度选择，享受极速无广告科学上网体验及 24/7 支持。所有套餐均提供 30 天退款保证。",
   "banner_title": "升级高级版 VpnHood! CONNECT",
   "banner_desc": "VpnHood! CONNECT 完全免费，不限流量、速度和时长。升级高级版，解锁更多强劲权益：<a href=\"/free-vpn/locations/\">覆盖 [count] 多个国家</a>、极速服务器、支持 5 台设备同时在线、无广告以及 24/7 全天候支持。",
@@ -29,8 +29,8 @@
   "why_desc": "高级版与免费版采用相同的应用和代码构建，只是解除了各项限制。以下核心优势在免费版和高级版上完全一致。",
   "why1_title": "开源透明，通过安全审计",
   "why1_desc": "客户端、服务端以及背后的 VpnHood! ENGINE 均已在 GitHub 上开源，且已通过 Include Security（受开放技术基金会红队实验室委托）的安全审计。代码完全公开，安全无需凭空相信，随时由您亲眼验证。",
-  "why2_title": "针对受限网络的 Cloak 伪装模式",
-  "why2_desc": "Cloak 模式将 VPN 流量伪装成普通 HTTPS 流量，助您顺利绕过严密封锁 VPN 的网络。实际效果取决于网络检测机制，任何连接均无法保证永久不被屏蔽。",
+  "why2_title": "针对受限网络的伪装模式",
+  "why2_desc": "伪装模式让 VPN 流量看起来像普通的 HTTPS 流量，有助于穿过直接封锁 VPN 的网络。效果如何取决于网络检测哪些内容，任何连接都无法保证一直不被封锁。",
   "why3_title": "真正永久免费的套餐",
   "why3_desc": "无需注册账号，不限时长、流量与网速。免费版通过广告维持运营，因此在无法展示广告的地区不可用。升级高级版即可去广告，全球畅连无阻。",
   "compare_label": "对比",

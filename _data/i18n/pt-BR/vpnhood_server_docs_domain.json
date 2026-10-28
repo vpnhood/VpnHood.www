@@ -1,6 +1,6 @@
 {
   "meta_title": "Adicione um Domínio e um Certificado Válido ao VpnHood! SERVER | VpnHood!",
-  "meta_description": "Configure um domínio com certificado SSL no VpnHood! SERVER (gerenciado ou avulso) e faça sua conexão parecer um acesso normal a um site comum.",
+  "meta_description": "Dê ao VpnHood! SERVER um nome de domínio com um certificado de uma autoridade certificadora, em um servidor gerenciado ou independente, para que a conexão com ele pareça a visita a um site comum.",
   "title": "Use um nome de domínio e um certificado confiável",
   "lead": "Por padrão, o servidor usa um certificado autoassinado com um nome fictício. Adicione um domínio próprio com certificado reconhecido e faça cada conexão parecer o acesso a um site comum.",
   "why_title": "O que muda",
@@ -12,8 +12,8 @@
   "mgr_box_title": "Use seu próprio domínio facilmente com o VpnHood! MANAGER",
   "mgr_box_desc": "Em vez de seguir os passos abaixo, deixe o painel web gratuito obter um certificado confiável da Let's Encrypt para o seu domínio e renová-lo automaticamente antes de expirar.",
   "mgr_box_cta": "Use seu domínio no MANAGER",
-  "file_title": "Em um servidor avulso",
-  "file_cert": "Um servidor avulso não obtém certificados automaticamente. Obtenha um certificado para o domínio com uma autoridade certificadora, em formato PFX com chave privada, e substitua o arquivo <code>[server_cert_pfx]</code> mantendo o mesmo nome.",
+  "file_title": "Em um servidor independente",
+  "file_cert": "Um servidor independente não consegue obter um certificado sozinho. Obtenha um para o domínio com uma autoridade certificadora, como arquivo PFX com a chave privada, e coloque-o no lugar de <code>[server_cert_pfx]</code>, com o mesmo nome.",
   "file_settings": "Depois, insira a senha do arquivo em <code>[setting_ssl_password]</code> e altere <code>[setting_is_valid_host_name]</code> para <code>[json_true]</code>, ambos sob <code>[setting_file_access_manager]</code> em <code>[server_appsettings]</code>. Uma nova instalação não possui esse arquivo: basta criá-lo e o servidor passará a usá-lo no lugar das configurações padrão.",
   "caption_file": "O arquivo completo, substituindo o exemplo pela senha do seu certificado",
   "file_name": "O servidor detecta o domínio diretamente do certificado, por isso não há uma opção de configuração para ele.",

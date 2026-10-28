@@ -49,6 +49,6 @@
   "default_note": "Amacınız ne olursa olsun tek bir kural geçerlidir: Otel, havaalanı veya kafe gibi güvenmediğiniz ağlarda istisnaları kapatın ve her şeyi tünelleyin. Tünel dışında bıraktığınız her veri ağ yöneticisi tarafından izlenebilir; hiçbir kolaylık güvenliğinizden ödün vermeye değmez.",
   "vh_title": "VpnHood! nasıl çalışır?",
   "vh_desc": "Altı seçeneğin her biri uygulamada ayrı bir ekrana ve burada ayrı bir sayfaya sahiptir. Uygulamaya göre tünelleme hariç tümü Android, iOS, Windows ve Linux'ta çalışır; diğer sistemler VPN'in bağlantıların hangi uygulamaya ait olduğunu görmesine izin vermediği için uygulama bazlı tünelleme yalnızca Android'e özeldir. İstemcimiz açık kaynaklıdır; bu sayede yönlendirme kararlarının nasıl alındığını bizzat kodlardan inceleyebilirsiniz.",
-  "shot_alt": "VpnHood! uygulamasındaki tünelleme ekranı",
-  "vh_cta": "VpnHood!'da tünelleme"
+  "shot_alt": "VpnHood! uygulamasındaki bölünmüş tünelleme ekranı",
+  "vh_cta": "VpnHood!'da bölünmüş tünelleme"
 }

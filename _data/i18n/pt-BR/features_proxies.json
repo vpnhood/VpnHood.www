@@ -63,5 +63,5 @@
   "when_title": "Quando ativar",
   "when_desc": "Quando o servidor estiver inacessível, e não apenas monitorado. Se a rede bloquear o endereço do servidor, um proxy oferece uma rota alternativa.",
   "cost_title": "O que você perde",
-  "cost_desc": "Proxies SOCKS e HTTP possuem padrões fáceis de identificar e podem ser bloqueados por firewalls. Eles servem para contornar bloqueios, não para navegar sem ser detectado — para passar despercebido, use o Cloak Mode."
+  "cost_desc": "Proxies SOCKS e HTTP têm uma assinatura própria e podem ser bloqueados facilmente por firewalls; por isso, um proxy serve para entrar, não para passar despercebido. A ferramenta de discrição é o Modo invisível."
 }

@@ -6,7 +6,7 @@
   "premium_desc": "सभी प्रीमियम प्लान में फ़ीचर्स समान हैं; केवल डिस्काउंट की छूट बदलती है।",
   "row_unlimited_traffic": "अनलिमिटेड डेटा",
   "row_unlimited_bandwidth": "स्पीड की कोई सीमा नहीं",
-  "row_cloak_mode": "क्लोकिंग मोड",
+  "row_cloak_mode": "क्लोक मोड",
   "row_split_countries": "देशों के अनुसार स्प्लिट टनलिंग",
   "row_split_apps": "ऐप्स के अनुसार स्प्लिट टनलिंग",
   "row_change_protocols": "प्रोटोकॉल बदलें",
@@ -18,11 +18,11 @@
   "row_resilient_servers": "विश्वसनीय सर्वर",
   "row_premium_platforms": "Windows, iOS और Linux",
   "row_ultra_fast_server": "अति-तेज़ सर्वर",
-  "row_always_on": "ऑलवेज ऑन",
+  "row_always_on": "हमेशा चालू",
   "row_split_ips": "IP एड्रेस के अनुसार स्प्लिट टनलिंग",
   "row_split_domains": "डोमेन के अनुसार स्प्लिट टनलिंग",
   "row_private_dns": "प्राइवेट DNS",
-  "row_quick_launch": "क्विक लॉन्च",
+  "row_quick_launch": "त्वरित लॉन्च",
   "row_support_247": "24/7 सहायता",
   "see_all_features": "सभी फ़ीचर्स का विवरण देखें"
 }

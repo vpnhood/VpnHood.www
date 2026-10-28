@@ -15,7 +15,7 @@
   "when_desc": "Mantenlo activado siempre que evitar una filtración accidental sea más importante que seguir online.",
   "cost_title": "Qué debes tener en cuenta",
   "cost_desc": "Si la VPN se desconecta, te quedarás sin conexión hasta que vuelva. Los portales de inicio de sesión de redes Wi-Fi tampoco cargarán, por lo que en hoteles o aeropuertos quizá debas desactivarlo un momento.",
-  "pair_title": "Requiere VPN siempre activa",
-  "pair_desc": "Android incluye el Kill Switch dentro del ajuste de VPN siempre activa, por lo que se activan juntos y funcionan en equipo. Esta opción restablece el túnel tras reiniciar o cambiar de red; el Kill Switch retiene el tráfico hasta que vuelva a estar listo. Sin él, las aplicaciones pueden enviar datos en los segundos previos a la reconexión.",
-  "pair_link": "Más información sobre VPN siempre activa"
+  "pair_title": "Requiere Siempre encendido",
+  "pair_desc": "Android incluye el Kill Switch dentro del ajuste de VPN siempre activa, por lo que ambos se activan juntos y funcionan en equipo. La función Siempre encendido restablece el túnel tras un reinicio o un cambio de red; el Kill Switch retiene tu tráfico hasta que el túnel vuelva de verdad. Sin él, las aplicaciones pueden enviar algunas solicitudes en los segundos previos a que la VPN se active.",
+  "pair_link": "Más información sobre Siempre encendido"
 }

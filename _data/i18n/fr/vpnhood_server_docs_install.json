@@ -15,7 +15,7 @@
   "req_admin": "Un accès root. L'installation utilisant sudo, celui-ci doit être présent même si vous êtes connecté en root.",
   "req_port": "Le port TCP <code>[server_port]</code> ouvert, tant sur le pare-feu de la machine que chez votre hébergeur. C'est le port d'écoute du serveur.",
   "mgr_box_title": "Ajoutez, gérez et surveillez vos serveurs en toute simplicité avec VpnHood! MANAGER",
-  "mgr_box_desc": "Au lieu d'exécuter ces commandes, laissez le panneau web gratuit installer le serveur à votre place. Il génère les clés d'accès, affiche l'état de chaque serveur et suit l'utilisation de chaque clé.",
+  "mgr_box_desc": "Au lieu d'exécuter les commandes ci-dessous, laissez l'interface web gratuite installer le serveur à votre place. Elle génère les clés d'accès, et affiche l'état de chaque serveur et l'utilisation de chaque clé.",
   "mgr_box_cta": "Ajouter un serveur avec MANAGER",
   "linux_title": "Installer un serveur autonome",
   "step_linux_run": "Exécutez cette commande. Elle détecte l'architecture (x64 ou arm64) et installe le serveur dans <code>[server_dir_linux]</code>.",
@@ -47,7 +47,7 @@
   "uninstall_run": "Pour supprimer le serveur, lancez son script de désinstallation. Il arrête le serveur et supprime les services ainsi que les fichiers, tout en conservant vos réglages, clés d'accès et certificats dans <code>[server_storage]</code> pour une éventuelle réinstallation.",
   "uninstall_caption_purge": "Supprimer aussi les réglages et les clés : les appareils utilisant ces clés ne pourront plus se connecter, même après une nouvelle installation.",
   "next_title": "Étapes suivantes",
-  "next_manager": "Gérer plusieurs serveurs et clés depuis un panneau web avec VpnHood! MANAGER",
+  "next_manager": "Gérer plusieurs serveurs et clés depuis une interface web avec VpnHood! MANAGER",
   "next_addresses": "Définir les adresses IP sur lesquelles le serveur écoute et qu'il inclut dans ses clés",
   "next_domain": "Utiliser un nom de domaine et un certificat de confiance",
   "next_blocking": "Éviter le blocage de l'adresse IP de votre serveur"

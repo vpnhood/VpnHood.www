@@ -1,10 +1,10 @@
 {
   "meta_title": "VpnHood! SERVER mit Domainnamen und vertrauenswürdigem Zertifikat | VpnHood!",
-  "meta_description": "Verbinden Sie VpnHood! SERVER mit einer eigenen Domain und einem offiziellen Zertifikat – für verwaltete oder Standalone-Server. So sieht die Verbindung wie ein normaler Website-Besuch aus.",
+  "meta_description": "Richten Sie für VpnHood! SERVER einen Domainnamen mit einem Zertifikat einer Zertifizierungsstelle ein, ob auf einem verwalteten oder einem eigenständigen Server, damit eine Verbindung zu ihm wie der Besuch einer gewöhnlichen Website aussieht.",
   "title": "Domainnamen und vertrauenswürdiges Zertifikat nutzen",
   "lead": "Standardmäßig nutzt der Server ein selbstsigniertes Zertifikat mit Fantasienamen. Nutzen Sie stattdessen eine eigene Domain mit offiziellem Zertifikat einer Zertifizierungsstelle – so sieht jede Verbindung wie ein normaler Website-Besuch aus.",
   "why_title": "Die Vorteile",
-  "why_keys": "Apps prüfen Zertifikate wie ein Browser: anhand der Ausstellerstelle und des Domainnamens. So bleiben erstellte Zugriffsschlüssel auch nach einer automatischen Zertifikatserneuerung gültig.",
+  "why_keys": "Apps prüfen das Zertifikat wie ein Browser: anhand der Stelle, die es signiert hat, und des Namens, den es trägt. Daher funktionieren Schlüssel, die nach der Umstellung erstellt wurden, auch nach einer Erneuerung des Zertifikats weiter.",
   "why_ips": "Eine Domain allein verbirgt den Server nicht: Sie verweist direkt auf dessen IP-Adresse, und die Schlüssel enthalten diese weiterhin. Um Sperren zu umgehen, <a href=\"/vpnhood-server/docs/reverse-proxy/\">schalten Sie einen Reverse-Proxy vor den Server</a> – wofür dieses Zertifikat die Voraussetzung ist.",
   "before_title": "Voraussetzungen",
   "req_domain": "Eine eigene Domain oder Subdomain wie <code>[domain_example]</code>. Nutzen Sie eine konkrete Domain (keine Wildcard) ohne den Begriff „VPN“: Apps übertragen den Namen unverschlüsselt zu Beginn jeder Verbindung.",

@@ -53,7 +53,7 @@
   "step3_desc": "Genera una chiave dalla pagina Token di accesso con i limiti che preferisci.",
   "step4_title": "Condividi la chiave",
   "step4_desc": "Chiunque abbia VpnHood! CLIENT può incollaria e connettersi all'istante.",
-  "manual_note": "Preferisci non usare il pannello di VpnHood! MANAGER? VpnHood! SERVER funziona anche come server autonomo: <a href=\"/vpnhood-server/docs/install/#standalone\">installalo su Linux o con Docker</a>.",
+  "manual_note": "Preferisci non usare affatto il pannello di VpnHood! MANAGER? VpnHood! SERVER funziona anche come server standalone: <a href=\"/vpnhood-server/docs/install/#standalone\">installalo su Linux o con Docker</a>.",
   "new_tab": "(si apre in una nuova scheda)",
   "cta": "La tua VPN, il tuo server, le tue regole: la prima chiave di accesso è a pochi minuti da te.",
   "cta_btn": "Apri VpnHood! MANAGER"

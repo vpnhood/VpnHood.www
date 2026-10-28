@@ -17,14 +17,28 @@ Split tunneling by apps / by countries = 按应用分流 / 按国家分流
 Frequently Asked Questions = 常见问题
 Learn more = 了解更多
 Free vs Premium = 免费版与高级版
+Cloak Mode = 伪装模式 (never 隐身模式 / 隐匿模式, never Cloak 模式)
+Quick Launch = 快速启动 (never 快捷启动)
+Always On = 始终开启
+Smart Proxies = 智能代理 (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = 反向代理 · proxy = 代理
+farm / server farm = 集群 / 服务器集群 (never 服务器组)
+access key = 访问密钥 · certificate = 证书 · container = 容器 · firewall = 防火墙
+standalone = 独立 · managed = 受管 (never 托管: it reads as hosting, and self-hosted is 自托管)
+server profile = 服务器配置方案 (never 配置文件: it reads as a settings file)
+web panel = 网页控制面板
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = 功能 · app = 应用 · traffic = 流量 · plan = 套餐
 reseller = 分销商 · open source = 开源
 
-KEYWORDS — meta_title and meta_description keys ONLY.
-Chinese users search 科学上网 alongside VPN. In those two keys work 科学上网 in where it fits
-naturally — "免费 VPN，科学上网首选". Everywhere else keep VPN as in NAMES.
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Chinese users search 科学上网 alongside VPN, and 开源 VPN, 免注册 VPN, VPN 节点, VPN 测速. In
+those two keys work 科学上网 in where it fits naturally; open source = 开源, no registration /
+no sign-up = 免注册, servers = 节点, speed test = 测速. Never add a claim the English does not
+make (no 首选, 最好). Everywhere else keep VPN as in NAMES and servers as 服务器.
 Never use 翻墙回国 or 回国: that is the opposite service (getting back INTO China).
 RULES
 - Full-width punctuation in Chinese text — （）、，。： — never half-width; never mixed.

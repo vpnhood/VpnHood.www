@@ -20,7 +20,7 @@
   "domain_token": "编辑 <b>[manager_visibility]</b> 并选择 <b>[manager_public_in_token]</b>。此时该集群的所有密钥都会包含该域名，而集群先前的证书将自动转为 <b>[manager_public]</b>。",
   "shot_domain_alt": "VpnHood! MANAGER 中 server1.example.com 的证书配置，对应步骤：Signing AutoSign (1)、Signature CA Signed (2) 与 Visibility PublicInToken (3)",
   "shot_domain_caption": "配置完成后的域名证书：已由 Let's Encrypt 签名，并自动包含在该集群的每个密钥中。",
-  "domain_keys": "此后从 MANAGER 复制的密钥都会包含该域名。由于 <b>[manager_push_token]</b> 默认开启，使用旧密钥的应用在连接时会自动同步新密钥。在所有客户端更新完毕前，请保留旧证书，否则旧密钥将无法连接。",
+  "domain_keys": "此后从 MANAGER 复制的密钥都会包含该域名。由于 <b>[manager_push_token]</b> 默认开启，持有旧密钥的应用在连接时会获取新密钥。在此之前，请保留集群先前的证书：只有该证书仍在时，旧密钥才能使用。",
   "domain_failed": "如果验证失败，请检查 DNS 记录或确保端口已开放：下方 <a href=\"#autosign\">AutoSign</a> 部分说明了 MANAGER 的重试机制。",
   "domain_check": "若要检查配置，打开集群页面：在 <b>[manager_access_points]</b> 下，该域名会显示在首位。",
   "settings_title": "证书设置",

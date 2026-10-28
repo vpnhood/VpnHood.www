@@ -33,7 +33,7 @@
   "always_on_title": "始终开启",
   "always_on_short": "即使重启设备或切换网络，也能保持 VPN 持续在线连接。",
   "always_on_plat": "仅限 Android",
-  "quick_launch_title": "快捷启动",
+  "quick_launch_title": "快速启动",
   "quick_launch_short": "在 Android 快捷设置面板中一键快速连接。",
   "quick_launch_plat": "仅限 Android"
 }

@@ -39,14 +39,14 @@
   "download_for_free": "Scarica gratis",
   "explore_all_features": "Scopri tutte le funzionalità",
   "why_title": "Cosa rende VpnHood! diverso?",
-  "why_desc": "VpnHood! CONNECT unisce dati gratuiti illimitati, codice client e server open source, split tunneling flessibile e Cloak Mode. Il piano Gratis include annunci pubblicitari; Premium aggiunge più posizioni e funzionalità.",
+  "why_desc": "VpnHood! CONNECT unisce dati gratuiti illimitati, codice client e server open source, split tunneling flessibile e Modalità camuffamento. Il piano Gratis include annunci pubblicitari; Premium aggiunge più posizioni e funzionalità.",
   "why_unlimited_title": "Dati illimitati, senza registrazione",
   "why_unlimited_desc": "Naviga senza limiti di dati o obbligo di registrazione. Nessun limite di velocità, anche se la velocità effettiva dipende dalla tua rete e dal carico del server. Il piano Gratis è supportato dalla pubblicità, quindi non è disponibile in tutti i paesi.",
   "why_open_source_title": "100% open source",
   "why_open_source_desc": "Il codice del client e del server è disponibile su GitHub. Puoi esaminare l'implementazione o gestire il tuo server personale.",
   "why_split_title": "Split tunneling avanzato",
   "why_split_desc": "Scegli quale traffico far passare attraverso la VPN per paese, app o rete locale, personalizzando la connessione in base ai tuoi servizi.",
-  "why_stealth_title": "Cloak Mode per reti con restrizioni",
-  "why_stealth_desc": "La modalità Cloak Mode maschera il traffico VPN facendolo apparire come normale HTTPS. L'efficacia dipende dai filtri della rete; nessun metodo può garantire uno sblocco totale continuo.",
+  "why_stealth_title": "Modalità camuffamento per reti con restrizioni",
+  "why_stealth_desc": "La Modalità camuffamento aiuta a camuffare il traffico VPN da normale traffico HTTPS. L'efficacia dipende dai metodi di filtraggio della rete; non c'è garanzia che una connessione non venga bloccata.",
   "view_on_github": "Vedi su GitHub"
 }

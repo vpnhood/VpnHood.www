@@ -36,7 +36,7 @@
   "connect_title": "连接",
   "step_connect": "在每台设备上安装 <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a>，添加访问凭据（Key），即可连接。",
   "manage_title": "启动与停止服务器",
-  "manage_linux": "无论是由面板托管还是独立运行，服务器均作为 <code>[server_service]</code> 服务运行。",
+  "manage_linux": "无论受管还是独立，服务器都作为 <code>[server_service]</code> 服务运行。",
   "manage_log": "日志位于 <code>[server_log]</code>。",
   "manage_manual": "如果未安装为系统服务，可手动运行 <code>[vhserver_run]</code> 启动。它将持续运行，直到你在另一个终端中使用 <code>[vhserver_stop]</code> 停止它。",
   "updates_title": "更新",
@@ -47,7 +47,7 @@
   "uninstall_run": "如需移除服务器，请运行卸载程序。它会停止服务器并删除相关服务与文件，但会在 <code>[server_storage]</code> 中保留配置、访问密钥和证书，方便日后重新安装。",
   "uninstall_caption_purge": "同时彻底删除配置与密钥：持有旧密钥的设备将无法再连接，即使重新安装也无法恢复",
   "next_title": "后续步骤",
-  "next_manager": "使用 VpnHood! MANAGER 通过 Web 控制台管理多台服务器与访问凭据",
+  "next_manager": "通过 VpnHood! MANAGER 网页控制面板管理多台服务器与密钥",
   "next_addresses": "设置服务器监听并在访问凭据中包含的 IP 地址",
   "next_domain": "使用自定义域名与可信证书",
   "next_blocking": "防止服务器 IP 地址被封锁"

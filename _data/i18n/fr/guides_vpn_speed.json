@@ -36,7 +36,7 @@
   "tune_desc": "Quatre réglages font la différence, chacun impliquant un compromis.",
   "tune1_title": "Changer de protocole",
   "tune1_desc": "UDP est léger et généralement le plus rapide, bien que certains réseaux le bloquent. TCP passe là où UDP échoue, mais avec un débit réduit. QUIC est encore plus rapide lorsqu'il est autorisé. Changez de protocole sans vous déconnecter : testez-en un autre en toute simplicité !",
-  "tune2_title": "Désactiver le Cloak Mode sans blocage",
+  "tune2_title": "Désactiver le mode furtif quand rien ne vous bloque",
   "tune2_desc": "Le trafic camouflé demande plus de ressources qu'un tunnel direct, ce qui réduit légèrement la vitesse et consomme un peu plus de batterie. C'est le compromis : une vitesse maximale en temps normal, ou une connexion qui passe à travers les blocages si besoin. Sur un réseau libre, désactivez-le.",
   "tune3_title": "Désactiver Smart Proxies si le serveur est accessible",
   "tune3_desc": "Un proxy ajoute un intermédiaire entre vous et le serveur, et un proxy public est souvent le maillon le plus lent. Son rôle est de contourner les blocages stricts, pas d'accélérer une connexion qui fonctionne déjà.",

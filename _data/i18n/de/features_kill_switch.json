@@ -15,7 +15,7 @@
   "when_desc": "Immer dann aktivieren, wenn der Schutz Ihrer Daten wichtiger ist als eine unterbrechungsfreie Verbindung.",
   "cost_title": "Was Sie beachten sollten",
   "cost_desc": "Bricht das VPN ab, sind Sie offline, bis die Verbindung wieder steht. Auch WLAN-Anmeldeseiten in Hotels oder Flughäfen laden dann meist nicht – hier muss der Kill Switch eventuell kurz ausgeschaltet werden.",
-  "pair_title": "Erfordert „Durchgehend aktives VPN“",
-  "pair_desc": "Android koppelt den Kill Switch an die Einstellung „Durchgehend aktives VPN“. Beide gehören zusammen: „Durchgehend aktiv“ stellt die Verbindung nach einem Neustart oder Netzwechsel wieder her, während der Kill Switch den Datenverkehr blockiert, bis der Tunnel steht. Andernfalls könnten Apps in diesen Sekunden ungeschützt Daten übertragen.",
-  "pair_link": "Mehr über „Durchgehend aktives VPN“"
+  "pair_title": "Erfordert „Immer an“",
+  "pair_desc": "Bei Android liegt der Kill Switch unter der Einstellung „Durchgehend aktives VPN“, daher werden beide zusammen eingeschaltet und arbeiten als Paar. „Immer an“ stellt den Tunnel nach einem Neustart oder Netzwechsel wieder her; der Kill Switch hält Ihren Datenverkehr zurück, bis der Tunnel tatsächlich wieder steht. Ohne Kill Switch können Apps in den Sekunden, bevor das VPN steht, noch einige Anfragen senden.",
+  "pair_link": "Mehr über „Immer an“"
 }

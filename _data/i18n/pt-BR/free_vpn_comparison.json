@@ -39,14 +39,14 @@
   "download_for_free": "Baixe grátis",
   "explore_all_features": "Explorar todos os recursos",
   "why_title": "O que torna o VpnHood! diferente?",
-  "why_desc": "O VpnHood! CONNECT une dados grátis e ilimitados, código aberto no cliente e no servidor, túnel dividido flexível e o Modo Cloak. O plano Grátis tem anúncios; o Premium oferece mais locais e recursos.",
+  "why_desc": "O VpnHood! CONNECT une dados grátis e ilimitados, código aberto no cliente e no servidor, túnel dividido flexível e o Modo invisível. O plano Grátis tem anúncios; o Premium oferece mais locais e recursos.",
   "why_unlimited_title": "Dados ilimitados, sem cadastro",
   "why_unlimited_desc": "Navegue à vontade, sem limites de dados e sem criar conta. Não há restrições de velocidade, embora a velocidade real dependa da sua rede e do uso do servidor. O plano Grátis é mantido por anúncios e pode não estar disponível em todos os países.",
   "why_open_source_title": "100% código aberto",
   "why_open_source_desc": "O código do aplicativo e do servidor está aberto no GitHub para auditoria. Você pode revisar tudo e até hospedar seu próprio servidor.",
   "why_split_title": "Split tunneling avançado",
   "why_split_desc": "Escolha o tráfego que passa pela VPN por país, aplicativo ou rede local, personalizando a conexão como preferir.",
-  "why_stealth_title": "Modo Camuflagem para redes com bloqueio",
-  "why_stealth_desc": "O Modo Camuflagem disfarça o tráfego da VPN como HTTPS comum. A eficácia varia conforme o tipo de bloqueio da rede; não há garantia de desbloqueio permanente.",
+  "why_stealth_title": "Modo invisível para redes com bloqueio",
+  "why_stealth_desc": "O Modo invisível disfarça o tráfego da VPN como HTTPS comum. A eficácia varia conforme o tipo de bloqueio da rede; não há garantia de desbloqueio permanente.",
   "view_on_github": "Ver no GitHub"
 }

@@ -1,0 +1,23 @@
+{
+  "meta_title": "Sunucu Profilleri: VpnHood! MANAGER'daki Sunucu Ayarlarınız | VpnHood!",
+  "meta_description": "VpnHood! MANAGER'da bir sunucu profiliyle bir çiftliğin tüm sunucularına aynı ayarları uygulayın; sansürlü bir ağ ve ters proxy için ayarlar da bunlara dahildir.",
+  "title": "Sunucu profilleri",
+  "lead": "Sunucu profili, sunucularınızın ayarlarını tutar. Her sunucu çiftliği bir profil kullanır ve VpnHood! MANAGER bu profilin ayarlarını çiftliğin her sunucusuna gönderir; böylece ayarları tek bir yerden değiştirirsiniz.",
+  "where_title": "Nerede bulunur?",
+  "where_desc": "<b>[manager_settings]</b> bölümünü açın ve <b>[manager_server_profiles]</b> öğesini seçin. Her proje varsayılan bir profille başlar; siz başka bir profil seçmedikçe yeni bir sunucu çiftliği bu profili kullanır. Varsayılan profil ne yeniden adlandırılabilir ne de silinebilir; bir çiftliğin kullandığı hiçbir profil de silinemez.",
+  "where_farm": "<b>[manager_server_farms]</b> bölümündeki bir çiftliğin sayfası, profilinin adını <b>[manager_server_profile]</b> altında gösterir: Profili açmak için adını seçin veya çiftliğe başka bir profil atamak için bunu düzenleyin.",
+  "settings_title": "Profil ayarlarını değiştirin",
+  "settings_card": "Bir profilin sayfasında sık kullanılan ayarlar <b>[manager_general]</b>, <b>[manager_network_filter]</b> ve <b>[manager_tracking]</b> altında yapılır. Diğerleri için <b>[manager_advanced_edit]</b> öğesini seçin: Bu seçenek, sunucuların ayarlarını bağımsız bir sunucudakiyle aynı adlarla JSON olarak gösterir. Ayarları değiştirin ve <b>[manager_ok]</b> öğesini seçin.",
+  "settings_send": "MANAGER yeni ayarları, profili kullanan çiftliklerin tüm sunucularına gönderir.",
+  "settings_refused": "MANAGER, her sunucu için kendisinin belirlediği birkaç ayarı reddeder ve verdiği mesajda bu ayarın adını belirtir. <code>[setting_udp_endpoints]</code> ve <code>[setting_quic_endpoints]</code> yalnızca <code>[json_empty_list]</code> değerini alır; bu değer, profili kullanan sunucularda UDP'yi veya QUIC'i kapatır: UDP ve QUIC bağlantı noktaları her sunucuya özeldir ve sunucunun <a href=\"/vpnhood-manager/docs/access-points/\">erişim noktalarında</a> ayarlanır.",
+  "settings_dropped": "MANAGER, siz kaydederken yalnızca tanıdığı ayarları tutar ve adı yanlış yazılmış olanlar dahil diğer tüm ayarları atar; bu yüzden kendi ayarlarınızı kontrol etmek için <b>[manager_advanced_edit]</b> penceresini yeniden açın.",
+  "censored_title": "Sansürlü bir ağ için ayarlar",
+  "censored_desc": "VPN sunucularını engelleyen bir ağda, bir çiftliğin profili sansürlü bir ağ için ayarları çiftliğin tüm sunucularına aynı anda uygular. <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Sunucunuzun IP adresinin engellenmesini önleyin</a> sayfası her birini ve kullanıcılarınıza neye mal olduğunu açıklar. <b>[manager_advanced_edit]</b> penceresinde şunları ayarlayın:",
+  "caption_censored": "Herkes için Kamufle Modu, sunuculara UDP de QUIC de yok ve kullanıcılarınızın QUIC trafiği düşürülüyor",
+  "censored_refused": "MANAGER, <code>[setting_allow_tcp_packet]</code> açıkken <code>[setting_allow_quic_packet]</code> veya <code>[setting_allow_udp_packet]</code> ayarının kapatılmasını reddeder, çünkü bu durumda sunucular bu trafiği yine de taşır. <code>[setting_allow_tcp_packet]</code> ve <code>[setting_allow_tcp_proxy]</code> ayarlarının ikisinin birden kapatılmasını da reddeder; bu, TCP'ye hiçbir geçiş yolu bırakmaz.",
+  "proxy_title": "Ters proxy arkasında",
+  "proxy_desc": "Sunucularınız, her kullanıcının adresini belirtme konusunda Cloudflare'e güvenir. Başka bir ters proxy'nin arkasındaysalar <b>[manager_advanced_edit]</b> penceresini açın ve <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Kullanıcılarınızın adresleri</a> bölümünde gösterilen ayarları ekleyin.",
+  "next_title": "Sonraki adımlar",
+  "next_domain": "Güvenilir bir sertifika ile kendi alan adınızı kullanın",
+  "next_proxy": "Tüm uygulamaları bir ters proxy üzerinden yönlendirin"
+}

@@ -39,14 +39,14 @@
   "download_for_free": "Télécharger gratuitement",
   "explore_all_features": "Découvrir toutes les fonctionnalités",
   "why_title": "Pourquoi choisir VpnHood! ?",
-  "why_desc": "VpnHood! CONNECT allie données gratuites illimitées, code client et serveur open source, split tunneling flexible et Mode Furtif. L'offre Gratuite inclut des publicités ; Premium débloque plus d'emplacements et de fonctionnalités.",
+  "why_desc": "VpnHood! CONNECT allie données gratuites illimitées, code client et serveur open source, split tunneling flexible et mode furtif. L'offre Gratuite inclut des publicités ; Premium débloque plus d'emplacements et de fonctionnalités.",
   "why_unlimited_title": "Données illimitées, sans inscription",
   "why_unlimited_desc": "Naviguez sans limite de données et sans créer de compte. Aucune restriction de vitesse, même si les débits réels dépendent de votre réseau et de la charge du serveur. L'offre Gratuite est financée par la publicité et n'est donc pas disponible dans tous les pays.",
   "why_open_source_title": "100 % open source",
   "why_open_source_desc": "Le code source du client et du serveur est accessible sur GitHub. Examinez-le librement et déployez votre propre serveur.",
   "why_split_title": "Split tunneling avancé",
   "why_split_desc": "Sélectionnez le trafic qui passe par le VPN par pays, par application ou sur le réseau local, et personnalisez votre connexion selon vos besoins.",
-  "why_stealth_title": "Mode Cloak pour contourner les blocages",
-  "why_stealth_desc": "Le mode Cloak dissimule le trafic VPN sous forme de trafic HTTPS standard. Son efficacité dépend des méthodes de filtrage du réseau ; aucun déblocage permanent ne peut être garanti.",
+  "why_stealth_title": "Mode furtif pour les réseaux bloqués",
+  "why_stealth_desc": "Le mode furtif aide à faire passer le trafic VPN pour du trafic HTTPS ordinaire. Son efficacité dépend des méthodes de filtrage du réseau ; rien ne garantit qu'une connexion ne sera jamais bloquée.",
   "view_on_github": "Voir sur GitHub"
 }

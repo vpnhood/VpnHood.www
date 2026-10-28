@@ -1,0 +1,23 @@
+{
+  "meta_title": "Perfis de servidor: as configurações dos seus servidores no VpnHood! MANAGER | VpnHood!",
+  "meta_description": "Aplique as mesmas configurações a todos os servidores de um farm com um perfil de servidor no VpnHood! MANAGER, entre elas as configurações para redes censuradas e para um proxy reverso.",
+  "title": "Perfis de servidor",
+  "lead": "Um perfil de servidor reúne as configurações dos seus servidores. Cada farm de servidores usa um, e o VpnHood! MANAGER envia as configurações desse perfil a todos os servidores do farm; assim, você as altera em um só lugar.",
+  "where_title": "Onde encontrá-los",
+  "where_desc": "Abra <b>[manager_settings]</b> e selecione <b>[manager_server_profiles]</b>. Todo projeto começa com um perfil padrão, que um novo farm de servidores usa, a menos que você escolha outro. O perfil padrão não pode ser renomeado nem excluído, e nenhum perfil usado por um farm pode ser excluído.",
+  "where_farm": "A página de um farm em <b>[manager_server_farms]</b> mostra o nome do perfil dele em <b>[manager_server_profile]</b>: selecione o nome para abrir o perfil ou edite o campo para atribuir outro perfil ao farm.",
+  "settings_title": "Alterar as configurações de um perfil",
+  "settings_card": "Na página de um perfil, você define as configurações mais comuns em <b>[manager_general]</b>, <b>[manager_network_filter]</b> e <b>[manager_tracking]</b>. Para qualquer outra, selecione <b>[manager_advanced_edit]</b>, que mostra as configurações dos servidores em JSON, com os mesmos nomes usados em um servidor independente. Altere-as e selecione <b>[manager_ok]</b>.",
+  "settings_send": "O MANAGER envia as novas configurações a todos os servidores dos farms que usam o perfil.",
+  "settings_refused": "O MANAGER recusa as poucas configurações que ele mesmo define para cada servidor, e a mensagem dele indica qual é a configuração. <code>[setting_udp_endpoints]</code> e <code>[setting_quic_endpoints]</code> aceitam apenas <code>[json_empty_list]</code>, que desativa o UDP ou o QUIC nos servidores do perfil: as portas de ambos são próprias de cada servidor e definidas nos <a href=\"/vpnhood-manager/docs/access-points/\">pontos de acesso</a> dele.",
+  "settings_dropped": "O MANAGER mantém apenas as configurações que conhece e descarta qualquer outra quando você salva, inclusive uma com o nome escrito errado; por isso, abra <b>[manager_advanced_edit]</b> novamente para conferir as suas.",
+  "censored_title": "Configurações para redes censuradas",
+  "censored_desc": "Em uma rede que bloqueia servidores VPN, o perfil de um farm aplica a todos os servidores dele, de uma só vez, as configurações para redes censuradas. O guia <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Evite o bloqueio do endereço IP do seu servidor</a> explica cada uma delas e o que ela custa aos seus usuários. Em <b>[manager_advanced_edit]</b>, defina:",
+  "caption_censored": "Modo invisível para todos, sem UDP nem QUIC para os servidores e o QUIC dos seus usuários descartado",
+  "censored_refused": "O MANAGER recusa <code>[setting_allow_quic_packet]</code> ou <code>[setting_allow_udp_packet]</code> desativado enquanto <code>[setting_allow_tcp_packet]</code> estiver ativado, pois os servidores transportariam esses pacotes de qualquer forma. Ele também recusa <code>[setting_allow_tcp_packet]</code> e <code>[setting_allow_tcp_proxy]</code> desativados ao mesmo tempo, o que deixa o TCP sem nenhum caminho para passar.",
+  "proxy_title": "Atrás de um proxy reverso",
+  "proxy_desc": "Seus servidores confiam na Cloudflare para informar o endereço de cada usuário. Atrás de outro proxy reverso, abra <b>[manager_advanced_edit]</b> e adicione as configurações mostradas em <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Endereços dos seus usuários</a>.",
+  "next_title": "Próximas etapas",
+  "next_domain": "Use seu próprio domínio com um certificado confiável",
+  "next_proxy": "Direcione todos os aplicativos por um proxy reverso"
+}

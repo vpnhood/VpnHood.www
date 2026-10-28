@@ -1,0 +1,23 @@
+{
+  "meta_title": "ملفات تعريف الخوادم: إعدادات خوادمك في VpnHood! MANAGER | VpnHood!‎",
+  "meta_description": "امنح جميع خوادم المزرعة الإعدادات نفسها عبر ملف تعريف الخادم في VpnHood! MANAGER، ومن بينها الإعدادات المناسبة لشبكة خاضعة للرقابة وإعدادات البروكسي العكسي.",
+  "title": "ملفات تعريف الخوادم",
+  "lead": "يضم ملف تعريف الخادم إعدادات خوادمك. تستخدم كل مزرعة خوادم ملف تعريف واحدًا، ويرسل VpnHood! MANAGER إعداداته إلى كل خادم في المزرعة، فتغيّرها في مكان واحد.",
+  "where_title": "أين تجدها",
+  "where_desc": "افتح <b>[manager_settings]</b> واختر <b>[manager_server_profiles]</b>. يبدأ كل مشروع بملف تعريف افتراضي، تستخدمه أي مزرعة خوادم جديدة ما لم تختر غيره. لا يمكن إعادة تسمية ملف التعريف الافتراضي ولا حذفه، ولا يمكن حذف أي ملف تعريف تستخدمه مزرعة.",
+  "where_farm": "تذكر صفحة المزرعة في <b>[manager_server_farms]</b> اسم ملف تعريفها تحت <b>[manager_server_profile]</b>: اختر الاسم لفتح ملف التعريف، أو عدّل هذا الحقل لتمنح المزرعة ملف تعريف آخر.",
+  "settings_title": "تغيير إعدادات ملف التعريف",
+  "settings_card": "في صفحة ملف التعريف، تُضبط الإعدادات الشائعة ضمن <b>[manager_general]</b> و<b>[manager_network_filter]</b> و<b>[manager_tracking]</b>. ولأي إعداد آخر، اختر <b>[manager_advanced_edit]</b>: فهو يعرض إعدادات الخوادم بصيغة JSON، بالأسماء نفسها المستخدمة على الخادم المستقل. غيّرها ثم اضغط <b>[manager_ok]</b>.",
+  "settings_send": "يرسل MANAGER الإعدادات الجديدة إلى كل خادم في المزارع التي تستخدم ملف التعريف هذا.",
+  "settings_refused": "يرفض MANAGER الإعدادات القليلة التي يضبطها بنفسه لكل خادم، وتذكر رسالته اسم الإعداد. ولا يقبل <code>[setting_udp_endpoints]</code> و<code>[setting_quic_endpoints]</code> إلا القيمة <code>[json_empty_list]</code>، التي تعطّل UDP أو QUIC على خوادم ملف التعريف: فمنافذهما خاصة بكل خادم، وتُضبط في <a href=\"/vpnhood-manager/docs/access-points/\">نقاط الوصول</a> الخاصة به.",
+  "settings_dropped": "لا يحتفظ MANAGER إلا بالإعدادات التي يعرفها، ويحذف أي إعداد آخر عند الحفظ، بما في ذلك أي إعداد كُتب اسمه بشكل خاطئ، لذا افتح <b>[manager_advanced_edit]</b> مجددًا للتحقق من إعداداتك.",
+  "censored_title": "إعدادات لشبكة خاضعة للرقابة",
+  "censored_desc": "في شبكة تحظر خوادم VPN، يمنح ملف تعريف المزرعة جميع خوادمها الإعدادات المناسبة لشبكة خاضعة للرقابة دفعة واحدة. يشرح دليل <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">احمِ عنوان IP الخاص بخادمك من الحظر</a> كل إعداد منها، وما يكلّف مستخدميك. في <b>[manager_advanced_edit]</b>، اضبط:",
+  "caption_censored": "وضع التخفي للجميع، ولا UDP ولا QUIC إلى الخوادم، وإسقاط QUIC لدى مستخدميك",
+  "censored_refused": "يرفض MANAGER إيقاف <code>[setting_allow_quic_packet]</code> أو <code>[setting_allow_udp_packet]</code> ما دام <code>[setting_allow_tcp_packet]</code> مفعّلًا، لأن الخوادم ستنقلها على أي حال. ويرفض أيضًا إيقاف <code>[setting_allow_tcp_packet]</code> و<code>[setting_allow_tcp_proxy]</code> معًا، لأن ذلك لا يترك لحركة TCP أي طريق للعبور.",
+  "proxy_title": "خلف بروكسي عكسي",
+  "proxy_desc": "تثق خوادمك بـ Cloudflare في تحديد عنوان كل مستخدم. أما خلف بروكسي عكسي آخر، فافتح <b>[manager_advanced_edit]</b> وأضف الإعدادات التي يعرضها قسم <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">عناوين مستخدميك</a>.",
+  "next_title": "الخطوات التالية",
+  "next_domain": "استخدم نطاقك الخاص مع شهادة موثوقة",
+  "next_proxy": "وجّه كل التطبيقات عبر بروكسي عكسي"
+}

@@ -4,7 +4,7 @@
   "title": "Opções do instalador",
   "lead": "Os comandos de instalação fazem uma ou duas perguntas durante a execução. Use as opções para respondê-las com antecedência e permitir que um script faça a instalação automaticamente.",
   "linux_title": "O instalador para Linux",
-  "linux_questions": "O <a href=\"/vpnhood-server/docs/install/#standalone\">comando de instalação avulsa</a> faz duas perguntas: <code>[autostart_prompt_linux]</code> e <code>[autoupdate_prompt_linux]</code>. Pressionar Enter escolhe a opção em maiúscula: sim em novas instalações ou a configuração atual caso o servidor já tenha sido instalado antes.",
+  "linux_questions": "O <a href=\"/vpnhood-server/docs/install/#standalone\">comando de instalação do servidor independente</a> faz duas perguntas: <code>[autostart_prompt_linux]</code> e <code>[autoupdate_prompt_linux]</code>. Pressionar Enter escolhe a letra maiúscula: sim em uma nova instalação e, em um servidor já instalado antes, a configuração atual.",
   "th_option": "Opção",
   "th_effect": "O que faz",
   "opt_q": "Sem perguntas. Sem as duas opções abaixo, uma nova instalação inicia com o sistema e se atualiza automaticamente; servidores já instalados mantêm suas configurações.",

@@ -12,7 +12,7 @@
   "how_title": "Nasıl çalışır?",
   "how_desc": "UDP hafif ve genellikle en hızlı seçenektir, ancak bazı ağlar bunu kısıtlayabilir. TCP güvenilirdir: teorik olarak daha yavaştır ama UDP'nin engellendiği yerlerde bağlantı sağlar. QUIC ise UDP tabanlı modern bir protokoldür ve izin verilen yerlerde çok daha hızlıdır.",
   "when_title": "Ne zaman değiştirmeli?",
-  "when_desc": "Ağınız yavaşladığında veya bağlantı kurulamadığında protokolü değiştirin. Hız için önce UDP'yi, bir engelle karşılaşırsanız TCP'yi deneyin. QUIC'i engellemek uygulamaları standart akışa yönlendirir; bu da Gizleme Modu'nda video oynatımını iyileştirebilir.",
+  "when_desc": "Ağınız yavaşladığında veya bağlantı kurulamadığında protokolü değiştirin. Hız için önce UDP'yi, bir engelle karşılaşırsanız TCP'yi deneyin. QUIC'i engellemek uygulamaların standart akışa geri dönmesini sağlar; bu da Kamufle Modu'nda video oynatımını iyileştirebilir.",
   "cost_title": "Size maliyeti nedir?",
   "cost_desc": "Hiçbir şey. Protokol doğrudan canlı bağlantı üzerinden değişir; böylece bir protokol yavaşladığında bağlantı kopmadan anında bir diğerine geçebilirsiniz."
 }

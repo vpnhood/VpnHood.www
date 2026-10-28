@@ -6,12 +6,12 @@
   "premium_desc": "所有高级版套餐的功能完全相同，区别仅在于优惠力度。",
   "row_unlimited_traffic": "无限流量",
   "row_unlimited_bandwidth": "不限速度",
-  "row_cloak_mode": "隐身模式",
+  "row_cloak_mode": "伪装模式",
   "row_split_countries": "按国家分流",
   "row_split_apps": "按应用分流",
   "row_change_protocols": "切换协议",
   "row_add_proxy": "智能代理",
-  "row_kill_switch": "网络断开开关",
+  "row_kill_switch": "断网保护",
   "row_multilingual": "多语言支持",
   "row_locations": "服务器节点 <span class=\"small vh-txt-purple-100\">(国家/地区)</span>",
   "row_ad_free": "无广告",
@@ -22,7 +22,7 @@
   "row_split_ips": "按 IP 地址分流",
   "row_split_domains": "按域名分流",
   "row_private_dns": "专用 DNS",
-  "row_quick_launch": "快捷启动",
+  "row_quick_launch": "快速启动",
   "row_support_247": "7x24 小时客服支持",
   "see_all_features": "查看完整功能详解"
 }

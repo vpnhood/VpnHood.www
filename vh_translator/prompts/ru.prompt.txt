@@ -17,14 +17,28 @@ Split tunneling by apps / by countries = Раздельное туннелиро
 Frequently Asked Questions = Часто задаваемые вопросы
 Learn more = Узнать больше
 Free vs Premium = Бесплатно и Premium
+Cloak Mode = Режим маскировки (never Cloak Mode in a Russian sentence)
+Quick Launch = Быстрый запуск
+Always On = Всегда включен (in running text: функция «Всегда включен»; bare in titles and table rows)
+Smart Proxies = Умные прокси (the feature page's own title)
+
+TERMS — the docs' technical words: one rendering per concept, in every string.
+reverse proxy = обратный прокси (never reverse proxy, never реверс-прокси)
+farm / server farm = ферма / ферма серверов
+access key = ключ доступа · certificate = сертификат · container = контейнер
+firewall = брандмауэр (never файрвол / фаервол)
+standalone = автономный · managed = управляемый · web panel = веб-панель
+server profile = профиль сервера (plural профили серверов)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = Premium, or lowercase "премиум" where a Russian adjective reads better
 feature(s) = возможности (not "функции")
 app = приложение · traffic = трафик · plan = тариф/тарифы · reseller = реселлер
 
-KEYWORDS — meta_title and meta_description keys ONLY.
-Russians search "впн" in Cyrillic as much as "VPN". In those two keys use ВПН where the
-sentence allows — "Бесплатный ВПН", "Скачать ВПН". Everywhere else keep VPN Latin.
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026).
+Russians search "впн" in Cyrillic as much as "VPN", and Android in Cyrillic: "впн скачать
+бесплатно на андроид", "vpn на телефон скачать бесплатно". In those two keys use ВПН where the
+sentence allows — "Бесплатный ВПН", "Скачать ВПН" — and write Android as андроид ("на
+андроид"). Everywhere else VPN and Android stay Latin.
 RULES
 - The Premium label stays Latin even after a preposition ("Перейти на Premium").

@@ -63,5 +63,5 @@
   "when_title": "Quando attivarlo",
   "when_desc": "Quando il server non è semplicemente monitorato, ma del tutto irraggiungibile. Se una rete ne blocca l'indirizzo, un proxy offre una via d'accesso alternativa.",
   "cost_title": "Gli svantaggi",
-  "cost_desc": "I proxy SOCKS e HTTP hanno una propria impronta digitale e possono essere bloccati facilmente dai firewall: servono per accedere, non per passare inosservati. Per navigare senza farsi notare, usa la Modalità Cloak."
+  "cost_desc": "I proxy SOCKS e HTTP hanno una propria impronta digitale e possono essere bloccati facilmente dai firewall: servono per accedere, non per passare inosservati. Per non farsi notare, lo strumento giusto è la Modalità camuffamento."
 }

@@ -20,8 +20,8 @@
   "nat_desc": "AWS, Google Cloud, Azure veya Oracle Cloud gibi sunucunun yalnızca özel IP adresine sahip olduğu bulut platformlarında; aynı port üzerinde özel adresi <b>[manager_mode]</b> <b>[manager_private]</b> ve <b>[manager_listen]</b> <b>[manager_yes]</b> olarak, genel IP'yi ise <b>[manager_public_in_token]</b> ve <b>[manager_listen]</b> <b>[manager_no]</b> olarak ekleyin. <b>[manager_auto_config]</b> bu kurulumu otomatik olarak yapar.",
   "change_title": "Adres değiştirme",
   "change_desc": "Anahtar oluşturulduğu adresleri taşır; bu nedenle eski anahtarı kullanan bir uygulama eski adresi denemeye devam eder. Eski adresi birkaç gün boyunca <b>[manager_mode]</b> <b>[manager_private]</b> ve <b>[manager_listen]</b> <b>[manager_yes]</b> olan bir erişim noktası olarak tutun: <b>[manager_push_token]</b> varsayılan olarak açık olduğundan, uygulamalar bağlandıklarında yeni anahtarı otomatik olarak alır. Ardından eski adresi kaldırabilirsiniz.",
-  "proxy_title": "Ters proxy (reverse proxy) arkasında",
-  "proxy_first": "<a href=\"/vpnhood-server/docs/reverse-proxy/\">Sunucunuzu ters proxy arkasına alma</a> kılavuzunda gösterildiği gibi önce proxy'yi etkinleştirin. Ardından sunucu grubu (farm) için alan adı sertifikasını kontrol edin: <a href=\"/vpnhood-manager/docs/certificates/#domain\">Kendi alan adınızı kullanın</a> adımında ayarlandığı gibi, <b>[manager_signature]</b> altında <b>[manager_ca_signed]</b> yazmalı ve <b>[manager_visibility]</b> değeri <b>[manager_public_in_token]</b> olmalıdır. Böylece anahtarlar alan adını içerir ve uygulamalar bu adresi çözer.",
+  "proxy_title": "Ters proxy arkasında",
+  "proxy_first": "Önce <a href=\"/vpnhood-server/docs/reverse-proxy/\">Sunucunuzu bir ters proxy arkasına alın</a> sayfasında gösterildiği gibi proxy'yi açın. Ardından çiftliğin bu alan adına ait sertifikasını kontrol edin: <a href=\"/vpnhood-manager/docs/certificates/#domain\">Kendi alan adınızı kullanın</a> bölümündeki kurulumda olduğu gibi <b>[manager_signature]</b> altında <b>[manager_ca_signed]</b> yazmalı ve <b>[manager_visibility]</b> değeri <b>[manager_public_in_token]</b> olmalıdır. Bu durumda anahtarlar alan adını taşır ve uygulamalar alan adını sorgular.",
   "proxy_hide": "Tüm uygulamaları proxy üzerinden yönlendirmek için sunucunun kendi adreslerini anahtarlardan çıkarın:",
   "proxy_step_auto": "<b>[manager_auto_config]</b> seçeneğini kapatın.",
   "proxy_step_mode": "Her adresi düzenleyin ve <b>[manager_mode]</b> değerini <b>[manager_private]</b> olarak ayarlayın.",
@@ -31,7 +31,8 @@
   "proxy_ca": "MANAGER, adressiz anahtarlara yalnızca sertifikada <b>[manager_ca_signed]</b> yazdığı sürece izin verir.",
   "proxy_keys": "<b>[manager_push_token]</b> özelliği varsayılan olarak açık olduğundan, eski anahtara sahip uygulamalar bağlandıklarında otomatik olarak yeni anahtarı alır.",
   "proxy_keep": "<b>[manager_public_in_token]</b> olarak bırakıldığında adresler anahtarlarda kalır; uygulamalar hem bu adresleri hem de proxy'yi kullanır. Böylece bir adres engellendiğinde proxy, kullanıcılarınızın bağlı kalmasını sağlar.",
-  "proxy_farm": "Alan adı tek bir sunucuya yönlendirildiğinden, birden fazla sunucudan oluşan bir grupta proxy üzerinden gelen tüm uygulamalar aynı sunucuya ulaşır.",
+  "proxy_addresses": "Sunucularınız, her kullanıcının adresini belirtme konusunda Cloudflare'e güvenir. Başka bir proxy'nin arkasındaysalar, <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Sunucu profilleri</a> sayfasında gösterildiği gibi bu proxy'nin adreslerini çiftliğin sunucu profilinde onlar için tanımlayın.",
+  "proxy_farm": "Alan adı tek bir sunucuya yönlendirdiğinden, birden fazla sunucudan oluşan bir çiftlikte proxy üzerinden gelen tüm uygulamalar aynı sunucuya ulaşır.",
   "next_title": "Sonraki adımlar",
   "next_domain": "Güvenilir bir sertifika ile kendi alan adınızı kullanın"
 }

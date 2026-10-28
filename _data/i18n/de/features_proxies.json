@@ -63,5 +63,5 @@
   "when_title": "Wann aktivieren?",
   "when_desc": "Wenn der Server nicht nur überwacht, sondern komplett blockiert wird. Sperrt ein Netzwerk die Serveradresse, eröffnet ein Proxy einen alternativen Zugang.",
   "cost_title": "Der Haken dabei",
-  "cost_desc": "SOCKS- und HTTP-Proxys haben einen eigenen digitalen Fingerabdruck und lassen sich von Firewalls leicht blockieren. Ein Proxy hilft also beim Durchkommen, nicht beim Verstecken. Für echte Tarnung gibt es den Cloak Mode."
+  "cost_desc": "SOCKS- und HTTP-Proxys haben einen eigenen digitalen Fingerabdruck und lassen sich von Firewalls leicht blockieren. Ein Proxy hilft also beim Durchkommen, nicht beim Verstecken. Für Unauffälligkeit sorgt der Tarnmodus."
 }

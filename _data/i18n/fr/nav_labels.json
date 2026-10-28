@@ -20,5 +20,6 @@
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Certificats",
   "add-server": "Ajouter un serveur",
-  "access-points": "Points d'accès"
+  "access-points": "Points d'accès",
+  "server-profiles": "Profils de serveur"
 }

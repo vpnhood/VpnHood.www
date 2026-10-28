@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! SERVER 文档 | 搭建自托管 VPN 科学上网 | VpnHood!",
-  "meta_description": "使用 VpnHood! SERVER 搭建专属 VPN 服务器的完整指南：支持 Linux 与 Docker，提供集中管理与独立运行模式，高效防封锁，轻松科学上网。",
+  "meta_description": "使用 VpnHood! SERVER 自建科学上网 VPN 节点的指南：在 Linux 或 Docker 中安装，受管或独立运行，并防止其 IP 被封锁。",
   "title": "VpnHood! SERVER 文档",
-  "lead": "搭建专属 VPN 服务器，两种方式任你选。托管服务器可通过免费网页端控制台 VpnHood! MANAGER 运行，支持自动安装并生成访问密钥，详细步骤请参阅 <a href=\"/vpnhood-manager/docs/\">VpnHood! MANAGER 文档</a>。独立服务器则通过自带的配置文件独立运行，本页面将为你介绍具体操作。"
+  "lead": "运行自己的 VPN 服务器有两种方式。受管服务器通过免费的网页控制面板 VpnHood! MANAGER 运行，由它安装服务器并签发访问密钥，具体步骤请参阅 <a href=\"/vpnhood-manager/docs/\">VpnHood! MANAGER 文档</a>。独立服务器则依靠自身的配置文件自行运行，这些页面将介绍具体方法。"
 }

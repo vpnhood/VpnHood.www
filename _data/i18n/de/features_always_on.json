@@ -1,12 +1,12 @@
 {
-  "meta_title": "Durchgehendes VPN: Immer verbunden, auch nach Neustarts | VpnHood!",
-  "meta_description": "Immer aktiviert hält das Gerät dauerhaft mit dem VPN verbunden – auch nach Neustarts oder Netzwerkwechseln. Verfügbar in VpnHood!",
+  "meta_title": "Durchgehend aktives VPN: Immer verbunden, auch nach Neustarts | VpnHood!",
+  "meta_description": "„Immer an“ hält das Gerät dauerhaft mit dem VPN verbunden – auch nach Neustarts oder Netzwerkwechseln. Verfügbar in VpnHood!",
   "eyebrow": "Funktion",
-  "title": "Immer aktiviert",
+  "title": "Immer an",
   "lead": "Hält das Gerät dauerhaft mit dem VPN verbunden – auch nach Neustarts oder Netzwerkwechseln.",
-  "shot_alt": "Der Bildschirm „Immer aktiviert“ in der VpnHood!-App",
+  "shot_alt": "Der Bildschirm „Immer an“ in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
-  "platforms": "Nur für Android. Nutzt die Android-Einstellung „Durchgehendes VPN“, die auf anderen Plattformen nicht verfügbar ist.",
+  "platforms": "Nur für Android. Nutzt die Android-Einstellung „Durchgehend aktives VPN“, die auf anderen Plattformen nicht verfügbar ist.",
   "cta": "VpnHood! CONNECT holen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",
@@ -16,6 +16,6 @@
   "cost_title": "Mögliche Nachteile",
   "cost_desc": "Das VPN läuft durchgehend, solange das Gerät aktiv ist. Das verbraucht etwas mehr Akku, als wenn Sie es nur bei Bedarf einschalten.",
   "pair_title": "Optimal in Kombination mit dem Kill Switch",
-  "pair_desc": "„Immer aktiviert“ stellt den Tunnel automatisch wieder her. Der Neuaufbau dauert jedoch einen Moment – und Apps warten nicht. Der Kill Switch schließt diese Lücke und blockiert den gesamten Datenverkehr, bis das VPN wieder steht. Unter Android befindet sich beides in derselben Einstellung und ist mit einem Fingertipp aktiviert.",
+  "pair_desc": "„Immer an“ stellt den Tunnel wieder her, doch der Neuaufbau dauert einen Moment – und Apps warten nicht. Der Kill Switch schließt diese Lücke, indem er den Datenverkehr blockiert, bis das VPN verbunden ist. Android führt ihn unter derselben Einstellung, daher braucht es nur einen zusätzlichen Fingertipp, um beide einzuschalten.",
   "pair_link": "Mehr über den Kill Switch"
 }

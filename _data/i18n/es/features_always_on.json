@@ -1,10 +1,10 @@
 {
   "meta_title": "VPN siempre activa: conexión continua tras reiniciar | VpnHood!",
-  "meta_description": "Always On mantiene tu dispositivo conectado a la VPN en todo momento, incluso tras reiniciar o cambiar de red. Disponible en VpnHood!.",
+  "meta_description": "La función Siempre encendido mantiene tu dispositivo conectado a la VPN en todo momento, incluso tras reiniciar o cambiar de red. Disponible en VpnHood!",
   "eyebrow": "Función",
-  "title": "Always On",
+  "title": "Siempre encendido",
   "lead": "Mantén tu dispositivo conectado a la VPN en todo momento, incluso tras reiniciar o cambiar de red.",
-  "shot_alt": "Pantalla de Always On en la aplicación VpnHood!",
+  "shot_alt": "Pantalla de Siempre encendido en la aplicación VpnHood!",
   "platforms_label": "Disponible en",
   "platforms": "Solo en Android. Utiliza el ajuste de VPN siempre activa de Android, una opción no disponible en otras plataformas.",
   "cta": "Obtener VpnHood! CONNECT",
@@ -16,6 +16,6 @@
   "cost_title": "Consumo de recursos",
   "cost_desc": "Al estar activa siempre que el dispositivo esté encendido, consume algo más de batería que si te conectas solo cuando la necesitas.",
   "pair_title": "Combínala con el Kill Switch",
-  "pair_desc": "Always On restablece el túnel, pero la reconexión tarda unos instantes y las aplicaciones no esperan. El Kill Switch cubre ese margen bloqueando el tráfico hasta que la VPN vuelva a conectarse. En Android ambas opciones están en el mismo menú, así que activarlas solo toma un toque más.",
+  "pair_desc": "La función Siempre encendido restablece el túnel, pero la reconexión tarda unos instantes y las aplicaciones no esperan. El Kill Switch cubre ese margen bloqueando el tráfico hasta que la VPN vuelva a conectarse. En Android ambas opciones están en el mismo ajuste, así que activarlas solo requiere un toque más.",
   "pair_link": "Más información sobre el Kill Switch"
 }

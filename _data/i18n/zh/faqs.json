@@ -4,7 +4,7 @@
   "desc": "在这里找到您想了解的答案。",
   "view_all": "查看所有常见问题",
   "q_why_vpnhood": "为什么选择 VpnHood？",
-  "a_why_vpnhood": "VpnHood 由团队自主研发的 <b>VpnHood! ENGINE</b> 驱动。它结合了开源的客户端与服务端代码、灵活的分流功能以及专属的隐匿模式（Cloak Mode），能让 VPN 流量完美伪装成普通的加密网络浏览。VpnHood! CONNECT 在 Android 上更提供免注册的无限免费流量。",
+  "a_why_vpnhood": "VpnHood 由 VpnHood 团队自主研发的 <b>VpnHood! ENGINE</b> 驱动。它结合了开源的客户端与服务端代码、灵活的分流功能以及伪装模式，后者旨在让 VPN 流量融入普通的加密网页浏览。VpnHood! CONNECT 在 Android 上提供无限免费流量，无需注册账号。",
   "q_is_vpnhood_free": "VpnHood 是一款免费 VPN 吗？",
   "a_is_vpnhood_free": "是的，VpnHood 提供完全免费的 VPN 服务，无任何时长、流量或速度限制。当然，您也可以升级高级版解锁更多功能。高级版套餐支持更多国家的服务器节点、更快的连接速度以及更多专属高级功能。如需了解详情，请访问<a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">套餐详情</a>页面。",
   "q_connect_vs_client": "VpnHood! CONNECT 与 VpnHood! CLIENT 有何区别？",
@@ -14,7 +14,7 @@
   "q_is_open_source": "VpnHood 是开源的吗？",
   "a_is_open_source": "是的，完全开源。VpnHood! CONNECT、VpnHood! CLIENT、服务器以及底层的 VpnHood! ENGINE 均已在 GitHub 上开源。该项目还通过了 <a href=\"/security-audit/\">Include Security 为 Open Technology Fund 红队实验室进行的安全审计</a>。您可以随时查阅代码，无需盲信我们的一面之词。",
   "q_is_undetectable": "VpnHood 能够防止被检测识别吗？",
-  "a_is_undetectable": "VpnHood 的 Cloak 模式专门用于将 VPN 流量伪装成常规的 HTTPS 流量，有效绕过常见的 VPN 识别与屏蔽手段。不过，实际效果仍取决于具体的网络过滤机制，因此无法保证在所有网络环境下均不受限制。",
+  "a_is_undetectable": "VpnHood 的伪装模式旨在让 VPN 流量看起来像普通的 HTTPS 流量，帮助其避开部分 VPN 检测手段。但这并不能保证所有网络都会放行连接；实际效果取决于网络所采用的过滤方式。",
   "q_stay_free_forever": "我可以一直使用免费版吗？",
   "a_stay_free_forever": "当然可以。免费版没有使用时长限制，无需注册账号，更不会强制要求升级。免费版由广告赞助支持，因此无法在无法投放广告的地区使用。如果您需要更多节点选择、更高连接速度、纯净无广告体验以及 24/7 全天候支持，随时可以升级高级版，畅享毫无限制的网络连接。",
   "q_free_data_cap": "免费版有流量上限吗？",
@@ -22,7 +22,7 @@
   "q_free_speed": "会对免费用户限速吗？",
   "a_free_speed": "不会。VpnHood! SERVER 支持对单个用户限速，但我们在免费服务器上并未开启该限制。不同套餐之间的实际区别在于承载容量：免费服务器的用户较多，因此可用带宽会随高峰期拥挤程度而变化；而高级版服务器性能更强，仅限高级版用户专享，因此连接速度更加稳定持久。",
   "q_why_slower": "为什么使用 VpnHood! 会比正常网络慢一些？",
-  "a_why_slower": "任何 VPN 都会对网速产生一定影响：数据在到达目标网站前需要经过加密并由中转服务器转发。通常物理距离是影响速度的关键因素，因此选择距离更近的服务器效果最好。此外，伪装模式（Cloak Mode）与智能代理（Smart Proxies）也会产生额外开销，在没有网络阻断时可以将其关闭。请参阅<a href=\"/guides/vpn-speed/\">测速指南</a>了解正确的测试方法。",
+  "a_why_slower": "任何 VPN 都会对网速产生一定影响：数据需要加密，并在到达您访问的网站之前多经过一台机器。距离通常是影响更大的因素，因此选择更近的服务器最有帮助。伪装模式和智能代理都会带来额外开销，在没有遭遇封锁时可以将其关闭。请参阅<a href=\"/guides/vpn-speed/\">测速指南</a>，了解如何正确测量速度。",
   "q_request_location": "我可以申请添加新节点吗？",
   "a_request_location": "可以。我们会根据用户需求添加新节点，您的反馈就是我们的参考。请前往<a href=\"/contact-us/\">联系我们</a>页面，注明所需国家以及主要用途（提速或访问特定内容），这有助于我们选择最佳的服务器部署位置。",
   "q_many_servers_per_location": "每个节点只有一台服务器吗？",
@@ -46,5 +46,5 @@
   "q_server_needs_manager": "运行服务器必须安装 VpnHood! MANAGER 吗？",
   "a_server_needs_manager": "不需要。VpnHood! SERVER 内置了轻量级基于文件的访问管理，无需任何面板即可独立运行并生成密钥。仅当您需要控制面板、实时监控、自定义套餐或管理多台服务器进行负载均衡时，才需使用 MANAGER。",
   "q_server_ip_blocked": "我的服务器 IP 还会被封锁吗？",
-  "a_server_ip_blocked": "是的。Cloak 模式几乎不会在流量中留下任何指纹特征，因此服务器被封锁通常是因为其 IP 地址。建议保持私密并仅与少数人共享。使用 MANAGER，将您的服务器集群指向一个 Token URL，当您更换服务器至新 IP 时，用户的应用会自动同步新地址。<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>介绍了更多有效应对措施，例如为服务器的出站流量配置备用 IP。"
+  "a_server_ip_blocked": "是的。伪装模式几乎不会在流量中留下可供识别的指纹，因此服务器被封锁通常是因为其 IP 地址。请对该地址保密，只与少数人分享。使用 MANAGER 时，将您的服务器集群指向一个 Token URL；这样当您将服务器迁移到新 IP 时，用户的应用会自行获取新地址。<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>介绍了其他有效做法，首先是为服务器的出站流量配置第二个 IP。"
 }

@@ -1,6 +1,6 @@
 {
   "meta_title": "Installa VpnHood! SERVER con Docker | VpnHood!",
-  "meta_description": "Installa VpnHood! SERVER come container Docker su Linux con un solo comando, autonomamente o da VpnHood! MANAGER. Aggiornamenti sempre automatici.",
+  "meta_description": "Installa VpnHood! SERVER come container Docker su Linux con un solo comando, standalone o da VpnHood! MANAGER. Il container mantiene aggiornato il server.",
   "title": "Installa VpnHood! SERVER con Docker",
   "lead": "Avvia il server come container su qualsiasi macchina Linux con Docker. Un solo comando per installarlo, gestito o standalone; il container mantiene il server attivo e sempre aggiornato.",
   "before_title": "Prima di iniziare",
@@ -17,7 +17,7 @@
   "step_install_storage": "Il server memorizza impostazioni, chiavi e log in <code>[server_storage]</code> sull'host, preservandoli anche in caso di rimozione o aggiornamento del container.",
   "key_title": "Crea una chiave di accesso",
   "step_key_run": "Esegui questo comando sulla macchina. La chiave viene generata all'interno del container del server, applicandone direttamente le impostazioni.",
-  "step_key_same": "L'output e le opzioni corrispondono a quelle di un server autonomo installato senza Docker: copia la riga sotto <code>[accesskey_heading]</code> e consulta <a href=\"/vpnhood-server/docs/install/#access-key\">Crea la tua prima chiave di accesso</a> per scoprire come limitare una chiave.",
+  "step_key_same": "L'output e le opzioni sono gli stessi di un server standalone installato senza Docker: copia la riga sotto <code>[accesskey_heading]</code> e consulta <a href=\"/vpnhood-server/docs/install/#access-key\">Crea la tua prima chiave di accesso</a> per le opzioni che limitano una chiave.",
   "caption_example": "Ad esempio, una chiave per un unico telefono",
   "connect_title": "Connettiti",
   "step_connect": "Installa <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> su ogni dispositivo, inserisci la chiave e connettiti.",

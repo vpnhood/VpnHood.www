@@ -20,7 +20,7 @@
   "domain_token": "Modifica <b>[manager_visibility]</b> e seleziona <b>[manager_public_in_token]</b>. Ogni chiave della farm includerà il dominio, e il certificato precedente della farm diventerà <b>[manager_public]</b>.",
   "shot_domain_alt": "Un certificato per server1.example.com in VpnHood! MANAGER con le impostazioni descritte: Signing AutoSign (1), Signature CA Signed (2) e Visibility PublicInToken (3)",
   "shot_domain_caption": "Il certificato del dominio completato: firmato da Let's Encrypt e incluso in ogni chiave della farm.",
-  "domain_keys": "Le nuove chiavi copiate da MANAGER conterranno il dominio. Le app con una chiave precedente riceveranno quella nuova alla connessione, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita. Mantieni il certificato precedente fino ad allora: le vecchie chiavi funzionano solo con esso.",
+  "domain_keys": "Le chiavi che copi da MANAGER d'ora in poi contengono il dominio. Le app con una chiave precedente ricevono quella nuova quando si connettono, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita. Fino ad allora mantieni il certificato precedente della farm: le vecchie chiavi funzionano solo finché è presente.",
   "domain_failed": "Se la verifica non riesce, correggi il record DNS o apri la porta: scopri nella sezione <a href=\"#autosign\">AutoSign</a> come MANAGER effettua un nuovo tentativo.",
   "domain_check": "Per verificare, apri la farm: sotto <b>[manager_access_points]</b>, il dominio comparirà per primo.",
   "settings_title": "Impostazioni del certificato",
