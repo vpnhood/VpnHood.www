@@ -2,5 +2,5 @@
   "meta_title": "Documentation VpnHood! MANAGER | VpnHood!",
   "meta_description": "Comment utiliser VpnHood! MANAGER, l'interface web gratuite qui installe vos serveurs VPN, les gère au sein de fermes de serveurs et génère leurs clés d'accès.",
   "title": "Documentation VpnHood! MANAGER",
-  "lead": "VpnHood! MANAGER est l'interface web gratuite qui installe vos serveurs, les gère au sein de fermes de serveurs et génère leurs clés d'accès. Ces pages présentent ses écrans. Pour configurer votre premier serveur, commencez par <a href=\"/vpnhood-manager/docs/add-server/\">Ajouter un serveur</a>."
+  "lead": "VpnHood! MANAGER est l'interface web gratuite qui installe vos serveurs, les gère au sein de <a href=\"/vpnhood-manager/docs/farms/\">fermes de serveurs</a> et génère leurs clés d'accès. Ces pages présentent ses écrans. Pour configurer votre premier serveur, commencez par <a href=\"/vpnhood-manager/docs/add-server/\">Ajouter un serveur</a>."
 }

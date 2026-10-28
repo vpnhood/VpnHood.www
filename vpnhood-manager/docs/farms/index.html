@@ -1,0 +1,87 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_farms
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for the MANAGER of 2026-10-28 and read from both sources: the access server's
+  develop (v4.0.426, published to production on 2026-10-25; origin/main holds v4.0.419, the
+  same for farms) and its console's, which differs from main only in build files. Every
+  project starts with Server Farm 1 (ProjectService); a new farm takes only a name, gets the
+  project's default profile, PushTokenToClient on and a self-signed PublicInToken certificate
+  with a made-up name, and has no token until a server reports a PublicInToken address
+  (FarmTokenBuilder, TokenError in red under Name). The Server Farm field of Add a Server and
+  of a new key shows only with more than one farm. A server with its own certificates can't
+  move (ServerService); a moved server or key refuses the old farm's keys with an
+  AccessError, on which nothing is pushed (SessionService). Push sends the key rebuilt from
+  the farm's token on every reply but AccessError and AccessLocked, once every server with a
+  PublicInToken address is Idle or Active, or at once for a key with only a domain
+  (BuildResponseAccessKey). Farm token URLs: the encrypted token at each Publish Url, which
+  keys carry; apps read them only after a failed connect (VpnHoodApp); Auto Upload Off,
+  POST, PUT or PUT & POST, filled in from a GitHub, GitLab or Bitbucket Publish Url. A farm
+  with a server can't be deleted; its keys go with it. The plan's farm and repo quotas are
+  left out: production may set its own. The screenshot is real app UI, so it has no light
+  variant: the test project's Server Farm 1 (Vh/.user/docs/manager-test-projects.md), its
+  Server Farm card 800px wide in MANAGER's dark theme, captured at 2x and cropped below
+  Allow Access Code by .tmp/mgr-farm-shot.js. MANAGER's screen text is a placeholder from
+  _data/code.yml, filled in by copy.html. No links to the GitHub wiki.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-farms.svg" %}
+
+<h2 id="where">{{ t.where_title }}</h2>
+<p>{% include copy.html s=t.where_desc %}</p>
+<p>{% include copy.html s=t.where_page %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/farm.webp" alt="{{ t.shot_alt }}" width="800" height="459" loading="lazy">
+  <figcaption>{% include copy.html s=t.shot_caption %}</figcaption>
+</figure>
+
+<h2 id="when">{{ t.why_title }}</h2>
+<p>{% include copy.html s=t.why_desc %}</p>
+
+<h2 id="create">{{ t.create_title }}</h2>
+<p>{% include copy.html s=t.create_how %}</p>
+<p>{% include copy.html s=t.create_starts %}</p>
+<p>{{ t.create_empty }}</p>
+
+<h2 id="servers">{{ t.servers_title }}</h2>
+<p>{% include copy.html s=t.servers_add %}</p>
+<p>{% include copy.html s=t.servers_move %}</p>
+<p>{{ t.servers_last }}</p>
+
+<h2 id="keys">{{ t.keys_title }}</h2>
+<p>{% include copy.html s=t.keys_farm %}</p>
+<p>{% include copy.html s=t.keys_carry %}</p>
+<p>{% include copy.html s=t.keys_move %}</p>
+
+<h2 id="push">{{ t.push_title }}</h2>
+<p>{% include copy.html s=t.push_desc %}</p>
+<p>{% include copy.html s=t.push_wait %}</p>
+<p>{% include copy.html s=t.push_reach %}</p>
+
+<h2 id="token-urls">{{ t.urls_title }}</h2>
+<p>{{ t.urls_desc }}</p>
+<p>{% include copy.html s=t.urls_add %}</p>
+<ul>
+  <li>{% include copy.html s=t.urls_off %}</li>
+  <li>{% include copy.html s=t.urls_upload %}</li>
+</ul>
+<p>{{ t.urls_status }}</p>
+<p>{% include copy.html s=t.urls_keys %}</p>
+
+<h2 id="delete">{{ t.delete_title }}</h2>
+<p>{% include copy.html s=t.delete_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/certificates/#domain">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/server-profiles/">{{ t.next_profile }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

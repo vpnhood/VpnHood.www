@@ -21,5 +21,6 @@
   "certificates": "Certificates",
   "add-server": "Add a server",
   "access-points": "Access points",
-  "server-profiles": "Server profiles"
+  "server-profiles": "Server profiles",
+  "farms": "Server farms"
 }

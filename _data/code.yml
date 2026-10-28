@@ -161,6 +161,18 @@ manager_validating: "Validating..."
 manager_certificate_password: "Certificate Password"
 manager_description: "Description"
 manager_delete: "Delete"
+manager_default_farm: "Server Farm 1"
+manager_name: "Name"
+manager_farm_token: "Farm Token"
+manager_download: "Download"
+manager_publish_url: "Publish Url"
+manager_auto_upload: "Auto Upload"
+manager_off: "Off"
+manager_post: "POST"
+manager_put: "PUT"
+manager_put_post: "PUT &amp; POST"
+manager_access_token: "Access Token"
+manager_file_url: "File Url"
 
 # Cloudflare, the reverse proxy the docs use as their example, as its dashboard says it,
 # and the HTTPS ports its proxy passes on

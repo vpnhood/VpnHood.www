@@ -2,5 +2,5 @@
   "meta_title": "VpnHood! MANAGER 文档 | VpnHood! 科学上网",
   "meta_description": "如何使用 VpnHood! MANAGER：这款免费的网页控制面板可为您安装科学上网 VPN 节点、将其组成集群运行，并签发访问密钥。",
   "title": "VpnHood! MANAGER 文档",
-  "lead": "VpnHood! MANAGER 是一款免费的网页控制面板，可为您安装服务器、将它们组成服务器集群运行，并签发访问密钥。本文档介绍它的各个界面。若要配置您的第一台服务器，请从<a href=\"/vpnhood-manager/docs/add-server/\">添加服务器</a>开始。"
+  "lead": "VpnHood! MANAGER 是一款免费的网页控制面板，可为您安装服务器、将它们组成<a href=\"/vpnhood-manager/docs/farms/\">服务器集群</a>运行，并签发访问密钥。本文档介绍它的各个界面。若要配置您的第一台服务器，请从<a href=\"/vpnhood-manager/docs/add-server/\">添加服务器</a>开始。"
 }

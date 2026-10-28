@@ -21,5 +21,6 @@
   "certificates": "Sertifikalar",
   "add-server": "Sunucu ekleyin",
   "access-points": "Erişim noktaları",
-  "server-profiles": "Sunucu profilleri"
+  "server-profiles": "Sunucu profilleri",
+  "farms": "Sunucu çiftlikleri"
 }

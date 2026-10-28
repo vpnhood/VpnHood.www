@@ -2,5 +2,5 @@
   "meta_title": "Documentación de VpnHood! MANAGER | VpnHood!",
   "meta_description": "Aprende a usar VpnHood! MANAGER, el panel web gratuito para instalar tus servidores VPN, gestionarlos en granjas y generar claves de acceso.",
   "title": "Documentación de VpnHood! MANAGER",
-  "lead": "VpnHood! MANAGER es el panel web gratuito para instalar servidores, gestionarlos en granjas y crear claves de acceso. Aquí te explicamos cada pantalla. Para configurar tu primer servidor, empieza en <a href=\"/vpnhood-manager/docs/add-server/\">Añadir un servidor</a>."
+  "lead": "VpnHood! MANAGER es el panel web gratuito para instalar servidores, gestionarlos en <a href=\"/vpnhood-manager/docs/farms/\">granjas</a> y crear claves de acceso. Aquí te explicamos cada pantalla. Para configurar tu primer servidor, empieza en <a href=\"/vpnhood-manager/docs/add-server/\">Añadir un servidor</a>."
 }

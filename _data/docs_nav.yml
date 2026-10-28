@@ -33,6 +33,7 @@ vpnhood-manager:
       - url: /vpnhood-manager/docs/add-server/
   - group: reference
     pages:
+      - url: /vpnhood-manager/docs/farms/
       - url: /vpnhood-manager/docs/access-points/
       - url: /vpnhood-manager/docs/certificates/
       - url: /vpnhood-manager/docs/server-profiles/

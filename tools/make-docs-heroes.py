@@ -455,6 +455,27 @@ def server_profiles() -> None:
     a.render("server-profiles", product="vpnhood-manager")
 
 
+def farms() -> None:
+    """Server farms: a farm's servers, framed as one group, and the one key that reaches them all."""
+    a = Art("dhMgrFarms")
+    a.ambient(cy=480)
+    # the farm: a dashed frame around its servers, every one of them up
+    a.add(f'<rect x="595" y="185" width="325" height="590" rx="48" fill="{INDIGO_DEEP}" fill-opacity=".12" stroke="{LILAC}" stroke-opacity=".6" stroke-width="7" stroke-dasharray="26 18" stroke-linecap="round"/>')
+    for y in (230, 400, 570):
+        a.server_unit(625, y, 265, 120, rim=False, lit=True)
+    # the key, as on the IP addresses page at half its size, its bow on the left
+    key = ('<path d="M 258.9 487.5 H 432.5 A 12.5 12.5 0 0 1 432.5 512.5 H 430 V 537.5 H 410 V 512.5 H 395 V 547.5 H 375 V 512.5 '
+           'H 258.9 A 70 70 0 1 1 258.9 487.5 Z" {fill} {stroke}/>')
+    a.solid(key, width=9)
+    a.add(f'<circle cx="190" cy="500" r="24" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="5"/>')
+    a.led(190, 500, r=8)
+    # one key, every server of the farm
+    for y in (290, 460, 630):
+        a.add(f'<path d="M 465 500 C 540 500 540 {y} 612 {y}" fill="none" stroke="{MINT}" stroke-width="10" stroke-dasharray="2 22" stroke-linecap="round" opacity=".9"/>')
+    a.ambient(cy=870, rx=320, ry=60, opacity=.45)
+    a.render("farms", product="vpnhood-manager")
+
+
 def phone(a: Art, x, y, w, h, lit_rows: int = 1) -> None:
     """A phone: its body, a speaker slot and app rows on the screen, the first ones lit."""
     a.solid(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{w * .2:.0f}" {{fill}} {{stroke}}/>', width=10)
@@ -521,4 +542,5 @@ if __name__ == "__main__":
     access_points()
     certificates()
     server_profiles()
+    farms()
     manager_promo()

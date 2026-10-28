@@ -2,5 +2,5 @@
   "meta_title": "Documentazione di VpnHood! MANAGER | VpnHood!",
   "meta_description": "Scopri come usare VpnHood! MANAGER, il pannello web gratuito per installare i tuoi server VPN, gestirli in server farm e generare le chiavi di accesso.",
   "title": "Documentazione di VpnHood! MANAGER",
-  "lead": "VpnHood! MANAGER è il pannello web gratuito per installare e gestire i tuoi server anche in server farm e generare le chiavi d'accesso. Questa guida ne illustra le schermate. Per configurare il tuo primo server, inizia da <a href=\"/vpnhood-manager/docs/add-server/\">Aggiungi un server</a>."
+  "lead": "VpnHood! MANAGER è il pannello web gratuito per installare e gestire i tuoi server anche in <a href=\"/vpnhood-manager/docs/farms/\">server farm</a> e generare le chiavi d'accesso. Questa guida ne illustra le schermate. Per configurare il tuo primo server, inizia da <a href=\"/vpnhood-manager/docs/add-server/\">Aggiungi un server</a>."
 }

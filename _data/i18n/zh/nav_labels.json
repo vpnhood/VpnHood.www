@@ -21,5 +21,6 @@
   "certificates": "证书",
   "add-server": "添加服务器",
   "access-points": "接入点",
-  "server-profiles": "服务器配置方案"
+  "server-profiles": "服务器配置方案",
+  "farms": "服务器集群"
 }
