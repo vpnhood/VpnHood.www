@@ -2,7 +2,7 @@
   "meta_title": "Put VpnHood! SERVER Behind a Reverse Proxy Such as Cloudflare | VpnHood!",
   "meta_description": "Server IP blocked? Put VpnHood! SERVER behind a reverse proxy such as Cloudflare, on a managed server or a standalone one, and know what the proxy sees.",
   "title": "Put your server behind a reverse proxy",
-  "lead": "A network that blocks your server's IP address cannot stop apps that do not connect to it. Behind a reverse proxy such as Cloudflare, apps connect to the proxy, and the proxy passes the connection on to your server.",
+  "lead": "A network that blocks your server's IP address stops only the apps that connect to that address. Behind a reverse proxy such as Cloudflare, apps connect to the proxy instead, and the proxy passes the connection on to your server.",
   "how_title": "How it works",
   "how_proxy": "Your domain leads to the proxy instead of your server. Apps look the domain up and connect to the proxy, which decrypts the connection, as it does for any website it serves, and encrypts it again toward your server. Their traffic goes over WebSocket, which Cloudflare passes on. Another reverse proxy works too, if it passes WebSocket on and reaches your server over TLS; your server then needs its addresses, as <a href=\"#addresses\">Your users' addresses</a> shows.",
   "diagram_title": "Apps reach your server through the proxy",

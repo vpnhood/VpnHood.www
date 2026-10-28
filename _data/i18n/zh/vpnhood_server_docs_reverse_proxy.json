@@ -2,7 +2,7 @@
   "meta_title": "将 VpnHood! SERVER 置于 Cloudflare 等反向代理之后，稳定科学上网 | VpnHood!",
   "meta_description": "自建的科学上网服务器 IP 被封？将 VpnHood! SERVER 置于 Cloudflare 等反向代理之后，受管服务器和独立服务器均适用，并了解代理能看到哪些内容。",
   "title": "将服务器置于反向代理之后",
-  "lead": "如果网络封锁了服务器的 IP 地址，只要应用不直接连接该 IP，就无法实施拦截。在 Cloudflare 等反向代理保护下，应用只需连接代理，再由代理将连接转发至您的服务器。",
+  "lead": "封锁服务器 IP 地址的网络，只能拦截连接该地址的应用。在 Cloudflare 等反向代理之后，应用改为连接代理，再由代理将连接转发至您的服务器。",
   "how_title": "工作原理",
   "how_proxy": "您的域名将指向代理，而非您的服务器。应用解析域名并连接至代理，代理会解密连接（就像处理它所服务的任何网站一样），然后重新加密并转发给您的服务器。应用的流量通过 WebSocket 传输，而 Cloudflare 会转发 WebSocket。其他反向代理也同样适用，只要它能转发 WebSocket 并通过 TLS 连接您的服务器；此时您的服务器需要该代理的地址，详见<a href=\"#addresses\">用户的地址</a>。",
   "diagram_title": "应用通过代理访问服务器",

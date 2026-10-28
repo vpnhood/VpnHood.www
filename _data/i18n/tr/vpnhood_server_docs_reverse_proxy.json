@@ -2,7 +2,7 @@
   "meta_title": "VpnHood! SERVER'ı Cloudflare Gibi Bir Ters Proxy Arkasına Alın | VpnHood!",
   "meta_description": "Sunucu IP'niz engellendi mi? İster yönetilen ister bağımsız olsun, VpnHood! SERVER'ı Cloudflare gibi bir ters proxy arkasına alın; proxy'nin ne gördüğünü bilin.",
   "title": "Sunucunuzu bir ters proxy arkasına alın",
-  "lead": "Sunucunuzun IP adresini engelleyen bir ağ, doğrudan o adrese bağlanmayan uygulamaları durduramaz. Cloudflare gibi bir ters proxy arkasında uygulamalar proxy'ye bağlanır; proxy de bağlantıyı sunucunuza iletir.",
+  "lead": "Sunucunuzun IP adresini engelleyen bir ağ, yalnızca bu adrese bağlanan uygulamaları durdurur. Cloudflare gibi bir ters proxy arkasında uygulamalar bunun yerine proxy'ye bağlanır ve proxy bağlantıyı sunucunuza iletir.",
   "how_title": "Nasıl çalışır?",
   "how_proxy": "Alan adınız doğrudan sunucunuza değil, proxy'ye yönlendirir. Uygulamalar alan adını sorgulayıp proxy'ye bağlanır; proxy, sunduğu her web sitesinde yaptığı gibi bağlantının şifresini çözer ve sunucunuza doğru yeniden şifreler. Uygulamaların trafiği, Cloudflare'in ilettiği WebSocket üzerinden akar. WebSocket'i ileten ve sunucunuza TLS üzerinden ulaşan başka bir ters proxy de çalışır; bu durumda sunucunuzun, <a href=\"#addresses\">Kullanıcılarınızın adresleri</a> bölümünde gösterildiği gibi o proxy'nin adreslerine ihtiyacı vardır.",
   "diagram_title": "Uygulamalar sunucunuza proxy üzerinden ulaşır",

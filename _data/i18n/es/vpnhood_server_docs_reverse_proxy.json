@@ -2,7 +2,7 @@
   "meta_title": "Configura VpnHood! SERVER tras un proxy inverso como Cloudflare | VpnHood!",
   "meta_description": "¿IP del servidor bloqueada? Coloca VpnHood! SERVER detrás de un proxy inverso como Cloudflare, en un servidor administrado o en uno independiente, y descubre qué ve el proxy.",
   "title": "Pon tu servidor detrás de un proxy inverso",
-  "lead": "Una red que bloquea la dirección IP de tu servidor no puede detener a las aplicaciones que no se conectan a ella directamente. Detrás de un proxy inverso como Cloudflare, las aplicaciones se conectan al proxy y este reenvía la conexión a tu servidor.",
+  "lead": "Una red que bloquea la dirección IP de tu servidor solo detiene a las aplicaciones que se conectan a esa dirección. Detrás de un proxy inverso como Cloudflare, las aplicaciones se conectan al proxy en su lugar, y este pasa la conexión a tu servidor.",
   "how_title": "Cómo funciona",
   "how_proxy": "Tu dominio apunta al proxy en lugar de a tu servidor. Las aplicaciones consultan el dominio y se conectan al proxy, que descifra la conexión (como hace con cualquier sitio web al que da servicio) y la vuelve a cifrar hacia tu servidor. Su tráfico viaja mediante WebSocket, que Cloudflare reenvía. También puedes usar otro proxy inverso, siempre que reenvíe WebSocket y se conecte a tu servidor mediante TLS; en ese caso, tu servidor necesita las direcciones de ese proxy, como se indica en <a href=\"#addresses\">Direcciones de tus usuarios</a>.",
   "diagram_title": "Las aplicaciones llegan a tu servidor a través del proxy",
