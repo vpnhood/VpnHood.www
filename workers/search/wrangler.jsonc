@@ -20,8 +20,9 @@
   // Google mail is untouched), and only to a destination address verified in the account
   "send_email": [{ "name": "ALERT_EMAIL", "destination_address": "trudy@vpnhood.com" }],
   "vars": {
-    // Google Cloud project vpnhood-site-search (180940048251): the app (engine) over the website data store
-    "SERVING_CONFIG": "projects/180940048251/locations/global/collections/default_collection/engines/vpnhood-site/servingConfigs/default_search",
+    // Google Cloud project vpnhood-site-search (180940048251): the app (engine) over the
+    // sitemap-only website data store
+    "SERVING_CONFIG": "projects/180940048251/locations/global/collections/default_collection/engines/vpnhood-sitemap/servingConfigs/default_search",
     "ALLOWED_ORIGINS": "https://www.vpnhood.com,http://localhost:4000,http://127.0.0.1:4000",
     "TURNSTILE_ACTION": "search",
     "TURNSTILE_HOSTNAMES": "www.vpnhood.com",

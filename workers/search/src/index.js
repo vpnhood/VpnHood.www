@@ -36,7 +36,9 @@ export default {
     const ip = request.headers.get('CF-Connecting-IP') || '';
     if (!(await turnstilePassed(env, input.token, ip))) return reply(403, cors);
 
-    const cacheKey = new Request(`https://search.vpnhood.com/cache/${lang}?q=${encodeURIComponent(query.toLowerCase())}`);
+    // The version changes whenever the answers do (another app, another format), or the
+    // cache would go on serving the old ones for a day
+    const cacheKey = new Request(`https://search.vpnhood.com/cache/v3/${lang}?q=${encodeURIComponent(query.toLowerCase())}`);
     const cached = await caches.default.match(cacheKey);
     if (cached) return reply(200, cors, await cached.text());
 
@@ -98,13 +100,15 @@ async function search(env, query, lang) {
     pageSize: 25,
     languageCode: lang === 'zh' ? 'zh-CN' : lang,
     userPseudoId: crypto.randomUUID(),
+    // The app's one store holds all 13 trees: a language is its folder, and English, which
+    // has none, every page outside the 12 folders
+    filter: lang === 'en'
+      ? PREFIXED.map(other => `NOT siteSearch:"${SITE}/${other}/*"`).join(' AND ')
+      : `siteSearch:"${SITE}/${lang}/*"`,
     contentSearchSpec: { snippetSpec: { returnSnippet: true } },
     spellCorrectionSpec: { mode: 'AUTO' },
     queryExpansionSpec: { condition: 'AUTO' }
   };
-  // Basic website search takes either: English is no folder of its own, so it goes by
-  // Google's language detection; every other tree by its folder
-  request.filter = lang === 'en' ? 'lr:"lang_en"' : `siteSearch:"${SITE}/${lang}/*"`;
   const response = await fetch(`https://discoveryengine.googleapis.com/v1/${env.SERVING_CONFIG}:searchLite?key=${env.GOOGLE_API_KEY}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -117,19 +121,12 @@ async function search(env, query, lang) {
     .map(result => result.document?.derivedStructData || {})
     .filter(page => inTree(page.link, lang))
     .slice(0, 10)
-    .map(page => {
-      // htmlSnippet bolds the words that matched; the plain snippet is escaped to match it
-      const snippet = (page.snippets || [])[0] || {};
-      return {
-        link: page.link,
-        title: page.title || '',
-        snippet: snippet.htmlSnippet || escapeHtml(snippet.snippet || '')
-      };
-    });
-}
-
-function escapeHtml(text) {
-  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    .map(page => ({
+      link: page.link,
+      title: page.title || '',
+      // HTML already: the words that matched in <b>, the rest escaped
+      snippet: ((page.snippets || [])[0] || {}).snippet || ''
+    }));
 }
 
 // The day's one email, sent when DAILY_CAP first turns a search away. ALERT_EMAIL can only

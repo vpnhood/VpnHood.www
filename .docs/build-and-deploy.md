@@ -79,13 +79,18 @@ site build: Jekyll excludes `workers/`, and a push to `main` never deploys it.
   only); its public sitekey is `_config.yml` `search.turnstile_sitekey`.
 - **Google Cloud**: the project `vpnhood-site-search` (in the VpnHood folder, billed to
   Firebase Payment) holds only the search. Agent Search, as Google now calls Vertex AI
-  Search, has two apps there, both Enterprise edition, which website search requires:
-  `vpnhood-site` over a basic website data store (Google's public index of
-  `www.vpnhood.com/*`, mostly matching words), and `vpnhood-site-adv` over two advanced ones
-  that Google crawls itself and matches by meaning — `vpnhood-site-en` (the site minus the
-  12 language folders) and `vpnhood-site-intl` (those folders), both refreshed from the
-  sitemap. `SERVING_CONFIG` names the app the Worker uses. The API key is restricted to the
-  Discovery Engine API.
+  Search, answers through the app `vpnhood-sitemap` (Enterprise edition, which website
+  search requires) over one advanced website data store, `vpnhood-sitemap`, which Google
+  crawls itself and matches by meaning. It is sitemap-only, with no initial index and no
+  automatic refresh, so the index is exactly `sitemap.xml`, all 13 trees: a new page is
+  searchable, and a retired or `noindex` one gone, within a day; a changed page is read again
+  within 14 days, since the sitemap has no `lastmod`. That mode is set when a store is created
+  and can't be changed, and such a store ignores URL patterns, so the Worker narrows each
+  search to its language with a filter. The older apps are unused: `vpnhood-site` (a basic
+  store, Google's public index, mostly matching words) and `vpnhood-site-adv` (advanced
+  stores that kept every address Google had ever found, so a retired page showed up under
+  its old address). `SERVING_CONFIG` names the app the Worker uses. The API key is restricted
+  to the Discovery Engine API.
 - **What Google bills** (billing catalog, 2026-10-29): the first 10,000 Enterprise searches a
   month on the billing account are free, then $4 per 1,000; index storage is free up to
   10 GiB a month (the site is about 0.4 GiB). A $1 budget emails the billing admins at

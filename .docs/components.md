@@ -113,9 +113,9 @@ Styles: `.vh-docs-managed` in `_docs.scss`. The button is tagged `docs-start-man
 
 ## Site search — `_includes/search-form.html` + `search/index.html` + `assets/js/search.js` + `workers/search/`
 
-Google answers the searches (Vertex AI Search, a website data store over `www.vpnhood.com/*`
-in the Google Cloud project `vpnhood-site-search`), so a reader can search by meaning, not
-only by the words on the page. Every search Google answers is billed, so the browser never
+Google answers the searches (Vertex AI Search over the pages `sitemap.xml` lists, in the
+Google Cloud project `vpnhood-site-search`), so a reader can search by meaning, not only by
+the words on the page. Every search Google answers is billed, so the browser never
 calls Google: it goes through our Worker at `search.vpnhood.com`, which holds the API key and
 the limits.
 
@@ -137,11 +137,11 @@ the limits.
   (single-use, action `search`, hostname `www.vpnhood.com`); a day's cache per language and
   query, which answers repeats for free; then the `SearchBudget` Durable Object, which allows
   `PER_VISITOR_PER_MINUTE` searches per IP and `DAILY_CAP` per UTC day in all; then Google's
-  `searchLite`. It keeps the results to the page's language tree: English is every path no
-  other language prefixes. `DAILY_CAP` is the only hard limit on the bill, since Google
-  Cloud has none: 300 a day is about 9,000 a month, under Google's free 10,000. The first
-  search the cap turns away each day emails `trudy@vpnhood.com`
-  ([build-and-deploy.md](build-and-deploy.md#search-worker-workerssearch)).
+  `searchLite`. Each search is narrowed to the page's language tree: a language is its
+  folder, and English every path no other language prefixes. `DAILY_CAP` is the only hard
+  limit on the bill, since Google Cloud has none: 300 a day is about 9,000 a month, under
+  Google's free 10,000. The first search the cap turns away each day emails
+  `trudy@vpnhood.com` ([build-and-deploy.md](build-and-deploy.md#search-worker-workerssearch)).
 - **Changing the limits**: edit `vars` in `workers/search/wrangler.jsonc` and deploy the
   Worker ([build-and-deploy.md](build-and-deploy.md#search-worker-workerssearch)). A site push
   never deploys it.
