@@ -86,11 +86,11 @@ site build: Jekyll excludes `workers/`, and a push to `main` never deploys it.
   searchable, and a retired or `noindex` one gone, within a day; a changed page is read again
   within 14 days, since the sitemap has no `lastmod`. That mode is set when a store is created
   and can't be changed, and such a store ignores URL patterns, so the Worker narrows each
-  search to its language with a filter. The older apps are unused: `vpnhood-site` (a basic
-  store, Google's public index, mostly matching words) and `vpnhood-site-adv` (advanced
-  stores that kept every address Google had ever found, so a retired page showed up under
-  its old address). `SERVING_CONFIG` names the app the Worker uses. The API key is restricted
-  to the Discovery Engine API.
+  search to its language with a filter. Both other kinds were tried and deleted: a basic
+  store, Google's public index, matched mostly words, and an advanced store that finds pages
+  itself kept every address Google had ever found, so a retired page showed up under its old
+  address. `SERVING_CONFIG` names the app the Worker uses. The API key is restricted to the
+  Discovery Engine API.
 - **What Google bills** (billing catalog, 2026-10-29): the first 10,000 Enterprise searches a
   month on the billing account are free, then $4 per 1,000; index storage is free up to
   10 GiB a month (the site is about 0.4 GiB). A $1 budget emails the billing admins at
