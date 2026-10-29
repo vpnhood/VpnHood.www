@@ -23,7 +23,7 @@
   "keys_title": "创建访问密钥",
   "keys_desc": "在 <b>[manager_access_tokens]</b> 下为您的设备创建访问密钥。然后在每台设备上安装 <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a>，添加密钥即可一键连接。",
   "run_title": "日常运维",
-  "run_desc": "受管服务器与独立运行的 VpnHood! SERVER 完全一致，其运行、日志记录及更新方式也相同：详见<a href=\"/vpnhood-server/docs/install/#manage\">启动与停止服务器</a>，或查看 Docker 环境下的<a href=\"/vpnhood-server/docs/docker/#manage\">启动、停止及检查服务器</a>。",
+  "run_desc": "受管服务器与独立运行的 VpnHood! SERVER 完全一致，其运行、日志记录及更新方式也相同：详见<a href=\"/vpnhood-server/docs/install/#manage\">启动与停止服务器</a>，或查看 Docker 环境下的<a href=\"/vpnhood-server/docs/docker/#manage\">启动、停止与检查服务器</a>。",
   "next_title": "后续步骤",
   "next_access_points": "配置服务器的监听地址并将其写入密钥",
   "next_domain": "为您的服务器绑定自定义域名及受信任的证书"

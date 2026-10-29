@@ -2,8 +2,9 @@
 """Draw the hero art of the docs pages: one small picture beside each page's title.
 
 Writes `assets/images/<product>/docs/hero-<name>.svg`, for the docs of VpnHood! SERVER and
-VpnHood! MANAGER, and `vpnhood-manager/docs/promo-manager.svg`, the art of the MANAGER promo on
-the server pages. THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
+VpnHood! MANAGER, `vpnhood-manager/docs/promo-manager.svg`, the art of the MANAGER promo on the
+server pages, and `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems.
+THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
 The art speaks the language of the guides' heroes (`assets/images/guides/*.svg`): a deep
 indigo object with a violet-to-mint rim, soft glows and lilac detail, on transparency. That
@@ -24,6 +25,7 @@ Run from the repo root:  python tools/make-docs-heroes.py
 """
 from __future__ import annotations
 
+import math
 import pathlib
 
 IMAGES = pathlib.Path(__file__).resolve().parent.parent / "assets" / "images"
@@ -504,6 +506,215 @@ def roles() -> None:
     a.render("roles", product="vpnhood-manager")
 
 
+def troubleshooting() -> None:
+    """Troubleshooting: the panel of servers, one whose status is out (a dashed, unlit chip), and a wrench over the corner."""
+    a = Art("dhMgrTroubleshooting")
+    a.ambient(cy=470)
+    # the panel, as on Roles: a window with its three dots
+    a.solid('<rect x="130" y="170" width="640" height="560" rx="40" {fill} {stroke}/>', width=10)
+    a.add(f'<path d="M 130 260 H 770" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="3"/>')
+    for n in range(3):
+        a.add(f'<circle cx="{188 + n * 40}" cy="215" r="12" fill="{LILAC}" opacity=".45"/>')
+    # a server a row, two units with their lights, a name and a status chip; the middle one is out
+    for n in range(3):
+        y = 310 + n * 110
+        a.add(f'<rect x="190" y="{y}" width="520" height="84" rx="24" fill="{INDIGO_DEEP}" fill-opacity=".8" stroke="{VIOLET}" stroke-opacity=".3" stroke-width="2"/>')
+        for u in range(2):
+            a.add(f'<rect x="220" y="{y + 18 + u * 26}" width="52" height="20" rx="6" fill="none" stroke="{LILAC}" stroke-opacity=".5" stroke-width="4"/>',
+                  f'<circle cx="260" cy="{y + 28 + u * 26}" r="3.5" fill="{LILAC}" opacity=".6"/>')
+        a.bar(300, y + 34, 170 - n * 30, 16, fill=LILAC, opacity=.4)
+        if n == 1:
+            a.add(f'<rect x="540" y="{y + 28}" width="120" height="28" rx="14" fill="none" stroke="{LILAC}" stroke-opacity=".55" stroke-width="4" stroke-dasharray="10 9"/>')
+        else:
+            a.bar(540, y + 28, 120, 28, fill=MINT, opacity=.9, glow=True)
+    # the badge over the panel's corner: a wrench, its open jaw away from the handle
+    a.solid('<circle cx="760" cy="700" r="110" {fill} {stroke}/>', width=12)
+    wrench = 'M 784.6 649.5 A 32 32 0 1 0 810.5 675.4 M 756.4 703.6 L 709 751'
+    a.add(f'<path d="{wrench}" fill="none" stroke="{MINT}" stroke-width="40" stroke-linecap="round" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<path d="{wrench}" fill="none" stroke="{MINT}" stroke-width="24" stroke-linecap="round"/>')
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("troubleshooting", product="vpnhood-manager")
+
+
+# --- the troubleshooting page's problems ----------------------------------------------------------
+#
+# Not heroes: one small character a problem, shown about 64px wide in the page's list of problems
+# and beside each one's heading (trouble-<id>.svg, the id the heading's anchor). Each is a thing
+# from MANAGER with a face that says what went wrong. At a fifteenth of the canvas a stroke must be
+# 30 wide to show at all, so there are few of them, heavy, in the lit mint; red marks only the
+# error itself, as in the console.
+
+RED = "#ff4752"   # the site's --red-200
+
+
+def stroke(a: Art, d: str, color: str = MINT, width: int = 34, glow: bool = True) -> None:
+    """A heavy line in a lit colour, its glow under it."""
+    if glow:
+        a.add(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width + 24}" stroke-linecap="round" stroke-linejoin="round" filter="{a.url("Soft")}" opacity=".45"/>')
+    a.add(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def eyes(a: Art, cx, cy, gap=180, r=44, rs=(1, 1)) -> None:
+    """Two lit eyes, a server's lights looking back at the reader; rs sizes each, for a puzzled look."""
+    for x, s in zip((cx - gap / 2, cx + gap / 2), rs):
+        a.add(f'<circle cx="{x:g}" cy="{cy}" r="{r * s * 1.9:.0f}" fill="{a.url("Glow")}" filter="{a.url("Soft")}" opacity=".5"/>',
+              f'<circle cx="{x:g}" cy="{cy}" r="{r * s:.0f}" fill="{MINT}"/>')
+
+
+def tube(a: Art, d: str, width: int = 70) -> None:
+    """A thick stroke drawn as a solid: the body's ink inside the violet-to-mint rim."""
+    a.add(f'<path d="{d}" fill="none" stroke="{a.url("Rim")}" stroke-width="{width + 60}" stroke-linecap="round" filter="{a.url("Soft")}" opacity=".45"/>',
+          f'<path d="{d}" fill="none" stroke="{a.url("Rim")}" stroke-width="{width + 36}" stroke-linecap="round"/>',
+          f'<path d="{d}" fill="none" stroke="{INDIGO}" stroke-width="{width}" stroke-linecap="round"/>')
+
+
+def trouble_status() -> None:
+    """A server's status: a cheerful server, telling its heartbeat in a speech bubble."""
+    a = Art("tsStatus")
+    a.ambient(cy=560, rx=420, ry=380, opacity=.8)
+    a.solid('<path d="M 520 90 H 820 Q 900 90 900 170 V 330 Q 900 410 820 410 H 650 L 560 490 L 570 410 H 520 '
+            'Q 440 410 440 330 V 170 Q 440 90 520 90 Z" {fill} {stroke}/>', width=30)
+    stroke(a, "M 505 250 H 575 L 625 160 L 695 340 L 745 250 H 835", width=30)
+    a.solid('<rect x="100" y="450" width="560" height="440" rx="100" {fill} {stroke}/>', width=36)
+    eyes(a, 380, 610, gap=200, r=46)
+    stroke(a, "M 285 730 Q 380 810 475 730", width=34)
+    a.render("status", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_ssh() -> None:
+    """An SSH install that fails: a terminal window, dazed, its eyes crossed out and its mouth wobbling."""
+    a = Art("tsSsh")
+    a.ambient(cy=520, opacity=.8)
+    a.solid('<rect x="90" y="140" width="820" height="700" rx="90" {fill} {stroke}/>', width=36)
+    a.add(f'<path d="M 90 285 H 910" stroke="{VIOLET}" stroke-opacity=".55" stroke-width="12"/>')
+    for n in range(3):
+        a.add(f'<circle cx="{185 + n * 72}" cy="213" r="25" fill="{LILAC}" opacity=".55"/>')
+    for cx in (365, 635):
+        stroke(a, f"M {cx - 60} 420 L {cx + 60} 540 M {cx + 60} 420 L {cx - 60} 540", width=36)
+    stroke(a, "M 320 690 Q 365 640 410 690 T 500 690 T 590 690 T 680 690", width=32)
+    a.render("ssh", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_never_connects() -> None:
+    """A server that never connects: it holds out its plug to nothing, puzzled, a question mark over it."""
+    a = Art("tsNever")
+    a.ambient(cy=560, opacity=.8)
+    # the cable, from the server's side up to the plug
+    a.add(f'<path d="M 540 740 C 690 780 720 640 745 560" fill="none" stroke="{LILAC}" stroke-opacity=".75" stroke-width="30" stroke-linecap="round"/>')
+    a.add(f'<g transform="rotate(18 760 470)">'
+          f'<path d="M 722 395 V 315 M 798 395 V 315" stroke="{LILAC}" stroke-width="32" stroke-linecap="round"/>'
+          f'</g>')
+    a.solid('<rect x="685" y="385" width="150" height="170" rx="36" transform="rotate(18 760 470)" {fill} {stroke}/>', width=26)
+    # the question
+    stroke(a, "M 690 175 Q 690 85 775 85 Q 860 85 860 165 Q 860 225 790 245 V 270", width=34)
+    a.add(f'<circle cx="790" cy="335" r="23" fill="{MINT}"/>')
+    # the server, eyebrow up
+    a.solid('<rect x="90" y="380" width="480" height="500" rx="100" {fill} {stroke}/>', width=36)
+    eyes(a, 330, 600, gap=180, r=44, rs=(.85, 1.15))
+    stroke(a, "M 205 495 L 275 505 M 375 470 L 455 445", color=LILAC, width=26, glow=False)
+    a.add(f'<circle cx="330" cy="755" r="34" fill="none" stroke="{MINT}" stroke-width="28"/>')
+    a.render("never-connects", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_error() -> None:
+    """A server that shows an error: a sick server, a plaster on its head and a thermometer in its mouth."""
+    a = Art("tsError")
+    a.ambient(cy=540, opacity=.8)
+    a.solid('<rect x="130" y="200" width="640" height="660" rx="110" {fill} {stroke}/>', width=36)
+    # the plaster, across its top corner
+    a.add('<g transform="rotate(-35 320 290)">'
+          f'<rect x="170" y="238" width="300" height="104" rx="52" fill="{LILAC}" opacity=".92"/>'
+          f'<rect x="285" y="238" width="70" height="104" fill="{INDIGO}" opacity=".22"/>'
+          '</g>')
+    # its eyes squeezed shut
+    stroke(a, "M 290 470 L 370 515 L 290 560", width=34)
+    stroke(a, "M 610 470 L 530 515 L 610 560", width=34)
+    # the thermometer, its bulb in the mouth and its stem out past its side, red to the line
+    a.add(f'<path d="M 450 690 L 880 500" stroke="{LILAC}" stroke-width="66" stroke-linecap="round"/>',
+          f'<path d="M 450 690 L 690 584" stroke="{RED}" stroke-width="26" stroke-linecap="round"/>',
+          f'<circle cx="450" cy="690" r="78" fill="{RED}" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<circle cx="450" cy="690" r="54" fill="{RED}"/>')
+    a.render("error", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_lost() -> None:
+    """A server that stops reporting: the server's ghost, an O of surprise on its face."""
+    a = Art("tsLost")
+    a.ambient(cy=520, opacity=.8)
+    for y, w in ((430, 90), (560, 60)):
+        stroke(a, f"M {110 - w} {y} H 110", color=LILAC, width=26, glow=False)
+    ghost = ("M 200 850 V 470 A 300 300 0 0 1 800 470 V 850 Q 750 790 700 850 Q 650 910 600 850 "
+             "Q 550 790 500 850 Q 450 910 400 850 Q 350 790 300 850 Q 250 910 200 850 Z")
+    a.solid(f'<path d="{ghost}" {{fill}} {{stroke}}/>', width=36)
+    for x in (405, 595):
+        a.add(f'<ellipse cx="{x}" cy="470" rx="78" ry="105" fill="{a.url("Glow")}" filter="{a.url("Soft")}" opacity=".5"/>',
+              f'<ellipse cx="{x}" cy="470" rx="42" ry="62" fill="{MINT}"/>')
+    a.add(f'<ellipse cx="500" cy="660" rx="48" ry="62" fill="{INDIGO_DEEP}" stroke="{MINT}" stroke-width="28"/>')
+    a.render("lost", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_farm() -> None:
+    """A farm with a red message: a barn, worried, a red flag on its roof."""
+    a = Art("tsFarm")
+    a.ambient(cy=580, opacity=.8)
+    a.add(f'<path d="M 500 270 V 70" stroke="{LILAC}" stroke-width="24" stroke-linecap="round"/>',
+          f'<path d="M 512 62 L 700 115 L 512 172 Z" fill="{RED}" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<path d="M 512 62 L 700 115 L 512 172 Z" fill="{RED}" stroke="{RED}" stroke-width="16" stroke-linejoin="round"/>')
+    a.solid('<path d="M 130 880 V 530 L 500 255 L 870 530 V 880 Z" {fill} {stroke}/>', width=36)
+    # its barn door
+    a.add(f'<rect x="385" y="680" width="230" height="200" fill="none" stroke="{LILAC}" stroke-opacity=".7" stroke-width="20"/>',
+          f'<path d="M 385 680 L 615 880 M 615 680 L 385 880" stroke="{LILAC}" stroke-opacity=".7" stroke-width="20"/>')
+    eyes(a, 500, 515, gap=220, r=42)
+    stroke(a, "M 335 430 L 415 410 M 585 410 L 665 430", color=LILAC, width=24, glow=False)
+    stroke(a, "M 445 625 Q 500 590 555 625", width=30)
+    a.render("farm", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_key() -> None:
+    """A key that will not open: a key, puzzled, its shaft tied in a loop."""
+    a = Art("tsKey")
+    a.ambient(cy=520, opacity=.8)
+    # the shaft, in the key's own frame: u along it from the bow's centre, v across it, up. On the
+    # way it loops up and back over itself (a trochoid, x = t - 3 sin t, y = 3 cos t), drawn in two
+    # halves so the second crosses over the first
+    th, ox, oy, u0, k = math.radians(40), 270, 330, 470, 56
+
+    def at(u: float, v: float) -> str:
+        return f"{ox + u * math.cos(th) + v * math.sin(th):.0f} {oy + u * math.sin(th) - v * math.cos(th):.0f}"
+
+    def loop(t0: float, t1: float) -> str:
+        ts = [t0 + (t1 - t0) * n / 32 for n in range(33)]
+        return " L ".join(at(u0 + k * (t - 3 * math.sin(t)), k * (3 * math.cos(t) + 3)) for t in ts)
+
+    tube(a, f"M {at(180, 0)} L {loop(-math.pi, 0)}", width=52)
+    tube(a, f"M {loop(0, math.pi)} L {at(840, 0)}", width=52)
+    for u in (735, 805):
+        a.add(f'<path d="M {at(u, -20)} L {at(u, -95)}" stroke="{a.url("Rim")}" stroke-width="40" stroke-linecap="round"/>')
+    a.solid(f'<circle cx="{ox}" cy="{oy}" r="200" {{fill}} {{stroke}}/>', width=36)
+    eyes(a, ox, 310, gap=150, r=36, rs=(.9, 1.35))
+    stroke(a, "M 158 222 L 218 237 M 310 197 L 380 172", color=LILAC, width=24, glow=False)
+    stroke(a, "M 195 425 Q 225 400 255 425 T 315 425 T 375 425", width=28)
+    a.render("key", product="vpnhood-manager", prefix="trouble")
+
+
+def trouble_apps() -> None:
+    """Apps that cannot connect: a phone in tears, its Wi-Fi struck through."""
+    a = Art("tsApps")
+    a.ambient(cy=540, opacity=.8)
+    a.solid('<rect x="265" y="95" width="470" height="820" rx="95" {fill} {stroke}/>', width=36)
+    a.bar(435, 160, 130, 26, fill=LILAC, opacity=.5)
+    # the Wi-Fi, dimmed, and the stroke through it
+    wifi = f'fill="none" stroke="{LILAC}" stroke-opacity=".6" stroke-width="30" stroke-linecap="round"'
+    a.add(f'<path d="M 385 345 A 165 165 0 0 1 615 345" {wifi}/>',
+          f'<path d="M 435 395 A 95 95 0 0 1 565 395" {wifi}/>',
+          f'<circle cx="500" cy="440" r="22" fill="{LILAC}" opacity=".6"/>')
+    a.add(f'<path d="M 395 255 L 605 460" stroke="{RED}" stroke-width="34" stroke-linecap="round"/>')
+    eyes(a, 500, 590, gap=180, r=38)
+    a.add(f'<path d="M 410 640 Q 380 700 410 725 Q 440 700 410 640 Z" fill="{CYAN}" stroke="{CYAN}" stroke-width="10" stroke-linejoin="round"/>')
+    stroke(a, "M 430 790 Q 500 735 570 790", width=30)
+    a.render("apps", product="vpnhood-manager", prefix="trouble")
+
+
 def phone(a: Art, x, y, w, h, lit_rows: int = 1) -> None:
     """A phone: its body, a speaker slot and app rows on the screen, the first ones lit."""
     a.solid(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{w * .2:.0f}" {{fill}} {{stroke}}/>', width=10)
@@ -572,4 +783,8 @@ if __name__ == "__main__":
     server_profiles()
     farms()
     roles()
+    troubleshooting()
     manager_promo()
+    for problem in (trouble_status, trouble_ssh, trouble_never_connects, trouble_error,
+                    trouble_lost, trouble_farm, trouble_key, trouble_apps):
+        problem()

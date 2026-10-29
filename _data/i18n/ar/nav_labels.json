@@ -24,5 +24,6 @@
   "access-points": "نقاط الوصول",
   "server-profiles": "ملفات تعريف الخوادم",
   "farms": "مزارع الخوادم",
-  "roles": "الأدوار"
+  "roles": "الأدوار",
+  "troubleshooting": "استكشاف الأخطاء وإصلاحها"
 }

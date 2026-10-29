@@ -24,5 +24,6 @@
   "access-points": "Puntos de acceso",
   "server-profiles": "Perfiles de servidor",
   "farms": "Granjas de servidores",
-  "roles": "Roles"
+  "roles": "Roles",
+  "troubleshooting": "Solución de problemas"
 }
