@@ -22,5 +22,6 @@
   "add-server": "Sunucu ekleyin",
   "access-points": "Erişim noktaları",
   "server-profiles": "Sunucu profilleri",
-  "farms": "Sunucu çiftlikleri"
+  "farms": "Sunucu çiftlikleri",
+  "roles": "Roller"
 }

@@ -476,6 +476,34 @@ def farms() -> None:
     a.render("farms", product="vpnhood-manager")
 
 
+def roles() -> None:
+    """Roles: a project's team, one person a row with their role, the owner's lit, and the shield of what a role allows."""
+    a = Art("dhMgrRoles")
+    a.ambient(cy=470)
+    # the panel, as on Add a server: a window with its three dots
+    a.solid('<rect x="130" y="170" width="640" height="560" rx="40" {fill} {stroke}/>', width=10)
+    a.add(f'<path d="M 130 260 H 770" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="3"/>')
+    for n in range(3):
+        a.add(f'<circle cx="{188 + n * 40}" cy="215" r="12" fill="{LILAC}" opacity=".45"/>')
+    # the team: a person, a name and a role chip on each row
+    for n in range(3):
+        y = 310 + n * 110
+        owner = n == 0
+        tone, op = (MINT, .9) if owner else (LILAC, .45)
+        a.add(f'<rect x="190" y="{y}" width="520" height="84" rx="24" fill="{INDIGO_DEEP}" fill-opacity=".8" stroke="{VIOLET}" stroke-opacity=".3" stroke-width="2"/>',
+              f'<circle cx="240" cy="{y + 30}" r="13" fill="{tone}" opacity="{op}"/>',
+              f'<path d="M 214 {y + 68} Q 240 {y + 40} 266 {y + 68}" fill="none" stroke="{tone}" stroke-width="12" stroke-linecap="round" opacity="{op}"/>')
+        a.bar(290, y + 34, 170 - n * 30, 16, fill=LILAC, opacity=.4)
+        a.bar(540, y + 28, 120, 28, fill=tone, opacity=.9 if owner else .3, glow=owner)
+    # the shield over the panel's corner: what a role allows
+    a.solid('<path d="M 760 575 L 860 615 V 700 Q 860 790 760 835 Q 660 790 660 700 V 615 Z" {fill} {stroke}/>', width=12)
+    check = 'M 715 705 L 748 738 L 808 676'
+    a.add(f'<path d="{check}" fill="none" stroke="{MINT}" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<path d="{check}" fill="none" stroke="{MINT}" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>')
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("roles", product="vpnhood-manager")
+
+
 def phone(a: Art, x, y, w, h, lit_rows: int = 1) -> None:
     """A phone: its body, a speaker slot and app rows on the screen, the first ones lit."""
     a.solid(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{w * .2:.0f}" {{fill}} {{stroke}}/>', width=10)
@@ -543,4 +571,5 @@ if __name__ == "__main__":
     certificates()
     server_profiles()
     farms()
+    roles()
     manager_promo()

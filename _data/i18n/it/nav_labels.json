@@ -22,5 +22,6 @@
   "add-server": "Aggiungi un server",
   "access-points": "Punti di accesso",
   "server-profiles": "Profili server",
-  "farms": "Server farm"
+  "farms": "Server farm",
+  "roles": "Ruoli"
 }

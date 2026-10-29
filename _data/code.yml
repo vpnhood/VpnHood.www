@@ -173,6 +173,18 @@ manager_put: "PUT"
 manager_put_post: "PUT &amp; POST"
 manager_access_token: "Access Token"
 manager_file_url: "File Url"
+manager_team: "Team"
+manager_team_members: "Team Members"
+manager_add_user: "Add User"
+manager_add_bot: "Add Bot"
+manager_role: "Role"
+manager_api_key: "API Key"
+manager_reset_api_key: "Reset API Key"
+manager_project_reader: "Project Reader"
+manager_access_token_writer: "Access Token Writer"
+manager_project_writer: "Project Writer"
+manager_project_admin: "Project Admin"
+manager_project_owner: "Project Owner"
 
 # Cloudflare, the reverse proxy the docs use as their example, as its dashboard says it,
 # and the HTTPS ports its proxy passes on

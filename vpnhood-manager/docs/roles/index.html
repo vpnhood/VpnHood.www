@@ -1,0 +1,70 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_roles
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for the MANAGER of 2026-10-28 and read from both sources: the access server of
+  production (v4.0.426, commit 6ade3000, on GrayMint.Authorization 3.2.190; develop's team code
+  is the same) and its console's main with the team fixes of 2026-10-28 (4b4af8a, in production
+  the same day): roles shown in words (VpnHoodUiUtil.FormatRoleName), Team in the menu only for a
+  role with RoleRead, Add User refusing an address already on the team, and the key dialogs titled
+  API Key. The roles and their permissions are
+  Security/Roles.cs. One role a person (TeamController AllowUserMultiRole
+  false), a bot never an owner (AllowBotAppOwner false); an owner cannot remove themselves or
+  change their own role, and only an owner makes or changes an owner (GrayMint's TeamService).
+  Add User takes an email and adds the person as ProjectReader; an address with no account gets
+  a bare one and no email is sent, and the team sees only the address until the person's first
+  request to the project. Removing a person keeps any account that was used. Add Bot adds a
+  ProjectReader bot and shows its key once, as an Authorization header value; Reset API Key
+  replaces it. The API's Swagger UI is api.vpnhood.com's root (RedirectRootToSwaggerUi). No
+  screenshot: the team list shows people's email addresses. Production's configs are not in the
+  repo, so the team settings above are the repo's appsettings. MANAGER's screen text is a
+  placeholder from _data/code.yml, filled in by copy.html. No links to the GitHub wiki.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-roles.svg" %}
+
+<h2 id="where">{{ t.where_title }}</h2>
+<p>{% include copy.html s=t.where_desc %}</p>
+
+<h2 id="roles">{{ t.roles_title }}</h2>
+<p>{{ t.roles_intro }}</p>
+<ul>
+  <li>{% include copy.html s=t.role_reader %}</li>
+  <li>{% include copy.html s=t.role_token_writer %}</li>
+  <li>{% include copy.html s=t.role_writer %}</li>
+  <li>{% include copy.html s=t.role_admin %}</li>
+  <li>{% include copy.html s=t.role_owner %}</li>
+</ul>
+
+<h2 id="add">{{ t.add_title }}</h2>
+<p>{% include copy.html s=t.add_how %}</p>
+<p>{{ t.add_tell }}</p>
+
+<h2 id="change">{{ t.change_title }}</h2>
+<p>{% include copy.html s=t.change_how %}</p>
+
+<h2 id="remove">{{ t.remove_title }}</h2>
+<p>{% include copy.html s=t.remove_how %}</p>
+
+<h2 id="owner">{{ t.owner_title }}</h2>
+<p>{{ t.owner_desc }}</p>
+<p>{% include copy.html s=t.owner_hand %}</p>
+
+<h2 id="bots">{{ t.bots_title }}</h2>
+<p>{{ t.bots_what }}</p>
+<p>{% include copy.html s=t.bots_add %}</p>
+<p>{% include copy.html s=t.bots_reset %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="https://api.vpnhood.com" target="_blank" rel="noopener noreferrer">{{ t.next_api }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}
