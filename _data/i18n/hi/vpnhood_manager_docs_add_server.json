@@ -23,7 +23,7 @@
   "keys_title": "एक्सेस कीज़ बनाएं",
   "keys_desc": "<b>[manager_access_tokens]</b> में जाकर अपने डिवाइसों के लिए एक्सेस की बनाएं। फिर हर डिवाइस पर <a href=\"/vpnhood-client/download/\">VpnHood! CLIENT</a> इंस्टॉल करें, की जोड़ें और कनेक्ट करें।",
   "run_title": "दैनिक उपयोग",
-  "run_desc": "एक मैनेज्ड सर्वर भी स्टैंडअलोन VpnHood! SERVER की तरह ही काम करता है, इसलिए यह उसी तरह चलता है, लॉग तैयार करता है और अपडेट होता है: देखें <a href=\"/vpnhood-server/docs/install/#manage\">सर्वर शुरू और बंद करना</a>, या Docker में <a href=\"/vpnhood-server/docs/docker/#manage\">सर्वर शुरू करना, बंद करना और जांचना</a>।",
+  "run_desc": "एक मैनेज्ड सर्वर भी स्टैंडअलोन VpnHood! SERVER की तरह ही काम करता है, इसलिए यह उसी तरह चलता है, लॉग तैयार करता है और अपडेट होता है: देखें <a href=\"/vpnhood-server/docs/install/#manage\">सर्वर शुरू और बंद करें</a>, या Docker में <a href=\"/vpnhood-server/docs/docker/#manage\">सर्वर शुरू करें, रोकें और जांचें</a>।",
   "next_title": "अगले कदम",
   "next_access_points": "वे पते सेट करें जिन पर आपका सर्वर कनेक्ट होता है और जिन्हें वह अपनी की (keys) में शामिल करता है",
   "next_domain": "विश्वसनीय सर्टिफ़िकेट के साथ अपने सर्वर को अपना कस्टम डोमेन दें"

@@ -31,6 +31,7 @@ vpnhood-manager:
   - group: getting-started
     pages:
       - url: /vpnhood-manager/docs/add-server/
+      - url: /vpnhood-manager/docs/troubleshooting/
   - group: reference
     pages:
       - url: /vpnhood-manager/docs/farms/

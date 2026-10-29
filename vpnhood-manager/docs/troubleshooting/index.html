@@ -1,0 +1,121 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_troubleshooting
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for the MANAGER of 2026-10-28 and read from its code: production's access server
+  (v4.0.426, commit 6ade3000) and agent, the console's main, and VpnHood! SERVER v9.0.859.
+  A server's status is ServerCache.CalculateState: NotInstalled until it first configures, then
+  Error while it reports a config error, Lost once it has not reported for three status
+  intervals and 15 s (the interval is 120 s by default; production's may differ, hence "every few
+  minutes"), Configuring, Disabled, Idle, Active. New sessions go only to an enabled, not full
+  server that is Idle, Active or Configuring (ServerSelectorService). The server card shows the
+  error in red under Error; the Access Points card a red icon beside each port the server could
+  not open (ServerStatusUpdater). The agent marks every access point missing from the server's
+  report NotListening, and the server reports only the addresses it listens on, so the console shows
+  those icons only on a Listen Yes address (console of 2026-10-29; the agent stops marking the
+  others in its next release: finding 30 in the MANAGER improvements plan). The server retries its settings every minute (ConfigureInterval), and after
+  a week of failures only every 30 minutes, with one try at each restart (ConfigErrorTracker).
+  The SSH install dials public addresses only, answers sudo's prompt with the Login Password, and
+  fails "Installation failed!" when /opt/VpnHoodServer has no publish.json; the console's error
+  dialog shows the reply under Details. An install command stays valid: the server's
+  authorization changes only when it is deleted. A farm whose token cannot be built keeps its old
+  one and shows FarmTokenBuilder's message under its name; a farm that never had one gives every
+  key "The server farm token has not been initialized properly." (GetRequiredServerToken): both
+  checked on production's test project on 2026-10-28 with a throwaway farm, deleted after. The
+  wiki's "Could not find any public access point for the ServerFarm" is that case; its message
+  no longer exists. MANAGER's labels and messages are placeholders from _data/code.yml, filled in
+  by copy.html. No screenshot: each state needs a broken server. No links to the GitHub wiki.
+  The list of problems under the lead links to each one; each has a character drawn by
+  tools/make-docs-heroes.py (trouble-<id>.svg, the id its heading's), decorative, so alt="".
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-troubleshooting.svg" %}
+
+<nav class="vh-docs-toc" aria-labelledby="toc-title">
+  <p id="toc-title" class="vh-docs-toc-title">{{ t.toc_title }}</p>
+  <ul>
+    <li><a class="vh-docs-toc-link" href="#status"><img src="/assets/images/vpnhood-manager/docs/trouble-status.svg" alt="" width="64" height="64">{{ t.status_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#ssh"><img src="/assets/images/vpnhood-manager/docs/trouble-ssh.svg" alt="" width="64" height="64">{{ t.ssh_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#never-connects"><img src="/assets/images/vpnhood-manager/docs/trouble-never-connects.svg" alt="" width="64" height="64">{{ t.never_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#error"><img src="/assets/images/vpnhood-manager/docs/trouble-error.svg" alt="" width="64" height="64">{{ t.error_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#lost"><img src="/assets/images/vpnhood-manager/docs/trouble-lost.svg" alt="" width="64" height="64">{{ t.lost_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#farm"><img src="/assets/images/vpnhood-manager/docs/trouble-farm.svg" alt="" width="64" height="64">{{ t.farm_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#key"><img src="/assets/images/vpnhood-manager/docs/trouble-key.svg" alt="" width="64" height="64">{{ t.key_title }}</a></li>
+    <li><a class="vh-docs-toc-link" href="#apps"><img src="/assets/images/vpnhood-manager/docs/trouble-apps.svg" alt="" width="64" height="64">{{ t.apps_title }}</a></li>
+  </ul>
+</nav>
+
+<h2 id="status" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-status.svg" alt="" width="48" height="48" loading="lazy">{{ t.status_title }}</h2>
+<p>{% include copy.html s=t.status_intro %}</p>
+<ul>
+  <li>{% include copy.html s=t.st_not_installed %}</li>
+  <li>{% include copy.html s=t.st_configuring %}</li>
+  <li>{% include copy.html s=t.st_working %}</li>
+  <li>{% include copy.html s=t.st_disabled %}</li>
+  <li>{% include copy.html s=t.st_lost %}</li>
+  <li>{% include copy.html s=t.st_error %}</li>
+</ul>
+<p>{% include copy.html s=t.status_new %}</p>
+
+<h2 id="ssh" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-ssh.svg" alt="" width="48" height="48" loading="lazy">{{ t.ssh_title }}</h2>
+<p>{% include copy.html s=t.ssh_desc %}</p>
+<ul>
+  <li>{% include copy.html s=t.ssh_no_public %}</li>
+  <li>{{ t.ssh_connect }}</li>
+  <li>{% include copy.html s=t.ssh_denied %}</li>
+  <li>{% include copy.html s=t.ssh_password %}</li>
+  <li>{% include copy.html s=t.ssh_failed %}</li>
+</ul>
+
+<h2 id="never-connects" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-never-connects.svg" alt="" width="48" height="48" loading="lazy">{{ t.never_title }}</h2>
+<p>{% include copy.html s=t.never_desc %}</p>
+<ul>
+  <li>{{ t.never_output }}</li>
+  <li>{% include copy.html s=t.never_outbound %}</li>
+  <li>{% include copy.html s=t.never_log %}</li>
+</ul>
+
+<h2 id="error" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-error.svg" alt="" width="48" height="48" loading="lazy">{{ t.error_title }}</h2>
+<p>{% include copy.html s=t.error_desc %}</p>
+<ul>
+  <li>{% include copy.html s=t.error_tcp %}</li>
+  <li>{% include copy.html s=t.error_version %}</li>
+</ul>
+<p>{{ t.error_restart }}</p>
+
+<h2 id="lost" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-lost.svg" alt="" width="48" height="48" loading="lazy">{{ t.lost_title }}</h2>
+<p>{% include copy.html s=t.lost_desc %}</p>
+<p>{% include copy.html s=t.lost_fix %}</p>
+
+<h2 id="farm" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-farm.svg" alt="" width="48" height="48" loading="lazy">{{ t.farm_title }}</h2>
+<p>{{ t.farm_desc }}</p>
+<ul>
+  <li>{% include copy.html s=t.farm_self_signed %}</li>
+  <li>{% include copy.html s=t.farm_domain_only %}</li>
+</ul>
+
+<h2 id="key" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-key.svg" alt="" width="48" height="48" loading="lazy">{{ t.key_title }}</h2>
+<p>{% include copy.html s=t.key_desc %}</p>
+
+<h2 id="apps" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-apps.svg" alt="" width="48" height="48" loading="lazy">{{ t.apps_title }}</h2>
+<p>{{ t.apps_intro }}</p>
+<ul>
+  <li>{{ t.apps_key }}</li>
+  <li>{{ t.apps_no_server }}</li>
+  <li>{% include copy.html s=t.apps_unreachable %}</li>
+</ul>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/certificates/#domain">{{ t.next_domain }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

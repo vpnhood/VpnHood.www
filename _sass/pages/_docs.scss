@@ -249,6 +249,81 @@
     }
 }
 
+// A page's list of what it covers, under the lead: a card a section, each with the section's
+// small picture over its title, linking down to it, four in a row and two on a phone. The
+// troubleshooting page lists its problems this way, and each picture comes back beside its
+// problem's heading (.vh-docs-problem).
+.vh-docs-article .vh-docs-toc-title{
+    margin: 0 0 .75rem;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: calc(.08em * var(--vh-tracking));
+    text-transform: uppercase;
+    color: var(--vh-text-dim);
+}
+
+.vh-docs-article .vh-docs-toc ul{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-docs-article .vh-docs-toc li{
+    margin: 0;
+}
+
+.vh-docs-toc-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    height: 100%;
+    padding: 1rem .75rem;
+    border: 1px solid var(--vh-hairline);
+    border-radius: 16px;
+    background-color: var(--vh-surface);
+    color: var(--vh-text);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color .2s ease;
+}
+
+.vh-docs-toc-link:hover,
+.vh-docs-toc-link:focus-visible{
+    border-color: var(--vh-border-strong);
+    color: var(--vh-text);
+}
+
+.vh-docs-toc-link img{
+    width: 64px;
+    height: 64px;
+}
+
+@media (max-width: 767.98px){
+    .vh-docs-article .vh-docs-toc ul{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.vh-docs-article .vh-docs-problem{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.vh-docs-problem img{
+    flex: none;
+    width: 48px;
+    height: 48px;
+}
+
 .vh-docs-article ul,
 .vh-docs-article ol{
     margin-bottom: 1.25rem;
