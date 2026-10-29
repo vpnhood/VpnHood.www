@@ -24,17 +24,21 @@
     });
   }
 
-  // Invisible unless Cloudflare wants the reader to tick a box; then it shows above the
-  // status line, in the page's theme.
+  // Invisible unless Cloudflare wants a closer look; then it shows above the status line,
+  // in the page's theme, and goes again once it has passed.
   function getToken(box) {
     return loadTurnstile().then(function (turnstile) {
       return new Promise(function (resolve, reject) {
-        turnstile.render(box.querySelector('.vh-search-check'), {
+        var check = box.querySelector('.vh-search-check');
+        turnstile.render(check, {
           sitekey: box.getAttribute('data-vh-sitekey'),
           action: 'search',
           appearance: 'interaction-only',
           theme: document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark',
-          callback: resolve,
+          callback: function (token) {
+            check.hidden = true;
+            resolve(token);
+          },
           'error-callback': function () { reject(); return true; }
         });
       });
