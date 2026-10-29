@@ -9,7 +9,7 @@
   Not a Jekyll layout: a layout renders after the page body, so the variables
   header.html assigns would not exist yet when the copy needs them. The sidebar is
   _data/docs_nav.yml keyed by the product folder; a section with no entry gets the
-  article alone.
+  article alone. The site search box (search-form.html) tops the sidebar.
 {%- endcomment -%}
 {%- assign vh_dn_section = vh_base_url | split: "/" | where_exp: "s", "s != ''" | first -%}
 {%- assign vh_dn = site.data.docs_nav[vh_dn_section] %}
@@ -18,7 +18,10 @@
     {% include breadcrumb.html visible=true %}
     <div class="vh-docs-grid{% unless vh_dn %} vh-docs-grid--solo{% endunless %}">
       {%- if vh_dn %}
-      {% include docs-nav.html %}
+      <div class="vh-docs-side">
+        {% include search-form.html id="vhDocsSearch" %}
+        {% include docs-nav.html %}
+      </div>
       {%- endif %}
       <article class="vh-docs-article">
 {{ include.article }}

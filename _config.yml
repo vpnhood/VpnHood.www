@@ -28,6 +28,17 @@ defaults:
       path: ""
     values:
       image: /assets/images/og-image.png
+
+# Site search (/search/, assets/js/search.js): the Worker that answers it (workers/search/)
+# and the Cloudflare Turnstile widget it checks. Neither is a secret. A local build asks
+# `wrangler dev` instead, with Cloudflare's always-pass test sitekey: the live widget
+# accepts www.vpnhood.com only.
+search:
+  endpoint: https://search.vpnhood.com/
+  turnstile_sitekey: 0x4AAAAAAFqScLUrmoRDVL3a
+  dev_endpoint: http://localhost:8787/
+  dev_turnstile_sitekey: 1x00000000000000000000AA
+
 # Per-language page trees (/fa/..., /fr/...) are generated at build time by
 # _plugins/i18n-pages.rb — no translated page copies exist in the repo. See
 # CLAUDE.md "Translations".
@@ -66,6 +77,7 @@ exclude:
   - .tmp/           # scratch notes and screenshots; listed so `jekyll serve` stops rebuilding on every write
   - vh_translator/
   - tools/          # build-time scripts (light art, phone mockups); they were being published as pages
+  - workers/        # Cloudflare Worker sources (the site search API); deployed by wrangler, not published
 
 # No `safe: true`: the site builds in our own GitHub Actions workflow (not the legacy
 # shared Pages builder that forced safe mode), so custom plugins in _plugins/

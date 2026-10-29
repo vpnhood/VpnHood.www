@@ -12,6 +12,10 @@
 node_modules/
 .jekyll-cache/
 
+# Wrangler's local state and secrets (workers/)
+.wrangler/
+.dev.vars
+
 # Scratch notes and working files. Never committed.
 /.tmp/
 

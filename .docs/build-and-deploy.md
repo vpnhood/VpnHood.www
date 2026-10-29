@@ -61,6 +61,45 @@ The full picture behind the "Build & deploy" summary in [CLAUDE.md](../CLAUDE.md
   [china-bar-geo.md](china-bar-geo.md)). When `www` *is* proxied, Cloudflare SSL/TLS mode
   must be **Full** (Flexible causes a redirect loop with GitHub Pages).
 
+## Search Worker (`workers/search/`)
+
+The site search API ([components.md](components.md#site-search--_includessearch-formhtml--searchindexhtml--assetsjssearchjs--workerssearch))
+is a Cloudflare Worker, `vpnhood-search`, on the Free plan, at the Custom Domain
+`search.vpnhood.com` (Cloudflare made its DNS record and certificate). It is not part of the
+site build: Jekyll excludes `workers/`, and a push to `main` never deploys it.
+
+- **Deploy** from `workers/search/` with `npx wrangler@4 deploy` (after `npx wrangler@4
+  login` once). `wrangler.jsonc` is the whole configuration: the Custom Domain, the
+  `SearchBudget` Durable Object (SQLite-backed, the only kind the Free plan has), and the
+  `vars` — the Google app's serving config, the allowed origins, the Turnstile action and
+  hostname, `DAILY_CAP` and `PER_VISITOR_PER_MINUTE`.
+- **Secrets** live only in Cloudflare: `GOOGLE_API_KEY` and `TURNSTILE_SECRET`, set with
+  `npx wrangler@4 secret put <NAME>` and never written to a file in the repo.
+- **Turnstile**: the widget "VpnHood site search" (managed mode, hostname `www.vpnhood.com`
+  only); its public sitekey is `_config.yml` `search.turnstile_sitekey`.
+- **Google Cloud**: the project `vpnhood-site-search` (in the VpnHood folder, billed to
+  Firebase Payment) holds only the search. Agent Search, as Google now calls Vertex AI
+  Search, has two apps there, both Enterprise edition, which website search requires:
+  `vpnhood-site` over a basic website data store (Google's public index of
+  `www.vpnhood.com/*`, mostly matching words), and `vpnhood-site-adv` over two advanced ones
+  that Google crawls itself and matches by meaning — `vpnhood-site-en` (the site minus the
+  12 language folders) and `vpnhood-site-intl` (those folders), both refreshed from the
+  sitemap. `SERVING_CONFIG` names the app the Worker uses. The API key is restricted to the
+  Discovery Engine API.
+- **What Google bills** (billing catalog, 2026-10-29): the first 10,000 Enterprise searches a
+  month on the billing account are free, then $4 per 1,000; index storage is free up to
+  10 GiB a month (the site is about 0.4 GiB). A $1 budget emails the billing admins at
+  $0.50 and $1. It cannot switch billing off by itself: that needs a Pub/Sub topic Google's
+  billing account may post to, which the organization's domain-restricted-sharing policy
+  forbids.
+- **Changing the cap**: `DAILY_CAP` in `wrangler.jsonc`, then deploy. It is the only hard
+  limit on what Google bills. 300 a day stays under the free 10,000 a month.
+- **Cap alert**: the first search the cap turns away each UTC day emails `ALERT_TO`
+  (`trudy@vpnhood.com`) from `search@alerts.vpnhood.com`, through the `send_email` binding.
+  Email Routing is on for the subdomain `alerts.vpnhood.com` only, with its own MX and SPF
+  records, so vpnhood.com's Google mail is untouched; the binding can send only to that one
+  verified destination address.
+
 ## Retiring a URL
 
 GitHub Pages cannot 301, so a retired page needs two things:

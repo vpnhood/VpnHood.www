@@ -111,6 +111,45 @@ both, a glow, the site's primary button, and the art
 `vpnhood-manager/docs/promo-manager.svg` from `tools/make-docs-heroes.py` (hidden on a phone).
 Styles: `.vh-docs-managed` in `_docs.scss`. The button is tagged `docs-start-manager`.
 
+## Site search — `_includes/search-form.html` + `search/index.html` + `assets/js/search.js` + `workers/search/`
+
+Google answers the searches (Vertex AI Search, a website data store over `www.vpnhood.com/*`
+in the Google Cloud project `vpnhood-site-search`), so a reader can search by meaning, not
+only by the words on the page. Every search Google answers is billed, so the browser never
+calls Google: it goes through our Worker at `search.vpnhood.com`, which holds the API key and
+the limits.
+
+- **The box** is `search-form.html`, an ordinary GET form to the language's `/search/`, so it
+  needs no script. `docs.html` puts it at the top of every docs sidebar; `/search/` repeats
+  it under its title. Its one label is `nav_labels.json` `search`, which also names `/search/`
+  in the breadcrumb. The field is a `.form-control` styled through `.vh-search`: Helix's
+  `input[type="search"]` rule would otherwise paint it white, with an `!important` padding,
+  and Helix's `box-shadow: none !important` on every search field is why focus is an outline.
+- **`/search/`** is a docs-style page (`noindex`, out of the sitemap, in all 13 trees). Its
+  messages are `search.json` keys rendered into `data-vh-msg-*`; `[query]` is filled in as
+  text. `search.js` reads `?q=`, renders a Turnstile widget (managed mode, shown only when
+  Cloudflare wants the reader to tick a box), posts `{q, lang, token}` to the Worker as
+  `text/plain`, so the browser sends no CORS preflight, and lists the results. Google's
+  snippets are HTML: they are parsed inert and only their text and `<b>` are kept; a result
+  outside `https://www.vpnhood.com/` is dropped. Any failure, the daily cap included, reads
+  as `unavailable`.
+- **The Worker** (`workers/search/src/index.js`) checks, in order: the Turnstile token
+  (single-use, action `search`, hostname `www.vpnhood.com`); a day's cache per language and
+  query, which answers repeats for free; then the `SearchBudget` Durable Object, which allows
+  `PER_VISITOR_PER_MINUTE` searches per IP and `DAILY_CAP` per UTC day in all; then Google's
+  `searchLite`. It keeps the results to the page's language tree: English is every path no
+  other language prefixes. `DAILY_CAP` is the only hard limit on the bill, since Google
+  Cloud has none: 300 a day is about 9,000 a month, under Google's free 10,000. The first
+  search the cap turns away each day emails `trudy@vpnhood.com`
+  ([build-and-deploy.md](build-and-deploy.md#search-worker-workerssearch)).
+- **Changing the limits**: edit `vars` in `workers/search/wrangler.jsonc` and deploy the
+  Worker ([build-and-deploy.md](build-and-deploy.md#search-worker-workerssearch)). A site push
+  never deploys it.
+- **Local preview**: a local build points `/search/` at `http://localhost:8787/` with
+  Cloudflare's always-pass test sitekey (`_config.yml` `search.dev_*`), so run
+  `npx wrangler@4 dev` in `workers/search/` with a `.dev.vars` (see `wrangler.jsonc`). The
+  live widget accepts `www.vpnhood.com` only.
+
 ## Theme toggle — `_includes/theme-toggle.html` + `assets/js/theme.js`
 
 See [colour-themes.md](colour-themes.md).

@@ -51,11 +51,69 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
-.vh-docs-nav{
+// The sidebar: the search box over the section's pages, sticky as one piece.
+.vh-docs-side{
     position: sticky;
     top: 9.5rem;
     padding-inline-end: 1.5rem;
     border-inline-end: 1px solid var(--vh-hairline);
+}
+
+// The site search box (_includes/search-form.html), in the sidebar and atop /search/: a
+// field with its magnifier button inside the end, the field's own clear button hidden.
+// The field is a .form-control, which keeps Helix's white input[type="search"] rule (with
+// its !important padding) off it, and is styled through .vh-search to outrank Bootstrap's.
+// Helix also forces box-shadow: none on every search field, so focus shows as an outline.
+.vh-search{
+    position: relative;
+    margin-bottom: 1.75rem;
+}
+
+.vh-search .vh-search-input{
+    padding-block: .55rem;
+    padding-inline: .9rem 2.75rem;
+    border: 1px solid var(--vh-border);
+    border-radius: 10px;
+    background-color: var(--vh-surface-raised);
+    color: var(--vh-text);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.vh-search .vh-search-input::placeholder{
+    color: var(--vh-text-dim);
+}
+
+.vh-search .vh-search-input:focus{
+    border-color: var(--vh-border-strong);
+    outline: 2px solid rgba(var(--purple-300-rgb), .45);
+    outline-offset: 1px;
+    background-color: var(--vh-surface-raised);
+    color: var(--vh-text);
+}
+
+.vh-search-input::-webkit-search-cancel-button{
+    appearance: none;
+}
+
+.vh-search-btn{
+    position: absolute;
+    inset-block: 0;
+    inset-inline-end: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: var(--vh-text-dim);
+}
+
+.vh-search-btn:hover,
+.vh-search-btn:focus-visible{
+    color: var(--vh-text);
 }
 
 .vh-docs-nav-group{
@@ -104,7 +162,7 @@
         grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
     }
-    .vh-docs-nav{
+    .vh-docs-side{
         position: static;
         padding: 0 0 1.5rem;
         border-inline-end: 0;
@@ -393,6 +451,49 @@
 
 .vh-docs-article .vh-docs-index p{
     margin: .3rem 0 0;
+}
+
+// /search/ (assets/js/search.js): the box under the title, then the results as the
+// section index draws its pages - the title as a link, its address, and Google's snippet
+// with the words it matched in the headings' ink. The address is a dir="ltr" span, so it
+// reads left to right and still sits at the start of a Persian or Arabic line.
+.vh-docs-article .vh-search{
+    max-width: 36rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.vh-docs-article .vh-search-status{
+    color: var(--vh-text-dim);
+}
+
+.vh-docs-article .vh-search-results{
+    padding: 0;
+    list-style: none;
+}
+
+.vh-docs-article .vh-search-results > li{
+    margin: 0 0 1.75rem;
+}
+
+.vh-search-results a{
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.vh-docs-article .vh-search-results p{
+    margin: 0;
+}
+
+.vh-docs-article .vh-search-results .vh-search-url{
+    margin: .1rem 0 .35rem;
+    font-size: 13px;
+    color: var(--vh-text-dim);
+    overflow-wrap: anywhere;
+}
+
+.vh-search-results b{
+    font-weight: 600;
+    color: var(--vh-text);
 }
 
 // The VpnHood! MANAGER promo on a SERVER docs page (_includes/docs-managed.html), right

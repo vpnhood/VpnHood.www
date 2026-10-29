@@ -27,14 +27,14 @@ Loaded automatically by file path. When a task touches an area before any of its
 - [translations.md](.claude/rules/translations.md) — translating by hand before a commit, vhtranslator as the fallback, LRM, spacing inside strings, per-key fallback
 - [css-and-assets.md](.claude/rules/css-and-assets.md) — SCSS layout, vendored framework CSS/JS, fonts, GTM
 - [colour-themes.md](.claude/rules/colour-themes.md) — dark/light tokens, `_light.scss`, theme bootstrap
-- [components.md](.claude/rules/components.md) — FAQ, compare table, prices, code, terminal, locations, MANAGER promo, breadcrumb, CTA tracking, consent
+- [components.md](.claude/rules/components.md) — FAQ, compare table, prices, code, terminal, locations, MANAGER promo, site search, breadcrumb, CTA tracking, consent
 - [markup-patterns.md](.claude/rules/markup-patterns.md) — section heads, buttons, cards, AOS, mega-menu, anchors
 - [legal-pages.md](.claude/rules/legal-pages.md) — synced from the VpnHood repo, `/legal/` addresses are permanent
 - [china-bar.md](.claude/rules/china-bar.md) — `loc=CN` promo bar
 
 ## Build & deploy — [.docs/build-and-deploy.md](.docs/build-and-deploy.md)
 
-`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build (the fallback for any key left untranslated), swaps any translation that changed a placeholder for its English source (`tools/check-placeholders.py --heal`) and commits the translations back (`[skip ci]`), syncs the legal pages from the VpnHood repo (fail-fast), fails on a self-link (`tools/check-self-links.py`) or on any internal link, anchor or asset that doesn't resolve in any of the 13 trees (`tools/check-links.py`; legal pages only warn), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production.
+`bundle exec jekyll build` / `bundle exec jekyll serve --livereload`. CI runs `vhtranslator` before every build (the fallback for any key left untranslated), swaps any translation that changed a placeholder for its English source (`tools/check-placeholders.py --heal`) and commits the translations back (`[skip ci]`), syncs the legal pages from the VpnHood repo (fail-fast), fails on a self-link (`tools/check-self-links.py`) or on any internal link, anchor or asset that doesn't resolve in any of the 13 trees (`tools/check-links.py`; legal pages only warn), then publishes `_site`. `Gemfile.lock` must keep both `x64-mingw-ucrt` and `x86_64-linux`. `www` may or may not be Cloudflare-proxied; when it is, SSL mode must be **Full**. A retired URL goes in `_plugins/legacy-redirects.rb` (stubs for every language tree) plus a Cloudflare Single Redirect for a real 301 — enable the rule only once the target exists in production. The site search API is a Cloudflare Worker in `workers/search/`, deployed on its own with `npx wrangler@4 deploy`; a push never deploys it, and its `DAILY_CAP` is the only limit on what Google bills.
 
 ## Blog
 

@@ -1,0 +1,34 @@
+// The site search API (src/index.js), on the Workers Free plan. Deploy from this folder
+// with `npx wrangler@4 deploy`; see .docs/build-and-deploy.md. Two secrets live only in
+// Cloudflare (`npx wrangler@4 secret put <NAME>`): GOOGLE_API_KEY, the Google Cloud API
+// key restricted to the Discovery Engine API, and TURNSTILE_SECRET, the widget's secret.
+// `npx wrangler@4 dev` reads both from .dev.vars instead (gitignored), with Cloudflare's
+// always-pass test secret 1x0000000000000000000000000000000AA, whose answers carry no
+// action and the hostname example.com: TURNSTILE_ACTION= and TURNSTILE_HOSTNAMES=example.com.
+{
+  "name": "vpnhood-search",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "routes": [{ "pattern": "search.vpnhood.com", "custom_domain": true }],
+  "durable_objects": {
+    "bindings": [{ "name": "BUDGET", "class_name": "SearchBudget" }]
+  },
+  // The Free plan has only SQLite-backed Durable Objects
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SearchBudget"] }],
+  // The daily-cap alert: Email Routing on alerts.vpnhood.com (its own MX, so vpnhood.com's
+  // Google mail is untouched), and only to a destination address verified in the account
+  "send_email": [{ "name": "ALERT_EMAIL", "destination_address": "trudy@vpnhood.com" }],
+  "vars": {
+    // Google Cloud project vpnhood-site-search (180940048251): the app (engine) over the website data store
+    "SERVING_CONFIG": "projects/180940048251/locations/global/collections/default_collection/engines/vpnhood-site/servingConfigs/default_search",
+    "ALLOWED_ORIGINS": "https://www.vpnhood.com,http://localhost:4000,http://127.0.0.1:4000",
+    "TURNSTILE_ACTION": "search",
+    "TURNSTILE_HOSTNAMES": "www.vpnhood.com",
+    // Searches Google may answer per UTC day, and per visitor per minute
+    "DAILY_CAP": "300",
+    "PER_VISITOR_PER_MINUTE": "10",
+    "ALERT_FROM": "search@alerts.vpnhood.com",
+    "ALERT_TO": "trudy@vpnhood.com"
+  }
+}

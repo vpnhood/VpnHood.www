@@ -99,6 +99,9 @@ legacy CMS `/templates`, `/media`, `/plugins` folders.
   the generated `assets/css/fonts.css` — rerun `python tools/fetch-fonts.py` to change the
   weights or subsets, and never hand-edit either output. Each face keeps `font-display:swap`
   and a `unicode-range`, so a visitor downloads only the subsets their text needs and the
-  system font shows until then. GTM is the one remote script left, and it now renders only
-  when `jekyll.environment == "production"`: a local `jekyll serve` used to send page views
-  and CTA clicks to the live GA4 property, which put our own testing in the reports.
+  system font shows until then. GTM is one of two remote scripts left, and it now renders
+  only when `jekyll.environment == "production"`: a local `jekyll serve` used to send page
+  views and CTA clicks to the live GA4 property, which put our own testing in the reports.
+  The other is Cloudflare Turnstile's `api.js`, which `search.js` loads on `/search/` only:
+  Cloudflare requires it from its own URL, never self-hosted (see
+  [components.md](components.md#site-search--_includessearch-formhtml--searchindexhtml--assetsjssearchjs--workerssearch)).

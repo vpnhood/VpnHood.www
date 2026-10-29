@@ -3,6 +3,7 @@
   "items": {
     "aria_breadcrumb": "Breadcrumb",
     "aria_docs_nav": "Documentation",
+    "search": "Search",
     "home": "Home",
     "docs": "Docs",
     "self-hosted-vpn": "Self-hosted VPN",

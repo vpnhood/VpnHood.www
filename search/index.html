@@ -1,0 +1,43 @@
+---
+layout: none
+i18n: search
+extra_css:
+  - /assets/css/custom.css
+noindex: true
+sitemap: false
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Site search results. The box is search-form.html, which every docs page carries in
+  its sidebar; search.js reads ?q=, gets a Cloudflare Turnstile token, asks the search
+  Worker (site.search.endpoint, workers/search/) for this language's pages and lists
+  them. The messages are rendered here for the script, never written in it; [query] is
+  the reader's words, filled in as text.
+{%- endcomment -%}
+{%- if jekyll.environment == "production" -%}
+  {%- assign vh_search_endpoint = site.search.endpoint -%}
+  {%- assign vh_search_sitekey = site.search.turnstile_sitekey -%}
+{%- else -%}
+  {%- assign vh_search_endpoint = site.search.dev_endpoint -%}
+  {%- assign vh_search_sitekey = site.search.dev_turnstile_sitekey -%}
+{%- endif %}
+{% capture vh_article %}
+<h1 class="vh-txt-grad-purple-400">{{ site.data.i18n[vh_lang].nav_labels.search | default: site.data.i18n.en.nav_labels.search }}</h1>
+{% include search-form.html id="vhSearchMain" %}
+<div id="vhSearch" class="vh-search-page"
+  data-vh-endpoint="{{ vh_search_endpoint }}"
+  data-vh-sitekey="{{ vh_search_sitekey }}"
+  data-vh-search-lang="{{ vh_lang }}"
+  data-vh-msg-searching="{{ t.searching | escape }}"
+  data-vh-msg-results="{{ t.results | escape }}"
+  data-vh-msg-none="{{ t.no_results | escape }}"
+  data-vh-msg-unavailable="{{ t.unavailable | escape }}">
+  <div class="vh-search-check"></div>
+  <p class="vh-search-status" role="status"></p>
+  <ol class="vh-search-results"></ol>
+</div>
+<script defer src="/assets/js/search.js"></script>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}
