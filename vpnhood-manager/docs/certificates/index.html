@@ -13,7 +13,8 @@ extra_css:
   Written for the MANAGER of 2026-10-19 (access server v4.0.414, origin/development; the
   console's develop) and read from both sources: Add creates a self-signed certificate,
   Public and Manual, and binds it to the server it was added from; Upload takes a PFX with
-  an exportable key, defaults to Private in the console, and is always farm-wide; a new
+  an exportable key, defaults to Public in the console as Add does (Private until the
+  console of 2026-10-29), and is always farm-wide; a new
   certificate for a domain the farm has replaces the old one and keeps its visibility if
   higher; every non-DomainOnly certificate goes to its servers whatever its visibility, and
   a server picks one by SNI; the token carries the PublicInToken certificate's name and
