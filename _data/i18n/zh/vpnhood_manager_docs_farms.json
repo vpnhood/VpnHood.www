@@ -21,7 +21,7 @@
   "keys_title": "集群的密钥",
   "keys_farm": "每个访问密钥都属于一个集群，并可在其所有服务器上使用。在 <b>[manager_access_tokens]</b> 下创建密钥时选择集群；当项目中有多个集群时，才会显示此字段。",
   "keys_carry": "密钥包含应用连接集群所需的一切：集群中写入密钥的服务器地址，以及其证书的域名和指纹。集群的 <b>[manager_access_points]</b> 会显示这些信息。<a href=\"/vpnhood-manager/docs/access-points/\">接入点</a>说明哪些地址会写入密钥，<a href=\"/vpnhood-manager/docs/certificates/#keys\">SSL/TLS 证书</a>说明写入哪个证书。",
-  "keys_move": "通过编辑 <b>[manager_server_farm]</b> 移到另一个集群的密钥，将无法再在旧集群的服务器上使用，MANAGER 也无法在那里更新它：请重新将其分发给用户。",
+  "keys_move": "通过编辑 <b>[manager_server_farm]</b> 移到另一个集群的密钥，会带着它的应用一起迁移：应用用它连接旧集群的服务器时，服务器会把新集群中的这个密钥交给应用，应用下次连接时就会到达新集群；设置为保持连接的应用会自动重试。这需要新集群开启 <b>[manager_push_token]</b>，并且应用仍能连上旧集群的某台服务器；否则，请重新将密钥分发给用户。",
   "push_title": "向应用推送 Token（Push token to clients）",
   "push_desc": "密钥包含您复制它时其集群拥有的地址和证书。在集群页面开启 <b>[manager_push_token]</b> 后，每个应用连接时，MANAGER 都会向其提供集群当前的地址和证书，因此发生变更后，应用无需您重新分发密钥即可保持最新。每个新集群都默认开启此选项。",
   "push_wait": "只有当地址包含在密钥中的所有服务器都在运行时，MANAGER 才会发送新密钥，以确保应用只会拿到已经可用的地址。没有地址、只有域名的密钥（例如<a href=\"/vpnhood-manager/docs/access-points/#reverse-proxy\">位于反向代理之后</a>的情况）无需等待。",
