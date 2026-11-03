@@ -613,10 +613,10 @@
     .vh-docs-managed-art{ display: none; }
 }
 
-// The x64 processor requirement on the install pages (_includes/docs-cpu.html), right after
-// "Before you start". It stops an install, so it is a card like the MANAGER promo, edged in
-// the warning ink, the colour of its art's badge: it must not pass for one more note. On a
-// phone the art shrinks rather than goes, as it is what says "limitation" at a glance.
+// The x64 processor requirement on the system requirements page (#processor). It stops a
+// server on hardware that passes the rest, so it is a card like the MANAGER promo, edged in
+// the warning ink, the colour of its art's badge: it must not pass for one more paragraph. On
+// a phone the art shrinks rather than goes, as it is what says "limitation" at a glance.
 .vh-docs-article .vh-docs-req{
     display: flex;
     align-items: flex-start;
@@ -628,7 +628,6 @@
     background:
         linear-gradient(120deg, rgba(var(--orange-200-rgb), .12), rgba(var(--orange-200-rgb), 0) 60%),
         var(--vh-surface-raised);
-    scroll-margin-top: 9.5rem;
 }
 
 .vh-docs-req-art{

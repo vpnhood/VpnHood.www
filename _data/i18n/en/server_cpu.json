@@ -1,6 +1,0 @@
-{
-  "title": "On x64, check the processor first",
-  "desc": "Since version 9.1.864, the server needs an x64 processor with SSE4.2 and POPCNT, as .NET 11 does. Every x64 processor from the last ten years has them, but some VPS providers hide them behind a basic virtual processor, which Linux names <code>[cpu_kvm_name]</code>. On such a machine the server stops as soon as it starts. ARM64 machines are not affected.",
-  "check": "To check an x64 machine, run this on it:",
-  "fix": "If it prints <code>[cpu_not_supported]</code>, ask your provider to change the machine's CPU type to <code>[cpu_type_host]</code> or <code>[cpu_type_v2]</code>. If they cannot, choose another provider."
-}

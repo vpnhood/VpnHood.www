@@ -4,7 +4,7 @@
 Writes `assets/images/<product>/docs/hero-<name>.svg`, for the docs of VpnHood! SERVER and
 VpnHood! MANAGER, `vpnhood-manager/docs/promo-manager.svg`, the art of the MANAGER promo on the
 server pages, `vpnhood-server/docs/requirement-cpu.svg`, the art of the processor requirement on
-the install pages, and `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems.
+the system requirements page, and `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems.
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
 The art speaks the language of the guides' heroes (`assets/images/guides/*.svg`): a deep
@@ -163,6 +163,27 @@ def docs() -> None:
         a.bar(610, 630 + n * 50, w, 16, fill=LILAC, opacity=.42)
     a.ambient(cy=860, rx=330, ry=70, opacity=.5)
     a.render("docs")
+
+
+def requirements() -> None:
+    """System requirements: a server, and in front of it the checklist it passes, every box ticked."""
+    a = Art("dhReq")
+    a.ambient(cy=470)
+    # the server, behind and to the left: the machine the list is about
+    a.server_unit(110, 190, 480, 120, rim=False, lit=True)
+    a.server_unit(110, 340, 480, 120, rim=False, lit=False)
+    # the checklist, in front: three ticked boxes, each with its line
+    a.solid('<rect x="370" y="290" width="480" height="540" rx="40" {fill} {stroke}/>', width=10)
+    for n in range(3):
+        y = 360 + n * 150
+        a.add(f'<rect x="420" y="{y}" width="92" height="92" rx="22" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".55" stroke-width="6"/>')
+        tick = f"M 440 {y + 48} L 461 {y + 69} L 494 {y + 26}"
+        a.add(f'<path d="{tick}" fill="none" stroke="{TEAL}" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" filter="{a.url("Soft")}" opacity=".55"/>',
+              f'<path d="{tick}" fill="none" stroke="{MINT}" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>')
+        a.bar(550, y + 24, 230 - n * 40, 20, fill=LILAC, opacity=.45)
+        a.bar(550, y + 58, 150 - n * 20, 14, fill=LILAC, opacity=.25)
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("requirements")
 
 
 def install() -> None:
@@ -429,7 +450,7 @@ ORANGE = "#ff8533"   # the site's --orange-200, its warning ink
 
 
 def cpu_requirement() -> None:
-    """The processor requirement on the install pages (_includes/docs-cpu.html), not a hero: a
+    """The processor requirement's card on the system requirements page, not a hero: a
     processor with two of its four blocks missing, and a warning badge on its corner. Shown
     about 112px wide, like the MANAGER promo; orange marks only the warning, as the site's
     warnings do."""
@@ -802,6 +823,7 @@ if __name__ == "__main__":
     self_hosted_docs()
     how_it_works()
     docs()
+    requirements()
     install()
     docker()
     ip_blocking()

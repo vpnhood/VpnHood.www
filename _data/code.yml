@@ -100,12 +100,18 @@ domain_api_example: "api.example.com"
 # The operating system, as its commands print it
 route_src: "src"
 
-# The processor requirement (_includes/docs-cpu.html): the name Linux gives QEMU's basic
-# virtual CPU, the CPU types a provider can set instead, and what the check prints
+# The processor requirement (vpnhood-server/docs/requirements/#processor): the
+# name Linux gives QEMU's basic virtual CPU, the CPU types a provider can set instead, what the
+# check prints, and what .NET prints when it stops for want of them
 cpu_kvm_name: "Common KVM processor"
 cpu_type_host: "host"
 cpu_type_v2: "x86-64-v2"
 cpu_not_supported: "Not supported"
+cpu_error: "The current CPU is missing one or more of the following instruction sets"
+
+# The commands the server's Linux VPN adapter runs (vpnhood-server/docs/requirements/)
+cmd_ip: "ip"
+cmd_iptables: "iptables"
 
 # VpnHood! MANAGER, as its screens say it
 manager_servers: "Servers"

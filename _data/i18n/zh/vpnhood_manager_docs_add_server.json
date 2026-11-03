@@ -4,7 +4,7 @@
   "title": "添加服务器",
   "lead": "将服务器添加到 VpnHood! MANAGER，MANAGER 将自动为您安装 VpnHood! SERVER，或提供一键安装命令。安装完成后，服务器将自动连接至 MANAGER 并签发访问凭证。",
   "before_title": "准备工作",
-  "req_machine": "一台拥有公网 IP 地址的 Linux 机器（x64 或 arm64 架构），并具有 root 权限。由于安装命令需通过 sudo 执行，即使以 root 用户登录，系统也必须安装 sudo。",
+  "req_machine": "一台拥有公网 IP 地址的 Linux 机器（x64 或 arm64 架构），并具有 root 权限。由于安装命令需通过 sudo 执行，即使以 root 用户登录，系统也必须安装 sudo。服务器支持的系统见<a href=\"/vpnhood-server/docs/requirements/\">系统要求</a>。",
   "req_port": "确保 TCP 端口 <code>[server_port]</code> 已在服务器本机防火墙以及云服务商安全组中放行。",
   "req_ssh": "若通过 MANAGER 的 SSH 功能自动安装，请确保机器的 SSH 端口（默认为 <code>[port_ssh]</code>）对 MANAGER 开放。",
   "req_docker": "如使用 Docker 安装，需安装 Docker 及其 Compose 插件。在 Ubuntu、Debian 及其衍生发行版中，安装程序可自动为您安装。",

@@ -1,0 +1,92 @@
+---
+layout: none
+i18n: vpnhood_server_docs_requirements
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  What a machine needs to run VpnHood! SERVER since v9.1.864, its first release on .NET 11.
+  The distributions are those .NET 11 supports (supported-os.md in dotnet/core, glibc 2.27 on
+  x64 and arm64), plus Amazon Linux and Arch; a version we did not test is listed on that
+  support, and fixed if someone reports it (owner, 2026-11-03). Tested 2026-11-03 with
+  v9.1.864's own install command, each to its service, its TUN adapter with NAT, and TCP 443:
+  the Debian 13 cloud image as a VPS gets it (it had no ICU; the installer added it), and in
+  systemd containers Ubuntu 22.04, 24.04, 26.04, Debian 12, 13, AlmaLinux 8, 9, 10, Rocky 9,
+  CentOS Stream 10, Amazon Linux 2023, openSUSE Leap 16.0, Fedora 45 and Arch. Alpine installs
+  but cannot run the glibc build. Windows: Windows 11 Pro without Hyper-V answers New-NetNat
+  with "Invalid class", so the server ran as a proxy; the Containers feature did not bring
+  WinNAT, Hyper-V did. Windows Server 2025 had WinNAT with neither. Names and versions are
+  markup, as there is nothing in them to translate; the versions are dir="ltr", or an RTL page
+  turns their list around.
+
+  The processor requirement is a card, edged in the warning ink with its own art, as it is the
+  one that stops a server on hardware that passes the rest: since v9.1.864 the server runs on
+  .NET 11, which refuses to start on an x64 processor below x86-64-v2 (CX16, POPCNT, SSE3,
+  SSSE3, SSE4.1, SSE4.2), prints cpu_error and exits, and systemd restarts it forever. A VPS
+  whose host gives it QEMU's basic kvm64 model hides them all, whatever the hardware. ARM64's
+  minimum did not change. The check greps two of the six flags: kvm64 lacks every one, and a
+  real processor with SSE4.2 and POPCNT has the rest. It sat on the install pages until the
+  owner moved it here (2026-11-03); its old anchor, #cpu, went with it.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-requirements.svg" %}
+
+<h2 id="linux">{{ t.linux_title }}</h2>
+<p>{{ t.linux_desc }}</p>
+<table>
+  <thead><tr><th>{{ t.th_distribution }}</th><th>{{ t.th_versions }}</th></tr></thead>
+  <tbody>
+    <tr><td>Ubuntu</td><td><span dir="ltr">22.04, 24.04, 26.04</span></td></tr>
+    <tr><td>Debian</td><td><span dir="ltr">12, 13</span></td></tr>
+    <tr><td>Red Hat Enterprise Linux, AlmaLinux, Rocky Linux</td><td><span dir="ltr">8, 9, 10</span></td></tr>
+    <tr><td>CentOS Stream</td><td><span dir="ltr">9, 10</span></td></tr>
+    <tr><td>Fedora</td><td><span dir="ltr">44, 45</span></td></tr>
+    <tr><td>openSUSE Leap</td><td><span dir="ltr">16.0</span></td></tr>
+    <tr><td>SUSE Linux Enterprise Server</td><td><span dir="ltr">15 SP7, 16.0</span></td></tr>
+    <tr><td>Amazon Linux</td><td><span dir="ltr">2023</span></td></tr>
+    <tr><td>Arch Linux</td><td>{{ t.arch_rolling }}</td></tr>
+  </tbody>
+</table>
+<p>{{ t.linux_needs }}</p>
+<p>{% include copy.html s=t.linux_tun %}</p>
+<p>{{ t.linux_unsupported }}</p>
+
+<h2 id="docker">{{ t.docker_title }}</h2>
+<p>{% include copy.html s=t.docker_desc %}</p>
+
+<h2 id="windows">{{ t.windows_title }}</h2>
+<p>{{ t.windows_desc }}</p>
+<ul>
+  <li>{{ t.win_x64 }}</li>
+  <li>{{ t.win_ipv6 }}</li>
+  <li>{{ t.win_hyperv }}</li>
+</ul>
+
+<h2 id="processor">{{ t.processor_title }}</h2>
+<aside class="vh-docs-req">
+  <img class="vh-docs-req-art" src="/assets/images/vpnhood-server/docs/requirement-cpu.svg" alt="" width="112" height="112" loading="lazy">
+  <div>
+    <p class="vh-docs-req-title">{{ t.processor_card_title }}</p>
+    <p>{% include copy.html s=t.processor_desc %}</p>
+    {% include terminal.html caption=t.processor_check cmd='grep -qw sse4_2 /proc/cpuinfo && grep -qw popcnt /proc/cpuinfo && echo Supported || echo "Not supported"' %}
+    <p>{% include copy.html s=t.processor_fix %}</p>
+  </div>
+</aside>
+
+<h2 id="network">{{ t.network_title }}</h2>
+<ul>
+  <li>{{ t.network_ip }}</li>
+  <li>{% include copy.html s=t.network_port %}</li>
+</ul>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/install/">{{ t.next_install }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/add-server/">{{ t.next_manager }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

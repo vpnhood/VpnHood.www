@@ -27,12 +27,11 @@ extra_css:
 
 <h2 id="before-you-start">{{ t.before_title }}</h2>
 <ul>
-  <li>{{ t.req_machine }}</li>
+  <li>{% include copy.html s=t.req_machine %}</li>
   <li>{{ t.req_root }}</li>
   <li>{{ t.req_docker }}</li>
   <li>{% include copy.html s=t.req_port %}</li>
 </ul>
-{% include docs-cpu.html %}
 
 {% include docs-managed.html href="/vpnhood-manager/docs/add-server/#docker" %}
 

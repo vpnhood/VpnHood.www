@@ -4,7 +4,7 @@
   "title": "Docker ile VpnHood! SERVER Kurulumu",
   "lead": "Sunucuyu Docker yüklü herhangi bir Linux makinesinde konteyner olarak çalıştırın. Tek bir komutla yönetilen veya bağımsız sunucu olarak kurulur; konteyner sunucunun kesintisiz ve güncel kalmasını sağlar.",
   "before_title": "Başlamadan önce",
-  "req_machine": "Genel (public) IP adresine sahip, x64 veya arm64 mimarisinde bir Linux makinesi. İmaj her iki mimariyi de destekler.",
+  "req_machine": "Genel (public) IP adresine sahip, x64 veya arm64 mimarisinde bir Linux makinesi. İmaj her iki mimariyi de destekler. Sunucunun çalıştığı sistemler <a href=\"/vpnhood-server/docs/requirements/\">Sistem gereksinimleri</a> sayfasında listelenir.",
   "req_root": "Root erişimi.",
   "req_docker": "Compose eklentisiyle birlikte Docker. Yükleyici; Ubuntu, Debian ve bunlara dayalı dağıtımlarda kurulumu sizin yerinize yapabilir.",
   "req_port": "Hem makinenin güvenlik duvarında hem de barındırma sağlayıcınızda (hosting) TCP <code>[server_port]</code> bağlantı noktası açık olmalıdır. Konteyner ana makinenin ağını paylaştığı için sunucu doğrudan bu bağlantı noktasını dinler.",

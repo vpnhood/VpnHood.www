@@ -11,7 +11,7 @@
   "flow_devices_title": "أجهزتك",
   "flow_devices_desc": "أضف المفتاح إلى VpnHood! CLIENT على هاتفك أو حاسوبك.",
   "before_title": "قبل أن تبدأ",
-  "req_machine": "جهاز بعنوان IP عام يعمل بنظام Linux على معمارية x64 أو arm64. يعمل VpnHood! SERVER على Windows أيضًا، ولكن يُنصح باستخدام Linux؛ حيث يدعم NAT في Windows بروتوكول IPv4 فقط، بينما يدعم Linux بروتوكول IPv6 بالكامل.",
+  "req_machine": "جهاز بعنوان IP عام يعمل بنظام Linux على معمارية x64 أو arm64. يعمل VpnHood! SERVER على Windows أيضًا، ولكن يُنصح باستخدام Linux؛ حيث يدعم NAT في Windows بروتوكول IPv4 فقط، بينما يدعم Linux بروتوكول IPv6 بالكامل. تسرد صفحة <a href=\"/vpnhood-server/docs/requirements/\">متطلبات النظام</a> الأنظمة التي يعمل عليها الخادم.",
   "req_admin": "صلاحيات Root. تعمل أوامر التثبيت عبر sudo، لذا يجب توفره على الجهاز حتى لو سجّلت الدخول كـ root.",
   "req_port": "فتح منفذ TCP رقم <code>[server_port]</code> في جدار حماية الجهاز ولدى مزود الاستضافة، وهو المنفذ الذي يستمع إليه الخادم.",
   "mgr_box_title": "أضِف خوادمك وأدرها وراقبها بسهولة مع VpnHood! MANAGER",

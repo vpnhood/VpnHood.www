@@ -26,12 +26,11 @@ extra_css:
 
 <h2 id="before-you-start">{{ t.before_title }}</h2>
 <ul>
-  <li>{{ t.req_machine }}</li>
+  <li>{% include copy.html s=t.req_machine %}</li>
   <li>{% include copy.html s=t.req_port %}</li>
   <li>{% include copy.html s=t.req_ssh %}</li>
   <li>{{ t.req_docker }}</li>
 </ul>
-{% include docs-cpu.html %}
 
 <h2 id="add">{{ t.add_title }}</h2>
 <p>{% include copy.html s=t.add_how %}</p>

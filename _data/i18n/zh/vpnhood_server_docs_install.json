@@ -11,7 +11,7 @@
   "flow_devices_title": "您的设备",
   "flow_devices_desc": "只需将密钥添加到手机或电脑上的 VpnHood! CLIENT 即可。",
   "before_title": "准备工作",
-  "req_machine": "一台拥有公网 IP 地址的 x64 或 arm64 架构 Linux 机器。VpnHood! SERVER 也支持 Windows，但推荐使用 Linux：Windows 的 NAT 仅转换 IPv4，只有在 Linux 上服务器才能完美支持 IPv6。",
+  "req_machine": "一台拥有公网 IP 地址的 x64 或 arm64 架构 Linux 机器。VpnHood! SERVER 也支持 Windows，但推荐使用 Linux：Windows 的 NAT 仅转换 IPv4，只有在 Linux 上服务器才能完美支持 IPv6。服务器支持的系统见<a href=\"/vpnhood-server/docs/requirements/\">系统要求</a>。",
   "req_admin": "Root 权限。安装命令需要通过 sudo 运行，因此即使您以 root 身份登录，系统上也必须安装 sudo。",
   "req_port": "开放 TCP 端口 <code>[server_port]</code>（需同时在服务器系统防火墙和服务商的安全组中放行）。该端口为服务器监听端口。",
   "mgr_box_title": "借助 VpnHood! MANAGER 轻松添加、管理和监控服务器",

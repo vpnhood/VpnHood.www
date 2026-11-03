@@ -4,7 +4,7 @@
   "title": "Sunucu ekleyin",
   "lead": "VpnHood! MANAGER'a bir sunucu ekleyin; MANAGER, VpnHood! SERVER kurulumunu sizin yerinize otomatik yapsın veya gerekli tek komutu sunsun. Ardından sunucu MANAGER'a bağlanır ve erişim anahtarlarını üretir.",
   "before_title": "Başlamadan önce",
-  "req_machine": "Genel (public) IP adresine sahip, x64 veya arm64 mimarisinde Linux çalıştıran ve root erişimi olan bir makine. Kurulum komutları sudo ile çalışır; bu nedenle root olarak giriş yapsanız bile sudo'nun makinede bulunması gerekir.",
+  "req_machine": "Genel (public) IP adresine sahip, x64 veya arm64 mimarisinde Linux çalıştıran ve root erişimi olan bir makine. Kurulum komutları sudo ile çalışır; bu nedenle root olarak giriş yapsanız bile sudo'nun makinede bulunması gerekir. Sunucunun çalıştığı sistemler <a href=\"/vpnhood-server/docs/requirements/\">Sistem gereksinimleri</a> sayfasında listelenir.",
   "req_port": "Hem makinenin güvenlik duvarında hem de barındırma sağlayıcınızda <code>[server_port]</code> TCP bağlantı noktasının açık olması gerekir.",
   "req_ssh": "MANAGER'ın sunucuyu SSH üzerinden kurabilmesi için makinenin SSH bağlantı noktasının MANAGER'a açık olması gerekir: Değiştirmediyseniz <code>[port_ssh]</code>.",
   "req_docker": "Docker için compose eklentisiyle birlikte Docker gereklidir. Kurulum aracı Ubuntu, Debian ve bunlara dayalı dağıtımlarda bunu sizin yerinize yükleyebilir.",

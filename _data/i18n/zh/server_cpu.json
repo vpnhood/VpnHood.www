@@ -1,6 +1,0 @@
-{
-  "title": "x64 机器请先检查处理器",
-  "desc": "从 9.1.864 版本起，服务器与 .NET 11 一样，需要支持 SSE4.2 和 POPCNT 的 x64 处理器。近十年的 x64 处理器都支持它们，但部分 VPS 提供商会用一个基础虚拟处理器将其隐藏，Linux 把这种处理器显示为 <code>[cpu_kvm_name]</code>。在这样的机器上，服务器一启动就会停止。ARM64 机器不受影响。",
-  "check": "要检查一台 x64 机器，请在该机器上运行：",
-  "fix": "如果输出 <code>[cpu_not_supported]</code>，请让您的提供商将该机器的 CPU 类型改为 <code>[cpu_type_host]</code> 或 <code>[cpu_type_v2]</code>。如果对方无法更改，请选择其他提供商。"
-}

@@ -11,7 +11,7 @@
   "flow_devices_title": "Tus dispositivos",
   "flow_devices_desc": "Añade la clave a VpnHood! CLIENT en tu teléfono u ordenador.",
   "before_title": "Antes de empezar",
-  "req_machine": "Una máquina con IP pública que ejecute Linux en x64 o arm64. VpnHood! SERVER también funciona en Windows, pero recomendamos Linux: el NAT de Windows solo traduce IPv4, por lo que solo en Linux el servidor gestiona IPv6 correctamente.",
+  "req_machine": "Una máquina con IP pública que ejecute Linux en x64 o arm64. VpnHood! SERVER también funciona en Windows, pero recomendamos Linux: el NAT de Windows solo traduce IPv4, por lo que solo en Linux el servidor gestiona IPv6 correctamente. <a href=\"/vpnhood-server/docs/requirements/\">Requisitos del sistema</a> enumera los sistemas en los que funciona el servidor.",
   "req_admin": "Acceso root. Los comandos de instalación usan sudo, por lo que debe estar disponible aunque inicies sesión como root.",
   "req_port": "Puerto TCP <code>[server_port]</code> abierto, tanto en el cortafuegos de la máquina como en el de tu proveedor. Es el puerto en el que escucha el servidor.",
   "mgr_box_title": "Añade, gestiona y monitoriza fácilmente tus servidores con VpnHood! MANAGER",

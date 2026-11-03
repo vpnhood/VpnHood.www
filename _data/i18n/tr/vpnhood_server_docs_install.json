@@ -11,7 +11,7 @@
   "flow_devices_title": "Cihazlarınız",
   "flow_devices_desc": "Anahtarı telefon veya bilgisayarınızdaki VpnHood! CLIENT uygulamasına ekleyin.",
   "before_title": "Başlamadan önce",
-  "req_machine": "Genel (public) bir IP adresine sahip, x64 veya arm64 mimarili bir Linux makinesi. VpnHood! SERVER Windows'ta da çalışır, ancak Linux önerilir: Windows'un NAT yapısı yalnızca IPv4'ü dönüştürür; bu nedenle sunucu IPv6'yı yalnızca Linux üzerinde sorunsuz yönetir.",
+  "req_machine": "Genel (public) bir IP adresine sahip, x64 veya arm64 mimarili bir Linux makinesi. VpnHood! SERVER Windows'ta da çalışır, ancak Linux önerilir: Windows'un NAT yapısı yalnızca IPv4'ü dönüştürür; bu nedenle sunucu IPv6'yı yalnızca Linux üzerinde sorunsuz yönetir. Sunucunun çalıştığı sistemler <a href=\"/vpnhood-server/docs/requirements/\">Sistem gereksinimleri</a> sayfasında listelenir.",
   "req_admin": "Root erişimi. Kurulum komutları sudo aracılığıyla çalışır; bu yüzden root olarak giriş yapsanız bile makinede sudo yüklü olmalıdır.",
   "req_port": "Hem makinenin hem de barındırma sağlayıcınızın güvenlik duvarında TCP <code>[server_port]</code> portu açık olmalıdır. Bu port, sunucunun dinleme yaptığı porttur.",
   "mgr_box_title": "Sunucularınızı VpnHood! MANAGER ile kolayca ekleyin, yönetin ve izleyin",

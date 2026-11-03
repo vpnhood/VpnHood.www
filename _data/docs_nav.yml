@@ -18,6 +18,7 @@ self-hosted-vpn:
 vpnhood-server:
   - group: getting-started
     pages:
+      - url: /vpnhood-server/docs/requirements/
       - url: /vpnhood-server/docs/install/
       - url: /vpnhood-server/docs/docker/
       - url: /vpnhood-server/docs/ip-blocking/

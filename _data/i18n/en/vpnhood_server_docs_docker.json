@@ -4,7 +4,7 @@
   "title": "Install VpnHood! SERVER with Docker",
   "lead": "Run the server as a container on any Linux machine with Docker. One command installs it, as a managed server or a standalone one, and the container keeps the server running and up to date.",
   "before_title": "Before you start",
-  "req_machine": "A Linux machine with a public IP address, on x64 or arm64. The image is built for both.",
+  "req_machine": "A Linux machine with a public IP address, on x64 or arm64. The image is built for both. <a href=\"/vpnhood-server/docs/requirements/\">System requirements</a> lists the systems it runs on.",
   "req_root": "Root access.",
   "req_docker": "Docker with its compose plugin. The installer can install it for you on Ubuntu, Debian and the distributions based on them.",
   "req_port": "TCP port <code>[server_port]</code> open, both in the machine's firewall and in your hosting provider's. The container shares the host's network, so the server listens on the host's port directly.",
