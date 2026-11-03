@@ -1,0 +1,6 @@
+{
+  "title": "Em x64, verifique primeiro o processador",
+  "desc": "Desde a versão 9.1.864, o servidor precisa, assim como o .NET 11, de um processador x64 com SSE4.2 e POPCNT. Todos os processadores x64 dos últimos dez anos têm esses recursos, mas alguns provedores de VPS os escondem atrás de um processador virtual básico, que o Linux chama de <code>[cpu_kvm_name]</code>. Em uma máquina assim, o servidor para assim que inicia. As máquinas ARM64 não são afetadas.",
+  "check": "Para verificar uma máquina x64, execute isto nela:",
+  "fix": "Se aparecer <code>[cpu_not_supported]</code>, peça ao seu provedor para mudar o tipo de CPU da máquina para <code>[cpu_type_host]</code> ou <code>[cpu_type_v2]</code>. Se não for possível, escolha outro provedor."
+}

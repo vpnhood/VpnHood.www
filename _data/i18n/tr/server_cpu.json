@@ -1,0 +1,6 @@
+{
+  "title": "x64'te önce işlemciyi kontrol edin",
+  "desc": "9.1.864 sürümünden itibaren sunucu, .NET 11 gibi, SSE4.2 ve POPCNT destekli bir x64 işlemciye ihtiyaç duyar. Son on yılın tüm x64 işlemcilerinde bunlar vardır, ancak bazı VPS sağlayıcıları bunları, Linux'un <code>[cpu_kvm_name]</code> olarak adlandırdığı basit bir sanal işlemcinin arkasına gizler. Böyle bir makinede sunucu başlar başlamaz durur. ARM64 makineler bundan etkilenmez.",
+  "check": "Bir x64 makineyi kontrol etmek için bu komutu makinede çalıştırın:",
+  "fix": "Komut <code>[cpu_not_supported]</code> yazdırırsa sağlayıcınızdan makinenin CPU türünü <code>[cpu_type_host]</code> veya <code>[cpu_type_v2]</code> olarak değiştirmesini isteyin. Bunu yapamıyorsa başka bir sağlayıcı seçin."
+}

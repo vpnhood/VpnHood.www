@@ -100,6 +100,13 @@ domain_api_example: "api.example.com"
 # The operating system, as its commands print it
 route_src: "src"
 
+# The processor requirement (_includes/docs-cpu.html): the name Linux gives QEMU's basic
+# virtual CPU, the CPU types a provider can set instead, and what the check prints
+cpu_kvm_name: "Common KVM processor"
+cpu_type_host: "host"
+cpu_type_v2: "x86-64-v2"
+cpu_not_supported: "Not supported"
+
 # VpnHood! MANAGER, as its screens say it
 manager_servers: "Servers"
 manager_add: "Add"

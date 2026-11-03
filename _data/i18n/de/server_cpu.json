@@ -1,0 +1,6 @@
+{
+  "title": "Unter x64 zuerst den Prozessor prüfen",
+  "desc": "Seit Version 9.1.864 braucht der Server, wie .NET 11, einen x64-Prozessor mit SSE4.2 und POPCNT. Jeder x64-Prozessor der letzten zehn Jahre hat sie, doch manche VPS-Anbieter verbergen sie hinter einem einfachen virtuellen Prozessor, den Linux <code>[cpu_kvm_name]</code> nennt. Auf einem solchen Rechner beendet sich der Server, sobald er startet. ARM64-Rechner sind nicht betroffen.",
+  "check": "Um einen x64-Rechner zu prüfen, führen Sie diesen Befehl darauf aus:",
+  "fix": "Gibt der Befehl <code>[cpu_not_supported]</code> aus, bitten Sie Ihren Anbieter, den CPU-Typ des Rechners auf <code>[cpu_type_host]</code> oder <code>[cpu_type_v2]</code> umzustellen. Geht das nicht, wählen Sie einen anderen Anbieter."
+}

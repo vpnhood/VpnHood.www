@@ -613,6 +613,55 @@
     .vh-docs-managed-art{ display: none; }
 }
 
+// The x64 processor requirement on the install pages (_includes/docs-cpu.html), right after
+// "Before you start". It stops an install, so it is a card like the MANAGER promo, edged in
+// the warning ink, the colour of its art's badge: it must not pass for one more note. On a
+// phone the art shrinks rather than goes, as it is what says "limitation" at a glance.
+.vh-docs-article .vh-docs-req{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 2rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    border: 1.5px solid var(--vh-warn);
+    border-radius: 20px;
+    background:
+        linear-gradient(120deg, rgba(var(--orange-200-rgb), .12), rgba(var(--orange-200-rgb), 0) 60%),
+        var(--vh-surface-raised);
+    scroll-margin-top: 9.5rem;
+}
+
+.vh-docs-req-art{
+    flex: none;
+    width: 112px;
+    height: auto;
+}
+
+.vh-docs-article .vh-docs-req > div{
+    min-width: 0;
+}
+
+.vh-docs-article .vh-docs-req p{
+    margin: 0 0 1rem;
+}
+
+.vh-docs-article .vh-docs-req p:last-child{
+    margin-bottom: 0;
+}
+
+.vh-docs-article .vh-docs-req .vh-docs-req-title{
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--vh-text);
+}
+
+@media (max-width: 575.98px){
+    .vh-docs-article .vh-docs-req{ gap: 1rem; padding: 1.25rem; }
+    .vh-docs-req-art{ width: 56px; }
+}
+
 // A note and a warning: an edge in the accent or the warning ink, never a filled
 // banner, so a page with three of them still reads as text.
 .vh-docs-note,
