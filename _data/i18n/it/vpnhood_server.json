@@ -4,7 +4,7 @@
   "page_title": "VpnHood! SERVER: software server VPN gratuito e open source",
   "page_desc": "Il motore della tua VPN. Gira sulla tua macchina, gestisce il traffico dei tuoi utenti e risponde solo alla tua infrastruttura.",
   "f_anywhere_title": "Gira ovunque tu possa noleggiare un server",
-  "f_anywhere_desc": "Linux (x64 o ARM64), Windows o Docker: installalo su qualsiasi VPS o macchina dedicata con un solo comando. È subito attivo sulla porta 443, senza bisogno di configurare la rete.",
+  "f_anywhere_desc": "Linux (x64 o ARM64), Windows o Docker: installalo con un solo comando su qualsiasi VPS o macchina dedicata che soddisfi i <a href=\"/vpnhood-server/docs/requirements/\">requisiti di sistema</a>. È subito attivo sulla porta 443, senza bisogno di configurare la rete.",
   "f_stealth_title": "Difficile da individuare, impossibile da bloccare",
   "f_stealth_desc": "Con la Modalità camuffamento, il tunnel prende la forma di normale traffico web, e chi lo sonda senza autenticarsi riceve una semplice risposta da server web invece di qualcosa che valga la pena testare. Non c'è garanzia che ogni rete lo lasci passare, ma c'è ben poco da riconoscere.",
   "f_engine_title": "Solido per natura",

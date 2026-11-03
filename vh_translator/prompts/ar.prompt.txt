@@ -51,4 +51,5 @@ RULES
 - Do not insert bidi marks (LRM U+200E, RLM U+200F) yourself. The tool adds an LRM after
   "VpnHood!" where it is needed — i.e. when the next word is translated. When the next word
   stays Latin ("VpnHood! CLIENT") the punctuation is already inside a Latin run and no mark
-  belongs there.
+  belongs there. The one exception: put an LRM (U+200E) right before ".NET", or the line shows
+  "NET." with its dot moved to the end.

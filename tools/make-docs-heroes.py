@@ -3,8 +3,7 @@
 
 Writes `assets/images/<product>/docs/hero-<name>.svg`, for the docs of VpnHood! SERVER and
 VpnHood! MANAGER, `vpnhood-manager/docs/promo-manager.svg`, the art of the MANAGER promo on the
-server pages, `vpnhood-server/docs/requirement-cpu.svg`, the art of the processor requirement on
-the system requirements page, and `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems.
+server pages, and `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems.
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
 The art speaks the language of the guides' heroes (`assets/images/guides/*.svg`): a deep
@@ -446,38 +445,6 @@ def manager_promo() -> None:
     a.render("manager", product="vpnhood-manager", prefix="promo")
 
 
-ORANGE = "#ff8533"   # the site's --orange-200, its warning ink
-
-
-def cpu_requirement() -> None:
-    """The processor requirement's card on the system requirements page, not a hero: a
-    processor with two of its four blocks missing, and a warning badge on its corner. Shown
-    about 112px wide, like the MANAGER promo; orange marks only the warning, as the site's
-    warnings do."""
-    a = Art("dhCpu")
-    a.ambient(cy=480)
-    # the pins, under the package so it covers their roots
-    for n in range(5):
-        p = 300 + n * 100
-        for d in (f"M {p} 150 V 230", f"M {p} 770 V 850", f"M 150 {p} H 230", f"M 770 {p} H 850"):
-            a.add(f'<path d="{d}" stroke="{LILAC}" stroke-opacity=".55" stroke-width="34" stroke-linecap="round"/>')
-    a.solid('<rect x="210" y="210" width="580" height="580" rx="70" {fill} {stroke}/>', width=16)
-    # the die, its blocks the instruction sets: two lit, two missing
-    a.add(f'<rect x="320" y="320" width="360" height="360" rx="40" fill="{INDIGO_DEEP}" fill-opacity=".85" stroke="{VIOLET}" stroke-opacity=".4" stroke-width="6"/>')
-    for n, (x, y) in enumerate(((360, 360), (520, 360), (360, 520), (520, 520))):
-        if n in (0, 2):
-            a.add(f'<rect x="{x}" y="{y}" width="120" height="120" rx="22" fill="{TEAL}" filter="{a.url("Soft")}" opacity=".6"/>',
-                  f'<rect x="{x}" y="{y}" width="120" height="120" rx="22" fill="{MINT}" opacity=".92"/>')
-        else:
-            a.add(f'<rect x="{x + 9}" y="{y + 9}" width="102" height="102" rx="18" fill="none" stroke="{LILAC}" stroke-opacity=".6" stroke-width="16" stroke-dasharray="30 22"/>')
-    # the warning badge, over the package's corner
-    a.add(f'<circle cx="760" cy="760" r="200" fill="{ORANGE}" filter="{a.url("Softer")}" opacity=".45"/>',
-          f'<circle cx="760" cy="760" r="150" fill="{ORANGE}" stroke="{INDIGO_DEEP}" stroke-width="22"/>',
-          f'<path d="M 760 680 V 778" stroke="{INDIGO_DEEP}" stroke-width="44" stroke-linecap="round"/>',
-          f'<circle cx="760" cy="842" r="26" fill="{INDIGO_DEEP}"/>')
-    a.render("cpu", product="vpnhood-server", prefix="requirement")
-
-
 def access_points() -> None:
     """Access points: a server and its addresses, the one in the keys lit, the other kept out."""
     a = Art("dhMgrAp")
@@ -840,7 +807,6 @@ if __name__ == "__main__":
     roles()
     troubleshooting()
     manager_promo()
-    cpu_requirement()
     for problem in (trouble_status, trouble_ssh, trouble_never_connects, trouble_error,
                     trouble_lost, trouble_farm, trouble_key, trouble_apps):
         problem()

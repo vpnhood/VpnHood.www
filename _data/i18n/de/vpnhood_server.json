@@ -4,7 +4,7 @@
   "page_title": "VpnHood! SERVER: Kostenlose Open-Source-VPN-Server-Software",
   "page_desc": "Das Herzstück Ihres VPNs. Es läuft auf Ihrer eigenen Hardware, leitet den Datenverkehr Ihrer Nutzer und gehorcht nur Ihrer eigenen Infrastruktur.",
   "f_anywhere_title": "Läuft überall, wo Sie mieten können",
-  "f_anywhere_desc": "Linux (x64 oder ARM64), Windows oder Docker: Auf jedem VPS oder dedizierten Server mit nur einem einzigen Befehl installiert. Lauscht standardmäßig auf Port 443 – ganz ohne Netzwerkkonfiguration.",
+  "f_anywhere_desc": "Linux (x64 oder ARM64), Windows oder Docker: Auf jedem VPS oder dedizierten Server, der die <a href=\"/vpnhood-server/docs/requirements/\">Systemanforderungen</a> erfüllt, mit nur einem einzigen Befehl installiert. Lauscht standardmäßig auf Port 443 – ganz ohne Netzwerkkonfiguration.",
   "f_stealth_title": "Kaum zu entdecken, unmöglich zu sperren",
   "f_stealth_desc": "Im Tarnmodus ist der Tunnel so geformt, dass er wie gewöhnlicher Web-Datenverkehr aussieht, und ein nicht authentifizierter Scan erhält nur eine schlichte Webserver-Antwort statt etwas, das sich zu testen lohnt. Kein Netzwerk lässt ihn garantiert durch, aber es gibt wenig, woran ein Filter ansetzen könnte.",
   "f_engine_title": "Von Natur aus stabil",

@@ -36,7 +36,7 @@
   "need_title": "Di cosa hai bisogno",
   "need_desc": "Molto meno di quanto immagini. Non devi acquistare nulla da noi.",
   "need_server_title": "Un server",
-  "need_server_desc": "Qualsiasi VPS o macchina dedicata con Linux o Windows. Questo è l'unico costo previsto, pagato direttamente al tuo provider cloud e non a noi.",
+  "need_server_desc": "Un VPS o una macchina dedicata con Linux o Windows che soddisfi i <a href=\"/vpnhood-server/docs/requirements/\">requisiti di sistema</a>. Questo è l'unico costo previsto, pagato direttamente al tuo provider cloud e non a noi.",
   "need_account_title": "Un account Google",
   "need_account_desc": "Ti serve per accedere a VpnHood! MANAGER, il pannello gratuito che installa e gestisce i tuoi server.",
   "need_skills_title": "Nessuna competenza sistemica richiesta",

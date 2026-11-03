@@ -36,7 +36,7 @@
   "need_title": "İhtiyacınız olanlar",
   "need_desc": "Sandığınızdan çok daha az. Bizden hiçbir şey satın almanıza gerek yok.",
   "need_server_title": "Bir sunucu",
-  "need_server_desc": "Linux veya Windows çalıştıran herhangi bir VPS ya da fiziksel makine. Ücret ödeyeceğiniz tek şey budur ve ödemeyi bize değil, bulut sağlayıcınıza yaparsınız.",
+  "need_server_desc": "Linux veya Windows çalıştıran ve <a href=\"/vpnhood-server/docs/requirements/\">sistem gereksinimlerini</a> karşılayan bir VPS ya da fiziksel makine. Ücret ödeyeceğiniz tek şey budur ve ödemeyi bize değil, bulut sağlayıcınıza yaparsınız.",
   "need_account_title": "Bir Google hesabı",
   "need_account_desc": "Sunucularınızı sizin için kurup çalıştıran ücretsiz panelimiz VpnHood! MANAGER'a giriş yapmak için kullanılır.",
   "need_skills_title": "Sistem yöneticisi olmanıza gerek yok",

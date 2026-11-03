@@ -19,7 +19,6 @@
   "win_ipv6": "Das NAT von Windows übersetzt nur IPv4, daher geht IPv6-Verkehr immer über den Proxy des Servers.",
   "win_hyperv": "Unter Windows 10 und 11 braucht der VPN-Adapter des Servers eingeschaltetes Hyper-V, da das NAT von Windows damit kommt, und Home-Editionen haben kein Hyper-V. Ohne Hyper-V läuft der Server nur als Proxy. Unter Windows Server muss nichts eingeschaltet werden.",
   "processor_title": "Prozessor",
-  "processor_card_title": "Unter x64 zuerst den Prozessor prüfen",
   "processor_desc": "Ein ARM64-Prozessor oder ein x64-Prozessor mit SSE4.2 und POPCNT, wie .NET 11 sie verlangt. Jeder x64-Prozessor der letzten zehn Jahre hat sie, doch manche VPS-Anbieter verbergen sie hinter einem einfachen virtuellen Prozessor, den Linux <code>[cpu_kvm_name]</code> nennt. Auf einem solchen Rechner beendet sich der Server, sobald er startet, mit dem Fehler <code>[cpu_error]</code>.",
   "processor_check": "Um einen Linux-Rechner mit x64-Prozessor zu prüfen, führen Sie diesen Befehl darauf aus:",
   "processor_fix": "Gibt der Befehl <code>[cpu_not_supported]</code> aus, bitten Sie Ihren Anbieter, den CPU-Typ des Rechners auf <code>[cpu_type_host]</code> oder <code>[cpu_type_v2]</code> umzustellen. Geht das nicht, wählen Sie einen anderen Anbieter.",

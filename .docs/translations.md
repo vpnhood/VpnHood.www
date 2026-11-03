@@ -37,7 +37,9 @@ where page *structure* belongs.
 For RTL targets the tool appends an invisible LRM after Latin-word `!`/`?` so "VpnHood!"
 renders correctly — but **only when the next word is actually translated** (RTL) or the
 string ends; "VpnHood! CLIENT" and `VpnHood!<span>ENGINE</span>` stay inside one Latin run
-and get no mark. **Never put an LRM (`&lrm;`/U+200E) in the English source** — page markup
+and get no mark. The tool does not mark `.NET`, whose leading dot an RTL line moves to the
+word's end ("NET."): in `fa`/`ar` it gets an LRM right before it, which their prompts ask for
+and the hand translations carry. **Never put an LRM (`&lrm;`/U+200E) in the English source** — page markup
 that needs a brand literal in an RTL page uses `dir="ltr"` on the element instead (see the
 logo/preloader in `header.html`).
 

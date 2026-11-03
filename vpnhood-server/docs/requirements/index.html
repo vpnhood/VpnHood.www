@@ -22,42 +22,50 @@ extra_css:
   markup, as there is nothing in them to translate; the versions are dir="ltr", or an RTL page
   turns their list around.
 
-  The processor requirement is a card, edged in the warning ink with its own art, as it is the
-  one that stops a server on hardware that passes the rest: since v9.1.864 the server runs on
-  .NET 11, which refuses to start on an x64 processor below x86-64-v2 (CX16, POPCNT, SSE3,
-  SSSE3, SSE4.1, SSE4.2), prints cpu_error and exits, and systemd restarts it forever. A VPS
-  whose host gives it QEMU's basic kvm64 model hides them all, whatever the hardware. ARM64's
-  minimum did not change. The check greps two of the six flags: kvm64 lacks every one, and a
-  real processor with SSE4.2 and POPCNT has the rest. It sat on the install pages until the
-  owner moved it here (2026-11-03); its old anchor, #cpu, went with it.
+  Every section is alike, the processor's included (owner, 2026-11-03: the page is all
+  requirements, so none of them is a card): a title with its icon, then text. The icons of
+  Linux, Docker and the distributions are the brands' own marks, one colour, from Simple Icons
+  (CC0) in _includes/icons/brands/; Simple Icons has no Microsoft or Amazon mark, so Windows'
+  is its four panes, drawn there, and Amazon Linux takes Linux's. One distribution per row, so
+  each has its mark.
+
+  The processor: since v9.1.864 the server runs on .NET 11, which refuses to start on an x64
+  processor below x86-64-v2 (CX16, POPCNT, SSE3, SSSE3, SSE4.1, SSE4.2), prints cpu_error and
+  exits, and systemd restarts it forever. A VPS whose host gives it QEMU's basic kvm64 model
+  hides them all, whatever the hardware. ARM64's minimum did not change. The check greps two of
+  the six flags: kvm64 lacks every one, and a real processor with SSE4.2 and POPCNT has the
+  rest. It sat on the install pages, as a card with an anchor #cpu, until the owner moved it
+  here (2026-11-03).
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-server/docs/hero-requirements.svg" %}
 
-<h2 id="linux">{{ t.linux_title }}</h2>
+<h2 id="linux" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/brands/linux.svg %}</span>{{ t.linux_title }}</h2>
 <p>{{ t.linux_desc }}</p>
-<table>
+<table class="vh-docs-os-table">
   <thead><tr><th>{{ t.th_distribution }}</th><th>{{ t.th_versions }}</th></tr></thead>
   <tbody>
-    <tr><td>Ubuntu</td><td><span dir="ltr">22.04, 24.04, 26.04</span></td></tr>
-    <tr><td>Debian</td><td><span dir="ltr">12, 13</span></td></tr>
-    <tr><td>Red Hat Enterprise Linux, AlmaLinux, Rocky Linux</td><td><span dir="ltr">8, 9, 10</span></td></tr>
-    <tr><td>CentOS Stream</td><td><span dir="ltr">9, 10</span></td></tr>
-    <tr><td>Fedora</td><td><span dir="ltr">44, 45</span></td></tr>
-    <tr><td>openSUSE Leap</td><td><span dir="ltr">16.0</span></td></tr>
-    <tr><td>SUSE Linux Enterprise Server</td><td><span dir="ltr">15 SP7, 16.0</span></td></tr>
-    <tr><td>Amazon Linux</td><td><span dir="ltr">2023</span></td></tr>
-    <tr><td>Arch Linux</td><td>{{ t.arch_rolling }}</td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/ubuntu.svg %}Ubuntu</span></td><td><span dir="ltr">22.04, 24.04, 26.04</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/debian.svg %}Debian</span></td><td><span dir="ltr">12, 13</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/redhat.svg %}Red Hat Enterprise Linux</span></td><td><span dir="ltr">8, 9, 10</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/almalinux.svg %}AlmaLinux</span></td><td><span dir="ltr">8, 9, 10</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/rockylinux.svg %}Rocky Linux</span></td><td><span dir="ltr">8, 9, 10</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/centos.svg %}CentOS Stream</span></td><td><span dir="ltr">9, 10</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/fedora.svg %}Fedora</span></td><td><span dir="ltr">44, 45</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/opensuse.svg %}openSUSE Leap</span></td><td><span dir="ltr">16.0</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/suse.svg %}SUSE Linux Enterprise Server</span></td><td><span dir="ltr">15 SP7, 16.0</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/linux.svg %}Amazon Linux</span></td><td><span dir="ltr">2023</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/archlinux.svg %}Arch Linux</span></td><td>{{ t.arch_rolling }}</td></tr>
   </tbody>
 </table>
 <p>{{ t.linux_needs }}</p>
 <p>{% include copy.html s=t.linux_tun %}</p>
 <p>{{ t.linux_unsupported }}</p>
 
-<h2 id="docker">{{ t.docker_title }}</h2>
+<h2 id="docker" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/brands/docker.svg %}</span>{{ t.docker_title }}</h2>
 <p>{% include copy.html s=t.docker_desc %}</p>
 
-<h2 id="windows">{{ t.windows_title }}</h2>
+<h2 id="windows" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/brands/windows.svg %}</span>{{ t.windows_title }}</h2>
 <p>{{ t.windows_desc }}</p>
 <ul>
   <li>{{ t.win_x64 }}</li>
@@ -65,18 +73,12 @@ extra_css:
   <li>{{ t.win_hyperv }}</li>
 </ul>
 
-<h2 id="processor">{{ t.processor_title }}</h2>
-<aside class="vh-docs-req">
-  <img class="vh-docs-req-art" src="/assets/images/vpnhood-server/docs/requirement-cpu.svg" alt="" width="112" height="112" loading="lazy">
-  <div>
-    <p class="vh-docs-req-title">{{ t.processor_card_title }}</p>
-    <p>{% include copy.html s=t.processor_desc %}</p>
-    {% include terminal.html caption=t.processor_check cmd='grep -qw sse4_2 /proc/cpuinfo && grep -qw popcnt /proc/cpuinfo && echo Supported || echo "Not supported"' %}
-    <p>{% include copy.html s=t.processor_fix %}</p>
-  </div>
-</aside>
+<h2 id="processor" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/cpu.svg %}</span>{{ t.processor_title }}</h2>
+<p>{% include copy.html s=t.processor_desc %}</p>
+{% include terminal.html caption=t.processor_check cmd='grep -qw sse4_2 /proc/cpuinfo && grep -qw popcnt /proc/cpuinfo && echo Supported || echo "Not supported"' %}
+<p>{% include copy.html s=t.processor_fix %}</p>
 
-<h2 id="network">{{ t.network_title }}</h2>
+<h2 id="network" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/network.svg %}</span>{{ t.network_title }}</h2>
 <ul>
   <li>{{ t.network_ip }}</li>
   <li>{% include copy.html s=t.network_port %}</li>

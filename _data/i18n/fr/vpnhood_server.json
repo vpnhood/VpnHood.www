@@ -4,7 +4,7 @@
   "page_title": "VpnHood! SERVER : serveur VPN gratuit et open source",
   "page_desc": "Le moteur de votre VPN. Il tourne sur votre propre machine, achemine le trafic de vos utilisateurs et ne dépend que de votre infrastructure.",
   "f_anywhere_title": "S'installe partout où vous pouvez louer un serveur",
-  "f_anywhere_desc": "Linux (x64 ou ARM64), Windows ou Docker : sur tout VPS ou machine dédiée, installé avec une seule commande. Écoute sur le port 443 par défaut, sans configuration réseau complexe.",
+  "f_anywhere_desc": "Linux (x64 ou ARM64), Windows ou Docker : sur tout VPS ou machine dédiée qui respecte la <a href=\"/vpnhood-server/docs/requirements/\">configuration requise</a>, installé avec une seule commande. Écoute sur le port 443 par défaut, sans configuration réseau complexe.",
   "f_stealth_title": "Discret et impossible à bloquer",
   "f_stealth_desc": "Avec le mode furtif, le tunnel est façonné pour ressembler à un trafic web ordinaire, et une sonde non authentifiée ne reçoit qu'une banale réponse de serveur web, sans rien qui mérite d'être testé. Le passage n'est garanti sur aucun réseau, mais un filtre n'y trouve pas grand-chose à reconnaître.",
   "f_engine_title": "Robuste par conception",

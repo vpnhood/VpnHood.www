@@ -53,7 +53,7 @@ nav_active: self-hosted
         <div class="vh-card-light vh-feature-card rounded-4 p-4">
             <span class="vh-feature-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></span>
             <h3 class="h5">{{ t.f_anywhere_title }}</h3>
-            <p class="mb-0">{{ t.f_anywhere_desc }}</p>
+            <p class="mb-0">{% include copy.html s=t.f_anywhere_desc %}</p>
         </div>
     </div>
     <div class="col" data-aos="fade-up" data-aos-delay="200">

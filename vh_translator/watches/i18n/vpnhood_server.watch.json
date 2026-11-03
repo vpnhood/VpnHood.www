@@ -6,7 +6,7 @@
     "page_title": "VpnHood! SERVER: free, open-source VPN server software",
     "page_desc": "The engine of your VPN. It runs on your own machine, carries your users' traffic, and answers to nobody's infrastructure but yours.",
     "f_anywhere_title": "Runs anywhere you can rent",
-    "f_anywhere_desc": "Linux (x64 or ARM64), Windows, or Docker: any VPS or dedicated machine from any provider, installed with a single pasted command. It listens on port 443 out of the box, with no network configuration.",
+    "f_anywhere_desc": "Linux (x64 or ARM64), Windows, or Docker, on a VPS or dedicated machine that meets its <a href=\"/vpnhood-server/docs/requirements/\">system requirements</a>, installed with a single pasted command. It listens on port 443 out of the box, with no network configuration.",
     "f_stealth_title": "Hard to spot, harder to block",
     "f_stealth_desc": "With Cloak Mode, the tunnel is shaped to look like ordinary web traffic, and an unauthenticated probe gets a plain web-server response instead of anything worth testing. No network is guaranteed to let it through, but there is little to match against.",
     "f_engine_title": "Steadfast by design",

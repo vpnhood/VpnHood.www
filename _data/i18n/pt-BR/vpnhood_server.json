@@ -4,7 +4,7 @@
   "page_title": "VpnHood! SERVER: servidor VPN gratuito e de código aberto",
   "page_desc": "O motor da sua VPN. Ele roda na sua própria máquina, transporta o tráfego dos seus usuários e responde apenas à sua infraestrutura.",
   "f_anywhere_title": "Funciona em qualquer VPS",
-  "f_anywhere_desc": "Linux (x64 ou ARM64), Windows ou Docker: qualquer VPS ou máquina dedicada, instalado com apenas um comando colado. Funciona na porta 443 sem exigir configurações de rede.",
+  "f_anywhere_desc": "Linux (x64 ou ARM64), Windows ou Docker: qualquer VPS ou máquina dedicada que atenda aos <a href=\"/vpnhood-server/docs/requirements/\">requisitos do sistema</a>, instalado com apenas um comando colado. Funciona na porta 443 sem exigir configurações de rede.",
   "f_stealth_title": "Difícil de detectar, quase impossível de bloquear",
   "f_stealth_desc": "Com o Modo invisível, o túnel é moldado para parecer tráfego web comum, e uma sondagem não autenticada recebe apenas uma resposta simples de servidor web, em vez de algo que valha a pena testar. Não há garantia de que uma rede o deixe passar, mas há pouco para um filtro reconhecer.",
   "f_engine_title": "Sempre estável e seguro",

@@ -4,7 +4,7 @@
   "page_title": "VpnHood! SERVER：免费开源 VPN 服务端软件",
   "page_desc": "专属于您的 VPN 引擎。运行在您自己的服务器上，承载用户流量，完全由您自主掌控。",
   "f_anywhere_title": "随处部署，随租随用",
-  "f_anywhere_desc": "支持 Linux（x64 或 ARM64）、Windows 或 Docker：适用于任意服务商的 VPS 或独立服务器，只需粘贴一行命令即可完成安装。开箱即用监听 443 端口，无需复杂的网络配置。",
+  "f_anywhere_desc": "支持 Linux（x64 或 ARM64）、Windows 或 Docker：适用于符合<a href=\"/vpnhood-server/docs/requirements/\">系统要求</a>的 VPS 或独立服务器，只需粘贴一行命令即可完成安装。开箱即用监听 443 端口，无需复杂的网络配置。",
   "f_stealth_title": "难以察觉，更难封锁",
   "f_stealth_desc": "开启伪装模式后，隧道会被调整成普通网页流量的样子；未经认证的探测只会收到普通的 Web 服务器响应，得不到任何值得测试的东西。没有哪个网络能保证一定放行，但可供匹配的特征所剩无几。",
   "f_engine_title": "坚如磐石的设计",

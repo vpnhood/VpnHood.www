@@ -613,52 +613,49 @@
     .vh-docs-managed-art{ display: none; }
 }
 
-// The x64 processor requirement on the system requirements page (#processor). It stops a
-// server on hardware that passes the rest, so it is a card like the MANAGER promo, edged in
-// the warning ink, the colour of its art's badge: it must not pass for one more paragraph. On
-// a phone the art shrinks rather than goes, as it is what says "limitation" at a glance.
-.vh-docs-article .vh-docs-req{
+// A section title with its icon, as on the system requirements page: the icon in the round
+// lavender badge of .vh-feature-icon, smaller, so a page of them reads like the feature cards.
+// The badge sits beside the words rather than above them, and an anchor still lands on the title.
+.vh-docs-article .vh-docs-icon-title{
     display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin: 2rem 0 2.5rem;
-    padding: 1.5rem 1.75rem;
-    border: 1.5px solid var(--vh-warn);
-    border-radius: 20px;
-    background:
-        linear-gradient(120deg, rgba(var(--orange-200-rgb), .12), rgba(var(--orange-200-rgb), 0) 60%),
-        var(--vh-surface-raised);
+    align-items: center;
+    gap: .75rem;
 }
 
-.vh-docs-req-art{
+.vh-docs-title-icon{
+    display: inline-flex;
     flex: none;
-    width: 112px;
-    height: auto;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(var(--purple-300-rgb), .18);
+    color: var(--purple-120);
 }
 
-.vh-docs-article .vh-docs-req > div{
-    min-width: 0;
+.vh-docs-title-icon svg{
+    width: 1.3rem;
+    height: 1.3rem;
 }
 
-.vh-docs-article .vh-docs-req p{
-    margin: 0 0 1rem;
+// A distribution and its mark, in a table: the brand's own shape in the badge's lavender, one
+// colour on both themes, so the list reads as one set rather than a wall of logos.
+.vh-docs-os{
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
 }
 
-.vh-docs-article .vh-docs-req p:last-child{
-    margin-bottom: 0;
+.vh-docs-os svg{
+    flex: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--purple-120);
 }
 
-.vh-docs-article .vh-docs-req .vh-docs-req-title{
-    margin-bottom: .4rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.4;
-    color: var(--vh-text);
-}
-
-@media (max-width: 575.98px){
-    .vh-docs-article .vh-docs-req{ gap: 1rem; padding: 1.25rem; }
-    .vh-docs-req-art{ width: 56px; }
+.vh-docs-article .vh-docs-os-table td{
+    vertical-align: middle;
 }
 
 // A note and a warning: an edge in the accent or the warning ink, never a filled
