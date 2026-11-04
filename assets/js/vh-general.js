@@ -33,49 +33,73 @@ document.addEventListener('DOMContentLoaded', function () {
     // the two things hover alone cannot express, both about a pointer that is on its way
     // somewhere, plus Escape for the keyboard:
     //
-    //   .vh-mega-hold     keeps a panel open for 250ms after the pointer leaves the item, so
-    //                     a gap the CSS hover bridge cannot predict (a wrapped header, a
-    //                     promo bar above the nav) does not close the menu mid-travel.
+    //   .vh-mega-hold     marks the open panel, from the moment it opens until 250ms after
+    //                     the pointer leaves the item, so a gap the CSS hover bridge cannot
+    //                     predict (a wrapped header, a promo bar above the nav) does not
+    //                     close the menu mid-travel. It goes on when the panel opens, not
+    //                     when the pointer leaves: Chrome restyles once between dropping
+    //                     :hover and running mouseleave, and a class added there came one
+    //                     pass late, so the panel counted as closed and its fade-in replayed
+    //                     from nothing on the way out.
     //   .vh-mega-suppress holds a panel shut for 150ms when the pointer arrives on an item
     //                     while another panel is open. The panel is centred and far wider
     //                     than its item, so reaching a link on its far side means crossing a
     //                     neighbouring item: without this, that neighbour's panel took over
     //                     and the link moved out from under the pointer.
+    //   .vh-mega-swap     a panel that replaces another one appears at once; only a menu
+    //                     opening from nothing fades in. Fading in from zero after the wait
+    //                     left a blank beat between the two panels.
     //
-    // Entering a panel counts as entering its item (the panel is a descendant), which is what
-    // makes the hold self-clearing.
+    // Entering a panel counts as entering its item (the panel is a descendant), so the pointer
+    // reaching its own panel cancels the hold's countdown.
     const HOLD_MS = 250, INTENT_MS = 150;
-    const megaItems = document.querySelectorAll('.vh-mega-menu');
+    const megaItems = [...document.querySelectorAll('.vh-mega-menu')];
     const holdTimers = new Map(), intentTimers = new Map();
-    const dropHold = () => megaItems.forEach(el => {
+    let pending = null; // the item waiting out INTENT_MS
+    const isOpen = el => el.classList.contains('vh-mega-hold') && !el.classList.contains('vh-mega-suppress');
+    // Only ever called for an item the pointer is not on, so dropping .vh-mega-swap can never
+    // replay the fade-in on a panel that is still showing.
+    const close = el => {
         clearTimeout(holdTimers.get(el));
-        el.classList.remove('vh-mega-hold');
-    });
-    const heldOther = self => [...megaItems].some(el => el !== self && el.classList.contains('vh-mega-hold'));
+        el.classList.remove('vh-mega-hold', 'vh-mega-swap');
+    };
+    const open = (item, swap) => {
+        clearTimeout(intentTimers.get(item));
+        if (pending === item) pending = null;
+        megaItems.forEach(el => { if (el !== item) close(el); }); // nothing stacks behind it
+        item.classList.remove('vh-mega-suppress');
+        item.classList.toggle('vh-mega-swap', swap);
+        item.classList.add('vh-mega-hold');
+    };
     megaItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
-            // Re-entering this item (crossing the gap from the heading into its own panel
-            // leaves and re-enters it) ends its own hold. Suppressing here would hide the
-            // very panel the pointer just reached.
             clearTimeout(holdTimers.get(item));
-            item.classList.remove('vh-mega-hold');
+            // Back on its own panel (crossing from the label into the panel leaves and
+            // re-enters the item): it stays as it is.
+            if (isOpen(item)) return;
             // Nothing else open: open at once, so a first hover never feels laggy.
-            if (!heldOther(item)) { dropHold(); return; }
+            if (!megaItems.some(isOpen)) { open(item, false); return; }
             // Another panel is still up. Wait to see whether the pointer stays here or is
             // only passing through on its way to that panel.
             item.classList.add('vh-mega-suppress');
+            pending = item;
             clearTimeout(intentTimers.get(item));
-            intentTimers.set(item, setTimeout(() => {
-                item.classList.remove('vh-mega-suppress');
-                dropHold(); // it stayed: this item wins, and nothing stacks behind it
-            }, INTENT_MS));
+            intentTimers.set(item, setTimeout(() => open(item, true), INTENT_MS));
         });
         item.addEventListener('mouseleave', () => {
             clearTimeout(intentTimers.get(item));
+            if (pending === item) pending = null;
+            // Shut means only passing through, or closed with Escape: nothing to hold open.
+            const shut = item.classList.contains('vh-mega-suppress');
             item.classList.remove('vh-mega-suppress');
-            item.classList.add('vh-mega-hold');
+            if (shut) return;
+            item.classList.add('vh-mega-hold'); // already there unless focus-out dropped it
             clearTimeout(holdTimers.get(item));
-            holdTimers.set(item, setTimeout(() => item.classList.remove('vh-mega-hold'), HOLD_MS));
+            holdTimers.set(item, setTimeout(() => {
+                close(item);
+                // A neighbour still waiting out INTENT_MS takes over now, not after a gap.
+                if (pending) open(pending, true);
+            }, HOLD_MS));
         });
     });
     // Leaving the navbar entirely (the header buttons, the page below) ends the grace period
@@ -83,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // the few pixels of pill padding between two items are not a menu item either, and
     // dropping the hold there would close the panel while the pointer slides along the pill.
     document.addEventListener('mouseover', e => {
-        if (!e.target.closest('.vh-navbar')) dropHold();
+        if (!e.target.closest('.vh-navbar')) megaItems.forEach(close);
     }, { passive: true });
     // Keyboard. The label is a link or a button, so Tab reaches it, and a keyboard focus
     // anywhere in the item holds the panel open (:focus-visible, so a mouse click on the

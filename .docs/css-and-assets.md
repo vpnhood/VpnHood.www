@@ -62,10 +62,14 @@ Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hos
 The top nav lives in `header.html`/`footer.html` and is styled by the `vh-*` rules in
 `_sass/theme/_default.scss`. The **desktop mega-menu** opens on **hover via CSS**
 (`.vh-mega-menu:hover`) or the `.vh-mega-hold` class, with the `#vhOverlay` blur driven by
-the same `body:has(...)` selector. `vh-general.js` sets the class for pointer grace (250ms
-after the pointer leaves) and for keyboard focus (while anything in the item has
-`:focus-visible`; a CSS-only `:has(:focus-visible)` closes the panel between the label's blur
-and the first link's focus), `.vh-mega-suppress` for hover intent and Escape. The Free VPN and
+the same `body:has(...)` selector. `vh-general.js` sets the class for pointer grace (from the
+moment the panel opens until 250ms after the pointer leaves; added only on the way out, it
+arrived one style pass after `:hover` dropped and replayed the panel's fade-in) and for
+keyboard focus (while anything in the item has `:focus-visible`; a CSS-only
+`:has(:focus-visible)` closes the panel between the label's blur and the first link's focus),
+`.vh-mega-suppress` for hover intent (150ms on an item entered while another panel is open)
+and Escape, and `.vh-mega-swap` on a panel that replaces another one, so it appears at once
+instead of fading in from nothing. The Free VPN and
 Self-Hosted
 labels are links to `/free-vpn/` and `/self-hosted-vpn/`; Resources has no hub page, so its
 label is a `<button>` styled like the pill's links. The **mobile menu** is a Bootstrap **Offcanvas** (`#mobileMenu`) with **Collapse**

@@ -257,7 +257,7 @@ ul.vh-nav{
     bottom: 100%;
     height: 8px;
 }
-// `.vh-mega-hold` is set by vh-general.js for 250ms after the pointer leaves the item, so a
+// `.vh-mega-hold` is set by vh-general.js while the panel is open and for 250ms after the pointer leaves the item, so a
 // layout the bridge does not cover (a wrapped header, a promo bar) still keeps the panel up
 // long enough for the pointer to reach it. The same class is the keyboard path: vh-general.js
 // sets it while the label or anything in the panel has keyboard focus (a CSS-only
@@ -274,6 +274,12 @@ ul.vh-nav{
 // Animation lives on the inner panel so it doesn't override the panel's centring transform.
 .vh-mega-menu:is(:hover, .vh-mega-hold) .vh-mega-inner{
     animation: spFadeInUp 400ms ease-in;
+}
+// Set by vh-general.js on a panel that replaces another one (the pointer moved along the pill
+// to the next item): it appears at once, as fading in from nothing left a blank beat between
+// the two panels. Must follow the rule above: same specificity, later wins.
+.vh-mega-menu.vh-mega-swap .vh-mega-inner{
+    animation: none;
 }
 /*Mega menu wrapper*/
 .vh-mega-inner {
@@ -298,6 +304,11 @@ ul.vh-nav{
     background: radial-gradient(100% 100%, rgba(var(--purple-300-rgb), 1) 20%, rgba(var(--purple-500-rgb), 1) 75%);
     filter: blur(27px);
     z-index: -1;
+    // Only the bloom under the panel's bottom edge may show. spFadeInUp's opacity/transform
+    // make .vh-mega-inner a stacking context while it runs, and z-index:-1 then paints this
+    // above the panel's background: a purple flash across the links for 400ms. The clip
+    // starts at the panel's bottom edge (100px height + 7px bottom + 1px border).
+    clip-path: inset(108px -100px -100px);
 }
 /*fade-over-content overlay — shown on hover via :has(), no JS*/
 #vhOverlay {
