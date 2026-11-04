@@ -21,5 +21,6 @@
   "windows_min_version": "پشتیبانی از <b>Windows 10</b> و بالاتر.",
   "windows_x64_only": "فقط نسخه x64 برای Windows.",
   "direct_link_note": "پیشنهاد می‌شود تنها زمانی که به Google Play دسترسی ندارید، از لینک مستقیم استفاده کنید.",
-  "linux_arch_note": "پشتیبانی از معماری‌های x64 و ARM64."
+  "linux_arch_note": "پشتیبانی از معماری‌های x64 و ARM64.",
+  "linux_distros_note": "پشتیبانی از Ubuntu 22.04 و نسخه‌های جدیدتر (از جمله Kubuntu و Lubuntu)، Debian 13 و Arch Linux؛ توزیع‌های دیگری که از systemd استفاده می‌کنند نیز باید کار کنند."
 }

@@ -21,5 +21,6 @@
   "windows_min_version": "<b>Windows 10</b> ve üzerini destekler.",
   "windows_x64_only": "Yalnızca Windows x64 sürümü.",
   "direct_link_note": "Doğrudan bağlantıyı yalnızca Google Play'e erişiminiz olmadığında tercih etmeniz önerilir.",
-  "linux_arch_note": "x64 ve ARM64 mimarilerini destekler."
+  "linux_arch_note": "x64 ve ARM64 mimarilerini destekler.",
+  "linux_distros_note": "Ubuntu 22.04 ve sonrası (Kubuntu ve Lubuntu dahil), Debian 13 ve Arch Linux'u destekler; systemd kullanan diğer dağıtımlarda da çalışması beklenir."
 }

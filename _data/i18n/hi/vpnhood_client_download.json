@@ -21,5 +21,6 @@
   "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्ज़न पर समर्थित।",
   "windows_x64_only": "केवल Windows x64 वर्ज़न के लिए।",
   "direct_link_note": "डायरेक्ट लिंक से केवल तभी डाउनलोड करें जब आपके पास Google Play तक पहुँच न हो।",
-  "linux_arch_note": "x64 और ARM64 आर्किटेक्चर का समर्थन करता है।"
+  "linux_arch_note": "x64 और ARM64 आर्किटेक्चर का समर्थन करता है।",
+  "linux_distros_note": "Ubuntu 22.04 और बाद के संस्करणों (Kubuntu और Lubuntu सहित), Debian 13 और Arch Linux का समर्थन करता है; systemd वाले अन्य डिस्ट्रीब्यूशन पर भी इसे काम करना चाहिए।"
 }

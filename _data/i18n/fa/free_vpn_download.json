@@ -24,5 +24,6 @@
   "windows_premium_note": "نسخه Windows سرور رایگان ندارد و برای استفاده از آن باید به <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">نسخه ویژه ارتقا دهید</b></a>.",
   "ios_premium_note": "نسخه iOS سرور رایگان ندارد و برای استفاده از آن باید به <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">نسخه ویژه ارتقا دهید</b></a>.",
   "linux_arch_note": "پشتیبانی از معماری‌های x64 و ARM64.",
+  "linux_distros_note": "پشتیبانی از Ubuntu 22.04 و نسخه‌های جدیدتر (از جمله Kubuntu و Lubuntu)، Debian 13 و Arch Linux؛ توزیع‌های دیگری که از systemd استفاده می‌کنند نیز باید کار کنند.",
   "linux_premium_note": "نسخه Linux سرور رایگان ندارد و برای استفاده از آن باید به <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">نسخه ویژه ارتقا دهید</b></a>."
 }

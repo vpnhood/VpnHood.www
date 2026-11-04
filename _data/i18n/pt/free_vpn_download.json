@@ -24,5 +24,6 @@
   "windows_premium_note": "A versão para Windows não possui servidores grátis. Você precisa <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">ser Premium</b></a> para usá-la.",
   "ios_premium_note": "A versão para iOS não possui servidores grátis; é necessário <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">mudar para o Premium</b></a> para usá-la.",
   "linux_arch_note": "Suporta arquiteturas x64 e ARM64.",
+  "linux_distros_note": "Suporta Ubuntu 22.04 e versões posteriores (incluindo Kubuntu e Lubuntu), Debian 13 e Arch Linux; outras distribuições com systemd também deverão funcionar.",
   "linux_premium_note": "A versão para Linux não possui servidores grátis. Você precisa <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">ser Premium</b></a> para usá-la."
 }

@@ -21,5 +21,6 @@
   "windows_min_version": "Compatible avec <b>Windows 10</b> et versions ultérieures.",
   "windows_x64_only": "Version Windows x64 uniquement.",
   "direct_link_note": "Il est préférable de télécharger via le lien direct uniquement si vous n'avez pas accès à Google Play.",
-  "linux_arch_note": "Supporte les architectures x64 et ARM64."
+  "linux_arch_note": "Supporte les architectures x64 et ARM64.",
+  "linux_distros_note": "Supporte Ubuntu 22.04 et versions ultérieures (y compris Kubuntu et Lubuntu), Debian 13 et Arch Linux. Les autres distributions avec systemd devraient aussi fonctionner."
 }

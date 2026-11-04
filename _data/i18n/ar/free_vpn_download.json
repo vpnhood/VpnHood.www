@@ -24,5 +24,6 @@
   "windows_premium_note": "لا يحتوي إصدار Windows على خوادم مجانية، لذا يلزم <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى الباقة المميزة</b></a> لاستخدامه.",
   "ios_premium_note": "لا يتضمن إصدار iOS أي خوادم مجانية، ويتطلب استخدامه <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى الباقة المميزة</b></a>.",
   "linux_arch_note": "يدعم معمارية x64 و ARM64.",
+  "linux_distros_note": "يدعم Ubuntu 22.04 والإصدارات الأحدث (بما في ذلك Kubuntu و Lubuntu) و Debian 13 و Arch Linux؛ ومن المفترض أن يعمل أيضًا على التوزيعات الأخرى التي تستخدم systemd.",
   "linux_premium_note": "لا يحتوي إصدار Linux على خوادم مجانية، لذا يلزم <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">الترقية إلى الباقة المميزة</b></a> لاستخدامه."
 }

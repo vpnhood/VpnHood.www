@@ -21,5 +21,6 @@
   "windows_min_version": "Requer <b>Windows 10</b> ou superior.",
   "windows_x64_only": "Apenas para versão Windows x64.",
   "direct_link_note": "Recomendamos usar o link direto apenas se você não tiver acesso ao Google Play.",
-  "linux_arch_note": "Suporta arquiteturas x64 e ARM64."
+  "linux_arch_note": "Suporta arquiteturas x64 e ARM64.",
+  "linux_distros_note": "Suporta Ubuntu 22.04 e versões posteriores (incluindo Kubuntu e Lubuntu), Debian 13 e Arch Linux; outras distribuições com systemd também deverão funcionar."
 }

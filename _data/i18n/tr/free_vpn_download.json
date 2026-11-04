@@ -24,5 +24,6 @@
   "windows_premium_note": "Windows sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir.",
   "ios_premium_note": "iOS sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir.",
   "linux_arch_note": "x64 ve ARM64 mimarilerini destekler.",
+  "linux_distros_note": "Ubuntu 22.04 ve sonrası (Kubuntu ve Lubuntu dahil), Debian 13 ve Arch Linux'u destekler; systemd kullanan diğer dağıtımlarda da çalışması beklenir.",
   "linux_premium_note": "Linux sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir."
 }

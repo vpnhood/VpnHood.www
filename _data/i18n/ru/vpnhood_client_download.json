@@ -21,5 +21,6 @@
   "windows_min_version": "Поддерживается на <b>Windows 10</b> и выше.",
   "windows_x64_only": "Только для Windows x64.",
   "direct_link_note": "Используйте прямую ссылку, если у вас нет доступа к Google Play.",
-  "linux_arch_note": "Поддерживает архитектуры x64 и ARM64."
+  "linux_arch_note": "Поддерживает архитектуры x64 и ARM64.",
+  "linux_distros_note": "Поддерживает Ubuntu 22.04 и новее (включая Kubuntu и Lubuntu), Debian 13 и Arch Linux; другие дистрибутивы с systemd тоже должны работать."
 }

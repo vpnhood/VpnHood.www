@@ -21,5 +21,6 @@
   "windows_min_version": "يدعم نظام <b>Windows 10</b> والأحدث.",
   "windows_x64_only": "إصدار Windows x64 فقط.",
   "direct_link_note": "من الأفضل استخدام الرابط المباشر للتحميل فقط إذا لم يكن Google Play متاحًا لديك.",
-  "linux_arch_note": "يدعم معمارية x64 و ARM64."
+  "linux_arch_note": "يدعم معمارية x64 و ARM64.",
+  "linux_distros_note": "يدعم Ubuntu 22.04 والإصدارات الأحدث (بما في ذلك Kubuntu و Lubuntu) و Debian 13 و Arch Linux؛ ومن المفترض أن يعمل أيضًا على التوزيعات الأخرى التي تستخدم systemd."
 }
