@@ -6,7 +6,7 @@
   "lead": "Bloque automatiquement la connexion Internet en cas de déconnexion du VPN.",
   "shot_alt": "Écran du Kill Switch dans l'application VpnHood!",
   "platforms_label": "Disponible sur",
-  "platforms": "Android uniquement. Cette option utilise un paramètre système propre à Android.",
+  "platforms": "Android et Linux. Sur Android, il s'appuie sur un paramètre système ; sur Linux, c'est une fonction propre à l'application, qui peut maintenir le blocage après la déconnexion.",
   "cta": "Obtenir VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "how_title": "Comment ça marche",

@@ -6,7 +6,7 @@
   "lead": "دستگاه شما را همیشه به VPN متصل نگه می‌دارد؛ حتی پس از ری‌استارت یا تغییر شبکه.",
   "shot_alt": "صفحه «همیشه روشن» در اپلیکیشن VpnHood!‎",
   "platforms_label": "در دسترس برای",
-  "platforms": "فقط Android. این قابلیت بر پایه تنظیمات Always-on VPN در Android کار می‌کند که در سایر سیستم‌عامل‌ها موجود نیست.",
+  "platforms": "Android، Windows و Linux. در Android از تنظیمات Always-on VPN سیستم استفاده می‌کند؛ در Windows و Linux تنظیمی در خود اپلیکیشن است و در VpnHood! CONNECT به نسخه ویژه نیاز دارد.",
   "cta": "دریافت VpnHood! CONNECT",
   "all_features": "همه امکانات",
   "how_title": "نحوه کارکرد",

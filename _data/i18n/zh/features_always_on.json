@@ -6,7 +6,7 @@
   "lead": "让设备始终保持 VPN 连接，即便重启或切换网络也无须手动重连。",
   "shot_alt": "VpnHood! 应用中的“始终开启”设置界面",
   "platforms_label": "支持平台",
-  "platforms": "仅限 Android。该功能依托 Android 原生的“始终开启的 VPN”设置，其他平台暂不支持。",
+  "platforms": "Android、Windows 和 Linux。在 Android 上，该功能依托系统的“始终开启的 VPN”设置；在 Windows 和 Linux 上，它是应用内的一项设置，在 VpnHood! CONNECT 上需要高级版。",
   "cta": "获取 VpnHood! CONNECT",
   "all_features": "所有功能",
   "how_title": "运作方式",

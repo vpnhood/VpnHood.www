@@ -1,0 +1,20 @@
+{
+  "meta_title": "Linux-Systemanforderungen von VpnHood! CLIENT und CONNECT | VpnHood!",
+  "meta_description": "Die Linux-Distributionen, auf denen VpnHood! CLIENT und VpnHood! CONNECT laufen, der Prozessor, den sie brauchen, und was das System für DNS, QUIC und den Kill Switch braucht.",
+  "title": "Linux-Systemanforderungen",
+  "lead": "Was ein Rechner braucht, um VpnHood! CLIENT oder VpnHood! CONNECT unter Linux auszuführen: eines der Systeme unten, mit systemd, und einen x64- oder ARM64-Prozessor.",
+  "system_title": "Distributionen",
+  "system_desc": "Die Apps laufen auf x64 und ARM64. Sie lassen sich auf diesen Distributionen installieren und starten; die darauf aufbauenden sowie andere mit systemd und glibc sollten ebenfalls funktionieren:",
+  "unsupported": "Nicht unterstützt: Alpine und die anderen Distributionen, die auf musl statt glibc aufbauen. Der Installer läuft dort durch, doch die App kann nicht starten.",
+  "needs_title": "Was das System braucht",
+  "need_root": "Root-Zugriff, um die App zu installieren, und systemd, das ihren VPN-Dienst ausführt.",
+  "need_admin": "Ein Administratorkonto, um sie zu nutzen: root oder ein Mitglied der Gruppe <code>[group_sudo]</code>, <code>[group_wheel]</code> oder <code>[group_admin]</code>. Ein Eintrag in der sudoers-Datei genügt nicht.",
+  "need_tun": "Ein TUN-Gerät für das VPN, das fast jeder Rechner hat.",
+  "need_dns": "Eine Möglichkeit, das DNS des VPN festzulegen, die der Installer nicht hinzufügt: eingeschaltetes <code>[pkg_resolved]</code> oder <code>[pkg_resolvconf]</code>. Ohne sie kann sich die App nicht verbinden, und ihre Fehlermeldung sagt, was zu tun ist. Auf vielen Systemen ist <code>[pkg_resolved]</code> ausgeschaltet, prüfen Sie dies also zuerst.",
+  "need_nft": "Für den Kill Switch: <code>[pkg_nftables]</code>, das der Installer hinzufügt, und cgroup v2. Ohne sie meldet die App dies und verbindet sich nicht, solange der Kill Switch eingeschaltet ist.",
+  "need_quic": "Für QUIC: MsQuic, das der Installer hinzufügt. Wo das nicht möglich ist, etwa unter Amazon Linux 2023, verbindet sich die App ohne QUIC.",
+  "need_desktop": "Für das Fenster: ein Desktop. Der Installer fügt die Bibliotheken hinzu, die das Fenster braucht. Ohne Desktop erhalten Sie den VPN-Dienst und die Befehle.",
+  "need_connect": "VpnHood! CONNECT meldet sich über sein Fenster an und braucht daher vorerst einen Desktop.",
+  "next_client": "VpnHood! CLIENT unter Linux installieren",
+  "next_connect": "VpnHood! CONNECT unter Linux installieren"
+}

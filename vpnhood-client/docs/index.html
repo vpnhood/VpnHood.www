@@ -1,0 +1,15 @@
+---
+layout: none
+i18n: vpnhood_client_docs
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-docs.svg" %}
+{% include docs-index.html %}
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

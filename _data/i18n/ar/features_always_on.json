@@ -6,7 +6,7 @@
   "lead": "يبقي جهازك متصلاً بشبكة VPN في جميع الأوقات، حتى بعد إعادة التشغيل أو تبديل الشبكة.",
   "shot_alt": "شاشة ميزة دائمًا متصل في تطبيق VpnHood!‎",
   "platforms_label": "متاح على",
-  "platforms": "نظام Android فقط. يعتمد على إعداد VPN الدائم في Android، وهو غير متوفر على المنصات الأخرى.",
+  "platforms": "Android وWindows وLinux. في Android يعتمد على إعداد VPN الدائم في النظام، أما في Windows وLinux فهو إعداد داخل التطبيق، ويتطلب في VpnHood! CONNECT الباقة المميزة.",
   "cta": "احصل على VpnHood! CONNECT",
   "all_features": "كل الميزات",
   "how_title": "كيف تعمل الميزة",

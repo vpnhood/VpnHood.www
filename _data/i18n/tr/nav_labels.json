@@ -26,5 +26,10 @@
   "server-profiles": "Sunucu profilleri",
   "farms": "Sunucu çiftlikleri",
   "roles": "Roller",
-  "troubleshooting": "Sorun giderme"
+  "troubleshooting": "Sorun giderme",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "free-vpn": "Ücretsiz VPN",
+  "download": "İndir",
+  "linux": "Linux",
+  "linux-requirements": "Linux gereksinimleri"
 }

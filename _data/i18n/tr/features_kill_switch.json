@@ -6,7 +6,7 @@
   "lead": "VPN bağlantısı kesildiğinde internet erişimini otomatik olarak engeller.",
   "shot_alt": "VpnHood! uygulamasındaki Kill Switch ekranı",
   "platforms_label": "Desteklenen platformlar",
-  "platforms": "Yalnızca Android. Diğer platformlarda bulunmayan özel bir Android sistem ayarını kullanır.",
+  "platforms": "Android ve Linux. Android'de bir sistem ayarını kullanır; Linux'ta ise uygulamanın kendi ayarıdır ve bağlantıyı kestikten sonra da engeli sürdürebilir.",
   "cta": "VpnHood! CONNECT'i Edinin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",

@@ -26,5 +26,10 @@
   "server-profiles": "सर्वर प्रोफ़ाइल्स",
   "farms": "सर्वर फ़ार्म्स",
   "roles": "भूमिकाएं",
-  "troubleshooting": "समस्या निवारण"
+  "troubleshooting": "समस्या निवारण",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "free-vpn": "मुफ़्त VPN",
+  "download": "डाउनलोड",
+  "linux": "Linux",
+  "linux-requirements": "Linux सिस्टम आवश्यकताएँ"
 }

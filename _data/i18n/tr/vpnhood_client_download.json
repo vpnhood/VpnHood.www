@@ -21,6 +21,11 @@
   "windows_min_version": "<b>Windows 10</b> ve üzerini destekler.",
   "windows_x64_only": "Yalnızca Windows x64 sürümü.",
   "direct_link_note": "Doğrudan bağlantıyı yalnızca Google Play'e erişiminiz olmadığında tercih etmeniz önerilir.",
+  "android_web_note": "Doğrudan bağlantıdaki sürüm Google Play'i kullanmaz.",
+  "android_arm64_note": "Doğrudan bağlantı, çoğu telefona uygun olan ARM64 sürümüdür. Eski telefonlarda ve birçok Android TV'de çalışmayabilir.",
+  "android_universal_link": "Evrensel sürümü indirin.",
   "linux_arch_note": "x64 ve ARM64 mimarilerini destekler.",
-  "linux_distros_note": "Ubuntu 22.04 ve sonrası (Kubuntu ve Lubuntu dahil), Debian 13 ve Arch Linux'u destekler; systemd kullanan diğer dağıtımlarda da çalışması beklenir."
+  "linux_distros_note": "Ubuntu 22.04 ve sonrası (Kubuntu ve Lubuntu dahil), Debian 13 ve Arch Linux'u destekler; systemd kullanan diğer dağıtımlarda da çalışması beklenir.",
+  "linux_requirements_link": "Sistem gereksinimlerine bakın.",
+  "linux_install_link": "Kurulum kılavuzu"
 }

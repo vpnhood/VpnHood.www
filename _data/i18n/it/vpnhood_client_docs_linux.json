@@ -1,0 +1,14 @@
+{
+  "meta_title": "Installa VpnHood! CLIENT su Linux | VpnHood!",
+  "meta_description": "Installa VpnHood! CLIENT su Linux con un solo comando, connettiti dalla sua finestra o dalla riga di comando, avvialo all'accensione e usalo su una macchina senza desktop.",
+  "title": "Installa VpnHood! CLIENT su Linux",
+  "lead": "Un solo comando installa l'app, con una finestra sui desktop e una serie di comandi ovunque, quindi funziona anche su una macchina senza schermo.",
+  "before_need": "Una chiave di accesso fornita da chi gestisce il server, perché VpnHood! CLIENT non ha server propri.",
+  "connect_desktop": "Su un desktop, apri [app] dal menu delle applicazioni, aggiungi la tua chiave di accesso e connettiti.",
+  "connect_terminal": "Da un terminale, o su una macchina senza desktop, aggiungi la tua chiave di accesso, connettiti e controlla la connessione:",
+  "connect_note": "<code>[cmd] profile add</code> accetta anche il percorso di un file che contiene la chiave. Con più profili, scegli quello con cui connetterti: <code>[cmd] profile set-default</code>.",
+  "cmd_profile_list": "Elenca i tuoi profili e indica quello che si connette.",
+  "cmd_profile_add": "Aggiunge un profilo da una chiave di accesso o da un file che la contiene.",
+  "cmd_profile_remove": "Rimuove un profilo.",
+  "cmd_profile_default": "Sceglie il profilo usato da <code>[cmd] connect</code>."
+}

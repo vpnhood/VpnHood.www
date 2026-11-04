@@ -29,10 +29,10 @@
   "private_dns_plat": "Android; DNS сетевого адаптера на всех платформах",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "Блокирует доступ в интернет при обрыве связи с VPN, исключая утечку данных.",
-  "kill_switch_plat": "Только Android",
+  "kill_switch_plat": "Android и Linux",
   "always_on_title": "Всегда включен",
   "always_on_short": "Поддерживает постоянное подключение к VPN даже при смене сети или перезагрузке устройства.",
-  "always_on_plat": "Только Android",
+  "always_on_plat": "Android, Windows и Linux",
   "quick_launch_title": "Быстрый запуск",
   "quick_launch_short": "Подключайтесь в одно касание прямо из панели быстрых настроек Android.",
   "quick_launch_plat": "Только Android"

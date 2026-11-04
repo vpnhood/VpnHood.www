@@ -6,7 +6,7 @@
   "lead": "Cihazınızı her an VPN'e bağlı tutar; yeniden başlatmalarda ve ağ değişikliklerinde bile bağlantınız kopmaz.",
   "shot_alt": "VpnHood! uygulamasındaki Her Zaman Açık ekranı",
   "platforms_label": "Desteklenen platformlar",
-  "platforms": "Yalnızca Android. Diğer platformlarda bulunmayan Android'in yerleşik her zaman açık VPN ayarını kullanır.",
+  "platforms": "Android, Windows ve Linux. Android'de sistemin her zaman açık VPN ayarını kullanır; Windows ve Linux'ta uygulamadaki bir ayardır ve VpnHood! CONNECT'te Premium gerektirir.",
   "cta": "VpnHood! CONNECT'i İndirin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",

@@ -6,7 +6,7 @@
   "lead": "Trennt die Internetverbindung automatisch, sobald das VPN abreißt.",
   "shot_alt": "Der Kill Switch-Bereich in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
-  "platforms": "Nur für Android. Nutzt eine Android-Systemeinstellung, die andere Plattformen nicht bieten.",
+  "platforms": "Android und Linux. Unter Android nutzt er eine Systemeinstellung; unter Linux ist er eine eigene Funktion der App und kann die Sperre auch nach dem Trennen der Verbindung aufrechterhalten.",
   "cta": "VpnHood! CONNECT herunterladen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",

@@ -40,3 +40,8 @@ vpnhood-manager:
       - url: /vpnhood-manager/docs/certificates/
       - url: /vpnhood-manager/docs/server-profiles/
       - url: /vpnhood-manager/docs/roles/
+vpnhood-client:
+  - group: getting-started
+    pages:
+      - url: /vpnhood-client/docs/linux-requirements/
+      - url: /vpnhood-client/docs/linux/

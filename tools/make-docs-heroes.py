@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import math
 import pathlib
+import re
 
 IMAGES = pathlib.Path(__file__).resolve().parent.parent / "assets" / "images"
 
@@ -206,6 +207,51 @@ def install() -> None:
     a.bar(546, 783, 120, 20, fill=MINT, opacity=.95, glow=True)
     a.ambient(cy=800, rx=330, ry=70, opacity=.5)
     a.render("install")
+
+
+def linux_mark(a: Art, x, y, size, glow=True) -> None:
+    """The Linux mark, from the same Simple Icons file the requirements pages show, in the rim's gradient."""
+    icon = (IMAGES.parent.parent / "_includes" / "icons" / "brands" / "linux.svg").read_text(encoding="utf-8")
+    path = re.search(r'<path d="([^"]+)"', icon).group(1)
+    place = f'transform="translate({x} {y}) scale({size / 24:g})"'
+    if glow:
+        a.add(f'<path d="{path}" {place} fill="{TEAL}" opacity=".5" filter="{a.url("Soft")}"/>')
+    a.add(f'<path d="{path}" {place} fill="{a.url("Rim")}"/>')
+
+
+def linux() -> None:
+    """The Linux apps: a terminal with the Linux mark in it, and the one install command's prompt."""
+    a = Art("dhLinux")
+    a.ambient(cy=470)
+    a.solid('<rect x="150" y="170" width="700" height="660" rx="44" {fill} {stroke}/>')
+    a.add(f'<path d="M 150 268 H 850" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="3"/>')
+    for n in range(3):
+        a.add(f'<circle cx="{212 + n * 44}" cy="219" r="13" fill="{LILAC}" opacity=".45"/>')
+    linux_mark(a, 340, 300, 320)
+    # the prompt and its cursor, under the mark
+    a.add(f'<path d="M 232 672 L 284 706 L 232 740" fill="none" stroke="{a.url("Rim")}" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>')
+    a.bar(330, 694, 320, 24, opacity=.4)
+    a.bar(680, 694, 88, 24, fill=MINT, glow=True)
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("linux", product="vpnhood-client")
+
+
+def linux_requirements() -> None:
+    """Linux requirements: the Linux mark, and in front of it the checklist it passes, every box ticked."""
+    a = Art("dhLinuxReq")
+    a.ambient(cy=470)
+    linux_mark(a, 100, 170, 400)
+    a.solid('<rect x="370" y="290" width="480" height="540" rx="40" {fill} {stroke}/>', width=10)
+    for n in range(3):
+        y = 360 + n * 150
+        a.add(f'<rect x="420" y="{y}" width="92" height="92" rx="22" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".5" stroke-width="4"/>')
+        tick = f"M 440 {y + 48} L 461 {y + 69} L 494 {y + 26}"
+        a.add(f'<path d="{tick}" fill="none" stroke="{TEAL}" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" opacity=".5" filter="{a.url("Soft")}"/>',
+              f'<path d="{tick}" fill="none" stroke="{MINT}" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>')
+        a.bar(550, y + 24, 230 - n * 40, 20, fill=LILAC, opacity=.45)
+        a.bar(550, y + 58, 150 - n * 20, 14, fill=LILAC, opacity=.25)
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("linux-requirements", product="vpnhood-client")
 
 
 def docker() -> None:
@@ -792,6 +838,8 @@ if __name__ == "__main__":
     docs()
     requirements()
     install()
+    linux()
+    linux_requirements()
     docker()
     ip_blocking()
     ip_addresses()

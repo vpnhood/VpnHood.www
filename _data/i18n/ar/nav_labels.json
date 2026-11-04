@@ -26,5 +26,10 @@
   "server-profiles": "ملفات تعريف الخوادم",
   "farms": "مزارع الخوادم",
   "roles": "الأدوار",
-  "troubleshooting": "استكشاف الأخطاء وإصلاحها"
+  "troubleshooting": "استكشاف الأخطاء وإصلاحها",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "free-vpn": "VPN مجاني",
+  "download": "تحميل",
+  "linux": "Linux",
+  "linux-requirements": "متطلبات Linux"
 }

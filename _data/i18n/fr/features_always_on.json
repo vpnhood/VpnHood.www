@@ -6,7 +6,7 @@
   "lead": "Garde votre appareil connecté au VPN en permanence, même après un redémarrage ou un changement de réseau.",
   "shot_alt": "L'écran Toujours actif dans l'application VpnHood!",
   "platforms_label": "Disponible sur",
-  "platforms": "Android uniquement. Cette fonction s'appuie sur le paramètre VPN permanent d'Android, absent des autres plateformes.",
+  "platforms": "Android, Windows et Linux. Sur Android, cette fonction s'appuie sur le paramètre système VPN permanent ; sur Windows et Linux, c'est un réglage de l'application, qui nécessite Premium sur VpnHood! CONNECT.",
   "cta": "Télécharger VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "how_title": "Comment ça marche",

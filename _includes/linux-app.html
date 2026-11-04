@@ -1,0 +1,132 @@
+{%- comment -%}
+  The Linux page of an app, shared by VpnHood! CLIENT and VpnHood! CONNECT, which install and
+  run alike. The shared copy is linux_app.json; what differs is in the page's own JSON (t):
+  who may use it, and how to connect. In linux_app.json [app], [cmd] and [folder] stand for
+  the app, and linux-copy.html fills them in.
+
+    {% include linux-app.html app="VpnHood! CLIENT" cmd="vhclient" folder="VpnHoodClient"
+       repo="VpnHood" art="..." profiles=true %}
+
+  Checked 2026-11-04 by running v9.1.868's own install commands on a clean Ubuntu 24.04 with
+  systemd, each to its service, its commands' --help, status, locations and vhuninstall, and
+  against docs/linux/README.md, install-client.sh and uninstall.sh at that tag. A connection, DNS,
+  Always On and a standard user were tested on Ubuntu 24.04 against a real server, with
+  systemd-resolved added. The kill switch was too, but inside containers, with its nft rule's
+  cgroup level changed to match them. The installer's options were read from its source, not run.
+  CONNECT has no sign-in command in that release, so it is signed in
+  from the window; www-after-release-todo.md says what changes when the next one ships.
+{%- endcomment -%}
+{%- assign vh_la = site.data.i18n[vh_lang].linux_app -%}
+{%- assign vh_la_app = include.app -%}
+{%- assign vh_la_cmd = include.cmd -%}
+{%- assign vh_la_folder = include.folder -%}
+{%- capture vh_la_url %}https://github.com/vpnhood/{{ include.repo }}/releases/latest/download/{{ include.folder }}-linux.sh{% endcapture -%}
+{%- capture vh_la_install %}sudo su -c "bash <( wget -qO- {{ vh_la_url }})"{% endcapture -%}
+{%- capture vh_la_install_q %}sudo su -c "bash <( wget -qO- {{ vh_la_url }}) -q -nodesktop"{% endcapture -%}
+{%- capture vh_la_always_on %}{{ include.cmd }} always-on on{% endcapture -%}
+{%- capture vh_la_kill_switch %}{{ include.cmd }} kill-switch until-disconnect{% endcapture -%}
+{%- capture vh_la_update %}{{ include.cmd }} update{% endcapture -%}
+{%- capture vh_la_uninstall %}sudo /opt/{{ include.folder }}/vhuninstall{% endcapture %}
+{% include docs-hero.html art=include.art %}
+
+<h2 id="before-you-start">{{ vh_la.before_title }}</h2>
+<ul>
+  <li>{% include linux-copy.html s=t.before_need %}</li>
+  <li>{% include linux-copy.html s=vh_la.before_system %}</li>
+</ul>
+
+<h2 id="install">{{ vh_la.install_title }}</h2>
+<p>{{ vh_la.install_desc }}</p>
+{% include terminal.html cmd=vh_la_install %}
+<p>{% include linux-copy.html s=vh_la.install_after %}</p>
+
+<h2 id="connect">{{ vh_la.connect_title }}</h2>
+<p>{% include linux-copy.html s=t.connect_desktop %}</p>
+<p>{% include linux-copy.html s=t.connect_terminal %}</p>
+{% if include.profiles -%}
+{%- capture vh_la_first %}{{ include.cmd }} profile add 'vh:...'
+{{ include.cmd }} connect
+{{ include.cmd }} status{% endcapture -%}
+{%- else -%}
+{%- capture vh_la_first %}{{ include.cmd }} connect
+{{ include.cmd }} status{% endcapture -%}
+{%- endif %}
+{% include terminal.html cmd=vh_la_first %}
+{% if t.connect_note %}<p>{% include linux-copy.html s=t.connect_note %}</p>{% endif %}
+
+<h2 id="commands">{{ vh_la.commands_title }}</h2>
+<p>{% include linux-copy.html s=vh_la.commands_desc %}</p>
+<table>
+  <thead><tr><th>{{ vh_la.th_command }}</th><th>{{ vh_la.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><code>{{ include.cmd }} connect</code></td><td>{% include linux-copy.html s=vh_la.cmd_connect %}</td></tr>
+    <tr><td><code>{{ include.cmd }} disconnect</code></td><td>{{ vh_la.cmd_disconnect }}</td></tr>
+    <tr><td><code>{{ include.cmd }} status</code></td><td>{% include linux-copy.html s=vh_la.cmd_status %}</td></tr>
+    <tr><td><code>{{ include.cmd }} locations</code></td><td>{{ vh_la.cmd_locations }}</td></tr>
+{%- if include.profiles %}
+    <tr><td><code>{{ include.cmd }} profile list</code></td><td>{{ t.cmd_profile_list }}</td></tr>
+    <tr><td><code>{{ include.cmd }} profile add</code></td><td>{{ t.cmd_profile_add }}</td></tr>
+    <tr><td><code>{{ include.cmd }} profile remove</code></td><td>{{ t.cmd_profile_remove }}</td></tr>
+    <tr><td><code>{{ include.cmd }} profile set-default</code></td><td>{% include linux-copy.html s=t.cmd_profile_default %}</td></tr>
+{%- endif %}
+    <tr><td><code>{{ include.cmd }} ui</code></td><td>{{ vh_la.cmd_ui }}</td></tr>
+    <tr><td><code>{{ include.cmd }} service status</code></td><td>{{ vh_la.cmd_service_status }}</td></tr>
+    <tr><td><code>{{ include.cmd }} service log</code></td><td>{% include linux-copy.html s=vh_la.cmd_service_log %}</td></tr>
+    <tr><td><code>{{ include.cmd }} service restart</code></td><td>{{ vh_la.cmd_service_restart }}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="always-on">{{ vh_la.always_on_title }}</h2>
+<p>{{ vh_la.always_on_desc }}</p>
+{% include terminal.html cmd=vh_la_always_on %}
+{% if t.always_on_note %}<p>{% include linux-copy.html s=t.always_on_note %}</p>{% endif %}
+
+<h2 id="kill-switch">{{ vh_la.kill_switch_title }}</h2>
+<p>{% include linux-copy.html s=vh_la.kill_switch_desc %}</p>
+{% include terminal.html cmd=vh_la_kill_switch %}
+<p>{% include linux-copy.html s=vh_la.kill_switch_off %}</p>
+
+<h2 id="updates">{{ vh_la.updates_title }}</h2>
+<p>{{ vh_la.updates_desc }}</p>
+{% include terminal.html cmd=vh_la_update %}
+
+<h2 id="installer-options">{{ vh_la.options_title }}</h2>
+<p>{{ vh_la.options_desc }}</p>
+<table>
+  <thead><tr><th>{{ vh_la.th_option }}</th><th>{{ vh_la.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><code>-q</code></td><td>{{ vh_la.opt_q }}</td></tr>
+    <tr><td><code>-noautostart</code></td><td>{{ vh_la.opt_noautostart }}</td></tr>
+    <tr><td><code>-noautoupdate</code></td><td>{{ vh_la.opt_noautoupdate }}</td></tr>
+    <tr><td><code>-autoupdate</code></td><td>{% include linux-copy.html s=vh_la.opt_autoupdate %}</td></tr>
+    <tr><td><code>-nodesktop</code></td><td>{{ vh_la.opt_nodesktop }}</td></tr>
+    <tr><td><code>-desktop</code></td><td>{{ vh_la.opt_desktop }}</td></tr>
+    <tr><td><code>-help</code></td><td>{{ vh_la.opt_help }}</td></tr>
+  </tbody>
+</table>
+{% include terminal.html caption=vh_la.options_caption cmd=vh_la_install_q %}
+
+<h2 id="uninstall">{{ vh_la.uninstall_title }}</h2>
+<p>{% include linux-copy.html s=vh_la.uninstall_desc %}</p>
+{% include terminal.html cmd=vh_la_uninstall %}
+<p>{% include linux-copy.html s=vh_la.uninstall_purge %}</p>
+
+<h2 id="troubleshooting">{{ vh_la.trouble_title }}</h2>
+<table>
+  <thead><tr><th>{{ vh_la.th_problem }}</th><th>{{ vh_la.th_fix }}</th></tr></thead>
+  <tbody>
+    <tr><td>{% include linux-copy.html s=vh_la.trouble_service %}</td><td>{% include linux-copy.html s=vh_la.trouble_service_fix %}</td></tr>
+    <tr><td>{{ vh_la.trouble_menu }}</td><td>{% include linux-copy.html s=vh_la.trouble_menu_fix %}</td></tr>
+    <tr><td>{{ vh_la.trouble_standard }}</td><td>{% include linux-copy.html s=vh_la.trouble_standard_fix %}</td></tr>
+    <tr><td>{{ vh_la.trouble_other_vpn }}</td><td>{{ vh_la.trouble_other_vpn_fix }}</td></tr>
+    <tr><td>{% include linux-copy.html s=vh_la.trouble_dns %}</td><td>{% include linux-copy.html s=vh_la.trouble_dns_fix %}</td></tr>
+    <tr><td>{% include linux-copy.html s=vh_la.trouble_nft %}</td><td>{% include linux-copy.html s=vh_la.trouble_nft_fix %}</td></tr>
+    <tr><td>{{ vh_la.trouble_traffic }}</td><td>{% include linux-copy.html s=vh_la.trouble_traffic_fix %}</td></tr>
+    <tr><td>{% include linux-copy.html s=vh_la.trouble_interface %}</td><td>{% include linux-copy.html s=vh_la.trouble_interface_fix %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="next-steps">{{ vh_la.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/features/split-tunneling/">{{ vh_la.next_split }}</a></li>
+</ul>

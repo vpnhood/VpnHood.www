@@ -1,0 +1,14 @@
+{
+  "meta_title": "在 Linux 上安装 VpnHood! CLIENT | 科学上网 VPN | VpnHood!",
+  "meta_description": "只需一条命令即可在 Linux 上安装 VpnHood! CLIENT，通过窗口或命令行连接科学上网，支持开机自启，也可在没有桌面环境的机器上运行。",
+  "title": "在 Linux 上安装 VpnHood! CLIENT",
+  "lead": "只需一条命令即可安装应用：在桌面环境中提供窗口，在任何环境中都提供一组命令，因此也能在没有屏幕的机器上运行。",
+  "before_need": "从服务器运营者处获取的访问密钥，因为 VpnHood! CLIENT 本身不提供服务器。",
+  "connect_desktop": "在桌面环境中，从应用程序菜单打开 [app]，添加您的访问密钥并连接。",
+  "connect_terminal": "在终端中，或在没有桌面环境的机器上，添加您的访问密钥，连接并检查连接状态：",
+  "connect_note": "<code>[cmd] profile add</code> 也接受包含密钥的文件路径。如有多个配置方案，请选择用于连接的方案：<code>[cmd] profile set-default</code>。",
+  "cmd_profile_list": "列出您的配置方案，并标记用于连接的那一个。",
+  "cmd_profile_add": "通过访问密钥或包含访问密钥的文件添加配置方案。",
+  "cmd_profile_remove": "删除配置方案。",
+  "cmd_profile_default": "选择 <code>[cmd] connect</code> 使用的配置方案。"
+}

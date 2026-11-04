@@ -29,10 +29,10 @@
   "private_dns_plat": "Android ; DNS de l'adaptateur sur toutes les plateformes",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "Coupe la connexion internet si le VPN se déconnecte pour éviter toute fuite de données.",
-  "kill_switch_plat": "Android uniquement",
+  "kill_switch_plat": "Android et Linux",
   "always_on_title": "Toujours actif",
   "always_on_short": "Maintient l'appareil connecté au VPN, même après un redémarrage ou un changement de réseau.",
-  "always_on_plat": "Android uniquement",
+  "always_on_plat": "Android, Windows et Linux",
   "quick_launch_title": "Lancement rapide",
   "quick_launch_short": "Connectez-vous d'un simple geste depuis le volet des réglages rapides d'Android.",
   "quick_launch_plat": "Android uniquement"

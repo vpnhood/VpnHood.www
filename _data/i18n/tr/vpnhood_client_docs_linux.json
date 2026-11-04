@@ -1,0 +1,14 @@
+{
+  "meta_title": "Linux'ta VpnHood! CLIENT Kurulumu | VpnHood!",
+  "meta_description": "Linux'ta tek bir komutla VpnHood! CLIENT kurulumunu yapın, uygulama penceresinden veya komut satırından bağlanın, açılışta başlatın ve masaüstü olmayan bir makinede çalıştırın.",
+  "title": "Linux'a VpnHood! CLIENT Kurun",
+  "lead": "Tek bir komut, uygulamayı masaüstünde penceresiyle, her yerde ise bir dizi komutla kurar; böylece ekranı olmayan bir makinede de çalışır.",
+  "before_need": "Sunucuyu işleten kişiden alınan bir erişim anahtarı; çünkü VpnHood! CLIENT'ın kendi sunucuları yoktur.",
+  "connect_desktop": "Masaüstünde uygulama menüsünden [app] uygulamasını açın, erişim anahtarınızı ekleyin ve bağlanın.",
+  "connect_terminal": "Terminalden veya masaüstü olmayan bir makinede erişim anahtarınızı ekleyin, bağlanın ve bağlantıyı kontrol edin:",
+  "connect_note": "<code>[cmd] profile add</code> anahtarı içeren bir dosyanın yolunu da kabul eder. Birden çok profil varsa bağlanılacak olanı seçin: <code>[cmd] profile set-default</code>.",
+  "cmd_profile_list": "Profillerinizi listeler ve bağlanacak olanı işaretler.",
+  "cmd_profile_add": "Erişim anahtarından veya anahtar içeren bir dosyadan profil ekler.",
+  "cmd_profile_remove": "Bir profili kaldırır.",
+  "cmd_profile_default": "<code>[cmd] connect</code> komutunun kullanacağı profili seçer."
+}

@@ -21,6 +21,11 @@
   "windows_min_version": "Поддерживается на <b>Windows 10</b> и выше.",
   "windows_x64_only": "Только для Windows x64.",
   "direct_link_note": "Используйте прямую ссылку, если у вас нет доступа к Google Play.",
+  "android_web_note": "Версия по прямой ссылке не использует Google Play.",
+  "android_arm64_note": "По прямой ссылке скачивается версия для ARM64, которая подходит большинству телефонов. Она может не работать на старых телефонах и многих устройствах Android TV.",
+  "android_universal_link": "Скачать универсальную версию.",
   "linux_arch_note": "Поддерживает архитектуры x64 и ARM64.",
-  "linux_distros_note": "Поддерживает Ubuntu 22.04 и новее (включая Kubuntu и Lubuntu), Debian 13 и Arch Linux; другие дистрибутивы с systemd тоже должны работать."
+  "linux_distros_note": "Поддерживает Ubuntu 22.04 и новее (включая Kubuntu и Lubuntu), Debian 13 и Arch Linux; другие дистрибутивы с systemd тоже должны работать.",
+  "linux_requirements_link": "См. системные требования.",
+  "linux_install_link": "Руководство по установке"
 }

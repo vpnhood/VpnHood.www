@@ -42,7 +42,7 @@
   "updates_title": "更新",
   "updates_desc": "除非在安装时已禁用，否则服务器会自动更新至最新版本：<code>[server_updater]</code> 服务会每 12 小时检查一次更新。",
   "updates_off": "如需关闭自动更新，请重新运行独立安装命令，并在出现 <code>[autoupdate_prompt_linux]</code> 时输入 <code>[answer_no]</code>。安装程序会保留您的选择和配置，服务器将保持当前版本，直到您手动更新。",
-  "updates_keep": "建议尽量保持自动更新。新版本不仅会修复安全漏洞，而且较新的客户端应用也可能会停止支持旧版服务器。",
+  "updates_keep": "建议尽量保持自动更新。部分版本会修复安全问题。更新后的应用仍可连接旧版服务器，但连接 v9.0.859 之前的服务器时无法使用 UDP，而且应用对早于 VpnHood 9.1 的服务器的支持仅持续到 2027 年 4 月。",
   "uninstall_title": "卸载",
   "uninstall_run": "如需移除服务器，请运行卸载程序。它会停止服务器并删除相关服务与文件，但会在 <code>[server_storage]</code> 中保留配置、访问密钥和证书，方便日后重新安装。",
   "uninstall_caption_purge": "同时彻底删除配置与密钥：持有旧密钥的设备将无法再连接，即使重新安装也无法恢复",

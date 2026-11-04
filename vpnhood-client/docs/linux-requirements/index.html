@@ -1,0 +1,70 @@
+---
+layout: none
+i18n: vpnhood_client_docs_linux_requirements
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  What a machine needs to run VpnHood! CLIENT or CONNECT on Linux, one page for both (owner,
+  2026-11-04), which both Linux pages and both download cards link to. Tested 2026-11-04 with
+  v9.1.868's own install commands in systemd containers: CLIENT on every distribution listed,
+  CONNECT on Debian 13, Fedora 44 and Arch, each to a running service and a status. So the list
+  says they install and start: a real connection was run only on Ubuntu 24.04, with
+  systemd-resolved added. A connect failed with no DNS method (Ubuntu 24.04 bare) and with
+  systemd-resolved off (AlmaLinux 8), and the installer adds neither. Alpine: the installer
+  finishes and the binary cannot run. Amazon Linux 2023: the MsQuic step says unsupported, so the
+  app uses TCP. Red Hat is not listed, as it was not tested. The processor's copy is the server
+  page's: the client is on .NET 11 too, which is where the limit comes from; not tested here.
+  Names and versions are markup; the versions are dir="ltr", or an RTL page turns their list
+  around.
+{%- endcomment -%}
+{%- assign vh_sr = site.data.i18n[vh_lang].vpnhood_server_docs_requirements -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-client/docs/hero-linux-requirements.svg" %}
+
+<h2 id="distributions" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/brands/linux.svg %}</span>{{ t.system_title }}</h2>
+<p>{{ t.system_desc }}</p>
+<table class="vh-docs-os-table">
+  <thead><tr><th>{{ vh_sr.th_distribution }}</th><th>{{ vh_sr.th_versions }}</th></tr></thead>
+  <tbody>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/ubuntu.svg %}Ubuntu</span></td><td><span dir="ltr">22.04, 24.04, 26.04</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/debian.svg %}Debian</span></td><td><span dir="ltr">12, 13</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/almalinux.svg %}AlmaLinux</span></td><td><span dir="ltr">8, 9, 10</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/rockylinux.svg %}Rocky Linux</span></td><td><span dir="ltr">9</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/centos.svg %}CentOS Stream</span></td><td><span dir="ltr">9, 10</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/fedora.svg %}Fedora</span></td><td><span dir="ltr">43, 44</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/opensuse.svg %}openSUSE Leap</span></td><td><span dir="ltr">16.0</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/linux.svg %}Amazon Linux</span></td><td><span dir="ltr">2023</span></td></tr>
+    <tr><td><span class="vh-docs-os">{% include icons/brands/archlinux.svg %}Arch Linux</span></td><td>{{ vh_sr.arch_rolling }}</td></tr>
+  </tbody>
+</table>
+<p>{{ t.unsupported }}</p>
+
+<h2 id="system">{{ t.needs_title }}</h2>
+<ul>
+  <li>{{ t.need_root }}</li>
+  <li>{% include copy.html s=t.need_admin %}</li>
+  <li>{{ t.need_tun }}</li>
+  <li>{% include copy.html s=t.need_dns %}</li>
+  <li>{% include copy.html s=t.need_nft %}</li>
+  <li>{{ t.need_quic }}</li>
+  <li>{{ t.need_desktop }}</li>
+  <li>{{ t.need_connect }}</li>
+</ul>
+
+<h2 id="processor" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/cpu.svg %}</span>{{ vh_sr.processor_title }}</h2>
+<p>{% include copy.html s=vh_sr.processor_desc %}</p>
+{% include terminal.html caption=vh_sr.processor_check cmd='grep -qw sse4_2 /proc/cpuinfo && grep -qw popcnt /proc/cpuinfo && echo Supported || echo "Not supported"' %}
+<p>{% include copy.html s=vh_sr.processor_fix %}</p>
+
+<h2 id="next-steps">{{ site.data.i18n[vh_lang].linux_app.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-client/docs/linux/">{{ t.next_client }}</a></li>
+  <li><a href="{{ vh_base }}/free-vpn/download/linux/">{{ t.next_connect }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

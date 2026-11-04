@@ -26,5 +26,10 @@
   "server-profiles": "Profils de serveur",
   "farms": "Fermes de serveurs",
   "roles": "Rôles",
-  "troubleshooting": "Dépannage"
+  "troubleshooting": "Dépannage",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "free-vpn": "VPN gratuit",
+  "download": "Télécharger",
+  "linux": "Linux",
+  "linux-requirements": "Configuration requise pour Linux"
 }

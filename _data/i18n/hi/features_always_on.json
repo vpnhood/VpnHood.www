@@ -6,7 +6,7 @@
   "lead": "डिवाइस को हर समय VPN से जोड़े रखता है—रीस्टार्ट होने या नेटवर्क बदलने पर भी।",
   "shot_alt": "VpnHood! ऐप में हमेशा चालू स्क्रीन",
   "platforms_label": "उपलब्ध प्लेटफ़ॉर्म",
-  "platforms": "केवल Android के लिए। यह Android की ऑलवेज-ऑन VPN सेटिंग पर काम करता है, जो अन्य प्लेटफ़ॉर्म्स पर उपलब्ध नहीं है।",
+  "platforms": "Android, Windows और Linux पर। Android पर यह सिस्टम की ऑलवेज-ऑन VPN सेटिंग का उपयोग करता है; Windows और Linux पर यह ऐप की एक सेटिंग है, और VpnHood! CONNECT पर इसके लिए प्रीमियम ज़रूरी है।",
   "cta": "VpnHood! CONNECT प्राप्त करें",
   "all_features": "सभी फ़ीचर्स",
   "how_title": "यह कैसे काम करता है",

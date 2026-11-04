@@ -1,0 +1,20 @@
+{
+  "meta_title": "Requisiti per Linux di VpnHood! CLIENT e CONNECT | VpnHood!",
+  "meta_description": "Le distribuzioni Linux su cui funzionano VpnHood! CLIENT e VpnHood! CONNECT, il processore che richiedono e ciò che serve al sistema per DNS, QUIC e Kill Switch.",
+  "title": "Requisiti per Linux",
+  "lead": "Ciò che serve a una macchina per eseguire VpnHood! CLIENT o VpnHood! CONNECT su Linux: uno dei sistemi elencati di seguito, con systemd, e un processore x64 o ARM64.",
+  "system_title": "Distribuzioni",
+  "system_desc": "Le app funzionano su x64 e ARM64. Si installano e si avviano su queste distribuzioni; dovrebbero funzionare anche quelle basate su di esse e altre con systemd e glibc:",
+  "unsupported": "Non supportate: Alpine e le altre distribuzioni basate su musl invece di glibc. Lì il programma di installazione termina, ma l'app non può avviarsi.",
+  "needs_title": "Cosa serve al sistema",
+  "need_root": "Accesso root per installare l'app e systemd, che esegue il suo servizio VPN.",
+  "need_admin": "Un account amministratore per usarla: root o un membro del gruppo <code>[group_sudo]</code>, <code>[group_wheel]</code> o <code>[group_admin]</code>. Una riga nel file sudoers non basta.",
+  "need_tun": "Un dispositivo TUN per la VPN, presente su quasi tutte le macchine.",
+  "need_dns": "Un modo per impostare il DNS della VPN, che il programma di installazione non aggiunge: <code>[pkg_resolved]</code>, attivato, oppure <code>[pkg_resolvconf]</code>. Senza, l'app non può connettersi e il suo errore indica cosa fare. Molti sistemi hanno <code>[pkg_resolved]</code> disattivato, quindi controlla prima questo.",
+  "need_nft": "Per il Kill Switch, <code>[pkg_nftables]</code>, che viene aggiunto dal programma di installazione, e cgroup v2. Senza di essi, l'app lo segnala e non si connette finché il Kill Switch è attivo.",
+  "need_quic": "Per QUIC, MsQuic, che viene aggiunto dal programma di installazione. Dove non è possibile, come su Amazon Linux 2023, l'app si connette senza QUIC.",
+  "need_desktop": "Per la finestra, un desktop. Il programma di installazione aggiunge le librerie necessarie alla finestra. Senza desktop, avrai il servizio VPN e i comandi.",
+  "need_connect": "VpnHood! CONNECT effettua l'accesso dalla sua finestra, quindi per ora richiede un desktop.",
+  "next_client": "Installa VpnHood! CLIENT su Linux",
+  "next_connect": "Installa VpnHood! CONNECT su Linux"
+}

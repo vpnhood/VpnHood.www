@@ -1,0 +1,11 @@
+{
+  "meta_title": "在 Linux 上安装 VpnHood! CONNECT | 科学上网 VPN | VpnHood!",
+  "meta_description": "只需一条命令即可在 Linux 上安装 VpnHood! CONNECT，登录您的高级版账户后，即可通过窗口或命令行连接 VPN 科学上网。",
+  "title": "在 Linux 上安装 VpnHood! CONNECT",
+  "lead": "只需一条命令即可安装应用，包括其窗口和一组命令。在窗口中登录一次后，即可通过窗口或命令连接。",
+  "before_need": "高级版套餐，因为 Linux 版本不提供免费服务器：<a href=\"/free-vpn/go-premium/\">升级高级版</a>。",
+  "connect_desktop": "从应用程序菜单打开 [app]，登录您的高级版账户并连接。",
+  "connect_terminal": "登录后，您也可以在终端中连接，并检查连接状态：",
+  "connect_note": "登录需要使用应用窗口，因此没有桌面环境的机器暂时无法使用 [app]。在这类机器上，您可以使用 <a href=\"/vpnhood-client/docs/linux/\">VpnHood! CLIENT</a> 连接您自己的服务器。",
+  "always_on_note": "始终开启功能需要高级版。"
+}

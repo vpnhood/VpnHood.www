@@ -26,5 +26,10 @@
   "server-profiles": "服务器配置方案",
   "farms": "服务器集群",
   "roles": "角色",
-  "troubleshooting": "故障排除"
+  "troubleshooting": "故障排除",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "free-vpn": "免费 VPN",
+  "download": "下载",
+  "linux": "Linux",
+  "linux-requirements": "Linux 系统要求"
 }

@@ -6,7 +6,7 @@
   "lead": "مسدودسازی خودکار اینترنت در صورت قطع اتصال VPN.",
   "shot_alt": "صفحه Kill Switch در اپلیکیشن VpnHood!‎",
   "platforms_label": "در دسترس برای",
-  "platforms": "فقط Android. این قابلیت متکی به تنظیمات سیستمی Android است که در سایر پلتفرم‌ها ارائه نشده است.",
+  "platforms": "Android و Linux. در Android به یک تنظیم سیستمی متکی است؛ در Linux تنظیم خود اپلیکیشن است و می‌تواند پس از قطع اتصال نیز مسدودسازی را حفظ کند.",
   "cta": "دریافت VpnHood! CONNECT",
   "all_features": "همه امکانات",
   "how_title": "نحوه کارکرد",

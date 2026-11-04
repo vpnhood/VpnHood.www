@@ -1,0 +1,14 @@
+{
+  "meta_title": "Installer VpnHood! CLIENT sur Linux | VpnHood!",
+  "meta_description": "Installez VpnHood! CLIENT sur Linux en une seule commande, connectez-vous depuis sa fenêtre ou en ligne de commande, lancez-le au démarrage et utilisez-le sur une machine sans bureau.",
+  "title": "Installer VpnHood! CLIENT sur Linux",
+  "lead": "Une seule commande installe l'application, avec une fenêtre sur un environnement de bureau et un ensemble de commandes partout : elle fonctionne donc aussi sur une machine sans écran.",
+  "before_need": "Une clé d'accès fournie par l'administrateur du serveur, car VpnHood! CLIENT n'a pas de serveurs propres.",
+  "connect_desktop": "Sur un environnement de bureau, ouvrez [app] depuis le menu des applications, ajoutez votre clé d'accès et connectez-vous.",
+  "connect_terminal": "Depuis un terminal, ou sur une machine sans environnement de bureau, ajoutez votre clé d'accès, connectez-vous et vérifiez la connexion :",
+  "connect_note": "<code>[cmd] profile add</code> accepte aussi le chemin d'un fichier contenant la clé. Si vous avez plusieurs profils, choisissez celui avec lequel vous connecter : <code>[cmd] profile set-default</code>.",
+  "cmd_profile_list": "Liste vos profils et indique celui qui se connecte.",
+  "cmd_profile_add": "Ajoute un profil à partir d'une clé d'accès, ou d'un fichier qui en contient une.",
+  "cmd_profile_remove": "Supprime un profil.",
+  "cmd_profile_default": "Choisit le profil utilisé par <code>[cmd] connect</code>."
+}

@@ -21,9 +21,14 @@
   "windows_min_version": "Поддерживается <b>Windows 10</b> и выше.",
   "windows_x64_only": "Только для версии Windows x64.",
   "direct_link_note": "Скачивайте по прямой ссылке только в том случае, если у вас нет доступа к Google Play.",
+  "android_web_note": "Версия по прямой ссылке не использует Google Play. В ней нет бесплатных серверов. Чтобы пользоваться приложением, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>.",
+  "android_arm64_note": "По прямой ссылке скачивается версия для ARM64, которая подходит большинству телефонов. Она может не работать на старых телефонах и многих устройствах Android TV.",
+  "android_universal_link": "Скачать универсальную версию.",
   "windows_premium_note": "В версии для Windows нет бесплатных серверов. Чтобы пользоваться приложением, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>.",
   "ios_premium_note": "В версии для iOS нет бесплатных серверов. Чтобы пользоваться приложением, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>.",
   "linux_arch_note": "Поддерживает архитектуры x64 и ARM64.",
   "linux_distros_note": "Поддерживает Ubuntu 22.04 и новее (включая Kubuntu и Lubuntu), Debian 13 и Arch Linux; другие дистрибутивы с systemd тоже должны работать.",
+  "linux_requirements_link": "См. системные требования.",
+  "linux_install_link": "Руководство по установке",
   "linux_premium_note": "В версии для Linux нет бесплатных серверов. Чтобы пользоваться приложением, нужно <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">перейти на Premium</b></a>."
 }

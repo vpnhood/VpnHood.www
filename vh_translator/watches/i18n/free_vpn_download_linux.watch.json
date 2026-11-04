@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "items": {
+    "meta_title": "Install VpnHood! CONNECT on Linux | VpnHood!",
+    "meta_description": "Install VpnHood! CONNECT on Linux with one command, sign in to your Premium account, and connect from its window or the command line.",
+    "title": "Install VpnHood! CONNECT on Linux",
+    "lead": "One command installs the app, with its window and a set of commands. Sign in once from the window, then connect from either.",
+    "before_need": "A Premium plan, as the Linux version does not have any free servers: <a href=\"/free-vpn/go-premium/\">upgrade to Premium</a>.",
+    "connect_desktop": "Open [app] from the application menu, sign in to your Premium account and connect.",
+    "connect_terminal": "Once you have signed in, you can also connect from a terminal, and check the connection:",
+    "connect_note": "Signing in needs the app's window, so a machine with no desktop cannot use [app] yet. There you can use <a href=\"/vpnhood-client/docs/linux/\">VpnHood! CLIENT</a> with your own server.",
+    "always_on_note": "Always On needs Premium."
+  }
+}

@@ -21,6 +21,11 @@
   "windows_min_version": "Compatible con <b>Windows 10</b> y versiones posteriores.",
   "windows_x64_only": "Solo disponible para Windows x64.",
   "direct_link_note": "Usa el enlace directo únicamente si no tienes acceso a Google Play.",
+  "android_web_note": "La versión del enlace directo no usa Google Play.",
+  "android_arm64_note": "El enlace directo es la versión ARM64, adecuada para la mayoría de los teléfonos. Puede que no funcione en teléfonos antiguos ni en muchos Android TV.",
+  "android_universal_link": "Descarga la versión universal.",
   "linux_arch_note": "Compatible con arquitecturas x64 y ARM64.",
-  "linux_distros_note": "Compatible con Ubuntu 22.04 y posteriores (incluidos Kubuntu y Lubuntu), Debian 13 y Arch Linux; otras distribuciones con systemd también deberían funcionar."
+  "linux_distros_note": "Compatible con Ubuntu 22.04 y posteriores (incluidos Kubuntu y Lubuntu), Debian 13 y Arch Linux; otras distribuciones con systemd también deberían funcionar.",
+  "linux_requirements_link": "Consulta los requisitos del sistema.",
+  "linux_install_link": "Guía de instalación"
 }

@@ -8,7 +8,7 @@
     "lead": "Keeps the device connected to the VPN at all times, even after restarts or network changes.",
     "shot_alt": "The Always On screen in the VpnHood! app",
     "platforms_label": "Available on",
-    "platforms": "Android only. It relies on the Android always-on VPN setting, which the other platforms do not offer.",
+    "platforms": "Android, Windows and Linux. On Android it uses the system's always-on VPN setting; on Windows and Linux it is a setting in the app, and on VpnHood! CONNECT it needs Premium.",
     "cta": "Get VpnHood! CONNECT",
     "all_features": "All features",
     "how_title": "How it works",

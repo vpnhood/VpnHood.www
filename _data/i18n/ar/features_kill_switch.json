@@ -6,7 +6,7 @@
   "lead": "حظر الاتصال بالإنترنت تلقائيًا عند انقطاع اتصال VPN.",
   "shot_alt": "شاشة Kill Switch في تطبيق VpnHood!‎",
   "platforms_label": "متوفر على",
-  "platforms": "Android فقط. تعتمد هذه الميزة على إعداد نظام في Android غير متاح في المنصات الأخرى.",
+  "platforms": "Android وLinux. في Android تعتمد هذه الميزة على إعداد في النظام، أما في Linux فهي ميزة في التطبيق نفسه، ويمكنها إبقاء الحظر بعد قطع الاتصال.",
   "cta": "احصل على VpnHood! CONNECT",
   "all_features": "جميع الميزات",
   "how_title": "كيف تعمل هذه الميزة",

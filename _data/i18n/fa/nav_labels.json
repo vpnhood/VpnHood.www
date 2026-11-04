@@ -26,5 +26,10 @@
   "server-profiles": "پروفایل‌های سرور",
   "farms": "فارم‌های سرور",
   "roles": "نقش‌ها",
-  "troubleshooting": "عیب‌یابی"
+  "troubleshooting": "عیب‌یابی",
+  "vpnhood-client": "VpnHood! CLIENT",
+  "free-vpn": "VPN رایگان",
+  "download": "دانلود",
+  "linux": "Linux",
+  "linux-requirements": "پیش‌نیازهای Linux"
 }

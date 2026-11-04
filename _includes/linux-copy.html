@@ -1,0 +1,6 @@
+{%- comment -%}
+  One string of the Linux pages: copy.html, then the app's own names, which linux-app.html
+  assigns. The names are not in _data/code.yml as each page has its own.
+{%- endcomment -%}
+{%- capture vh_lc -%}{% include copy.html s=include.s %}{%- endcapture -%}
+{{- vh_lc | replace: '[app]', vh_la_app | replace: '[cmd]', vh_la_cmd | replace: '[folder]', vh_la_folder -}}

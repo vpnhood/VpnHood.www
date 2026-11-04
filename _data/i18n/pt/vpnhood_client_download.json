@@ -21,6 +21,11 @@
   "windows_min_version": "Requer <b>Windows 10</b> ou superior.",
   "windows_x64_only": "Apenas para versão Windows x64.",
   "direct_link_note": "Recomendamos usar o link direto apenas se você não tiver acesso ao Google Play.",
+  "android_web_note": "A versão do link direto não usa o Google Play.",
+  "android_arm64_note": "O link direto é a versão ARM64, adequada para a maioria dos celulares. Ela pode não funcionar em celulares antigos e em muitas Android TVs.",
+  "android_universal_link": "Baixe a versão universal.",
   "linux_arch_note": "Suporta arquiteturas x64 e ARM64.",
-  "linux_distros_note": "Suporta Ubuntu 22.04 e versões posteriores (incluindo Kubuntu e Lubuntu), Debian 13 e Arch Linux; outras distribuições com systemd também deverão funcionar."
+  "linux_distros_note": "Suporta Ubuntu 22.04 e versões posteriores (incluindo Kubuntu e Lubuntu), Debian 13 e Arch Linux; outras distribuições com systemd também deverão funcionar.",
+  "linux_requirements_link": "Veja os requisitos do sistema.",
+  "linux_install_link": "Guia de instalação"
 }

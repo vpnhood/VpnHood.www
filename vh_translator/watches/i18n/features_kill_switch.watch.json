@@ -8,7 +8,7 @@
     "lead": "Automatically blocks the internet connection if the VPN disconnects.",
     "shot_alt": "The Kill Switch screen in the VpnHood! app",
     "platforms_label": "Available on",
-    "platforms": "Android only. It relies on an Android system setting that the other platforms do not expose.",
+    "platforms": "Android and Linux. On Android it relies on a system setting; on Linux it is the app's own, and can keep the block after you disconnect.",
     "cta": "Get VpnHood! CONNECT",
     "all_features": "All features",
     "how_title": "How it works",

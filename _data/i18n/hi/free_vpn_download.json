@@ -21,9 +21,14 @@
   "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्शन को सपोर्ट करता है।",
   "windows_x64_only": "केवल Windows x64 वर्शन के लिए।",
   "direct_link_note": "डायरेक्ट लिंक से तभी डाउनलोड करना सबसे अच्छा है जब आपके पास Google Play तक पहुंच न हो।",
+  "android_web_note": "डायरेक्ट लिंक वाला वर्शन Google Play का उपयोग नहीं करता। इसमें कोई मुफ़्त सर्वर उपलब्ध नहीं हैं, और इसका उपयोग करने के लिए आपको <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम में अपग्रेड करना</b></a> होगा।",
+  "android_arm64_note": "डायरेक्ट लिंक ARM64 वर्शन के लिए है, जो ज़्यादातर फ़ोन पर चलता है। यह पुराने फ़ोन और कई Android TV पर शायद न चले।",
+  "android_universal_link": "यूनिवर्सल वर्शन डाउनलोड करें।",
   "windows_premium_note": "Windows वर्शन में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं, और इसका उपयोग करने के लिए आपको <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम में अपग्रेड करना</b></a> होगा।",
   "ios_premium_note": "iOS वर्ज़न में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं, और इसका उपयोग करने के लिए आपको <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम पर अपग्रेड</b></a> करना होगा।",
   "linux_arch_note": "x64 और ARM64 आर्किटेक्चर को सपोर्ट करता है।",
   "linux_distros_note": "Ubuntu 22.04 और बाद के संस्करणों (Kubuntu और Lubuntu सहित), Debian 13 और Arch Linux का समर्थन करता है; systemd वाले अन्य डिस्ट्रीब्यूशन पर भी इसे काम करना चाहिए।",
+  "linux_requirements_link": "सिस्टम आवश्यकताएँ देखें।",
+  "linux_install_link": "इंस्टॉल गाइड",
   "linux_premium_note": "Linux वर्शन में कोई मुफ़्त सर्वर उपलब्ध नहीं हैं, और इसका उपयोग करने के लिए आपको <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम में अपग्रेड करना</b></a> होगा।"
 }

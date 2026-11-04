@@ -42,7 +42,7 @@
   "updates_title": "Updates",
   "updates_desc": "Sofern bei der Installation nicht deaktiviert, aktualisiert sich der Server bei jedem neuen Release automatisch: Der Dienst <code>[server_updater]</code> prüft alle 12 Stunden auf Updates.",
   "updates_off": "Um dies abzuschalten, führen Sie den Installationsbefehl für eigenständige Server erneut aus und antworten Sie auf <code>[autoupdate_prompt_linux]</code> mit <code>[answer_no]</code>. Der Installer behält Ihre Antwort und Ihre Einstellungen bei, sodass der Server auf seiner Version bleibt, bis Sie den Befehl selbst ausführen.",
-  "updates_keep": "Lassen Sie Updates möglichst aktiviert. Einige Versionen beheben Sicherheitslücken, und neuere Apps unterstützen ältere Server möglicherweise nicht mehr.",
+  "updates_keep": "Lassen Sie Updates möglichst aktiviert. Einige Versionen beheben Sicherheitslücken. Eine aktualisierte App verbindet sich weiterhin mit einem älteren Server, erhält aber von einem Server vor v9.0.859 kein UDP, und Apps unterstützen Server, die älter als VpnHood 9.1 sind, nur bis April 2027.",
   "uninstall_title": "Deinstallieren",
   "uninstall_run": "Um den Server zu entfernen, führen Sie sein Deinstallationsprogramm aus. Es stoppt den Server und entfernt seine Dienste und Dateien, behält aber seine Einstellungen, Zugangsschlüssel und Zertifikate für eine spätere Installation in <code>[server_storage]</code>.",
   "uninstall_caption_purge": "Einstellungen und Schlüssel unwiderruflich löschen: Bisherige Geräte können sich danach auch bei einer Neuinstallation nicht mehr verbinden.",
