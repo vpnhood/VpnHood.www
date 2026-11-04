@@ -22,6 +22,7 @@
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Certificados",
   "add-server": "Añadir un servidor",
+  "dynamic-ip": "IP dinámica",
   "access-points": "Puntos de acceso",
   "server-profiles": "Perfiles de servidor",
   "farms": "Granjas de servidores",

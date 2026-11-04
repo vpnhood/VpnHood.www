@@ -97,6 +97,8 @@ old_updater_container: "VpnHoodUpdater"
 ip_connection_example: "203.0.113.10"
 ip_outgoing_example: "198.51.100.20"
 ip_range_example: "192.0.2.0/24"
+# a machine's own address on a home network, from the private ranges (RFC 1918)
+ip_home_example: "192.168.1.10"
 # and a name from the domains set aside for documentation (RFC 2606)
 domain_example: "server1.example.com"
 domain_api_example: "api.example.com"

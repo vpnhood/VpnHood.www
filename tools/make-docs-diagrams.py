@@ -6,6 +6,8 @@ Writes, under `_includes/diagrams/`:
   server-two-ips.svg, server-two-ips-tall.svg    /vpnhood-server/docs/ip-blocking/
   reverse-proxy.svg, reverse-proxy-tall.svg      /vpnhood-server/docs/reverse-proxy/
   how-it-works.svg, how-it-works-tall.svg        /self-hosted-vpn/docs/how-it-works/
+  dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
+  dynamic-ip-find.svg, dynamic-ip-find-tall.svg  /vpnhood-manager/docs/dynamic-ip/
 
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
@@ -28,11 +30,14 @@ as often as on a desk:
     label in all of them.
   * **Laid out left to right in every language.** Labels are anchored to the arrows and
     icons, and an inherited `direction: rtl` would flip `start` and `end` and push them
-    across. Persian and Arabic text still runs right to left inside each label.
+    across. Persian and Arabic text still runs right to left inside each label: on those
+    pages each translated label sits in a right-to-left isolate (`vh_bidi_in`, `vh_bidi_out`),
+    or a Latin word in it would swap the parts of the sentence on either side of it.
 
 Nodes are icons, not boxes: two people for your users, a rack for your server, a globe for
-websites, and a cloud - the docs heroes' cloud, `tools/make-docs-heroes.py` - for a reverse
-proxy. A server's addresses are ports on its edge, in the colour of the arrow that reaches
+websites, a cloud - the docs heroes' cloud, `tools/make-docs-heroes.py` - for a reverse
+proxy, a window for MANAGER, a key for access keys, and a signpost for what shows the way to
+a server's address. A server's addresses are ports on its edge, in the colour of the arrow that reaches
 them. Example addresses and names are not copy: they come from `_data/code.yml`, the values
 the pages' own text uses, so the picture and the text always agree.
 
@@ -44,6 +49,10 @@ Each diagram states one idea and no more:
                   address.
   how-it-works    devices reach your server through an encrypted tunnel, and websites see
                   your server, not your users.
+  dynamic-ip-follow  the server's next report shows MANAGER its new address, which goes into
+                  the keys.
+  dynamic-ip-find an older key's address is gone, and the name or the URL in the key leads
+                  apps to the new one.
 
 Run from the repo root:  python tools/make-docs-diagrams.py
 """
@@ -206,8 +215,42 @@ def cross(cx, cy, s=12, colour=CORAL, sw=4.2):
     return line(cx - s, cy - s, cx + s, cy + s, colour, sw) + line(cx - s, cy + s, cx + s, cy - s, colour, sw)
 
 
-def render(out: str, data_file: str, en_var: str, w: int, h: int, uid: str, parts: list[str]) -> None:
-    """Wrap the drawn parts in the board, the chalk filters and the Liquid preamble."""
+def window(cx, cy, w=128, h=92):
+    """VpnHood! MANAGER: a web panel's window, with a title bar and a small chart."""
+    x, y = cx - w / 2, cy - h / 2
+    base = y + h - 13
+    out = [box(x, y, w, h, CHALK, 3.2), line(x, y + 22, x + w, y + 22, CHALK_DIM, 2.2)]
+    out += [dot(x + 14 + n * 12, y + 11, 2.8, CHALK_DIM) for n in range(3)]
+    for n, height in enumerate((13, 24, 18, 34)):
+        bx = x + 28 + n * 24
+        out.append(line(bx, base, bx, base - height, MINT if n == 3 else CHALK_DIM, 6.0))
+    return "".join(out)
+
+
+def access_key(cx, cy, stroke=CHALK):
+    """An access key on its side: a round bow, a shaft and two teeth - about 124 x 60."""
+    bx, end = cx - 38, cx + 62
+    return (ring(bx, cy, 24, stroke, 3.2) + ring(bx, cy, 7, CHALK_DIM, 2.2) +
+            line(bx + 24, cy, end, cy, stroke, 3.4) +
+            line(end, cy, end, cy + 21, stroke, 3.4) + line(end - 22, cy, end - 22, cy + 16, stroke, 3.4))
+
+
+def signpost(cx, cy, stroke=CHALK):
+    """What shows the way: a post with two boards, one pointing on - about 124 x 108."""
+    def board(x0, x1, tip, y):
+        return ('<path d="M %.1f %.1f L %.1f %.1f L %.1f %.1f L %.1f %.1f L %.1f %.1f Z" fill="none" stroke="%s" '
+                'stroke-width="3.0" stroke-linejoin="round"/>'
+                % (j(x0, 1.2), j(y, 1.2), j(x1, 1.2), j(y, 1.2), tip, y + 15, j(x1, 1.2), j(y + 30, 1.2),
+                   j(x0, 1.2), j(y + 30, 1.2), stroke))
+    return (line(cx, cy - 54, cx, cy - 42, stroke, 3.4) + line(cx, cy - 12, cx, cy + 2, stroke, 3.4) +
+            line(cx, cy + 32, cx, cy + 54, stroke, 3.4) + line(cx - 20, cy + 54, cx + 20, cy + 54, stroke, 3.0) +
+            board(cx - 44, cx + 44, cx + 62, cy - 42) + board(cx + 36, cx - 36, cx - 52, cy + 2))
+
+
+def render(out: str, data_file: str, en_var: str, w: int, h: int, uid: str, parts: list[str],
+           key: str = "diagram") -> None:
+    """Wrap the drawn parts in the board, the chalk filters and the Liquid preamble. `key` names
+    the title and description strings, for a page with more than one diagram."""
     def t(key):
         return "{{ t.%s | default: %s.%s }}" % (key, en_var, key)
 
@@ -215,6 +258,8 @@ def render(out: str, data_file: str, en_var: str, w: int, h: int, uid: str, part
      Strings come from _data/i18n/<lang>/{DATA}.json via the page's `t` assign, each
      falling back to English so a not-yet-translated language never renders blank. -->
 {{%- assign {EN} = site.data.i18n.en.{DATA} -%}}
+{{%- assign vh_bidi_in = "" -%}}{{%- assign vh_bidi_out = "" -%}}
+{{%- if vh_dir == "rtl" -%}}{{%- assign vh_bidi_in = "&#x2067;" -%}}{{%- assign vh_bidi_out = "&#x2069;" -%}}{{%- endif -%}}
 <svg class="vh-topology-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" direction="ltr"
      role="img" aria-labelledby="{UID}Title {UID}Desc" preserveAspectRatio="xMidYMid meet">
   <title id="{UID}Title">{TITLE}</title>
@@ -245,7 +290,7 @@ def render(out: str, data_file: str, en_var: str, w: int, h: int, uid: str, part
   </g>
 </svg>
 """.format(W=w, H=h, BOARD=BOARD, UID=uid, DATA=data_file, EN=en_var,
-           TITLE=t("diagram_title"), DESC=t("diagram_desc"),
+           TITLE=t(key + "_title"), DESC=t(key + "_desc"),
            PARTS="\n".join("    " + p for p in parts))
 
     path = pathlib.Path("_includes/diagrams/%s.svg" % out)
@@ -257,7 +302,7 @@ def render(out: str, data_file: str, en_var: str, w: int, h: int, uid: str, part
 def strings(en_var: str):
     """The page's string `k`, falling back to English, and the code value `k`."""
     def t(k):
-        return "{{ t.%s | default: %s.%s }}" % (k, en_var, k)
+        return "{{ vh_bidi_in }}{{ t.%s | default: %s.%s }}{{ vh_bidi_out }}" % (k, en_var, k)
 
     def code(k):
         return "{{ site.data.code.%s }}" % k
@@ -458,7 +503,131 @@ def how_it_works() -> None:
     render("how-it-works-tall", *HOW, W, H, "vhHowTall", parts)
 
 
+# ===========================================================================
+# dynamic-ip-follow - the server's next report shows MANAGER its new address
+# ===========================================================================
+DYNAMIC_IP = ("vpnhood_manager_docs_dynamic_ip", "vh_dynip_en")
+WINDOW_W, WINDOW_H = 128, 92
+
+
+def dynamic_ip_follow() -> None:
+    T, CODE = strings(DYNAMIC_IP[1])
+    steps = (("diagram_report", "diagram_report_sub", MINT), ("diagram_update", "diagram_update_sub", VIOLET))
+
+    # --- left to right: the server, MANAGER, the keys ------------------------------------
+    seed(21)
+    W, H = 920, 330
+    Y = 92
+    XS, XM, XK = 120, 460, 800
+    parts = [rack(XS, Y, RACK_W, RACK_H), window(XM, Y), access_key(XK, Y)]
+    spans = ((XS + RACK_W / 2 + 14, XM - WINDOW_W / 2 - 14), (XM + WINDOW_W / 2 + 14, XK - 78))
+    for (x1, x2), (role, sub, colour) in zip(spans, steps):
+        m = (x1 + x2) / 2
+        parts += [arrow(x1, Y, x2, Y, colour),
+                  txt(m, Y - 18, T(role), 22, colour),
+                  txt(m, Y + 36, CODE("ip_connection_example"), 20),
+                  txt(m, Y + 66, T(sub), 17, CHALK_DIM)]
+    for x, name, sub in ((XS, "diagram_server", "diagram_server_sub"),
+                         (XM, "diagram_manager", "diagram_manager_sub"),
+                         (XK, "diagram_keys", "diagram_keys_sub")):
+        parts += [txt(x, Y + 104, T(name), 24), txt(x, Y + 130, T(sub), 16, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 34, T("diagram_follow_caption"), 20, AMBER))
+    render("dynamic-ip-follow", *DYNAMIC_IP, W, H, "vhDynFollow", parts, "diagram_follow")
+
+    # --- top to bottom: icons down the left, their labels beside them ----------------
+    seed(21)
+    W, H = 560, 660
+    X, TX = 104, 186
+    YS, YM, YK = 84, 316, 530
+    parts = [rack(X, YS, RACK_W, RACK_H), window(X, YM), access_key(X, YK)]
+    spans = ((YS + RACK_H / 2 + 14, YM - WINDOW_H / 2 - 14), (YM + WINDOW_H / 2 + 14, YK - 44))
+    for (y1, y2), (role, sub, colour) in zip(spans, steps):
+        m = (y1 + y2) / 2
+        parts += [arrow(X, y1, X, y2, colour),
+                  txt(TX, m - 12, T(role), 22, colour, "start"),
+                  txt(TX, m + 16, CODE("ip_connection_example"), 20, CHALK, "start"),
+                  txt(TX, m + 40, T(sub), 17, CHALK_DIM, "start")]
+    for y, name, sub in ((YS, "diagram_server", "diagram_server_sub"),
+                         (YM, "diagram_manager", "diagram_manager_sub"),
+                         (YK, "diagram_keys", "diagram_keys_sub")):
+        parts += [txt(TX, y - 2, T(name), 24, CHALK, "start"),
+                  txt(TX, y + 24, T(sub), 16, CHALK_DIM, "start")]
+    parts.append(txt(W / 2, H - 34, T("diagram_follow_caption"), 18, AMBER))
+    render("dynamic-ip-follow-tall", *DYNAMIC_IP, W, H, "vhDynFollowTall", parts, "diagram_follow")
+
+
+# ===========================================================================
+# dynamic-ip-find - the name or the URL in a key leads apps to the new address
+# ===========================================================================
+def gone_route(parts, a, b, horizontal, T, CODE, label_at, cut=0.5):
+    """The way to the old address: dashed and cut `cut` of the way along, as blocked_route,
+    with the old address and its name at `label_at` (x, y, anchor, step)."""
+    (ax, ay), (bx, by) = a, b
+    cx, cy = ax + (bx - ax) * cut, ay + (by - ay) * cut
+    gap = 24
+    if horizontal:
+        parts += [line(ax, ay, cx - gap, cy, CHALK_DIM, 2.6, "9 11"),
+                  arrow(cx + gap, cy, bx, by, CHALK_DIM, 2.6, "9 11")]
+    else:
+        parts += [line(ax, ay, cx, cy - gap, CHALK_DIM, 2.6, "9 11"),
+                  arrow(cx, cy + gap, bx, by, CHALK_DIM, 2.6, "9 11")]
+    parts.append(cross(cx, cy))
+    lx, ly, anchor, step = label_at
+    parts += [txt(lx, ly, CODE("ip_outgoing_example"), 19, CHALK_DIM, anchor),
+              txt(lx, ly + step, T("diagram_old"), 19, CORAL, anchor)]
+
+
+def dynamic_ip_find() -> None:
+    T, CODE = strings(DYNAMIC_IP[1])
+
+    # --- left to right: the signpost above, the way to the old address below -------------
+    seed(23)
+    W, H = 920, 548
+    XU, XS, YB = 120, 800, 350          # users and server, on the old route
+    XP, YP = 460, 118                   # the signpost
+    parts = [people(XU, YB), rack(XS, YB, RACK_W, RACK_H), signpost(XP, YP),
+             txt(XP, YP + 92, T("diagram_finder"), 22),
+             txt(XP, YP + 118, T("diagram_finder_sub"), 17, CHALK_DIM)]
+    x_in, x_out = XP - 74, XP + 76      # where the route meets the signpost
+    lx = (x_out + XS) / 2 - 8           # the new address's slot: between the signpost and the corner
+    parts += [elbow([(XU, YB - 42), (XU, YP), (x_in, YP)]),
+              elbow([(x_out, YP), (XS, YP), (XS, YB - RACK_H / 2 - 14)]),
+              txt(lx, YP - 18, T("diagram_new"), 21, MINT),
+              txt(lx, YP + 32, CODE("ip_connection_example"), 19)]
+    gone_route(parts, (XU + 58, YB), (XS - RACK_W / 2 - 14, YB), True, T, CODE,
+               ((XU + XS) / 2, YB - 26, "middle", 64))
+    for x, name, sub in ((XU, "diagram_users", "diagram_users_sub"),
+                         (XS, "diagram_server", "diagram_server_sub")):
+        parts += [txt(x, YB + 82, T(name), 24), txt(x, YB + 108, T(sub), 16, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 34, T("diagram_find_caption"), 20, AMBER))
+    render("dynamic-ip-find", *DYNAMIC_IP, W, H, "vhDynFind", parts, "diagram_find")
+
+    # --- top to bottom: the old route down the left, the signpost on the right -----------
+    seed(23)
+    W, H = 560, 766
+    X, YU, YS = 110, 84, 586            # users and server, on the old route
+    XP, YP = 402, 262                   # the signpost
+    parts = [people(X, YU), rack(X, YS, RACK_W, RACK_H), signpost(XP, YP),
+             txt(XP, YP + 92, T("diagram_finder"), 21),
+             txt(XP, YP + 118, T("diagram_finder_sub"), 16, CHALK_DIM)]
+    top, bottom = YP - 66, YP + 136     # where the route meets the signpost and leaves its label
+    parts += [elbow([(X + 58, YU), (XP, YU), (XP, top)]),
+              elbow([(XP, bottom), (XP, YS), (X + RACK_W / 2 + 14, YS)]),
+              txt((X + RACK_W / 2 + XP) / 2 + 8, YS - 18, T("diagram_new"), 21, MINT),
+              txt((X + RACK_W / 2 + XP) / 2 + 8, YS + 32, CODE("ip_connection_example"), 19)]
+    y1, y2 = YU + 112, YS - RACK_H / 2 - 14
+    gone_route(parts, (X, y1), (X, y2), False, T, CODE,
+               (X + 24, y1 + (y2 - y1) * 0.64 - 4, "start", 24), 0.64)
+    for y, name, sub in ((YU, "diagram_users", "diagram_users_sub"),
+                         (YS, "diagram_server", "diagram_server_sub")):
+        parts += [txt(X, y + 72, T(name), 23), txt(X, y + 96, T(sub), 16, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 32, T("diagram_find_caption"), 18, AMBER))
+    render("dynamic-ip-find-tall", *DYNAMIC_IP, W, H, "vhDynFindTall", parts, "diagram_find")
+
+
 if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
     how_it_works()
+    dynamic_ip_follow()
+    dynamic_ip_find()

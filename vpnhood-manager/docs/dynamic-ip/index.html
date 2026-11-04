@@ -1,0 +1,105 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_dynamic_ip
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Written for VpnHood! SERVER v9.1.866 and the MANAGER of 2026-11-04 (agent 4.0.442), and
+  checked against both sources, for issues #616 and #802 of VpnHood (owner, 2026-11-04: one
+  page for a server whose IP changes, and artwork, not plain text). What it rests on:
+  a server's status call from a new address of either IP version gives it a new config code,
+  so it reconfigures, and Configure looks its public addresses up again (the agent's
+  StatusIpTracker; VpnHoodServer). That is for Automatic Configuration only, and it compares
+  each family with its own last status address, so a router that sends each connection out
+  over another line flips it for good (the accepted limit in StatusIpTracker's comment).
+  Automatic Configuration keeps each access point's TCP, UDP and QUIC ports through a change
+  (the agent's GetBestTcpPort and its UDP and QUIC twins). Behind a router, the machine's
+  private address is Private with Listen and the public one is Public without Listen,
+  PublicInToken for the first (BuildServerAccessPoints). QUIC runs on a UDP port (Configure's
+  GetFreeUdpPort). An app looks a key's name up only when the key marks it a valid host name
+  (EndPointResolver.ResolveHostEndPoints), which MANAGER does only for a validated
+  certificate (FarmTokenBuilder), and then tries the name's answers and the key's addresses
+  alike. Port 80 answers Let's Encrypt on each TLS endpoint's address, so forwarding it to the
+  machine is enough (Http01ChallengeService). A standalone server looks its address up only at
+  start, and with IsValidHostName its keys carry the name too (FileAccessManager).
+  The two diagrams are drawn twice by tools/make-docs-diagrams.py: left to right from a tablet
+  up, top to bottom on a phone. The hero is tools/make-docs-heroes.py's dynamic_ip. The
+  screenshots are real app UI, so they have no light variant; how to retake the ports one, and
+  the certificate one it shares with certificates/, is in Vh/.user/docs/manager-test-projects.md.
+  MANAGER's screen text is a placeholder from _data/code.yml, filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-dynamic-ip.svg" %}
+
+<h2 id="follow">{{ t.follow_title }}</h2>
+<p>{% include copy.html s=t.follow_desc %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/dynamic-ip-follow.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/dynamic-ip-follow-tall.svg %}
+</figure>
+<p>{% include copy.html s=t.follow_off %}</p>
+
+<h2 id="router">{{ t.router_title }}</h2>
+<p>{{ t.router_intro }}</p>
+<ol>
+  <li>{{ t.router_fixed }}</li>
+  <li>{% include copy.html s=t.router_ports %}</li>
+  <li>{% include copy.html s=t.router_forward %}</li>
+</ol>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/dynamic-ip-ports.webp" alt="{{ t.shot_ports_alt }}" width="800" height="355" loading="lazy">
+  <figcaption>{% include copy.html s=t.shot_ports_caption %}</figcaption>
+</figure>
+
+<h2 id="apps">{{ t.apps_title }}</h2>
+<p>{{ t.apps_why }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/dynamic-ip-find.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/dynamic-ip-find-tall.svg %}
+</figure>
+
+<h3 id="dynamic-dns">{{ t.ddns_title }}</h3>
+<p>{{ t.ddns_desc }}</p>
+<ol>
+  <li>{{ t.ddns_name }}</li>
+  <li>{% include copy.html s=t.ddns_port %}</li>
+  <li>{% include copy.html s=t.ddns_cert %}</li>
+</ol>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/certificate-autosign.webp" alt="{{ t.shot_cert_alt }}" width="600" height="573" loading="lazy">
+  <figcaption>{{ t.shot_cert_caption }}</figcaption>
+</figure>
+<p>{% include copy.html s=t.ddns_trusted %}</p>
+
+<h3 id="token-urls">{{ t.urls_title }}</h3>
+<p>{% include copy.html s=t.urls_desc %}</p>
+
+<h3 id="keys">{{ t.keys_title }}</h3>
+<p>{% include copy.html s=t.keys_desc %}</p>
+
+<h2 id="keep-in-mind">{{ t.limits_title }}</h2>
+<ul>
+  <li>{{ t.limit_drop }}</li>
+  <li>{{ t.limit_shared }}</li>
+  <li>{% include copy.html s=t.limit_lines %}</li>
+</ul>
+
+<h2 id="standalone">{{ t.standalone_title }}</h2>
+<p>{% include copy.html s=t.standalone_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/server-profiles/">{{ t.next_profile }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

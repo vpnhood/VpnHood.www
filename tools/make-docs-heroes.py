@@ -504,6 +504,27 @@ def access_points() -> None:
     a.render("access-points", product="vpnhood-manager")
 
 
+def dynamic_ip() -> None:
+    """A dynamic IP: a home, the address it had, and the new one taking its place."""
+    a = Art("dhDynIp")
+    a.ambient(cy=440)
+    # the home: a roof and its walls, as one outline
+    a.solid('<path d="M 500 110 L 850 400 Q 872 420 842 420 H 780 V 610 Q 780 640 750 640 H 250 Q 220 640 220 610 '
+            'V 420 H 158 Q 128 420 150 400 Z" {fill} {stroke}/>', width=12)
+    # the server inside it, running
+    a.server_unit(300, 430, 400, 130, rim=False, lit=True)
+    # the old address, dim, and the new one, lit, with the way from one to the other
+    a.address(120, 690, 560, lit=False)
+    a.address(120, 810, 560, lit=True)
+    turn = "M 690 733 H 790 Q 850 733 850 793 Q 850 853 790 853 H 720"
+    a.add(f'<path d="{turn}" fill="none" stroke="{a.url("Rim")}" stroke-width="36" stroke-linecap="round" '
+          f'filter="{a.url("Soft")}" opacity=".6"/>',
+          f'<path d="{turn}" fill="none" stroke="{a.url("Rim")}" stroke-width="20" stroke-linecap="round"/>',
+          f'<path d="M 762 806 L 712 853 L 762 900" fill="none" stroke="{MINT}" stroke-width="20" '
+          f'stroke-linecap="round" stroke-linejoin="round"/>')
+    a.render("dynamic-ip", "vpnhood-manager")
+
+
 def server_profiles() -> None:
     """Server profiles: one card of settings, and the servers of a farm it reaches, each lit."""
     a = Art("dhMgrProf")
@@ -849,6 +870,7 @@ if __name__ == "__main__":
     manager_docs()
     add_server()
     access_points()
+    dynamic_ip()
     certificates()
     server_profiles()
     farms()

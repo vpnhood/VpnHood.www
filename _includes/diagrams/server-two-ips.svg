@@ -2,6 +2,8 @@
      Strings come from _data/i18n/<lang>/vpnhood_server_docs_ip_blocking.json via the page's `t` assign, each
      falling back to English so a not-yet-translated language never renders blank. -->
 {%- assign vh_twoips_en = site.data.i18n.en.vpnhood_server_docs_ip_blocking -%}
+{%- assign vh_bidi_in = "" -%}{%- assign vh_bidi_out = "" -%}
+{%- if vh_dir == "rtl" -%}{%- assign vh_bidi_in = "&#x2067;" -%}{%- assign vh_bidi_out = "&#x2069;" -%}{%- endif -%}
 <svg class="vh-topology-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 318" direction="ltr"
      role="img" aria-labelledby="vhTwoIpsTitle vhTwoIpsDesc" preserveAspectRatio="xMidYMid meet">
   <title id="vhTwoIpsTitle">{{ t.diagram_title | default: vh_twoips_en.diagram_title }}</title>
@@ -32,20 +34,20 @@
     <path d="M 405.6 50.0 L 513.9 48.0 L 512.3 134.6 L 405.8 133.4 Z" fill="none" stroke="#ecebe3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M 420.0 60.8 L 502.1 59.4 L 499.7 84.6 L 419.0 88.5 Z" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="431.0" cy="73.8" r="3.4" fill="#a9a7b8"/><circle cx="442.0" cy="73.8" r="3.4" fill="#a9a7b8"/><path d="M 465.2 74.3 L 490.8 74.2" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/><path d="M 417.1 96.5 L 501.8 98.6 L 500.6 121.0 L 417.9 121.6 Z" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="431.0" cy="110.2" r="3.4" fill="#a9a7b8"/><circle cx="442.0" cy="110.2" r="3.4" fill="#a9a7b8"/><path d="M 464.6 110.9 L 490.4 111.0" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/>
     <circle cx="800.6" cy="91.3" r="42.0" fill="none" stroke="#a9a7b8" stroke-width="2.8"/><ellipse cx="800.0" cy="92.0" rx="17.6" ry="42.0" fill="none" stroke="#a9a7b8" stroke-width="2.2"/><path d="M 757.8 92.0 L 841.0 91.8" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/><path d="M 764.4 70.2 L 836.6 70.2" fill="none" stroke="#a9a7b8" stroke-width="2.0" stroke-linecap="round"/><path d="M 763.8 113.8 L 835.8 112.0" fill="none" stroke="#a9a7b8" stroke-width="2.0" stroke-linecap="round"/>
     <path d="M 176.7 92.1 L 394.0 92.0" fill="none" stroke="#9fe8d2" stroke-width="3.2" stroke-linecap="round"/><path d="M 376.5 99.4 L 394.0 92.0 M 376.5 84.6 L 394.0 92.0" fill="none" stroke="#9fe8d2" stroke-width="3.2" stroke-linecap="round"/>
-    <text x="286.0" y="74.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="22" fill="#9fe8d2" text-anchor="middle">{{ t.diagram_connection_ip | default: vh_twoips_en.diagram_connection_ip }}</text>
+    <text x="286.0" y="74.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="22" fill="#9fe8d2" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_connection_ip | default: vh_twoips_en.diagram_connection_ip }}{{ vh_bidi_out }}</text>
     <text x="286.0" y="128.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#ecebe3" text-anchor="middle">{{ site.data.code.ip_connection_example }}</text>
-    <text x="286.0" y="152.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#a9a7b8" text-anchor="middle">{{ t.diagram_in_keys | default: vh_twoips_en.diagram_in_keys }}</text>
+    <text x="286.0" y="152.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_in_keys | default: vh_twoips_en.diagram_in_keys }}{{ vh_bidi_out }}</text>
     <path d="M 524.5 90.7 L 744.0 92.0" fill="none" stroke="#c3b0ff" stroke-width="3.2" stroke-linecap="round"/><path d="M 726.5 99.4 L 744.0 92.0 M 726.5 84.6 L 744.0 92.0" fill="none" stroke="#c3b0ff" stroke-width="3.2" stroke-linecap="round"/>
-    <text x="635.0" y="74.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="22" fill="#c3b0ff" text-anchor="middle">{{ t.diagram_outgoing_ip | default: vh_twoips_en.diagram_outgoing_ip }}</text>
+    <text x="635.0" y="74.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="22" fill="#c3b0ff" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_outgoing_ip | default: vh_twoips_en.diagram_outgoing_ip }}{{ vh_bidi_out }}</text>
     <text x="635.0" y="128.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#ecebe3" text-anchor="middle">{{ site.data.code.ip_outgoing_example }}</text>
-    <text x="635.0" y="152.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#a9a7b8" text-anchor="middle">{{ t.diagram_websites_see | default: vh_twoips_en.diagram_websites_see }}</text>
+    <text x="635.0" y="152.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_websites_see | default: vh_twoips_en.diagram_websites_see }}{{ vh_bidi_out }}</text>
     <circle cx="408.0" cy="92.0" r="7.0" fill="#9fe8d2"/>
     <circle cx="512.0" cy="92.0" r="7.0" fill="#c3b0ff"/>
-    <text x="120.0" y="190.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="24" fill="#ecebe3" text-anchor="middle">{{ t.diagram_users | default: vh_twoips_en.diagram_users }}</text>
-    <text x="120.0" y="216.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="16" fill="#a9a7b8" text-anchor="middle">{{ t.diagram_users_sub | default: vh_twoips_en.diagram_users_sub }}</text>
-    <text x="460.0" y="190.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="24" fill="#ecebe3" text-anchor="middle">{{ t.diagram_server | default: vh_twoips_en.diagram_server }}</text>
-    <text x="460.0" y="216.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="16" fill="#a9a7b8" text-anchor="middle">{{ t.diagram_server_sub | default: vh_twoips_en.diagram_server_sub }}</text>
-    <text x="800.0" y="190.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="24" fill="#ecebe3" text-anchor="middle">{{ t.diagram_websites | default: vh_twoips_en.diagram_websites }}</text>
-    <text x="460.0" y="280.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#f2d9a2" text-anchor="middle">{{ t.diagram_caption | default: vh_twoips_en.diagram_caption }}</text>
+    <text x="120.0" y="190.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="24" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_users | default: vh_twoips_en.diagram_users }}{{ vh_bidi_out }}</text>
+    <text x="120.0" y="216.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="16" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_users_sub | default: vh_twoips_en.diagram_users_sub }}{{ vh_bidi_out }}</text>
+    <text x="460.0" y="190.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="24" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_server | default: vh_twoips_en.diagram_server }}{{ vh_bidi_out }}</text>
+    <text x="460.0" y="216.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="16" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_server_sub | default: vh_twoips_en.diagram_server_sub }}{{ vh_bidi_out }}</text>
+    <text x="800.0" y="190.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="24" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_websites | default: vh_twoips_en.diagram_websites }}{{ vh_bidi_out }}</text>
+    <text x="460.0" y="280.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#f2d9a2" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_caption | default: vh_twoips_en.diagram_caption }}{{ vh_bidi_out }}</text>
   </g>
 </svg>

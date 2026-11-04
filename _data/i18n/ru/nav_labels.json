@@ -22,6 +22,7 @@
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Сертификаты",
   "add-server": "Добавление сервера",
+  "dynamic-ip": "Динамический IP",
   "access-points": "Точки доступа",
   "server-profiles": "Профили серверов",
   "farms": "Фермы серверов",

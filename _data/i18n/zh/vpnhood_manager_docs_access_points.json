@@ -7,7 +7,7 @@
   "where_desc": "打开 <b>[manager_servers]</b>，选择对应服务器并找到 <b>[manager_access_points]</b>。每个接入点代表服务器的一个地址及其端口。服务器集群页面同样会在 <b>[manager_access_points]</b> 下列出其密钥所包含的地址。",
   "auto_title": "自动配置",
   "auto_desc": "每台新服务器均默认开启 <b>[manager_auto_config]</b>。MANAGER 会像独立服务器一样，通过服务器的出站流量自动检测其地址，并配置相应的接入点。这种方式适用于绝大多数设备；详见 <a href=\"/vpnhood-server/docs/ip-addresses/#automatic\">服务器如何检测自身地址</a> 以了解特殊情况。",
-  "auto_follow": "当服务器地址发生变化时（许多家庭网络连接都会如此），MANAGER 会自动察觉，并在几分钟内更新接入点和密钥。持有旧密钥的应用无法连接到旧地址，因此请为集群添加 <a href=\"/vpnhood-manager/docs/farms/#token-urls\">Token URL</a>，应用可从中找到新地址。",
+  "auto_follow": "当服务器地址发生变化时（许多家庭网络连接都会如此），MANAGER 会自动察觉，并在几分钟内更新接入点和密钥。持有旧密钥的应用无法连接到旧地址：应用如何找到新地址，请参见<a href=\"/vpnhood-manager/docs/dynamic-ip/\">在动态 IP 地址上运行 VpnHood! SERVER</a>。",
   "auto_router": "如果服务器位于家用路由器之后，请在路由器上将服务器的端口转发到该服务器：包括其 <b>[manager_tcp_port]</b>，以及未关闭的 <b>[manager_udp_port]</b> 和 <b>[manager_quic_port]</b>。",
   "auto_off": "如需手动配置接入点，请关闭 <b>[manager_auto_config]</b>：开启状态下只能更改端口。由于服务器需要应用新配置并重启，MANAGER 会提示您进行确认。",
   "auto_ports": "<b>[manager_auto_config]</b> 会保留每个接入点的端口。如需使用 443 以外的 <b>[manager_tcp_port]</b>，无需关闭该选项，直接编辑接入点并设置端口即可：地址变化时端口保持不变。",
