@@ -658,8 +658,8 @@
     vertical-align: middle;
 }
 
-// A note and a warning: an edge in the accent or the warning ink, never a filled
-// banner, so a page with three of them still reads as text.
+// A note and a warning: a note is an edge in the accent, so it reads as text; a warning
+// is filled with a tint of the warning colour too, as it says what breaks if it is missed.
 .vh-docs-note,
 .vh-docs-warn{
     margin: 1.5rem 0;
@@ -671,6 +671,7 @@
 
 .vh-docs-warn{
     border-inline-start-color: var(--vh-warn);
+    background-color: rgba(var(--orange-200-rgb), .2);
 }
 
 .vh-docs-note p,
