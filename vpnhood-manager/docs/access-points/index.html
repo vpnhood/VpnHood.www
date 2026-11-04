@@ -17,7 +17,12 @@ extra_css:
   server's outgoing traffic come from (the server's IPAddressUtil: Cloudflare, then
   my-ip.io) as Public without Listen, PublicInToken for the first of each IP version unless
   another server of the farm has one (the agent's BuildServerAccessPoints). So behind a NAT
-  gateway it puts the gateway's address in the keys (owner, 2026-10-28). Mode decides who
+  gateway it puts the gateway's address in the keys (owner, 2026-10-28). It keeps each access
+  point's ports, the TCP port too (the same address and kind first), and a server's status
+  call from a new address of either IP version reconfigures the server, which looks its
+  addresses up again; a family the lookup misses takes the address its status came from (the
+  agent's 9d33384e; servers after v9.1.864 alternate IPv4 and IPv6 for their status calls,
+  VpnHood c61bd4c97). Mode decides who
   gets an address and Listen whether the server listens on it; MANAGER builds a farm key
   with no address only from a validated certificate; Push token to clients sends a key that
   carries only the domain when an app connects, and one with addresses once every server in
@@ -40,7 +45,10 @@ extra_css:
 
 <h2 id="automatic">{{ t.auto_title }}</h2>
 <p>{% include copy.html s=t.auto_desc %}</p>
+<p>{% include copy.html s=t.auto_follow %}</p>
+<p>{% include copy.html s=t.auto_router %}</p>
 <p>{% include copy.html s=t.auto_off %}</p>
+<p>{% include copy.html s=t.auto_ports %}</p>
 
 <h2 id="settings">{{ t.settings_title }}</h2>
 <p>{{ t.settings_fields }}</p>
