@@ -10,14 +10,15 @@ extra_css:
 {%- comment -%}
   The install pages are quick starts (owner, 2026-10-22), so the installers' questions and
   their options for a script live here, and install/ and docker/ link here once. Checked
-  against the v9.0.859 release's VpnHoodServer-linux-x64.sh and VpnHoodServer.docker.sh,
+  against the v9.1.866 release's VpnHoodServer-linux-x64.sh and VpnHoodServer.docker.sh,
   which match their sources in the VpnHood repo (pub/lib/vh-installer/linux/,
   src/Apps/Server/pub/Linux-Docker/). Only the options a reader types: those the Linux
-  installer's -help lists, and the Docker installer's -install-docker and -q (it has no
-  -help). Left out: -packageUrl, -packageFile, -versionTag, -destination and -container,
-  which the updater passes; the Docker installer's -composeUrl and -composeFile; and
-  v9.0.859's -autostart and -autoupdate, which the next release drops. MANAGER's three are
-  named, not explained: MANAGER's command fills them in, and its steps live in its docs.
+  installer's -help lists, and the Docker installer's -install-docker and -q. Left out:
+  -packageUrl, -packageFile, -versionTag, -destination and -container, which the updater
+  passes; and the Docker installer's -composeUrl and -composeFile. The Docker installer has
+  no -minClientProtocolVersion: a Docker server sets it in its settings, as ip-blocking/
+  shows. MANAGER's three are named, not explained: MANAGER's command fills them in, and its
+  steps live in its docs.
   Whole commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.
 {%- endcomment -%}
@@ -32,6 +33,7 @@ extra_css:
     <tr><td><code>-q</code></td><td>{{ t.opt_q }}</td></tr>
     <tr><td><code>-noautostart</code></td><td>{% include copy.html s=t.opt_no_autostart %}</td></tr>
     <tr><td><code>-noautoupdate</code></td><td>{{ t.opt_no_autoupdate }}</td></tr>
+    <tr><td><code>-minClient<wbr>Protocol<wbr>Version</code></td><td>{% include copy.html s=t.opt_min_protocol %}</td></tr>
     <tr><td><code>-help</code></td><td>{{ t.opt_help }}</td></tr>
   </tbody>
 </table>

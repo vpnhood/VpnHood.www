@@ -15,6 +15,7 @@
   "censored_desc": "On a network that blocks VPN servers, a farm's profile gives all of its servers the settings for a censored network at once. <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">Keep your server's IP address from being blocked</a> explains each, and what it costs your users. In <b>[manager_advanced_edit]</b>, set:",
   "caption_censored": "Cloak Mode for everyone, no UDP and no QUIC to the servers, and your users' QUIC dropped",
   "censored_refused": "MANAGER refuses <code>[setting_allow_quic_packet]</code> or <code>[setting_allow_udp_packet]</code> off while <code>[setting_allow_tcp_packet]</code> is on, as the servers would carry them anyway. It refuses <code>[setting_allow_tcp_packet]</code> and <code>[setting_allow_tcp_proxy]</code> both off too, which leaves TCP no way through.",
+  "censored_minimum": "To turn away probes too, set <b>[manager_min_client_protocol]</b> under <b>[manager_general]</b> to <code>[min_protocol_proof]</code>, but only once your users' apps are on VpnHood 9.1 or later: older apps then cannot connect. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Turn away probes</a> explains it.",
   "proxy_title": "Behind a reverse proxy",
   "proxy_desc": "Your servers trust Cloudflare to name each user's address. Behind another reverse proxy, open <b>[manager_advanced_edit]</b> and add the settings that <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">Your users' addresses</a> shows.",
   "next_title": "Next steps",

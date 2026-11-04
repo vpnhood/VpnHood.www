@@ -15,6 +15,7 @@
   "censored_desc": "在封锁 VPN 服务器的网络中，集群的配置方案可以一次性为该集群的所有服务器提供适用于受审查网络的设置。<a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">防止服务器 IP 地址被封锁</a>逐一说明了每项设置，以及它会让用户付出的代价。在 <b>[manager_advanced_edit]</b> 中设置：",
   "caption_censored": "对所有用户启用伪装模式、连接服务器时不使用 UDP 和 QUIC，并丢弃用户的 QUIC 流量",
   "censored_refused": "MANAGER 会拒绝在 <code>[setting_allow_tcp_packet]</code> 开启时关闭 <code>[setting_allow_quic_packet]</code> 或 <code>[setting_allow_udp_packet]</code> 的设置，因为服务器无论如何都会传输这些流量。它也会拒绝将 <code>[setting_allow_tcp_packet]</code> 和 <code>[setting_allow_tcp_proxy]</code> 同时关闭的设置，因为这样 TCP 流量将无法通过。",
+  "censored_minimum": "若还要拒绝探测，请将 <b>[manager_general]</b> 下的 <b>[manager_min_client_protocol]</b> 设为 <code>[min_protocol_proof]</code>，但请等到用户的应用都使用 VpnHood 9.1 或更高版本后再操作：更旧的应用将无法连接。<a href=\"/vpnhood-server/docs/ip-blocking/#probes\">拒绝探测</a>对此有详细说明。",
   "proxy_title": "位于反向代理之后",
   "proxy_desc": "您的服务器信任 Cloudflare 告知的每个用户的地址。若位于其他反向代理之后，请打开 <b>[manager_advanced_edit]</b>，添加<a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">用户的地址</a>中所示的设置。",
   "next_title": "后续步骤",

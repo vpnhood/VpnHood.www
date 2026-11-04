@@ -27,7 +27,10 @@ extra_css:
   turn off. A trusted
   certificate's host name hints at no VPN, as certificate logs are public, and is never
   a wildcard, which MANAGER refuses. Linux and Docker only:
-  Windows servers are rare. No links to the GitHub wiki, which is being retired. Whole
+  Windows servers are rare. The minimum client protocol is a section of its own, outside
+  the censored-network snippet, as it locks out older apps: it comes once users have
+  updated, and the default stays 8 (owner, 2026-11-01). No links to the GitHub wiki, which
+  is being retired. Whole
   commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.
 {%- endcomment -%}
@@ -99,10 +102,21 @@ extra_css:
   "QuicEndPoints": []
 }' %}
 
+<h3 id="probes">{{ t.probe_title }}</h3>
+<p>{% include copy.html s=t.probe_desc %}</p>
+<p>{{ t.probe_update }}</p>
+{% include terminal.html caption=t.caption_probe code='{
+  "Session": {
+    "MinClientProtocolVersion": 15
+  }
+}' %}
+<div class="vh-docs-warn" role="note"><p>{% include copy.html s=t.probe_warn %}</p></div>
+
 {% include docs-managed.html href="/vpnhood-manager/docs/server-profiles/#censored-network" %}
 
 <h2 id="standalone">{{ t.file_title }}</h2>
 <p>{% include copy.html s=t.censored_standalone %}</p>
+<p>{% include copy.html s=t.file_installer %}</p>
 
 <h2 id="reverse-proxy">{{ t.proxy_title }}</h2>
 <p>{{ t.proxy_desc }}</p>

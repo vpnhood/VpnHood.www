@@ -15,6 +15,7 @@
   "censored_desc": "في شبكة تحظر خوادم VPN، يمنح ملف تعريف المزرعة جميع خوادمها الإعدادات المناسبة لشبكة خاضعة للرقابة دفعة واحدة. يشرح دليل <a href=\"/vpnhood-server/docs/ip-blocking/#censored-network\">احمِ عنوان IP الخاص بخادمك من الحظر</a> كل إعداد منها، وما يكلّف مستخدميك. في <b>[manager_advanced_edit]</b>، اضبط:",
   "caption_censored": "وضع التخفي للجميع، ولا UDP ولا QUIC إلى الخوادم، وإسقاط QUIC لدى مستخدميك",
   "censored_refused": "يرفض MANAGER إيقاف <code>[setting_allow_quic_packet]</code> أو <code>[setting_allow_udp_packet]</code> ما دام <code>[setting_allow_tcp_packet]</code> مفعّلًا، لأن الخوادم ستنقلها على أي حال. ويرفض أيضًا إيقاف <code>[setting_allow_tcp_packet]</code> و<code>[setting_allow_tcp_proxy]</code> معًا، لأن ذلك لا يترك لحركة TCP أي طريق للعبور.",
+  "censored_minimum": "لصدّ الفحوصات أيضًا، اضبط <b>[manager_min_client_protocol]</b> ضمن <b>[manager_general]</b> على <code>[min_protocol_proof]</code>، ولكن فقط بعد أن تصبح تطبيقات مستخدميك على VpnHood 9.1 أو أحدث، إذ لن تتمكن التطبيقات الأقدم من الاتصال. يوضح <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">صدّ الفحوصات</a> ذلك.",
   "proxy_title": "خلف بروكسي عكسي",
   "proxy_desc": "تثق خوادمك بـ Cloudflare في تحديد عنوان كل مستخدم. أما خلف بروكسي عكسي آخر، فافتح <b>[manager_advanced_edit]</b> وأضف الإعدادات التي يعرضها قسم <a href=\"/vpnhood-server/docs/reverse-proxy/#addresses\">عناوين مستخدميك</a>.",
   "next_title": "الخطوات التالية",
