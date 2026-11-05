@@ -59,7 +59,7 @@
   "censored_drop": "<b>丢弃用户的 QUIC 和 UDP 流量。</b>这里指的是用户自己的流量，而不是应用与服务器之间的连接。在强制启用伪装模式时，将 <code>[setting_allow_quic_packet]</code> 设为 <code>[json_false]</code> 会丢弃用户的应用发送的 QUIC 流量，将 <code>[setting_allow_udp_packet]</code> 设为 <code>[json_false]</code> 则会丢弃除 DNS 以外的所有 UDP 流量。应用会直接在设备上丢弃这些流量，因此它们根本不会经过网络。浏览器很快就会改用 TCP，但需要 UDP 的语音通话、视频通话和游戏将无法使用，因此请权衡用户的实际需要。",
   "caption_censored": "对所有用户启用伪装模式、连接服务器时不使用 UDP 和 QUIC，并丢弃用户的 QUIC 流量",
   "probe_title": "拒绝探测",
-  "probe_desc": "了解 VpnHood 的探测可通过响应方式识别您的服务器。将 <code>[setting_min_client_protocol]</code> 设为 <code>[min_protocol_proof]</code> 后，每个应用都必须在首次请求中证明自己持有访问密钥，无法证明的一切请求只会得到普通 Web 服务器的简单拒绝。",
+  "probe_desc": "将 <code>[setting_min_client_protocol]</code> 设为 <code>[min_protocol_proof]</code> 后，每个应用都必须在首次请求中证明自己持有访问密钥，无法证明的一切请求只会得到普通 Web 服务器的简单拒绝。",
   "probe_update": "这要求您的服务器和用户的应用都使用 VpnHood 9.1 或更高版本。请先更新它们，顺序不限：已更新的应用仍可连接尚未更新的服务器。",
   "probe_where": "受管服务器从其<a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">服务器配置方案</a>获取此设置。在独立服务器上，请将其放在 <code>[server_appsettings]</code> 中的 <code>[setting_file_access_manager]</code> 下，然后重启服务器；在 Linux 上，<a href=\"/vpnhood-server/docs/installer-options/#linux\">安装命令</a>可以为您设置。",
   "caption_probe": "只有使用 VpnHood 9.1 或更高版本的应用才能连接",

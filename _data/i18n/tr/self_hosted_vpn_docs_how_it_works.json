@@ -27,6 +27,7 @@
   "tcp_packets": "Uygulama varsayılan olarak TCP verilerini tünel üzerinden paketler halinde iletir; sunucunuz da tıpkı bir yönlendirici gibi bunları kendi ağ bağdaştırıcısı üzerinden yönlendirir. En hızlı ve pil dostu yöntem budur.",
   "tcp_cloak": "<a href=\"/features/cloak-mode/\">Kamufle Modu</a> etkinken uygulama bunun yerine her bağlantıyı cihazda sonlandırır ve sunucunuzdan, ayrı bir istekle, bağlantıyı açmasını ister. Sunucunuz web sitesine kendisi bağlanır ve verileri iki yönde de aktarır. Ağ açısından trafik artık tek bir uzun tünel gibi değil, bir tarayıcının ayrı ayrı istekleri gibi görünür. Bu, hızdan ve pilden biraz götürür; uygulama da tamamlanan her isteğin bağlantısını bir sonraki istek için yeniden kullanır.",
   "tcp_forced": "Uygulama Kamufle Modu olmadan da bu şekilde çalışır: sunucunuzun, Docker'da olduğu gibi, kendine ait bir ağ bağdaştırıcısı olmadığında ve bir kullanıcı alan adına göre tünelleme kullanırken.",
+  "tcp_detection": "<a href=\"/self-hosted-vpn/docs/vpn-detection/\">VpnHood, VPN tespitine nasıl direnir?</a> sayfası her durumda ağın neyi gördüğünü gösterir.",
   "udp_title": "UDP ve ping",
   "udp_desc": "Uygulamanın kullandığı protokolden bağımsız olarak UDP verileri tünelden paketler halinde geçer. Ping istekleri de aynı şekilde iletilir; uygulama yalnızca yankı (echo) isteklerini taşır ve diğer ICMP paketlerini yok sayar. Sunucunuz her ikisini de ağ bağdaştırıcısı üzerinden veya bir bağdaştırıcı yoksa cihaz adına ping atarak kendi soketleri üzerinden iletir.",
   "server_title": "Sunucu tarafı",

@@ -1,0 +1,76 @@
+---
+layout: none
+i18n: self_hosted_vpn_docs_vpn_detection
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The search-friendly page on detection (owner, 2026-11-05): How it works keeps its general
+  subject, and this page holds what a network sees. It says "resists" and "looks like", never
+  "undetectable": see What Cloak Mode cannot hide.
+  The Cloak Mode section was checked on 2026-11-04 against develop (SERVER v9.1.866): a TCP
+  connection of the device's gets one request of its own (ClientStreamHandler.AddTunnelChannel)
+  and ordinary requests get Kestrel's replies (ProbeResistance/WebFront). It says "looks like",
+  never "exactly": UDP and QUIC stay packets, the server starts self-signed, below
+  MinClientProtocolVersion 15 a probe that knows VpnHood can tell, and StartPadding, which
+  blurs the start of each stream, is experimental and off. Not said, on purpose: Kestrel by
+  name, StartPadding, and that a probe can tell below 15 (owner, 2026-11-05: the installers
+  and MANAGER warn about it).
+  The Block QUIC section was checked on 2026-11-05 against develop: the app drops it on the device
+  (ClientPacketHandler.ShouldDropUdpPacket, UDP to ports 80 and 443), only with the TCP proxy, and a server
+  without QUIC packets forces it (ClientSession.UpdateConfig); off by default (UserSettings.DropQuic);
+  the app shows it only with Cloak Mode on (ProtocolsView). Not said, on purpose: the port numbers.
+  The first board is the Cloak Mode feature page's, so this page's JSON carries its diagram_* keys,
+  with "A device" and "Your server" for the reader of the docs.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="self-hosted-vpn/docs/hero-vpn-detection.svg" %}
+
+<h2 id="detection">{{ t.detect_title }}</h2>
+<p>{{ t.detect_shape }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/cloak-mode.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/cloak-mode-tall.svg %}
+</figure>
+<p>{{ t.detect_probe }}</p>
+
+<h2 id="cloak-mode">{{ t.cloak_title }}</h2>
+<p>{% include copy.html s=t.cloak_desc %}</p>
+<ul>
+  <li>{{ t.cloak_browsing }}</li>
+  <li>{{ t.cloak_download }}</li>
+</ul>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/cloak-traffic.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/cloak-traffic-tall.svg %}
+</figure>
+<p>{{ t.cloak_real }}</p>
+
+<h2 id="block-quic">{{ t.quic_title }}</h2>
+<p>{{ t.quic_desc }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/block-quic.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/block-quic-tall.svg %}
+</figure>
+<p>{% include copy.html s=t.quic_block %}</p>
+
+<h2 id="limits">{{ t.limits_title }}</h2>
+<p>{% include copy.html s=t.limits_desc %}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

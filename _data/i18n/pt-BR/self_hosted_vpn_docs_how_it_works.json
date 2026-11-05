@@ -27,6 +27,7 @@
   "tcp_packets": "Por padrão, o aplicativo envia TCP como pacotes pelo túnel, e o servidor os repassa para a internet por meio do seu próprio adaptador de rede, assim como um roteador. Essa é a alternativa mais rápida e que consome menos bateria.",
   "tcp_cloak": "No <a href=\"/features/cloak-mode/\">Modo invisível</a>, o aplicativo finaliza cada conexão no próprio dispositivo e solicita ao servidor que a abra. Seu servidor se conecta diretamente ao site de destino e faz a ponte dos dados em ambas as direções. Para a rede, o tráfego não se parece com um túnel contínuo, mas com requisições normais de um navegador. Isso consome um pouco mais de velocidade e bateria, e o aplicativo reutiliza conexões concluídas para a próxima solicitação.",
   "tcp_forced": "O aplicativo também opera dessa maneira sem o Modo invisível: quando o servidor não possui um adaptador de rede próprio (como no Docker) ou quando o usuário usa divisão de tráfego por domínio.",
+  "tcp_detection": "<a href=\"/self-hosted-vpn/docs/vpn-detection/\">Como o VpnHood resiste à detecção de VPN</a> mostra o que uma rede vê em cada caso.",
   "udp_title": "UDP e ping",
   "udp_desc": "O tráfego UDP é transmitido como pacotes pelo túnel, independentemente do protocolo usado pelo aplicativo. O mesmo vale para o ping — o app transporta solicitações de eco e descarta outros pacotes ICMP. O servidor repassa ambos por meio do seu adaptador de rede ou, caso não tenha um, por meio de sockets próprios, executando o ping pelo dispositivo.",
   "server_title": "No servidor",

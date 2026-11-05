@@ -6,10 +6,13 @@ Writes, under `_includes/diagrams/`:
   server-two-ips.svg, server-two-ips-tall.svg    /vpnhood-server/docs/ip-blocking/
   reverse-proxy.svg, reverse-proxy-tall.svg      /vpnhood-server/docs/reverse-proxy/
   how-it-works.svg, how-it-works-tall.svg        /self-hosted-vpn/docs/how-it-works/
+  cloak-traffic.svg, cloak-traffic-tall.svg,
+  block-quic.svg, block-quic-tall.svg            /self-hosted-vpn/docs/vpn-detection/
   dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
   dynamic-ip-find.svg, dynamic-ip-find-tall.svg  /vpnhood-manager/docs/dynamic-ip/
-  cloak-mode.svg, cloak-mode-tall.svg            /features/cloak-mode/
-  block-quic.svg, block-quic-tall.svg            /features/protocols/
+  cloak-mode.svg, cloak-mode-tall.svg            /features/cloak-mode/, and
+                                                 /self-hosted-vpn/docs/vpn-detection/, which
+                                                 carries the same diagram_* keys
 
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
@@ -52,6 +55,9 @@ Each diagram states one idea and no more:
                   address.
   how-it-works    devices reach your server through an encrypted tunnel, and websites see
                   your server, not your users.
+  cloak-traffic   over time, a server in Cloak Mode has a web server's connections, short
+                  ones for browsing and a long one for a download, and not one long tunnel.
+                  The first two lanes are alike and never identical, as the page says.
   dynamic-ip-follow  the server's next report shows MANAGER its new address, which goes into
                   the keys.
   dynamic-ip-find an older key's address is gone, and the name or the URL in the key leads
@@ -60,9 +66,9 @@ Each diagram states one idea and no more:
                   make one long tunnel bumpy, and with Cloak Mode each connection's own tunnel
                   is smooth, like web browsing. Both lanes read left to right on a phone too,
                   one under the other, because setting them side by side is the idea.
-  block-quic      in Cloak Mode an app's QUIC stays packets, so it makes cloak-mode's bumpy
-                  tunnel beside the smooth ones; Block QUIC moves those apps to TCP, and
-                  their traffic into smooth tunnels. Both lanes are in Cloak Mode.
+  block-quic      one app, in Cloak Mode, which can disguise TCP but not QUIC: its QUIC makes
+                  cloak-mode's bumpy tunnel and the filter can drop it, and with Block QUIC
+                  the device stops QUIC, inside the phone, and the app's TCP goes smooth.
 
 Run from the repo root:  python tools/make-docs-diagrams.py
 """
@@ -514,6 +520,73 @@ def how_it_works() -> None:
 
 
 # ===========================================================================
+# cloak-traffic - in Cloak Mode a server's connections take a web server's shape
+# ===========================================================================
+DETECT = ("self_hosted_vpn_docs_vpn_detection", "vh_detect_en")
+
+
+def browsing(x0, x1, y, colour, step=17):
+    """Three page loads on the wire: each a few short connections that start close together."""
+    part = (x1 - x0) / 3
+    out = []
+    for n in range(3):
+        for row in (-1, 0, 1):
+            a = x0 + n * part + rnd.uniform(0, part * 0.22)
+            b = a + rnd.uniform(part * 0.30, part * 0.62)
+            out.append(line(a, y + row * step, b, y + row * step, colour, 6.0))
+    return "".join(out)
+
+
+def cloak_traffic() -> None:
+    T, _ = strings(DETECT[1])
+    heads = (("diagram_cloak_browsing", "diagram_cloak_browsing_sub"),
+             ("diagram_cloak_download", "diagram_cloak_download_sub"))
+    lanes = (("diagram_cloak_web_server", "diagram_cloak_web_server_sub", VIOLET),
+             ("diagram_server", "diagram_cloak_on", MINT),
+             ("diagram_server", "diagram_cloak_off", None))
+
+    def lane(parts, x0, xm, x1, y, colour, step=17):
+        """A lane's connections: browsing up to xm and a download after it, or one tunnel."""
+        if colour:
+            parts += [browsing(x0, xm, y, colour, step), line(xm + 34, y, x1, y, colour, 11.0)]
+        else:
+            parts += [line(x0, y - 12, x1, y - 12, CHALK, 3.0), line(x0, y + 12, x1, y + 12, CHALK, 3.0),
+                      txt((x0 + x1) / 2, y - 26, T("diagram_cloak_tunnel"), 18, CHALK)]
+
+    # --- left to right: each lane's name, then its connections over time -----------------
+    seed(29)
+    W, H = 920, 520
+    X, TX = 80, 138                     # the icons' column, and the names' left edge
+    X0, XM, X1 = 396, 622, 884          # the timeline, and where browsing gives way to the download
+    parts = []
+    for (name, sub), m in zip(heads, ((X0 + XM) / 2, (XM + 34 + X1) / 2)):
+        parts += [txt(m, 50, T(name), 22), txt(m, 76, T(sub), 16, CHALK_DIM)]
+    for y, (name, sub, colour) in zip((150, 256, 362), lanes):
+        parts.append(globe(X, y, 34) if colour == VIOLET else rack(X, y, 84, 68))
+        parts += [txt(TX, y - 2, T(name), 23, CHALK, "start"), txt(TX, y + 24, T(sub), 16, CHALK_DIM, "start")]
+        lane(parts, X0, XM, X1, y, colour)
+    parts += [arrow(X0, 424, X1, 424, CHALK_DIM, 2.2), txt(X1, 450, T("diagram_cloak_time"), 16, CHALK_DIM, "end"),
+              txt(W / 2, H - 28, T("diagram_cloak_caption"), 20, AMBER)]
+    render("cloak-traffic", *DETECT, W, H, "vhCloak", parts, "diagram_cloak")
+
+    # --- top to bottom: each lane's name, with its connections under it ------------------
+    seed(29)
+    W, H = 560, 820
+    X, TX = 78, 136
+    X0, XM, X1 = 44, 250, 516
+    parts = []
+    for (name, sub), m in zip(heads, ((X0 + XM) / 2, (XM + 34 + X1) / 2)):
+        parts += [txt(m, 48, T(name), 20), txt(m, 72, T(sub), 15, CHALK_DIM)]
+    for y, (name, sub, colour) in zip((136, 342, 548), lanes):
+        parts.append(globe(X, y, 30) if colour == VIOLET else rack(X, y, 72, 58))
+        parts += [txt(TX, y - 2, T(name), 23, CHALK, "start"), txt(TX, y + 24, T(sub), 16, CHALK_DIM, "start")]
+        lane(parts, X0, XM, X1, y + 92, colour, 15)
+    parts += [arrow(X0, 716, X1, 716, CHALK_DIM, 2.2), txt(X1, 742, T("diagram_cloak_time"), 15, CHALK_DIM, "end"),
+              txt(W / 2, H - 28, T("diagram_cloak_caption"), 18, AMBER)]
+    render("cloak-traffic-tall", *DETECT, W, H, "vhCloakTall", parts, "diagram_cloak")
+
+
+# ===========================================================================
 # dynamic-ip-follow - the server's next report shows MANAGER its new address
 # ===========================================================================
 DYNAMIC_IP = ("vpnhood_manager_docs_dynamic_ip", "vh_dynip_en")
@@ -766,65 +839,96 @@ def cloak_mode() -> None:
 
 
 # ===========================================================================
-# block-quic - in Cloak Mode an app's QUIC stays packets, until Block QUIC moves it to TCP
+# block-quic - Cloak Mode can disguise TCP and not QUIC, so the device stops QUIC and the app moves
 # ===========================================================================
-QUIC = ("features_protocols", "vh_protocols_en")
+def phone_on_side(x0, x1, cy, h):
+    """Your device, turned for a video, wide enough to show what happens inside it."""
+    return box(x0, cy - h / 2, x1 - x0, h, CHALK, 3.2) + line(x0 + 10, cy - 11, x0 + 10, cy + 11)
 
 
-def quic_lanes(xp, xf, xs, y1, y2, rack_w, rack_h, wall_w, half, packets):
-    """Both lanes, in Cloak Mode: a connection's own tunnel, with QUIC's packets stopped at the wall
-    under it, next to the labels about them, and with QUIC blocked a tunnel for each connection."""
-    a, b = xp + PHONE_W / 2 + 12, xf - wall_w / 2 - 3       # the device to the wall
+def video_app(cx, cy, s=52):
+    """An app: a video's play button in a box."""
+    r = s * 0.2
+    return (box(cx - s / 2, cy - s / 2, s, s, VIOLET, 2.8) +
+            '<path d="M %.1f %.1f L %.1f %.1f L %.1f %.1f Z" fill="%s"/>'
+            % (cx - r * 0.8, cy - r, cx + r * 1.1, cy, cx - r * 0.8, cy + r, VIOLET))
+
+
+def switch(x, cy, on):
+    """The app's toggle: the knob at the right, in mint, when it is on."""
+    w, h = 44, 24
+    colour = MINT if on else CHALK_DIM
+    return ('<rect x="%.1f" y="%.1f" width="%d" height="%d" rx="%d" fill="%s" fill-opacity="%s" '
+            'stroke="%s" stroke-width="2.4"/>' % (x, cy - h / 2, w, h, h / 2, colour, "0.2" if on else "0", colour) +
+            dot(x + (w - h / 2 if on else h / 2), cy, 7.5, colour))
+
+
+def quic_lanes(x0, x1, xf, xs, y1, y2, phone_h, app_x, rack_w, rack_h, wall_w, half, packets, size):
+    """One app, twice. Its QUIC leaves the phone as packets and stops at the wall; with QUIC stopped
+    inside the phone, its TCP goes through the wall in a tunnel of its own, up to the server."""
+    a = app_x + 34                                          # the app's edge
+    t0, b = x1 + 8, xf - wall_w / 2 - 3                     # the phone to the wall
     c, d = xf + wall_w / 2 + 10, xs - rack_w / 2 - 14       # the wall to the server
-    gap = 26
-    return [phone(xp, y1), rack(xs, y1, rack_w, rack_h), stream_tunnel(a, d, y1 - gap, xf, wall_w),
-            packet_tunnel(a, b, y1 + gap, half, packets),
-            arrow(c, y1 + gap, d, y1 + gap, CHALK_DIM, 2.6, "9 11"), cross(xf, y1 + gap, 14, CORAL, 5.0),
-            phone(xp, y2), rack(xs, y2, rack_w, rack_h),
-            stream_tunnel(a, d, y2 - gap, xf, wall_w), stream_tunnel(a, d, y2 + gap, xf, wall_w)]
+    gap = 24
+    mid = (a + x1) / 2
+    stop = x1 - 36
+    return [phone_on_side(x0, x1, y1, phone_h), video_app(app_x, y1), rack(xs, y1, rack_w, rack_h),
+            arrow(a, y1, x1 - 8, y1, CORAL, 3.0), txt(mid, y1 - 12, "QUIC", size, CORAL),
+            packet_tunnel(t0, b, y1, half, packets),
+            arrow(c, y1, d, y1, CHALK_DIM, 2.6, "9 11"), cross(xf, y1, 14, CORAL, 5.0),
+            phone_on_side(x0, x1, y2, phone_h), video_app(app_x, y2), rack(xs, y2 + gap, rack_w, rack_h),
+            arrow(a, y2 - gap, stop - 20, y2 - gap, CORAL, 3.0), cross(stop, y2 - gap, 12, CORAL, 4.6),
+            txt((a + stop - 20) / 2, y2 - gap - 16, "QUIC", size, CORAL),
+            arrow(a, y2 + gap, x1 - 8, y2 + gap, MINT, 3.0), txt(mid, y2 + gap - 10, "TCP", size, MINT),
+            stream_tunnel(t0, d, y2 + gap, xf, wall_w)]
 
 
 def block_quic() -> None:
-    T, _ = strings(QUIC[1])
-    lanes = (("diagram_off", "diagram_off_sub", "diagram_off_result", CORAL),
-             ("diagram_on", "diagram_on_sub", "diagram_on_result", MINT))
+    T, _ = strings(DETECT[1])
+    lanes = (("diagram_quic_off", False, "diagram_quic_off_app", "diagram_quic_off_sub",
+              "diagram_quic_off_result", CORAL),
+             ("diagram_quic_on", True, "diagram_quic_on_stop", "diagram_quic_on_sub",
+              "diagram_quic_on_result", MINT))
 
     # --- left to right, on cloak-mode's grid: one wall across both lanes ------------------------
     seed(37)
-    W, H = 920, 516
-    XP, XF, XS, WALL = 104, 530, 836, 52
-    Y1, Y2 = 164, 358
-    left, right = 320, 726              # the middle of what lies on either side of the wall
-    parts = [filter_wall(XF, 68, 450, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 - 6)]
-    parts += quic_lanes(XP, XF, XS, Y1, Y2, 92, 72, WALL, 19, 10)
-    for x, key in ((XP, "diagram_device"), (XF, "diagram_filter"), (XS, "diagram_server")):
+    W, H = 920, 618
+    X0, X1, XF, XS, WALL = 36, 272, 548, 836, 52
+    Y1, Y2 = 176, 408
+    left, right = (X0 + XF - WALL / 2) / 2, 742     # the middle of what lies on either side of the wall
+    parts = [filter_wall(XF, 68, 552, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 + 2)]
+    parts += quic_lanes(X0, X1, XF, XS, Y1, Y2, 124, X0 + 48, 92, 72, WALL, 19, 8, 18)
+    for x, key in ((X0 + (X1 - X0) / 2, "diagram_quic_device"), (XF, "diagram_filter"), (XS, "diagram_server")):
         parts.append(txt(x, 46, T(key), 19))
-    for y, below, (key, sub, result, colour) in zip((Y1, Y2), (72, 62), lanes):
-        parts += [txt(left, y - 62, T(key), 22), txt(left, y + below, T(sub), 18, CHALK_DIM),
-                  txt(right, y + below, T(result), 19, colour)]
-    parts.append(txt(W / 2, H - 30, T("diagram_caption"), 20, AMBER))
-    render("block-quic", *QUIC, W, H, "vhBlockQuic", parts)
+    for y, (key, on, line1, line2, result, colour) in zip((Y1, Y2), lanes):
+        parts += [switch(X0, y - 85, on), txt(X0 + 56, y - 77, T(key), 21, CHALK, "start"),
+                  txt(left, y + 90, T(line1), 18), txt(left, y + 116, T(line2), 18),
+                  txt(right, y + 104, T(result), 18, colour)]
+    parts.append(txt(W / 2, H - 28, T("diagram_quic_caption"), 20, AMBER))
+    render("block-quic", *DETECT, W, H, "vhBlockQuic", parts, "diagram_quic")
 
     # --- on a phone: the same lanes, one under the other, each with its own stretch of wall -----
     seed(37)
-    W, H = 560, 660
-    XP, XF, XS, WALL = 62, 300, 492, 48
-    Y1, Y2 = 180, 446
-    parts = [filter_wall(XF, y - 60, y + 60, WALL, 20) for y in (Y1, Y2)]
-    parts += quic_lanes(XP, XF, XS, Y1, Y2, 84, 66, WALL, 19, 5)
-    parts += [txt(28, 42, T("diagram_device"), 17, CHALK, "start"), txt(XF, 42, T("diagram_filter"), 17),
-              txt(W - 28, 42, T("diagram_server"), 17, CHALK, "end")]
-    for y, (key, sub, result, colour) in zip((Y1, Y2), lanes):
-        parts += [txt(W / 2, y - 84, T(key), 22), txt(W / 2, y + 88, T(sub), 17, CHALK_DIM),
-                  txt(W / 2, y + 116, T(result), 19, colour)]
-    parts.append(txt(W / 2, H - 28, T("diagram_caption"), 18, AMBER))
-    render("block-quic-tall", *QUIC, W, H, "vhBlockQuicTall", parts)
+    W, H = 560, 760
+    X0, X1, XF, XS, WALL = 22, 208, 336, 494, 44
+    Y1, Y2 = 170, 492
+    parts = [filter_wall(XF, y - 62, y + 62, WALL, 20) for y in (Y1, Y2)]
+    parts += quic_lanes(X0, X1, XF, XS, Y1, Y2, 124, X0 + 44, 80, 64, WALL, 19, 4, 17)
+    parts += [txt(X0 + 6, 42, T("diagram_quic_device"), 17, CHALK, "start"), txt(XF, 42, T("diagram_filter"), 17),
+              txt(W - 22, 42, T("diagram_server"), 17, CHALK, "end")]
+    for y, (key, on, line1, line2, result, colour) in zip((Y1, Y2), lanes):
+        parts += [switch(X0, y - 84, on), txt(X0 + 56, y - 77, T(key), 21, CHALK, "start"),
+                  txt(W / 2, y + 92, T(line1), 17), txt(W / 2, y + 118, T(line2), 17),
+                  txt(W / 2, y + 146, T(result), 19, colour)]
+    parts.append(txt(W / 2, H - 24, T("diagram_quic_caption"), 17, AMBER))
+    render("block-quic-tall", *DETECT, W, H, "vhBlockQuicTall", parts, "diagram_quic")
 
 
 if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
     how_it_works()
+    cloak_traffic()
     dynamic_ip_follow()
     dynamic_ip_find()
     cloak_mode()

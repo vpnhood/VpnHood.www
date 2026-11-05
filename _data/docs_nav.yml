@@ -9,6 +9,7 @@ self-hosted-vpn:
   - group: start-here
     pages:
       - url: /self-hosted-vpn/docs/how-it-works/
+      - url: /self-hosted-vpn/docs/vpn-detection/
   - group: products
     pages:
       - url: /vpnhood-server/docs/

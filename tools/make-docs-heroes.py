@@ -853,9 +853,27 @@ def how_it_works() -> None:
     a.render("how-it-works", product="self-hosted-vpn")
 
 
+def vpn_detection() -> None:
+    """VPN detection: a filter's lens over a tunnel finds one smooth stream and nothing to recognize."""
+    a = Art("dhDetect")
+    a.ambient(cy=470)
+    # the tunnel, and the one smooth stream in it
+    a.lane(60, 372, 880, 170)
+    a.bar(120, 440, 760, 34, fill=MINT, opacity=.9, glow=True)
+    # the lens over it: a glass that leaves the tunnel in view, and its handle
+    ring = 'cx="430" cy="457" r="250" fill="none"'
+    a.add(f'<circle cx="430" cy="457" r="250" fill="{LILAC}" fill-opacity=".07"/>',
+          f'<circle {ring} stroke="{a.url("Rim")}" stroke-width="44" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<circle {ring} stroke="{a.url("Rim")}" stroke-width="30"/>',
+          f'<path d="M 625 652 L 815 842" stroke="{a.url("Rim")}" stroke-width="66" stroke-linecap="round"/>')
+    a.ambient(cy=890, rx=330, ry=60, opacity=.5)
+    a.render("vpn-detection", product="self-hosted-vpn")
+
+
 if __name__ == "__main__":
     self_hosted_docs()
     how_it_works()
+    vpn_detection()
     docs()
     requirements()
     install()

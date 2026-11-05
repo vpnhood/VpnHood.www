@@ -27,6 +27,7 @@
   "tcp_packets": "By default the app sends TCP as packets through the tunnel, and your server sends them on through its own network adapter, as a router does. This is the fastest way, and the lightest on the battery.",
   "tcp_cloak": "In <a href=\"/features/cloak-mode/\">Cloak Mode</a>, the app ends each connection on the device instead, and asks your server, in a request of its own, to open it. Your server connects to the website itself and passes the data both ways. To a network, the traffic no longer looks like one long tunnel but like a browser's separate requests. It costs a little speed and battery, and the app reuses each finished request's connection for the next one.",
   "tcp_forced": "The app works this way without Cloak Mode too: when your server has no network adapter of its own, as in Docker, and while a user splits traffic by domain.",
+  "tcp_detection": "<a href=\"/self-hosted-vpn/docs/vpn-detection/\">How VpnHood resists VPN detection</a> shows what a network sees in each case.",
   "udp_title": "UDP and ping",
   "udp_desc": "UDP travels as packets through the tunnel, whichever protocol the app uses. So does ping, and nothing else of its kind: the app carries echo requests and drops other ICMP packets. Your server sends both on through its network adapter, or, when it has none, through sockets of its own, pinging for the device.",
   "server_title": "On the server",
