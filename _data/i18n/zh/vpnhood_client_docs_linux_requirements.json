@@ -2,7 +2,7 @@
   "meta_title": "VpnHood! CLIENT 和 CONNECT 的 Linux 系统要求 | VpnHood!",
   "meta_description": "VpnHood! CLIENT 和 VpnHood! CONNECT 支持的 Linux 发行版、所需的处理器，以及 DNS、QUIC 和断网保护对系统的要求。",
   "title": "Linux 系统要求",
-  "lead": "在 Linux 上运行 VpnHood! CLIENT 或 VpnHood! CONNECT 的机器需要：下列系统之一（带有 systemd），以及 x64 或 ARM64 处理器。",
+  "lead": "安装 VpnHood! CLIENT 或 VpnHood! CONNECT 之前，请先检查您的 Linux 机器：发行版、处理器，尤其是设置 VPN DNS 的方式。安装程序不会添加它，缺少时，应用无法连接。",
   "system_title": "发行版",
   "system_desc": "这些应用可在 x64 和 ARM64 上运行。它们可在以下发行版上安装和启动；基于这些系统的发行版，以及其他使用 systemd 和 glibc 的发行版，应该也能运行：",
   "unsupported": "不支持：Alpine 以及其他基于 musl 而非 glibc 的发行版。安装程序可以在这些系统上完成安装，但应用无法启动。",

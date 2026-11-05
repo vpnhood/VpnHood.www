@@ -2,7 +2,7 @@
   "meta_title": "Requisiti per Linux di VpnHood! CLIENT e CONNECT | VpnHood!",
   "meta_description": "Le distribuzioni Linux su cui funzionano VpnHood! CLIENT e VpnHood! CONNECT, il processore che richiedono e ciò che serve al sistema per DNS, QUIC e Kill Switch.",
   "title": "Requisiti per Linux",
-  "lead": "Ciò che serve a una macchina per eseguire VpnHood! CLIENT o VpnHood! CONNECT su Linux: uno dei sistemi elencati di seguito, con systemd, e un processore x64 o ARM64.",
+  "lead": "Controlla la tua macchina Linux prima di installare VpnHood! CLIENT o VpnHood! CONNECT: la distribuzione, il processore e, soprattutto, un modo per impostare il DNS della VPN. Il programma di installazione non lo aggiunge e, senza di esso, l'app non può connettersi.",
   "system_title": "Distribuzioni",
   "system_desc": "Le app funzionano su x64 e ARM64. Si installano e si avviano su queste distribuzioni; dovrebbero funzionare anche quelle basate su di esse e altre con systemd e glibc:",
   "unsupported": "Non supportate: Alpine e le altre distribuzioni basate su musl invece di glibc. Lì il programma di installazione termina, ma l'app non può avviarsi.",

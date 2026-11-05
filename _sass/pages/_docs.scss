@@ -221,13 +221,13 @@
     min-width: 0;
 }
 
-// The lead: larger and lighter than the body copy, in the headings' ink, and set closer,
-// as a larger size wants
+// The lead: 1.1 times the body copy, in the headings' ink, and set closer, as a larger size
+// wants. Size and ink only: a tint reads as a link (owner, 2026-11-04)
 .vh-docs-article .vh-docs-hero-text .vh-docs-lead{
     margin-bottom: 0;
     color: var(--vh-text);
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 400;
     line-height: 1.6;
     text-wrap: pretty;
 }

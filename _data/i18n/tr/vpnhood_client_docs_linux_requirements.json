@@ -2,7 +2,7 @@
   "meta_title": "VpnHood! CLIENT ve CONNECT Linux Gereksinimleri | VpnHood!",
   "meta_description": "VpnHood! CLIENT ve VpnHood! CONNECT'in çalıştığı Linux dağıtımları, ihtiyaç duydukları işlemci ve sistemin DNS, QUIC ve Kill Switch için gereksinimleri.",
   "title": "Linux gereksinimleri",
-  "lead": "Bir makinenin Linux'ta VpnHood! CLIENT veya VpnHood! CONNECT çalıştırmak için ihtiyaç duydukları: systemd içeren aşağıdaki sistemlerden biri ve x64 veya ARM64 işlemci.",
+  "lead": "VpnHood! CLIENT veya VpnHood! CONNECT yüklemeden önce Linux makinenizi kontrol edin: dağıtımını, işlemcisini ve her şeyden önemlisi VPN'in DNS'ini ayarlamanın bir yolunu. Yükleyici bunu eklemez ve bu olmadan uygulama bağlanamaz.",
   "system_title": "Dağıtımlar",
   "system_desc": "Uygulamalar x64 ve ARM64 üzerinde çalışır. Bu dağıtımlarda kurulur ve başlar; bunlara dayanan dağıtımlarda ve systemd ile glibc kullanan diğerlerinde de çalışması beklenir:",
   "unsupported": "Desteklenmeyenler: Alpine ve glibc yerine musl üzerine kurulu diğer dağıtımlar. Yükleyici orada işini bitirir, ancak uygulama başlayamaz.",
