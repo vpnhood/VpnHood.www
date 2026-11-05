@@ -47,7 +47,7 @@ extra_css:
                           </div>
                         </div>
 
-                        <div class="row section-space gap-lg-0 gap-5">
+                        <div class="row section-space pb-5 gap-lg-0 gap-5">
                           <div class="col-lg-4" data-aos="fade-up">
                             <div class="vh-card-dark vh-feature-panel h-100">
                               <h2 class="h4 vh-txt-grad-purple-400">{{ t.how_title }}</h2>
@@ -67,6 +67,13 @@ extra_css:
                             </div>
                           </div>
                         </div>
+
+                        <figure class="vh-topology mb-0 d-none d-md-block" data-aos="fade-up">
+                          {% include diagrams/block-quic.svg %}
+                        </figure>
+                        <figure class="vh-topology mb-0 d-md-none" data-aos="fade-up">
+                          {% include diagrams/block-quic-tall.svg %}
+                        </figure>
 
                         <div class="section-space text-center" data-aos="fade-up">
                           <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
