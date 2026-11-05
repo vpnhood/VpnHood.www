@@ -31,6 +31,7 @@ farm / server farm = فارم / فارم سرور (never مزرعه, never farm)
 access key = کلید دسترسی · certificate = گواهی · container = کانتینر · firewall = فایروال
 standalone = مستقل · managed = مدیریت‌شده · web panel = پنل وب
 server profile = پروفایل سرور (plural پروفایل‌های سرور)
+dynamic DNS / a dynamic DNS name = DDNS (never DNS پویا, never نام DDNS)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = ویژه / نسخه ویژه / اشتراک ویژه, whichever the sentence needs
