@@ -50,7 +50,7 @@
   "trouble_other_vpn": "Uygulama, başka bir VPN uygulamasının devraldığını söylüyor",
   "trouble_other_vpn_fix": "VpnHood! ile yapılmış uygulamalardan aynı anda yalnızca biri bağlanabilir; bu yüzden başka birini bağlamak bunun bağlantısını keser. Siz yeniden bağlayana kadar, Her Zaman Açık etkin olsa bile kapalı kalır.",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "<code>[dns_enable]</code> komutunu çalıştırın, ardından iletide belirtildiği gibi <code>/etc/resolv.conf</code> dosyasını <code>/run/systemd/resolve/stub-resolv.conf</code> dosyasına bağlayın.",
+  "trouble_dns_fix": "<code>[pkg_resolved]</code> yüklü değilse önce onu yükleyin. <code>[dns_enable]</code> komutunu çalıştırın, ardından iletide belirtildiği gibi <code>/etc/resolv.conf</code> dosyasını <code>/run/systemd/resolve/stub-resolv.conf</code> dosyasına bağlayın.",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "<code>[pkg_nftables]</code> paketini kurun veya Kill Switch'i kapatın.",
   "trouble_traffic": "Bağlı, ancak hiçbir şey yüklenmiyor",

@@ -52,7 +52,7 @@
     "trouble_other_vpn": "The app says another VPN app took over",
     "trouble_other_vpn_fix": "Only one app made with VpnHood! connects at a time, so connecting another one disconnects this one. It stays off, even with Always On, until you connect it again.",
     "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-    "trouble_dns_fix": "Run <code>[dns_enable]</code>, then link <code>/etc/resolv.conf</code> to <code>/run/systemd/resolve/stub-resolv.conf</code>, as the message says.",
+    "trouble_dns_fix": "If <code>[pkg_resolved]</code> is not installed, install it first. Run <code>[dns_enable]</code>, then link <code>/etc/resolv.conf</code> to <code>/run/systemd/resolve/stub-resolv.conf</code>, as the message says.",
     "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
     "trouble_nft_fix": "Install the <code>[pkg_nftables]</code> package, or turn the kill switch off.",
     "trouble_traffic": "Connected, but nothing loads",

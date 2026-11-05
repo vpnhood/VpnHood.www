@@ -50,7 +50,7 @@
   "trouble_other_vpn": "ऐप कहता है कि किसी दूसरे VPN ऐप ने कंट्रोल ले लिया",
   "trouble_other_vpn_fix": "VpnHood! से बना सिर्फ़ एक ऐप एक समय में कनेक्ट होता है, इसलिए दूसरा ऐप कनेक्ट करने पर यह डिस्कनेक्ट हो जाता है। हमेशा चालू फ़ीचर के साथ भी यह तब तक बंद रहता है जब तक आप इसे दोबारा कनेक्ट नहीं करते।",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "<code>[dns_enable]</code> चलाएं, फिर संदेश के अनुसार <code>/etc/resolv.conf</code> को <code>/run/systemd/resolve/stub-resolv.conf</code> से लिंक करें।",
+  "trouble_dns_fix": "अगर <code>[pkg_resolved]</code> इंस्टॉल नहीं है, तो पहले उसे इंस्टॉल करें। <code>[dns_enable]</code> चलाएं, फिर संदेश के अनुसार <code>/etc/resolv.conf</code> को <code>/run/systemd/resolve/stub-resolv.conf</code> से लिंक करें।",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "<code>[pkg_nftables]</code> पैकेज इंस्टॉल करें, या किल स्विच बंद करें।",
   "trouble_traffic": "कनेक्ट है, लेकिन कुछ भी लोड नहीं होता",

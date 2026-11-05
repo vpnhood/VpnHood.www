@@ -50,7 +50,7 @@
   "trouble_other_vpn": "اپلیکیشن می‌گوید یک اپلیکیشن VPN دیگر جای آن را گرفته است",
   "trouble_other_vpn_fix": "در هر لحظه فقط یک اپلیکیشن ساخته‌شده با VpnHood!‎ متصل می‌شود، پس اتصال یکی دیگر، این یکی را قطع می‌کند. این اپلیکیشن، حتی با «همیشه روشن»، قطع می‌ماند تا زمانی که دوباره آن را متصل کنید.",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "<code>[dns_enable]</code> را اجرا کنید، سپس همان‌طور که پیام می‌گوید، <code>/etc/resolv.conf</code> را به <code>/run/systemd/resolve/stub-resolv.conf</code> لینک کنید.",
+  "trouble_dns_fix": "اگر <code>[pkg_resolved]</code> نصب نیست، ابتدا آن را نصب کنید. <code>[dns_enable]</code> را اجرا کنید، سپس همان‌طور که پیام می‌گوید، <code>/etc/resolv.conf</code> را به <code>/run/systemd/resolve/stub-resolv.conf</code> لینک کنید.",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "بسته <code>[pkg_nftables]</code> را نصب کنید، یا Kill Switch را خاموش کنید.",
   "trouble_traffic": "متصل است، اما هیچ چیزی باز نمی‌شود",

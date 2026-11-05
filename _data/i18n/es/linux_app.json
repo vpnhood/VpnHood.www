@@ -50,7 +50,7 @@
   "trouble_other_vpn": "La aplicación dice que otra aplicación VPN tomó el control",
   "trouble_other_vpn_fix": "Solo una aplicación creada con VpnHood! se conecta a la vez, así que al conectar otra se desconecta esta. Sigue desconectada, incluso con la función Siempre encendido, hasta que vuelvas a conectarla.",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "Ejecuta <code>[dns_enable]</code> y luego enlaza <code>/etc/resolv.conf</code> a <code>/run/systemd/resolve/stub-resolv.conf</code>, como indica el mensaje.",
+  "trouble_dns_fix": "Si <code>[pkg_resolved]</code> no está instalado, instálalo primero. Ejecuta <code>[dns_enable]</code> y luego enlaza <code>/etc/resolv.conf</code> a <code>/run/systemd/resolve/stub-resolv.conf</code>, como indica el mensaje.",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "Instala el paquete <code>[pkg_nftables]</code> o desactiva el Kill Switch.",
   "trouble_traffic": "Conectado, pero nada carga",

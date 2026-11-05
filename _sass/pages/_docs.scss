@@ -399,6 +399,22 @@
     white-space: nowrap;
 }
 
+// A table of sentences is the exception, or one long message or path makes the whole table
+// scroll sideways, on a desktop too. Its code wraps, but as a block of its own: it moves to
+// the next line whole and breaks only when it is wider than the column, so -nodesktop keeps
+// its dash, and a command split in a Persian or Arabic sentence keeps its order.
+.vh-docs-article .vh-docs-prose-table td code{
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+}
+
+// Only the answers may break inside a word, for their long paths on a phone: the narrow
+// first column keeps its words whole.
+.vh-docs-article .vh-docs-prose-table td + td code{
+    overflow-wrap: anywhere;
+}
+
 // How the pieces fit together, above a getting-started page: three steps in a row
 // with a chevron in each gap, stacked on a phone with the chevrons pointing down.
 // The icons reuse .vh-feature-icon, so they match every feature card on the site.
