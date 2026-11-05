@@ -17,7 +17,7 @@
 {%- assign vh_dm_desc = t.mgr_box_desc | default: vh_dm_en.mgr_box_desc -%}
 {%- assign vh_dm_cta = t.mgr_box_cta | default: vh_dm_en.mgr_box_cta -%}
 <aside class="vh-docs-managed">
-  <img class="vh-docs-managed-art" src="/assets/images/vpnhood-manager/docs/promo-manager.svg" alt="" width="112" height="112" loading="lazy">
+  <img class="vh-docs-managed-art" src="/assets/images/vpnhood-manager/docs/promo-manager.svg" data-vh-light-src="/assets/images/vpnhood-manager/docs/promo-manager-light.svg" alt="" width="112" height="112" loading="lazy">
   <div>
     <p class="vh-docs-managed-title">{{ vh_dm_title }}</p>
     <p>{% include copy.html s=vh_dm_desc %}</p>

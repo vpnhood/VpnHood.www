@@ -41,7 +41,7 @@ as often as on a desk:
 
 Nodes are icons, not boxes: two people for your users, a rack for your server, a globe for
 websites, a cloud - the docs heroes' cloud, `tools/make-docs-heroes.py` - for a reverse
-proxy, a window for MANAGER, a key for access keys, a signpost for what shows the way to a
+proxy, a hood for MANAGER, a key for access keys, a signpost for what shows the way to a
 server's address, a phone for your device, and a brick wall for a network filter. A server's
 addresses are ports on its edge, in the colour of the arrow that reaches them. Example
 addresses and names are not copy: they come from `_data/code.yml`, the values the pages' own
@@ -175,8 +175,13 @@ def people(cx, cy):
     return person(cx + 24, cy - 21, 0.88, CHALK_DIM) + person(cx - 22, cy - 17, 1.0, CHALK)
 
 
+# VpnHood's hood, the figure of the CLIENT and CONNECT logos, on a 32 grid: one path, its eyes included.
+VPNHOOD_HOOD = "M16.060 1.999v0c-7.327 3.442-13.417 13.468-14.967 20.947 4.477 0 7.75 1.426 10.113 3.933l0.654-0.715c-1.751-1.801-4.052-3.271-7.086-4.735 1.631-4.058 4.118-10.201 7.281-10.558 1.238-0.14 2.563 0.607 4.005 2.71 4.513-7.505 8.799 2.406 11.286 7.848-2.976 1.613-5.272 3.087-7.049 4.913l0.576 0.648c2.33-2.481 5.595-4.045 10.154-4.045-1.839-7.386-7.488-17.307-14.967-20.947zM14.129 19.128c0 0.785-1.050 1.218-2.345 0.966s-2.345-1.091-2.345-1.876c0-0.785 1.050-1.218 2.345-0.966s2.345 1.091 2.345 1.876zM17.798 19.128c0 0.785 1.050 1.218 2.345 0.966s2.345-1.091 2.345-1.876c0-0.785-1.050-1.218-2.345-0.966s-2.345 1.091-2.345 1.876z"
+
+
 def rack(cx, cy, w=104, h=84):
-    """Your server: a box with two units, each with two lights and a vent."""
+    """Your server: a box with two units, each with two lights and a vent. VpnHood's hood takes
+    the top unit's vent, where the unit is tall enough to show it."""
     x, y = cx - w / 2, cy - h / 2
     out = [box(x, y, w, h, CHALK, 3.2)]
     pad = 11
@@ -185,8 +190,13 @@ def rack(cx, cy, w=104, h=84):
         uy = y + pad + i * (uh + pad)
         my = uy + uh / 2
         out += [box(x + pad, uy, w - 2 * pad, uh, CHALK_DIM, 2.2),
-                dot(x + pad + 12, my, 3.4, CHALK_DIM), dot(x + pad + 23, my, 3.4, CHALK_DIM),
-                line(x + w - pad - 36, my, x + w - pad - 10, my)]
+                dot(x + pad + 12, my, 3.4, CHALK_DIM), dot(x + pad + 23, my, 3.4, CHALK_DIM)]
+        if i == 0 and uh >= 20:
+            size = uh * .9
+            out.append('<path transform="translate(%.1f %.1f) scale(%.4f)" d="%s" fill="%s"/>'
+                       % (x + w - pad - 19 - size / 2, my - size / 2, size / 32, VPNHOOD_HOOD, CHALK))
+        else:
+            out.append(line(x + w - pad - 36, my, x + w - pad - 10, my))
     return "".join(out)
 
 
@@ -231,15 +241,22 @@ def cross(cx, cy, s=12, colour=CORAL, sw=4.2):
     return line(cx - s, cy - s, cx + s, cy + s, colour, sw) + line(cx - s, cy + s, cx + s, cy - s, colour, sw)
 
 
-def window(cx, cy, w=128, h=92):
-    """VpnHood! MANAGER: a web panel's window, with a title bar and a small chart."""
-    x, y = cx - w / 2, cy - h / 2
-    base = y + h - 13
-    out = [box(x, y, w, h, CHALK, 3.2), line(x, y + 22, x + w, y + 22, CHALK_DIM, 2.2)]
-    out += [dot(x + 14 + n * 12, y + 11, 2.8, CHALK_DIM) for n in range(3)]
-    for n, height in enumerate((13, 24, 18, 34)):
-        bx = x + 28 + n * 24
-        out.append(line(bx, base, bx, base - height, MINT if n == 3 else CHALK_DIM, 6.0))
+# VpnHood! MANAGER's figure, the hood of its icon, on a 512 grid where it stands 476 tall: the
+# hood, its face and its eyes, the shapes tools/make-docs-heroes.py draws too.
+HOOD = "M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z"
+HOOD_FACE = "M254.9 154.1c-38.7 21.5-85.1 52.2-113.7 88.2 9.7 83 59 146.1 118.3 146.1 59.2 0 108.3-62.7 118.2-145.3-28.9-42.1-78-72.9-122.8-89z"
+HOOD_EYES = ("M196.6 237.1h2.4c13.1.1 26.1 2.7 39.1 7.4-16.8 40.6-59 42-78.1 0 12.2-4.8 24.4-7.2 36.6-7.4z",
+             "M321.5 237.1c13-.1 26 2.3 39.1 7.4-19.2 42-61.3 40.6-78.2 0 13.1-4.7 26.1-7.3 39.1-7.4z")
+HOOD_W, HOOD_H = 96, 120
+
+
+def manager_hood(cx, cy):
+    """VpnHood! MANAGER: its figure in chalk lines, the eyes filled in - HOOD_W x HOOD_H."""
+    s = HOOD_H / 476
+    at = 'transform="translate(%.1f %.1f) scale(%.4f)"' % (cx - 256 * s, cy - 256 * s, s)
+    out = ['<path %s d="%s" fill="none" stroke="%s" stroke-width="%.1f" stroke-linejoin="round"/>' % (at, HOOD, CHALK, 3.0 / s),
+           '<path %s d="%s" fill="none" stroke="%s" stroke-width="%.1f"/>' % (at, HOOD_FACE, CHALK_DIM, 2.2 / s)]
+    out += ['<path %s d="%s" fill="%s"/>' % (at, eye, CHALK) for eye in HOOD_EYES]
     return "".join(out)
 
 
@@ -590,7 +607,6 @@ def cloak_traffic() -> None:
 # dynamic-ip-follow - the server's next report shows MANAGER its new address
 # ===========================================================================
 DYNAMIC_IP = ("vpnhood_manager_docs_dynamic_ip", "vh_dynip_en")
-WINDOW_W, WINDOW_H = 128, 92
 
 
 def dynamic_ip_follow() -> None:
@@ -602,8 +618,8 @@ def dynamic_ip_follow() -> None:
     W, H = 920, 330
     Y = 92
     XS, XM, XK = 120, 460, 800
-    parts = [rack(XS, Y, RACK_W, RACK_H), window(XM, Y), access_key(XK, Y)]
-    spans = ((XS + RACK_W / 2 + 14, XM - WINDOW_W / 2 - 14), (XM + WINDOW_W / 2 + 14, XK - 78))
+    parts = [rack(XS, Y, RACK_W, RACK_H), manager_hood(XM, Y), access_key(XK, Y)]
+    spans = ((XS + RACK_W / 2 + 14, XM - HOOD_W / 2 - 14), (XM + HOOD_W / 2 + 14, XK - 78))
     for (x1, x2), (role, sub, colour) in zip(spans, steps):
         m = (x1 + x2) / 2
         parts += [arrow(x1, Y, x2, Y, colour),
@@ -622,8 +638,8 @@ def dynamic_ip_follow() -> None:
     W, H = 560, 660
     X, TX = 104, 186
     YS, YM, YK = 84, 316, 530
-    parts = [rack(X, YS, RACK_W, RACK_H), window(X, YM), access_key(X, YK)]
-    spans = ((YS + RACK_H / 2 + 14, YM - WINDOW_H / 2 - 14), (YM + WINDOW_H / 2 + 14, YK - 44))
+    parts = [rack(X, YS, RACK_W, RACK_H), manager_hood(X, YM), access_key(X, YK)]
+    spans = ((YS + RACK_H / 2 + 14, YM - HOOD_H / 2 - 14), (YM + HOOD_H / 2 + 14, YK - 44))
     for (y1, y2), (role, sub, colour) in zip(spans, steps):
         m = (y1 + y2) / 2
         parts += [arrow(X, y1, X, y2, colour),

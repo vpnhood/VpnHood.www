@@ -81,6 +81,11 @@ QUALITY = 88
 # detail nobody can see anyway.
 QUALITY_OVERRIDES = {"home/options-bg.webp": 75}
 
+# The eyes of MANAGER's figure, from tools/make-docs-heroes.py: mint with a glow on the dark
+# theme, plain white on the light one, as on its icon. They have colours of their own there,
+# so this touches nothing else in the picture.
+MANAGER_EYES = {"#8ef7e3": "#fff", "#3ce8c9": "none"}
+
 # source -> {dark colour: light colour}. Case-insensitive on the hex digits.
 SVGS = {
     # Opaque dark tile behind the download platform icons.
@@ -116,6 +121,8 @@ SVGS = {
     # purple in both themes, so white is correct on it either way.)
     "general/login-icon.svg": {"#fff": "#17123a"},
     "general/go-premium-icon.svg": {"#fff": "#17123a"},
+    "vpnhood-manager/docs/promo-manager.svg": MANAGER_EYES,
+    "vpnhood-manager/docs/hero-docs.svg": MANAGER_EYES,
 }
 
 

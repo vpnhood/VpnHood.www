@@ -22,27 +22,14 @@
   <filter id="dhMgrDocsSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
 </defs>
 <ellipse cx="500" cy="480" rx="440" ry="410" fill="url(#dhMgrDocsAmbient)" opacity="1.0"/>
-<rect x="120" y="190" width="620" height="470" rx="40" fill="url(#dhMgrDocsBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
-<rect x="120" y="190" width="620" height="470" rx="40" fill="none" stroke="url(#dhMgrDocsRim)" stroke-width="22" filter="url(#dhMgrDocsSoft)" opacity=".5"/>
-<rect x="120" y="190" width="620" height="470" rx="40" fill="none" stroke="url(#dhMgrDocsRim)" stroke-width="10" stroke-linejoin="round"/>
-<path d="M 120 280 H 740" stroke="#8257f5" stroke-opacity=".35" stroke-width="3"/>
-<circle cx="178" cy="235" r="12" fill="#c0a4ff" opacity=".45"/>
-<circle cx="218" cy="235" r="12" fill="#c0a4ff" opacity=".45"/>
-<circle cx="258" cy="235" r="12" fill="#c0a4ff" opacity=".45"/>
-<rect x="170" y="330" width="90" height="16" rx="8" fill="#8ef7e2" opacity="0.9"/>
-<rect x="170" y="382" width="120" height="16" rx="8" fill="#c0a4ff" opacity="0.32"/>
-<rect x="170" y="434" width="120" height="16" rx="8" fill="#c0a4ff" opacity="0.32"/>
-<rect x="170" y="486" width="120" height="16" rx="8" fill="#c0a4ff" opacity="0.32"/>
-<rect x="340" y="320" width="350" height="76" rx="22" fill="#150a3a" fill-opacity=".8" stroke="#8257f5" stroke-opacity=".3" stroke-width="2"/>
-<circle cx="380" cy="358" r="35" fill="url(#dhMgrDocsGlow)" filter="url(#dhMgrDocsSoft)" opacity=".7"/>
-<circle cx="380" cy="358" r="11" fill="#8ef7e2"/>
-<rect x="420" y="350" width="150" height="16" rx="8" fill="#c0a4ff" opacity="0.4"/>
-<rect x="340" y="420" width="350" height="76" rx="22" fill="#150a3a" fill-opacity=".8" stroke="#8257f5" stroke-opacity=".3" stroke-width="2"/>
-<circle cx="380" cy="458" r="11" fill="#c0a4ff" opacity=".45"/>
-<rect x="420" y="450" width="130" height="16" rx="8" fill="#c0a4ff" opacity="0.4"/>
-<rect x="340" y="520" width="350" height="76" rx="22" fill="#150a3a" fill-opacity=".8" stroke="#8257f5" stroke-opacity=".3" stroke-width="2"/>
-<circle cx="380" cy="558" r="11" fill="#c0a4ff" opacity=".45"/>
-<rect x="420" y="550" width="110" height="16" rx="8" fill="#c0a4ff" opacity="0.4"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z" fill="url(#dhMgrDocsBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z" fill="none" stroke="url(#dhMgrDocsRim)" stroke-width="18.1" filter="url(#dhMgrDocsSoft)" opacity=".5"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z" fill="none" stroke="url(#dhMgrDocsRim)" stroke-width="6.1" stroke-linejoin="round"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M254.9 154.1c-38.7 21.5-85.1 52.2-113.7 88.2 9.7 83 59 146.1 118.3 146.1 59.2 0 108.3-62.7 118.2-145.3-28.9-42.1-78-72.9-122.8-89z" fill="#150a3a" stroke="#8257f5" stroke-opacity=".5" stroke-width="2.0"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M196.6 237.1h2.4c13.1.1 26.1 2.7 39.1 7.4-16.8 40.6-59 42-78.1 0 12.2-4.8 24.4-7.2 36.6-7.4z" fill="#3ce8c9" filter="url(#dhMgrDocsSoft)" opacity=".85"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M196.6 237.1h2.4c13.1.1 26.1 2.7 39.1 7.4-16.8 40.6-59 42-78.1 0 12.2-4.8 24.4-7.2 36.6-7.4z" fill="#8ef7e3"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M321.5 237.1c13-.1 26 2.3 39.1 7.4-19.2 42-61.3 40.6-78.2 0 13.1-4.7 26.1-7.3 39.1-7.4z" fill="#3ce8c9" filter="url(#dhMgrDocsSoft)" opacity=".85"/>
+<path transform="translate(20.0 60.0) scale(1.4844)" d="M321.5 237.1c13-.1 26 2.3 39.1 7.4-19.2 42-61.3 40.6-78.2 0 13.1-4.7 26.1-7.3 39.1-7.4z" fill="#8ef7e3"/>
 <path d="M 600 500 H 800 L 860 560 V 830 Q 860 860 830 860 H 630 Q 600 860 600 830 Z" fill="url(#dhMgrDocsBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
 <path d="M 600 500 H 800 L 860 560 V 830 Q 860 860 830 860 H 630 Q 600 860 600 830 Z" fill="none" stroke="url(#dhMgrDocsRim)" stroke-width="21" filter="url(#dhMgrDocsSoft)" opacity=".5"/>
 <path d="M 600 500 H 800 L 860 560 V 830 Q 860 860 830 860 H 630 Q 600 860 600 830 Z" fill="none" stroke="url(#dhMgrDocsRim)" stroke-width="9" stroke-linejoin="round"/>

@@ -10,6 +10,8 @@ The art speaks the language of the guides' heroes (`assets/images/guides/*.svg`)
 indigo object with a violet-to-mint rim, soft glows and lilac detail, on transparency. That
 is what lets it skip the light-art pipeline (`tools/make-light-art.py`): a dark object on a
 light page reads as an object, as the guides' gauge does, so both themes show the same file.
+The one exception is MANAGER's figure, whose eyes are mint on the dark theme and white on the
+light one, so its two pictures have light variants.
 
 The rules come from what a docs page is for:
 
@@ -41,6 +43,17 @@ INDIGO = "#2b1470"
 INDIGO_DEEP = "#150a3a"
 AMBIENT = "#8b5cf6"
 CYAN = "#22b6d6"
+
+# The eyes of MANAGER's figure: the palette's mint and teal, a digit off, so that
+# tools/make-light-art.py can name them alone and leave the mint of the rim and the bars.
+MANAGER_EYE = "#8ef7e3"
+MANAGER_EYE_GLOW = "#3ce8c9"
+
+# VpnHood! MANAGER's figure, the hood of its icon, on a 512 grid: the hood, its face and its eyes.
+MANAGER_HOOD = "M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z"
+MANAGER_FACE = "M254.9 154.1c-38.7 21.5-85.1 52.2-113.7 88.2 9.7 83 59 146.1 118.3 146.1 59.2 0 108.3-62.7 118.2-145.3-28.9-42.1-78-72.9-122.8-89z"
+MANAGER_EYES = ("M196.6 237.1h2.4c13.1.1 26.1 2.7 39.1 7.4-16.8 40.6-59 42-78.1 0 12.2-4.8 24.4-7.2 36.6-7.4z",
+                "M321.5 237.1c13-.1 26 2.3 39.1 7.4-19.2 42-61.3 40.6-78.2 0 13.1-4.7 26.1-7.3 39.1-7.4z")
 
 
 class Art:
@@ -135,6 +148,16 @@ class Art:
         self.led(x + h * .5 + h * .42, cy, r=h * .11, on=False)
         for n in range(3):
             self.bar(x + w * .62, cy - 22 + n * 18, 70, 10, fill=LILAC, opacity=.35)
+
+    def manager_hood(self, cx, cy, size, rim=9) -> None:
+        """MANAGER's figure: the hood in the art's body and rim, its face in deep indigo, its eyes lit."""
+        s = size / 512
+        at = f'transform="translate({cx - size / 2:.1f} {cy - size / 2:.1f}) scale({s:.4f})"'
+        self.solid(f'<path {at} d="{MANAGER_HOOD}" {{fill}} {{stroke}}/>', width=round(rim / s, 1))
+        self.add(f'<path {at} d="{MANAGER_FACE}" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".5" stroke-width="{3 / s:.1f}"/>')
+        for eye in MANAGER_EYES:
+            self.add(f'<path {at} d="{eye}" fill="{MANAGER_EYE_GLOW}" filter="{self.url("Soft")}" opacity=".85"/>',
+                     f'<path {at} d="{eye}" fill="{MANAGER_EYE}"/>')
 
     def render(self, name: str, product: str = "vpnhood-server", prefix: str = "hero") -> None:
         body = "\n".join(self.parts)
@@ -389,21 +412,10 @@ def installer_options() -> None:
 
 
 def manager_docs() -> None:
-    """The MANAGER docs index: the web panel, with its list of servers, and a page of instructions in front of it."""
+    """The MANAGER docs index: MANAGER's figure, with a page of instructions in front of it."""
     a = Art("dhMgrDocs")
     a.ambient()
-    # the panel: a browser window with a sidebar and three servers, the first one lit
-    a.solid('<rect x="120" y="190" width="620" height="470" rx="40" {fill} {stroke}/>', width=10)
-    a.add(f'<path d="M 120 280 H 740" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="3"/>')
-    for n in range(3):
-        a.add(f'<circle cx="{178 + n * 40}" cy="235" r="12" fill="{LILAC}" opacity=".45"/>')
-    for n in range(4):
-        a.bar(170, 330 + n * 52, 120 if n else 90, 16, fill=MINT if n == 0 else LILAC, opacity=.9 if n == 0 else .32)
-    for n in range(3):
-        y = 320 + n * 100
-        a.add(f'<rect x="340" y="{y}" width="350" height="76" rx="22" fill="{INDIGO_DEEP}" fill-opacity=".8" stroke="{VIOLET}" stroke-opacity=".3" stroke-width="2"/>')
-        a.led(380, y + 38, r=11, on=(n == 0))
-        a.bar(420, y + 30, 150 - n * 20, 16, fill=LILAC, opacity=.4)
+    a.manager_hood(400, 440, 760)
     # the page, folded at its top corner
     a.solid('<path d="M 600 500 H 800 L 860 560 V 830 Q 860 860 830 860 H 630 Q 600 860 600 830 Z" {fill} {stroke}/>', width=9)
     a.add(f'<path d="M 800 500 V 560 H 860" fill="none" stroke="{a.url("Rim")}" stroke-width="9" stroke-linejoin="round"/>')
@@ -485,29 +497,13 @@ def add_server() -> None:
 
 
 def manager_promo() -> None:
-    """The MANAGER promo on the server pages (_includes/docs-managed.html), not a hero: the web
-    panel, its servers, and the traffic it shows for them. Shown about 112px wide, so the
-    shapes are fewer and heavier than a hero's."""
+    """The MANAGER promo on the server pages (_includes/docs-managed.html), not a hero:
+    MANAGER's figure alone, where a reader meets the name. Shown about 112px wide, so it
+    fills the picture."""
     a = Art("dhMgrPromo")
     a.ambient(cy=500)
-    # the panel: a window with its three dots and a sidebar, the first entry lit
-    a.solid('<rect x="110" y="170" width="780" height="640" rx="54" {fill} {stroke}/>', width=14)
-    a.add(f'<path d="M 110 285 H 890" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="5"/>')
-    for n in range(3):
-        a.add(f'<circle cx="{185 + n * 52}" cy="228" r="17" fill="{LILAC}" opacity=".45"/>')
-    for n in range(4):
-        a.bar(170, 345 + n * 70, 120 if n else 90, 26, fill=MINT if n == 0 else LILAC, opacity=.9 if n == 0 else .32)
-    # two servers, the first one up
-    for n in range(2):
-        y = 335 + n * 125
-        a.add(f'<rect x="350" y="{y}" width="480" height="98" rx="28" fill="{INDIGO_DEEP}" fill-opacity=".8" stroke="{VIOLET}" stroke-opacity=".35" stroke-width="4"/>')
-        a.led(405, y + 49, r=17, on=(n == 0))
-        a.bar(455, y + 37, 230 - n * 60, 24, fill=LILAC, opacity=.42)
-    # their traffic: a bar chart, the latest bar lit
-    for n, h in enumerate((80, 125, 100, 170)):
-        lit = n == 3
-        a.bar(370 + n * 115, 760 - h, 70, h, fill=MINT if lit else LILAC, opacity=.95 if lit else .35, glow=lit)
-    a.ambient(cy=900, rx=330, ry=60, opacity=.45)
+    a.manager_hood(500, 490, 800)
+    a.ambient(cy=930, rx=300, ry=50, opacity=.45)
     a.render("manager", product="vpnhood-manager", prefix="promo")
 
 
