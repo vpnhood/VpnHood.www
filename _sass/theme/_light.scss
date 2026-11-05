@@ -325,8 +325,18 @@
 // To add one: register the dark source in that script, run it, then point a rule here at
 // the result. See its docstring for what is deliberately NOT converted — the app
 // screenshots above all.
+// Light mode keeps the original abstract banner and its original card treatment.
+// banner-bg.webp remains its source; the dark guardian is a separate asset.
 [data-theme="light"] #bannerBgWrapper{
     background-image: url("/assets/images/home/banner-bg-light.webp");
+    filter: none;
+}
+[data-theme="light"] #bannerCardBlur{
+    background-color: rgba(var(--purple-700-rgb), 0.86);
+}
+[data-theme="light"] #banner > #purpleLight,
+[data-theme="light"] #banner > #greenLight{
+    z-index: -1;
 }
 [data-theme="light"] #features{
     background-image: url("/assets/images/home/features-bg-light.webp");

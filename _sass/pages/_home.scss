@@ -17,7 +17,16 @@
     left: 0;
     right: 0;
     z-index: -1;
-    background: url("/assets/images/home/banner-bg.webp") no-repeat center bottom;
+    // Keep the portrait opaque so decorative effects cannot show through her body.
+    opacity: 1;
+    filter: brightness(0.70);
+    background: url("/assets/images/home/banner-guardian.webp") no-repeat center bottom;
+}
+// The guardian sits in front of the existing decorative layers.
+#banner > .star-effect,
+#banner > #purpleLight,
+#banner > #greenLight {
+    z-index: -2;
 }
 #purpleLight, #greenLight {
     position: absolute;
@@ -56,7 +65,7 @@
     display: inline-block;
 }
 #bannerCardBlur{
-    background-color: rgba(var(--purple-700-rgb), 0.86);
+    background-color: rgba(var(--purple-700-rgb), 0.66);
     border: 1px solid rgba(var(--purple-200-rgb), 0.5);
     max-width: 1010px;
     margin-top: 93px;
