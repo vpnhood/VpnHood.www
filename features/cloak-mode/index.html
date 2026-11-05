@@ -47,7 +47,14 @@ extra_css:
                           </div>
                         </div>
 
-                        <div class="row section-space gap-lg-0 gap-5">
+                        <figure class="vh-topology d-none d-md-block" data-aos="fade-up">
+                          {% include diagrams/cloak-mode.svg %}
+                        </figure>
+                        <figure class="vh-topology d-md-none" data-aos="fade-up">
+                          {% include diagrams/cloak-mode-tall.svg %}
+                        </figure>
+
+                        <div class="row section-space pt-0 gap-lg-0 gap-5">
                           <div class="col-lg-4" data-aos="fade-up">
                             <div class="vh-card-dark vh-feature-panel h-100">
                               <h2 class="h4 vh-txt-grad-purple-400">{{ t.how_title }}</h2>

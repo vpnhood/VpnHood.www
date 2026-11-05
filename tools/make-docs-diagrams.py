@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the diagrams of the docs pages as translatable Liquid includes.
+"""Generate the docs pages' diagrams, and Cloak Mode's, as translatable Liquid includes.
 
 Writes, under `_includes/diagrams/`:
 
@@ -8,6 +8,7 @@ Writes, under `_includes/diagrams/`:
   how-it-works.svg, how-it-works-tall.svg        /self-hosted-vpn/docs/how-it-works/
   dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
   dynamic-ip-find.svg, dynamic-ip-find-tall.svg  /vpnhood-manager/docs/dynamic-ip/
+  cloak-mode.svg, cloak-mode-tall.svg            /features/cloak-mode/
 
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
@@ -36,10 +37,11 @@ as often as on a desk:
 
 Nodes are icons, not boxes: two people for your users, a rack for your server, a globe for
 websites, a cloud - the docs heroes' cloud, `tools/make-docs-heroes.py` - for a reverse
-proxy, a window for MANAGER, a key for access keys, and a signpost for what shows the way to
-a server's address. A server's addresses are ports on its edge, in the colour of the arrow that reaches
-them. Example addresses and names are not copy: they come from `_data/code.yml`, the values
-the pages' own text uses, so the picture and the text always agree.
+proxy, a window for MANAGER, a key for access keys, a signpost for what shows the way to a
+server's address, a phone for your device, and a brick wall for a network filter. A server's
+addresses are ports on its edge, in the colour of the arrow that reaches them. Example
+addresses and names are not copy: they come from `_data/code.yml`, the values the pages' own
+text uses, so the picture and the text always agree.
 
 Each diagram states one idea and no more:
 
@@ -53,6 +55,10 @@ Each diagram states one idea and no more:
                   the keys.
   dynamic-ip-find an older key's address is gone, and the name or the URL in the key leads
                   apps to the new one.
+  cloak-mode      nobody outside can see into a tunnel, so a filter goes by its shape: packets
+                  make one long tunnel bumpy, and with Cloak Mode each connection's own tunnel
+                  is smooth, like web browsing. Both lanes read left to right on a phone too,
+                  one under the other, because setting them side by side is the idea.
 
 Run from the repo root:  python tools/make-docs-diagrams.py
 """
@@ -625,9 +631,140 @@ def dynamic_ip_find() -> None:
     render("dynamic-ip-find-tall", *DYNAMIC_IP, W, H, "vhDynFindTall", parts, "diagram_find")
 
 
+# ===========================================================================
+# cloak-mode - a filter can recognize one long tunnel, and not a browser's requests
+# ===========================================================================
+CLOAK = ("features_cloak_mode", "vh_cloak_en")
+PHONE_W, PHONE_H = 54, 92
+
+
+def phone(cx, cy):
+    """Your device: a phone, with its speaker and its home bar."""
+    x, y = cx - PHONE_W / 2, cy - PHONE_H / 2
+    return (box(x, y, PHONE_W, PHONE_H, CHALK, 3.2) + line(cx - 7, y + 10, cx + 7, y + 10) +
+            line(cx - 11, y + PHONE_H - 10, cx + 11, y + PHONE_H - 10))
+
+
+def filter_wall(cx, y0, y1, w, course):
+    """A network filter: a column of bricks, each course offset from the last."""
+    x0, x1 = cx - w / 2, cx + w / 2
+    rows = round((y1 - y0) / course)
+    step = (y1 - y0) / rows
+    out = [box(x0, y0, w, y1 - y0, CHALK_DIM, 2.8)]
+    for n in range(rows):
+        y = y0 + n * step
+        if n:
+            out.append(line(x0, y, x1, y, CHALK_DIM, 1.8))
+        for x in (cx,) if n % 2 else (x0 + w / 4, x1 - w / 4):
+            out.append(line(x, y, x, y + step, CHALK_DIM, 1.8))
+    return "".join(out)
+
+
+def magnifier(cx, cy, r=19):
+    """Inspection: a lens, with the board's ground inside it so the bricks stop at its rim."""
+    return ('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"/>' % (cx, cy, r, BOARD) +
+            ring(cx, cy, r, CHALK, 3.2) +
+            line(cx + r * 0.72, cy + r * 0.72, cx + r * 1.62, cy + r * 1.62, CHALK, 4.6))
+
+
+TUBE = 'fill="%s" fill-opacity="0.16" stroke="%s" stroke-width="2.4"' % (MINT, MINT)
+
+
+def pipe(x1, x2, y, half):
+    """A smooth tunnel: a shaded band with round ends, however many lie side by side."""
+    return ('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" rx="%d" %s/>'
+            % (x1, j(y - half, 0.6), x2 - x1, 2 * half, half, TUBE))
+
+
+def packet_tunnel(x1, x2, y, half, count):
+    """One long tunnel, with packets in single file. Nobody outside can see them, but each one
+    bulges the wall, by its own amount, and that outline is what gives the tunnel away."""
+    size, pad, nose = 13, 20, 10
+    xs = [x1 + pad + n * (x2 - x1 - 2 * pad) / (count - 1) for n in range(count)]
+    rise = [j(half, 2.8) for _ in xs]
+    waist = half - 8
+
+    def side(sign):
+        """The bulges along one wall, left to right: level at each top and at each dip."""
+        pts = [(xs[0], y + sign * rise[0])]
+        for n in range(1, count):
+            pts += [((xs[n - 1] + xs[n]) / 2, y + sign * waist), (xs[n], y + sign * rise[n])]
+        return pts
+
+    def curve(pts):
+        return "".join(" C %.1f %.1f %.1f %.1f %.1f %.1f" % ((ax + bx) / 2, ay, (ax + bx) / 2, by, bx, by)
+                       for (ax, ay), (bx, by) in zip(pts, pts[1:]))
+
+    top, bottom = side(-1), side(1)[::-1]
+    d = ("M %.1f %.1f C %.1f %.1f %.1f %.1f %.1f %.1f" % (x1, y, x1, top[0][1], x1 + nose, top[0][1], *top[0]) +
+         curve(top) + " C %.1f %.1f %.1f %.1f %.1f %.1f" % (x2 - nose, top[-1][1], x2, top[-1][1], x2, y) +
+         " C %.1f %.1f %.1f %.1f %.1f %.1f" % (x2, bottom[0][1], x2 - nose, bottom[0][1], *bottom[0]) +
+         curve(bottom) + " C %.1f %.1f %.1f %.1f %.1f %.1f Z" % (x1 + nose, bottom[-1][1], x1, bottom[-1][1], x1, y))
+    out = ['<path d="%s" stroke-linejoin="round" %s/>' % (d, TUBE)]
+    for x in xs:
+        out.append('<rect x="%.1f" y="%.1f" width="%d" height="%d" rx="2" fill="%s"/>'
+                   % (j(x - size / 2, 0.8), j(y - size / 2, 0.8), size, size, CHALK))
+    return "".join(out)
+
+
+def stream_tunnel(x1, x2, y, wall_x, wall_w, half=10):
+    """A connection's own tunnel, through a gap in the wall, with its stream in one piece inside it."""
+    return ('<rect x="%.1f" y="%.1f" width="%d" height="%d" fill="%s"/>'
+            % (wall_x - wall_w / 2 - 2, y - half, wall_w + 4, 2 * half, BOARD) +
+            pipe(x1, x2, y, half) + arrow(x1 + 16, y, x2 - 8, y, CHALK, 2.8))
+
+
+def cloak_lanes(xp, xf, xs, y1, y2, rack_w, rack_h, wall_w, half, packets):
+    """Both lanes: one tunnel stopped at the wall, and a tunnel of its own for each connection."""
+    a, b = xp + PHONE_W / 2 + 12, xf - wall_w / 2 - 3       # the device to the wall
+    c, d = xf + wall_w / 2 + 10, xs - rack_w / 2 - 14       # the wall to the server
+    return ([phone(xp, y1), rack(xs, y1, rack_w, rack_h), packet_tunnel(a, b, y1, half, packets),
+             arrow(c, y1, d, y1, CHALK_DIM, 2.6, "9 11"), cross(xf, y1, 14, CORAL, 5.0),
+             phone(xp, y2), rack(xs, y2, rack_w, rack_h)] +
+            [stream_tunnel(a, d, y2 + n * 35, xf, wall_w) for n in (-1, 0, 1)])
+
+
+def cloak_mode() -> None:
+    T, _ = strings(CLOAK[1])
+    lanes = (("diagram_off", "diagram_off_sub", "diagram_off_result", CORAL),
+             ("diagram_on", "diagram_on_sub", "diagram_on_result", MINT))
+
+    # --- left to right: one wall across both lanes, the device and the server on either side ---
+    seed(31)
+    W, H = 920, 516
+    XP, XF, XS, WALL = 104, 530, 836, 52
+    Y1, Y2 = 164, 358
+    left, right = 320, 726              # the middle of what lies on either side of the wall
+    parts = [filter_wall(XF, 68, 450, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 - 6)]
+    parts += cloak_lanes(XP, XF, XS, Y1, Y2, 92, 72, WALL, 19, 10)
+    for x, key in ((XP, "diagram_device"), (XF, "diagram_filter"), (XS, "diagram_server")):
+        parts.append(txt(x, 46, T(key), 19))
+    for y, above, below, (key, sub, result, colour) in zip((Y1, Y2), (38, 60), (62, 72), lanes):
+        parts += [txt(left, y - above, T(key), 22), txt(left, y + below, T(sub), 18, CHALK_DIM),
+                  txt(right, y + below, T(result), 19, colour)]
+    parts.append(txt(W / 2, H - 30, T("diagram_caption"), 20, AMBER))
+    render("cloak-mode", *CLOAK, W, H, "vhCloakMode", parts)
+
+    # --- on a phone: the same lanes, one under the other, each with its own stretch of wall -----
+    seed(31)
+    W, H = 560, 660
+    XP, XF, XS, WALL = 62, 300, 492, 48
+    Y1, Y2 = 180, 446
+    parts = [filter_wall(XF, y - 60, y + 60, WALL, 20) for y in (Y1, Y2)]
+    parts += cloak_lanes(XP, XF, XS, Y1, Y2, 84, 66, WALL, 19, 5)
+    parts += [txt(28, 42, T("diagram_device"), 17, CHALK, "start"), txt(XF, 42, T("diagram_filter"), 17),
+              txt(W - 28, 42, T("diagram_server"), 17, CHALK, "end")]
+    for y, (key, sub, result, colour) in zip((Y1, Y2), lanes):
+        parts += [txt(W / 2, y - 84, T(key), 22), txt(W / 2, y + 88, T(sub), 17, CHALK_DIM),
+                  txt(W / 2, y + 116, T(result), 19, colour)]
+    parts.append(txt(W / 2, H - 28, T("diagram_caption"), 18, AMBER))
+    render("cloak-mode-tall", *CLOAK, W, H, "vhCloakModeTall", parts)
+
+
 if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
     how_it_works()
     dynamic_ip_follow()
     dynamic_ip_find()
+    cloak_mode()
