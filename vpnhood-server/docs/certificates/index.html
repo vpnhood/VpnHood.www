@@ -1,0 +1,69 @@
+---
+layout: none
+i18n: vpnhood_server_docs_certificates
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The owner's reasoning on issue 798 (2026-11-05): nothing makes a self-signed certificate
+  look valid, so an admin gets a valid one or a probe finds out; a default certificate says
+  only "some self-signed server", which can be better than an invalid one that names a real
+  site; a host such as api. refuses strangers as many sites' hosts do, and www stays free.
+  This page owns that choice and stays short on purpose (owner: no long boring documents),
+  so the steps stay on domain/, ip-blocking/ and MANAGER's certificates/, which link here. We
+  have no evidence of what a censor really checks, so it says "can" and "suggests", and it
+  keeps the case for a real site's name: a reporter on the issue found it worked on their
+  network. A domain is offered for its certificate, not as a way past a blocked address
+  (owner, 2026-10-19). There are no standalone steps here, so the MANAGER promo sits under
+  the section that recommends a domain. Code inside a sentence is a placeholder from
+  _data/code.yml, filled in by copy.html.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-certificates.svg" %}
+
+<h2 id="compare">{{ t.compare_title }}</h2>
+<ul class="vh-docs-flow vh-docs-flow--compare">
+  <li>
+    <span class="vh-feature-icon">{% include icons/shield-check.svg %}</span>
+    <p class="vh-docs-flow-title">{{ t.kind_trusted }}</p>
+    <p class="vh-docs-flow-desc">{{ t.kind_trusted_sees }}</p>
+    <p class="vh-docs-flow-desc"><b>{{ t.kind_trusted_looks }}</b></p>
+  </li>
+  <li>
+    <span class="vh-feature-icon">{% include icons/shield.svg %}</span>
+    <p class="vh-docs-flow-title">{{ t.kind_self }}</p>
+    <p class="vh-docs-flow-desc">{{ t.kind_self_sees }}</p>
+    <p class="vh-docs-flow-desc"><b>{{ t.kind_self_looks }}</b></p>
+  </li>
+  <li>
+    <span class="vh-feature-icon">{% include icons/alert.svg %}</span>
+    <p class="vh-docs-flow-title">{{ t.kind_invalid }}</p>
+    <p class="vh-docs-flow-desc">{{ t.kind_invalid_sees }}</p>
+    <p class="vh-docs-flow-desc"><b>{{ t.kind_invalid_looks }}</b></p>
+  </li>
+</ul>
+
+<h2 id="self-signed-or-invalid">{{ t.invalid_title }}</h2>
+<p>{{ t.invalid_both }}</p>
+<p>{{ t.invalid_self }}</p>
+<p>{{ t.invalid_false }}</p>
+<p>{% include copy.html s=t.invalid_when %}</p>
+<p>{{ t.invalid_dress }}</p>
+
+<h2 id="domain">{{ t.domain_title }}</h2>
+<p>{{ t.domain_cost }}</p>
+<p>{% include copy.html s=t.domain_host %}</p>
+<p>{% include copy.html s=t.domain_limit %}</p>
+
+{% include docs-managed.html href="/vpnhood-manager/docs/certificates/#domain" %}
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/domain/">{{ t.next_domain }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

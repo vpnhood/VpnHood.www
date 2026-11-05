@@ -50,7 +50,7 @@
   "domain_how": "Confira em <a href=\"/vpnhood-server/docs/domain/\">Use um nome de domínio e um certificado confiável</a> como fazer isso, em um servidor gerenciado e em um independente.",
   "name_title": "Use um nome de sua escolha, sem domínio",
   "name_desc": "O nome que os aplicativos dos seus usuários enviam sem criptografia é sempre o nome do certificado do servidor: não existe uma configuração separada para ele. Um certificado autoassinado pode ter qualquer nome, mesmo um que não seja seu, pois os aplicativos o aceitam pela impressão digital contida na chave e nunca consultam esse nome no DNS. Assim, você pode substituir o nome fictício sem domínio.",
-  "name_limit": "Isso esconde menos do que um certificado confiável. Uma sondagem continua vendo que o certificado é autoassinado, e uma rede que consultar o nome no DNS descobre que ele leva a outro endereço. Só ajuda onde a rede julga apenas por esse nome.",
+  "name_limit": "Isso esconde menos do que um certificado confiável, e o nome de um site real pode fazer mais mal do que bem: a página <a href=\"/vpnhood-server/docs/certificates/\">Qual certificado seu servidor deve usar?</a> explica por quê.",
   "name_how": "Em um servidor gerenciado, <a href=\"/vpnhood-manager/docs/certificates/#any-name\">adicione um certificado com esse nome</a>. Em um servidor independente, <a href=\"/vpnhood-server/docs/domain/#any-name\">crie um você mesmo</a>.",
   "censored_title": "Configurações para uma rede censurada",
   "censored_desc": "Em uma rede que bloqueia servidores VPN, estas configurações fazem toda conexão com o seu servidor se parecer mais com uma visita a um site, para todos os usuários dele de uma só vez, seja qual for a configuração dos aplicativos deles:",

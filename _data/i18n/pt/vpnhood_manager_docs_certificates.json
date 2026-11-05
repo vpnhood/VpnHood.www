@@ -42,7 +42,7 @@
   "any_name_add": "Na página do farm, não na de um servidor, <a href=\"#add\">adicione um certificado</a> com esse nome e deixe <b>[manager_signing]</b> em <b>[manager_manual]</b>.",
   "any_name_token": "Edite <b>[manager_visibility]</b> e escolha <b>[manager_public_in_token]</b>. Um dos servidores do farm tem de ter um endereço <b>[manager_public_in_token]</b>, pois essas chaves não conseguem alcançar um servidor pelo nome.",
   "any_name_delete": "Quando os aplicativos dos seus usuários tiverem a nova chave, <a href=\"#delete\">exclua o certificado anterior do farm</a>. Até lá, uma sondagem que não envia nenhum nome ainda pode recebê-lo, com o seu nome provisório.",
-  "any_name_limit": "Isso oculta menos do que um certificado confiável: <a href=\"/vpnhood-server/docs/ip-blocking/#any-name\">Evite o bloqueio do endereço IP do seu servidor</a> explica até que ponto.",
+  "any_name_limit": "Isso oculta menos do que um certificado confiável, e o nome de um site real pode fazer mais mal do que bem: a página <a href=\"/vpnhood-server/docs/certificates/\">Que certificado deve o seu servidor usar?</a> explica porquê.",
   "autosign_title": "AutoSign",
   "autosign_how": "Com o <b>[manager_autosign]</b>, o MANAGER pede ao Let's Encrypt que assine um certificado para o domínio. O Let's Encrypt valida o domínio via HTTP comum na porta TCP <code>[port_http]</code>; portanto, o domínio deve apontar para um dos servidores do farm, com essa porta aberta. O MANAGER faz a mesma verificação antes. Enquanto isso, <b>[manager_signing]</b> exibe <b>[manager_validating]</b>.",
   "autosign_renew": "Cerca de 30 dias antes do vencimento, o MANAGER renova o certificado automaticamente. Os certificados do Let's Encrypt têm validade de 90 dias.",

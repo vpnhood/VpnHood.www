@@ -44,7 +44,7 @@
     "any_name_add": "On the farm's page, not a server's, <a href=\"#add\">add a certificate</a> with that name, and leave <b>[manager_signing]</b> on <b>[manager_manual]</b>.",
     "any_name_token": "Edit <b>[manager_visibility]</b> and choose <b>[manager_public_in_token]</b>. One of the farm's servers must have a <b>[manager_public_in_token]</b> address, as these keys cannot reach a server by its name.",
     "any_name_delete": "Once your users' apps have the new key, <a href=\"#delete\">delete the farm's previous certificate</a>. Until then, a probe that sends no name can still get it, with its made-up name.",
-    "any_name_limit": "This hides less than a trusted certificate: <a href=\"/vpnhood-server/docs/ip-blocking/#any-name\">Keep your server's IP address from being blocked</a> says how much.",
+    "any_name_limit": "This hides less than a trusted certificate, and a real site's name can do more harm than good: <a href=\"/vpnhood-server/docs/certificates/\">Which certificate should your server use?</a> explains why.",
     "autosign_title": "AutoSign",
     "autosign_how": "With <b>[manager_autosign]</b>, MANAGER asks Let's Encrypt to sign a certificate for the domain. Let's Encrypt checks the domain over plain HTTP on TCP port <code>[port_http]</code>, so the domain must point at one of the farm's servers, with that port open. MANAGER checks the same way first. Meanwhile, <b>[manager_signing]</b> shows <b>[manager_validating]</b>.",
     "autosign_renew": "About 30 days before the certificate expires, MANAGER renews it. Let's Encrypt's certificates last 90 days.",

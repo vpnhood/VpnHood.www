@@ -50,7 +50,7 @@
   "domain_how": "<a href=\"/vpnhood-server/docs/domain/\">Use a domain name and a trusted certificate</a> shows how, on a managed server and on a standalone one.",
   "name_title": "Use a name of your choice, without a domain",
   "name_desc": "The name your users' apps send in clear is always the name of the server's certificate: there is no separate setting for it. A self-signed certificate can carry any name, even one you do not own, as apps accept it by the fingerprint in their key and never look the name up. So you can replace the made-up name without a domain.",
-  "name_limit": "This hides less than a trusted certificate. A probe still sees that the certificate is self-signed, and a network that looks the name up finds that it leads to another address. It helps only where a network goes by the name alone.",
+  "name_limit": "This hides less than a trusted certificate, and a real site's name can do more harm than good: <a href=\"/vpnhood-server/docs/certificates/\">Which certificate should your server use?</a> explains why.",
   "name_how": "On a managed server, <a href=\"/vpnhood-manager/docs/certificates/#any-name\">add a certificate with that name</a>. On a standalone server, <a href=\"/vpnhood-server/docs/domain/#any-name\">make one yourself</a>.",
   "censored_title": "Settings for a censored network",
   "censored_desc": "On a network that blocks VPN servers, these settings make every connection to your server look more like a visit to a website, for all of its users at once, whatever their apps are set to:",

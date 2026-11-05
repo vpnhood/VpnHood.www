@@ -42,7 +42,7 @@
   "any_name_add": "في صفحة المزرعة، لا في صفحة أحد الخوادم، <a href=\"#add\">أضف شهادة</a> بالاسم الذي تختاره، واترك <b>[manager_signing]</b> على <b>[manager_manual]</b>.",
   "any_name_token": "عدّل <b>[manager_visibility]</b> واختر <b>[manager_public_in_token]</b>. يجب أن يكون لأحد خوادم المزرعة عنوان مضبوط على <b>[manager_public_in_token]</b>، لأن هذه المفاتيح لا تستطيع الوصول إلى الخادم باسمه.",
   "any_name_delete": "بعد أن تحصل تطبيقات مستخدميك على المفتاح الجديد، <a href=\"#delete\">احذف الشهادة السابقة للمزرعة</a>. وحتى ذلك الحين، يظل بإمكان أي فحص لا يرسل أي اسم أن يتلقاها باسمها الوهمي.",
-  "any_name_limit": "هذه الطريقة تخفي الخادم بقدر أقل من الشهادة الموثوقة: يوضح دليل <a href=\"/vpnhood-server/docs/ip-blocking/#any-name\">احمِ عنوان IP الخاص بخادمك من الحظر</a> مقدار ذلك.",
+  "any_name_limit": "هذه الطريقة تخفي الخادم بقدر أقل من الشهادة الموثوقة، وقد يضر اسم موقع حقيقي أكثر مما ينفع: يوضح دليل <a href=\"/vpnhood-server/docs/certificates/\">أي شهادة ينبغي أن يستخدمها خادمك؟</a> السبب.",
   "autosign_title": "AutoSign",
   "autosign_how": "باستخدام <b>[manager_autosign]</b>، يطلب MANAGER من Let's Encrypt توقيع شهادة للنطاق. تتحقق Let's Encrypt من النطاق عبر HTTP العادي على منفذ TCP رقم <code>[port_http]</code>، لذا يجب أن يشير النطاق إلى أحد خوادم المزرعة، مع فتح ذلك المنفذ. ويتحقق MANAGER أولاً بالطريقة نفسها. وفي أثناء ذلك، يعرض <b>[manager_signing]</b> الحالة <b>[manager_validating]</b>.",
   "autosign_renew": "يجدد MANAGER الشهادة قبل انتهائها بنحو 30 يوماً. وتدوم صلاحية شهادات Let's Encrypt لمدة 90 يوماً.",

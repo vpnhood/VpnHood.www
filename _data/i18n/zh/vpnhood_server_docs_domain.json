@@ -23,7 +23,7 @@
   "file_docker": "在 Docker 中，可通过 <code>[docker_exec_supervisor]</code> 运行相同命令，操作与 <code>[vhserver_gen]</code> 一致。",
   "file_renew": "新密钥直接关联域名，不再依赖具体证书文件。后续证书续期时，密钥依然有效，只需替换新证书并重启服务器即可。",
   "name_title": "使用自定义名称，无需域名",
-  "name_desc": "即使没有域名，独立服务器也可以替换其虚构名称。自签名证书可以使用任意名称，甚至是并非您所有的名称，因为应用通过其密钥中的指纹来接受证书，从不对该名称进行 DNS 解析。不过，它的隐蔽性不如受信任的证书：<a href=\"/vpnhood-server/docs/ip-blocking/#any-name\">防止服务器 IP 地址被封锁</a>说明了差距有多大。",
+  "name_desc": "即使没有域名，独立服务器也可以替换其虚构名称。自签名证书可以使用任意名称，甚至是并非您所有的名称，因为应用通过其密钥中的指纹来接受证书，从不对该名称进行 DNS 解析。不过，它的隐蔽性不如受信任的证书，而且真实网站的名称可能弊大于利：<a href=\"/vpnhood-server/docs/certificates/\">您的服务器应该使用哪种证书？</a>说明了原因。",
   "name_make": "在服务器上创建一个证书，将两处的 <code>[domain_api_example]</code> 都换成您的名称，然后用它替换 <code>[server_cert_pfx]</code>。该证书没有密码，因此请勿在设置中写入 <code>[setting_ssl_password]</code>，并将 <code>[setting_is_valid_host_name]</code> 保持为默认值 <code>[json_false]</code>。",
   "caption_name": "有效期十年：新证书有新的指纹，因此需要新的密钥",
   "name_restart": "使用 <code>[server_restart_linux]</code> 重启服务器，Docker 环境下则运行 <code>[docker_restart]</code>。变更前生成的密钥将失效，因为其中包含旧证书的指纹：请重新打印各密钥，并将新密钥发送给用户。",

@@ -50,7 +50,7 @@
   "domain_how": "<a href=\"/vpnhood-server/docs/domain/\">Alan adı ve güvenilir sertifika kullanın</a> sayfası, bunun hem yönetilen hem de bağımsız sunucularda nasıl yapılacağını gösterir.",
   "name_title": "Alan adı olmadan kendi seçtiğiniz bir adı kullanın",
   "name_desc": "Kullanıcılarınızın uygulamalarının şifresiz gönderdiği ad her zaman sunucu sertifikasının adıdır: Bunun için ayrı bir ayar yoktur. Kendinden imzalı bir sertifika, size ait olmayan bir ad dahil her adı taşıyabilir; çünkü uygulamalar sertifikayı anahtarlarındaki parmak iziyle kabul eder ve bu adı DNS'te asla sorgulamaz. Dolayısıyla rastgele adı alan adı olmadan da değiştirebilirsiniz.",
-  "name_limit": "Bu yöntem, güvenilir bir sertifikaya göre daha az şey gizler. Bir tarama sertifikanın kendinden imzalı olduğunu yine görür; bu adı DNS'te sorgulayan bir ağ da adın başka bir adresi işaret ettiğini fark eder. Yalnızca ağın sadece ada bakarak karar verdiği yerlerde işe yarar.",
+  "name_limit": "Bu yöntem, güvenilir bir sertifikaya göre daha az şey gizler ve gerçek bir sitenin adı yarardan çok zarar verebilir: Nedenini <a href=\"/vpnhood-server/docs/certificates/\">Sunucunuz hangi sertifikayı kullanmalı?</a> sayfası anlatır.",
   "name_how": "Yönetilen bir sunucuda <a href=\"/vpnhood-manager/docs/certificates/#any-name\">bu ada sahip bir sertifika ekleyin</a>. Bağımsız bir sunucuda ise <a href=\"/vpnhood-server/docs/domain/#any-name\">sertifikayı kendiniz oluşturun</a>.",
   "censored_title": "Sansürlü bir ağ için ayarlar",
   "censored_desc": "VPN sunucularını engelleyen bir ağda aşağıdaki ayarlar, uygulamalarında ne seçili olursa olsun sunucunun tüm kullanıcıları için aynı anda, sunucunuza yapılan her bağlantıyı bir web sitesi ziyaretine daha çok benzetir:",

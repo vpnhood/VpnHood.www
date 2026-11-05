@@ -414,14 +414,8 @@ def manager_docs() -> None:
     a.render("docs", product="vpnhood-manager")
 
 
-def certificates() -> None:
-    """Certificates: two certificates of a farm, the front one sealed - the one its keys carry."""
-    a = Art("dhCerts")
-    a.ambient(cy=470)
-    # the one behind, dim
-    a.add(f'<rect x="250" y="210" width="540" height="390" rx="34" fill="{INDIGO_DEEP}" fill-opacity=".7" stroke="{VIOLET}" stroke-opacity=".45" stroke-width="5"/>')
-    a.bar(310, 270, 200, 18, fill=LILAC, opacity=.3)
-    # the one in front: a heading, its lines, and a seal with two ribbons
+def sealed_certificate(a: Art) -> None:
+    """A certificate in front: a heading, its lines, and a seal with two ribbons."""
     a.solid('<rect x="160" y="320" width="560" height="400" rx="36" {fill} {stroke}/>', width=11)
     a.bar(220, 390, 230, 24, fill=MINT, opacity=.9, glow=True)
     for n, w in enumerate((380, 320, 360)):
@@ -432,6 +426,32 @@ def certificates() -> None:
     a.add(f'<circle cx="695" cy="650" r="62" fill="none" stroke="{LILAC}" stroke-opacity=".35" stroke-width="6" stroke-dasharray="4 14" stroke-linecap="round"/>')
     a.add(f'<path d="M 662 652 L 686 676 L 730 628" fill="none" stroke="{MINT}" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="{a.url("Soft")}" opacity=".55"/>',
           f'<path d="M 662 652 L 686 676 L 730 628" fill="none" stroke="{MINT}" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def server_certificates() -> None:
+    """Which certificate: a false one crossed out, a plain one, and in front the sealed one."""
+    a = Art("dhServerCerts")
+    a.ambient(cy=470)
+    # the false one at the back, crossed out
+    a.add(f'<rect x="340" y="105" width="500" height="360" rx="32" fill="{INDIGO_DEEP}" fill-opacity=".55" stroke="{VIOLET}" stroke-opacity=".3" stroke-width="5"/>')
+    a.bar(395, 160, 170, 16, fill=LILAC, opacity=.22)
+    a.add(f'<path d="M 742 150 L 792 200 M 792 150 L 742 200" fill="none" stroke="{RED}" stroke-width="18" stroke-linecap="round"/>')
+    # the plain one, dim
+    a.add(f'<rect x="250" y="210" width="540" height="390" rx="34" fill="{INDIGO_DEEP}" fill-opacity=".7" stroke="{VIOLET}" stroke-opacity=".45" stroke-width="5"/>')
+    a.bar(310, 270, 200, 18, fill=LILAC, opacity=.3)
+    sealed_certificate(a)
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("certificates", product="vpnhood-server")
+
+
+def certificates() -> None:
+    """Certificates: two certificates of a farm, the front one sealed - the one its keys carry."""
+    a = Art("dhCerts")
+    a.ambient(cy=470)
+    # the one behind, dim
+    a.add(f'<rect x="250" y="210" width="540" height="390" rx="34" fill="{INDIGO_DEEP}" fill-opacity=".7" stroke="{VIOLET}" stroke-opacity=".45" stroke-width="5"/>')
+    a.bar(310, 270, 200, 18, fill=LILAC, opacity=.3)
+    sealed_certificate(a)
     a.ambient(cy=880, rx=300, ry=55, opacity=.45)
     a.render("certificates", product="vpnhood-manager")
 
@@ -882,6 +902,7 @@ if __name__ == "__main__":
     docker()
     ip_blocking()
     ip_addresses()
+    server_certificates()
     domain()
     reverse_proxy()
     installer_options()

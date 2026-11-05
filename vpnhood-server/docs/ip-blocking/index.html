@@ -104,7 +104,7 @@ extra_css:
 
 <h3 id="any-name">{{ t.name_title }}</h3>
 <p>{{ t.name_desc }}</p>
-<p>{{ t.name_limit }}</p>
+<p>{% include copy.html s=t.name_limit %}</p>
 <p>{% include copy.html s=t.name_how %}</p>
 
 <h2 id="censored-network">{{ t.censored_title }}</h2>

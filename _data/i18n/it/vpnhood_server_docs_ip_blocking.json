@@ -50,7 +50,7 @@
   "domain_how": "La guida <a href=\"/vpnhood-server/docs/domain/\">Usa un nome di dominio e un certificato attendibile</a> spiega la procedura per server gestiti e standalone.",
   "name_title": "Usa un nome a tua scelta, senza dominio",
   "name_desc": "Il nome che le app dei tuoi utenti inviano in chiaro è sempre quello del certificato del server: non esiste un'impostazione separata. Un certificato autofirmato può riportare qualsiasi nome, anche uno che non ti appartiene, perché le app lo accettano in base all'impronta digitale presente nella loro chiave e non risolvono mai il nome tramite DNS. Puoi quindi sostituire il nome fittizio senza un dominio.",
-  "name_limit": "Questa soluzione nasconde meno di un certificato attendibile. Una verifica vede comunque che il certificato è autofirmato, e una rete che risolve il nome tramite DNS scopre che porta a un altro indirizzo. Serve solo dove una rete si basa unicamente su quel nome.",
+  "name_limit": "Questa soluzione nasconde meno di un certificato attendibile, e il nome di un sito reale può fare più male che bene: la guida <a href=\"/vpnhood-server/docs/certificates/\">Quale certificato dovrebbe usare il tuo server?</a> spiega perché.",
   "name_how": "Su un server gestito, <a href=\"/vpnhood-manager/docs/certificates/#any-name\">aggiungi un certificato con quel nome</a>. Su un server standalone, <a href=\"/vpnhood-server/docs/domain/#any-name\">creane uno manualmente</a>.",
   "censored_title": "Impostazioni per una rete censurata",
   "censored_desc": "Su una rete che blocca i server VPN, queste impostazioni rendono ogni connessione al tuo server più simile alla visita di un sito web, per tutti i suoi utenti insieme, comunque siano impostate le loro app:",
