@@ -21,6 +21,11 @@ extra_css:
   nothing of moving the server and pointing the domain at it. A managed server's steps,
   with their screenshot, moved to /vpnhood-manager/docs/certificates/#domain, and the MANAGER
   promo right before the standalone steps links there (owner, 2026-10-22); this page is for a standalone server.
+  The any-name section is the middle way between the made-up name and a trusted certificate
+  (issue 798): its commands were run as written on the released server v9.1.866, and the
+  released CLIENT v9.1.868 connected with the new key and was refused with the old one, on
+  2026-11-05. The key pins the hash and the app accepts it whatever the dates, so the ten
+  years are only there because a new certificate needs new keys.
   Linux and Docker only, and no links to the GitHub wiki. Whole commands and files are
   markup; code inside a sentence is a placeholder from _data/code.yml, filled in by
   copy.html.
@@ -61,6 +66,18 @@ extra_css:
 sudo /opt/VpnHoodServer/vhserver print 2b9d4a6e-1c3f-4e8a-9b7d-5f0e8c2a1d34' %}
 <p>{% include copy.html s=t.file_docker %}</p>
 <p>{{ t.file_renew }}</p>
+
+<h2 id="any-name">{{ t.name_title }}</h2>
+<p>{% include copy.html s=t.name_desc %}</p>
+<p>{% include copy.html s=t.name_make %}</p>
+{% include terminal.html caption=t.caption_name cmd='openssl req -x509 -newkey rsa:2048 -nodes -days 3650 -subj "/CN=api.example.com" -addext "subjectAltName=DNS:api.example.com" -keyout server.key -out server.crt
+openssl pkcs12 -export -inkey server.key -in server.crt -out default.pfx -passout pass:
+sudo cp default.pfx /opt/VpnHoodServer/storage/access/certificates/default.pfx
+rm server.key server.crt default.pfx' %}
+<p>{% include copy.html s=t.name_restart %}</p>
+{% include terminal.html caption=t.caption_print cmd='sudo ls /opt/VpnHoodServer/storage/access
+sudo /opt/VpnHoodServer/vhserver print 2b9d4a6e-1c3f-4e8a-9b7d-5f0e8c2a1d34' %}
+<p>{% include copy.html s=t.file_docker %}</p>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>

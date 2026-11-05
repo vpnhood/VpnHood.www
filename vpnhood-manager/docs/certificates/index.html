@@ -31,7 +31,10 @@ extra_css:
   a validated AutoSign certificate for server1.example.com were written onto the open dialog
   before the capture, as CertificateCard.razor renders them, with numbered markers matching
   the steps. MANAGER's screen text is a placeholder from _data/code.yml, filled in by
-  copy.html. No links to the GitHub wiki.
+  copy.html. The any-name section (issue 798) is from CertificateService, which takes any
+  common name, and AgentService, which sends validated certificates first and leaves the
+  order of the rest open, so a probe with no name can get the old made-up one. No links to
+  the GitHub wiki.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-manager/docs/hero-certificates.svg" %}
@@ -85,6 +88,15 @@ extra_css:
 <p>{% include copy.html s=t.add_how %}</p>
 <p>{{ t.add_server }}</p>
 <p>{% include copy.html s=t.add_trusted %}</p>
+
+<h3 id="any-name">{{ t.any_name_title }}</h3>
+<p>{% include copy.html s=t.any_name_desc %}</p>
+<ol>
+  <li>{% include copy.html s=t.any_name_add %}</li>
+  <li>{% include copy.html s=t.any_name_token %}</li>
+  <li>{% include copy.html s=t.any_name_delete %}</li>
+</ol>
+<p>{% include copy.html s=t.any_name_limit %}</p>
 
 <h2 id="autosign">{{ t.autosign_title }}</h2>
 <p>{% include copy.html s=t.autosign_how %}</p>

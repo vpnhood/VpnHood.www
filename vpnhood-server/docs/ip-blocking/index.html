@@ -30,7 +30,11 @@ extra_css:
   Windows servers are rare. The minimum client protocol is a section of its own, outside
   the censored-network snippet, as it locks out older apps, and the default stays 8 (owner,
   2026-11-01). It is the first step, as users have to update anyway (owner, 2026-11-04), so
-  it says where to set it itself. No links to the GitHub wiki, which is being retired. Whole
+  it says where to set it itself. The server shows no website, custom or not: the host name
+  is one host of a domain, as an API's is, and www stays free for any site (owner, 2026-11-05,
+  issue 798). The name apps send, the SNI, is the certificate's, with no setting of its own;
+  the any-name section's limits are what a self-signed certificate cannot hide. No links to
+  the GitHub wiki, which is being retired. Whole
   commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.
 {%- endcomment -%}
@@ -93,9 +97,15 @@ extra_css:
 <h2 id="domain">{{ t.domain_title }}</h2>
 <p>{{ t.domain_desc }}</p>
 <p>{% include copy.html s=t.domain_name %}</p>
+<p>{% include copy.html s=t.domain_site %}</p>
 <p>{% include copy.html s=t.domain_keys %}</p>
 <p>{{ t.domain_follow }}</p>
 <p>{% include copy.html s=t.domain_how %}</p>
+
+<h3 id="any-name">{{ t.name_title }}</h3>
+<p>{{ t.name_desc }}</p>
+<p>{{ t.name_limit }}</p>
+<p>{% include copy.html s=t.name_how %}</p>
 
 <h2 id="censored-network">{{ t.censored_title }}</h2>
 <p>{{ t.censored_desc }}</p>
