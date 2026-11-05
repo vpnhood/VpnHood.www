@@ -2,7 +2,7 @@
   "meta_title": "Imposta l'indirizzo IP del server nelle chiavi di accesso | VpnHood!",
   "meta_description": "Scegli l'indirizzo IP di ascolto di VpnHood! SERVER e quello da inserire nelle chiavi di accesso, su server gestiti con VpnHood! MANAGER o standalone.",
   "title": "Imposta gli indirizzi IP del tuo server",
-  "lead": "Una chiave di accesso indica alle app a quale indirizzo connettersi. Di solito il server lo rileva automaticamente, ma su macchine con più indirizzi IP puoi configurarlo manualmente: sia l'indirizzo di ascolto, sia quello inserito nelle chiavi.",
+  "lead": "Di solito il server rileva da solo il proprio indirizzo IP. Su una macchina che ne ha più di uno, potresti dover impostare l'indirizzo su cui è in ascolto e quello che inserisce nelle chiavi di accesso.",
   "auto_title": "Come il server rileva il proprio indirizzo",
   "auto_listen": "Per impostazione predefinita, il server è in ascolto su tutti gli indirizzi della macchina, sulla porta TCP <code>[server_port]</code>.",
   "auto_keys": "Per generare le chiavi rileva il proprio indirizzo tramite il traffico in uscita, interrogando un servizio web esterno.",

@@ -2,7 +2,7 @@
   "meta_title": "Definir o IP do servidor nas chaves de acesso | VpnHood!",
   "meta_description": "Escolha o endereço IP em que o VpnHood! SERVER escuta e o que ele inclui nas chaves de acesso, em um servidor gerenciado no VpnHood! MANAGER ou em um independente.",
   "title": "Defina os endereços IP do seu servidor",
-  "lead": "Uma chave de acesso indica aos aplicativos a qual endereço se conectar. O servidor costuma identificar isso automaticamente, mas em máquinas com múltiplos IPs você pode definir: o endereço em que ele escuta e o que vai nas chaves.",
+  "lead": "O servidor costuma identificar o próprio endereço IP. Em uma máquina com mais de um, pode ser preciso definir o endereço em que ele escuta e o endereço que ele coloca nas chaves de acesso.",
   "auto_title": "Como o servidor identifica o endereço",
   "auto_listen": "Por padrão, o servidor escuta em todos os endereços da máquina na porta TCP <code>[server_port]</code>.",
   "auto_keys": "Para gerar as chaves, o endereço é detectado automaticamente pelo tráfego de saída: consultando um serviço web para ver de onde ele vem.",

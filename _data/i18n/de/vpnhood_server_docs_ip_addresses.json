@@ -2,7 +2,7 @@
   "meta_title": "Server-IP-Adresse in Zugangsschlüsseln festlegen | VpnHood!",
   "meta_description": "Legen Sie fest, auf welcher IP-Adresse VpnHood! SERVER lauscht und welche er in Zugangsschlüssel einträgt – auf einem verwalteten Server in VpnHood! MANAGER oder auf einem eigenständigen.",
   "title": "IP-Adressen Ihres Servers festlegen",
-  "lead": "Ein Zugangsschlüssel teilt Apps mit, mit welcher Adresse sie sich verbinden sollen. Meist ermittelt der Server das selbst, doch auf einem System mit mehreren IP-Adressen müssen Sie sie unter Umständen festlegen: die Adresse, auf der der Server lauscht, und die Adresse, die er in die Schlüssel einträgt.",
+  "lead": "Der Server ermittelt seine IP-Adresse meist selbst. Auf einem Rechner mit mehreren Adressen müssen Sie unter Umständen festlegen, auf welcher Adresse er lauscht und welche er in die Zugangsschlüssel einträgt.",
   "auto_title": "So ermittelt der Server seine Adresse",
   "auto_listen": "Standardmäßig lauscht der Server auf allen Adressen des Systems auf TCP-Port <code>[server_port]</code>.",
   "auto_keys": "Für die Schlüssel ermittelt er seine Adresse über den eigenen ausgehenden Datenverkehr: Ein Webdienst erkennt dabei, von welcher Adresse dieser Datenverkehr stammt.",

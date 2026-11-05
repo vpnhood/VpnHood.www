@@ -2,7 +2,7 @@
   "meta_title": "Erişim Anahtarlarında Sunucunuzun IP Adresini Belirleyin | VpnHood!",
   "meta_description": "VpnHood! MANAGER ile yönetilen ya da tek başına çalışan VpnHood! SERVER'ın dinlediği ve erişim anahtarlarına eklediği IP adresini kolayca seçin.",
   "title": "Sunucunuzun IP adreslerini belirleyin",
-  "lead": "Bir erişim anahtarı, uygulamalara hangi adrese bağlanacaklarını bildirir. Sunucu bunu genellikle otomatik olarak çözer; ancak birden fazla IP adresine sahip bir makinede sunucunun dinlediği adresi ve anahtarlara yazılan adresi manuel olarak ayarlamanız gerekebilir.",
+  "lead": "Sunucu kendi IP adresini genellikle otomatik olarak bulur. Birden fazla adresi olan bir makinede, dinlediği adresi ve erişim anahtarlarına yazdığı adresi ayarlamanız gerekebilir.",
   "auto_title": "Sunucu kendi adresini nasıl bulur?",
   "auto_listen": "Varsayılan olarak sunucu, makinenin tüm adreslerini TCP <code>[server_port]</code> portu üzerinden dinler.",
   "auto_keys": "Anahtarlar için adresini giden trafik üzerinden otomatik bulur: bir web servisine trafiğin hangi adresten geldiğini sorar.",

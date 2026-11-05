@@ -176,10 +176,13 @@
     max-width: 46rem;
 }
 
+// The heading gradient is one line tall and repeats, or a title that wraps fades away over
+// its height and its last line sinks into the page
 .vh-docs-article h1{
     margin-bottom: 1rem;
     font-size: clamp(2rem, 4vw, 2.75rem);
     line-height: 1.2;
+    background-size: 100% 1lh;
 }
 
 .vh-docs-article h2,

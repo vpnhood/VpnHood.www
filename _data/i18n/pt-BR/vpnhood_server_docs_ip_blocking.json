@@ -2,7 +2,7 @@
   "meta_title": "Evite o Bloqueio do IP do Seu Servidor VPN | VpnHood!",
   "meta_description": "IP do servidor bloqueado em poucas horas? Configure um IP exclusivo de saída no VpnHood! SERVER, adicione um certificado confiável ou use um proxy reverso e descubra o que funciona melhor.",
   "title": "Evite o bloqueio do endereço IP do seu servidor",
-  "lead": "Em algumas redes, o endereço IP de um servidor VPN é bloqueado poucas horas após o primeiro uso. Pequenos ajustes tornam seu servidor muito mais difícil de bloquear. Recuse primeiro as sondagens e depois use um segundo IP para o tráfego de saída: isso também ajuda a entender como a rede está identificando seu servidor.",
+  "lead": "Em algumas redes, o endereço IP de um servidor VPN é bloqueado em poucas horas. Para tornar o seu muito mais difícil de bloquear, recuse primeiro as sondagens e depois adicione um segundo endereço IP para o tráfego de saída dele.",
   "why_title": "Como uma rede identifica um servidor VPN",
   "why_connection": "Uma rede pode detectar a própria conexão: pelo padrão de tráfego ou por como o servidor responde a testes. Um certificado autoassinado com um nome fictício também entrega o servidor: o nome é enviado sem criptografia e os testes conseguem ver o certificado. <a href=\"#domain\">Um certificado confiável</a> faz a conexão parecer um acesso a um site comum.",
   "why_traffic": "Ou pode monitorar o destino do tráfego. Certos países usam sistemas de reputação: quando muitos acessos a bancos, serviços públicos e outros sites locais vêm de um mesmo IP estrangeiro, ele pode ser classificado como VPN ou proxy e bloqueado. Os sites nem precisam ser locais: censores podem manter servidores no exterior só para monitorar quais conexões chegam até eles.",

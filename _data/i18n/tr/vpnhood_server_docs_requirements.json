@@ -2,7 +2,7 @@
   "meta_title": "VpnHood! SERVER Sistem Gereksinimleri | VpnHood!",
   "meta_description": "VpnHood! SERVER'ın çalıştığı Linux dağıtımları ve Windows sürümleri, ihtiyaç duyduğu işlemci ve ağının gereksinimleri.",
   "title": "Sistem gereksinimleri",
-  "lead": "Bir makinenin VpnHood! SERVER'ı çalıştırmak için ihtiyaç duydukları: aşağıdaki sistemlerden biri, x64 veya ARM64 işlemci ve genel bir IP adresi.",
+  "lead": "VpnHood! SERVER'ı kurmadan önce makinenizi kontrol edin: aşağıdaki sistemlerden biri, x64 veya ARM64 işlemci ve genel bir IP adresi gerekir.",
   "linux_title": "Linux",
   "linux_desc": "Önerilen sistem Linux'tur: sunucu IPv6'yı yalnızca orada IPv4 gibi işler. Sunucu x64 ve ARM64 üzerinde, bu dağıtımlarda ve bunlara dayanan dağıtımlarda çalışır:",
   "th_distribution": "Dağıtım",

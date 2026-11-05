@@ -2,7 +2,7 @@
   "meta_title": "Set Your Server's IP Address in Access Keys | VpnHood!",
   "meta_description": "Choose the IP address VpnHood! SERVER listens on and the one it puts in access keys, on a managed server in VpnHood! MANAGER or on a standalone one.",
   "title": "Set your server's IP addresses",
-  "lead": "An access key tells apps which address to connect to. The server usually works that out by itself, but on a machine with more than one IP address you may need to set it: the address the server listens on, and the address it puts in the keys.",
+  "lead": "The server usually finds its own IP address. On a machine with more than one, you may need to set the address it listens on and the address it puts in access keys.",
   "auto_title": "How the server finds its address",
   "auto_listen": "By default, the server listens on every address of the machine, on TCP port <code>[server_port]</code>.",
   "auto_keys": "For the keys, it looks its address up through its own outgoing traffic: it asks a web service which address that traffic comes from.",

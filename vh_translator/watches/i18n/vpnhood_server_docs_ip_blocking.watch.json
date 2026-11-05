@@ -4,7 +4,7 @@
     "meta_title": "Keep Your VPN Server's IP From Being Blocked | VpnHood!",
     "meta_description": "Server IP blocked within hours? Give VpnHood! SERVER a separate IP for its outgoing traffic, a trusted certificate or a reverse proxy, and see which one you need.",
     "title": "Keep your server's IP address from being blocked",
-    "lead": "On some networks, a VPN server's IP address is blocked within hours of its first use. A few changes make your server much harder to block. Turn away probes first, then add a second IP address for the server's outgoing traffic: it also tells you how the network is finding your server.",
+    "lead": "On some networks, a VPN server's IP address is blocked within hours. To make yours much harder to block, turn away probes first, then add a second IP address for its outgoing traffic.",
     "why_title": "How a network finds a VPN server",
     "why_connection": "A network can recognize the connection itself: the shape of its traffic, or how the server answers a probe. A self-signed certificate with a made-up name gives a server away, too: the name is sent in clear, and a probe sees the certificate. <a href=\"#domain\">A trusted certificate</a> makes a connection look like a visit to an ordinary website.",
     "why_traffic": "Or it can look at where the traffic goes. Some countries may use reputation systems for this: when many people reach local banks, government services and other local sites from the same foreign IP address, that address can be classified as a VPN or a proxy and added to a blocklist. The sites need not be local, either: a censor can run servers of its own abroad and watch which addresses reach them.",

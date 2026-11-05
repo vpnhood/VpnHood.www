@@ -2,7 +2,7 @@
   "meta_title": "VpnHood! SERVER: Systemanforderungen | VpnHood!",
   "meta_description": "Die Linux-Distributionen und Windows-Versionen, auf denen VpnHood! SERVER läuft, der Prozessor, den er braucht, und was sein Netzwerk braucht.",
   "title": "Systemanforderungen",
-  "lead": "Was ein Rechner für VpnHood! SERVER braucht: eines der Systeme unten, einen x64- oder ARM64-Prozessor und eine öffentliche IP-Adresse.",
+  "lead": "Prüfen Sie Ihren Rechner, bevor Sie VpnHood! SERVER installieren: Er braucht eines der Systeme unten, einen x64- oder ARM64-Prozessor und eine öffentliche IP-Adresse.",
   "linux_title": "Linux",
   "linux_desc": "Linux ist das empfohlene System: Nur dort behandelt der Server IPv6 wie IPv4. Der Server läuft auf x64 und ARM64, auf diesen Distributionen und den darauf aufbauenden:",
   "th_distribution": "Distribution",

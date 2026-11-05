@@ -2,7 +2,7 @@
   "meta_title": "Définir l'adresse IP du serveur dans les clés d'accès | VpnHood!",
   "meta_description": "Configurez l'adresse IP d'écoute et celle intégrée aux clés d'accès pour VpnHood! SERVER, via VpnHood! MANAGER ou en mode autonome.",
   "title": "Définir les adresses IP de votre serveur",
-  "lead": "Une clé d'accès indique aux applications à quelle adresse se connecter. Le serveur la détermine en général automatiquement, mais sur une machine dotée de plusieurs adresses IP, vous devez parfois la définir manuellement : l'adresse sur laquelle le serveur écoute et celle qu'il inclut dans les clés.",
+  "lead": "Le serveur trouve en général sa propre adresse IP. Sur une machine qui en a plusieurs, vous devrez peut-être définir l'adresse sur laquelle il écoute et celle qu'il inclut dans les clés d'accès.",
   "auto_title": "Comment le serveur détecte son adresse",
   "auto_listen": "Par défaut, le serveur écoute sur toutes les adresses de la machine, sur le port TCP <code>[server_port]</code>.",
   "auto_keys": "Pour générer les clés, il détecte son adresse via son propre trafic sortant en interrogeant un service web.",

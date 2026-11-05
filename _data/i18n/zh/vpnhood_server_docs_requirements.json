@@ -2,7 +2,7 @@
   "meta_title": "VpnHood! SERVER 系统要求 | VpnHood!",
   "meta_description": "VpnHood! SERVER 支持的 Linux 发行版和 Windows 版本、所需的处理器以及网络要求。",
   "title": "系统要求",
-  "lead": "运行 VpnHood! SERVER 的机器需要：下列系统之一、x64 或 ARM64 处理器，以及一个公网 IP 地址。",
+  "lead": "安装 VpnHood! SERVER 之前，请先检查您的机器：需要下列系统之一、x64 或 ARM64 处理器，以及一个公网 IP 地址。",
   "linux_title": "Linux",
   "linux_desc": "推荐使用 Linux：只有在 Linux 上，服务器才能像处理 IPv4 一样处理 IPv6。服务器可在 x64 和 ARM64 上运行，支持以下发行版及基于它们的发行版：",
   "th_distribution": "发行版",

@@ -2,7 +2,7 @@
   "meta_title": "Configura la dirección IP de tu servidor en las claves de acceso | VpnHood!",
   "meta_description": "Elige la dirección IP en la que escucha VpnHood! SERVER y la que incluye en las claves de acceso, ya sea en un servidor administrado con VpnHood! MANAGER o independiente.",
   "title": "Configura las direcciones IP de tu servidor",
-  "lead": "Una clave de acceso indica a las aplicaciones a qué dirección conectarse. Normalmente el servidor la detecta de forma automática, pero si el equipo tiene varias direcciones IP, es posible que debas definirla: tanto la dirección en la que escucha el servidor como la que añade a las claves.",
+  "lead": "Normalmente el servidor detecta su propia dirección IP. Si el equipo tiene más de una, es posible que debas definir la dirección en la que escucha y la que añade a las claves de acceso.",
   "auto_title": "Cómo detecta el servidor su dirección",
   "auto_listen": "Por defecto, el servidor escucha en todas las direcciones del equipo mediante el puerto TCP <code>[server_port]</code>.",
   "auto_keys": "Para las claves, detecta su dirección a través de su propio tráfico saliente: consulta a un servicio web desde qué dirección proviene.",
