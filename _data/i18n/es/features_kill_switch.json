@@ -6,7 +6,7 @@
   "lead": "Bloquea automáticamente la conexión a internet si la VPN se desconecta.",
   "shot_alt": "Pantalla de Kill Switch en la aplicación VpnHood!",
   "platforms_label": "Disponible en",
-  "platforms": "Android y Linux. En Android depende de un ajuste del sistema; en Linux es propio de la aplicación y puede mantener el bloqueo después de desconectarte.",
+  "platforms": "Android, Windows y Linux. En Android depende de un ajuste del sistema; en Windows y Linux es propio de la aplicación y puede mantener el bloqueo después de desconectarte, y en VpnHood! CONNECT requiere Premium.",
   "cta": "Obtener VpnHood! CONNECT",
   "all_features": "Todas las funciones",
   "how_title": "Cómo funciona",
@@ -15,7 +15,7 @@
   "when_desc": "Mantenlo activado siempre que evitar una filtración accidental sea más importante que seguir online.",
   "cost_title": "Qué debes tener en cuenta",
   "cost_desc": "Si la VPN se desconecta, te quedarás sin conexión hasta que vuelva. Los portales de inicio de sesión de redes Wi-Fi tampoco cargarán, por lo que en hoteles o aeropuertos quizá debas desactivarlo un momento.",
-  "pair_title": "Requiere Siempre encendido",
-  "pair_desc": "Android incluye el Kill Switch dentro del ajuste de VPN siempre activa, por lo que ambos se activan juntos y funcionan en equipo. La función Siempre encendido restablece el túnel tras un reinicio o un cambio de red; el Kill Switch retiene tu tráfico hasta que el túnel vuelva de verdad. Sin él, las aplicaciones pueden enviar algunas solicitudes en los segundos previos a que la VPN se active.",
+  "pair_title": "En Android requiere Siempre encendido",
+  "pair_desc": "Android incluye el Kill Switch dentro del ajuste de VPN siempre activa, por lo que ambos se activan juntos y funcionan en equipo. La función Siempre encendido restablece el túnel tras un reinicio o un cambio de red; el Kill Switch retiene tu tráfico hasta que el túnel vuelva de verdad. Sin él, las aplicaciones pueden enviar algunas solicitudes en los segundos previos a que la VPN se active. En Windows y Linux funciona sin Siempre encendido, y el bloqueo se mantiene hasta que vuelvas a conectarte.",
   "pair_link": "Más información sobre Siempre encendido"
 }

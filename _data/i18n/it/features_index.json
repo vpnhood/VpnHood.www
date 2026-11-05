@@ -29,7 +29,7 @@
   "private_dns_plat": "Android; DNS scheda su tutte le piattaforme",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "Blocca la connessione Internet se la VPN si disconnette, impedendo qualsiasi fuga di dati.",
-  "kill_switch_plat": "Android e Linux",
+  "kill_switch_plat": "Android, Windows e Linux",
   "always_on_title": "Always On",
   "always_on_short": "Mantiene il dispositivo sempre connesso alla VPN, anche dopo riavvii o cambi di rete.",
   "always_on_plat": "Android, Windows e Linux",

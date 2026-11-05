@@ -6,7 +6,7 @@
   "lead": "Bloque automatiquement la connexion Internet en cas de déconnexion du VPN.",
   "shot_alt": "Écran du Kill Switch dans l'application VpnHood!",
   "platforms_label": "Disponible sur",
-  "platforms": "Android et Linux. Sur Android, il s'appuie sur un paramètre système ; sur Linux, c'est une fonction propre à l'application, qui peut maintenir le blocage après la déconnexion.",
+  "platforms": "Android, Windows et Linux. Sur Android, il s'appuie sur un paramètre système ; sur Windows et Linux, c'est une fonction propre à l'application, qui peut maintenir le blocage après la déconnexion et nécessite Premium sur VpnHood! CONNECT.",
   "cta": "Obtenir VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "how_title": "Comment ça marche",
@@ -15,7 +15,7 @@
   "when_desc": "Activez-le dès que la protection absolue de vos données passe avant le maintien de la connexion.",
   "cost_title": "Les inconvénients",
   "cost_desc": "En cas de coupure du VPN, vous perdez Internet jusqu'à sa reconnexion. Les portails de connexion Wi-Fi (hôtels, aéroports) peuvent aussi être bloqués : désactivez-le temporairement pour vous identifier.",
-  "pair_title": "Nécessite l'option Toujours actif",
-  "pair_desc": "Android place le Kill Switch sous le paramètre « VPN permanent » : les deux s'activent donc ensemble et fonctionnent en tandem. L'option Toujours actif rétablit le tunnel après un redémarrage ou un changement de réseau ; le Kill Switch retient votre trafic jusqu'à ce que le tunnel soit réellement rétabli. Sans le Kill Switch, les applications peuvent envoyer quelques requêtes dans les secondes qui précèdent la connexion du VPN.",
+  "pair_title": "Sur Android, nécessite l'option Toujours actif",
+  "pair_desc": "Android place le Kill Switch sous le paramètre « VPN permanent » : les deux s'activent donc ensemble et fonctionnent en tandem. L'option Toujours actif rétablit le tunnel après un redémarrage ou un changement de réseau ; le Kill Switch retient votre trafic jusqu'à ce que le tunnel soit réellement rétabli. Sans le Kill Switch, les applications peuvent envoyer quelques requêtes dans les secondes qui précèdent la connexion du VPN. Sur Windows et Linux, il fonctionne sans l'option Toujours actif, et le blocage reste en place jusqu'à ce que vous vous reconnectiez.",
   "pair_link": "À propos de l'option Toujours actif"
 }

@@ -6,7 +6,7 @@
   "lead": "Bloqueia a internet automaticamente caso a VPN seja desconectada.",
   "shot_alt": "Tela do Kill Switch no aplicativo VpnHood!",
   "platforms_label": "Disponível para",
-  "platforms": "Android e Linux. No Android, depende de uma configuração do sistema; no Linux, é do próprio aplicativo e pode manter o bloqueio depois que você desconectar.",
+  "platforms": "Android, Windows e Linux. No Android, depende de uma configuração do sistema; no Windows e no Linux, é do próprio aplicativo e pode manter o bloqueio depois que você desconectar, e no VpnHood! CONNECT exige Premium.",
   "cta": "Baixar VpnHood! CONNECT",
   "all_features": "Todos os recursos",
   "how_title": "Como funciona",
@@ -15,7 +15,7 @@
   "when_desc": "Mantenha ativado sempre que a sua privacidade e segurança forem prioridade máxima.",
   "cost_title": "O que muda no uso",
   "cost_desc": "Se a VPN cair, você fica sem internet até que ela reconecte. Telas de login de Wi-Fi em hotéis ou aeroportos também podem não carregar, exigindo desativar o recurso por um instante.",
-  "pair_title": "Exige o recurso Sempre ativa",
-  "pair_desc": "O Android inclui o Kill Switch dentro da opção de VPN sempre ativa, funcionando em conjunto. A VPN sempre ativa reconecta após reiniciar ou trocar de rede, e o Kill Switch segura o tráfego até a conexão voltar. Sem ele, os aplicativos poderiam enviar dados desprotegidos nesses poucos segundos.",
+  "pair_title": "No Android, exige o recurso Sempre ativa",
+  "pair_desc": "O Android inclui o Kill Switch dentro da opção de VPN sempre ativa, funcionando em conjunto. A VPN sempre ativa reconecta após reiniciar ou trocar de rede, e o Kill Switch segura o tráfego até a conexão voltar. Sem ele, os aplicativos poderiam enviar dados desprotegidos nesses poucos segundos. No Windows e no Linux, funciona sem o recurso Sempre ativa, e o bloqueio continua até você se reconectar.",
   "pair_link": "Sobre VPN sempre ativa"
 }

@@ -6,7 +6,7 @@
   "lead": "Trennt die Internetverbindung automatisch, sobald das VPN abreißt.",
   "shot_alt": "Der Kill Switch-Bereich in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
-  "platforms": "Android und Linux. Unter Android nutzt er eine Systemeinstellung; unter Linux ist er eine eigene Funktion der App und kann die Sperre auch nach dem Trennen der Verbindung aufrechterhalten.",
+  "platforms": "Android, Windows und Linux. Unter Android nutzt er eine Systemeinstellung; unter Windows und Linux ist er eine eigene Funktion der App und kann die Sperre auch nach dem Trennen der Verbindung aufrechterhalten, und bei VpnHood! CONNECT erfordert er Premium.",
   "cta": "VpnHood! CONNECT herunterladen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",
@@ -15,7 +15,7 @@
   "when_desc": "Immer dann aktivieren, wenn der Schutz Ihrer Daten wichtiger ist als eine unterbrechungsfreie Verbindung.",
   "cost_title": "Was Sie beachten sollten",
   "cost_desc": "Bricht das VPN ab, sind Sie offline, bis die Verbindung wieder steht. Auch WLAN-Anmeldeseiten in Hotels oder Flughäfen laden dann meist nicht – hier muss der Kill Switch eventuell kurz ausgeschaltet werden.",
-  "pair_title": "Erfordert „Immer an“",
-  "pair_desc": "Bei Android liegt der Kill Switch unter der Einstellung „Durchgehend aktives VPN“, daher werden beide zusammen eingeschaltet und arbeiten als Paar. „Immer an“ stellt den Tunnel nach einem Neustart oder Netzwechsel wieder her; der Kill Switch hält Ihren Datenverkehr zurück, bis der Tunnel tatsächlich wieder steht. Ohne Kill Switch können Apps in den Sekunden, bevor das VPN steht, noch einige Anfragen senden.",
+  "pair_title": "Unter Android erfordert er „Immer an“",
+  "pair_desc": "Bei Android liegt der Kill Switch unter der Einstellung „Durchgehend aktives VPN“, daher werden beide zusammen eingeschaltet und arbeiten als Paar. „Immer an“ stellt den Tunnel nach einem Neustart oder Netzwechsel wieder her; der Kill Switch hält Ihren Datenverkehr zurück, bis der Tunnel tatsächlich wieder steht. Ohne Kill Switch können Apps in den Sekunden, bevor das VPN steht, noch einige Anfragen senden. Unter Windows und Linux funktioniert er ohne „Immer an“, und die Sperre bleibt bestehen, bis die Verbindung von Hand wiederhergestellt wird.",
   "pair_link": "Mehr über „Immer an“"
 }

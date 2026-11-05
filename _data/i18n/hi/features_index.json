@@ -29,7 +29,7 @@
   "private_dns_plat": "Android; एडॉप्टर DNS हर जगह",
   "kill_switch_title": "किल स्विच",
   "kill_switch_short": "VPN कनेक्शन कटने पर इंटरनेट ब्लॉक कर देता है, ताकि डेटा लीक न हो।",
-  "kill_switch_plat": "Android और Linux पर",
+  "kill_switch_plat": "Android, Windows और Linux पर",
   "always_on_title": "हमेशा चालू",
   "always_on_short": "डिवाइस रीस्टार्ट होने या नेटवर्क बदलने पर भी VPN कनेक्शन बनाए रखता है।",
   "always_on_plat": "Android, Windows और Linux पर",

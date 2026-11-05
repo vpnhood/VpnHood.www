@@ -6,7 +6,7 @@
   "lead": "VPN 断开时自动切断网络连接。",
   "shot_alt": "VpnHood! 应用中的断网保护界面",
   "platforms_label": "支持平台",
-  "platforms": "Android 和 Linux。在 Android 上，该功能依赖系统设置；在 Linux 上，它是应用自带的功能，并可在您断开连接后继续阻断流量。",
+  "platforms": "Android、Windows 和 Linux。在 Android 上，该功能依赖系统设置；在 Windows 和 Linux 上，它是应用自带的功能，可在您断开连接后继续阻断流量，在 VpnHood! CONNECT 上需要高级版。",
   "cta": "获取 VpnHood! CONNECT",
   "all_features": "所有功能",
   "how_title": "工作原理",
@@ -15,7 +15,7 @@
   "when_desc": "只要您认为隐私安全比保持持续连线更重要，就建议始终保持开启。",
   "cost_title": "可能带来的影响",
   "cost_desc": "当 VPN 断开时，您将无法上网，直到连接恢复。此外，公共 Wi-Fi 的登录验证页面可能也无法正常加载，在酒店或机场连接网络时可能需要暂时关闭几分钟。",
-  "pair_title": "需要配合“始终开启的 VPN”使用",
-  "pair_desc": "Android 将断网保护置于“始终开启的 VPN”设置项下，二者需要配合开启。始终开启功能可在重启或切换网络后自动重连隧道，而断网保护则在隧道重新建立前切断所有流量。如果不开启，在 VPN 连上的前几秒内，应用可能会发出未经保护的请求。",
+  "pair_title": "在 Android 上需要配合“始终开启的 VPN”使用",
+  "pair_desc": "Android 将断网保护置于“始终开启的 VPN”设置项下，二者需要配合开启。始终开启功能可在重启或切换网络后自动重连隧道，而断网保护则在隧道重新建立前切断所有流量。如果不开启，在 VPN 连上的前几秒内，应用可能会发出未经保护的请求。在 Windows 和 Linux 上，无需“始终开启的 VPN”也能使用，阻断会一直持续到您重新连接。",
   "pair_link": "了解“始终开启的 VPN”"
 }

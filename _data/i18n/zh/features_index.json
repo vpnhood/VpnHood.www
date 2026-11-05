@@ -29,7 +29,7 @@
   "private_dns_plat": "Android；适配器 DNS 支持全平台",
   "kill_switch_title": "断网保护",
   "kill_switch_short": "VPN 断开时自动切断网络连接，防止数据意外泄露。",
-  "kill_switch_plat": "Android 和 Linux",
+  "kill_switch_plat": "Android、Windows 和 Linux",
   "always_on_title": "始终开启",
   "always_on_short": "即使重启设备或切换网络，也能保持 VPN 持续在线连接。",
   "always_on_plat": "Android、Windows 和 Linux",

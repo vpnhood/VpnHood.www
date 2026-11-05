@@ -29,7 +29,7 @@
   "private_dns_plat": "Android؛ Adapter DNS در همه‌جا",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "در صورت قطع ناگهانی VPN اینترنت را مسدود می‌کند تا از نشت اطلاعات جلوگیری شود.",
-  "kill_switch_plat": "Android و Linux",
+  "kill_switch_plat": "Android، Windows و Linux",
   "always_on_title": "همیشه روشن",
   "always_on_short": "اتصال دستگاه به VPN را حتی بعد از ری‌استارت یا تغییر شبکه، پیوسته حفظ می‌کند.",
   "always_on_plat": "Android، Windows و Linux",

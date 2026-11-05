@@ -29,7 +29,7 @@
   "private_dns_plat": "Android; Bağdaştırıcı DNS tüm platformlarda",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "VPN bağlantısı kesilirse internet erişimini durdurur, böylece hiçbir veri sızmaz.",
-  "kill_switch_plat": "Android ve Linux",
+  "kill_switch_plat": "Android, Windows ve Linux",
   "always_on_title": "Her Zaman Açık",
   "always_on_short": "Cihazı yeniden başlatmalarda ve ağ değişikliklerinde bile VPN'e bağlı tutar.",
   "always_on_plat": "Android, Windows ve Linux",

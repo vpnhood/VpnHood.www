@@ -6,7 +6,7 @@
   "lead": "VPN bağlantısı kesildiğinde internet erişimini otomatik olarak engeller.",
   "shot_alt": "VpnHood! uygulamasındaki Kill Switch ekranı",
   "platforms_label": "Desteklenen platformlar",
-  "platforms": "Android ve Linux. Android'de bir sistem ayarını kullanır; Linux'ta ise uygulamanın kendi ayarıdır ve bağlantıyı kestikten sonra da engeli sürdürebilir.",
+  "platforms": "Android, Windows ve Linux. Android'de bir sistem ayarını kullanır; Windows ve Linux'ta ise uygulamanın kendi ayarıdır ve bağlantıyı kestikten sonra da engeli sürdürebilir, VpnHood! CONNECT'te ise Premium gerektirir.",
   "cta": "VpnHood! CONNECT'i Edinin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",
@@ -15,7 +15,7 @@
   "when_desc": "Bir anlık bile olsa korumasız kalmak sizin için çevrim içi kalmaktan daha önemliyse bu özelliği açık bırakın.",
   "cost_title": "Neleri etkiler?",
   "cost_desc": "VPN kesildiğinde yeniden bağlanana kadar internet erişiminiz durur. Otel veya havalimanlarındaki Wi-Fi giriş sayfaları da açılmayabilir; bu tür ağlara bağlanırken özelliği geçici olarak kapatmanız gerekebilir.",
-  "pair_title": "\"Her Zaman Açık\" gerektirir",
-  "pair_desc": "Android, Kill Switch'i her zaman açık VPN ayarının altına yerleştirir; bu yüzden ikisi birlikte açılır ve uyum içinde çalışır. Her Zaman Açık özelliği, cihaz yeniden başladığında veya ağ değiştiğinde bağlantıyı tekrar kurar; Kill Switch ise bağlantı sağlanana kadar trafiği durdurur. Bu olmadan, VPN açılana kadarki birkaç saniyede uygulamalar korumasız veri gönderebilir.",
+  "pair_title": "Android'de \"Her Zaman Açık\" gerektirir",
+  "pair_desc": "Android, Kill Switch'i her zaman açık VPN ayarının altına yerleştirir; bu yüzden ikisi birlikte açılır ve uyum içinde çalışır. Her Zaman Açık özelliği, cihaz yeniden başladığında veya ağ değiştiğinde bağlantıyı tekrar kurar; Kill Switch ise bağlantı sağlanana kadar trafiği durdurur. Bu olmadan, VPN açılana kadarki birkaç saniyede uygulamalar korumasız veri gönderebilir. Windows ve Linux'ta \"Her Zaman Açık\" olmadan da çalışır ve engel yeniden bağlanılana kadar sürer.",
   "pair_link": "Her Zaman Açık Hakkında"
 }

@@ -29,7 +29,7 @@
   "private_dns_plat": "Android; Adapter-DNS überall",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "Sperrt die Internetverbindung bei VPN-Abbrüchen, damit keine Daten ungeschützt übertragen werden.",
-  "kill_switch_plat": "Android und Linux",
+  "kill_switch_plat": "Android, Windows und Linux",
   "always_on_title": "Immer an",
   "always_on_short": "Hält das Gerät dauerhaft mit dem VPN verbunden – auch nach Neustarts und Netzwerkwechseln.",
   "always_on_plat": "Android, Windows und Linux",

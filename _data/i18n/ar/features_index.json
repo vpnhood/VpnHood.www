@@ -29,7 +29,7 @@
   "private_dns_plat": "على Android؛ وخادم DNS المحول في كل الأنظمة",
   "kill_switch_title": "Kill Switch",
   "kill_switch_short": "يقطع الاتصال بالإنترنت فور انقطاع الـ VPN لمنع أي تسريب للبيانات.",
-  "kill_switch_plat": "على Android وLinux",
+  "kill_switch_plat": "على Android وWindows وLinux",
   "always_on_title": "دائمًا متصل",
   "always_on_short": "يبقي جهازك متصلاً بالـ VPN حتى بعد إعادة التشغيل أو تغيير الشبكة.",
   "always_on_plat": "على Android وWindows وLinux",

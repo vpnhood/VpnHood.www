@@ -6,7 +6,7 @@
   "lead": "Automatically blocks the internet connection if the VPN disconnects.",
   "shot_alt": "The Kill Switch screen in the VpnHood! app",
   "platforms_label": "Available on",
-  "platforms": "Android and Linux. On Android it relies on a system setting; on Linux it is the app's own, and can keep the block after you disconnect.",
+  "platforms": "Android, Windows and Linux. On Android it relies on a system setting; on Windows and Linux it is the app's own and can keep the block after you disconnect, and on VpnHood! CONNECT it needs Premium.",
   "cta": "Get VpnHood! CONNECT",
   "all_features": "All features",
   "how_title": "How it works",
@@ -15,7 +15,7 @@
   "when_desc": "Leave it on whenever an accidental unprotected moment matters more to you than staying online.",
   "cost_title": "What it costs you",
   "cost_desc": "When the VPN drops you lose connectivity until it is back. Wi-Fi sign-in pages may not load either, so a hotel or airport network can need the switch off for a minute.",
-  "pair_title": "It needs Always On",
-  "pair_desc": "Android puts the kill switch underneath the always-on VPN setting, so the two are turned on together and work as a pair. Always On brings the tunnel back after a reboot or a change of network; the kill switch holds your traffic until it is actually back. Without it, apps can send a few requests in the seconds before the VPN is up.",
+  "pair_title": "On Android, it needs Always On",
+  "pair_desc": "Android puts the kill switch underneath the always-on VPN setting, so the two are turned on together and work as a pair. Always On brings the tunnel back after a reboot or a change of network; the kill switch holds your traffic until it is actually back. Without it, apps can send a few requests in the seconds before the VPN is up. On Windows and Linux it works without Always On, and the block waits for you to reconnect.",
   "pair_link": "About Always On"
 }
