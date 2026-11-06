@@ -51,7 +51,9 @@
     font-weight: 500;
 }
 #banner h1{
-    font-size: 55px;
+    // Follows the screen on a phone: at 55px the title's longest word is wider than
+    // the screen (English "Undetectable", German's is longer still) and a word never wraps.
+    font-size: clamp(2rem, 11.5vw, 55px);
 }
 #banner h2{
     font-size: 35px;
