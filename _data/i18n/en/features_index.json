@@ -35,5 +35,7 @@
   "always_on_plat": "Android, Windows and Linux",
   "quick_launch_title": "Quick Launch",
   "quick_launch_short": "Connect from the Android quick settings panel with a single tap.",
-  "quick_launch_plat": "Android only"
+  "quick_launch_plat": "Android only",
+  "end_title": "Ready to try it?",
+  "end_desc": "Get the app for your phone or computer."
 }

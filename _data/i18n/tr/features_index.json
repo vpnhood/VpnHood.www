@@ -35,5 +35,7 @@
   "always_on_plat": "Android, Windows ve Linux",
   "quick_launch_title": "Hızlı Başlat",
   "quick_launch_short": "Android hızlı ayarlar panelinden tek dokunuşla bağlanın.",
-  "quick_launch_plat": "Yalnızca Android"
+  "quick_launch_plat": "Yalnızca Android",
+  "end_title": "Denemeye hazır mısınız?",
+  "end_desc": "Telefonunuz veya bilgisayarınız için uygulamayı edinin."
 }

@@ -21,10 +21,20 @@
   "diagram_on_sub": "Una solicitud por conexión",
   "diagram_on_result": "Parece navegación web",
   "diagram_caption": "El Modo Camuflaje cambia lo que ve un filtro",
-  "how_title": "Cómo funciona",
-  "how_desc": "La mayoría de los protocolos VPN son fáciles de detectar. La inspección profunda de paquetes analiza la forma del tráfico, reconoce el protocolo al instante y la red que busca bloquear las VPN simplemente lo corta. El Modo Camuflaje camufla el túnel para que parezca tráfico web cifrado habitual, sin dejar ningún patrón reconocible para los filtros. Oculta el tipo de tráfico, no su destino, por lo que un servidor aún puede ser bloqueado por su dirección IP. Si tienes tu propio servidor, descubre <a href=\"/vpnhood-server/docs/ip-blocking/\">cómo evitar que bloqueen su IP</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">Cómo resiste VpnHood la detección de VPN</a> lo explica con más detalle.",
+  "how_desc": "La mayor parte del tráfico VPN tiene una forma que un filtro de red puede reconocer y bloquear. El Modo Camuflaje hace que parezca tráfico web normal, y deja poco que un filtro pueda reconocer. Oculta el tipo de tráfico, no su destino.",
   "when_title": "Cuándo activarlo",
   "when_desc": "Actívalo cuando una red restrinja las VPN de forma activa: cortafuegos de centros educativos o empresas, redes wifi de hoteles y aeropuertos, o censura nacional. En la conexión de tu casa, donde nada está bloqueado, no lo necesitas.",
   "cost_title": "Qué implica usarlo",
-  "cost_desc": "El tráfico camuflado requiere más procesamiento, por lo que la velocidad puede disminuir ligeramente y consumir algo más de batería. Esa es la compensación: máxima velocidad cuando no hay restricciones, y una conexión que sigue funcionando cuando sí las hay."
+  "cost_desc": "El tráfico camuflado requiere más procesamiento, por lo que la velocidad puede disminuir ligeramente y consumir algo más de batería. Esa es la compensación: máxima velocidad cuando no hay restricciones, y una conexión que sigue funcionando cuando sí las hay.",
+  "steps_title": "Cómo activarlo",
+  "step1_title": "Abre Protocolo",
+  "step1_desc": "Está en la pantalla de inicio de la aplicación.",
+  "step2_title": "Activa el Modo Camuflaje",
+  "step2_desc": "Es el primer interruptor de la pantalla Protocolos.",
+  "step3_title": "Comprueba que está activado",
+  "step3_desc": "De vuelta en la pantalla de inicio, aparece Camuflaje junto a Protocolo.",
+  "steps_shot_alt": "Pantalla de inicio de la aplicación VpnHood!, con Camuflaje junto a Protocolo",
+  "more_title": "Sigue leyendo",
+  "more_detect_desc": "Qué delata una VPN, qué cambia el Modo Camuflaje y qué no puede ocultar.",
+  "more_ip_desc": "Para tu propio servidor: qué hacer cuando una red bloquea su dirección."
 }

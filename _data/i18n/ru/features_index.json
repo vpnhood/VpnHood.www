@@ -35,5 +35,7 @@
   "always_on_plat": "Android, Windows и Linux",
   "quick_launch_title": "Быстрый запуск",
   "quick_launch_short": "Подключайтесь в одно касание прямо из панели быстрых настроек Android.",
-  "quick_launch_plat": "Только Android"
+  "quick_launch_plat": "Только Android",
+  "end_title": "Готовы попробовать?",
+  "end_desc": "Скачайте приложение для телефона или компьютера."
 }

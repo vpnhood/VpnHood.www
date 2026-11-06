@@ -35,5 +35,7 @@
   "always_on_plat": "Android, Windows et Linux",
   "quick_launch_title": "Lancement rapide",
   "quick_launch_short": "Connectez-vous d'un simple geste depuis le volet des réglages rapides d'Android.",
-  "quick_launch_plat": "Android uniquement"
+  "quick_launch_plat": "Android uniquement",
+  "end_title": "Envie d'essayer ?",
+  "end_desc": "Téléchargez l'application pour votre téléphone ou votre ordinateur."
 }

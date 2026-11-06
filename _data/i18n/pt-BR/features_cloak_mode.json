@@ -21,10 +21,20 @@
   "diagram_on_sub": "Uma solicitação por conexão",
   "diagram_on_result": "Parece navegação na web",
   "diagram_caption": "O Modo invisível muda o que um filtro vê",
-  "how_title": "Como funciona",
-  "how_desc": "A maioria dos protocolos de VPN se revela facilmente. A inspeção profunda de pacotes (DPI) analisa o formato do tráfego e reconhece o protocolo de imediato, e uma rede que quer bloquear VPNs simplesmente descarta esse tráfego. O Modo invisível envolve o túnel para que ele pareça tráfego web criptografado comum, sem deixar nada familiar para um filtro reconhecer. Ele oculta o que o tráfego é, não para onde ele vai; por isso, um servidor ainda pode ser bloqueado pelo endereço IP. Se você tem seu próprio servidor, veja <a href=\"/vpnhood-server/docs/ip-blocking/\">como evitar que o IP dele seja bloqueado</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">Como o VpnHood resiste à detecção de VPN</a> explica isso com mais detalhes.",
+  "how_desc": "A maior parte do tráfego de VPN tem um formato que um filtro de rede consegue reconhecer e descartar. O Modo invisível faz com que ele pareça tráfego web comum, deixando pouco para um filtro reconhecer. Ele oculta o que é o tráfego, não para onde ele vai.",
   "when_title": "Quando ativar",
   "when_desc": "Ative quando a rede bloquear VPNs ativamente: em firewalls de escolas ou empresas, redes Wi-Fi de hotéis e aeroportos ou em filtros nacionais de censura. Na sua conexão doméstica, sem bloqueios, você não precisa dele.",
   "cost_title": "Qual é o impacto?",
-  "cost_desc": "O tráfego camuflado exige mais processamento, o que pode reduzir um pouco a velocidade e consumir um pouco mais de bateria. É uma escolha simples: velocidade máxima quando não há bloqueios e conexão garantida quando há restrições."
+  "cost_desc": "O tráfego camuflado exige mais processamento, o que pode reduzir um pouco a velocidade e consumir um pouco mais de bateria. É uma escolha simples: velocidade máxima quando não há bloqueios e conexão garantida quando há restrições.",
+  "steps_title": "Como ativar",
+  "step1_title": "Abra Protocolo",
+  "step1_desc": "Ele fica na tela inicial do aplicativo.",
+  "step2_title": "Ative o Modo invisível",
+  "step2_desc": "É a primeira chave da tela Protocolos.",
+  "step3_title": "Confira se está ativado",
+  "step3_desc": "De volta à tela inicial, Invisível aparece ao lado de Protocolo.",
+  "steps_shot_alt": "A tela inicial do aplicativo VpnHood!, com Invisível ao lado de Protocolo",
+  "more_title": "Continue lendo",
+  "more_detect_desc": "O que denuncia uma VPN, o que o Modo invisível muda e o que ele não consegue esconder.",
+  "more_ip_desc": "Para o seu próprio servidor: o que fazer quando uma rede bloqueia o endereço dele."
 }

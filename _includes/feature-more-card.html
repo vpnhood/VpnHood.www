@@ -1,0 +1,13 @@
+{%- comment -%}
+  One card of a feature page's Keep reading row: an icon, a title that is the link, and a line of
+  text. Give href without the language, as this adds it.
+
+    {% include feature-more-card.html icon="protocols" href="/features/protocols/" title=x text=y delay="100" %}
+{%- endcomment -%}
+<li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ include.delay | default: 0 }}">
+  <div class="vh-card-dark vh-feature-panel vh-feature-card h-100">
+    <span class="vh-feature-icon">{% include icons/{{ include.icon }}.svg %}</span>
+    <h3 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}{{ include.href }}">{{ include.title }}</a></h3>
+    <p class="mb-0">{{ include.text }}</p>
+  </div>
+</li>

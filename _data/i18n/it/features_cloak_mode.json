@@ -21,10 +21,20 @@
   "diagram_on_sub": "Una richiesta per connessione",
   "diagram_on_result": "Sembra navigazione web",
   "diagram_caption": "La Modalità camuffamento cambia ciò che vede un filtro",
-  "how_title": "Come funziona",
-  "how_desc": "La maggior parte dei protocolli VPN si fa riconoscere subito. La Deep Packet Inspection ne analizza il traffico, identifica il protocollo all'istante e le reti che bloccano le VPN lo interrompono. La Modalità camuffamento camuffa il tunnel facendolo apparire come normale traffico web crittografato, senza lasciare ai filtri nulla di familiare da riconoscere. Nasconde la natura del traffico, non la destinazione, quindi un server può comunque essere bloccato tramite il suo indirizzo IP. Se gestisci un server tuo, scopri <a href=\"/vpnhood-server/docs/ip-blocking/\">come evitare che il suo IP venga bloccato</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">Come VpnHood resiste al rilevamento delle VPN</a> lo spiega più nel dettaglio.",
+  "how_desc": "La maggior parte del traffico VPN ha una forma che un filtro di rete può riconoscere e bloccare. La Modalità camuffamento lo fa sembrare normale traffico web, lasciando a un filtro poco da riconoscere. Nasconde la natura del traffico, non la destinazione.",
   "when_title": "Quando attivarla",
   "when_desc": "Attivala sulle reti che bloccano attivamente le VPN: firewall scolastici o aziendali, Wi-Fi di hotel e aeroporti, oppure censure statali. Sulla rete di casa senza restrizioni non è necessaria.",
   "cost_title": "Cosa comporta",
-  "cost_desc": "Il traffico mascherato richiede più risorse rispetto a un tunnel diretto, quindi può risultare leggermente più lento e consumare un po' più di batteria. È un compromesso: massima velocità quando la rete è libera, connessione garantita quando ci sono blocchi."
+  "cost_desc": "Il traffico mascherato richiede più risorse rispetto a un tunnel diretto, quindi può risultare leggermente più lento e consumare un po' più di batteria. È un compromesso: massima velocità quando la rete è libera, connessione garantita quando ci sono blocchi.",
+  "steps_title": "Come attivarla",
+  "step1_title": "Apri Protocollo",
+  "step1_desc": "Lo trovi nella schermata principale dell'app.",
+  "step2_title": "Attiva la Modalità camuffamento",
+  "step2_desc": "È il primo interruttore della schermata Protocolli.",
+  "step3_title": "Controlla che sia attiva",
+  "step3_desc": "Tornando alla schermata principale, accanto a Protocollo compare Camuffamento.",
+  "steps_shot_alt": "La schermata principale dell'app VpnHood!, con Camuffamento accanto a Protocollo",
+  "more_title": "Continua a leggere",
+  "more_detect_desc": "Cosa tradisce una VPN, cosa cambia la Modalità camuffamento e cosa non può nascondere.",
+  "more_ip_desc": "Per il tuo server: cosa fare quando una rete ne blocca l'indirizzo."
 }

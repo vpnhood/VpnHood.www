@@ -21,10 +21,20 @@
   "diagram_on_sub": "One request per connection",
   "diagram_on_result": "Looks like web browsing",
   "diagram_caption": "Cloak Mode changes what a filter sees",
-  "how_title": "How it works",
-  "how_desc": "Most VPN protocols announce themselves. Deep packet inspection reads the shape of the traffic, recognizes the protocol on sight, and a network that wants to block VPNs simply drops it. Cloak Mode wraps the tunnel so it looks like ordinary encrypted web traffic, leaving nothing familiar for a filter to match against. It hides what the traffic is, not where it goes, so a server can still be blocked by its IP address. If you run your own, see <a href=\"/vpnhood-server/docs/ip-blocking/\">how to keep its IP from being blocked</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">How VpnHood resists VPN detection</a> explains this in more detail.",
+  "how_desc": "Most VPN traffic has a shape that a network filter can recognize and drop. Cloak Mode makes it look like ordinary web traffic instead, leaving little for a filter to match. It hides what the traffic is, not where it goes.",
   "when_title": "When to turn it on",
   "when_desc": "Turn it on when a network is actively fighting VPNs: a school or office firewall, hotel and airport Wi-Fi that blocks tunnels, or a national filter. On a home connection that is not blocking anything, you do not need it.",
   "cost_title": "What it costs you",
-  "cost_desc": "Cloaked traffic carries more overhead than a direct tunnel, so it can be a little slower and use slightly more battery. That is the trade: raw speed when nothing is in your way, a connection that still works when something is."
+  "cost_desc": "Cloaked traffic carries more overhead than a direct tunnel, so it can be a little slower and use slightly more battery. That is the trade: raw speed when nothing is in your way, a connection that still works when something is.",
+  "steps_title": "How to turn it on",
+  "step1_title": "Open Protocol",
+  "step1_desc": "You will find it on the app's home screen.",
+  "step2_title": "Turn on Cloak Mode",
+  "step2_desc": "It is the first switch on the Protocols screen.",
+  "step3_title": "Check that it is on",
+  "step3_desc": "Back on the home screen, Cloak appears beside Protocol.",
+  "steps_shot_alt": "The VpnHood! app's home screen, with Cloak beside Protocol",
+  "more_title": "Keep reading",
+  "more_detect_desc": "What gives a VPN away, what Cloak Mode changes, and what it cannot hide.",
+  "more_ip_desc": "For your own server: what to do when a network blocks its address."
 }

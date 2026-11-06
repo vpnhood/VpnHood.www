@@ -21,10 +21,20 @@
   "diagram_on_sub": "Une requête par connexion",
   "diagram_on_result": "Ressemble à une navigation web",
   "diagram_caption": "Le mode furtif change ce que voit un filtre",
-  "how_title": "Comment ça marche",
-  "how_desc": "La plupart des protocoles VPN se signalent d'eux-mêmes. L'inspection approfondie des paquets analyse la forme du trafic et reconnaît le protocole au premier coup d'œil : un réseau qui veut bloquer les VPN n'a plus qu'à le rejeter. Le mode furtif enveloppe le tunnel pour qu'il ressemble à un trafic web chiffré ordinaire, sans rien de familier qu'un filtre puisse reconnaître. Il masque la nature du trafic, mais pas sa destination : un serveur peut donc toujours être bloqué par son adresse IP. Si vous hébergez le vôtre, découvrez <a href=\"/vpnhood-server/docs/ip-blocking/\">comment éviter le blocage de son IP</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">Comment VpnHood résiste à la détection de VPN</a> explique cela plus en détail.",
+  "how_desc": "La plupart du trafic VPN a une forme qu'un filtre réseau peut reconnaître et rejeter. Le mode furtif le fait ressembler à un trafic web ordinaire, et laisse peu de prise à un filtre. Il masque la nature du trafic, mais pas sa destination.",
   "when_title": "Quand l'activer",
   "when_desc": "Activez-le lorsqu'un réseau bloque activement les VPN : pare-feu d'école ou d'entreprise, Wi-Fi d'hôtel ou d'aéroport, ou encore censure nationale. Sur un réseau domestique standard qui ne filtre rien, il est inutile.",
   "cost_title": "L'impact sur votre connexion",
-  "cost_desc": "Le trafic camouflé demande plus de ressources qu'un tunnel direct ; il peut donc réduire légèrement la vitesse et consommer un peu plus de batterie. C'est le compromis idéal : une vitesse brute quand rien ne bloque, et une connexion toujours fonctionnelle face aux restrictions."
+  "cost_desc": "Le trafic camouflé demande plus de ressources qu'un tunnel direct ; il peut donc réduire légèrement la vitesse et consommer un peu plus de batterie. C'est le compromis idéal : une vitesse brute quand rien ne bloque, et une connexion toujours fonctionnelle face aux restrictions.",
+  "steps_title": "Comment l'activer",
+  "step1_title": "Ouvrez Protocole",
+  "step1_desc": "Il se trouve sur l'écran d'accueil de l'application.",
+  "step2_title": "Activez le mode furtif",
+  "step2_desc": "C'est le premier interrupteur de l'écran Protocoles.",
+  "step3_title": "Vérifiez qu'il est activé",
+  "step3_desc": "De retour sur l'écran d'accueil, Furtif s'affiche à côté de Protocole.",
+  "steps_shot_alt": "L'écran d'accueil de l'application VpnHood!, avec Furtif à côté de Protocole",
+  "more_title": "Pour aller plus loin",
+  "more_detect_desc": "Ce qui trahit un VPN, ce que le mode furtif y change et ce qu'il ne peut pas cacher.",
+  "more_ip_desc": "Pour votre propre serveur : que faire quand un réseau bloque son adresse."
 }

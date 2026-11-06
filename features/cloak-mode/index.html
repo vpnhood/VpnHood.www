@@ -47,37 +47,93 @@ extra_css:
                           </div>
                         </div>
 
-                        <figure class="vh-topology d-none d-md-block" data-aos="fade-up">
-                          {% include diagrams/cloak-mode.svg %}
-                        </figure>
-                        <figure class="vh-topology d-md-none" data-aos="fade-up">
-                          {% include diagrams/cloak-mode-tall.svg %}
-                        </figure>
-
-                        <div class="row section-space pt-0 gap-lg-0 gap-5">
-                          <div class="col-lg-4" data-aos="fade-up">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.how_title }}</h2>
-                              <p class="mb-0">{{ t.how_desc | replace: 'href="/', vh_href_lang }}</p>
-                            </div>
+                        <div class="section-space pt-4">
+                          <div class="section-start-text" data-aos="fade-up">
+                            <h2 class="section-title vh-txt-grad-purple-400">{{ t.diagram_title }}</h2>
+                            <p class="section-desc small-width">{{ t.how_desc }}</p>
                           </div>
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
-                              <p class="mb-0">{{ t.when_desc }}</p>
+                          <figure class="vh-topology d-none d-md-block" data-aos="fade-up">
+                            {% include diagrams/cloak-mode.svg %}
+                          </figure>
+                          <figure class="vh-topology d-md-none" data-aos="fade-up">
+                            {% include diagrams/cloak-mode-tall.svg %}
+                          </figure>
+                          <div class="row gap-lg-0 gap-5">
+                            <div class="col-lg-6" data-aos="fade-up">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/toggle.svg %}</span>
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
+                                <p class="mb-0">{{ t.when_desc }}</p>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
-                              <p class="mb-0">{{ t.cost_desc }}</p>
+                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
+                                <p class="mb-0">{{ t.cost_desc }}</p>
+                              </div>
                             </div>
                           </div>
                         </div>
 
-                        <div class="section-space text-center" data-aos="fade-up">
-                          <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
+                        <div class="row section-space align-items-center gap-lg-0 gap-5">
+                          <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
+                            <h2 class="section-title vh-txt-grad-purple-400">{{ t.steps_title }}</h2>
+                            <ol class="list-unstyled vh-timeline mt-4 mb-0">
+                              <li>
+                                <span class="vh-step-num" aria-hidden="true">1</span>
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step1_title }}</h3>
+                                  <p class="mb-0">{{ t.step1_desc }}</p>
+                                </div>
+                              </li>
+                              <li>
+                                <span class="vh-step-num" aria-hidden="true">2</span>
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step2_title }}</h3>
+                                  <p class="mb-0">{{ t.step2_desc }}</p>
+                                </div>
+                              </li>
+                              <li>
+                                <span class="vh-step-num" aria-hidden="true">3</span>
+                                <div>
+                                  <h3 class="h5 mb-2">{{ t.step3_title }}</h3>
+                                  <p class="mb-0">{{ t.step3_desc }}</p>
+                                </div>
+                              </li>
+                            </ol>
+                          </div>
+                          <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="vh-feature-shot vh-feature-shot-detail">
+                              <div class="position-relative">
+                                <img
+                                  src="/assets/images/features/home-app.webp"
+                                  alt="{{ t.steps_shot_alt }}"
+                                  width="840"
+                                  height="1615"
+                                  loading="lazy"
+                                />
+                                <span class="vh-feature-shot-mark" aria-hidden="true"></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+
+                        <div class="section-space pt-0">
+                          <div class="section-start-text" data-aos="fade-up">
+                            <h2 class="section-title vh-txt-grad-purple-400 mb-0">{{ t.more_title }}</h2>
+                          </div>
+                          {%- assign vh_ti = site.data.i18n[vh_lang].features_index -%}
+                          {%- assign vh_td = site.data.i18n[vh_lang].self_hosted_vpn_docs_vpn_detection -%}
+                          {%- assign vh_tb = site.data.i18n[vh_lang].vpnhood_server_docs_ip_blocking %}
+                          <ul class="row list-unstyled row-gap-4 mb-0">
+                            {% include feature-more-card.html icon="eye-off" href="/self-hosted-vpn/docs/vpn-detection/" title=vh_td.title text=t.more_detect_desc %}
+                            {% include feature-more-card.html icon="protocols" href="/features/protocols/" title=vh_ti.protocols_title text=vh_ti.protocols_short delay="100" %}
+                            {% include feature-more-card.html icon="server" href="/vpnhood-server/docs/ip-blocking/" title=vh_tb.title text=t.more_ip_desc delay="200" %}
+                          </ul>
+                        </div>
+
+                        {% include feature-end.html %}
 
                       </div>
                     </div>

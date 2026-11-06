@@ -21,10 +21,20 @@
   "diagram_on_sub": "Bağlantı başına tek istek",
   "diagram_on_result": "Web'de gezinme gibi görünür",
   "diagram_caption": "Kamufle Modu, bir filtrenin gördüğünü değiştirir",
-  "how_title": "Nasıl çalışır?",
-  "how_desc": "Çoğu VPN protokolü kendini belli eder. Derin paket incelemesi trafiğin yapısını okur, protokolü anında tanır ve VPN'leri engellemek isteyen bir ağ bağlantıyı doğrudan keser. Kamufle Modu, tüneli sıradan şifreli web trafiği gibi görünecek şekilde sarar ve filtrelerin eşleştirebileceği tanıdık hiçbir şey bırakmaz. Trafiğin ne olduğunu gizler ama nereye gittiğini gizlemez; bu yüzden bir sunucu IP adresi üzerinden yine de engellenebilir. Kendi sunucunuzu çalıştırıyorsanız <a href=\"/vpnhood-server/docs/ip-blocking/\">IP adresinin engellenmesini nasıl önleyeceğinizi öğrenin</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">VpnHood, VPN tespitine nasıl direnir?</a> sayfası bunu daha ayrıntılı açıklar.",
+  "how_desc": "VPN trafiğinin çoğunun, bir ağ filtresinin tanıyıp engelleyebileceği bir şekli vardır. Kamufle Modu onu sıradan web trafiği gibi gösterir ve filtreye eşleştirecek pek bir şey bırakmaz. Trafiğin ne olduğunu gizler ama nereye gittiğini gizlemez.",
   "when_title": "Ne zaman açılmalı?",
   "when_desc": "Ağ VPN kullanımını aktif olarak engellediğinde açın: okul veya iş yeri güvenlik duvarları, VPN'leri engelleyen otel ve havaalanı Wi-Fi ağları ya da ulusal sansür filtreleri. Herhangi bir engelleme olmayan ev ağınızda buna ihtiyacınız yoktur.",
   "cost_title": "Dezavantajı nedir?",
-  "cost_desc": "Gizlenmiş trafik standart bir tünele göre daha fazla veri yükü taşır; bu nedenle biraz daha yavaş olabilir ve pili biraz daha fazla tüketebilir. Takas basittir: Yolunuz açıkken saf hız, engellendiğinizde ise kesintisiz çalışan bir bağlantı."
+  "cost_desc": "Gizlenmiş trafik standart bir tünele göre daha fazla veri yükü taşır; bu nedenle biraz daha yavaş olabilir ve pili biraz daha fazla tüketebilir. Takas basittir: Yolunuz açıkken saf hız, engellendiğinizde ise kesintisiz çalışan bir bağlantı.",
+  "steps_title": "Nasıl açılır?",
+  "step1_title": "Protokol'ü açın",
+  "step1_desc": "Uygulamanın ana ekranında bulabilirsiniz.",
+  "step2_title": "Kamufle Modu'nu açın",
+  "step2_desc": "Protokoller ekranındaki ilk anahtardır.",
+  "step3_title": "Açık olduğunu kontrol edin",
+  "step3_desc": "Ana ekrana döndüğünüzde Protokol'ün yanında Kamufle görünür.",
+  "steps_shot_alt": "VpnHood! uygulamasının ana ekranı, Protokol'ün yanında Kamufle",
+  "more_title": "Okumaya devam edin",
+  "more_detect_desc": "Bir VPN'i neyin ele verdiği, Kamufle Modu'nun neyi değiştirdiği ve neyi gizleyemediği.",
+  "more_ip_desc": "Kendi sunucunuz için: Bir ağ adresini engellediğinde ne yapmalı?"
 }

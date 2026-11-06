@@ -21,10 +21,20 @@
   "diagram_on_sub": "Eine Anfrage pro Verbindung",
   "diagram_on_result": "Sieht wie Surfen im Web aus",
   "diagram_caption": "Der Tarnmodus ändert, was ein Filter sieht",
-  "how_title": "So funktioniert es",
-  "how_desc": "Die meisten VPN-Protokolle geben sich sofort zu erkennen: Deep Packet Inspection analysiert das Muster des Datenverkehrs, erkennt das Protokoll auf Anhieb, und ein Netzwerk, das VPNs sperren will, verwirft den Datenverkehr einfach. Der Tarnmodus verkleidet den Tunnel als gewöhnlichen verschlüsselten Web-Datenverkehr – ein Filter findet so nichts Bekanntes mehr, woran er ansetzen könnte. Er verbirgt die Art des Datenverkehrs, nicht dessen Ziel, sodass ein Server weiterhin über seine IP-Adresse blockiert werden kann. Wenn Sie einen eigenen Server betreiben, erfahren Sie hier, <a href=\"/vpnhood-server/docs/ip-blocking/\">wie Sie seine IP vor Sperren schützen</a>. <a href=\"/self-hosted-vpn/docs/vpn-detection/\">Wie VpnHood der VPN-Erkennung widersteht</a> erklärt das genauer.",
+  "how_desc": "Der meiste VPN-Datenverkehr hat ein Muster, das ein Netzwerkfilter erkennen und verwerfen kann. Der Tarnmodus lässt ihn stattdessen wie gewöhnlichen Web-Datenverkehr aussehen, sodass ein Filter kaum etwas findet, woran er ansetzen kann. Er verbirgt die Art des Datenverkehrs, nicht dessen Ziel.",
   "when_title": "Wann aktivieren?",
   "when_desc": "Aktivieren Sie ihn, wenn ein Netzwerk VPNs gezielt blockiert: in Schul- oder Firmennetzwerken, im Hotel- und Flughafen-WLAN oder bei staatlicher Zensur. Bei einer normalen Verbindung zu Hause benötigen Sie ihn nicht.",
   "cost_title": "Gibt es Nachteile?",
-  "cost_desc": "Getarnter Datenverkehr erzeugt mehr Overhead. Das kann die Verbindung etwas verlangsamen und mehr Akku verbrauchen. Ein fairer Kompromiss: maximale Geschwindigkeit, wenn nichts blockiert wird – und eine stabile Verbindung, wenn Netzwerke stören."
+  "cost_desc": "Getarnter Datenverkehr erzeugt mehr Overhead. Das kann die Verbindung etwas verlangsamen und mehr Akku verbrauchen. Ein fairer Kompromiss: maximale Geschwindigkeit, wenn nichts blockiert wird – und eine stabile Verbindung, wenn Netzwerke stören.",
+  "steps_title": "So aktivieren Sie ihn",
+  "step1_title": "Öffnen Sie Protokoll",
+  "step1_desc": "Sie finden es auf dem Startbildschirm der App.",
+  "step2_title": "Aktivieren Sie den Tarnmodus",
+  "step2_desc": "Es ist der erste Schalter auf dem Bildschirm Protokolle.",
+  "step3_title": "Prüfen Sie, ob er aktiv ist",
+  "step3_desc": "Zurück auf dem Startbildschirm steht Tarnung neben Protokoll.",
+  "steps_shot_alt": "Der Startbildschirm der VpnHood!-App, mit Tarnung neben Protokoll",
+  "more_title": "Weiterlesen",
+  "more_detect_desc": "Was ein VPN verrät, was der Tarnmodus daran ändert und was er nicht verbergen kann.",
+  "more_ip_desc": "Für Ihren eigenen Server: was zu tun ist, wenn ein Netzwerk seine Adresse sperrt."
 }

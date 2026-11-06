@@ -1,0 +1,17 @@
+{%- comment -%}
+  The end of a feature page: one last download button and the way back to all the features, so the
+  page closes on something to do. Its words are features_index's, shared by every feature page, and
+  the buttons are the page's own t.cta and t.all_features.
+{%- endcomment -%}
+{%- assign vh_fe = site.data.i18n[vh_lang].features_index -%}
+{%- assign vh_fe_en = site.data.i18n.en.features_index -%}
+<div class="section-space pt-0" data-aos="fade-up">
+  <div class="vh-card-dark vh-feature-panel text-center py-5">
+    <h2 class="section-title vh-txt-grad-purple-400">{{ vh_fe.end_title | default: vh_fe_en.end_title }}</h2>
+    <p class="section-desc">{{ vh_fe.end_desc | default: vh_fe_en.end_desc }}</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+      <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/free-vpn/download/" data-vh-track="feature-end-download">{{ t.cta }}</a>
+      <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
+    </div>
+  </div>
+</div>
