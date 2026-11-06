@@ -22,7 +22,7 @@
   "diagram_server": "SERVER",
   "diagram_server_sub": "seu VPS",
   "diagram_client": "CLIENT",
-  "diagram_client_sub": "dispositivos dos seus usuários",
+  "diagram_client_sub": "dispositivos dos usuários",
   "diagram_internet": "internet",
   "diagram_status": "status + sessões",
   "diagram_tunnel": "túnel criptografado",

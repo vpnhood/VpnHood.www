@@ -12,6 +12,9 @@ Same blackboard style, and the same two reasons for it, as
     carries them into every language. Text baked into an image would stay English.
   * **Fonts.** The page's own Poppins, self-hosted, because Google Fonts is blocked in CN.
 
+Both boards are laid out left to right in every language, with each label in a right-to-left
+isolate on Persian and Arabic pages, for the reasons in that same header.
+
 The chalk look is two SVG filters, not artwork: `feTurbulence` + `feDisplacementMap` warps
 every stroke off-true, and a second noise layer erodes stroke alpha into chalk dust. The
 board keeps its dark ground in both themes on purpose - `.vh-topology-svg` in
@@ -70,7 +73,8 @@ def stack(x, y, w, h, stroke, n=2, off=13):
 
 def txt(x, y, s, size=22, fill=CHALK, anchor="middle"):
     return ('<text x="%.1f" y="%.1f" font-family="%s" font-size="%d" fill="%s" '
-            'text-anchor="%s">%s</text>' % (x, y, FONT, size, fill, anchor, s))
+            'text-anchor="%s">{{ vh_bidi_in }}%s{{ vh_bidi_out }}</text>'
+            % (x, y, FONT, size, fill, anchor, s))
 
 
 def arrow(x1, y1, x2, y2, stroke=MINT, sw=3.2, dash=None):
@@ -95,7 +99,9 @@ def render(out: str, data_file: str, en_var: str, w: int, h: int, uid: str, part
      Strings come from _data/i18n/<lang>/{DATA}.json via the page's `t` assign, each
      falling back to English so a not-yet-translated language never renders blank. -->
 {{%- assign {EN} = site.data.i18n.en.{DATA} -%}}
-<svg class="vh-topology-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"
+{{%- assign vh_bidi_in = "" -%}}{{%- assign vh_bidi_out = "" -%}}
+{{%- if vh_dir == "rtl" -%}}{{%- assign vh_bidi_in = "&#x2067;" -%}}{{%- assign vh_bidi_out = "&#x2069;" -%}}{{%- endif -%}}
+<svg class="vh-topology-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" direction="ltr"
      role="img" aria-labelledby="{UID}Title {UID}Desc" preserveAspectRatio="xMidYMid meet">
   <title id="{UID}Title">{TITLE}</title>
   <desc id="{UID}Desc">{DESC}</desc>
