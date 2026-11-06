@@ -32,6 +32,7 @@ access key = کلید دسترسی · certificate = گواهی · container = ک
 standalone = مستقل · managed = مدیریت‌شده · web panel = پنل وب
 server profile = پروفایل سرور (plural پروفایل‌های سرور)
 dynamic DNS / a dynamic DNS name = DDNS (never DNS پویا, never نام DDNS)
+probe (a network's test connection to a server) = کاوشگر (plural کاوشگرها; never اسکنر, which readers know as the tool that finds clean IPs) · active probing = کاوش فعال · a real network scan stays اسکن
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = ویژه / نسخه ویژه / اشتراک ویژه, whichever the sentence needs

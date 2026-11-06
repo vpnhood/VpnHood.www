@@ -10,7 +10,7 @@
   "opt_q": "بدون سؤال. بدون گزینه‌های زیر، نصب جدید هنگام بوت سیستم اجرا شده، خودکار به‌روزرسانی می‌شود و همه اپلیکیشن‌ها را می‌پذیرد؛ سرورهای قبلاً نصب‌شده نیز تنظیمات خود را حفظ می‌کنند.",
   "opt_no_autostart": "پاسخ «خیر» به سؤال اول: سرور هنگام بوت سیستم اجرا نمی‌شود. در نصب جدید سرویسی ایجاد نمی‌شود و باید <a href=\"/vpnhood-server/docs/install/#manage\">سرور را به‌صورت دستی اجرا کنید</a>.",
   "opt_no_autoupdate": "پاسخ «خیر» به سؤال دوم: سرور به‌صورت خودکار به‌روزرسانی نمی‌شود.",
-  "opt_min_protocol": "به سؤال سوم با عددی از <code>[min_protocol_default]</code> تا <code>[min_protocol_proof]</code> پاسخ می‌دهد: قدیمی‌ترین پروتکل اپلیکیشن که سرور می‌پذیرد. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">رد کردن اسکن‌ها</a> می‌گوید چه زمانی آن را روی <code>[min_protocol_proof]</code> بگذارید. سرور مدیریت‌شده حداقل خود را از <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">پروفایل سرور</a> می‌گیرد.",
+  "opt_min_protocol": "به سؤال سوم با عددی از <code>[min_protocol_default]</code> تا <code>[min_protocol_proof]</code> پاسخ می‌دهد: قدیمی‌ترین پروتکل اپلیکیشن که سرور می‌پذیرد. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">رد کردن کاوشگرها</a> می‌گوید چه زمانی آن را روی <code>[min_protocol_proof]</code> بگذارید. سرور مدیریت‌شده حداقل خود را از <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">پروفایل سرور</a> می‌گیرد.",
   "opt_help": "فهرست گزینه‌ها را نمایش می‌دهد و چیزی نصب نمی‌کند.",
   "linux_add": "گزینه‌ها در انتهای دستور نصب و داخل علامت‌های نقل‌قول قرار می‌گیرند.",
   "caption_linux": "برای مثال، در یک اسکریپت، بدون هیچ سؤالی",

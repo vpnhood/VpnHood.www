@@ -62,7 +62,7 @@ extra_css:
 <p>{{ t.file_name }}</p>
 <p>{% include copy.html s=t.file_restart %}</p>
 <p>{% include copy.html s=t.file_keys %}</p>
-{% include terminal.html caption=t.caption_print cmd='sudo ls /opt/VpnHoodServer/storage/access
+{% include terminal.html caption=t.caption_print cmd='sudo ls /opt/VpnHoodServer/storage/access | sed -n "s/\.token2$//p"
 sudo /opt/VpnHoodServer/vhserver print 2b9d4a6e-1c3f-4e8a-9b7d-5f0e8c2a1d34' %}
 <p>{% include copy.html s=t.file_docker %}</p>
 <p>{{ t.file_renew }}</p>
@@ -75,7 +75,7 @@ openssl pkcs12 -export -inkey server.key -in server.crt -out default.pfx -passou
 sudo cp default.pfx /opt/VpnHoodServer/storage/access/certificates/default.pfx
 rm server.key server.crt default.pfx' %}
 <p>{% include copy.html s=t.name_restart %}</p>
-{% include terminal.html caption=t.caption_print cmd='sudo ls /opt/VpnHoodServer/storage/access
+{% include terminal.html caption=t.caption_print cmd='sudo ls /opt/VpnHoodServer/storage/access | sed -n "s/\.token2$//p"
 sudo /opt/VpnHoodServer/vhserver print 2b9d4a6e-1c3f-4e8a-9b7d-5f0e8c2a1d34' %}
 <p>{% include copy.html s=t.file_docker %}</p>
 
