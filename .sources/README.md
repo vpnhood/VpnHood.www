@@ -8,6 +8,7 @@ is published — the optimized copies under `/assets/` are what ship.
 
 | Source | Optimized asset | Notes |
 |---|---|---|
+| `images/manager-logo.svg` | `images/manager-logo.webp` (512×512) | The icon's vector master. Render at 512×512 and save as lossless WebP. The MANAGER console and its NuGet packages use the same render. The word is outlined from Archivo Black, so a new word needs that font. |
 | `images/manager-logo.webp` (512×512) | `/assets/images/general/manager-logo.webp` (300×300) | Displayed at ≤100 px; 300 covers retina. Re-export with `sharp(src).resize(300,300,{fit:'inside'}).webp({quality:85})`. |
 | `images/banner-purple-light.webp` (924×764) | `/assets/images/home/banner-purple-light.webp` (480w) | Decorative hero glow (radial blur); displayed up to 924 px but upscaling a blur is invisible. `sharp(src).resize({width:480}).webp({quality:82})`. |
 | `images/banner-green-light.webp` (856×837) | `/assets/images/home/banner-green-light.webp` (480w) | Same as above. `sharp(src).resize({width:480}).webp({quality:82})`. |
