@@ -47,30 +47,80 @@ extra_css:
                           </div>
                         </div>
 
-                        <div class="row section-space gap-lg-0 gap-5">
-                          <div class="col-lg-4" data-aos="fade-up">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.how_title }}</h2>
-                              <p class="mb-0">{{ t.how_desc }}</p>
-                            </div>
+                        <div class="section-space pt-4">
+                          <div class="section-start-text" data-aos="fade-up">
+                            <h2 class="section-title vh-txt-grad-purple-400">{{ t.pick_title }}</h2>
+                            <p class="section-desc small-width">{{ t.pick_desc }}</p>
                           </div>
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
-                              <p class="mb-0">{{ t.when_desc }}</p>
-                            </div>
-                          </div>
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
-                              <p class="mb-0">{{ t.cost_desc }}</p>
+                          <ul class="row list-unstyled row-gap-4 mb-0">
+                            <li class="col-lg-4" data-aos="fade-up">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/shield-check.svg %}</span>
+                                <h3 class="h4 d-flex align-items-center gap-2 mb-3">{{ t.tcp_title }} <span class="vh-feature-chip">{{ t.default_label }}</span></h3>
+                                <ul class="list-unstyled vh-feature-points mb-0">
+                                  <li>{% include icons/check-circle.svg %}<span>{{ t.tcp_good }}</span></li>
+                                  <li class="vh-feature-point-limit">{% include icons/alert.svg %}<span>{{ t.tcp_limit }}</span></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
+                                <h3 class="h4 d-flex align-items-center gap-2 mb-3">{{ t.udp_title }}</h3>
+                                <ul class="list-unstyled vh-feature-points mb-0">
+                                  <li>{% include icons/check-circle.svg %}<span>{{ t.udp_good }}</span></li>
+                                  <li class="vh-feature-point-limit">{% include icons/alert.svg %}<span>{{ t.udp_limit }}</span></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <span class="vh-feature-icon">{% include icons/protocols.svg %}</span>
+                                <h3 class="h4 d-flex align-items-center gap-2 mb-3">{{ t.quic_title }}</h3>
+                                <ul class="list-unstyled vh-feature-points mb-0">
+                                  <li>{% include icons/check-circle.svg %}<span>{{ t.quic_good }}</span></li>
+                                  <li class="vh-feature-point-limit">{% include icons/alert.svg %}<span>{{ t.quic_limit }}</span></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="vh-card-dark vh-feature-panel mt-4" data-aos="fade-up">
+                            <div class="row row-gap-4">
+                              <div class="col-lg-4">
+                                <span class="vh-feature-icon">{% include icons/toggle.svg %}</span>
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.when_title }}</h2>
+                                <p class="mb-0">{{ t.when_desc }}</p>
+                              </div>
+                              <div class="col-lg-4">
+                                <span class="vh-feature-icon">{% include icons/auto-update.svg %}</span>
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.cost_title }}</h2>
+                                <p class="mb-0">{{ t.cost_desc }}</p>
+                              </div>
+                              <div class="col-lg-4">
+                                <span class="vh-feature-icon">{% include icons/shield.svg %}</span>
+                                <h2 class="h4 vh-txt-grad-purple-400">{{ t.block_title }}</h2>
+                                <p class="mb-0">{{ t.block_desc }}</p>
+                              </div>
                             </div>
                           </div>
                         </div>
 
-                        <div class="section-space text-center" data-aos="fade-up">
-                          <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
+                        <div class="section-space pt-0">
+                          <div class="section-start-text" data-aos="fade-up">
+                            {%- assign vh_tc = site.data.i18n[vh_lang].features_cloak_mode %}
+                            <h2 class="section-title vh-txt-grad-purple-400 mb-0">{{ vh_tc.more_title }}</h2>
+                          </div>
+                          {%- assign vh_ti = site.data.i18n[vh_lang].features_index -%}
+                          {%- assign vh_td = site.data.i18n[vh_lang].self_hosted_vpn_docs_vpn_detection -%}
+                          {%- assign vh_th = site.data.i18n[vh_lang].self_hosted_vpn_docs_how_it_works %}
+                          <ul class="row list-unstyled row-gap-4 mb-0">
+                            {% include feature-more-card.html icon="eye-off" href="/features/cloak-mode/" title=vh_ti.cloak_mode_title text=vh_ti.cloak_mode_short %}
+                            {% include feature-more-card.html icon="shield-check" href="/self-hosted-vpn/docs/vpn-detection/" title=vh_td.title text=vh_tc.more_detect_desc delay="100" %}
+                            {% include feature-more-card.html icon="network" href="/self-hosted-vpn/docs/how-it-works/" title=vh_th.title text=t.more_how_desc delay="200" %}
+                          </ul>
                         </div>
+
+                        {% include feature-end.html %}
 
                       </div>
                     </div>

@@ -1122,6 +1122,31 @@ a.vh-feature-chip:hover{
     color: var(--purple-120);
 }
 
+// A card's good point and its limit, a line each: the mint tick and the quieter warning sign
+// let a row of cards be compared at a glance.
+.vh-feature-points{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.vh-feature-points > li{
+    display: flex;
+    gap: .6rem;
+}
+
+.vh-feature-points svg{
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    color: var(--vh-green-ink);
+}
+
+.vh-feature-points .vh-feature-point-limit svg{
+    color: var(--vh-text-soft);
+}
+
 // Index-card titles are the accent, whether or not they are links: in the
 // split-tunneling grid the Split DNS card is the one card without a page of its own, and
 // the plainer heading colour made it look like a different kind of thing. Placed after the

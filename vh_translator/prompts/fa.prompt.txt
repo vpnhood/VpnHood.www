@@ -57,6 +57,9 @@ RULES
   (۱۲ ماهه), discounts (۲۵٪), counts (۵ دستگاه), the copyright year. The ONE exception is a
   version number attached to a Latin platform name — "Android 7.0", "Windows 10" — which
   stays fully Latin.
+- Never end a sentence or clause on را by dropping its verb: write the verb out (UDP را امتحان کنید و
+  اگر مانعی در کار بود، از TCP استفاده کنید — not ... و وقتی مانعی در کار است، TCP را). In a contrast
+  with نه, drop the را: سرور را می‌بینند، نه کاربران — not نه کاربران را.
 - Do not add an ezafe ی where normal Persian writes none: شبکه جهانی، مشاهده همه، درباره ما —
   not شبکه‌ی جهانی. When an ی IS part of the word, write it as ZWNJ + ی (درباره‌ی، نسخه‌ی),
   never the hamza form (دربارهٔ، نسخهٔ).
