@@ -29,7 +29,7 @@
   "keys_desc": "Les clés que vous copiez désormais depuis MANAGER contiennent le nom ou les URL. Une application qui possède une clé plus ancienne reçoit la nouvelle à sa prochaine connexion, car <b>[manager_push_token]</b> est activé par défaut : faites donc cette configuration tant que l'adresse de sa clé fonctionne encore. Une application qui ne peut plus joindre le serveur a besoin d'une nouvelle clé de votre part.",
   "limits_title": "Points à garder à l'esprit",
   "limit_drop": "<b>Les applications connectées sont déconnectées.</b> Les applications connectées à ce moment-là perdent la connexion. Elles peuvent se reconnecter dès que le nom ou le fichier indique la nouvelle adresse, en général en quelques minutes.",
-  "limit_shared": "<b>Une adresse partagée ne fonctionne pas.</b> Certains fournisseurs placent de nombreux clients derrière une seule adresse publique, ce qu'on appelle souvent CGNAT, et les connexions venues de l'extérieur n'atteignent jamais votre routeur. Si l'adresse affichée par votre routeur n'est pas celle que voient les sites web, demandez une adresse publique à votre fournisseur.",
+  "limit_shared": "<b>Une adresse partagée ne fonctionne pas.</b> Certains fournisseurs placent de nombreux clients derrière une seule adresse publique, ce qu'on appelle souvent CGNAT, et les connexions venues de l'extérieur n'atteignent jamais votre routeur. Si l'adresse affichée par votre routeur n'est pas celle que voient les sites web, demandez à votre fournisseur une adresse publique dédiée.",
   "limit_lines": "<b>Deux lignes internet ne fonctionnent pas avec cela.</b> Derrière un routeur qui envoie chaque connexion par une autre ligne, l'adresse semble changer sans arrêt, et le serveur ne cesse de se reconfigurer. Sur un tel serveur, désactivez <b>[manager_auto_config]</b> et définissez vous-même les adresses.",
   "standalone_title": "Sur un serveur autonome",
   "standalone_desc": "Sans MANAGER, rien ne met à jour les clés, et un serveur autonome ne recherche son adresse qu'au démarrage. Un nom DNS dynamique fonctionne quand même, car les applications résolvent le nom elles-mêmes : donnez au serveur un certificat pour ce nom, comme le montre <a href=\"/vpnhood-server/docs/domain/#standalone\">Utiliser un nom de domaine et un certificat de confiance</a>, et donnez de nouvelles clés à vos utilisateurs.",
@@ -57,5 +57,13 @@
   "diagram_finder_sub": "ou URL de jeton de la ferme",
   "diagram_new": "Nouvelle adresse",
   "diagram_old": "Ancienne adresse",
-  "diagram_find_caption": "Le nom ou l'URL de la clé montre le chemin"
+  "diagram_find_caption": "Le nom ou l'URL de la clé montre le chemin",
+  "diagram_urls_title": "Comment les applications trouvent la nouvelle adresse grâce à une URL de jeton de la ferme",
+  "diagram_urls_desc": "MANAGER met à jour un fichier sur le web après chaque changement. Une application qui ne parvient pas à se connecter lit le fichier et trouve le serveur à la nouvelle adresse.",
+  "diagram_publish": "Met à jour le fichier",
+  "diagram_file": "Fichier sur le web",
+  "diagram_file_sub": "À votre URL de jeton",
+  "diagram_read": "Lisent le fichier",
+  "diagram_reached": "À la nouvelle adresse",
+  "diagram_urls_caption": "Le fichier mène les applications à la nouvelle adresse"
 }

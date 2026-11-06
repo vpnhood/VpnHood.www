@@ -12,7 +12,7 @@
   "router_ports": "<b>[manager_servers]</b> sayfasını açın, sunucuyu seçin ve portlarını listeleyen <b>[manager_access_points]</b> bölümünü bulun.",
   "router_forward": "Yönlendiricide bunları makineye yönlendirin: <b>[manager_tcp_port]</b> (1) TCP olarak, <b>[manager_udp_port]</b> (2) ve <b>[manager_quic_port]</b> (3) UDP olarak. <code>[port_off]</code> değerindeki bir port kapalıdır ve yönlendirme gerektirmez.",
   "shot_ports_alt": "VpnHood! MANAGER'da Automatic Configuration açıkken bir sunucunun erişim noktaları: TCP Port (1), UDP Port (2) ve QUIC Port (3) işaretli",
-  "shot_ports_caption": "Yönlendirici arkasındaki bir sunucu: makinenin kendi adresi <code>[ip_home_example]</code>, yönlendiricinin portları ilettiği yerdir. Genel adres <code>[ip_connection_example]</code> anahtarlarda yer alır ve MANAGER onu kendiliğinden değiştirir.",
+  "shot_ports_caption": "Yönlendirici arkasındaki bir sunucu: makinenin kendi adresi <code>[ip_home_example]</code>, yönlendiricinin portları ilettiği yerdir. Genel IP adresi <code>[ip_connection_example]</code> anahtarlarda yer alır ve MANAGER onu kendiliğinden değiştirir.",
   "apps_title": "Uygulamaların yeni adresi bulmasını sağlayın",
   "apps_why": "Anahtar oluşturulduğu adresleri taşır; bu nedenle bir değişiklikten sonra onu kullanan uygulama eski adresi dener. Adres değişmeden önce anahtarlarınıza yeni adrese giden bir yol verin: dinamik bir DNS adı, çiftlik token URL'leri veya her ikisi.",
   "ddns_title": "Dinamik DNS adı",
@@ -29,7 +29,7 @@
   "keys_desc": "MANAGER'dan bundan sonra kopyaladığınız anahtarlar adı veya URL'leri taşır. Eski bir anahtara sahip uygulama, <b>[manager_push_token]</b> varsayılan olarak açık olduğundan bir sonraki bağlantısında yeni anahtarı alır; bu yüzden bunu, anahtarındaki adres hâlâ çalışırken ayarlayın. Sunucuya artık ulaşamayan bir uygulamanın sizden yeni bir anahtar alması gerekir.",
   "limits_title": "Unutmamanız gerekenler",
   "limit_drop": "<b>Bağlı uygulamalar kopar.</b> O anda bağlı olan uygulamalar bağlantıyı kaybeder. Ad veya dosya yeni adresi gösterir göstermez, genellikle birkaç dakika içinde yeniden bağlanabilirler.",
-  "limit_shared": "<b>Paylaşılan adres işe yaramaz.</b> Bazı sağlayıcılar birçok müşteriyi tek bir genel adresin arkasına koyar (buna genellikle CGNAT denir) ve dışarıdan gelen bağlantılar yönlendiricinize hiç ulaşmaz. Yönlendiricinizin gösterdiği adres web sitelerinin gördüğü adres değilse sağlayıcınızdan genel bir adres isteyin.",
+  "limit_shared": "<b>Paylaşılan adres işe yaramaz.</b> Bazı sağlayıcılar birçok müşteriyi tek bir genel IP adresinin arkasına koyar (buna genellikle CGNAT denir) ve dışarıdan gelen bağlantılar yönlendiricinize hiç ulaşmaz. Yönlendiricinizin gösterdiği adres web sitelerinin gördüğü adres değilse sağlayıcınızdan size özel bir genel IP adresi isteyin.",
   "limit_lines": "<b>İki internet hattıyla çalışmaz.</b> Her bağlantıyı başka bir hattan gönderen bir yönlendiricinin arkasında adres sürekli değişiyormuş gibi görünür ve sunucu tekrar tekrar yapılandırılır. Böyle bir sunucuda <b>[manager_auto_config]</b> seçeneğini kapatın ve adresleri kendiniz belirleyin.",
   "standalone_title": "Bağımsız sunucuda",
   "standalone_desc": "MANAGER olmadan anahtarları hiçbir şey güncellemez ve bağımsız bir sunucu adresini yalnızca başlarken arar. Dinamik DNS adı yine de çalışır, çünkü uygulamalar adı kendileri sorgular: <a href=\"/vpnhood-server/docs/domain/#standalone\">Alan adı ve güvenilir sertifika kullanın</a> bölümünde gösterildiği gibi sunucuya bu ad için bir sertifika verin ve kullanıcılarınıza yeni anahtarlar verin.",
@@ -57,5 +57,13 @@
   "diagram_finder_sub": "veya çiftlik token URL'si",
   "diagram_new": "Yeni adres",
   "diagram_old": "Eski adres",
-  "diagram_find_caption": "Anahtardaki ad veya URL yolu gösterir"
+  "diagram_find_caption": "Anahtardaki ad veya URL yolu gösterir",
+  "diagram_urls_title": "Uygulamalar çiftlik token URL'si ile yeni adresi nasıl bulur",
+  "diagram_urls_desc": "MANAGER her değişiklikten sonra web'deki bir dosyayı günceller. Bağlanamayan bir uygulama dosyayı okur ve sunucuyu yeni adreste bulur.",
+  "diagram_publish": "Dosyayı günceller",
+  "diagram_file": "Web'deki dosya",
+  "diagram_file_sub": "Token URL'nizde",
+  "diagram_read": "Dosyayı okur",
+  "diagram_reached": "Yeni adreste",
+  "diagram_urls_caption": "Dosya uygulamaları yeni adrese götürür"
 }

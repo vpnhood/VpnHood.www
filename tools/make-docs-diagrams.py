@@ -9,7 +9,8 @@ Writes, under `_includes/diagrams/`:
   cloak-traffic.svg, cloak-traffic-tall.svg,
   block-quic.svg, block-quic-tall.svg            /self-hosted-vpn/docs/vpn-detection/
   dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
-  dynamic-ip-find.svg, dynamic-ip-find-tall.svg  /vpnhood-manager/docs/dynamic-ip/
+  dynamic-ip-find.svg, dynamic-ip-find-tall.svg,
+  dynamic-ip-urls.svg, dynamic-ip-urls-tall.svg  /vpnhood-manager/docs/dynamic-ip/
   cloak-mode.svg, cloak-mode-tall.svg            /features/cloak-mode/, and
                                                  /self-hosted-vpn/docs/vpn-detection/, which
                                                  carries the same diagram_* keys
@@ -62,6 +63,8 @@ Each diagram states one idea and no more:
                   the keys.
   dynamic-ip-find an older key's address is gone, and the name or the URL in the key leads
                   apps to the new one.
+  dynamic-ip-urls MANAGER keeps a file on the web up to date, and apps that read it reach the
+                  server at the new address.
   cloak-mode      nobody outside can see into a tunnel, so a filter goes by its shape: packets
                   make one long tunnel bumpy, and with Cloak Mode each connection's own tunnel
                   is smooth, like web browsing. Both lanes read left to right on a phone too,
@@ -247,7 +250,7 @@ HOOD = "M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13
 HOOD_FACE = "M254.9 154.1c-38.7 21.5-85.1 52.2-113.7 88.2 9.7 83 59 146.1 118.3 146.1 59.2 0 108.3-62.7 118.2-145.3-28.9-42.1-78-72.9-122.8-89z"
 HOOD_EYES = ("M196.6 237.1h2.4c13.1.1 26.1 2.7 39.1 7.4-16.8 40.6-59 42-78.1 0 12.2-4.8 24.4-7.2 36.6-7.4z",
              "M321.5 237.1c13-.1 26 2.3 39.1 7.4-19.2 42-61.3 40.6-78.2 0 13.1-4.7 26.1-7.3 39.1-7.4z")
-HOOD_W, HOOD_H = 96, 120
+HOOD_W, HOOD_H = 77, 96                 # no taller than the icons beside it: any bigger, and it outweighs them
 
 
 def manager_hood(cx, cy):
@@ -725,6 +728,68 @@ def dynamic_ip_find() -> None:
 
 
 # ===========================================================================
+# dynamic-ip-urls - the file MANAGER keeps up to date leads apps to the new address
+# ===========================================================================
+FILE_HALF_W, FILE_HALF_H = 44, 48
+
+
+def web_file(cx, cy):
+    """A file on the web: a sheet with a folded corner, a small globe on its other corner. The
+    sheet's outline stops short of the globe, as a mask would show through the chalk's grain."""
+    w, h, fold, bite = 64, 76, 19, 24
+    x, y = cx - FILE_HALF_W, cy - FILE_HALF_H
+    d = ("M %.1f %.1f L %.1f %.1f L %.1f %.1f L %.1f %.1f L %.1f %.1f L %.1f %.1f"
+         % (j(x + w - bite), j(y + h), j(x), j(y + h), j(x), j(y), j(x + w - fold), j(y),
+            j(x + w), j(y + fold), j(x + w), j(y + h - bite)))
+    out = ['<path d="%s" fill="none" stroke="%s" stroke-width="3.2" stroke-linejoin="round" '
+           'stroke-linecap="round"/>' % (d, CHALK),
+           line(x + w - fold, y, x + w - fold, y + fold, CHALK_DIM, 2.2),
+           line(x + w - fold, y + fold, x + w, y + fold, CHALK_DIM, 2.2)]
+    for n, (end, colour) in enumerate(((w - 30, CHALK_DIM), (w - 12, MINT), (w - 32, MINT))):
+        ly = y + 26 + n * 14
+        out.append(line(x + 11, ly, x + end, ly, colour, 3.0))
+    out.append(globe(x + w + 2, y + h - 2, 21))
+    return "".join(out)
+
+
+def dynamic_ip_urls() -> None:
+    T, _ = strings(DYNAMIC_IP[1])
+    labels = (("diagram_manager", "diagram_publish"), ("diagram_file", "diagram_file_sub"),
+              ("diagram_users", "diagram_read"), ("diagram_server", "diagram_reached"))
+    colours = (VIOLET, MINT, MINT)
+
+    # --- left to right: MANAGER, the file, your users, your server ------------------------
+    seed(25)
+    W, H = 920, 300
+    Y = 88
+    XM, XF, XU, XS = 122, 347, 573, 798
+    parts = [manager_hood(XM, Y), web_file(XF, Y), people(XU, Y), rack(XS, Y, RACK_W, RACK_H)]
+    spans = ((XM + HOOD_W / 2 + 14, XF - FILE_HALF_W - 14), (XF + FILE_HALF_W + 16, XU - 62),
+             (XU + 58, XS - RACK_W / 2 - 14))
+    for (x1, x2), colour in zip(spans, colours):
+        parts.append(arrow(x1, Y, x2, Y, colour))
+    for x, (name, sub) in zip((XM, XF, XU, XS), labels):
+        parts += [txt(x, Y + 94, T(name), 22), txt(x, Y + 120, T(sub), 16, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 30, T("diagram_urls_caption"), 20, AMBER))
+    render("dynamic-ip-urls", *DYNAMIC_IP, W, H, "vhDynUrls", parts, "diagram_urls")
+
+    # --- top to bottom: icons down the left, their labels beside them ---------------------
+    seed(25)
+    W, H = 560, 780
+    X, TX = 104, 186
+    YS = (84, 272, 460, 642)
+    parts = [manager_hood(X, YS[0]), web_file(X, YS[1]), people(X, YS[2]), rack(X, YS[3], RACK_W, RACK_H)]
+    tops = (FILE_HALF_H, 40, RACK_H / 2)            # how far each icon reaches above its middle
+    bottoms = (HOOD_H / 2, FILE_HALF_H + 8, 36)     # and below it
+    for y, y_next, top, bottom, colour in zip(YS, YS[1:], tops, bottoms, colours):
+        parts.append(arrow(X, y + bottom + 14, X, y_next - top - 14, colour))
+    for y, (name, sub) in zip(YS, labels):
+        parts += [txt(TX, y - 2, T(name), 24, CHALK, "start"), txt(TX, y + 24, T(sub), 16, CHALK_DIM, "start")]
+    parts.append(txt(W / 2, H - 34, T("diagram_urls_caption"), 18, AMBER))
+    render("dynamic-ip-urls-tall", *DYNAMIC_IP, W, H, "vhDynUrlsTall", parts, "diagram_urls")
+
+
+# ===========================================================================
 # cloak-mode - a filter can recognize one long tunnel, and not a browser's requests
 # ===========================================================================
 CLOAK = ("features_cloak_mode", "vh_cloak_en")
@@ -947,5 +1012,6 @@ if __name__ == "__main__":
     cloak_traffic()
     dynamic_ip_follow()
     dynamic_ip_find()
+    dynamic_ip_urls()
     cloak_mode()
     block_quic()

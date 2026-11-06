@@ -30,6 +30,7 @@ access key = ключ доступа · certificate = сертификат · co
 firewall = брандмауэр (never файрвол / фаервол)
 standalone = автономный · managed = управляемый · web panel = веб-панель
 server profile = профиль сервера (plural профили серверов)
+public IP address = публичный IP-адрес (never общий: that means shared; public is not статический)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = Premium, or lowercase "премиум" where a Russian adjective reads better

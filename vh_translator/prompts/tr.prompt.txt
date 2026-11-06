@@ -30,6 +30,7 @@ access key = erişim anahtarı · certificate = sertifika · firewall = güvenli
 container = konteyner (never kapsayıcı)
 standalone = bağımsız · managed = yönetilen · web panel = web paneli
 server profile = sunucu profili (plural sunucu profilleri)
+public IP address = genel IP adresi (keep the IP: a bare genel adres reads as a general address; public is not statik)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = özellikler · app = uygulama · traffic = trafik

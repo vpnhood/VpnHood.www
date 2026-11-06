@@ -29,6 +29,7 @@ farm / server farm = 集群 / 服务器集群 (never 服务器组)
 access key = 访问密钥 · certificate = 证书 · container = 容器 · firewall = 防火墙
 standalone = 独立 · managed = 受管 (never 托管: it reads as hosting, and self-hosted is 自托管)
 server profile = 服务器配置方案 (never 配置文件: it reads as a settings file)
+public IP address = 公网 IP 地址 (never 公共 or 公开: they read as shared; public is not 静态)
 web panel = 网页控制面板
 
 PROSE — preferred wording in running text; a preference, not a ban.

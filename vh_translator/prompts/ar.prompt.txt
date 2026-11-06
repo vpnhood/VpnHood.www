@@ -30,6 +30,7 @@ access key = مفتاح الوصول (plural مفاتيح الوصول)
 certificate = شهادة · container = حاوية · firewall = جدار الحماية
 standalone = مستقل · managed = مُدار · web panel = لوحة تحكم ويب
 server profile = ملف تعريف الخادم (plural ملفات تعريف الخوادم)
+public IP address = عنوان IP عام (keep the IP: a bare عنوان عام reads as a general address; public is not ثابت)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 premium = المميزة, or المدفوعة when the sentence is about paying rather than the tier's name

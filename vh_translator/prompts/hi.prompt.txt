@@ -31,6 +31,7 @@ certificate = सर्टिफ़िकेट (with the nukta; never सर्
 container = कंटेनर · firewall = फ़ायरवॉल
 standalone = स्टैंडअलोन · managed = मैनेज्ड (never प्रबंधित) · web panel = वेब पैनल
 server profile = सर्वर प्रोफ़ाइल
+public IP address = पब्लिक IP पता (never सार्वजनिक: it reads as meant for everyone; public is not स्टैटिक)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = फ़ीचर्स · app = ऐप · traffic = ट्रैफ़िक · server = सर्वर

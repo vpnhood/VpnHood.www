@@ -31,6 +31,7 @@ access key = Zugangsschlüssel (never Zugriffsschlüssel)
 certificate = Zertifikat · container = Container · firewall = Firewall
 standalone = eigenständig (never standalone) · managed = verwaltet · web panel = Web-Panel
 server profile = Serverprofil (plural Serverprofile)
+public IP address = öffentliche IP-Adresse (public is not statisch)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 traffic = Datenverkehr (not "Traffic")

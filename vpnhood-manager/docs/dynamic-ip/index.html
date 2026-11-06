@@ -26,7 +26,7 @@ extra_css:
   alike. Port 80 answers Let's Encrypt on each TLS endpoint's address, so forwarding it to the
   machine is enough (Http01ChallengeService). A standalone server looks its address up only at
   start, and with IsValidHostName its keys carry the name too (FileAccessManager).
-  The two diagrams are drawn twice by tools/make-docs-diagrams.py: left to right from a tablet
+  The three diagrams are drawn twice by tools/make-docs-diagrams.py: left to right from a tablet
   up, top to bottom on a phone. The hero is tools/make-docs-heroes.py's dynamic_ip. The
   screenshots are real app UI, so they have no light variant; how to retake the ports one, and
   the certificate one it shares with certificates/, is in Vh/.user/docs/manager-test-projects.md.
@@ -81,6 +81,12 @@ extra_css:
 
 <h3 id="token-urls">{{ t.urls_title }}</h3>
 <p>{% include copy.html s=t.urls_desc %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/dynamic-ip-urls.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/dynamic-ip-urls-tall.svg %}
+</figure>
 
 <h3 id="keys">{{ t.keys_title }}</h3>
 <p>{% include copy.html s=t.keys_desc %}</p>

@@ -2,7 +2,7 @@
   "meta_title": "Linux'ta VpnHood! SERVER Kurulumu | VpnHood!",
   "meta_description": "Linux'ta tek bir komutla VpnHood! SERVER kurulumunu yapın ve cihazlarınız için erişim anahtarları oluşturun; dilerseniz VpnHood! MANAGER sizin yerinize kursun.",
   "title": "Linux'a VpnHood! SERVER Kurun",
-  "lead": "Genel (statik) IP adresine sahip herhangi bir Linux makinesinde kendi VPN sunucunuzu çalıştırın. VpnHood! MANAGER ile yönetilen bir sunucu olarak kurabilir ya da tek bir komutla bağımsız sunucu kurulumu yapabilirsiniz.",
+  "lead": "Genel (public) IP adresine sahip herhangi bir Linux makinesinde kendi VPN sunucunuzu çalıştırın. VpnHood! MANAGER ile yönetilen bir sunucu olarak kurabilir ya da tek bir komutla bağımsız sunucu kurulumu yapabilirsiniz.",
   "aria_flow": "Nasıl çalışır?",
   "flow_server_title": "Sunucunuz",
   "flow_server_desc": "VpnHood! SERVER, VPS gibi kontrolü sizde olan bir makinede çalışır.",

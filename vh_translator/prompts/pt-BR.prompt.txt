@@ -29,6 +29,7 @@ farm / server farm = o farm / o farm de servidores (masculine; never cluster, ne
 access key = chave de acesso · certificate = certificado · container = contêiner · firewall = firewall
 standalone = independente (never autônomo, never avulso) · managed = gerenciado · web panel = painel web
 server profile = perfil de servidor (plural perfis de servidor)
+public IP address = endereço IP público (public is not estático)
 
 PROSE — preferred wording in running text; a preference, not a ban.
 feature(s) = recursos · download (verb) = baixar

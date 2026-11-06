@@ -29,7 +29,7 @@
   "keys_desc": "Le chiavi che copi da MANAGER d'ora in poi contengono il nome o gli URL. Un'app con una chiave meno recente riceve quella nuova alla prossima connessione, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita, quindi configura tutto questo finché l'indirizzo nella sua chiave funziona ancora. Un'app che non riesce più a raggiungere il server ha bisogno di una nuova chiave da te.",
   "limits_title": "Cosa c'è da sapere",
   "limit_drop": "<b>Le app connesse cadono.</b> Le app connesse in quel momento perdono la connessione. Possono riconnettersi non appena il nome o il file mostra il nuovo indirizzo, di solito in pochi minuti.",
-  "limit_shared": "<b>Un indirizzo condiviso non funziona.</b> Alcuni provider mettono molti clienti dietro un solo indirizzo pubblico, spesso chiamato CGNAT, e le connessioni dall'esterno non raggiungono mai il tuo router. Se l'indirizzo mostrato dal router non è quello che vedono i siti web, chiedi al provider un indirizzo pubblico.",
+  "limit_shared": "<b>Un indirizzo condiviso non funziona.</b> Alcuni provider mettono molti clienti dietro un solo indirizzo pubblico, spesso chiamato CGNAT, e le connessioni dall'esterno non raggiungono mai il tuo router. Se l'indirizzo mostrato dal router non è quello che vedono i siti web, chiedi al provider un indirizzo pubblico dedicato.",
   "limit_lines": "<b>Due linee internet non funzionano con questo.</b> Dietro un router che manda ogni connessione su una linea diversa, l'indirizzo sembra cambiare di continuo e il server continua a riconfigurarsi. Su un server del genere, disattiva <b>[manager_auto_config]</b> e imposta tu gli indirizzi.",
   "standalone_title": "Su un server standalone",
   "standalone_desc": "Senza MANAGER, nessuno aggiorna le chiavi, e un server standalone cerca il proprio indirizzo solo all'avvio. Un nome DNS dinamico funziona comunque, perché le app risolvono il nome da sole: dai al server un certificato per il nome, come mostra <a href=\"/vpnhood-server/docs/domain/#standalone\">Usa un nome di dominio e un certificato attendibile</a>, e dai ai tuoi utenti nuove chiavi.",
@@ -57,5 +57,13 @@
   "diagram_finder_sub": "o URL del token della farm",
   "diagram_new": "Nuovo indirizzo",
   "diagram_old": "Vecchio indirizzo",
-  "diagram_find_caption": "Il nome o l'URL nella chiave indica la strada"
+  "diagram_find_caption": "Il nome o l'URL nella chiave indica la strada",
+  "diagram_urls_title": "Come le app trovano il nuovo indirizzo tramite un URL del token della farm",
+  "diagram_urls_desc": "MANAGER aggiorna un file sul web dopo ogni modifica. Un'app che non riesce a connettersi legge il file e trova il server al nuovo indirizzo.",
+  "diagram_publish": "Aggiorna il file",
+  "diagram_file": "File sul web",
+  "diagram_file_sub": "Al tuo URL del token",
+  "diagram_read": "Leggono il file",
+  "diagram_reached": "Al nuovo indirizzo",
+  "diagram_urls_caption": "Il file porta le app al nuovo indirizzo"
 }

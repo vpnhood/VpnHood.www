@@ -31,6 +31,8 @@ farm / server farm = فارم / فارم سرور (never مزرعه, never farm)
 access key = کلید دسترسی · certificate = گواهی · container = کانتینر · firewall = فایروال
 standalone = مستقل · managed = مدیریت‌شده · web panel = پنل وب
 server profile = پروفایل سرور (plural پروفایل‌های سرور)
+public IP address = IP عمومی (the technical term, against آدرس خصوصی; public is not ثابت)
+shared address (CGNAT) = آدرس اشتراکی · the address to ask a provider for instead = آدرس اختصاصی (never عمومی there: it reads as shared with everyone, the opposite)
 dynamic DNS / a dynamic DNS name = DDNS (never DNS پویا, never نام DDNS)
 probe (a network's test connection to a server) = کاوشگر (plural کاوشگرها; never اسکنر, which readers know as the tool that finds clean IPs) · active probing = کاوش فعال · a real network scan stays اسکن
 
