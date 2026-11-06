@@ -56,7 +56,8 @@
     font-size: clamp(2rem, 11.5vw, 55px);
 }
 #banner h2{
-    font-size: 35px;
+    // Shrinks only below 320px, where German's longest word is wider than the screen.
+    font-size: clamp(1.5rem, 11vw, 35px);
     // the vh-txt-grad-purple-300 utility fixes height at 49px (per-word usage);
     // this h2 holds a full translated sentence that may wrap to multiple lines
     height: auto;
