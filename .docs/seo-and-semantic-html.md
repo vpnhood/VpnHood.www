@@ -56,7 +56,7 @@ and produces duplicate/conflicting entities):
 - **SoftwareApplication** — e.g. `_includes/software-application.html` (one
   canonical listing per product; product pages only, never on sub/install pages).
 - **BreadcrumbList** — e.g. `_includes/breadcrumb.html` (derived from the page
-  URL).
+  URL; a section's pages may start the trail at the section's hub, not Home).
 
 If a site doesn't have a given page type yet, the rule still stands: when you add
 one, generate its schema from an include.

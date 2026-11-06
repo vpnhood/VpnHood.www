@@ -16,6 +16,8 @@ self-hosted-vpn:
         label: vpnhood-server
       - url: /vpnhood-manager/docs/
         label: vpnhood-manager
+      - url: /vpnhood-client/docs/
+        label: vpnhood-client
 vpnhood-server:
   - group: getting-started
     pages:

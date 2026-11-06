@@ -1,6 +1,6 @@
 {
   "meta_title": "Documentazione VpnHood! SERVER | VpnHood!",
-  "meta_description": "Guide per gestire il tuo server VPN con VpnHood! SERVER: installalo su Linux o Docker, gestito o standalone, ed evita il blocco del suo IP.",
+  "meta_description": "Scopri come gestire il tuo server VPN con VpnHood! SERVER: installalo su Linux o Docker, gestito o standalone, ed evita il blocco del suo IP.",
   "title": "Documentazione VpnHood! SERVER",
   "lead": "Un server gestito si controlla da VpnHood! MANAGER, il pannello web che bilancia gli utenti tra i tuoi server: consulta la <a href=\"/vpnhood-manager/docs/\">documentazione di VpnHood! MANAGER</a>. Un server standalone funziona con il proprio file di impostazioni, e queste pagine spiegano come."
 }

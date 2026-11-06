@@ -1,6 +1,6 @@
 {
   "meta_title": "دليل استخدام VpnHood! SERVER | VpnHood!‎",
-  "meta_description": "دليلك لتشغيل خادم VPN خاص بك باستخدام VpnHood! SERVER: ثبّته على Linux أو Docker، مداراً أو مستقلاً، واحمِ عنوان IP من الحظر.",
+  "meta_description": "تعرّف على كيفية تشغيل خادم VPN خاص بك باستخدام VpnHood! SERVER: ثبّته على Linux أو Docker، مداراً أو مستقلاً، واحمِ عنوان IP من الحظر.",
   "title": "دليل استخدام VpnHood! SERVER",
   "lead": "يعمل الخادم المُدار عبر VpnHood! MANAGER، لوحة التحكم عبر الويب التي توزّع المستخدمين على خوادمك: راجع <a href=\"/vpnhood-manager/docs/\">دليل استخدام VpnHood! MANAGER</a>. أما الخادم المستقل فيعمل من خلال ملف إعداداته الخاص، وتشرح هذه الصفحات كيفية ذلك."
 }

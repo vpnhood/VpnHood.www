@@ -1,6 +1,6 @@
 {
   "meta_title": "Documentation VpnHood! SERVER | VpnHood!",
-  "meta_description": "Guides pour déployer votre VPN avec VpnHood! SERVER : installation sur Linux ou Docker, mode géré ou autonome, et protection de votre IP contre le blocage.",
+  "meta_description": "Comment déployer votre VPN avec VpnHood! SERVER : installation sur Linux ou Docker, mode géré ou autonome, et protection de votre IP contre le blocage.",
   "title": "Documentation VpnHood! SERVER",
   "lead": "Un serveur géré s'administre depuis VpnHood! MANAGER, l'interface web qui répartit les utilisateurs entre vos serveurs : consultez la <a href=\"/vpnhood-manager/docs/\">documentation VpnHood! MANAGER</a>. Un serveur autonome fonctionne à partir de son propre fichier de paramètres, et ces pages vous montrent comment faire."
 }

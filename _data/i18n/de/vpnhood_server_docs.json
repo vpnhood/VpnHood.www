@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! SERVER Dokumentation | VpnHood!",
-  "meta_description": "Anleitungen für Ihren eigenen VPN-Server mit VpnHood! SERVER: Unter Linux oder Docker installieren, verwaltet oder eigenständig betreiben und IP-Sperren umgehen.",
+  "meta_description": "So betreiben Sie Ihren eigenen VPN-Server mit VpnHood! SERVER: Unter Linux oder Docker installieren, verwaltet oder eigenständig betreiben und IP-Sperren umgehen.",
   "title": "VpnHood! SERVER Dokumentation",
   "lead": "Ein verwalteter Server wird über VpnHood! MANAGER betrieben, das Web-Panel, das die Nutzer auf Ihre Server verteilt: siehe die <a href=\"/vpnhood-manager/docs/\">VpnHood! MANAGER-Dokumentation</a>. Ein eigenständiger Server läuft mit seiner eigenen Konfigurationsdatei, und diese Seiten zeigen, wie das geht."
 }
