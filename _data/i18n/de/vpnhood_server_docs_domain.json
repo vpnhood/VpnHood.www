@@ -10,7 +10,7 @@
   "req_domain": "Eine eigene Domain oder Subdomain wie <code>[domain_example]</code>. Nutzen Sie eine konkrete Domain (keine Wildcard) ohne den Begriff „VPN“: Apps übertragen den Namen unverschlüsselt zu Beginn jeder Verbindung.",
   "req_dns": "Ein DNS-Eintrag, der direkt auf die Verbindungs-IP des Servers verweist: ein A-Record und bei IPv6-Unterstützung zusätzlich ein AAAA-Record. Wenn Sie Cloudflare nutzen möchten, schließen Sie zuerst diese Einrichtung ab und aktivieren Sie den Proxy danach.",
   "mgr_box_title": "Eigene Domain ganz einfach mit VpnHood! MANAGER nutzen",
-  "mgr_box_desc": "Statt der folgenden Schritte: Das kostenlose Web-Panel holt automatisch ein vertrauenswürdiges Zertifikat von Let's Encrypt für Ihre Domain und erneuert es rechtzeitig vor Ablauf selbstständig.",
+  "mgr_box_desc": "Statt der folgenden Schritte: Das Web-Panel holt automatisch ein vertrauenswürdiges Zertifikat von Let's Encrypt für Ihre Domain und erneuert es rechtzeitig vor Ablauf selbstständig.",
   "mgr_box_cta": "Eigene Domain im MANAGER nutzen",
   "file_title": "Auf einem eigenständigen Server",
   "file_cert": "Ein eigenständiger Server kann Zertifikate nicht selbst abrufen. Beziehen Sie eines für Ihre Domain von einer Zertifizierungsstelle (als PFX-Datei inklusive privatem Schlüssel) und ersetzen Sie damit <code>[server_cert_pfx]</code> unter demselben Namen.",

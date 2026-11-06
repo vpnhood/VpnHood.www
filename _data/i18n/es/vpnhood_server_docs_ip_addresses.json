@@ -11,7 +11,7 @@
   "when_several": "El equipo tiene más de una dirección IP pública y necesitas que las claves utilicen una en concreto.",
   "when_lookup": "La detección falla, por ejemplo, si el equipo no puede comunicarse con el servicio web. En ese caso, un servidor independiente no arrancará y registrará <code>[log_public_endpoints]</code>.",
   "mgr_box_title": "Administra fácilmente las direcciones de tus servidores con VpnHood! MANAGER",
-  "mgr_box_desc": "En lugar de editar el archivo, deja que el panel web gratuito detecte la dirección de cada servidor y cámbiala con unos pocos clics cuando lo necesites.",
+  "mgr_box_desc": "En lugar de editar el archivo, deja que el panel web detecte la dirección de cada servidor y cámbiala con unos pocos clics cuando lo necesites.",
   "mgr_box_cta": "Configurar las direcciones en MANAGER",
   "file_title": "En un servidor independiente",
   "file_desc": "El servidor lee su configuración en <code>[server_appsettings]</code>. Una instalación nueva no incluye este archivo: créalo y el servidor comenzará a usarlo en lugar de los valores iniciales. Dos opciones dentro de <code>[setting_file_access_manager]</code> definen las direcciones:",

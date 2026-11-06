@@ -11,7 +11,7 @@
   "when_several": "La macchina dispone di più indirizzi IP pubblici e desideri includerne uno specifico nelle chiavi.",
   "when_lookup": "Il rilevamento fallisce, ad esempio se la macchina non può raggiungere il servizio web. In questo caso un server standalone non si avvia e il registro riporta <code>[log_public_endpoints]</code>",
   "mgr_box_title": "Gestisci facilmente gli indirizzi dei server con VpnHood! MANAGER",
-  "mgr_box_desc": "Invece di modificare il file qui sotto, lascia che il pannello web gratuito rilevi in automatico l'indirizzo di ciascun server e modificalo in pochi clic quando necessario.",
+  "mgr_box_desc": "Invece di modificare il file qui sotto, lascia che il pannello web rilevi in automatico l'indirizzo di ciascun server e modificalo in pochi clic quando necessario.",
   "mgr_box_cta": "Configura gli indirizzi in MANAGER",
   "file_title": "Su un server standalone",
   "file_desc": "Il server legge le impostazioni da <code>[server_appsettings]</code>. Il file non è presente nelle nuove installazioni: crealo per sostituire le impostazioni predefinite. Due parametri in <code>[setting_file_access_manager]</code> definiscono gli indirizzi:",

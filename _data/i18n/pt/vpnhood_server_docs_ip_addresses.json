@@ -11,7 +11,7 @@
   "when_several": "A máquina possui vários IPs públicos e as chaves devem usar um endereço específico.",
   "when_lookup": "A detecção automática falhar (por exemplo, se a máquina não acessar o serviço web). Nesse caso, um servidor independente não inicia, e o log exibe <code>[log_public_endpoints]</code>",
   "mgr_box_title": "Gerencie facilmente os endereços do seu servidor com o VpnHood! MANAGER",
-  "mgr_box_desc": "Em vez de editar o arquivo manualmente, deixe o painel web grátis detectar os endereços e troque-os com poucos cliques sempre que precisar.",
+  "mgr_box_desc": "Em vez de editar o arquivo manualmente, deixe o painel web detectar os endereços e troque-os com poucos cliques sempre que precisar.",
   "mgr_box_cta": "Configurar endereços no MANAGER",
   "file_title": "Em um servidor independente",
   "file_desc": "O servidor lê as configurações em <code>[server_appsettings]</code>. Esse arquivo não existe em novas instalações: crie-o para substituir as configurações padrão. Duas opções em <code>[setting_file_access_manager]</code> definem os IPs:",

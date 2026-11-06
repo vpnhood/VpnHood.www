@@ -65,7 +65,7 @@
   "caption_probe": "Solo pueden conectarse las aplicaciones con VpnHood 9.1 o posterior",
   "probe_warn": "Las aplicaciones más antiguas ya no podrán conectarse, y nada les indicará que se actualicen. Espera a que tus usuarios hayan actualizado: hasta entonces, deja el ajuste en su valor predeterminado, <code>[min_protocol_default]</code>, que admite todas las aplicaciones.",
   "mgr_box_title": "Aplica fácilmente estos ajustes a todos tus servidores con VpnHood! MANAGER",
-  "mgr_box_desc": "En lugar de editar el archivo de cada servidor como se explica más abajo, configúralos una sola vez en el panel web gratuito: un perfil de servidor los envía a todos los servidores de las granjas que lo usan.",
+  "mgr_box_desc": "En lugar de editar el archivo de cada servidor como se explica más abajo, configúralos una sola vez en el panel web: un perfil de servidor los envía a todos los servidores de las granjas que lo usan.",
   "mgr_box_cta": "Configurarlos en MANAGER",
   "file_title": "En un servidor independiente",
   "censored_standalone": "Coloca los <a href=\"#censored-network\">ajustes para una red censurada</a> bajo <code>[setting_file_access_manager]</code> en <code>[server_appsettings]</code> y luego reinicia el servidor.",

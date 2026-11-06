@@ -41,7 +41,7 @@
   "addresses_none": "<code>[setting_reverse_proxy_providers]</code> configurado en <code>[json_empty_list]</code> hace que tu servidor no confíe en ningún proveedor, Cloudflare incluido, y que entonces no obtenga ninguna lista.",
   "addresses_log": "Cuando tu servidor ignora el encabezado, su registro indica la dirección que lo envió y el motivo.",
   "mgr_box_title": "Dirige todas las aplicaciones a través del proxy con VpnHood! MANAGER",
-  "mgr_box_desc": "Un servidor independiente siempre incluye sus propias direcciones en sus claves. En el panel web gratuito puedes quitarlas con unos pocos clics para que todas las aplicaciones se conecten a través del proxy.",
+  "mgr_box_desc": "Un servidor independiente siempre incluye sus propias direcciones en sus claves. En el panel web puedes quitarlas con unos pocos clics para que todas las aplicaciones se conecten a través del proxy.",
   "mgr_box_cta": "Configurar en MANAGER",
   "file_title": "En un servidor independiente",
   "file_cert": "Comprueba que el servidor utilice el certificado del dominio, con <code>[setting_is_valid_host_name]</code> configurado en <code>[json_true]</code>: <a href=\"/vpnhood-server/docs/domain/#standalone\">Usa un nombre de dominio y un certificado de confianza</a> explica cómo hacerlo. Las claves generadas desde entonces incluyen el dominio, y las aplicaciones lo consultan.",

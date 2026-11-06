@@ -38,7 +38,7 @@
   "need_server_title": "خادم",
   "need_server_desc": "خادم افتراضي VPS أو جهاز مخصص يعمل بنظام Linux أو Windows ويستوفي <a href=\"/vpnhood-server/docs/requirements/\">متطلبات النظام</a>. هذا هو الشيء الوحيد الذي يتكلف مالاً، وستدفع لمزود السحابة الخاص بك وليس لنا.",
   "need_account_title": "حساب Google",
-  "need_account_desc": "هو حساب تسجيل الدخول لـ VpnHood! MANAGER، اللوحة المجانية التي تثبت وتدير خوادمك نيابة عنك.",
+  "need_account_desc": "هو حساب تسجيل الدخول لـ VpnHood! MANAGER، اللوحة التي تثبت وتدير خوادمك نيابة عنك.",
   "need_skills_title": "لا تتطلب خبرة في إدارة الأنظمة",
   "need_skills_desc": "التثبيت عبارة عن أمر واحد تلصقه، أو يمكنك تزويد اللوحة ببيانات تسجيل دخول SSH وتدعها تقوم بالباقي.",
   "need_domain_title": "اسم نطاق — اختياري",

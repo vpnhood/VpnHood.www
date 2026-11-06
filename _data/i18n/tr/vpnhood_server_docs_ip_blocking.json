@@ -65,7 +65,7 @@
   "caption_probe": "Yalnızca VpnHood 9.1 veya üzerindeki uygulamalar bağlanabilir",
   "probe_warn": "Daha eski uygulamalar artık bağlanamaz ve onlara güncellemeleri gerektiğini söyleyen bir mesaj da gitmez. Kullanıcılarınız güncelleyene kadar bekleyin; o zamana dek ayarı, her uygulamayı kabul eden varsayılan değerinde, <code>[min_protocol_default]</code> olarak bırakın.",
   "mgr_box_title": "VpnHood! MANAGER ile bu ayarları tüm sunucularınıza kolayca uygulayın",
-  "mgr_box_desc": "Aşağıda anlatıldığı gibi her sunucunun dosyasını düzenlemek yerine, ayarları ücretsiz web panelinde bir kez yapın: Bir sunucu profili bu ayarları, kendisini kullanan çiftliklerin tüm sunucularına gönderir.",
+  "mgr_box_desc": "Aşağıda anlatıldığı gibi her sunucunun dosyasını düzenlemek yerine, ayarları web panelinde bir kez yapın: Bir sunucu profili bu ayarları, kendisini kullanan çiftliklerin tüm sunucularına gönderir.",
   "mgr_box_cta": "Ayarları MANAGER'da yapın",
   "file_title": "Bağımsız bir sunucuda",
   "censored_standalone": "<code>[server_appsettings]</code> dosyasındaki <code>[setting_file_access_manager]</code> altına <a href=\"#censored-network\">sansürlü bir ağ için ayarları</a> ekleyin, ardından sunucuyu yeniden başlatın.",

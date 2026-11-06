@@ -41,7 +41,7 @@
   "addresses_none": "<code>[setting_reverse_proxy_providers]</code> set to <code>[json_empty_list]</code> trusts no provider, Cloudflare included, and your server then fetches no list.",
   "addresses_log": "When your server ignores the header, its log names the address that sent it, and why.",
   "mgr_box_title": "Send every app through the proxy with VpnHood! MANAGER",
-  "mgr_box_desc": "A standalone server always puts its own addresses in its keys. In the free web panel, you take them out with a few clicks, so every app connects through the proxy.",
+  "mgr_box_desc": "A standalone server always puts its own addresses in its keys. In the web panel, you take them out with a few clicks, so every app connects through the proxy.",
   "mgr_box_cta": "Set it up in MANAGER",
   "file_title": "On a standalone server",
   "file_cert": "Check that the server uses the domain's certificate, with <code>[setting_is_valid_host_name]</code> set to <code>[json_true]</code>: <a href=\"/vpnhood-server/docs/domain/#standalone\">Use a domain name and a trusted certificate</a> shows how. Keys made since then carry the domain, and apps look it up.",

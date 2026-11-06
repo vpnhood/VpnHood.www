@@ -10,7 +10,7 @@
   "req_domain": "<code>[domain_example]</code> gibi kontrolünüzde olan bir alan adı veya alt alan adı. Joker karakterli (*.alanadi) olmayan ve içinde \"VPN\" geçmeyen tekil bir ad seçin; uygulamalar her bağlantı başında bunu açıkça gönderir ve ağ tarafından görülebilir.",
   "req_dns": "Doğrudan sunucunun bağlantı IP'sine yönlendirilmiş bir DNS kaydı: bir A kaydı ve IPv6 varsa bir AAAA kaydı. Sunucunun önüne Cloudflare eklemek istiyorsanız önce bu sayfadaki adımları tamamlayın, ardından proxy özelliğini açın.",
   "mgr_box_title": "VpnHood! MANAGER ile kendi alan adınızı kolayca kullanın",
-  "mgr_box_desc": "Aşağıdaki adımlarla uğraşmak yerine; ücretsiz web panelinin Let's Encrypt üzerinden güvenilir bir sertifika almasını ve süresi dolmadan otomatik olarak yenilemesini sağlayın.",
+  "mgr_box_desc": "Aşağıdaki adımlarla uğraşmak yerine; web panelinin Let's Encrypt üzerinden güvenilir bir sertifika almasını ve süresi dolmadan otomatik olarak yenilemesini sağlayın.",
   "mgr_box_cta": "Alan adınızı MANAGER'da kullanın",
   "file_title": "Bağımsız sunucuda",
   "file_cert": "Bağımsız bir sunucu kendi başına sertifika alamaz. Bir sertifika yetkilisinden (CA) alan adınız için özel anahtarı da içeren bir PFX dosyası temin edin ve bu dosyayı aynı adla <code>[server_cert_pfx]</code> konumuna yerleştirin.",

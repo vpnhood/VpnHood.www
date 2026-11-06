@@ -41,7 +41,7 @@
   "addresses_none": "Ist <code>[setting_reverse_proxy_providers]</code> auf <code>[json_empty_list]</code> gesetzt, vertraut Ihr Server keinem Anbieter, auch Cloudflare nicht, und ruft dann keine Liste ab.",
   "addresses_log": "Wenn Ihr Server den Header ignoriert, nennt sein Log die Adresse, die ihn gesendet hat, und den Grund dafür.",
   "mgr_box_title": "Jede App über den Proxy leiten mit VpnHood! MANAGER",
-  "mgr_box_desc": "Ein eigenständiger Server hinterlegt in seinen Schlüsseln stets eigene Adressen. Im kostenlosen Web-Panel entfernen Sie diese mit wenigen Klicks – damit jede App über den Proxy verbunden wird.",
+  "mgr_box_desc": "Ein eigenständiger Server hinterlegt in seinen Schlüsseln stets eigene Adressen. Im Web-Panel entfernen Sie diese mit wenigen Klicks – damit jede App über den Proxy verbunden wird.",
   "mgr_box_cta": "In MANAGER einrichten",
   "file_title": "Auf einem eigenständigen Server",
   "file_cert": "Stellen Sie sicher, dass der Server das Zertifikat der Domain verwendet und <code>[setting_is_valid_host_name]</code> auf <code>[json_true]</code> gesetzt ist. Wie das geht, zeigt <a href=\"/vpnhood-server/docs/domain/#standalone\">Domainnamen und vertrauenswürdiges Zertifikat nutzen</a>. Neu erstellte Schlüssel enthalten die Domain, die von den Apps aufgelöst wird.",

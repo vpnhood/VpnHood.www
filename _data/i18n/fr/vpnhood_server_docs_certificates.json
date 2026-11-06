@@ -24,7 +24,7 @@
   "domain_host": "Utilisez un nom d'hôte de votre domaine, comme <code>[domain_api_example]</code>. De nombreux sites placent une API ou leurs fichiers sur un nom d'hôte dédié qui refuse les inconnus, comme le fait votre serveur : il paraît donc ordinaire. <code>[domain_www_example]</code> reste libre pour le site de votre choix, chez n'importe quel hébergeur.",
   "domain_limit": "Un domaine ne permet toutefois pas à vos utilisateurs de contourner une adresse bloquée, car il mène au même serveur. Seul <a href=\"/vpnhood-server/docs/reverse-proxy/\">un reverse proxy</a> le permet.",
   "mgr_box_title": "Obtenez un certificat de confiance gratuit avec VpnHood! MANAGER",
-  "mgr_box_desc": "Indiquez votre domaine dans l'interface web gratuite : elle obtient un certificat Let's Encrypt et le renouvelle automatiquement avant son expiration.",
+  "mgr_box_desc": "Indiquez votre domaine dans l'interface web : elle obtient un certificat Let's Encrypt et le renouvelle automatiquement avant son expiration.",
   "mgr_box_cta": "Utiliser votre domaine dans MANAGER",
   "next_title": "Étapes suivantes",
   "next_domain": "Utiliser un nom de domaine et un certificat de confiance"

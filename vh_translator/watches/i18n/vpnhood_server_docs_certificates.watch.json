@@ -26,7 +26,7 @@
     "domain_host": "Use a host of the domain, such as <code>[domain_api_example]</code>. Many sites keep an API or their files on a host of their own that refuses strangers, as your server does, so it looks ordinary. <code>[domain_www_example]</code> stays yours for any site you like, on any hosting.",
     "domain_limit": "A domain does not get your users past a blocked address, though, as it leads to the same server. Only <a href=\"/vpnhood-server/docs/reverse-proxy/\">a reverse proxy</a> does that.",
     "mgr_box_title": "Get a free trusted certificate with VpnHood! MANAGER",
-    "mgr_box_desc": "Give the free web panel your domain, and it gets a certificate from Let's Encrypt and renews it by itself before it expires.",
+    "mgr_box_desc": "Give the web panel your domain, and it gets a certificate from Let's Encrypt and renews it by itself before it expires.",
     "mgr_box_cta": "Use your domain in MANAGER",
     "next_title": "Next steps",
     "next_domain": "Use a domain name and a trusted certificate"

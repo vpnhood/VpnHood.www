@@ -41,7 +41,7 @@
   "addresses_none": "将 <code>[setting_reverse_proxy_providers]</code> 设为 <code>[json_empty_list]</code> 即不信任任何服务商（包括 Cloudflare），此时您的服务器也不会获取任何列表。",
   "addresses_log": "当您的服务器忽略该标头时，会在日志中记录发送该标头的地址及原因。",
   "mgr_box_title": "使用 VpnHood! MANAGER 让所有应用经由代理连接",
-  "mgr_box_desc": "独立服务器总会把自身地址写入密钥。而在免费的网页控制面板中，点击几下即可将其移除，让所有应用都通过代理连接。",
+  "mgr_box_desc": "独立服务器总会把自身地址写入密钥。而在网页控制面板中，点击几下即可将其移除，让所有应用都通过代理连接。",
   "mgr_box_cta": "在 MANAGER 中设置",
   "file_title": "在独立服务器上",
   "file_cert": "请确保服务器使用该域名的证书，并将 <code>[setting_is_valid_host_name]</code> 设为 <code>[json_true]</code>：<a href=\"/vpnhood-server/docs/domain/#standalone\">使用域名和受信任的证书</a>中介绍了具体操作。此后生成的密钥都会包含该域名，应用会解析并使用它。",

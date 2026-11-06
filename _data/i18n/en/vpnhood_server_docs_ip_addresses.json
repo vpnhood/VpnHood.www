@@ -11,7 +11,7 @@
   "when_several": "The machine has more than one public IP address, and the keys should carry a particular one.",
   "when_lookup": "The lookup fails, for example because the machine cannot reach the web service. A standalone server then does not start, and its log says <code>[log_public_endpoints]</code>",
   "mgr_box_title": "Easily manage your servers' addresses with VpnHood! MANAGER",
-  "mgr_box_desc": "Instead of editing the file below, let the free web panel find each server's address by itself, and change it with a few clicks when you need another.",
+  "mgr_box_desc": "Instead of editing the file below, let the web panel find each server's address by itself, and change it with a few clicks when you need another.",
   "mgr_box_cta": "Set the addresses in MANAGER",
   "file_title": "On a standalone server",
   "file_desc": "The server reads its settings from <code>[server_appsettings]</code>. A new install has no such file: create it, and from then on the server uses it in place of the settings it was installed with. Two settings under <code>[setting_file_access_manager]</code> decide the addresses:",

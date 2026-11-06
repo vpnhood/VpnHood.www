@@ -38,7 +38,7 @@
   "need_server_title": "Ein Server",
   "need_server_desc": "Ein VPS oder Dedicated Server mit Linux oder Windows, der die <a href=\"/vpnhood-server/docs/requirements/\">Systemanforderungen</a> erfüllt. Das ist das Einzige, was Geld kostet – zahlbar direkt an Ihren Cloud-Anbieter, nicht an uns.",
   "need_account_title": "Ein Google-Konto",
-  "need_account_desc": "Dient zur Anmeldung im VpnHood! MANAGER – dem kostenlosen Panel, das Ihre Server automatisch einrichtet und verwaltet.",
+  "need_account_desc": "Dient zur Anmeldung im VpnHood! MANAGER – dem Panel, das Ihre Server automatisch einrichtet und verwaltet.",
   "need_skills_title": "Keine Administrator-Vorkenntnisse nötig",
   "need_skills_desc": "Die Installation erfolgt über einen einzigen Befehl oder indem Sie dem Panel einfach Ihre SSH-Zugangsdaten übergeben.",
   "need_domain_title": "Eine Domain – optional",

@@ -24,7 +24,7 @@
   "domain_host": "Alan adınızın <code>[domain_api_example]</code> gibi bir ana bilgisayar adını kullanın. Birçok site API'sini veya dosyalarını, sunucunuz gibi yabancıları geri çeviren ayrı bir ana bilgisayar adında tutar; bu yüzden bu ad sıradan görünür. <code>[domain_www_example]</code> adresi ise herhangi bir barındırma hizmetindeki istediğiniz bir site için kullanımınıza açık kalır.",
   "domain_limit": "Yine de bir alan adı, aynı sunucuyu işaret ettiği için kullanıcılarınızın engellenmiş bir adresi aşmasını sağlamaz. Bunu yalnızca <a href=\"/vpnhood-server/docs/reverse-proxy/\">bir ters proxy</a> sağlar.",
   "mgr_box_title": "VpnHood! MANAGER ile ücretsiz güvenilir bir sertifika alın",
-  "mgr_box_desc": "Alan adınızı ücretsiz web paneline girin; panel Let's Encrypt üzerinden bir sertifika alır ve süresi dolmadan otomatik olarak yeniler.",
+  "mgr_box_desc": "Alan adınızı web paneline girin; panel Let's Encrypt üzerinden bir sertifika alır ve süresi dolmadan otomatik olarak yeniler.",
   "mgr_box_cta": "Alan adınızı MANAGER'da kullanın",
   "next_title": "Sonraki Adımlar",
   "next_domain": "Alan adı ve güvenilir sertifika kullanın"

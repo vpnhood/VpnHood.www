@@ -14,7 +14,7 @@
   "run_label": "Sunucu senin, karar senin",
   "run_title": "Çalıştırmanın iki yolu",
   "run_manager_title": "VpnHood! MANAGER ile Yönetilen",
-  "run_manager_desc": "Ücretsiz yönetim paneli sunucuyu sizin için kurar, canlı izler ve erişim anahtarları oluşturur. Birden fazla sunucu eklediğinizde kullanıcı yükünü otomatik dengeler.",
+  "run_manager_desc": "Yönetim paneli sunucuyu sizin için kurar, canlı izler ve erişim anahtarları oluşturur. Birden fazla sunucu eklediğinizde kullanıcı yükünü otomatik dengeler.",
   "run_solo_title": "Bağımsız",
   "run_solo_desc": "Panele gerek yok: Yerleşik ve dosya tabanlı erişim yöneticisi sayesinde tek bir sunucu, basit bir ayar dosyası üzerinden kendi anahtarlarını oluşturabilir. Linux'ta <code>[vhserver_gen]</code> komutu yeni bir anahtar üretir.",
   "setup_guide": "Kurulum kılavuzu: Linux veya Docker'a kurun",

@@ -11,7 +11,7 @@
   "when_several": "Makinenin birden fazla genel IP adresi varsa ve anahtarların belirli bir adresi taşıması gerekiyorsa.",
   "when_lookup": "Otomatik adres tespiti başarısız olursa (örneğin makine web servisine erişemiyorsa). Bu durumda tek başına çalışan sunucu başlatılamaz ve günlüğünde <code>[log_public_endpoints]</code> ifadesi yer alır.",
   "mgr_box_title": "Sunucu adreslerinizi VpnHood! MANAGER ile kolayca yönetin",
-  "mgr_box_desc": "Aşağıdaki dosyayı düzenlemek yerine, bırakın ücretsiz web paneli her sunucunun adresini kendi bulsun; değişiklik gerektiğinde ise birkaç tıklamayla güncelleyin.",
+  "mgr_box_desc": "Aşağıdaki dosyayı düzenlemek yerine, bırakın web paneli her sunucunun adresini kendi bulsun; değişiklik gerektiğinde ise birkaç tıklamayla güncelleyin.",
   "mgr_box_cta": "Adresleri MANAGER ile Ayarlayın",
   "file_title": "Tek başına çalışan sunucularda",
   "file_desc": "Sunucu ayarlarını <code>[server_appsettings]</code> dosyasından okur. Yeni bir kurulumda bu dosya bulunmaz: Dosyayı oluşturduğunuzda, sunucu artık varsayılan kurulum ayarları yerine bu dosyayı kullanır. <code>[setting_file_access_manager]</code> altındaki iki ayar adresleri belirler:",

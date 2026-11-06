@@ -24,7 +24,7 @@
   "domain_host": "Nutzen Sie einen Hostnamen Ihrer Domain, etwa <code>[domain_api_example]</code>. Bei vielen Websites liegen eine API oder die Dateien unter einem eigenen Hostnamen, unter dem Unbekannte abgewiesen werden, genau wie bei Ihrem Server. Deshalb wirkt das ganz gewöhnlich. <code>[domain_www_example]</code> bleibt frei für eine Website Ihrer Wahl, bei einem beliebigen Hosting-Anbieter.",
   "domain_limit": "Eine Domain bringt Ihre Nutzer jedoch nicht an einer blockierten Adresse vorbei, da sie zum selben Server führt. Das schafft nur <a href=\"/vpnhood-server/docs/reverse-proxy/\">ein Reverse-Proxy</a>.",
   "mgr_box_title": "Kostenloses vertrauenswürdiges Zertifikat mit VpnHood! MANAGER erhalten",
-  "mgr_box_desc": "Tragen Sie Ihre Domain im kostenlosen Web-Panel ein: Es holt ein Zertifikat von Let's Encrypt und erneuert es rechtzeitig vor Ablauf selbstständig.",
+  "mgr_box_desc": "Tragen Sie Ihre Domain im Web-Panel ein: Es holt ein Zertifikat von Let's Encrypt und erneuert es rechtzeitig vor Ablauf selbstständig.",
   "mgr_box_cta": "Eigene Domain im MANAGER nutzen",
   "next_title": "Nächste Schritte",
   "next_domain": "Domainnamen und vertrauenswürdiges Zertifikat nutzen"

@@ -11,7 +11,7 @@
   "when_several": "设备拥有多个公网 IP 地址，且您希望访问密钥使用指定的某一个 IP。",
   "when_lookup": "自动查询失败（例如设备无法访问外部 Web 服务）。此时独立服务器将无法启动，并在日志中记录 <code>[log_public_endpoints]</code>。",
   "mgr_box_title": "使用 VpnHood! MANAGER 轻松管理服务器地址",
-  "mgr_box_desc": "无需编辑下方的文件，免费的网页控制面板会自动找到每台服务器的地址；需要更换地址时，点击几下即可完成。",
+  "mgr_box_desc": "无需编辑下方的文件，网页控制面板会自动找到每台服务器的地址；需要更换地址时，点击几下即可完成。",
   "mgr_box_cta": "在 MANAGER 中配置地址",
   "file_title": "在独立服务器上配置",
   "file_desc": "服务器从 <code>[server_appsettings]</code> 读取配置。全新安装后该文件并不存在：创建该文件后，服务器将优先使用其中的配置。在 <code>[setting_file_access_manager]</code> 下有两个配置项控制地址：",

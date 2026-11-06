@@ -10,7 +10,7 @@
   "req_domain": "Un domaine ou sous-domaine sous votre contrôle, tel que <code>[domain_example]</code>. Choisissez un nom unique (sans caractère générique/wildcard) et évitez le terme « VPN » : les applications l'envoient en clair au début de chaque connexion, où il est visible sur le réseau.",
   "req_dns": "Un enregistrement DNS pointant directement vers l'IP de connexion du serveur : un enregistrement A, et un enregistrement AAAA si le serveur dispose d'une adresse IPv6. Pour utiliser Cloudflare devant le serveur, terminez d'abord cette étape avant d'activer son proxy.",
   "mgr_box_title": "Utilisez facilement votre propre domaine avec VpnHood! MANAGER",
-  "mgr_box_desc": "Oubliez ces étapes : laissez l'interface web gratuite obtenir un certificat Let's Encrypt de confiance pour votre domaine et le renouveler automatiquement.",
+  "mgr_box_desc": "Oubliez ces étapes : laissez l'interface web obtenir un certificat Let's Encrypt de confiance pour votre domaine et le renouveler automatiquement.",
   "mgr_box_cta": "Utiliser votre domaine dans MANAGER",
   "file_title": "Sur un serveur autonome",
   "file_cert": "Un serveur autonome ne peut pas obtenir de certificat automatiquement. Procurez-vous-en un pour le domaine auprès d'une autorité de certification (fichier PFX avec sa clé privée), puis remplacez <code>[server_cert_pfx]</code> en conservant le même nom.",

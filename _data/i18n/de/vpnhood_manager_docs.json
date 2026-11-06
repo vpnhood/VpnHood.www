@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! MANAGER Dokumentation | VpnHood!",
-  "meta_description": "So nutzen Sie VpnHood! MANAGER, das kostenlose Web-Panel, das Ihre VPN-Server installiert, in Serverfarmen betreibt und ihre Zugangsschlüssel ausstellt.",
+  "meta_description": "So nutzen Sie VpnHood! MANAGER, das Web-Panel, das Ihre VPN-Server installiert, die Nutzer auf sie verteilt und ihre Zugangsschlüssel ausstellt.",
   "title": "VpnHood! MANAGER Dokumentation",
-  "lead": "VpnHood! MANAGER ist das kostenlose Web-Panel, das Ihre Server installiert, in <a href=\"/vpnhood-manager/docs/farms/\">Serverfarmen</a> betreibt und ihre Zugangsschlüssel ausstellt. Diese Seiten erklären seine Ansichten. Um Ihren ersten Server einzurichten, beginnen Sie mit <a href=\"/vpnhood-manager/docs/add-server/\">Server hinzufügen</a>."
+  "lead": "VpnHood! MANAGER ist das Web-Panel, das Ihre Server installiert, die Nutzer in <a href=\"/vpnhood-manager/docs/farms/\">Serverfarmen</a> auf sie verteilt und ihre Zugangsschlüssel ausstellt. Diese Seiten erklären seine Ansichten. Um Ihren ersten Server einzurichten, beginnen Sie mit <a href=\"/vpnhood-manager/docs/add-server/\">Server hinzufügen</a>."
 }

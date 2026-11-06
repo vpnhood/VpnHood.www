@@ -65,7 +65,7 @@
   "caption_probe": "只有使用 VpnHood 9.1 或更高版本的应用才能连接",
   "probe_warn": "更旧的应用将无法连接，也不会收到任何更新提示。请等到用户都完成更新；在此之前，请将该设置保留为默认值 <code>[min_protocol_default]</code>，即允许所有应用连接。",
   "mgr_box_title": "使用 VpnHood! MANAGER 轻松为所有服务器应用这些设置",
-  "mgr_box_desc": "无需编辑下方每台服务器的文件，只需在免费的网页控制面板中设置一次：服务器配置方案会将这些设置发送到使用该配置方案的各个集群中的每台服务器。",
+  "mgr_box_desc": "无需编辑下方每台服务器的文件，只需在网页控制面板中设置一次：服务器配置方案会将这些设置发送到使用该配置方案的各个集群中的每台服务器。",
   "mgr_box_cta": "在 MANAGER 中设置",
   "file_title": "在独立服务器上",
   "censored_standalone": "请将<a href=\"#censored-network\">适用于受审查网络的设置</a>放在 <code>[server_appsettings]</code> 中的 <code>[setting_file_access_manager]</code> 下，然后重启服务器。",

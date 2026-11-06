@@ -41,7 +41,7 @@
   "addresses_none": "<code>[setting_reverse_proxy_providers]</code> défini sur <code>[json_empty_list]</code> ne fait confiance à aucun fournisseur, Cloudflare compris, et votre serveur ne récupère alors aucune liste.",
   "addresses_log": "Lorsque votre serveur ignore l'en-tête, son journal indique l'adresse qui l'a envoyé, et pourquoi.",
   "mgr_box_title": "Faites passer chaque application par le proxy avec VpnHood! MANAGER",
-  "mgr_box_desc": "Un serveur autonome inclut toujours ses propres adresses dans ses clés. Dans l'interface web gratuite, vous les retirez en quelques clics, pour que chaque application se connecte via le proxy.",
+  "mgr_box_desc": "Un serveur autonome inclut toujours ses propres adresses dans ses clés. Dans l'interface web, vous les retirez en quelques clics, pour que chaque application se connecte via le proxy.",
   "mgr_box_cta": "Configurer dans MANAGER",
   "file_title": "Sur un serveur autonome",
   "file_cert": "Vérifiez que le serveur utilise bien le certificat du domaine, avec <code>[setting_is_valid_host_name]</code> défini sur <code>[json_true]</code> : le guide <a href=\"/vpnhood-server/docs/domain/#standalone\">Utiliser un nom de domaine et un certificat de confiance</a> vous montre comment faire. Les clés créées ensuite intègrent le domaine, que les applications interrogent directement.",

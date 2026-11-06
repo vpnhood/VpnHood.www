@@ -11,7 +11,7 @@
   "when_several": "Das System mehrere öffentliche IP-Adressen besitzt und die Schlüssel eine bestimmte Adresse enthalten sollen.",
   "when_lookup": "Die Adressabfrage fehlschlägt, z. B. weil das System den Webdienst nicht erreicht. Ein eigenständiger Server startet dann nicht, und sein Protokoll meldet <code>[log_public_endpoints]</code>",
   "mgr_box_title": "Serveradressen einfach verwalten mit VpnHood! MANAGER",
-  "mgr_box_desc": "Statt die Datei unten manuell zu bearbeiten, erkennt das kostenlose Web-Panel jede Serveradresse automatisch – und lässt sich mit wenigen Klicks anpassen.",
+  "mgr_box_desc": "Statt die Datei unten manuell zu bearbeiten, erkennt das Web-Panel jede Serveradresse automatisch – und lässt sich mit wenigen Klicks anpassen.",
   "mgr_box_cta": "Adressen im MANAGER festlegen",
   "file_title": "Auf einem eigenständigen Server",
   "file_desc": "Der Server liest Einstellungen aus <code>[server_appsettings]</code>. Erstellen Sie diese Datei bei einer Neuinstallation einfach neu. Zwei Optionen unter <code>[setting_file_access_manager]</code> steuern die Adressen:",

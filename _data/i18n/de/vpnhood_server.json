@@ -14,7 +14,7 @@
   "run_label": "Ihr Server, Ihre Entscheidung",
   "run_title": "Zwei Wege zur Einrichtung",
   "run_manager_title": "Verwaltet über VpnHood! MANAGER",
-  "run_manager_desc": "Das kostenlose Web-Panel installiert den Server für Sie, überwacht ihn live und stellt Ihre Zugangsschlüssel aus. Wenn Sie weitere Server hinzufügen, verteilt es die Nutzer auf alle. Für die meisten der einfachste Weg.",
+  "run_manager_desc": "Das Web-Panel installiert den Server für Sie, überwacht ihn live und stellt Ihre Zugangsschlüssel aus. Wenn Sie weitere Server hinzufügen, verteilt es die Nutzer auf alle. Für die meisten der einfachste Weg.",
   "run_solo_title": "Eigenständig",
   "run_solo_desc": "Kein Panel erforderlich: Eine integrierte, dateibasierte Zugriffsverwaltung ermöglicht es einem einzelnen Server, eigene Schlüssel direkt über eine simple Konfigurationsdatei zu erstellen. Unter Linux genügt <code>[vhserver_gen]</code>, um einen neuen zu erzeugen.",
   "setup_guide": "Installationsanleitung: Unter Linux oder in Docker einrichten",

@@ -38,7 +38,7 @@
   "need_server_title": "一台服务器",
   "need_server_desc": "运行 Linux 或 Windows、符合<a href=\"/vpnhood-server/docs/requirements/\">系统要求</a>的 VPS 或独立服务器。这是唯一产生费用的部分，且费用直接支付给云服务商，而非我们。",
   "need_account_title": "一个 Google 账号",
-  "need_account_desc": "用于登录 VpnHood! MANAGER。这是一个免费面板，可为您自动安装并运行服务器。",
+  "need_account_desc": "用于登录 VpnHood! MANAGER。这是一个面板，可为您自动安装并运行服务器。",
   "need_skills_title": "无需系统运维经验",
   "need_skills_desc": "只需粘贴单条命令即可完成安装，或者直接向面板提供 SSH 登录信息，让它自动搞定。",
   "need_domain_title": "域名（可选）",

@@ -10,7 +10,7 @@
   "req_domain": "Um domínio ou subdomínio sob seu controle, como <code>[domain_example]</code>. Use um nome direto (sem curingas/wildcards) e evite termos como \"VPN\", pois os aplicativos o enviam em texto aberto no início da conexão.",
   "req_dns": "Um registro DNS apontando direto para o IP do servidor: tipo A (e AAAA caso use IPv6). Se for usar a Cloudflare, configure esta página primeiro antes de ativar o proxy dela.",
   "mgr_box_title": "Use seu próprio domínio facilmente com o VpnHood! MANAGER",
-  "mgr_box_desc": "Em vez de seguir os passos abaixo, deixe o painel web gratuito obter um certificado confiável da Let's Encrypt para o seu domínio e renová-lo automaticamente antes de expirar.",
+  "mgr_box_desc": "Em vez de seguir os passos abaixo, deixe o painel web obter um certificado confiável da Let's Encrypt para o seu domínio e renová-lo automaticamente antes de expirar.",
   "mgr_box_cta": "Use seu domínio no MANAGER",
   "file_title": "Em um servidor independente",
   "file_cert": "Um servidor independente não consegue obter um certificado sozinho. Obtenha um para o domínio com uma autoridade certificadora, como arquivo PFX com a chave privada, e coloque-o no lugar de <code>[server_cert_pfx]</code>, com o mesmo nome.",

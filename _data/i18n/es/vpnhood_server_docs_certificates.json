@@ -24,7 +24,7 @@
   "domain_host": "Usa un host del dominio, como <code>[domain_api_example]</code>. Muchos sitios tienen una API o sus archivos en un host propio que rechaza a los desconocidos, igual que tu servidor, así que parece normal. <code>[domain_www_example]</code> queda libre para el sitio que quieras, en cualquier alojamiento.",
   "domain_limit": "Sin embargo, un dominio no ayuda a tus usuarios a eludir una dirección bloqueada, ya que lleva al mismo servidor. Solo <a href=\"/vpnhood-server/docs/reverse-proxy/\">un proxy inverso</a> lo consigue.",
   "mgr_box_title": "Obtén un certificado de confianza gratuito con VpnHood! MANAGER",
-  "mgr_box_desc": "Introduce tu dominio en el panel web gratuito y este obtendrá un certificado de Let's Encrypt y lo renovará automáticamente antes de que caduque.",
+  "mgr_box_desc": "Introduce tu dominio en el panel web y este obtendrá un certificado de Let's Encrypt y lo renovará automáticamente antes de que caduque.",
   "mgr_box_cta": "Usar tu dominio en MANAGER",
   "next_title": "Próximos pasos",
   "next_domain": "Usa un nombre de dominio y un certificado de confianza"

@@ -41,7 +41,7 @@
   "addresses_none": "<code>[setting_reverse_proxy_providers]</code> değeri <code>[json_empty_list]</code> olarak ayarlandığında Cloudflare dahil hiçbir sağlayıcıya güvenilmez ve sunucunuz hiçbir liste indirmez.",
   "addresses_log": "Sunucunuz başlığı yok saydığında, günlüğünde başlığı gönderen adresi ve nedenini belirtir.",
   "mgr_box_title": "VpnHood! MANAGER ile tüm uygulamaları proxy üzerinden yönlendirin",
-  "mgr_box_desc": "Bağımsız sunucular kendi adreslerini anahtarlara otomatik ekler. Ücretsiz web panelinden birkaç tıkla bu adresleri kaldırabilir, tüm uygulamaların proxy üzerinden bağlanmasını sağlayabilirsiniz.",
+  "mgr_box_desc": "Bağımsız sunucular kendi adreslerini anahtarlara otomatik ekler. Web panelinden birkaç tıkla bu adresleri kaldırabilir, tüm uygulamaların proxy üzerinden bağlanmasını sağlayabilirsiniz.",
   "mgr_box_cta": "MANAGER ile Yapılandırın",
   "file_title": "Bağımsız bir sunucuda",
   "file_cert": "Sunucunun alan adı sertifikasını kullandığından ve <code>[setting_is_valid_host_name]</code> değerinin <code>[json_true]</code> olarak ayarlandığından emin olun. Adımlar için <a href=\"/vpnhood-server/docs/domain/#standalone\">Alan adı ve güvenilir sertifika kullanın</a> kılavuzuna bakın. Bu işlemden sonra oluşturulan anahtarlar alan adını içerir ve uygulamalar bu adresi çözer.",

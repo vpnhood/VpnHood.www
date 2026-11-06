@@ -24,7 +24,7 @@
   "domain_host": "请使用该域名下的主机名，例如 <code>[domain_api_example]</code>。许多网站把 API 或文件放在单独的主机名下，这样的主机名会拒绝陌生访问者，您的服务器也一样，因此它看起来很普通。<code>[domain_www_example]</code> 仍可由您自由使用，放您喜欢的任意网站，托管在哪里都可以。",
   "domain_limit": "不过，域名并不能让您的用户绕过已被封锁的地址，因为它仍指向同一台服务器。只有<a href=\"/vpnhood-server/docs/reverse-proxy/\">反向代理</a>才能做到这一点。",
   "mgr_box_title": "使用 VpnHood! MANAGER 免费获取受信任的证书",
-  "mgr_box_desc": "只需将您的域名提供给免费的网页控制面板，它就会从 Let's Encrypt 获取证书，并在证书到期前自动续期。",
+  "mgr_box_desc": "只需将您的域名提供给网页控制面板，它就会从 Let's Encrypt 获取证书，并在证书到期前自动续期。",
   "mgr_box_cta": "在 MANAGER 中使用您的域名",
   "next_title": "后续步骤",
   "next_domain": "使用域名和受信任的证书"

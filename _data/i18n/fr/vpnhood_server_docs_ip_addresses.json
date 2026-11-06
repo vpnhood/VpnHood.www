@@ -11,7 +11,7 @@
   "when_several": "La machine possède plusieurs adresses IP publiques et les clés doivent utiliser une adresse précise.",
   "when_lookup": "La détection automatique échoue, par exemple si la machine ne parvient pas à joindre le service web. Un serveur autonome ne démarrera pas et indiquera <code>[log_public_endpoints]</code> dans ses journaux.",
   "mgr_box_title": "Gérez facilement les adresses de vos serveurs avec VpnHood! MANAGER",
-  "mgr_box_desc": "Au lieu de modifier le fichier ci-dessous, laissez l'interface web gratuite détecter automatiquement l'adresse de chaque serveur et changez-en en quelques clics.",
+  "mgr_box_desc": "Au lieu de modifier le fichier ci-dessous, laissez l'interface web détecter automatiquement l'adresse de chaque serveur et changez-en en quelques clics.",
   "mgr_box_cta": "Configurer les adresses dans MANAGER",
   "file_title": "Sur un serveur autonome",
   "file_desc": "Le serveur lit sa configuration dans <code>[server_appsettings]</code>. Ce fichier n'existant pas après une nouvelle installation, créez-le pour remplacer la configuration par défaut. Deux paramètres sous <code>[setting_file_access_manager]</code> permettent de définir les adresses :",
