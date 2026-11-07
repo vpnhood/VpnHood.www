@@ -483,11 +483,21 @@ button.vh-mega-toggle{
     display: flex;
     align-items: center;
 }
+// The selected item is not --purple-300: white on that is 3.8:1, too little for 14px text.
 .vh-lang-menu .dropdown-menu,
 .vh-theme-menu .dropdown-menu{
-    --bs-dropdown-link-active-bg: var(--purple-300);
+    --bs-dropdown-link-active-bg: var(--purple-470);
     min-width: 9rem;
     font-size: 14px;
+}
+// High-contrast mode drops backgrounds, and a background is all that marks the selected item.
+@media (forced-colors: active){
+    .vh-lang-menu .dropdown-item.active,
+    .vh-theme-menu .dropdown-item.active{
+        forced-color-adjust: none;
+        background-color: Highlight;
+        color: HighlightText;
+    }
 }
 .vh-theme-menu .dropdown-item{
     display: flex;

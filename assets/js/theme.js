@@ -108,6 +108,10 @@
     mode = item.getAttribute("data-vh-theme-set");
     apply();
     store();
+    // The menu closes and hides the item that had the focus, which would drop a keyboard
+    // user back to the page itself.
+    var toggle = item.closest(".vh-theme-menu").querySelector(".vh-theme-toggle");
+    if (toggle) toggle.focus();
   });
 
   if (systemLight && systemLight.addEventListener) {

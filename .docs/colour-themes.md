@@ -65,6 +65,12 @@ visitor's mode, through `data-vh-theme-mode`, not the theme on screen. Strings l
 `chrome.json` (`theme_change`, `theme_default`, `theme_light`, `theme_dark`) but fall back to
 English **per key**, so a not-yet-translated `chrome.json` can't leave the button unnamed.
 
+Three things keep it usable, and the language menu shares the first two. The selected item's
+background is `--purple-470`: white on `--purple-300` is only 3.8:1. In high-contrast mode
+(`forced-colors`) backgrounds are dropped, so the selected item takes the system's `Highlight`
+colours. `theme.js` puts the focus back on the button after a choice, as closing the menu hides
+the item that had it.
+
 ## Two layers, and only two
 
 `_sass/theme/_default.scss` holds the raw brand ramp (the **dark** values) plus the semantic
