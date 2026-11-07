@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the two /reseller/ diagrams as translatable Liquid includes.
 
-Writes `_includes/diagrams/partner-flow.svg` and `_includes/diagrams/white-label-layers.svg`.
+Writes `_includes/diagrams/partner-flow.svg` and `_includes/diagrams/white-label-flow.svg`.
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVG.
 
 Same blackboard style, and the same two reasons for it, as
@@ -27,8 +27,10 @@ Each diagram states one idea and no more:
                       chain; the customer only ever meets the partner's store. Our side is
                       drawn as "the VpnHood! STORE" because that is what a partner sees -
                       the Partner Hub is our implementation detail, not their vocabulary.
-  white-label-layers  every sale, wherever it was made, lands in the partner's store,
+  white-label-flow    every sale, wherever it was made, lands in the partner's store,
                       which gets the key from us and hands it to the partner's own app.
+                      The website is always there; the two app stores are drawn dashed
+                      and marked optional, as in-app purchases are the partner's choice.
 
 Run from the repo root:  python tools/make-reseller-diagrams.py
 """
@@ -194,24 +196,30 @@ def partner_flow() -> None:
 
 
 # ===========================================================================
-# 2. white-label-layers - three ways to buy, one store, our codes, their app
+# 2. white-label-flow - the website and the optional stores, one store, our codes, their app
 # ===========================================================================
-def white_label_layers() -> None:
+def white_label_flow() -> None:
     global rnd
     rnd = random.Random(21)
     W, H = 940, 790
-    T = lambda k: "{{ t.%s | default: vh_layers_en.%s }}" % (k, k)  # noqa: E731
+    T = lambda k: "{{ t.%s | default: vh_brand_en.%s }}" % (k, k)  # noqa: E731
     parts = []
 
     parts.append(txt(W / 2, 58, T("diagram_title"), size=30))
 
-    # --- where the customer buys: three doors into one store ----------------------
+    # --- where the customer buys: the website, and the stores if the partner adds them ---
     TW, TH, TY = 230, 92, 118
     TXS = [60, 355, 650]
     parts.append(txt(W / 2, TY - 22, T("diagram_buy"), size=16, fill=CHALK_DIM))
-    for x, key in zip(TXS, ("diagram_web", "diagram_play", "diagram_apple")):
-        parts.append(box(x, TY, TW, TH, CHALK, 2.8))
-        parts.append(txt(x + TW / 2, TY + 56, T(key), size=21))
+    DOORS = list(zip(TXS, ("diagram_web", "diagram_play", "diagram_apple"), (False, True, True)))
+    for x, key, optional in DOORS:
+        if optional:
+            parts.append(box(x, TY, TW, TH, CHALK_DIM, 2.6, dash="11 9"))
+            parts.append(txt(x + TW / 2, TY + 44, T(key), size=21))
+            parts.append(txt(x + TW / 2, TY + 72, T("diagram_optional"), size=15, fill=CHALK_DIM))
+        else:
+            parts.append(box(x, TY, TW, TH, CHALK, 2.8))
+            parts.append(txt(x + TW / 2, TY + 56, T(key), size=21))
 
     # --- the partner's store, the one place every order lands ----------------------
     SW, SH, SX, SY = 440, 110, 250, 318
@@ -220,9 +228,10 @@ def white_label_layers() -> None:
     parts.append(txt(SCX, SY + 50, T("diagram_store"), size=25))
     parts.append(txt(SCX, SY + 80, T("diagram_store_sub"), size=16, fill=CHALK_DIM))
     parts.append(txt(SX + SW + 22, SY + 60, T("diagram_yours"), size=19, fill=VIOLET, anchor="start"))
-    for x in TXS:
+    for x, _, optional in DOORS:
         parts.append(arrow(x + TW / 2, TY + TH + 12, SCX + (x + TW / 2 - W / 2) * 0.42, SY - 12,
-                           stroke=CHALK, sw=2.6))
+                           stroke=CHALK_DIM if optional else CHALK, sw=2.6,
+                           dash="11 9" if optional else None))
 
     # --- us, under the store's left half; the app, under its right half --------------
     LW, LH, LY = 320, 110, 566
@@ -249,8 +258,8 @@ def white_label_layers() -> None:
     parts.append(txt(AX + LW / 2 + 16, SY + SH + 72, T("diagram_delivers_sub"), size=15, fill=AMBER, anchor="start"))
 
     parts.append(txt(W / 2, H - 36, T("diagram_caption"), size=18, fill=AMBER))
-    render("white-label-layers", "reseller_white_label", "vh_layers_en", W, H, "vhLayers", parts)
+    render("white-label-flow", "reseller_white_label", "vh_brand_en", W, H, "vhBrand", parts)
 
 
 partner_flow()
-white_label_layers()
+white_label_flow()
