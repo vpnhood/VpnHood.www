@@ -14,7 +14,6 @@
   "need_nft": "لـ Kill Switch، <code>[pkg_nftables]</code> الذي يضيفه برنامج التثبيت، وcgroup v2. وبدونهما، يخبرك التطبيق بذلك ولا يتصل ما دام Kill Switch مفعّلًا.",
   "need_quic": "لـ QUIC، MsQuic الذي يضيفه برنامج التثبيت. وحيث لا يستطيع ذلك، كما في Amazon Linux 2023، يتصل التطبيق دون QUIC.",
   "need_desktop": "للنافذة، سطح مكتب. ويضيف برنامج التثبيت المكتبات التي تحتاجها النافذة. وبدون سطح مكتب، تحصل على خدمة VPN والأوامر.",
-  "need_connect": "يسجّل VpnHood! CONNECT الدخول من نافذته، لذا يحتاج حاليًا إلى سطح مكتب.",
   "next_client": "تثبيت VpnHood! CLIENT على Linux",
   "next_connect": "تثبيت VpnHood! CONNECT على Linux"
 }

@@ -2,10 +2,13 @@
   "meta_title": "Installa VpnHood! CONNECT su Linux | VpnHood!",
   "meta_description": "Installa VpnHood! CONNECT su Linux con un solo comando, accedi al tuo account Premium e connettiti dalla sua finestra o dalla riga di comando.",
   "title": "Installa VpnHood! CONNECT su Linux",
-  "lead": "Un solo comando installa l'app, con la sua finestra e una serie di comandi. Accedi una volta dalla finestra, poi connettiti da lì o con i comandi.",
+  "lead": "Un solo comando installa l'app, con la sua finestra e una serie di comandi. Accedi una volta dalla finestra o con i comandi, poi connettiti come preferisci, con o senza desktop.",
   "before_need": "Un piano Premium, perché la versione per Linux non include server gratuiti: <a href=\"/free-vpn/go-premium/\">passa a Premium</a>.",
   "connect_desktop": "Apri [app] dal menu delle applicazioni, accedi al tuo account Premium e connettiti.",
-  "connect_terminal": "Dopo aver effettuato l'accesso, puoi anche connetterti da un terminale e controllare la connessione:",
-  "connect_note": "L'accesso richiede la finestra dell'app, quindi su una macchina senza desktop non puoi ancora usare [app]. Lì puoi usare <a href=\"/vpnhood-client/docs/linux/\">VpnHood! CLIENT</a> con il tuo server.",
+  "connect_terminal": "Da un terminale, o su una macchina senza desktop, accedi, connettiti e controlla la connessione:",
+  "connect_note": "<code>[cmd] sign-in</code> chiede la tua password. Se hai un codice Premium invece di un account, esegui al suo posto <code>[cmd] premium-code</code> con il codice.",
+  "cmd_sign_in": "Accede al tuo account. Chiede la password o la legge dallo standard input.",
+  "cmd_sign_out": "Esce dal tuo account.",
+  "cmd_premium_code": "Imposta il codice Premium con cui l'app si connette. <code>[premium_remove]</code> lo rimuove.",
   "always_on_note": "Always On richiede Premium."
 }

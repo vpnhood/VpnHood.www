@@ -2,10 +2,13 @@
   "meta_title": "Install VpnHood! CONNECT on Linux | VpnHood!",
   "meta_description": "Install VpnHood! CONNECT on Linux with one command, sign in to your Premium account, and connect from its window or the command line.",
   "title": "Install VpnHood! CONNECT on Linux",
-  "lead": "One command installs the app, with its window and a set of commands. Sign in once from the window, then connect from either.",
+  "lead": "One command installs the app, with its window and a set of commands. Sign in once from either, then connect from either, with or without a desktop.",
   "before_need": "A Premium plan, as the Linux version does not have any free servers: <a href=\"/free-vpn/go-premium/\">upgrade to Premium</a>.",
   "connect_desktop": "Open [app] from the application menu, sign in to your Premium account and connect.",
-  "connect_terminal": "Once you have signed in, you can also connect from a terminal, and check the connection:",
-  "connect_note": "Signing in needs the app's window, so a machine with no desktop cannot use [app] yet. There you can use <a href=\"/vpnhood-client/docs/linux/\">VpnHood! CLIENT</a> with your own server.",
+  "connect_terminal": "From a terminal, or on a machine with no desktop, sign in, connect, and check the connection:",
+  "connect_note": "<code>[cmd] sign-in</code> asks for your password. With a premium code instead of an account, run <code>[cmd] premium-code</code> and the code in its place.",
+  "cmd_sign_in": "Signs in to your account. It asks for your password, or reads it from standard input.",
+  "cmd_sign_out": "Signs out of your account.",
+  "cmd_premium_code": "Sets the premium code the app connects with. <code>[premium_remove]</code> takes it off.",
   "always_on_note": "Always On needs Premium."
 }

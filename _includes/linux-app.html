@@ -13,8 +13,8 @@
   Always On and a standard user were tested on Ubuntu 24.04 against a real server, with
   systemd-resolved added. The kill switch was too, but inside containers, with its nft rule's
   cgroup level changed to match them. The installer's options were read from its source, not run.
-  CONNECT has no sign-in command in that release, so it is signed in
-  from the window; www-after-release-todo.md says what changes when the next one ships.
+  CONNECT's sign-in, sign-out and premium-code commands came after that release: built from
+  develop and tested on real servers (2026-11-05), and named here ahead of it (owner, 2026-11-06).
   The install command takes wget or curl, as neither is everywhere: Ubuntu's desktop and Debian's
   default install have no curl, the base systems of Fedora's family, openSUSE and Arch no wget.
   The installers add wget, so no page mentions either (owner, 2026-11-06). The server's pages
@@ -52,7 +52,8 @@
 {{ include.cmd }} connect
 {{ include.cmd }} status{% endcapture -%}
 {%- else -%}
-{%- capture vh_la_first %}{{ include.cmd }} connect
+{%- capture vh_la_first %}{{ include.cmd }} sign-in you@example.com
+{{ include.cmd }} connect
 {{ include.cmd }} status{% endcapture -%}
 {%- endif %}
 {% include terminal.html cmd=vh_la_first %}
@@ -72,6 +73,10 @@
     <tr><td><code>{{ include.cmd }} profile add</code></td><td>{{ t.cmd_profile_add }}</td></tr>
     <tr><td><code>{{ include.cmd }} profile remove</code></td><td>{{ t.cmd_profile_remove }}</td></tr>
     <tr><td><code>{{ include.cmd }} profile set-default</code></td><td>{% include linux-copy.html s=t.cmd_profile_default %}</td></tr>
+{%- else %}
+    <tr><td><code>{{ include.cmd }} sign-in</code></td><td>{{ t.cmd_sign_in }}</td></tr>
+    <tr><td><code>{{ include.cmd }} sign-out</code></td><td>{{ t.cmd_sign_out }}</td></tr>
+    <tr><td><code>{{ include.cmd }} premium-code</code></td><td>{% include linux-copy.html s=t.cmd_premium_code %}</td></tr>
 {%- endif %}
     <tr><td><code>{{ include.cmd }} ui</code></td><td>{{ vh_la.cmd_ui }}</td></tr>
     <tr><td><code>{{ include.cmd }} service status</code></td><td>{{ vh_la.cmd_service_status }}</td></tr>

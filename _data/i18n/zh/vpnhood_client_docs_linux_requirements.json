@@ -14,7 +14,6 @@
   "need_nft": "断网保护需要 <code>[pkg_nftables]</code>（安装程序会添加）和 cgroup v2。缺少它们时，应用会给出提示，并且在断网保护开启期间不会连接。",
   "need_quic": "QUIC 需要 MsQuic（安装程序会添加）。在无法添加的系统上（例如 Amazon Linux 2023），应用会在不使用 QUIC 的情况下连接。",
   "need_desktop": "窗口需要桌面环境。安装程序会添加窗口所需的库。没有桌面环境时，您将获得 VPN 服务和命令。",
-  "need_connect": "VpnHood! CONNECT 需要在窗口中登录，因此目前必须有桌面环境。",
   "next_client": "在 Linux 上安装 VpnHood! CLIENT",
   "next_connect": "在 Linux 上安装 VpnHood! CONNECT"
 }

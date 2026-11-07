@@ -2,10 +2,13 @@
   "meta_title": "Linux'ta VpnHood! CONNECT Kurulumu | VpnHood!",
   "meta_description": "Linux'ta tek bir komutla VpnHood! CONNECT kurulumunu yapın, Premium hesabınızla oturum açın ve uygulama penceresinden veya komut satırından bağlanın.",
   "title": "Linux'a VpnHood! CONNECT Kurun",
-  "lead": "Tek bir komut, uygulamayı penceresi ve bir dizi komutuyla birlikte kurar. Pencereden bir kez oturum açın, ardından pencereden veya komutlarla bağlanın.",
+  "lead": "Tek bir komut, uygulamayı penceresi ve bir dizi komutuyla birlikte kurar. Pencereden veya komutlarla bir kez oturum açın, ardından masaüstü olsun olmasın ikisinden biriyle bağlanın.",
   "before_need": "Premium plan; çünkü Linux sürümünde ücretsiz sunucu bulunmuyor: <a href=\"/free-vpn/go-premium/\">Premium'a geçin</a>.",
   "connect_desktop": "Uygulama menüsünden [app] uygulamasını açın, Premium hesabınızla oturum açın ve bağlanın.",
-  "connect_terminal": "Oturum açtıktan sonra terminalden de bağlanabilir ve bağlantıyı kontrol edebilirsiniz:",
-  "connect_note": "Oturum açmak için uygulama penceresi gerekir, bu nedenle masaüstü olmayan bir makinede [app] henüz kullanılamaz. Böyle bir makinede kendi sunucunuzla <a href=\"/vpnhood-client/docs/linux/\">VpnHood! CLIENT</a> kullanabilirsiniz.",
+  "connect_terminal": "Terminalden veya masaüstü olmayan bir makinede oturum açın, bağlanın ve bağlantıyı kontrol edin:",
+  "connect_note": "<code>[cmd] sign-in</code> parolanızı sorar. Hesap yerine premium kodunuz varsa bunun yerine <code>[cmd] premium-code</code> komutunu kodla birlikte çalıştırın.",
+  "cmd_sign_in": "Hesabınızda oturum açar. Parolanızı sorar veya standart girişten okur.",
+  "cmd_sign_out": "Hesabınızdan çıkış yapar.",
+  "cmd_premium_code": "Uygulamanın bağlanırken kullandığı premium kodu ayarlar. <code>[premium_remove]</code> onu kaldırır.",
   "always_on_note": "Her Zaman Açık için Premium gerekir."
 }

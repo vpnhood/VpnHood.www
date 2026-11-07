@@ -14,7 +14,6 @@
   "need_nft": "Kill Switch için yükleyicinin eklediği <code>[pkg_nftables]</code> ve cgroup v2. Bunlar olmadan uygulama durumu bildirir ve Kill Switch açıkken bağlanmaz.",
   "need_quic": "QUIC için yükleyicinin eklediği MsQuic. Ekleyemediği yerlerde, örneğin Amazon Linux 2023'te, uygulama QUIC olmadan bağlanır.",
   "need_desktop": "Pencere için bir masaüstü. Pencerenin ihtiyaç duyduğu kütüphaneleri yükleyici ekler. Masaüstü olmadan VPN hizmetini ve komutları elde edersiniz.",
-  "need_connect": "VpnHood! CONNECT, penceresinden oturum açar; bu yüzden şimdilik masaüstü gerektirir.",
   "next_client": "Linux'a VpnHood! CLIENT Kurun",
   "next_connect": "Linux'a VpnHood! CONNECT Kurun"
 }

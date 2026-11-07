@@ -2,10 +2,13 @@
   "meta_title": "VpnHood! CONNECT unter Linux installieren | VpnHood!",
   "meta_description": "Installieren Sie VpnHood! CONNECT mit einem Befehl unter Linux, melden Sie sich bei Ihrem Premium-Konto an und verbinden Sie sich über das Fenster oder die Befehlszeile.",
   "title": "VpnHood! CONNECT unter Linux installieren",
-  "lead": "Ein Befehl installiert die App, mit ihrem Fenster und einer Reihe von Befehlen. Melden Sie sich einmal über das Fenster an; danach verbinden Sie sich wahlweise über das Fenster oder die Befehle.",
+  "lead": "Ein Befehl installiert die App, mit ihrem Fenster und einer Reihe von Befehlen. Melden Sie sich einmal über das Fenster oder die Befehle an; danach verbinden Sie sich wahlweise über eines von beiden, mit oder ohne Desktop.",
   "before_need": "Ein Premium-Tarif, da die Linux-Version keine kostenlosen Server enthält: <a href=\"/free-vpn/go-premium/\">Premium werden</a>.",
   "connect_desktop": "Öffnen Sie [app] über das Anwendungsmenü, melden Sie sich bei Ihrem Premium-Konto an und verbinden Sie sich.",
-  "connect_terminal": "Sobald Sie angemeldet sind, können Sie sich auch über ein Terminal verbinden und die Verbindung prüfen:",
-  "connect_note": "Zum Anmelden wird das Fenster der App benötigt, daher kann ein Rechner ohne Desktop [app] noch nicht nutzen. Dort können Sie <a href=\"/vpnhood-client/docs/linux/\">VpnHood! CLIENT</a> mit Ihrem eigenen Server verwenden.",
+  "connect_terminal": "Melden Sie sich in einem Terminal oder auf einem Rechner ohne Desktop an, verbinden Sie sich und prüfen Sie die Verbindung:",
+  "connect_note": "<code>[cmd] sign-in</code> fragt nach Ihrem Passwort. Haben Sie statt eines Kontos einen Premium-Code, führen Sie stattdessen <code>[cmd] premium-code</code> mit dem Code aus.",
+  "cmd_sign_in": "Meldet Sie bei Ihrem Konto an. Fragt nach Ihrem Passwort oder liest es von der Standardeingabe.",
+  "cmd_sign_out": "Meldet Sie von Ihrem Konto ab.",
+  "cmd_premium_code": "Legt den Premium-Code fest, mit dem sich die App verbindet. <code>[premium_remove]</code> entfernt ihn.",
   "always_on_note": "„Immer an“ erfordert Premium."
 }

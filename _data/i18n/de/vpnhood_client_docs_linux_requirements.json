@@ -14,7 +14,6 @@
   "need_nft": "Für den Kill Switch: <code>[pkg_nftables]</code>, das der Installer hinzufügt, und cgroup v2. Ohne sie meldet die App dies und verbindet sich nicht, solange der Kill Switch eingeschaltet ist.",
   "need_quic": "Für QUIC: MsQuic, das der Installer hinzufügt. Wo das nicht möglich ist, etwa unter Amazon Linux 2023, verbindet sich die App ohne QUIC.",
   "need_desktop": "Für das Fenster: ein Desktop. Der Installer fügt die Bibliotheken hinzu, die das Fenster braucht. Ohne Desktop erhalten Sie den VPN-Dienst und die Befehle.",
-  "need_connect": "VpnHood! CONNECT meldet sich über sein Fenster an und braucht daher vorerst einen Desktop.",
   "next_client": "VpnHood! CLIENT unter Linux installieren",
   "next_connect": "VpnHood! CONNECT unter Linux installieren"
 }
