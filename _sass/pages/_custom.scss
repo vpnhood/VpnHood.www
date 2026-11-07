@@ -820,10 +820,14 @@
     color: var(--purple-120);
 }
 
+// The flag, then the name with the badges on their own line under it. Side by side in
+// one row the badges kept their width, so the name ran underneath them.
 .vh-loc-card{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
-    gap: .9rem;
+    align-content: center;
+    gap: .3rem .9rem;
     height: 100%;
     padding: .85rem 1rem;
     border-radius: 16px;
@@ -832,14 +836,12 @@
 }
 
 .vh-loc-flag{
+    grid-row: span 2;
     width: 40px;
     height: 40px;
-    flex-shrink: 0;
 }
 
 .vh-loc-name{
-    flex: 1;
-    min-width: 0;
     color: var(--vh-text);
     font-weight: 500;
     font-size: .95rem;
@@ -851,9 +853,7 @@
 .vh-loc-tiers{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     gap: .3rem;
-    flex-shrink: 0;
 }
 
 .vh-loc-tier{
@@ -1041,28 +1041,28 @@
     }
 }
 
-// Two cards per row on a phone leaves ~150px each: flag and name share the first
-// row, the badge drops to its own row under the name, instead of the name
-// wrapping to three lines beside a squeezed badge.
+// Two cards per row on a phone leaves ~150px each: a smaller flag shares the first
+// row with the name.
 @media (max-width: 575px) {
     .vh-loc-card{
-        flex-wrap: wrap;
         gap: .4rem .6rem;
         padding: .7rem .8rem;
     }
     .vh-loc-flag{
+        grid-row: auto;
         width: 30px;
         height: 30px;
     }
+    // Russian's Великобритания alone is wider than the card on a small phone.
     .vh-loc-name{
-        flex-basis: calc(100% - 30px - .6rem);
         font-size: .9rem;
+        overflow-wrap: anywhere;
+        hyphens: auto;
     }
     // Full width for the badge row: indenting it under the name left ~104px, and
     // "Free" + "Premium" side by side need ~110px.
     .vh-loc-tiers{
-        flex-basis: 100%;
-        justify-content: flex-start;
+        grid-column: 1 / -1;
     }
 }
 
