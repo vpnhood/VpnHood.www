@@ -31,7 +31,7 @@
   "udp_title": "UDP 与 Ping",
   "udp_desc": "无论应用使用何种协议，UDP 始终作为数据包在隧道中传输。Ping 也同样如此，且仅支持该类型的回显请求（Echo Request），其他 ICMP 数据包均会被丢弃。服务器会通过其网络适配器转发这两者；若没有网络适配器，则会通过自身的套接字代设备执行 Ping。",
   "server_title": "服务器端机制",
-  "server_adapter": "安装在 Linux 上的 VpnHood! SERVER 拥有独立的网络适配器，并像路由器一样通过 NAT 将数据包转发到互联网。Docker 容器由于没有此类适配器，因此服务器会作为代理运行：应用按每个连接发送单个 TCP 请求，服务器则自行建立连接、UDP 套接字并处理 Ping。应用会自动切换至该模式。",
+  "server_adapter": "安装在 Linux 上的 VpnHood! SERVER 拥有独立的网络适配器，并像路由器一样通过 NAT 将数据包转发到互联网。Docker 容器由于没有此类适配器，因此应用在其中始终使用伪装模式：它们按每个连接发送单个 TCP 请求，服务器则自行建立连接、UDP 套接字并处理 Ping。应用会自动切换至该模式。",
   "server_filter": "无论采用哪种方式，它都不会将流量转发至服务器自身的地址或其所在的局域网。",
   "server_ports": "服务器需要开放 TCP 端口，以及在首次启动时为设置为 UDP 的应用所选取的 UDP 端口。QUIC 默认处于关闭状态，除非您手动开启。请参阅<a href=\"/vpnhood-server/docs/ip-addresses/#udp\">设置服务器 IP 地址</a>了解如何查找 UDP 端口。",
   "server_manager": "受管服务器通过 HTTPS 访问 <code>[manager_agent_host]</code> 处的 VpnHood! MANAGER，以便在应用连接时验证密钥并上报使用情况。MANAGER 从不主动连接服务器，应用也从不直接与 MANAGER 通信。此外，MANAGER 还可以将应用引导至服务器集群中的其他服务器。独立服务器则直接通过本地文件验证密钥。",

@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "सर्वर सर्विस के रूप में चलता है, और सिर्फ़ यहीं IPv6 को IPv4 की तरह संभालता है।",
   "docker_title": "Docker",
-  "docker_desc": "सर्वर Docker वाली किसी भी Linux मशीन पर कंटेनर में, सिर्फ़ प्रॉक्सी के रूप में चलता है।",
+  "docker_desc": "सर्वर Docker वाली किसी भी Linux मशीन पर कंटेनर में चलता है, जहाँ ऐप्स हमेशा क्लोक मोड इस्तेमाल करते हैं।",
   "windows_title": "Windows",
-  "windows_desc": "सर्वर x64 पर Windows 10, Windows 11 या Windows Server पर चलता है। IPv6 उसके प्रॉक्सी से जाता है।"
+  "windows_desc": "सर्वर x64 पर Windows 10, Windows 11 या Windows Server पर चलता है। ऐप्स IPv6 को क्लोक मोड की तरह भेजते हैं।"
 }

@@ -5,7 +5,7 @@
   "lead": "Ten tu propio servidor VPN en una máquina Windows con IP pública. Añádelo desde VpnHood! MANAGER como servidor administrado, o instálalo como servidor independiente con un solo comando de PowerShell.",
   "before_title": "Antes de empezar",
   "req_machine": "Una máquina con IP pública que ejecute Windows 10, Windows 11 o Windows Server 2016 o posterior, en x64. <a href=\"/vpnhood-server/docs/requirements/#windows\">Requisitos del sistema</a> enumera los límites en Windows.",
-  "req_hyperv": "En Windows 10 y 11, el adaptador VPN del servidor necesita Hyper-V activado, ya que el NAT de Windows viene con él, y las ediciones Home no tienen Hyper-V. Sin él, el servidor funciona solo como proxy. Windows Server no necesita activar nada.",
+  "req_hyperv": "En Windows 10 y 11, el adaptador VPN del servidor necesita Hyper-V activado, ya que el NAT de Windows viene con él, y las ediciones Home no tienen Hyper-V. Sin él, las apps se siguen conectando, pero siempre en <a href=\"/features/cloak-mode/\">Modo Camuflaje</a>. Windows Server no necesita activar nada.",
   "req_admin": "PowerShell abierto como administrador, para todos los comandos de esta página.",
   "req_port": "Puerto TCP <code>[server_port]</code> abierto, tanto en el cortafuegos de la máquina como en el de tu proveedor. Es el puerto en el que escucha el servidor.",
   "note_linux": "Recomendamos Linux: el NAT de Windows solo traduce IPv4, por lo que solo en Linux el servidor gestiona IPv6 correctamente.",

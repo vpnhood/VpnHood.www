@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "Sunucu bir hizmet olarak çalışır ve IPv6'yı yalnızca burada IPv4 gibi işler.",
   "docker_title": "Docker",
-  "docker_desc": "Sunucu, Docker olan her Linux makinede bir konteynerde, yalnızca proxy olarak çalışır.",
+  "docker_desc": "Sunucu, Docker olan her Linux makinede bir konteynerde çalışır; orada uygulamalar her zaman Kamufle Modu'nu kullanır.",
   "windows_title": "Windows",
-  "windows_desc": "Sunucu x64 üzerinde Windows 10, Windows 11 veya Windows Server'da çalışır. IPv6 onun proxy'si üzerinden geçer."
+  "windows_desc": "Sunucu x64 üzerinde Windows 10, Windows 11 veya Windows Server'da çalışır. Uygulamalar IPv6'yı Kamufle Modu'ndaki gibi taşır."
 }

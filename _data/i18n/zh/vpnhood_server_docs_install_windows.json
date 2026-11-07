@@ -5,7 +5,7 @@
   "lead": "在拥有公网 IP 的 Windows 设备上搭建专属 VPN 服务器。您可以通过 VpnHood! MANAGER 添加受管服务器，也可以使用一条 PowerShell 命令部署独立服务器。",
   "before_title": "准备工作",
   "req_machine": "一台拥有公网 IP 地址的 x64 机器，运行 Windows 10、Windows 11 或 Windows Server 2016 及更高版本。Windows 上的限制见<a href=\"/vpnhood-server/docs/requirements/#windows\">系统要求</a>。",
-  "req_hyperv": "在 Windows 10 和 11 上，服务器的 VPN 适配器需要启用 Hyper-V，因为 Windows 的 NAT 随 Hyper-V 提供，而家庭版没有 Hyper-V。未启用时，服务器仅作为代理运行。Windows Server 无需启用任何功能。",
+  "req_hyperv": "在 Windows 10 和 11 上，服务器的 VPN 适配器需要启用 Hyper-V，因为 Windows 的 NAT 随 Hyper-V 提供，而家庭版没有 Hyper-V。未启用时，应用仍可连接，但始终处于<a href=\"/features/cloak-mode/\">伪装模式</a>。Windows Server 无需启用任何功能。",
   "req_admin": "以管理员身份打开的 PowerShell，用于运行本页的所有命令。",
   "req_port": "开放 TCP 端口 <code>[server_port]</code>（需同时在服务器系统防火墙和服务商的安全组中放行）。该端口为服务器监听端口。",
   "note_linux": "推荐使用 Linux：Windows 的 NAT 仅转换 IPv4，只有在 Linux 上服务器才能完美支持 IPv6。",

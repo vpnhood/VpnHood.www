@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "O servidor roda como serviço, e só aqui trata o IPv6 como trata o IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "O servidor roda em um contêiner em qualquer máquina Linux com Docker, apenas como proxy.",
+  "docker_desc": "O servidor roda em um contêiner em qualquer máquina Linux com Docker, onde os apps sempre usam o Modo invisível.",
   "windows_title": "Windows",
-  "windows_desc": "O servidor roda no Windows 10, no Windows 11 ou no Windows Server, em x64. O IPv6 passa pelo proxy dele."
+  "windows_desc": "O servidor roda no Windows 10, no Windows 11 ou no Windows Server, em x64. Os apps transmitem o IPv6 como no Modo invisível."
 }

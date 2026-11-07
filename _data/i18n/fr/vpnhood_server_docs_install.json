@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "Le serveur s'exécute en tant que service, et c'est le seul système où il gère IPv6 comme IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "Le serveur fonctionne dans un conteneur sur toute machine Linux dotée de Docker, en proxy seulement.",
+  "docker_desc": "Le serveur fonctionne dans un conteneur sur toute machine Linux dotée de Docker, où les applications utilisent toujours le mode furtif.",
   "windows_title": "Windows",
-  "windows_desc": "Le serveur fonctionne sous Windows 10, Windows 11 ou Windows Server, en x64. L'IPv6 passe par son proxy."
+  "windows_desc": "Le serveur fonctionne sous Windows 10, Windows 11 ou Windows Server, en x64. Les applications transmettent l'IPv6 comme en mode furtif."
 }

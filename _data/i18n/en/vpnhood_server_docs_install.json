@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "The server runs as a service, and only here does it handle IPv6 as it does IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "The server runs in a container on any Linux machine with Docker, as a proxy only.",
+  "docker_desc": "The server runs in a container on any Linux machine with Docker, where apps always use Cloak Mode.",
   "windows_title": "Windows",
-  "windows_desc": "The server runs on Windows 10, Windows 11 or Windows Server, on x64. IPv6 goes through its proxy."
+  "windows_desc": "The server runs on Windows 10, Windows 11 or Windows Server, on x64. Apps carry IPv6 as Cloak Mode does."
 }

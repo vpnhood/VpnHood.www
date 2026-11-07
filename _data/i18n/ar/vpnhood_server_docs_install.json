@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "يعمل الخادم كخدمة، وهنا فقط يتعامل مع IPv6 كما يتعامل مع IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "يعمل الخادم في حاوية على أي جهاز Linux فيه Docker، كبروكسي فقط.",
+  "docker_desc": "يعمل الخادم في حاوية على أي جهاز Linux فيه Docker، حيث تستخدم التطبيقات وضع التخفي دائمًا.",
   "windows_title": "Windows",
-  "windows_desc": "يعمل الخادم على Windows 10 أو Windows 11 أو Windows Server، على x64. تمر حركة IPv6 عبر البروكسي الخاص به."
+  "windows_desc": "يعمل الخادم على Windows 10 أو Windows 11 أو Windows Server، على x64. تنقل التطبيقات IPv6 كما في وضع التخفي."
 }

@@ -29,7 +29,7 @@ extra_css:
 <h2 id="before-you-start">{{ t.before_title }}</h2>
 <ul>
   <li>{% include copy.html s=t.req_machine %}</li>
-  <li>{{ t.req_hyperv }}</li>
+  <li>{% include copy.html s=t.req_hyperv %}</li>
   <li>{{ t.req_admin }}</li>
   <li>{% include copy.html s=t.req_port %}</li>
 </ul>

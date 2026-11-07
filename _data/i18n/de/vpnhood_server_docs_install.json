@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "Der Server läuft als Dienst, und nur hier behandelt er IPv6 wie IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "Der Server läuft in einem Container auf jedem Linux-Rechner mit Docker, nur als Proxy.",
+  "docker_desc": "Der Server läuft in einem Container auf jedem Linux-Rechner mit Docker, wo Apps immer den Tarnmodus nutzen.",
   "windows_title": "Windows",
-  "windows_desc": "Der Server läuft auf Windows 10, Windows 11 oder Windows Server, auf x64. IPv6 geht über seinen Proxy."
+  "windows_desc": "Der Server läuft auf Windows 10, Windows 11 oder Windows Server, auf x64. IPv6 übertragen Apps wie im Tarnmodus."
 }

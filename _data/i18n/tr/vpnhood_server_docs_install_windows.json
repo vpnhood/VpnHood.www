@@ -5,7 +5,7 @@
   "lead": "Genel (public) IP adresine sahip bir Windows makinesinde kendi VPN sunucunuzu çalıştırın. VpnHood! MANAGER'dan yönetilen bir sunucu olarak ekleyebilir ya da tek bir PowerShell komutuyla bağımsız sunucu kurabilirsiniz.",
   "before_title": "Başlamadan önce",
   "req_machine": "Genel (public) bir IP adresine sahip, x64 üzerinde Windows 10, Windows 11 veya Windows Server 2016 ya da sonrasını çalıştıran bir makine. Windows'taki sınırlar <a href=\"/vpnhood-server/docs/requirements/#windows\">Sistem gereksinimleri</a> sayfasında listelenir.",
-  "req_hyperv": "Windows 10 ve 11'de sunucunun VPN adaptörü Hyper-V'nin açık olmasını gerektirir, çünkü Windows'un NAT'ı onunla gelir; Home sürümlerinde ise Hyper-V yoktur. Hyper-V olmadan sunucu yalnızca proxy olarak çalışır. Windows Server'da hiçbir şeyi açmak gerekmez.",
+  "req_hyperv": "Windows 10 ve 11'de sunucunun VPN adaptörü Hyper-V'nin açık olmasını gerektirir, çünkü Windows'un NAT'ı onunla gelir; Home sürümlerinde ise Hyper-V yoktur. Hyper-V olmadan uygulamalar yine bağlanır, ancak her zaman <a href=\"/features/cloak-mode/\">Kamufle Modu</a> kullanılır. Windows Server'da hiçbir şeyi açmak gerekmez.",
   "req_admin": "Bu sayfadaki tüm komutlar için yönetici olarak açılmış PowerShell.",
   "req_port": "Hem makinenin hem de barındırma sağlayıcınızın güvenlik duvarında TCP <code>[server_port]</code> portu açık olmalıdır. Bu port, sunucunun dinleme yaptığı porttur.",
   "note_linux": "Linux önerilir: Windows'un NAT yapısı yalnızca IPv4'ü dönüştürür; bu nedenle sunucu IPv6'yı yalnızca Linux üzerinde sorunsuz yönetir.",

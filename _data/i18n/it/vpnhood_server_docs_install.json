@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "Il server viene eseguito come servizio, e solo qui gestisce IPv6 come IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "Il server funziona in un container su qualsiasi macchina Linux con Docker, solo come proxy.",
+  "docker_desc": "Il server funziona in un container su qualsiasi macchina Linux con Docker, dove le app usano sempre la Modalità camuffamento.",
   "windows_title": "Windows",
-  "windows_desc": "Il server funziona su Windows 10, Windows 11 o Windows Server, su x64. IPv6 passa dal suo proxy."
+  "windows_desc": "Il server funziona su Windows 10, Windows 11 o Windows Server, su x64. Le app trasmettono IPv6 come nella Modalità camuffamento."
 }

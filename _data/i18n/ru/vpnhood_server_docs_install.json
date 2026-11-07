@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "Сервер работает как служба, и только здесь он работает с IPv6 так же, как с IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "Сервер работает в контейнере на любой машине Linux с Docker, только как прокси.",
+  "docker_desc": "Сервер работает в контейнере на любой машине Linux с Docker, где приложения всегда используют режим маскировки.",
   "windows_title": "Windows",
-  "windows_desc": "Сервер работает на Windows 10, Windows 11 или Windows Server, на x64. IPv6 идёт через его прокси."
+  "windows_desc": "Сервер работает на Windows 10, Windows 11 или Windows Server, на x64. IPv6 приложения передают так же, как в режиме маскировки."
 }

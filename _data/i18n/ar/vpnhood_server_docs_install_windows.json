@@ -5,7 +5,7 @@
   "lead": "شغّل خادم VPN الخاص بك على جهاز Windows بعنوان IP عام. أضفه من VpnHood! MANAGER كخادم مُدار، أو ثبّته كخادم مستقل بأمر PowerShell واحد.",
   "before_title": "قبل أن تبدأ",
   "req_machine": "جهاز بعنوان IP عام يعمل بنظام Windows 10 أو Windows 11 أو Windows Server 2016 أو أحدث، على x64. تسرد صفحة <a href=\"/vpnhood-server/docs/requirements/#windows\">متطلبات النظام</a> القيود على Windows.",
-  "req_hyperv": "على Windows 10 و 11، يحتاج محوّل VPN في الخادم إلى تشغيل Hyper-V، لأن NAT في Windows يأتي معه، ولا تحتوي إصدارات Home على Hyper-V. وبدونه يعمل الخادم كبروكسي فقط. أما Windows Server فلا يحتاج إلى تشغيل أي شيء.",
+  "req_hyperv": "على Windows 10 و 11، يحتاج محوّل VPN في الخادم إلى تشغيل Hyper-V، لأن NAT في Windows يأتي معه، ولا تحتوي إصدارات Home على Hyper-V. وبدونه تظل التطبيقات تتصل، لكنها تعمل دائمًا في <a href=\"/features/cloak-mode/\">وضع التخفي</a>. أما Windows Server فلا يحتاج إلى تشغيل أي شيء.",
   "req_admin": "PowerShell مفتوح كمسؤول، لتشغيل كل أمر في هذه الصفحة.",
   "req_port": "فتح منفذ TCP رقم <code>[server_port]</code> في جدار حماية الجهاز ولدى مزود الاستضافة، وهو المنفذ الذي يستمع إليه الخادم.",
   "note_linux": "يُنصح باستخدام Linux: لا يترجم NAT في Windows إلا IPv4، لذا لا يتعامل الخادم مع IPv6 بشكل صحيح إلا على Linux.",

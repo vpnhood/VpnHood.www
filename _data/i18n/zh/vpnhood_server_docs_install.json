@@ -7,7 +7,7 @@
   "linux_title": "Linux",
   "linux_desc": "服务器作为服务运行，只有在这里才能像处理 IPv4 一样处理 IPv6。",
   "docker_title": "Docker",
-  "docker_desc": "服务器在任何装有 Docker 的 Linux 机器上的容器中运行，仅作为代理。",
+  "docker_desc": "服务器在任何装有 Docker 的 Linux 机器上的容器中运行，应用在这里始终使用伪装模式。",
   "windows_title": "Windows",
-  "windows_desc": "服务器可在 x64 上的 Windows 10、Windows 11 或 Windows Server 上运行。IPv6 经由其代理传输。"
+  "windows_desc": "服务器可在 x64 上的 Windows 10、Windows 11 或 Windows Server 上运行。应用会像在伪装模式中一样传输 IPv6。"
 }
