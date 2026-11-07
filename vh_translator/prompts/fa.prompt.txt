@@ -29,6 +29,7 @@ reverse proxy = پروکسی معکوس (never ریورس پروکسی, never re
 proxy = پروکسی (never پراکسی)
 farm / server farm = فارم / فارم سرور (never مزرعه, never farm)
 access key = کلید دسترسی · certificate = گواهی · container = کانتینر · firewall = فایروال
+access key's other names, the English aside "also called a server key" = (به آن کلید سرور یا کانفیگ VpnHood! هم می‌گویند). کانفیگ is what Iranians call such a string, so it stays in this aside; the thing itself is always کلید دسترسی
 premium code = کد ویژه (plural کدهای ویژه; never کد دسترسی)
 standalone = مستقل · managed = مدیریت‌شده · web panel = پنل وب
 server profile = پروفایل سرور (plural پروفایل‌های سرور)
