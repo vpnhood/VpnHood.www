@@ -10,8 +10,9 @@ The art speaks the language of the guides' heroes (`assets/images/guides/*.svg`)
 indigo object with a violet-to-mint rim, soft glows and lilac detail, on transparency. That
 is what lets it skip the light-art pipeline (`tools/make-light-art.py`): a dark object on a
 light page reads as an object, as the guides' gauge does, so both themes show the same file.
-The one exception is MANAGER's figure, whose eyes are mint on the dark theme and white on the
-light one, so its two pictures have light variants.
+Two exceptions have light variants: MANAGER's figure, whose eyes are mint on the dark theme and
+white on the light one, and the install pictures, whose large marks are not dark objects: their
+mint fades into a light card, and their glow and haze turn to smudges there.
 
 The rules come from what a docs page is for:
 
@@ -48,6 +49,12 @@ CYAN = "#22b6d6"
 # tools/make-light-art.py can name them alone and leave the mint of the rim and the bars.
 MANAGER_EYE = "#8ef7e3"
 MANAGER_EYE_GLOW = "#3ce8c9"
+
+# The install pictures' marks, the glow around them and the haze behind them: the palette a digit
+# off for the same reason, so the light variant changes them and leaves the server under them.
+MARK_STOPS = ("#5b2fd7", "#8257f4", "#3ce8c7", "#8ef7e1")
+MARK_GLOW = "#3ce8c6"
+MARK_HAZE = "#8b5cf7"
 
 # VpnHood! MANAGER's figure, the hood of its icon, on a 512 grid: the hood, its face and its eyes.
 MANAGER_HOOD = "M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z"
@@ -286,12 +293,19 @@ def install_system(name: str, uid: str) -> None:
     """One way to install: the system's mark, large, on the server it runs. The install page's cards show
     these, and each system's page shows its own again beside its title."""
     a = Art(uid)
-    a.ambient(cy=410)
+    s = MARK_STOPS
+    a.add(f'<defs><linearGradient id="{a.id("Mark")}" x1="0" y1="1" x2="1" y2="0">'
+          f'<stop offset="0" stop-color="{s[0]}"/><stop offset=".45" stop-color="{s[1]}"/>'
+          f'<stop offset=".78" stop-color="{s[2]}"/><stop offset="1" stop-color="{s[3]}"/></linearGradient>'
+          f'<radialGradient id="{a.id("Haze")}" cx=".5" cy=".5" r=".5">'
+          f'<stop offset="0" stop-color="{MARK_HAZE}" stop-opacity=".3"/>'
+          f'<stop offset="1" stop-color="{MARK_HAZE}" stop-opacity="0"/></radialGradient></defs>',
+          f'<ellipse cx="500" cy="410" rx="440" ry="410" fill="{a.url("Haze")}"/>')
     place = f'transform="translate(250 90) scale({500 / 24:g})"'
     path = brand_path(name)
     # the blur outside the scale, or it grows with the mark past the edge of its filter's region
-    a.add(f'<g filter="{a.url("Soft")}" opacity=".5"><path d="{path}" {place} fill="{TEAL}"/></g>',
-          f'<path d="{path}" {place} fill="{a.url("Rim")}"/>')
+    a.add(f'<g filter="{a.url("Soft")}" opacity=".5"><path d="{path}" {place} fill="{MARK_GLOW}"/></g>',
+          f'<path d="{path}" {place} fill="{a.url("Mark")}"/>')
     a.server_unit(160, 650, 680, 150, rim=True, lit=True)
     a.ambient(cy=880, rx=320, ry=60, opacity=.5)
     a.render(f"install-{name}")

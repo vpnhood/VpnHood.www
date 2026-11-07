@@ -86,6 +86,21 @@ QUALITY_OVERRIDES = {"home/options-bg.webp": 75}
 # so this touches nothing else in the picture.
 MANAGER_EYES = {"#8ef7e3": "#fff", "#3ce8c9": "none"}
 
+# The install pictures' marks, from tools/make-docs-heroes.py: on a light card the mint end of
+# their gradient fades into the card, and their glow and violet haze turn to smudges. So the
+# gradient runs deep, the glow goes and the haze becomes soft white light. Their colours are
+# their own there, so the dark server under the mark stays as it is. The haze's first key runs
+# on to its opacity, as white needs more of it than violet to show on the card.
+INSTALL_MARK = {
+    "#5b2fd7": "#2b1470",
+    "#8257f4": "#4a22c4",
+    "#3ce8c7": "#0e8f80",
+    "#8ef7e1": "#12a890",
+    "#3ce8c6": "none",
+    '#8b5cf7" stop-opacity=".3"': '#fff" stop-opacity=".7"',
+    "#8b5cf7": "#fff",
+}
+
 # source -> {dark colour: light colour}. Case-insensitive on the hex digits.
 SVGS = {
     # Opaque dark tile behind the download platform icons.
@@ -123,6 +138,9 @@ SVGS = {
     "general/go-premium-icon.svg": {"#fff": "#17123a"},
     "vpnhood-manager/docs/promo-manager.svg": MANAGER_EYES,
     "vpnhood-manager/docs/hero-docs.svg": MANAGER_EYES,
+    "vpnhood-server/docs/hero-install-linux.svg": INSTALL_MARK,
+    "vpnhood-server/docs/hero-install-docker.svg": INSTALL_MARK,
+    "vpnhood-server/docs/hero-install-windows.svg": INSTALL_MARK,
 }
 
 
