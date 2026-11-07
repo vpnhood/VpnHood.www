@@ -7,6 +7,7 @@
   "shot_alt": "VpnHood! ऐप में किल स्विच स्क्रीन",
   "platforms_label": "उपलब्ध प्लेटफॉर्म",
   "platforms": "Android, Windows और Linux पर। Android पर यह एक सिस्टम सेटिंग पर निर्भर करता है; Windows और Linux पर यह ऐप का अपना फ़ीचर है और डिस्कनेक्ट करने के बाद भी ब्लॉक बनाए रख सकता है, और VpnHood! CONNECT पर इसके लिए प्रीमियम ज़रूरी है।",
+  "platforms_limit": "Windows पर यह ब्लॉक WSL2 या Docker Desktop पर लागू नहीं होता।",
   "cta": "VpnHood! CONNECT पाएं",
   "all_features": "सभी फ़ीचर्स",
   "how_title": "यह कैसे काम करता है",

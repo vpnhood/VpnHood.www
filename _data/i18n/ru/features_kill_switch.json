@@ -7,6 +7,7 @@
   "shot_alt": "Экран настройки Kill Switch в приложении VpnHood!",
   "platforms_label": "Доступно на",
   "platforms": "Android, Windows и Linux. На Android функция использует системную настройку; на Windows и Linux она встроена в само приложение и может сохранять блокировку после отключения, а в VpnHood! CONNECT для неё нужен Premium.",
+  "platforms_limit": "На Windows блокировка не распространяется на WSL2 и Docker Desktop.",
   "cta": "Скачать VpnHood! CONNECT",
   "all_features": "Все возможности",
   "how_title": "Как это работает",

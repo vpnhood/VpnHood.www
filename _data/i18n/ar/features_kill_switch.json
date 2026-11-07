@@ -7,6 +7,7 @@
   "shot_alt": "شاشة Kill Switch في تطبيق VpnHood!‎",
   "platforms_label": "متوفر على",
   "platforms": "Android وWindows وLinux. في Android تعتمد هذه الميزة على إعداد في النظام، أما في Windows وLinux فهي ميزة في التطبيق نفسه، ويمكنها إبقاء الحظر بعد قطع الاتصال، وتتطلب في VpnHood! CONNECT الباقة المميزة.",
+  "platforms_limit": "في Windows، لا يشمل الحظر WSL2 أو Docker Desktop.",
   "cta": "احصل على VpnHood! CONNECT",
   "all_features": "جميع الميزات",
   "how_title": "كيف تعمل هذه الميزة",

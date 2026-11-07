@@ -7,6 +7,7 @@
   "shot_alt": "A tela do Kill Switch no aplicativo VpnHood!",
   "platforms_label": "Disponível para",
   "platforms": "Android, Windows e Linux. No Android, depende de uma configuração do sistema; no Windows e no Linux, é do próprio aplicativo e pode manter o bloqueio depois que você desconectar, e no VpnHood! CONNECT exige Premium.",
+  "platforms_limit": "No Windows, o bloqueio não abrange o WSL2 nem o Docker Desktop.",
   "cta": "Baixar VpnHood! CONNECT",
   "all_features": "Todos os recursos",
   "how_title": "Como funciona",

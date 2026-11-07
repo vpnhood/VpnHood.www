@@ -7,6 +7,7 @@
   "shot_alt": "صفحه Kill Switch در اپلیکیشن VpnHood!‎",
   "platforms_label": "در دسترس برای",
   "platforms": "Android، Windows و Linux. در Android به یک تنظیم سیستمی متکی است؛ در Windows و Linux تنظیم خود اپلیکیشن است و می‌تواند پس از قطع اتصال نیز مسدودسازی را حفظ کند، و در VpnHood! CONNECT به نسخه ویژه نیاز دارد.",
+  "platforms_limit": "در Windows، مسدودسازی شامل WSL2 و Docker Desktop نمی‌شود.",
   "cta": "دریافت VpnHood! CONNECT",
   "all_features": "همه امکانات",
   "how_title": "نحوه کارکرد",

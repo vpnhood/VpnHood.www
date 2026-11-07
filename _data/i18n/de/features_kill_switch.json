@@ -7,6 +7,7 @@
   "shot_alt": "Der Kill Switch-Bereich in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
   "platforms": "Android, Windows und Linux. Unter Android nutzt er eine Systemeinstellung; unter Windows und Linux ist er eine eigene Funktion der App und kann die Sperre auch nach dem Trennen der Verbindung aufrechterhalten, und bei VpnHood! CONNECT erfordert er Premium.",
+  "platforms_limit": "Unter Windows erfasst die Sperre WSL2 und Docker Desktop nicht.",
   "cta": "VpnHood! CONNECT herunterladen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",

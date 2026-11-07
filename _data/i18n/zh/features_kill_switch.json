@@ -7,6 +7,7 @@
   "shot_alt": "VpnHood! 应用中的断网保护界面",
   "platforms_label": "支持平台",
   "platforms": "Android、Windows 和 Linux。在 Android 上，该功能依赖系统设置；在 Windows 和 Linux 上，它是应用自带的功能，可在您断开连接后继续阻断流量，在 VpnHood! CONNECT 上需要高级版。",
+  "platforms_limit": "在 Windows 上，此阻断不适用于 WSL2 或 Docker Desktop。",
   "cta": "获取 VpnHood! CONNECT",
   "all_features": "所有功能",
   "how_title": "工作原理",

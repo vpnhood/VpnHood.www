@@ -7,6 +7,7 @@
   "shot_alt": "VpnHood! uygulamasındaki Kill Switch ekranı",
   "platforms_label": "Desteklenen platformlar",
   "platforms": "Android, Windows ve Linux. Android'de bir sistem ayarını kullanır; Windows ve Linux'ta ise uygulamanın kendi ayarıdır ve bağlantıyı kestikten sonra da engeli sürdürebilir, VpnHood! CONNECT'te ise Premium gerektirir.",
+  "platforms_limit": "Windows'ta engel, WSL2 ve Docker Desktop'ı kapsamaz.",
   "cta": "VpnHood! CONNECT'i Edinin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",
