@@ -852,3 +852,22 @@
     margin: 0;
     color: var(--vh-text);
 }
+
+// A limit inside a section's text, such as a system that is not supported: an ordinary
+// paragraph led by the quiet warning sign the feature cards give a limit (icons/alert.svg),
+// lighter than a note. The text sits in a span, as a flex item of its own, or each link and
+// code in it would become one. The sign is centred on the first line. The indent shortens the
+// lines, so a last word could be left alone ("CentOS" above, "7." below); pretty keeps it company.
+.vh-docs-article .vh-docs-limit{
+    display: flex;
+    gap: .6rem;
+    text-wrap: pretty;
+}
+
+.vh-docs-article .vh-docs-limit svg{
+    flex-shrink: 0;
+    width: 1.25em;
+    height: 1.25em;
+    margin-top: .25em;
+    color: var(--vh-text-soft);
+}

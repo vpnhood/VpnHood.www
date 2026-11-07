@@ -18,7 +18,7 @@ extra_css:
   CentOS Stream 10, Amazon Linux 2023, openSUSE Leap 16.0, Fedora 45 and Arch; Arch again
   2026-11-06 on a Hyper-V VM, with a client connected through it. Alpine installs
   but cannot run the glibc build. Windows: Windows 11 Pro without Hyper-V answers New-NetNat
-  with "Invalid class", so the server ran as a proxy; the Containers feature did not bring
+  with "Invalid class", so the server had no adapter and apps used Cloak Mode; the Containers feature did not bring
   WinNAT, Hyper-V did. Windows Server 2025 had WinNAT with neither. Names and versions are
   markup, as there is nothing in them to translate; the versions are dir="ltr", or an RTL page
   turns their list around.
@@ -60,8 +60,8 @@ extra_css:
   </tbody>
 </table>
 <p>{{ t.linux_needs }}</p>
-<p>{% include copy.html s=t.linux_tun %}</p>
-<p>{{ t.linux_unsupported }}</p>
+<p class="vh-docs-limit">{% include icons/alert.svg %}<span>{% include copy.html s=t.linux_tun %}</span></p>
+<p class="vh-docs-limit">{% include icons/alert.svg %}<span>{{ t.linux_unsupported }}</span></p>
 
 <h2 id="docker" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/brands/docker.svg %}</span>{{ t.docker_title }}</h2>
 <p>{% include copy.html s=t.docker_desc %}</p>
