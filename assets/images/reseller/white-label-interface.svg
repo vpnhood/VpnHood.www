@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhWhiteLabelInterfaceArtTitle">
+<title id="vhWhiteLabelInterfaceArtTitle">A pencil drawing a new interface on a phone, the finished part solid and the rest still dotted, with three colour swatches</title>
+<defs>
+  <linearGradient id="iBody" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="iIcon" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8257f5"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <linearGradient id="iPencil" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8257f5"/><stop offset="1" stop-color="#5b2fd6"/></linearGradient>
+  <radialGradient id="iAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="iSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="iSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
+</defs>
+
+<ellipse cx="500" cy="500" rx="440" ry="420" fill="url(#iAmbient)"/>
+
+<!-- phone -->
+<rect x="130" y="150" width="340" height="700" rx="54" fill="url(#iBody)"/>
+<rect x="130" y="150" width="340" height="700" rx="54" fill="none" stroke="#8257f5" stroke-opacity=".5" stroke-width="3"/>
+<rect x="154" y="190" width="292" height="620" rx="34" fill="#150a3a"/>
+<rect x="250" y="206" width="100" height="14" rx="7" fill="#2b1470"/>
+
+<!-- the new interface, as far as it has been drawn -->
+<rect x="182" y="250" width="236" height="176" rx="32" fill="url(#iIcon)"/>
+<rect x="182" y="250" width="236" height="176" rx="32" fill="url(#iIcon)" filter="url(#iSoft)" opacity=".45"/>
+<rect x="182" y="456" width="236" height="78" rx="24" fill="#2b1470"/>
+<circle cx="224" cy="495" r="20" fill="#3ce8c8"/>
+<rect x="258" y="485" width="96" height="20" rx="10" fill="#c0a4ff"/>
+
+<!-- and what is still to come -->
+<g fill="none" stroke="#c0a4ff" stroke-opacity=".85" stroke-width="6" stroke-linecap="round">
+  <rect x="182" y="566" width="236" height="78" rx="24" stroke-dasharray="4 20"/>
+  <rect x="182" y="676" width="236" height="78" rx="24" stroke-dasharray="4 20"/>
+</g>
+
+<!-- the line the pencil has just drawn -->
+<path d="M206 566 H388" fill="none" stroke="#8ef7e2" stroke-width="10" stroke-linecap="round"/>
+<circle cx="388" cy="566" r="44" fill="#3ce8c8" opacity=".45" filter="url(#iSoft)"/>
+
+<!-- pencil, its point at the end of that line -->
+<g transform="translate(388 566) rotate(-45)">
+  <path d="M0 0 L78 -40 V40 Z" fill="#e4d9ff"/>
+  <path d="M0 0 L26 -13.300 V13.300 Z" fill="#3ce8c8"/>
+  <rect x="78" y="-40" width="330" height="80" fill="url(#iPencil)"/>
+  <rect x="78" y="-14" width="330" height="26" fill="#c0a4ff" fill-opacity=".4"/>
+  <rect x="408" y="-40" width="36" height="80" fill="#c0a4ff"/>
+  <path d="M444 -40 h34 a26 26 0 0 1 26 26 v28 a26 26 0 0 1 -26 26 h-34 z" fill="#8ef7e2"/>
+</g>
+
+<!-- any colours you like -->
+<g>
+  <circle cx="620" cy="730" r="62" fill="#5b2fd6"/>
+  <circle cx="696" cy="730" r="62" fill="#8257f5" fill-opacity=".92"/>
+  <circle cx="772" cy="730" r="62" fill="#3ce8c8" fill-opacity=".92"/>
+  <circle cx="696" cy="730" r="120" fill="#8b5cf6" opacity=".22" filter="url(#iSofter)"/>
+</g>
+</svg>

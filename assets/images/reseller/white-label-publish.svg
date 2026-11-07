@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhWhiteLabelPublishArtTitle">
+<title id="vhWhiteLabelPublishArtTitle">A factory: the reseller's logo goes in at the roof, and finished phones with that logo ride out on a conveyor belt, the last one with a tick</title>
+<defs>
+  <linearGradient id="bBody" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <linearGradient id="bIcon" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8257f5"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <linearGradient id="bMint" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8ef7e2"/><stop offset="1" stop-color="#3ce8c8"/></linearGradient>
+  <linearGradient id="bDoor" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".55"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".05"/></linearGradient>
+  <radialGradient id="bAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <filter id="bSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+
+<ellipse cx="500" cy="520" rx="450" ry="420" fill="url(#bAmbient)"/>
+
+<!-- chimney and its smoke -->
+<circle cx="540" cy="150" r="36" fill="#8257f5" opacity=".55"/>
+<circle cx="592" cy="102" r="25" fill="#8257f5" opacity=".38"/>
+<circle cx="636" cy="66" r="15" fill="#8257f5" opacity=".22"/>
+<rect x="462" y="214" width="84" height="230" fill="url(#bBody)"/>
+<rect x="462" y="214" width="84" height="230" fill="none" stroke="#8257f5" stroke-opacity=".6" stroke-width="4"/>
+<rect x="448" y="196" width="112" height="36" rx="12" fill="#8257f5"/>
+
+<!-- the factory: a saw-tooth roof over one long hall -->
+<path d="M70 830 V380 L240 470 V380 L410 470 V380 L580 470 V830 Z" fill="#1a0f47"/>
+<path d="M70 830 V380 L240 470 V380 L410 470 V380 L580 470 V830 Z" fill="url(#bBody)" stroke="#8257f5" stroke-opacity=".7" stroke-width="5" stroke-linejoin="round"/>
+
+<!-- lit windows -->
+<g fill="url(#bMint)">
+  <rect x="116" y="540" width="92" height="92" rx="16"/>
+  <rect x="240" y="540" width="92" height="92" rx="16"/>
+  <rect x="364" y="540" width="92" height="92" rx="16"/>
+</g>
+<rect x="116" y="540" width="340" height="92" rx="16" fill="#3ce8c8" filter="url(#bSoft)" opacity=".28"/>
+
+<!-- the door the phones come out of -->
+<rect x="452" y="664" width="128" height="166" rx="14" fill="#150a3a"/>
+<rect x="452" y="664" width="128" height="166" rx="14" fill="url(#bDoor)"/>
+
+<!-- in at the roof: the reseller's logo -->
+<rect x="122" y="96" width="176" height="176" rx="46" fill="url(#bIcon)"/>
+<rect x="122" y="96" width="176" height="176" rx="46" fill="url(#bIcon)" filter="url(#bSoft)" opacity=".5"/>
+<path d="M210 118 C 219 164 230 175 276 184 C 230 193 219 204 210 250 C 201 204 190 193 144 184 C 190 175 201 164 210 118 Z" fill="#f4f0ff"/>
+<g fill="none" stroke="#8257f5" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M210 298 V384" stroke-dasharray="2 30"/>
+  <path d="M176 386 l34 36 l34 -36"/>
+</g>
+
+<!-- out on the belt: the finished apps -->
+<g>
+  <rect x="628" y="598" width="124" height="202" rx="26" fill="url(#bBody)"/>
+  <rect x="628" y="598" width="124" height="202" rx="26" fill="none" stroke="#8257f5" stroke-opacity=".8" stroke-width="4"/>
+  <rect x="640" y="612" width="100" height="174" rx="16" fill="#150a3a"/>
+  <rect x="652" y="632" width="76" height="76" rx="20" fill="url(#bIcon)"/>
+  <path d="M690 642 C 694 662 698 666 718 670 C 698 674 694 678 690 698 C 686 678 682 674 662 670 C 682 666 686 662 690 642 Z" fill="#f4f0ff"/>
+  <rect x="656" y="728" width="68" height="16" rx="8" fill="#c0a4ff"/>
+</g>
+<g>
+  <rect x="794" y="598" width="124" height="202" rx="26" fill="url(#bBody)"/>
+  <rect x="794" y="598" width="124" height="202" rx="26" fill="none" stroke="#8257f5" stroke-opacity=".8" stroke-width="4"/>
+  <rect x="806" y="612" width="100" height="174" rx="16" fill="#150a3a"/>
+  <rect x="818" y="632" width="76" height="76" rx="20" fill="url(#bIcon)"/>
+  <path d="M856 642 C 860 662 864 666 884 670 C 864 674 860 678 856 698 C 852 678 848 674 828 670 C 848 666 852 662 856 642 Z" fill="#f4f0ff"/>
+  <rect x="822" y="728" width="68" height="16" rx="8" fill="#c0a4ff"/>
+</g>
+
+<!-- the belt -->
+<rect x="470" y="800" width="480" height="40" rx="20" fill="#2b1470"/>
+<rect x="470" y="800" width="480" height="40" rx="20" fill="none" stroke="#8257f5" stroke-width="4"/>
+<g fill="#c0a4ff">
+  <circle cx="510" cy="820" r="10"/><circle cx="590" cy="820" r="10"/><circle cx="670" cy="820" r="10"/>
+  <circle cx="750" cy="820" r="10"/><circle cx="830" cy="820" r="10"/><circle cx="910" cy="820" r="10"/>
+</g>
+
+<!-- published -->
+<circle cx="916" cy="600" r="50" fill="#150a3a" stroke="#3ce8c8" stroke-width="7"/>
+<path d="M892 600 l18 18 l32 -36" fill="none" stroke="#8ef7e2" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
