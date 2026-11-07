@@ -1,0 +1,18 @@
+{
+  "meta_title": "Obtenir une clé d'accès pour VpnHood! CLIENT | VpnHood!",
+  "meta_description": "Où obtenir la clé d'accès de VpnHood! CLIENT : demandez-la à l'administrateur d'un serveur ou gérez le vôtre. VpnHood! CONNECT n'a pas besoin de clé.",
+  "title": "Obtenir une clé d'accès",
+  "lead": "VpnHood! CLIENT n'a aucun serveur propre : il se connecte avec une clé d'accès, aussi appelée clé de serveur. Vous l'obtenez auprès de l'administrateur du serveur.",
+  "what_title": "À quoi ressemble une clé d'accès",
+  "what_desc": "C'est une seule longue ligne de texte qui commence par <code>[key_prefix]</code>. Elle indique à l'application quel serveur joindre et vous donne accès, et vous ne l'ajoutez qu'une seule fois.",
+  "ways_title": "Comment en obtenir une",
+  "ask_title": "Demandez à l'administrateur du serveur",
+  "ask_desc": "Un ami, une communauté ou une organisation qui gère un serveur VpnHood! peut vous envoyer une clé, et certaines personnes peuvent aussi en vendre. Copiez la ligne entière.",
+  "ask_trust": "Essayez d'obtenir votre clé auprès de personnes réputées, car votre trafic passe par leur serveur. Gardez-la pour vous : toute personne qui la possède peut utiliser ce serveur.",
+  "own_title": "Gérez votre propre serveur",
+  "own_desc": "Si vous n'avez personne à qui la demander, gérez votre propre serveur et créez-y vos clés. <a href=\"/self-hosted-vpn/\">Découvrez comment gérer votre propre VPN</a>.",
+  "connect_title": "Utilisez une application avec ses propres serveurs",
+  "connect_desc": "VpnHood! CONNECT a ses propres serveurs et n'a donc pas besoin de clé d'accès. <a href=\"/free-vpn/\">Découvrez VpnHood! CONNECT</a>.",
+  "next_download": "Télécharger VpnHood! CLIENT",
+  "next_linux": "Installer VpnHood! CLIENT sur Linux"
+}

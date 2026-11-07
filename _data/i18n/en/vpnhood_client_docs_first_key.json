@@ -1,0 +1,18 @@
+{
+  "meta_title": "Get an Access Key for VpnHood! CLIENT | VpnHood!",
+  "meta_description": "Where to get the access key VpnHood! CLIENT connects with: ask whoever runs a server, or run your own. VpnHood! CONNECT needs no key.",
+  "title": "Get an access key",
+  "lead": "VpnHood! CLIENT has no servers of its own, so it connects with an access key, also called a server key. You get one from whoever runs the server.",
+  "what_title": "What an access key looks like",
+  "what_desc": "It is one long line of text that starts with <code>[key_prefix]</code>. It tells the app which server to reach and lets you in, and you add it to the app only once.",
+  "ways_title": "How to get one",
+  "ask_title": "Ask whoever runs the server",
+  "ask_desc": "A friend, a community or an organization that runs a VpnHood! server can send you a key, and some people may sell one. Copy the whole line.",
+  "ask_trust": "Try to get your key from reputable people, as your traffic goes through their server. Keep it to yourself: anyone who has it can use that server.",
+  "own_title": "Run your own server",
+  "own_desc": "If you have nobody to ask, run a server of your own and create your keys there. <a href=\"/self-hosted-vpn/\">See how to run your own VPN</a>.",
+  "connect_title": "Use an app with its own servers",
+  "connect_desc": "VpnHood! CONNECT has servers of its own, so it needs no access key. <a href=\"/free-vpn/\">See VpnHood! CONNECT</a>.",
+  "next_download": "Download VpnHood! CLIENT",
+  "next_linux": "Install VpnHood! CLIENT on Linux"
+}

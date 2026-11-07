@@ -1,0 +1,18 @@
+{
+  "meta_title": "获取 VpnHood! CLIENT 访问密钥 | VpnHood!",
+  "meta_description": "从哪里获取 VpnHood! CLIENT 的访问密钥：向服务器运营者索取，或自己运行服务器。VpnHood! CONNECT 无需密钥。",
+  "title": "获取访问密钥",
+  "lead": "VpnHood! CLIENT 本身不提供服务器，因此要通过访问密钥（也称服务器密钥）连接。密钥由服务器运营者提供。",
+  "what_title": "访问密钥是什么样的",
+  "what_desc": "它是一行很长的文本，以 <code>[key_prefix]</code> 开头。它告诉应用要连接哪台服务器，并让您获得访问权限。您只需将它添加到应用中一次。",
+  "ways_title": "如何获取",
+  "ask_title": "向服务器运营者索取",
+  "ask_desc": "运行 VpnHood! 服务器的朋友、社区或组织可以把密钥发给您，也有人可能出售密钥。请复制整行内容。",
+  "ask_trust": "请尽量从信誉良好的人那里获取密钥，因为您的流量会经过对方的服务器。请妥善保管：任何持有密钥的人都能使用该服务器。",
+  "own_title": "运行您自己的服务器",
+  "own_desc": "如果找不到人索取，可以运行自己的服务器，并在上面创建密钥。<a href=\"/self-hosted-vpn/\">了解如何运行您自己的 VPN</a>。",
+  "connect_title": "使用自带服务器的应用",
+  "connect_desc": "VpnHood! CONNECT 自带服务器，因此无需访问密钥。<a href=\"/free-vpn/\">了解 VpnHood! CONNECT</a>。",
+  "next_download": "下载 VpnHood! CLIENT",
+  "next_linux": "在 Linux 上安装 VpnHood! CLIENT"
+}

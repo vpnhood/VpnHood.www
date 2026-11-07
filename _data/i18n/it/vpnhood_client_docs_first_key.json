@@ -1,0 +1,18 @@
+{
+  "meta_title": "Ottieni una chiave di accesso per VpnHood! CLIENT | VpnHood!",
+  "meta_description": "Dove ottenere la chiave di accesso di VpnHood! CLIENT: chiedila a chi gestisce un server o gestiscine uno tuo. VpnHood! CONNECT non ha bisogno di chiavi.",
+  "title": "Ottieni una chiave di accesso",
+  "lead": "VpnHood! CLIENT non ha server propri, quindi si connette con una chiave di accesso, chiamata anche chiave server. La ottieni da chi gestisce il server.",
+  "what_title": "Com'è fatta una chiave di accesso",
+  "what_desc": "È una sola lunga riga di testo che inizia con <code>[key_prefix]</code>. Dice all'app quale server raggiungere e ti fa entrare, e la aggiungi all'app una sola volta.",
+  "ways_title": "Come ottenerne una",
+  "ask_title": "Chiedila a chi gestisce il server",
+  "ask_desc": "Un amico, una community o un'organizzazione che gestisce un server VpnHood! può inviarti una chiave, e alcune persone possono anche venderne una. Copia l'intera riga.",
+  "ask_trust": "Cerca di ottenere la chiave da persone di buona reputazione, perché il tuo traffico passa dal loro server. Tienila per te: chiunque la possieda può usare quel server.",
+  "own_title": "Gestisci un server tuo",
+  "own_desc": "Se non hai nessuno a cui chiederla, gestisci un server tuo e crea lì le tue chiavi. <a href=\"/self-hosted-vpn/\">Scopri come gestire la tua VPN</a>.",
+  "connect_title": "Usa un'app con i propri server",
+  "connect_desc": "VpnHood! CONNECT ha i propri server, quindi non ha bisogno di una chiave di accesso. <a href=\"/free-vpn/\">Scopri VpnHood! CONNECT</a>.",
+  "next_download": "Scarica VpnHood! CLIENT",
+  "next_linux": "Installa VpnHood! CLIENT su Linux"
+}

@@ -1,0 +1,18 @@
+{
+  "meta_title": "Zugangsschlüssel für VpnHood! CLIENT erhalten | VpnHood!",
+  "meta_description": "Woher Sie den Zugangsschlüssel für VpnHood! CLIENT bekommen: Fragen Sie den Betreiber eines Servers oder betreiben Sie selbst einen. VpnHood! CONNECT braucht keinen Schlüssel.",
+  "title": "Einen Zugangsschlüssel erhalten",
+  "lead": "VpnHood! CLIENT hat keine eigenen Server und verbindet sich daher mit einem Zugangsschlüssel, auch Server-Schlüssel genannt. Diesen erhalten Sie vom Betreiber des Servers.",
+  "what_title": "So sieht ein Zugangsschlüssel aus",
+  "what_desc": "Er ist eine einzige lange Textzeile, die mit <code>[key_prefix]</code> beginnt. Er sagt der App, welchen Server sie erreichen soll, und gewährt Ihnen Zugang. Sie fügen ihn nur einmal in die App ein.",
+  "ways_title": "So bekommen Sie einen Schlüssel",
+  "ask_title": "Fragen Sie den Betreiber des Servers",
+  "ask_desc": "Ein Freund, eine Community oder eine Organisation, die einen VpnHood! SERVER betreibt, kann Ihnen einen Schlüssel schicken, und manche Leute verkaufen auch welche. Kopieren Sie die ganze Zeile.",
+  "ask_trust": "Versuchen Sie, Ihren Schlüssel von seriösen Personen zu bekommen, denn Ihr Datenverkehr läuft über deren Server. Behalten Sie ihn für sich: Wer ihn hat, kann diesen Server nutzen.",
+  "own_title": "Betreiben Sie einen eigenen Server",
+  "own_desc": "Wenn Sie niemanden fragen können, betreiben Sie einen eigenen Server und erstellen dort Ihre Schlüssel. <a href=\"/self-hosted-vpn/\">So betreiben Sie Ihr eigenes VPN</a>.",
+  "connect_title": "Nutzen Sie eine App mit eigenen Servern",
+  "connect_desc": "VpnHood! CONNECT hat eigene Server und braucht daher keinen Zugangsschlüssel. <a href=\"/free-vpn/\">Mehr über VpnHood! CONNECT</a>.",
+  "next_download": "VpnHood! CLIENT herunterladen",
+  "next_linux": "VpnHood! CLIENT unter Linux installieren"
+}

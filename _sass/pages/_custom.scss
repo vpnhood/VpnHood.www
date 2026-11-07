@@ -1627,3 +1627,72 @@ a.vh-feature-chip:hover{
     height: auto;
     border-radius: 18px;
 }
+
+// The Android card on the download pages (_includes/android-download.html): the two buttons
+// as wide as the wider one, and under them the panel Direct Link opens. Its padding is inside
+// the collapsing box, so nothing jumps when it opens.
+.vh-android-buttons{
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.vh-android-toggle svg{
+    flex: 0 0 auto;
+    transition: transform .2s ease;
+}
+
+.vh-android-toggle[aria-expanded="true"] svg{
+    transform: rotate(180deg);
+}
+
+.vh-android-direct{
+    padding-top: 1.25rem;
+}
+
+.vh-android-direct p{
+    margin-bottom: .85rem;
+}
+
+.vh-android-choices{
+    display: grid;
+    gap: .6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-android-choice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .7rem .9rem;
+    border: 1px solid var(--vh-border);
+    border-radius: 14px;
+    color: var(--vh-text);
+    background-color: var(--vh-surface);
+    text-decoration: none;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+
+.vh-android-choice:hover,
+.vh-android-choice:focus-visible{
+    color: var(--vh-text);
+    background-color: var(--vh-surface-hover);
+    border-color: var(--vh-border-strong);
+}
+
+.vh-android-choice b,
+.vh-android-choice small{
+    display: block;
+}
+
+.vh-android-choice small{
+    margin-top: .1rem;
+    color: var(--vh-text-muted);
+    line-height: 1.4;
+}
+
+.vh-android-choice svg{
+    flex: 0 0 auto;
+}

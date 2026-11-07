@@ -1,0 +1,18 @@
+{
+  "meta_title": "VpnHood! CLIENT İçin Erişim Anahtarı Alın | VpnHood!",
+  "meta_description": "VpnHood! CLIENT için erişim anahtarını nereden alırsınız: sunucuyu işleten kişiden isteyin veya kendi sunucunuzu çalıştırın. VpnHood! CONNECT için anahtar gerekmez.",
+  "title": "Erişim anahtarı alın",
+  "lead": "VpnHood! CLIENT'ın kendi sunucuları yoktur, bu yüzden bir erişim anahtarıyla (sunucu anahtarı olarak da bilinir) bağlanır. Bu anahtarı sunucuyu işleten kişiden alırsınız.",
+  "what_title": "Erişim anahtarı nasıl görünür",
+  "what_desc": "<code>[key_prefix]</code> ile başlayan tek bir uzun metin satırıdır. Uygulamaya hangi sunucuya bağlanacağını söyler ve size giriş izni verir. Uygulamaya yalnızca bir kez eklersiniz.",
+  "ways_title": "Nasıl alınır",
+  "ask_title": "Sunucuyu işleten kişiden isteyin",
+  "ask_desc": "VpnHood! sunucusu işleten bir arkadaşınız, topluluk veya kuruluş size anahtar gönderebilir; bazı kişiler de anahtar satabilir. Satırın tamamını kopyalayın.",
+  "ask_trust": "Anahtarınızı itibarlı kişilerden almaya çalışın, çünkü trafiğiniz onların sunucusundan geçer. Anahtarı kendinize saklayın: ona sahip olan herkes o sunucuyu kullanabilir.",
+  "own_title": "Kendi sunucunuzu çalıştırın",
+  "own_desc": "İsteyebileceğiniz kimse yoksa kendi sunucunuzu çalıştırın ve anahtarlarınızı orada oluşturun. <a href=\"/self-hosted-vpn/\">Kendi VPN'inizi nasıl çalıştıracağınızı görün</a>.",
+  "connect_title": "Kendi sunucuları olan bir uygulama kullanın",
+  "connect_desc": "VpnHood! CONNECT'in kendi sunucuları vardır, bu yüzden erişim anahtarı gerekmez. <a href=\"/free-vpn/\">VpnHood! CONNECT'i inceleyin</a>.",
+  "next_download": "VpnHood! CLIENT İndir",
+  "next_linux": "Linux'a VpnHood! CLIENT Kurun"
+}

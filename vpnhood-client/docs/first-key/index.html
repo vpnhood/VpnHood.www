@@ -1,0 +1,61 @@
+---
+layout: none
+i18n: vpnhood_client_docs_first_key
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The first question every CLIENT user has: where the key comes from (owner, 2026-11-06). It is
+  written for someone who gets a key from a server's owner; running a server gets one line and a
+  link, as those steps have their own docs. Adding the key is the Linux page's and the app's, so
+  this page stops once the reader has it. CONNECT is not called free here: its free plan needs
+  ads and is not available everywhere, and "needs no key" is all this page has to say about it.
+  Sellers are "some people", never resellers, whom the site means as sellers of premium codes
+  (owner, 2026-11-06). The ways to get a key sit under one heading, each with a picture from
+  tools/make-docs-heroes.py, decorative, so alt="". What a key is has no picture, as it is no
+  way to get one (owner, 2026-11-06).
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-client/docs/hero-first-key.svg" %}
+
+<h2 id="what">{{ t.what_title }}</h2>
+<p>{% include copy.html s=t.what_desc %}</p>
+
+<h2 id="get">{{ t.ways_title }}</h2>
+
+<section class="vh-docs-art-section">
+  <img src="/assets/images/vpnhood-client/docs/first-key-ask.svg" alt="" width="1000" height="1000" loading="lazy">
+  <div>
+    <h3 id="ask">{{ t.ask_title }}</h3>
+    <p>{{ t.ask_desc }}</p>
+    <p>{{ t.ask_trust }}</p>
+  </div>
+</section>
+
+<section class="vh-docs-art-section">
+  <img src="/assets/images/vpnhood-client/docs/first-key-own.svg" alt="" width="1000" height="1000" loading="lazy">
+  <div>
+    <h3 id="own-server">{{ t.own_title }}</h3>
+    <p>{% include copy.html s=t.own_desc %}</p>
+  </div>
+</section>
+
+<section class="vh-docs-art-section">
+  <img src="/assets/images/vpnhood-client/docs/first-key-connect.svg" alt="" width="1000" height="1000" loading="lazy">
+  <div>
+    <h3 id="connect">{{ t.connect_title }}</h3>
+    <p>{% include copy.html s=t.connect_desc %}</p>
+  </div>
+</section>
+
+<h2 id="next-steps">{{ site.data.i18n[vh_lang].linux_app.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-client/download/">{{ t.next_download }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-client/docs/linux/">{{ t.next_linux }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

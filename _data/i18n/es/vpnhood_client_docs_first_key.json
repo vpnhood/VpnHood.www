@@ -1,0 +1,18 @@
+{
+  "meta_title": "Consigue una clave de acceso para VpnHood! CLIENT | VpnHood!",
+  "meta_description": "Dónde conseguir la clave de acceso con la que se conecta VpnHood! CLIENT: pídela a quien administre un servidor o monta el tuyo. VpnHood! CONNECT no necesita clave.",
+  "title": "Consigue una clave de acceso",
+  "lead": "VpnHood! CLIENT no tiene servidores propios, así que se conecta con una clave de acceso, también llamada clave de servidor. La obtienes de quien administre el servidor.",
+  "what_title": "Cómo es una clave de acceso",
+  "what_desc": "Es una sola línea larga de texto que empieza por <code>[key_prefix]</code>. Le indica a la app a qué servidor conectarse y te da acceso, y solo tienes que añadirla a la app una vez.",
+  "ways_title": "Cómo conseguir una clave",
+  "ask_title": "Pídesela a quien administre el servidor",
+  "ask_desc": "Un amigo, una comunidad o una organización que administre un servidor VpnHood! puede enviarte una clave, y algunas personas también pueden venderla. Copia la línea completa.",
+  "ask_trust": "Intenta conseguir tu clave de personas de buena reputación, porque tu tráfico pasa por su servidor. Y guárdala para ti: cualquiera que la tenga puede usar ese servidor.",
+  "own_title": "Monta tu propio servidor",
+  "own_desc": "Si no tienes a quién pedírsela, monta tu propio servidor y crea allí tus claves. <a href=\"/self-hosted-vpn/\">Mira cómo montar tu propia VPN</a>.",
+  "connect_title": "Usa una app con servidores propios",
+  "connect_desc": "VpnHood! CONNECT tiene servidores propios, así que no necesita clave de acceso. <a href=\"/free-vpn/\">Conoce VpnHood! CONNECT</a>.",
+  "next_download": "Descarga VpnHood! CLIENT",
+  "next_linux": "Instalar VpnHood! CLIENT en Linux"
+}

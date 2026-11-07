@@ -1,0 +1,45 @@
+{%- comment -%}
+  The Android card's ways to install, on both download pages (owner, 2026-11-06): Google Play,
+  and Direct Link, which opens a panel to choose the APK, so nobody has to find the universal
+  version in a note. Only people without Google Play pay the extra click.
+
+    {% include android-download.html id="client" play="com.vpnhood.client.android" play_class="blue-bg" repo="VpnHood" file="VpnHoodClient" %}
+
+  id names the app: GTM reads <id>GoogleAndroid, <id>WebAndroid (the ARM64 file) and
+  <id>WebAndroidUniversal, so keep them. Reads the page's t. Its panel says "smaller" and no
+  size, as the sizes change with every release.
+{%- endcomment -%}
+{%- capture vh_ad_apk %}https://github.com/vpnhood/{{ include.repo }}/releases/latest/download/{{ include.file }}-android-web{% endcapture -%}
+<div>
+  <div class="vh-android-buttons d-flex flex-column gap-3">
+    <a id="{{ include.id }}GoogleAndroid" class="vh-btn vh-btn-primary {{ include.play_class }} gap-2" href="https://play.google.com/store/apps/details?id={{ include.play }}" target="_blank" rel="noopener">
+      <span class="text-uppercase small opacity-75 lh-1">{{ t.get_it_on }}</span>
+      <span class="fs-5">{{ t.google_play }}</span>
+      <span class="visually-hidden"> {{ t.new_tab }}</span>
+    </a>
+    <button class="vh-btn vh-btn-secondary vh-android-toggle gap-2" type="button" data-bs-toggle="collapse" data-bs-target="#{{ include.id }}AndroidDirect" aria-expanded="false" aria-controls="{{ include.id }}AndroidDirect" data-vh-track="download-android-direct">
+      <span class="text-uppercase small vh-txt-purple-100 lh-1">{{ t.get_it_via }}</span>
+      <span class="fs-5">{{ t.direct_link }}</span>
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+  </div>
+  <div id="{{ include.id }}AndroidDirect" class="collapse">
+    <div class="vh-android-direct">
+      <p class="small">{{ t.direct_link_note }} {% include copy.html s=t.android_web_note %}</p>
+      <ul class="vh-android-choices">
+        <li>
+          <a id="{{ include.id }}WebAndroid" class="vh-android-choice" href="{{ vh_ad_apk }}-arm64.apk" target="_blank" rel="noopener" data-vh-track="download-android-arm64">
+            <span><b>{{ t.android_arm64_title }}</b><small>{{ t.android_arm64_desc }}</small><span class="visually-hidden"> {{ t.new_tab }}</span></span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>
+          </a>
+        </li>
+        <li>
+          <a id="{{ include.id }}WebAndroidUniversal" class="vh-android-choice" href="{{ vh_ad_apk }}.apk" target="_blank" rel="noopener" data-vh-track="download-android-universal">
+            <span><b>{{ t.android_universal_title }}</b><small>{{ t.android_universal_desc }}</small><span class="visually-hidden"> {{ t.new_tab }}</span></span>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@
     "meta_description": "Install VpnHood! CLIENT on Linux with one command, connect from its window or the command line, start it at boot, and run it on a machine with no desktop.",
     "title": "Install VpnHood! CLIENT on Linux",
     "lead": "One command installs the app, with a window on a desktop and a set of commands everywhere, so it also runs on a machine with no screen.",
-    "before_need": "An access key from whoever runs the server, as VpnHood! CLIENT has no servers of its own.",
+    "before_need": "An <a href=\"/vpnhood-client/docs/first-key/\">access key</a> from whoever runs the server, as VpnHood! CLIENT has no servers of its own.",
     "connect_desktop": "On a desktop, open [app] from the application menu, add your access key and connect.",
     "connect_terminal": "From a terminal, or on a machine with no desktop, add your access key, connect, and check the connection:",
     "connect_note": "<code>[cmd] profile add</code> also takes the path of a file holding the key. With several profiles, choose the one to connect with: <code>[cmd] profile set-default</code>.",

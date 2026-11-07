@@ -3,7 +3,8 @@
 
 Writes `assets/images/<product>/docs/hero-<name>.svg`, for the docs of VpnHood! SERVER and
 VpnHood! MANAGER, `vpnhood-manager/docs/promo-manager.svg`, the art of the MANAGER promo on the
-server pages, and `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems.
+server pages, `vpnhood-manager/docs/trouble-<id>.svg`, the troubleshooting page's problems, and
+`vpnhood-client/docs/first-key-<id>.svg`, the ways to get a key on CLIENT's first-key page.
 THOSE FILES ARE GENERATED - edit this script and re-run, never the SVGs.
 
 The art speaks the language of the guides' heroes (`assets/images/guides/*.svg`): a deep
@@ -287,6 +288,85 @@ def linux_requirements() -> None:
         a.bar(550, y + 58, 150 - n * 20, 14, fill=LILAC, opacity=.25)
     a.ambient(cy=880, rx=300, ry=55, opacity=.45)
     a.render("linux-requirements", product="vpnhood-client")
+
+
+def draw_key(a: Art, cx, cy, scale=1.0, angle=45, width=11) -> None:
+    """The access key, drawn flat around the middle of the canvas with its bow on the left, then placed."""
+    a.add(f'<g transform="translate({cx} {cy}) rotate({angle}) scale({scale:g}) translate(-500 -500)">')
+    a.solid('<path d="M 440 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 '
+            'Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 440 A 175 175 0 1 1 440 458 Z" {fill} {stroke}/>', width=round(width / scale, 1))
+    a.add(f'<circle cx="222" cy="500" r="62" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="6"/>')
+    a.led(350, 500, r=17)
+    a.bar(430, 488, 300, 24, fill=MINT, glow=True)
+    a.bar(760, 488, 90, 24, fill=LILAC, opacity=.4)
+    a.add('</g>')
+
+
+def first_key() -> None:
+    """Get an access key: one large key, its line of text lit along the blade."""
+    a = Art("dhFirstKey")
+    a.ambient(cy=470)
+    draw_key(a, 500, 500)
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("first-key", product="vpnhood-client")
+
+
+def closed_hand(a: Art) -> None:
+    """A hand holding something, coming in from the left: its cuff, the back of it, four fingers and the thumb."""
+    a.solid('<rect x="-40" y="420" width="250" height="300" rx="34" {fill} {stroke}/>', rim=False)
+    a.bar(170, 440, 22, 260, fill=LILAC, opacity=.4)
+    a.solid('<path d="M 210 450 H 400 Q 470 450 470 520 V 650 Q 470 720 400 720 H 210 Z" {fill} {stroke}/>', width=20)
+    for n in range(4):
+        a.solid(f'<rect x="400" y="{452 + n * 68}" width="190" height="64" rx="32" {{fill}} {{stroke}}/>', width=16)
+    a.solid('<path d="M 300 455 Q 300 372 390 372 H 510 Q 560 372 560 420 Q 560 468 510 468 H 400 Q 372 468 360 500 Z" {fill} {stroke}/>', width=18)
+
+
+def open_hand(a: Art) -> None:
+    """An open hand from the side, palm up: its cuff, the palm running on into the fingers, and the thumb."""
+    a.solid('<path d="M 62 690 L 186 660 Q 210 654 216 678 L 262 862 Q 268 886 244 892 L 120 922 Q 96 928 90 904 L 44 720 Q 38 696 62 690 Z" {fill} {stroke}/>', rim=False)
+    a.solid('<path d="M 214 690 C 300 650 372 668 450 716 C 520 758 600 762 690 746 L 852 716 Q 924 704 938 752 Q 950 800 880 822 '
+            'L 650 892 C 520 930 380 928 262 878 Z" {fill} {stroke}/>', width=12)
+    for x1, y1, x2, y2 in ((640, 806, 850, 760), (620, 846, 800, 806)):
+        a.add(f'<path d="M {x1} {y1} L {x2} {y2}" stroke="{VIOLET}" stroke-opacity=".55" stroke-width="10" stroke-linecap="round"/>')
+    a.solid('<path d="M 396 700 C 440 640 500 618 548 628 Q 586 638 572 672 Q 560 700 520 712 C 496 720 474 740 462 760 Z" {fill} {stroke}/>', width=10)
+
+
+def first_key_ask() -> None:
+    """Ask whoever runs the server: a hand reaches down and drops a key into your open hand."""
+    a = Art("fkAsk")
+    a.ambient(cy=470)
+    a.add('<g transform="translate(650 345) rotate(-55) scale(-.52 .52) translate(-600 -570)">')
+    draw_key(a, 880, 470, scale=.86, angle=0, width=22)
+    closed_hand(a)
+    a.add('</g>')
+    open_hand(a)
+    a.ambient(cy=950, rx=330, ry=36, opacity=.45)
+    a.render("ask", product="vpnhood-client", prefix="first-key")
+
+
+def first_key_own() -> None:
+    """Run your own server: a stack of servers, and in front of it a key made there."""
+    a = Art("fkOwn")
+    a.ambient(cy=450)
+    for n, y in enumerate((120, 300, 480)):
+        a.server_unit(120, y, 680, 150, rim=(n == 0), lit=(n == 0))
+    draw_key(a, 600, 740, scale=.72, angle=-24, width=12)
+    a.ambient(cy=920, rx=300, ry=45, opacity=.45)
+    a.render("own", product="vpnhood-client", prefix="first-key")
+
+
+def first_key_connect() -> None:
+    """Use an app with its own servers: a phone with the servers inside it, connected, and no key to add."""
+    a = Art("fkConnect")
+    a.ambient(cy=480)
+    a.solid('<rect x="260" y="70" width="480" height="860" rx="76" {fill} {stroke}/>', width=12)
+    a.bar(435, 122, 130, 18, fill=LILAC, opacity=.42)
+    a.server_unit(315, 190, 370, 140, rim=True)
+    a.server_unit(315, 360, 370, 140, lit=False)
+    a.solid('<circle cx="500" cy="700" r="120" {fill} {stroke}/>', width=11)
+    a.add(f'<path d="M 500 628 V 696" fill="none" stroke="{MINT}" stroke-width="28" stroke-linecap="round"/>',
+          f'<path d="M 450 656 A 72 72 0 1 0 550 656" fill="none" stroke="{MINT}" stroke-width="28" stroke-linecap="round"/>')
+    a.render("connect", product="vpnhood-client", prefix="first-key")
 
 
 def install_system(name: str, uid: str) -> None:
@@ -928,6 +1008,10 @@ if __name__ == "__main__":
     install()
     linux()
     linux_requirements()
+    first_key()
+    first_key_ask()
+    first_key_own()
+    first_key_connect()
     install_system("linux", "dhInstallLinux")
     install_system("docker", "dhInstallDocker")
     install_system("windows", "dhInstallWindows")
