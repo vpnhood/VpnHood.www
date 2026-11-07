@@ -37,6 +37,8 @@
     "free-vpn": "Free VPN",
     "download": "Download",
     "first-key": "Get an access key",
+    "diagnose": "Send a diagnosis report",
+    "help": "Help",
     "linux": "Linux",
     "linux-requirements": "Linux requirements"
   }

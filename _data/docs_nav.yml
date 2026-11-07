@@ -51,3 +51,6 @@ vpnhood-client:
       - url: /vpnhood-client/docs/first-key/
       - url: /vpnhood-client/docs/linux-requirements/
       - url: /vpnhood-client/docs/linux/
+  - group: help
+    pages:
+      - url: /vpnhood-client/docs/diagnose/

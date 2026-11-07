@@ -306,6 +306,21 @@ def draw_key(a: Art, cx, cy, scale=1.0, angle=45, width=11) -> None:
     a.add('</g>')
 
 
+def client_diagnose() -> None:
+    """Send a diagnosis report: a report with a pulse running across it."""
+    a = Art("dhDiagnose")
+    a.ambient(cy=470)
+    a.solid('<path d="M 250 110 H 620 L 770 260 V 850 Q 770 890 730 890 H 250 Q 210 890 210 850 V 150 Q 210 110 250 110 Z" {fill} {stroke}/>', width=11)
+    a.add(f'<path d="M 620 110 V 260 H 770" fill="none" stroke="{a.url("Rim")}" stroke-width="10" stroke-linejoin="round"/>')
+    for y, w in ((220, 240), (290, 300), (720, 400), (790, 300)):
+        a.bar(280, y, w, 20, opacity=.42)
+    pulse = "M 90 520 H 330 L 400 390 L 490 640 L 570 460 L 620 520 H 890"
+    a.add(f'<path d="{pulse}" fill="none" stroke="{TEAL}" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" opacity=".5" filter="{a.url("Soft")}"/>',
+          f'<path d="{pulse}" fill="none" stroke="{MINT}" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>')
+    a.ambient(cy=930, rx=300, ry=40, opacity=.45)
+    a.render("diagnose", product="vpnhood-client")
+
+
 def first_key() -> None:
     """Get an access key: one large key, its line of text lit along the blade."""
     a = Art("dhFirstKey")
@@ -1027,6 +1042,7 @@ if __name__ == "__main__":
     install()
     linux()
     linux_requirements()
+    client_diagnose()
     first_key()
     first_key_ask()
     first_key_own()

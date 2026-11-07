@@ -46,5 +46,7 @@
   "q_server_needs_manager": "运行服务器必须安装 VpnHood! MANAGER 吗？",
   "a_server_needs_manager": "不需要。VpnHood! SERVER 内置了轻量级基于文件的访问管理，无需任何面板即可独立运行并生成密钥。仅当您需要控制面板、实时监控、自定义套餐或管理多台服务器进行负载均衡时，才需使用 MANAGER。",
   "q_server_ip_blocked": "我的服务器 IP 还会被封锁吗？",
-  "a_server_ip_blocked": "是的。伪装模式几乎不会在流量中留下可供识别的指纹，因此服务器被封锁通常是因为其 IP 地址。请对该地址保密，只与少数人分享。使用 MANAGER 时，将您的服务器集群指向一个 Token URL；这样当您将服务器迁移到新 IP 时，用户的应用会自行获取新地址。<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>介绍了其他有效做法，首先是为服务器的出站流量配置第二个 IP。"
+  "a_server_ip_blocked": "是的。伪装模式几乎不会在流量中留下可供识别的指纹，因此服务器被封锁通常是因为其 IP 地址。请对该地址保密，只与少数人分享。使用 MANAGER 时，将您的服务器集群指向一个 Token URL；这样当您将服务器迁移到新 IP 时，用户的应用会自行获取新地址。<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>介绍了其他有效做法，首先是为服务器的出站流量配置第二个 IP。",
+  "q_send_report": "如何发送诊断报告？",
+  "a_send_report": "打开应用菜单，点按<b>诊断</b>，重现问题，点按<b>停止诊断</b>，然后将报告发送给我们。<a href=\"/vpnhood-client/docs/diagnose/\">查看步骤</a>。"
 }

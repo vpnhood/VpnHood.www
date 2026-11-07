@@ -34,6 +34,7 @@ all:
   - why_slower
   - request_location
   - many_servers_per_location
+  - send_report
 
 sets:
   home:

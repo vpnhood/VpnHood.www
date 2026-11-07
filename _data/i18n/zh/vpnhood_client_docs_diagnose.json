@@ -1,0 +1,22 @@
+{
+  "meta_title": "发送诊断报告 | VpnHood! CLIENT 和 CONNECT",
+  "meta_description": "如何在 VpnHood! CLIENT 或 VpnHood! CONNECT 中运行诊断、打开报告并发送给支持团队，以及分享前报告中包含哪些内容。",
+  "title": "发送诊断报告",
+  "lead": "当应用无法连接或频繁断开时，诊断报告能让我们的支持团队了解问题所在。VpnHood! CLIENT 和 VpnHood! CONNECT 的步骤相同。",
+  "steps_title": "如何发送",
+  "step_open": "打开主屏幕顶部的菜单，点按<b>诊断</b>。应用会连接并记录发生的情况。",
+  "step_repeat": "像出现问题时那样使用设备，直到问题再次出现。",
+  "step_stop": "点按<b>停止诊断</b>。",
+  "step_report": "应用停止后会显示一条消息。点按其中的<b>打开报告</b>。",
+  "step_send": "用报告页面顶部的按钮分享报告，并附上几句问题说明，发送到 <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>。在电脑上，该按钮会复制报告。如果没有这个按钮，请发送屏幕截图：报告会从末尾打开，这是最重要的部分。",
+  "tip_error": "如果错误消息中显示<b>诊断</b>按钮，您可以点按它，而不必打开菜单。",
+  "holds_title": "报告包含哪些内容",
+  "holds_desc": "报告是纯文本，在您发送之前一直保存在您的设备上，因此您可以先阅读。其中包含：",
+  "holds_app": "应用版本、您的系统和您所在的国家/地区。",
+  "holds_settings": "您设置的应用选项，例如自定义 DNS 服务器或分流规则。",
+  "holds_steps": "连接的每个步骤和所有错误。其中的 IP 地址和主机名已被隐去。",
+  "holds_not": "其中不包含您访问的网站，也不包含您的流量内容。",
+  "shot_menu_alt": "应用菜单，已标出诊断",
+  "shot_stop_alt": "诊断期间的主屏幕，带有停止诊断按钮",
+  "shot_report_alt": "诊断结束时的消息，带有打开报告按钮"
+}

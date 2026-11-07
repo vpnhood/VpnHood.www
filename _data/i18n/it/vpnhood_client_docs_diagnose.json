@@ -1,0 +1,22 @@
+{
+  "meta_title": "Invia un report diagnostico | VpnHood! CLIENT e CONNECT",
+  "meta_description": "Come avviare la diagnostica in VpnHood! CLIENT o VpnHood! CONNECT, aprire il report e inviarlo al supporto, e cosa contiene il report prima di condividerlo.",
+  "title": "Invia un report diagnostico",
+  "lead": "Quando l'app non si connette o continua a disconnettersi, un report diagnostico mostra al nostro team di supporto cosa è andato storto. I passaggi sono gli stessi in VpnHood! CLIENT e VpnHood! CONNECT.",
+  "steps_title": "Come inviarlo",
+  "step_open": "Apri il menu in alto nella schermata principale e tocca <b>Diagnostica</b>. L'app si connette e registra ciò che accade.",
+  "step_repeat": "Usa il dispositivo come quando si è verificato il problema, finché non lo vedi di nuovo.",
+  "step_stop": "Tocca <b>Interrompi diagnostica</b>.",
+  "step_report": "Quando l'app si è fermata compare un messaggio. Toccaci <b>Apri report</b>.",
+  "step_send": "Condividi il report con il pulsante in alto nella sua pagina e invialo a <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, con due parole sul problema. Sul computer, quel pulsante lo copia. Se non hai quel pulsante, invia uno screenshot: il report si apre alla fine, la parte più importante.",
+  "tip_error": "Se un messaggio di errore mostra il pulsante <b>Diagnostica</b>, puoi toccarlo invece di aprire il menu.",
+  "holds_title": "Cosa contiene il report",
+  "holds_desc": "Il report è testo semplice e resta sul tuo dispositivo finché non lo invii, quindi puoi leggerlo prima. Contiene:",
+  "holds_app": "La versione dell'app, il tuo sistema e il tuo paese.",
+  "holds_settings": "Le impostazioni dell'app come le hai scelte, ad esempio un server DNS personalizzato o regole di split tunneling.",
+  "holds_steps": "Ogni passaggio della connessione ed eventuali errori. Qui gli indirizzi IP e i nomi host sono mascherati.",
+  "holds_not": "Non contiene i siti che visiti né il contenuto del tuo traffico.",
+  "shot_menu_alt": "Il menu dell'app, con Diagnostica evidenziato",
+  "shot_stop_alt": "La schermata principale durante la diagnostica, con il pulsante Interrompi diagnostica",
+  "shot_report_alt": "Il messaggio al termine della diagnostica, con il pulsante Apri report"
+}

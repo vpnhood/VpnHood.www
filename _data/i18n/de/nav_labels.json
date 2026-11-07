@@ -35,6 +35,8 @@
   "free-vpn": "Kostenloses VPN",
   "download": "Download",
   "first-key": "Einen Zugangsschlüssel erhalten",
+  "diagnose": "Diagnosebericht senden",
+  "help": "Hilfe",
   "linux": "Linux",
   "linux-requirements": "Linux-Systemanforderungen"
 }

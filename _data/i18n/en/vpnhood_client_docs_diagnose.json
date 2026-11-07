@@ -1,0 +1,22 @@
+{
+  "meta_title": "Send a Diagnosis Report | VpnHood! CLIENT and CONNECT",
+  "meta_description": "How to run Diagnose in VpnHood! CLIENT or VpnHood! CONNECT, open the report and send it to support, and what the report holds before you share it.",
+  "title": "Send a diagnosis report",
+  "lead": "When the app will not connect or keeps dropping, a diagnosis report shows our support team what went wrong. The steps are the same in VpnHood! CLIENT and VpnHood! CONNECT.",
+  "steps_title": "How to send one",
+  "step_open": "Open the menu at the top of the home screen and tap <b>Diagnose</b>. The app connects and records what happens.",
+  "step_repeat": "Use your device as you did when the problem happened, until you see it again.",
+  "step_stop": "Tap <b>Stop Diagnosing</b>.",
+  "step_report": "A message appears when the app has stopped. Tap <b>Open Report</b> in it.",
+  "step_send": "Share the report with the button at the top of its page and send it to <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, with a few words about the problem. On a computer, that button copies it. If you have no such button, send a screenshot: the report opens at its end, the part that matters most.",
+  "tip_error": "If an error message shows a <b>Diagnose</b> button, you can tap that instead of opening the menu.",
+  "holds_title": "What the report holds",
+  "holds_desc": "The report is plain text that stays on your device until you send it, so you can read it first. It holds:",
+  "holds_app": "The app's version, your system and your country.",
+  "holds_settings": "Your app settings as you set them, such as a custom DNS server or split tunneling rules.",
+  "holds_steps": "Each step of the connection and any errors. IP addresses and host names are masked here.",
+  "holds_not": "It does not hold the sites you visit or the content of your traffic.",
+  "shot_menu_alt": "The app's menu, with Diagnose marked",
+  "shot_stop_alt": "The home screen while diagnosing, with the Stop Diagnosing button",
+  "shot_report_alt": "The message when diagnosing ends, with the Open Report button"
+}

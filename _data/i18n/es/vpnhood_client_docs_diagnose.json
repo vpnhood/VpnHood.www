@@ -1,0 +1,22 @@
+{
+  "meta_title": "Enviar un informe de diagnóstico | VpnHood! CLIENT y CONNECT",
+  "meta_description": "Cómo ejecutar el diagnóstico en VpnHood! CLIENT o VpnHood! CONNECT, abrir el informe y enviarlo a soporte, y qué contiene el informe antes de compartirlo.",
+  "title": "Enviar un informe de diagnóstico",
+  "lead": "Cuando la app no se conecta o se desconecta una y otra vez, un informe de diagnóstico muestra a nuestro equipo de soporte qué ha fallado. Los pasos son los mismos en VpnHood! CLIENT y VpnHood! CONNECT.",
+  "steps_title": "Cómo enviarlo",
+  "step_open": "Abre el menú en la parte superior de la pantalla de inicio y toca <b>Diagnosticar</b>. La app se conecta y registra lo que ocurre.",
+  "step_repeat": "Usa tu dispositivo como lo hacías cuando ocurrió el problema, hasta que vuelvas a verlo.",
+  "step_stop": "Toca <b>Detener diagnóstico</b>.",
+  "step_report": "Cuando la app se detiene aparece un mensaje. Toca <b>Abrir informe</b> en él.",
+  "step_send": "Comparte el informe con el botón de la parte superior de su página y envíalo a <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, con unas palabras sobre el problema. En un ordenador, ese botón lo copia. Si no tienes ese botón, envía una captura de pantalla: el informe se abre por el final, la parte más importante.",
+  "tip_error": "Si un mensaje de error muestra un botón <b>Diagnosticar</b>, puedes tocarlo en lugar de abrir el menú.",
+  "holds_title": "Qué contiene el informe",
+  "holds_desc": "El informe es texto sin formato que se queda en tu dispositivo hasta que lo envías, así que puedes leerlo antes. Contiene:",
+  "holds_app": "La versión de la app, tu sistema y tu país.",
+  "holds_settings": "Los ajustes de la app tal como los configuraste, como un servidor DNS personalizado o reglas de túnel dividido.",
+  "holds_steps": "Cada paso de la conexión y cualquier error. Las direcciones IP y los nombres de host aparecen ocultos aquí.",
+  "holds_not": "No contiene los sitios que visitas ni el contenido de tu tráfico.",
+  "shot_menu_alt": "El menú de la app, con Diagnosticar marcado",
+  "shot_stop_alt": "La pantalla de inicio durante el diagnóstico, con el botón Detener diagnóstico",
+  "shot_report_alt": "El mensaje al terminar el diagnóstico, con el botón Abrir informe"
+}

@@ -1,0 +1,22 @@
+{
+  "meta_title": "Diagnosebericht senden | VpnHood! CLIENT und CONNECT",
+  "meta_description": "So führen Sie die Diagnose in VpnHood! CLIENT oder VpnHood! CONNECT aus, öffnen den Bericht und senden ihn an den Support, und das steht darin, bevor Sie ihn teilen.",
+  "title": "Diagnosebericht senden",
+  "lead": "Wenn die App keine Verbindung herstellt oder sie immer wieder verliert, zeigt ein Diagnosebericht unserem Support-Team, was schiefgelaufen ist. Die Schritte sind in VpnHood! CLIENT und VpnHood! CONNECT gleich.",
+  "steps_title": "So senden Sie ihn",
+  "step_open": "Öffnen Sie das Menü oben auf dem Startbildschirm und tippen Sie auf <b>Diagnose</b>. Die App verbindet sich und zeichnet auf, was passiert.",
+  "step_repeat": "Nutzen Sie Ihr Gerät wie zu dem Zeitpunkt, als das Problem auftrat, bis Sie es wieder sehen.",
+  "step_stop": "Tippen Sie auf <b>Diagnose beenden</b>.",
+  "step_report": "Sobald die App gestoppt hat, erscheint eine Meldung. Tippen Sie darin auf <b>Bericht öffnen</b>.",
+  "step_send": "Teilen Sie den Bericht über die Schaltfläche oben auf seiner Seite und senden Sie ihn mit ein paar Worten zum Problem an <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>. Am Computer kopiert diese Schaltfläche ihn. Haben Sie diese Schaltfläche nicht, senden Sie einen Screenshot: Der Bericht öffnet sich an seinem Ende, dem wichtigsten Teil.",
+  "tip_error": "Zeigt eine Fehlermeldung die Schaltfläche <b>Diagnose</b>, können Sie darauf tippen, statt das Menü zu öffnen.",
+  "holds_title": "Was der Bericht enthält",
+  "holds_desc": "Der Bericht ist reiner Text und bleibt auf Ihrem Gerät, bis Sie ihn senden. Sie können ihn also zuerst lesen. Er enthält:",
+  "holds_app": "Die Version der App, Ihr System und Ihr Land.",
+  "holds_settings": "Ihre App-Einstellungen, so wie Sie sie gesetzt haben, etwa einen eigenen DNS-Server oder Split-Tunneling-Regeln.",
+  "holds_steps": "Jeden Schritt der Verbindung und alle Fehler. IP-Adressen und Hostnamen sind hier unkenntlich gemacht.",
+  "holds_not": "Er enthält weder die Websites, die Sie besuchen, noch den Inhalt Ihres Datenverkehrs.",
+  "shot_menu_alt": "Das Menü der App, Diagnose ist markiert",
+  "shot_stop_alt": "Der Startbildschirm während der Diagnose mit der Schaltfläche Diagnose beenden",
+  "shot_report_alt": "Die Meldung am Ende der Diagnose mit der Schaltfläche Bericht öffnen"
+}

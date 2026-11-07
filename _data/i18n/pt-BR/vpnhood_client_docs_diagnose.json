@@ -1,0 +1,22 @@
+{
+  "meta_title": "Enviar um relatório de diagnóstico | VpnHood! CLIENT e CONNECT",
+  "meta_description": "Como executar o diagnóstico no VpnHood! CLIENT ou no VpnHood! CONNECT, abrir o relatório e enviá-lo ao suporte, e o que o relatório contém antes de você compartilhá-lo.",
+  "title": "Enviar um relatório de diagnóstico",
+  "lead": "Quando o app não conecta ou cai toda hora, um relatório de diagnóstico mostra à nossa equipe de suporte o que deu errado. Os passos são os mesmos no VpnHood! CLIENT e no VpnHood! CONNECT.",
+  "steps_title": "Como enviar",
+  "step_open": "Abra o menu no topo da tela inicial e toque em <b>Diagnosticar</b>. O app conecta e registra o que acontece.",
+  "step_repeat": "Use seu dispositivo como usava quando o problema aconteceu, até vê-lo de novo.",
+  "step_stop": "Toque em <b>Parar diagnóstico</b>.",
+  "step_report": "Uma mensagem aparece quando o app para. Toque em <b>Abrir relatório</b> nela.",
+  "step_send": "Compartilhe o relatório com o botão no topo da página dele e envie para <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, com algumas palavras sobre o problema. No computador, esse botão o copia. Se você não tiver esse botão, envie uma captura de tela: o relatório abre no final, a parte mais importante.",
+  "tip_error": "Se uma mensagem de erro mostrar um botão <b>Diagnosticar</b>, você pode tocar nele em vez de abrir o menu.",
+  "holds_title": "O que o relatório contém",
+  "holds_desc": "O relatório é texto simples que fica no seu dispositivo até você enviá-lo, então você pode lê-lo antes. Ele contém:",
+  "holds_app": "A versão do app, seu sistema e seu país.",
+  "holds_settings": "As configurações do app como você definiu, como um servidor DNS personalizado ou regras de túnel dividido.",
+  "holds_steps": "Cada etapa da conexão e qualquer erro. Endereços IP e nomes de host ficam mascarados aqui.",
+  "holds_not": "Ele não contém os sites que você visita nem o conteúdo do seu tráfego.",
+  "shot_menu_alt": "O menu do app, com Diagnosticar marcado",
+  "shot_stop_alt": "A tela inicial durante o diagnóstico, com o botão Parar diagnóstico",
+  "shot_report_alt": "A mensagem ao fim do diagnóstico, com o botão Abrir relatório"
+}

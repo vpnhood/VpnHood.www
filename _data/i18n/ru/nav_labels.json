@@ -35,6 +35,8 @@
   "free-vpn": "Бесплатный VPN",
   "download": "Скачать",
   "first-key": "Как получить ключ доступа",
+  "diagnose": "Отправить диагностический отчёт",
+  "help": "Помощь",
   "linux": "Linux",
   "linux-requirements": "Требования для Linux"
 }

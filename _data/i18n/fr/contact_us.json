@@ -4,6 +4,7 @@
   "page_title": "Nous contacter",
   "page_desc": "Notre équipe est toujours là pour répondre à vos questions. Si vous souhaitez nous contacter, veuillez remplir le formulaire ci-dessous. Un membre de notre équipe vous répondra très prochainement.",
   "support_title": "Support",
+  "support_report": "L'application ne se connecte pas ? <a href=\"/vpnhood-client/docs/diagnose/\">Envoyez un rapport de diagnostic</a>.",
   "reseller_title": "Demandes revendeurs",
   "form_title": "Comment pouvons-nous vous aider ?",
   "label_name": "VOTRE NOM",

@@ -1,0 +1,22 @@
+{
+  "meta_title": "Envoyer un rapport de diagnostic | VpnHood! CLIENT et CONNECT",
+  "meta_description": "Comment lancer le diagnostic dans VpnHood! CLIENT ou VpnHood! CONNECT, ouvrir le rapport et l'envoyer au support, et ce que contient le rapport avant de le partager.",
+  "title": "Envoyer un rapport de diagnostic",
+  "lead": "Lorsque l'application ne se connecte pas ou se déconnecte sans arrêt, un rapport de diagnostic montre à notre équipe de support ce qui n'a pas fonctionné. Les étapes sont les mêmes dans VpnHood! CLIENT et VpnHood! CONNECT.",
+  "steps_title": "Comment l'envoyer",
+  "step_open": "Ouvrez le menu en haut de l'écran d'accueil et touchez <b>Diagnostiquer</b>. L'application se connecte et enregistre ce qui se passe.",
+  "step_repeat": "Utilisez votre appareil comme au moment du problème, jusqu'à ce qu'il se reproduise.",
+  "step_stop": "Touchez <b>Arrêter le diagnostic</b>.",
+  "step_report": "Un message apparaît lorsque l'application s'est arrêtée. Touchez-y <b>Ouvrir le rapport</b>.",
+  "step_send": "Partagez le rapport avec le bouton en haut de sa page et envoyez-le à <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, avec quelques mots sur le problème. Sur un ordinateur, ce bouton le copie. Si vous n'avez pas ce bouton, envoyez une capture d'écran : le rapport s'ouvre à sa fin, la partie la plus utile.",
+  "tip_error": "Si un message d'erreur affiche un bouton <b>Diagnostiquer</b>, vous pouvez le toucher au lieu d'ouvrir le menu.",
+  "holds_title": "Ce que contient le rapport",
+  "holds_desc": "Le rapport est un simple texte qui reste sur votre appareil jusqu'à ce que vous l'envoyiez, vous pouvez donc le lire d'abord. Il contient :",
+  "holds_app": "La version de l'application, votre système et votre pays.",
+  "holds_settings": "Les réglages de l'application tels que vous les avez définis, comme un serveur DNS personnalisé ou des règles de split tunneling.",
+  "holds_steps": "Chaque étape de la connexion et les erreurs éventuelles. Les adresses IP et les noms d'hôte y sont masqués.",
+  "holds_not": "Il ne contient ni les sites que vous visitez ni le contenu de votre trafic.",
+  "shot_menu_alt": "Le menu de l'application, avec Diagnostiquer signalé",
+  "shot_stop_alt": "L'écran d'accueil pendant le diagnostic, avec le bouton Arrêter le diagnostic",
+  "shot_report_alt": "Le message à la fin du diagnostic, avec le bouton Ouvrir le rapport"
+}

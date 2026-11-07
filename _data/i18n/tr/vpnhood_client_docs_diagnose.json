@@ -1,0 +1,22 @@
+{
+  "meta_title": "Tanılama Raporu Gönderin | VpnHood! CLIENT ve CONNECT",
+  "meta_description": "VpnHood! CLIENT veya VpnHood! CONNECT'te teşhisi nasıl çalıştıracağınız, raporu nasıl açıp desteğe göndereceğiniz ve paylaşmadan önce raporda neler olduğu.",
+  "title": "Tanılama raporu gönderin",
+  "lead": "Uygulama bağlanmadığında veya bağlantısı sürekli koptuğunda, tanılama raporu destek ekibimize neyin yanlış gittiğini gösterir. Adımlar VpnHood! CLIENT ve VpnHood! CONNECT'te aynıdır.",
+  "steps_title": "Nasıl gönderilir",
+  "step_open": "Ana ekranın üstündeki menüyü açın ve <b>Teşhis Et</b>'e dokunun. Uygulama bağlanır ve olanları kaydeder.",
+  "step_repeat": "Cihazınızı sorun yaşadığınız sıradaki gibi kullanın, sorunu yeniden görene kadar devam edin.",
+  "step_stop": "<b>Teşhisi Durdur</b>'a dokunun.",
+  "step_report": "Uygulama durduğunda bir mesaj görünür. Bu mesajda <b>Raporu Aç</b>'a dokunun.",
+  "step_send": "Raporu sayfasının üstündeki düğmeyle paylaşın ve sorunu birkaç kelimeyle anlatarak <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a> adresine gönderin. Bilgisayarda bu düğme raporu kopyalar. Bu düğmeniz yoksa ekran görüntüsü gönderin: rapor en önemli kısmı olan sonundan açılır.",
+  "tip_error": "Bir hata mesajında <b>Teşhis Et</b> düğmesi görünürse menüyü açmak yerine ona dokunabilirsiniz.",
+  "holds_title": "Raporda neler var",
+  "holds_desc": "Rapor, siz gönderene kadar cihazınızda kalan düz bir metindir, bu yüzden önce okuyabilirsiniz. İçinde şunlar vardır:",
+  "holds_app": "Uygulamanın sürümü, sisteminiz ve ülkeniz.",
+  "holds_settings": "Ayarladığınız haliyle uygulama ayarlarınız; örneğin özel bir DNS sunucusu veya bölünmüş tünelleme kuralları.",
+  "holds_steps": "Bağlantının her adımı ve tüm hatalar. IP adresleri ve ana bilgisayar adları burada gizlenir.",
+  "holds_not": "Ziyaret ettiğiniz siteleri veya trafiğinizin içeriğini barındırmaz.",
+  "shot_menu_alt": "Teşhis Et işaretli uygulama menüsü",
+  "shot_stop_alt": "Teşhis sırasında ana ekran ve Teşhisi Durdur düğmesi",
+  "shot_report_alt": "Teşhis bitince çıkan mesaj ve Raporu Aç düğmesi"
+}

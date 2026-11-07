@@ -35,6 +35,8 @@
   "free-vpn": "免费 VPN",
   "download": "下载",
   "first-key": "获取访问密钥",
+  "diagnose": "发送诊断报告",
+  "help": "帮助",
   "linux": "Linux",
   "linux-requirements": "Linux 系统要求"
 }

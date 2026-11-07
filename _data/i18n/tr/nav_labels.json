@@ -35,6 +35,8 @@
   "free-vpn": "Ücretsiz VPN",
   "download": "İndir",
   "first-key": "Erişim anahtarı alın",
+  "diagnose": "Tanılama raporu gönderin",
+  "help": "Yardım",
   "linux": "Linux",
   "linux-requirements": "Linux gereksinimleri"
 }

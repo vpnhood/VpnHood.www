@@ -1,0 +1,63 @@
+---
+layout: none
+i18n: vpnhood_client_docs_diagnose
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  How to send a diagnosis report, one page for CLIENT and CONNECT, as both run the same UI (owner,
+  2026-11-06). Checked against the Avalonia UI of v9.1.868, not the wiki, which is out of date: its
+  Send Report and reference number are gone, and the SPA is only a sample. Diagnose is in the menu
+  and on some error messages, connected or not; Stop Diagnosing ends it; the message that follows
+  offers Open Report, which opens the log inside the app, scrolled to its end. A button at the top
+  of that page shares it as a file on a phone or tablet and copies it on a computer; a version from
+  before that button, and a TV, have none, so the step keeps the screenshot. The bold words are each
+  language's app labels, from VpnHood.AppUi.Assets.Classic: DIAGNOSE, STOP_DIAGNOSING and OPEN_REPORT.
+
+  What the report holds comes from the code: the version, the OS, the settings as JSON and, while
+  diagnosing, the country, then the connection at the Information level. The app sends none of
+  it. Addresses go through the redactor, which is on by default, but the settings do not, so a
+  custom DNS server shows as it is: the page says so. Sites are logged only at the Debug level.
+
+  The pictures are the app's own, cut to the part each step needs, which also drops the sample
+  data's old version number. Drawn with the store screenshot tool at 3x and brought down to 2x.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-client/docs/hero-diagnose.svg" %}
+
+<h2 id="steps">{{ t.steps_title }}</h2>
+<ol>
+  <li>{{ t.step_open }}
+    <figure class="vh-docs-shot">
+      <img src="/assets/images/vpnhood-client/docs/diagnose-menu.webp" alt="{{ t.shot_menu_alt }}" width="300" height="136" loading="lazy">
+    </figure>
+  </li>
+  <li>{{ t.step_repeat }}</li>
+  <li>{{ t.step_stop }}
+    <figure class="vh-docs-shot">
+      <img src="/assets/images/vpnhood-client/docs/diagnose-stop.webp" alt="{{ t.shot_stop_alt }}" width="240" height="246" loading="lazy">
+    </figure>
+  </li>
+  <li>{{ t.step_report }}
+    <figure class="vh-docs-shot">
+      <img src="/assets/images/vpnhood-client/docs/diagnose-report.webp" alt="{{ t.shot_report_alt }}" width="336" height="226" loading="lazy">
+    </figure>
+  </li>
+  <li>{{ t.step_send }}</li>
+</ol>
+<p>{{ t.tip_error }}</p>
+
+<h2 id="contents">{{ t.holds_title }}</h2>
+<p>{{ t.holds_desc }}</p>
+<ul>
+  <li>{{ t.holds_app }}</li>
+  <li>{{ t.holds_settings }}</li>
+  <li>{{ t.holds_steps }}</li>
+</ul>
+<p>{{ t.holds_not }}</p>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}
