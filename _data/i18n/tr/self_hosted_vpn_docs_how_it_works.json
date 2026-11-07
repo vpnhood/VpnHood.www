@@ -13,7 +13,7 @@
   "diagram_server_sub": "VpnHood! SERVER",
   "diagram_out": "İnternete çıkış",
   "diagram_websites": "Web siteleri",
-  "diagram_caption": "Web siteleri kullanıcılarınızı değil, yalnızca sunucunuzu görür",
+  "diagram_caption": "Web siteleri kullanıcılarınızı değil, sunucunuzu görür",
   "device_title": "Cihaz tarafında",
   "device_capture": "Uygulama, sistemin VPN uygulamalarına sağladığı sanal ağ bağdaştırıcısı üzerinden cihaz trafiğini yakalar. Üç tür trafiği taşır: TCP, UDP ve ping. Diğer tüm paketler doğrudan düşürülür.",
   "device_split": "Bölünmüş tünelleme kararı da cihaz tarafında verilir. Uygulama, ülke, alan adı veya IP adresine göre tünel dışı bırakılan trafik doğrudan internete gider ve sunucunuza hiç uğramaz. Seçenekleri incelemek için <a href=\"/features/split-tunneling/\">Bölünmüş Tünelleme</a> sayfasına göz atın.",
