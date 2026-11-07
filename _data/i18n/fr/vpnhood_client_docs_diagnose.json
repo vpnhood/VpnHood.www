@@ -8,7 +8,7 @@
   "step_repeat": "Utilisez votre appareil comme au moment du problème, jusqu'à ce qu'il se reproduise.",
   "step_stop": "Touchez <b>Arrêter le diagnostic</b>.",
   "step_report": "Un message apparaît lorsque l'application s'est arrêtée. Touchez-y <b>Ouvrir le rapport</b>.",
-  "step_send": "Partagez le rapport avec le bouton en haut de sa page et envoyez-le à <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, avec quelques mots sur le problème. Sur un ordinateur, ce bouton le copie. Si vous n'avez pas ce bouton, envoyez une capture d'écran : le rapport s'ouvre à sa fin, la partie la plus utile.",
+  "step_send": "Partagez le rapport avec le bouton en haut de sa page et envoyez-le à <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, avec quelques mots sur le problème. Sur un ordinateur, ce bouton le copie, et dans un navigateur, via <b>Accès distant</b>, il le télécharge. Si vous n'avez pas ce bouton, envoyez une capture d'écran : le rapport s'ouvre à sa fin, la partie la plus utile.",
   "tip_error": "Si un message d'erreur affiche un bouton <b>Diagnostiquer</b>, vous pouvez le toucher au lieu d'ouvrir le menu.",
   "holds_title": "Ce que contient le rapport",
   "holds_desc": "Le rapport est un simple texte qui reste sur votre appareil jusqu'à ce que vous l'envoyiez, vous pouvez donc le lire d'abord. Il contient :",

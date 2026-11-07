@@ -10,7 +10,7 @@
     "step_repeat": "Use your device as you did when the problem happened, until you see it again.",
     "step_stop": "Tap <b>Stop Diagnosing</b>.",
     "step_report": "A message appears when the app has stopped. Tap <b>Open Report</b> in it.",
-    "step_send": "Share the report with the button at the top of its page and send it to <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, with a few words about the problem. On a computer, that button copies it. If you have no such button, send a screenshot: the report opens at its end, the part that matters most.",
+    "step_send": "Share the report with the button at the top of its page and send it to <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, with a few words about the problem. On a computer, that button copies it, and in a browser through <b>Remote Access</b> it downloads it. If you have no such button, send a screenshot: the report opens at its end, the part that matters most.",
     "tip_error": "If an error message shows a <b>Diagnose</b> button, you can tap that instead of opening the menu.",
     "holds_title": "What the report holds",
     "holds_desc": "The report is plain text that stays on your device until you send it, so you can read it first. It holds:",

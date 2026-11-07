@@ -8,7 +8,7 @@
   "step_repeat": "Usa tu dispositivo como lo hacías cuando ocurrió el problema, hasta que vuelvas a verlo.",
   "step_stop": "Toca <b>Detener diagnóstico</b>.",
   "step_report": "Cuando la app se detiene aparece un mensaje. Toca <b>Abrir informe</b> en él.",
-  "step_send": "Comparte el informe con el botón de la parte superior de su página y envíalo a <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, con unas palabras sobre el problema. En un ordenador, ese botón lo copia. Si no tienes ese botón, envía una captura de pantalla: el informe se abre por el final, la parte más importante.",
+  "step_send": "Comparte el informe con el botón de la parte superior de su página y envíalo a <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, con unas palabras sobre el problema. En un ordenador, ese botón lo copia, y en un navegador, a través de <b>Acceso remoto</b>, lo descarga. Si no tienes ese botón, envía una captura de pantalla: el informe se abre por el final, la parte más importante.",
   "tip_error": "Si un mensaje de error muestra un botón <b>Diagnosticar</b>, puedes tocarlo en lugar de abrir el menú.",
   "holds_title": "Qué contiene el informe",
   "holds_desc": "El informe es texto sin formato que se queda en tu dispositivo hasta que lo envías, así que puedes leerlo antes. Contiene:",

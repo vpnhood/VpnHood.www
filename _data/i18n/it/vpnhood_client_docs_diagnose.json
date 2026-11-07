@@ -8,7 +8,7 @@
   "step_repeat": "Usa il dispositivo come quando si è verificato il problema, finché non lo vedi di nuovo.",
   "step_stop": "Tocca <b>Interrompi diagnostica</b>.",
   "step_report": "Quando l'app si è fermata compare un messaggio. Toccaci <b>Apri report</b>.",
-  "step_send": "Condividi il report con il pulsante in alto nella sua pagina e invialo a <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, con due parole sul problema. Sul computer, quel pulsante lo copia. Se non hai quel pulsante, invia uno screenshot: il report si apre alla fine, la parte più importante.",
+  "step_send": "Condividi il report con il pulsante in alto nella sua pagina e invialo a <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a>, con due parole sul problema. Sul computer, quel pulsante lo copia, e in un browser, tramite <b>Accesso remoto</b>, lo scarica. Se non hai quel pulsante, invia uno screenshot: il report si apre alla fine, la parte più importante.",
   "tip_error": "Se un messaggio di errore mostra il pulsante <b>Diagnostica</b>, puoi toccarlo invece di aprire il menu.",
   "holds_title": "Cosa contiene il report",
   "holds_desc": "Il report è testo semplice e resta sul tuo dispositivo finché non lo invii, quindi puoi leggerlo prima. Contiene:",

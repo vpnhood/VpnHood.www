@@ -8,7 +8,7 @@
   "step_repeat": "Cihazınızı sorun yaşadığınız sıradaki gibi kullanın, sorunu yeniden görene kadar devam edin.",
   "step_stop": "<b>Teşhisi Durdur</b>'a dokunun.",
   "step_report": "Uygulama durduğunda bir mesaj görünür. Bu mesajda <b>Raporu Aç</b>'a dokunun.",
-  "step_send": "Raporu sayfasının üstündeki düğmeyle paylaşın ve sorunu birkaç kelimeyle anlatarak <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a> adresine gönderin. Bilgisayarda bu düğme raporu kopyalar. Bu düğmeniz yoksa ekran görüntüsü gönderin: rapor en önemli kısmı olan sonundan açılır.",
+  "step_send": "Raporu sayfasının üstündeki düğmeyle paylaşın ve sorunu birkaç kelimeyle anlatarak <a href=\"mailto:support@vpnhood.com\">support@vpnhood.com</a> adresine gönderin. Bilgisayarda bu düğme raporu kopyalar, <b>Uzaktan Erişim</b> ile tarayıcıda ise indirir. Bu düğmeniz yoksa ekran görüntüsü gönderin: rapor en önemli kısmı olan sonundan açılır.",
   "tip_error": "Bir hata mesajında <b>Teşhis Et</b> düğmesi görünürse menüyü açmak yerine ona dokunabilirsiniz.",
   "holds_title": "Raporda neler var",
   "holds_desc": "Rapor, siz gönderene kadar cihazınızda kalan düz bir metindir, bu yüzden önce okuyabilirsiniz. İçinde şunlar vardır:",
