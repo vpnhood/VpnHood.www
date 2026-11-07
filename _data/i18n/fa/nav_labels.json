@@ -13,8 +13,8 @@
   "getting-started": "شروع کار",
   "requirements": "پیش‌نیازهای سیستم",
   "install": "نصب",
-  "docker": "Docker",
-  "windows": "Windows",
+  "docker": "داکر",
+  "windows": "ویندوز",
   "ip-blocking": "مسدودسازی IP",
   "reference": "مرجع",
   "installer-options": "گزینه‌های نصب",
@@ -34,6 +34,6 @@
   "vpnhood-client": "VpnHood! CLIENT",
   "free-vpn": "VPN رایگان",
   "download": "دانلود",
-  "linux": "Linux",
-  "linux-requirements": "پیش‌نیازهای Linux"
+  "linux": "لینوکس",
+  "linux-requirements": "پیش‌نیازهای لینوکس"
 }

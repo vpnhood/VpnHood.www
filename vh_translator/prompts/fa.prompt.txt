@@ -23,6 +23,14 @@ Cloak Mode = حالت مخفی (never حالت استتار, never Cloak Mode in
 Quick Launch = راه‌اندازی سریع
 Always On = همیشه روشن
 Smart Proxies = پروکسی‌های هوشمند (the feature page's own title)
+Windows = ویندوز · Windows Server = ویندوز سرور · Linux = لینوکس · Android = اندروید · Android TV = اندروید تی‌وی
+iPhone = آیفون · iPad = آیپد · Google = گوگل · Google Play = گوگل پلی · Google Analytics = گوگل آنالیتیکس
+App Store = اپ استور · Apple = اپل · Instagram = اینستاگرام · LinkedIn = لینکدین · Netflix = نتفلیکس · Docker = داکر
+iOS = iOS (Persian has no one word for it; آیفون و آیپد only where the English names them)
+These stay Latin inside code and commands, and in exact product names: a distribution's name (Arch Linux, Amazon Linux 2023), Google Cloud,
+Google Play Console, App Store Connect, Docker Desktop, Docker Hub.
+White-label = برند اختصاصی as a label or noun; in a sentence با برند خودتان (never نسخه اختصاصی, never the Latin word). وایت لیبل, in
+Persian letters, is the trade's word: only in the white-label page's eyebrow and in the reseller page's meta_description.
 
 TERMS — the docs' technical words: one rendering per concept, in every string.
 reverse proxy = پروکسی معکوس (never ریورس پروکسی, never reverse proxy)
@@ -48,17 +56,16 @@ KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oc
 Iranians search "وی پی ان" (the top query) and "فیلترشکن" far more than "VPN". In those two
 keys render "VPN" / "Free VPN" as فیلترشکن or وی پی ان (spaced exactly so): "Download Free
 VPN" = دانلود فیلترشکن رایگان, "free, secure, open-source VPN" = فیلترشکن رایگان، امن و
-متن‌باز. Add پرسرعت where the English says fast. Platforms are searched in Persian script, so
-here write Android, Windows, iOS, Linux as اندروید، ویندوز، آیفون، لینوکس, and "direct download" as دانلود
-با لینک مستقیم. In every other key all of these stay as RULES says.
+متن‌باز. Add پرسرعت where the English says fast. People search iOS as آیفون, so here write it آیفون, and
+"direct download" as دانلود با لینک مستقیم. In every other key all of these stay as NAMES and RULES say.
 RULES
-- Outside KEYWORDS, names and acronyms are Latin in every sentence: VpnHood, Windows, Android,
-  Linux, Docker, GitHub, Google, Instagram, LinkedIn, X, .NET, VPN, IP — never وی‌پی‌ان‌هود، ایکس،
-  ویندوز، اندروید، لینوکس، داکر، گیت‌هاب، گوگل، اینستاگرام، لینکدین، دات‌نت، وی‌پی‌ان، آی‌پی.
+- The famous names in NAMES are written in Persian letters in every string, as Persian writes them, never in Latin.
+  Every other name and acronym is Latin in every sentence: VpnHood, iOS, GitHub, Ubuntu, Debian, Cloudflare,
+  X, .NET, VPN, IP — never وی‌پی‌ان‌هود، ایکس، گیت‌هاب، دات‌نت، وی‌پی‌ان، آی‌پی.
 - Persian digits (۰۱۲۳) everywhere the site already uses them: prices (۷.۹ دلار), plans
   (۱۲ ماهه), discounts (۲۵٪), counts (۵ دستگاه), the copyright year. The ONE exception is a
-  version number attached to a Latin platform name — "Android 7.0", "Windows 10" — which
-  stays fully Latin.
+  version number attached to a name that stays Latin — "iOS 18.0", "Ubuntu 22.04" — which stays
+  fully Latin. A name in Persian letters takes Persian digits: ویندوز ۱۰، ویندوز سرور ۲۰۱۶، اندروید ۷.۰.
 - Never end a sentence or clause on را by dropping its verb: write the verb out (UDP را امتحان کنید و
   اگر مانعی در کار بود، از TCP استفاده کنید — not ... و وقتی مانعی در کار است، TCP را). In a contrast
   with نه, drop the را: سرور را می‌بینند، نه کاربران — not نه کاربران را.

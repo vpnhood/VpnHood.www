@@ -6,7 +6,7 @@
   "lead": "درخواست‌های DNS می‌توانند سایت‌هایی را که باز می‌کنید لو بدهند. با DNS تفکیکی مشخص کنید این درخواست‌ها مثل بقیه ترافیک از قوانین تفکیک پیروی کنند یا همیشه درون VPN باقی بمانند.",
   "shot_alt": "صفحه DNS تفکیکی در اپلیکیشن VpnHood!‎، با نمایش گزینه‌های Always use VPN و Allow Bypass VPN",
   "platforms_label": "قابل دسترس برای",
-  "platforms": "Android، iOS، Windows و Linux",
+  "platforms": "اندروید، iOS، ویندوز و لینوکس",
   "cta": "دریافت VpnHood! CONNECT",
   "back_parent": "همه گزینه‌های تونل‌زنی تفکیکی",
   "modes_title": "دو حالت مختلف",

@@ -1,13 +1,13 @@
 {
-  "meta_title": "نصب VpnHood! SERVER روی لینوکس، Docker یا ویندوز | VpnHood!‎",
-  "meta_description": "روش نصب فیلترشکن VpnHood! SERVER را انتخاب کنید: روی لینوکس که توصیه می‌شود، در Docker یا روی ویندوز، هر کدام با یک دستور؛ یا سرور را از VpnHood! MANAGER اضافه کنید.",
+  "meta_title": "نصب VpnHood! SERVER روی لینوکس، داکر یا ویندوز | VpnHood!‎",
+  "meta_description": "روش نصب فیلترشکن VpnHood! SERVER را انتخاب کنید: روی لینوکس که توصیه می‌شود، در داکر یا روی ویندوز، هر کدام با یک دستور؛ یا سرور را از VpnHood! MANAGER اضافه کنید.",
   "title": "نصب VpnHood! SERVER",
   "lead": "سیستم‌عاملی را که سرور شما روی آن اجرا می‌شود انتخاب کنید. سرور مدیریت‌شده <a href=\"/vpnhood-manager/docs/add-server/\">از VpnHood! MANAGER اضافه می‌شود</a>؛ برای سرور مستقل، صفحه‌های زیر آن را با یک دستور نصب می‌کنند.",
   "recommended": "توصیه‌شده",
-  "linux_title": "Linux",
+  "linux_title": "لینوکس",
   "linux_desc": "سرور به‌صورت سرویس اجرا می‌شود و فقط اینجا IPv6 را مانند IPv4 مدیریت می‌کند.",
-  "docker_title": "Docker",
-  "docker_desc": "سرور در یک کانتینر روی هر سیستم Linux دارای Docker اجرا می‌شود، فقط به‌صورت پروکسی.",
-  "windows_title": "Windows",
-  "windows_desc": "سرور روی Windows 10، Windows 11 یا Windows Server و روی x64 اجرا می‌شود. IPv6 از پروکسی آن عبور می‌کند."
+  "docker_title": "داکر",
+  "docker_desc": "سرور در یک کانتینر روی هر سیستم لینوکس دارای داکر اجرا می‌شود، فقط به‌صورت پروکسی.",
+  "windows_title": "ویندوز",
+  "windows_desc": "سرور روی ویندوز ۱۰، ویندوز ۱۱ یا ویندوز سرور و روی x64 اجرا می‌شود. IPv6 از پروکسی آن عبور می‌کند."
 }
