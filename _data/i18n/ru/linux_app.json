@@ -50,7 +50,7 @@
   "trouble_other_vpn": "Приложение сообщает, что управление перехватило другое VPN-приложение",
   "trouble_other_vpn_fix": "Одновременно может быть подключено только одно приложение, созданное на основе VpnHood!, поэтому подключение другого отключает это. Оно останется отключённым, даже с функцией «Всегда включен», пока вы не подключите его снова.",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "Если <code>[pkg_resolved]</code> не установлен, сначала установите его. Выполните <code>[dns_enable]</code>, затем сделайте <code>/etc/resolv.conf</code> ссылкой на <code>/run/systemd/resolve/stub-resolv.conf</code>, как указано в сообщении.",
+  "trouble_dns_fix": "Запустите <a href=\"#install\">команду установки</a> снова. Она настроит всё, что нужно приложению для DNS.",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "Установите пакет <code>[pkg_nftables]</code> или выключите Kill Switch.",
   "trouble_traffic": "Подключено, но ничего не загружается",

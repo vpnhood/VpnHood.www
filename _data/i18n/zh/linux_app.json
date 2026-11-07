@@ -50,7 +50,7 @@
   "trouble_other_vpn": "应用提示另一个 VPN 应用已接管",
   "trouble_other_vpn_fix": "同一时间只能有一个基于 VpnHood! 构建的应用保持连接，因此连接另一个应用时，此应用会断开。即使启用了始终开启功能，它也会保持断开，直到您再次连接。",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "如果未安装 <code>[pkg_resolved]</code>，请先安装。运行 <code>[dns_enable]</code>，然后按消息提示将 <code>/etc/resolv.conf</code> 链接到 <code>/run/systemd/resolve/stub-resolv.conf</code>。",
+  "trouble_dns_fix": "再次运行<a href=\"#install\">安装命令</a>。它会完成应用所需的 DNS 设置。",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "安装 <code>[pkg_nftables]</code> 软件包，或关闭断网保护。",
   "trouble_traffic": "已连接，但无法加载任何内容",

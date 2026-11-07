@@ -50,7 +50,7 @@
   "trouble_other_vpn": "Die App meldet, dass eine andere VPN-App übernommen hat",
   "trouble_other_vpn_fix": "Es kann immer nur eine mit VpnHood! erstellte App verbunden sein, daher trennt das Verbinden einer anderen diese hier. Sie bleibt getrennt, auch mit „Immer an“, bis Sie sie wieder verbinden.",
   "trouble_dns": "<code>Could not set the VPN's DNS servers.</code>",
-  "trouble_dns_fix": "Falls <code>[pkg_resolved]</code> nicht installiert ist, installieren Sie es zuerst. Führen Sie <code>[dns_enable]</code> aus und verknüpfen Sie dann <code>/etc/resolv.conf</code> mit <code>/run/systemd/resolve/stub-resolv.conf</code>, wie in der Meldung angegeben.",
+  "trouble_dns_fix": "Führen Sie den <a href=\"#install\">Installationsbefehl</a> erneut aus. Er richtet ein, was die App für DNS braucht.",
   "trouble_nft": "<code>The kill switch needs nftables (nft), which is not installed.</code>",
   "trouble_nft_fix": "Installieren Sie das Paket <code>[pkg_nftables]</code> oder schalten Sie den Kill Switch aus.",
   "trouble_traffic": "Verbunden, aber nichts lädt",
