@@ -90,7 +90,7 @@ nav_active: self-hosted
 </div>
 <div data-aos="fade-up" data-aos-duration="1000">
     {% include terminal.html
-        caption=t.install_caption_install cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh)"'
+        caption=t.install_caption_install cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'"
         caption2=t.install_caption_key cmd2='sudo /opt/VpnHoodServer/vhserver gen' %}
 </div>
 <p class="text-center mt-4">

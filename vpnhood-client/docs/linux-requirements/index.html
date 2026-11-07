@@ -12,10 +12,17 @@ extra_css:
   2026-11-04), which both Linux pages and both download cards link to. Tested 2026-11-04 with
   v9.1.868's own install commands in systemd containers: CLIENT on every distribution listed,
   CONNECT on Debian 13, Fedora 44 and Arch, each to a running service and a status. So the list
-  says they install and start: a real connection was run only on Ubuntu 24.04, with
-  systemd-resolved added. A connect failed with no DNS method (Ubuntu 24.04 bare) and with
-  systemd-resolved off (AlmaLinux 8), and the installer adds neither. Alpine: the installer
-  finishes and the binary cannot run. Amazon Linux 2023: the MsQuic step says unsupported, so the
+  says they install and start: a real connection was run on Ubuntu 24.04, with systemd-resolved
+  added, and on Arch. Arch, 2026-11-06, a Hyper-V VM with KDE on Wayland, NetworkManager, and
+  systemd-resolved off and no wget, as an ordinary desktop has: the window from the menu, a
+  connect from it, DNS inside the tunnel, the kill switch's block, the tray at sign-in, CLIENT
+  and CONNECT. A connect failed with no DNS method (Ubuntu 24.04 bare) and with systemd-resolved
+  off (AlmaLinux 8, Arch), and 9.1.868's installer did nothing about it; later ones add it, or
+  turn it on at a new install, and add the window's libraries on every family, so the page says
+  neither what that release did nor when it changed. Alpine: the binary cannot
+  run, with a desktop or without; that release's installer finished there, and later ones stop
+  at the start, so the page says only that the app cannot run, true of both.
+  Amazon Linux 2023: the MsQuic step says unsupported, so the
   app uses TCP. Red Hat is not listed, as it was not tested. The processor's copy is the server
   page's: the client is on .NET 11 too, which is where the limit comes from; not tested here.
   Names and versions are markup; the versions are dir="ltr", or an RTL page turns their list

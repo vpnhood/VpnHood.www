@@ -38,7 +38,7 @@ extra_css:
   </tbody>
 </table>
 <p>{{ t.linux_add }}</p>
-{% include terminal.html caption=t.caption_linux cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh) -q"' %}
+{% include terminal.html caption=t.caption_linux cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -q'" %}
 <p>{% include copy.html s=t.linux_change %}</p>
 
 <h2 id="docker">{{ t.docker_title }}</h2>
@@ -50,7 +50,7 @@ extra_css:
     <tr><td><code>-q</code></td><td>{% include copy.html s=t.opt_docker_q %}</td></tr>
   </tbody>
 </table>
-{% include terminal.html caption=t.caption_docker cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh) -install-docker -q"' %}
+{% include terminal.html caption=t.caption_docker cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -install-docker -q'" %}
 
 <h2 id="manager">{{ t.manager_title }}</h2>
 <p>{% include copy.html s=t.manager_desc %}</p>

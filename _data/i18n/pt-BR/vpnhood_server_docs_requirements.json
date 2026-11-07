@@ -7,7 +7,7 @@
   "linux_desc": "O Linux é o sistema recomendado: só nele o servidor trata o IPv6 como trata o IPv4. O servidor funciona em x64 e ARM64, nestas distribuições e nas baseadas nelas:",
   "th_distribution": "Distribuição",
   "th_versions": "Versões",
-  "arch_rolling": "Lançamento contínuo, sempre atualizado",
+  "arch_rolling": "Versão mais recente",
   "linux_needs": "O comando de instalação precisa de acesso root e do systemd, que executa o servidor como serviço. Se o sistema não tiver o ICU, uma biblioteca de que o servidor precisa, o comando o instala.",
   "linux_tun": "O adaptador VPN do servidor precisa de um dispositivo TUN e dos comandos <code>[cmd_ip]</code> e <code>[cmd_iptables]</code>, que quase todo servidor tem. Sem eles, o servidor funciona apenas como proxy: os apps continuam se conectando, e o tráfego deles passa pelo proxy do servidor em vez do adaptador.",
   "linux_unsupported": "Não suportadas: o Alpine e as outras distribuições baseadas em musl em vez de glibc, onde você pode executar o servidor no Docker, e as distribuições anteriores à glibc 2.27, como o CentOS 7.",

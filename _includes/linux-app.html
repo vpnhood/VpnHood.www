@@ -15,14 +15,18 @@
   cgroup level changed to match them. The installer's options were read from its source, not run.
   CONNECT has no sign-in command in that release, so it is signed in
   from the window; www-after-release-todo.md says what changes when the next one ships.
+  The install command takes wget or curl, as neither is everywhere: Ubuntu's desktop and Debian's
+  default install have no curl, the base systems of Fedora's family, openSUSE and Arch no wget.
+  The installers add wget, so no page mentions either (owner, 2026-11-06). The server's pages
+  use the same form.
 {%- endcomment -%}
 {%- assign vh_la = site.data.i18n[vh_lang].linux_app -%}
 {%- assign vh_la_app = include.app -%}
 {%- assign vh_la_cmd = include.cmd -%}
 {%- assign vh_la_folder = include.folder -%}
 {%- capture vh_la_url %}https://github.com/vpnhood/{{ include.repo }}/releases/latest/download/{{ include.folder }}-linux.sh{% endcapture -%}
-{%- capture vh_la_install %}sudo su -c "bash <( wget -qO- {{ vh_la_url }})"{% endcapture -%}
-{%- capture vh_la_install_q %}sudo su -c "bash <( wget -qO- {{ vh_la_url }}) -q -nodesktop"{% endcapture -%}
+{%- capture vh_la_install %}sudo bash -c 'u={{ vh_la_url }}; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'{% endcapture -%}
+{%- capture vh_la_install_q %}sudo bash -c 'u={{ vh_la_url }}; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -q -nodesktop'{% endcapture -%}
 {%- capture vh_la_always_on %}{{ include.cmd }} always-on on{% endcapture -%}
 {%- capture vh_la_kill_switch %}{{ include.cmd }} kill-switch until-disconnect{% endcapture -%}
 {%- capture vh_la_update %}{{ include.cmd }} update{% endcapture -%}
