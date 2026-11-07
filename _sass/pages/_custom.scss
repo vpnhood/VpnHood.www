@@ -580,6 +580,27 @@
     font-size: 20px;
     font-weight: 600;
 }
+// A card's icon beside its title, smaller, on long lists: the title leads and the
+// icons only break up the page. A card takes an icon only where it helps.
+.vh-feature-head{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: .6rem;
+}
+.vh-feature-head .vh-feature-icon{
+    flex: none;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0;
+}
+.vh-feature-head .vh-feature-icon svg{
+    width: 20px;
+    height: 20px;
+}
+.vh-feature-head h3{
+    margin: 0;
+}
 // Titles inherit the muted body colour otherwise, so they read as one block with
 // the copy below them. The icon's lavender ties the two halves of a card together.
 .vh-feature-card h3{
@@ -750,11 +771,6 @@
 .vh-guide-points > li{
     display: flex;
     gap: 1.15rem;
-}
-
-.vh-guide-points .vh-feature-icon{
-    flex-shrink: 0;
-    margin-bottom: 0;
 }
 
 .vh-guide-points h3{
@@ -1117,7 +1133,9 @@ a.vh-feature-chip:hover{
 
 // Panel titles take the same lavender as every other card title on the site
 // (.vh-feature-card h3, .vh-feature-list .vh-feature-title); inheriting the muted
-// body colour made them vanish into the copy, especially in dark.
+// body colour made them vanish into the copy, especially in dark, and the heading
+// gradient fades out at this size, so a panel title is never .vh-txt-grad-purple-400.
+.vh-feature-panel h2,
 .vh-feature-panel h3{
     color: var(--purple-120);
 }
