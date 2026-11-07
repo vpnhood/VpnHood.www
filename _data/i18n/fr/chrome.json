@@ -86,7 +86,7 @@
   "oc_features": "Fonctionnalités",
   "lang_change": "Changer de langue",
   "theme_change": "Changer de thème",
-  "theme_auto": "Automatique",
+  "theme_default": "Par défaut",
   "theme_light": "Clair",
   "theme_dark": "Sombre",
   "copy_to_clipboard": "Copier dans le presse-papiers",

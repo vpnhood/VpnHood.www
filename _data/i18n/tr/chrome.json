@@ -86,7 +86,7 @@
   "oc_features": "Özellikler",
   "lang_change": "Dil değiştir",
   "theme_change": "Temayı değiştir",
-  "theme_auto": "Otomatik",
+  "theme_default": "Varsayılan",
   "theme_light": "Açık",
   "theme_dark": "Koyu",
   "copy_to_clipboard": "Panoya kopyalayın",

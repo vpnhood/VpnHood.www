@@ -86,7 +86,7 @@
   "oc_features": "Features",
   "lang_change": "Change language",
   "theme_change": "Change theme",
-  "theme_auto": "Auto",
+  "theme_default": "Default",
   "theme_light": "Light",
   "theme_dark": "Dark",
   "copy_to_clipboard": "Copy to clipboard",

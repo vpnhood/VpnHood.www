@@ -86,7 +86,7 @@
   "oc_features": "Возможности",
   "lang_change": "Сменить язык",
   "theme_change": "Сменить тему",
-  "theme_auto": "Авто",
+  "theme_default": "По умолчанию",
   "theme_light": "Светлая",
   "theme_dark": "Темная",
   "copy_to_clipboard": "Скопировать",

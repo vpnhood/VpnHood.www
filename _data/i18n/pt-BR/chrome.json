@@ -86,7 +86,7 @@
   "oc_features": "Recursos",
   "lang_change": "Mudar idioma",
   "theme_change": "Mudar tema",
-  "theme_auto": "Automático",
+  "theme_default": "Padrão",
   "theme_light": "Claro",
   "theme_dark": "Escuro",
   "copy_to_clipboard": "Copiar para a área de transferência",

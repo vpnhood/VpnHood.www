@@ -28,17 +28,6 @@ defaults:
       path: ""
     values:
       image: /assets/images/og-image.png
-  # Showcase pages: dark under the Auto theme. Every other page follows the visitor's system
-  # setting. Listed by section, so moving around inside one never changes the theme. A
-  # visitor who picks Light or Dark gets it on these pages too. See .docs/colour-themes.md.
-  - { scope: { path: "index.html" }, values: { auto_theme: dark } }
-  - { scope: { path: "free-vpn" }, values: { auto_theme: dark } }
-  - { scope: { path: "features" }, values: { auto_theme: dark } }
-  - { scope: { path: "self-hosted-vpn/index.html" }, values: { auto_theme: dark } }
-  - { scope: { path: "vpnhood-client/index.html" }, values: { auto_theme: dark } }
-  - { scope: { path: "vpnhood-client/download" }, values: { auto_theme: dark } }
-  - { scope: { path: "vpnhood-server/index.html" }, values: { auto_theme: dark } }
-  - { scope: { path: "vpnhood-manager/index.html" }, values: { auto_theme: dark } }
 
 # Site search (/search/, assets/js/search.js): the Worker that answers it (workers/search/)
 # and the Cloudflare Turnstile widget it checks. Neither is a secret. A local build asks

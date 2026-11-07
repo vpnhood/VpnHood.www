@@ -2,8 +2,12 @@
      used for <html dir> and the Helix ltr/rtl body class — no hardcoded RTL list. {%- endcomment -%}
 {%- assign vh_page_lang = page.lang | default: 'en' -%}
 {%- assign vh_dir = site.data.languages[vh_page_lang].dir | default: 'ltr' -%}
+{%- comment -%} Under the Default theme the docs and the search they lead to follow the system
+     setting, and every other page stays dark: see .docs/colour-themes.md. {%- endcomment -%}
+{%- assign vh_default_theme = 'dark' -%}
+{%- if page.url contains '/docs/' or page.url contains '/search/' -%}{%- assign vh_default_theme = 'system' -%}{%- endif -%}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark" data-vh-auto-theme="{{ page.auto_theme | default: 'system' }}">
+<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark" data-vh-default-theme="{{ vh_default_theme }}">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -20,19 +24,19 @@
     <!-- Colour theme bootstrap. The markup ships dark, so this only ever has to *upgrade* to
          light — and it does so before first paint, which is why it is inline and blocking
          rather than in /assets/js/theme.js. A stored Light or Dark applies to every page.
-         Under Auto (nothing stored) a page with data-vh-auto-theme="system" follows the
-         system setting and a showcase page stays dark; _config.yml lists the showcase pages.
-         Preview a mode without touching the stored choice via ?vh_theme=auto|light|dark. -->
+         Under Default (nothing stored) a page with data-vh-default-theme="system", which
+         means the docs and their search, follows the system setting; any other stays dark.
+         Preview a mode without touching the stored choice via ?vh_theme=default|light|dark. -->
     <script>
       (function () {
         var r = document.documentElement;
         var m = null;
         try { m = localStorage.getItem("vh_theme"); } catch (e) {}
-        var p = /[?&]vh_theme=(auto|light|dark)/.exec(window.location.search);
+        var p = /[?&]vh_theme=(default|light|dark)/.exec(window.location.search);
         if (p) m = p[1];
-        if (m !== "light" && m !== "dark") m = "auto";
+        if (m !== "light" && m !== "dark") m = "default";
         r.setAttribute("data-vh-theme-mode", m);
-        if (m === "light" || (m === "auto" && r.getAttribute("data-vh-auto-theme") === "system" &&
+        if (m === "light" || (m === "default" && r.getAttribute("data-vh-default-theme") === "system" &&
             window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)) {
           r.setAttribute("data-theme", "light");
         }

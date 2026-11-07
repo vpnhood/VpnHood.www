@@ -86,7 +86,7 @@
   "oc_features": "الميزات",
   "lang_change": "تغيير اللغة",
   "theme_change": "تغيير المظهر",
-  "theme_auto": "تلقائي",
+  "theme_default": "افتراضي",
   "theme_light": "فاتح",
   "theme_dark": "داكن",
   "copy_to_clipboard": "نسخ إلى الحافظة",

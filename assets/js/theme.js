@@ -1,14 +1,15 @@
-// Colour theme: the visitor picks a *mode* (Auto, Dark or Light), and the page shows a
+// Colour theme: the visitor picks a *mode* (Default, Light or Dark), and the page shows a
 // *theme* (dark or light).
 //
-// Dark and Light apply to every page. Auto is the default: a showcase page stays dark and
-// any other page follows the system setting (<html data-vh-auto-theme>, from the list in
-// _config.yml). The static markup ships dark, so a page still reads without JavaScript.
-// What this file does:
+// Light and Dark apply to every page. Under Default, the docs and the search they lead to
+// follow the system setting (<html data-vh-default-theme="system">, set in header.html) and
+// every other page stays dark. The static markup ships dark, so a page still reads without
+// JavaScript. What this file does:
 //
 // - wires the theme menu (header + mobile off-canvas), marks the active mode, and keeps
-//   the choice in localStorage("vh_theme"); Auto is the absence of a stored value;
-// - follows a live change of the system setting while in Auto;
+//   the choice in localStorage("vh_theme"); Default is the absence of a stored value;
+// - follows a live change of the system setting while in Default;
+// - reads the choice again on a page restored by Back or Forward, which runs no script;
 // - swaps <meta name="theme-color"> so the mobile browser chrome matches;
 // - swaps decorative images that ship a light-theme counterpart via data-vh-light-src
 //   (the dark original stays in `src`, so no-JS and dark visitors fetch only that one);
@@ -16,13 +17,13 @@
 //
 // The theme is applied to <html data-theme> BEFORE first paint by the inline bootstrap
 // at the top of _includes/header.html — not here — so a light page never flashes dark.
-// Preview a mode with ?vh_theme=auto|light|dark (does not overwrite the stored choice),
+// Preview a mode with ?vh_theme=default|light|dark (does not overwrite the stored choice),
 // mirroring ?vh_lang=fa and the China bar's ?geo=CN.
 (function () {
   "use strict";
 
   var STORAGE_KEY = "vh_theme";
-  var AUTO = "auto";
+  var DEFAULT = "default";
   var DARK = "dark";
   var LIGHT = "light";
   // Mobile browser chrome: the header's own backdrop colour in each theme.
@@ -32,17 +33,26 @@
   var systemLight = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
 
   // The bootstrap has already worked out the mode, a ?vh_theme= preview included.
-  var mode = root.getAttribute("data-vh-theme-mode") || AUTO;
+  var mode = root.getAttribute("data-vh-theme-mode") || DEFAULT;
 
   function resolve() {
-    if (mode !== AUTO) return mode;
-    var followsSystem = root.getAttribute("data-vh-auto-theme") === "system";
+    if (mode !== DEFAULT) return mode;
+    var followsSystem = root.getAttribute("data-vh-default-theme") === "system";
     return followsSystem && systemLight && systemLight.matches ? LIGHT : DARK;
+  }
+
+  function stored() {
+    try {
+      var saved = localStorage.getItem(STORAGE_KEY);
+      return saved === LIGHT || saved === DARK ? saved : DEFAULT;
+    } catch (e) {
+      return DEFAULT;
+    }
   }
 
   function store() {
     try {
-      if (mode === AUTO) localStorage.removeItem(STORAGE_KEY);
+      if (mode === DEFAULT) localStorage.removeItem(STORAGE_KEY);
       else localStorage.setItem(STORAGE_KEY, mode);
     } catch (e) {
       /* private mode — the preference just won't outlive the page */
@@ -98,9 +108,17 @@
 
   if (systemLight && systemLight.addEventListener) {
     systemLight.addEventListener("change", function () {
-      if (mode === AUTO) apply();
+      if (mode === DEFAULT) apply();
     });
   }
+
+  // A page restored by Back or Forward runs no script, and the choice may have changed on
+  // another page since. A ?vh_theme= preview keeps its mode.
+  window.addEventListener("pageshow", function (ev) {
+    if (!ev.persisted || /[?&]vh_theme=/.test(window.location.search)) return;
+    mode = stored();
+    apply();
+  });
 
   // Sync the rest of the page with what the pre-paint bootstrap decided. Not stored: a
   // ?vh_theme= preview must not overwrite the visitor's choice.

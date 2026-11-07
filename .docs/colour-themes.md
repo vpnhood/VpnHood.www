@@ -1,4 +1,4 @@
-# Colour themes (Auto is the default; Light and Dark are the visitor's choice)
+# Colour themes (the public site is dark; the docs follow the system)
 
 The full picture behind the "Colour themes" summary in [CLAUDE.md](../CLAUDE.md). Both
 themes ship on every page; the active one is `<html data-theme="dark|light">`.
@@ -7,31 +7,38 @@ themes ship on every page; the active one is `<html data-theme="dark|light">`.
 
 The visitor picks a mode; the page then shows a theme.
 
-- **Auto**, the default: a showcase page stays dark, and any other page follows the system
-  setting, live.
-- **Light** or **Dark**: that theme on every page, showcase pages included. A showcase page
-  is dark by default, not locked, because the light theme works everywhere.
+- **Default**: the docs and `/search/` follow the system setting, live, and every other page
+  stays dark.
+- **Light** or **Dark**: that theme on every page. A dark page is dark by default, not locked,
+  because the light theme works everywhere and some visitors need it.
 
-The showcase pages are the `auto_theme: dark` entries under `defaults` in `_config.yml`: home,
-`/free-vpn/`, `/features/`, `/self-hosted-vpn/`, and the CLIENT, SERVER and MANAGER landing
-pages with CLIENT's download page. Docs, guides, reseller, FAQ and the rest follow the system.
-Keep the list by section, not page by page, so moving around inside a section never changes
-the theme. The per-language clones inherit it, as they are read from the same source file.
-Restart `jekyll serve` after changing it.
+`header.html` decides by URL: a page whose URL holds `/docs/` or `/search/` gets
+`data-vh-default-theme="system"`, any other `dark`. That covers every language tree and any
+new docs section.
+
+**Why only the docs (owner, 2026-11-07).** A first version let reading pages such as Reseller,
+the FAQ and the guides follow the system too. On a light system the whole page then jumped
+between dark and white as the visitor moved around the top menu. A survey of 23 sites found
+none that mix the two inside their marketing pages: a site follows the system everywhere,
+nowhere, or in its docs only, and a partner page always behaves like the site's other marketing
+pages. The docs are a place a reader goes to on purpose, with their own sidebar and breadcrumb,
+so the one jump left is into them. `/search/` goes with them because its box is only in the docs
+sidebar. Keep it that way: a page outside the docs does not follow the system.
 
 ## How it's applied
 
 `header.html` renders `data-theme="dark"`, so a page without JavaScript is dark, and
-`data-vh-auto-theme="dark|system"` from the page's `auto_theme`. A small **inline, blocking**
-script at the very top of `<head>` works out the mode from `localStorage vh_theme` (`light`,
-`dark`, or nothing for Auto), writes it to `data-vh-theme-mode` and upgrades `data-theme` to
-`light` when it should be — before first paint, so a light visitor never flashes dark. **That
-bootstrap must stay inline and blocking** — moving it into `theme.js` (deferred) would make
-every light-theme page flash dark before first paint. `assets/js/theme.js` (deferred) wires
-the menu, persists the choice, follows a change of the system setting while in Auto, swaps
-`<meta name="theme-color">` and the decorative image sources, and dispatches a `vhThemeChange`
-event. Preview a mode with **`?vh_theme=auto|light|dark`** (does not overwrite the stored
-choice) — same idea as `?vh_lang=fa` and the China bar's `?geo=CN`.
+`data-vh-default-theme`. A small **inline, blocking** script at the very top of `<head>` works
+out the mode from `localStorage vh_theme` (`light`, `dark`, or nothing for Default), writes it
+to `data-vh-theme-mode` and upgrades `data-theme` to `light` when it should be — before first
+paint, so a light visitor never flashes dark. **That bootstrap must stay inline and blocking** —
+moving it into `theme.js` (deferred) would make every light-theme page flash dark before first
+paint. `assets/js/theme.js` (deferred) wires the menu, persists the choice, follows a change of
+the system setting while in Default, reads the choice again on a page restored by Back or
+Forward (which runs no script), swaps `<meta name="theme-color">` and the decorative image
+sources, and dispatches a `vhThemeChange` event. Preview a mode with
+**`?vh_theme=default|light|dark`** (does not overwrite the stored choice) — same idea as
+`?vh_lang=fa` and the China bar's `?geo=CN`.
 
 ## Menu — `_includes/theme-toggle.html`
 
@@ -39,7 +46,7 @@ A round button with a dropdown, rendered twice, exactly like the language select
 `header.html` drops the bare `<li>` into `#topRightMenu`, `footer.html` puts a second one in the
 mobile off-canvas — the second caller **must** pass its own `id`. The button's icon shows the
 visitor's mode, through `data-vh-theme-mode`, not the theme on screen. Strings live in
-`chrome.json` (`theme_change`, `theme_auto`, `theme_light`, `theme_dark`) but fall back to
+`chrome.json` (`theme_change`, `theme_default`, `theme_light`, `theme_dark`) but fall back to
 English **per key**, so a not-yet-translated `chrome.json` can't leave the button unnamed.
 
 ## Two layers, and only two
