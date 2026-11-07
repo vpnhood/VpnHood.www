@@ -11,6 +11,34 @@ function removeTopBar(){
     });
 }
 
+//---------------------- Pausing what moves on its own ----------------------
+// WCAG 2.2.2: anything that moves for more than five seconds needs a way to stop it. The
+// home globe (globe.js), the typewriter and the sliding strips (below) each get their own
+// copy of the pause button that footer.html renders once in <template id="vhMotionToggle">,
+// and each says where it goes. A visitor who asks for reduced motion gets them paused from
+// the start. Defined outside DOMContentLoaded, as globe.js loads first and calls it then.
+window.vhMotion = {
+    reduce: !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches),
+    // control: { pause(), resume() }; place(button): puts the button where it belongs;
+    // host, if given, takes .vh-motion-paused, which stops the CSS animations inside it too.
+    add: function (control, place, host) {
+        const template = document.getElementById('vhMotionToggle');
+        const button = template ? template.content.firstElementChild.cloneNode(true) : null;
+        let paused = false;
+        const set = value => {
+            paused = value;
+            if (value) control.pause(); else control.resume();
+            if (host) host.classList.toggle('vh-motion-paused', value);
+            if (button) button.setAttribute('aria-pressed', value ? 'true' : 'false');
+        };
+        if (button) {
+            button.addEventListener('click', () => set(!paused));
+            place(button);
+        }
+        if (this.reduce) set(true);
+    }
+};
+
 //---------------------- CTA click tracking ----------------------
 // One dataLayer event per click on any [data-vh-track] element, so GTM can forward
 // it to GA4 as a custom event (see .docs/components.md, "CTA tracking"). Nothing
@@ -190,8 +218,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Set up animation
         let scrollLeft = 0;
         const scrollSpeed = 3; // Adjust the scroll speed as needed
+        let paused = false;
 
         function animateCarousel(timestamp) {
+            if (paused) return;
             if (!lastTimestamp) {
                 lastTimestamp = timestamp;
             }
@@ -209,6 +239,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let lastTimestamp = null;
         requestAnimationFrame(animateCarousel);
+
+        // The pause button goes under the strip: its ends fade under a mask, which would
+        // fade a button inside it too.
+        window.vhMotion.add({
+            pause: () => { paused = true; },
+            resume: () => {
+                if (!paused) return;
+                paused = false;
+                lastTimestamp = null;
+                requestAnimationFrame(animateCarousel);
+            }
+        }, button => container.parentElement.after(button), container.parentElement);
     });
 
 
@@ -268,7 +310,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const words = Array.from(list.querySelectorAll('li'))
             .map(li => li.textContent.trim())
             .filter(w => w.length);
-        if (words.length) setTyper(element, words);
+        if (words.length) {
+            const typer = setTyper(element, words);
+            window.vhMotion.add(typer, button => element.parentElement.append(button));
+        }
     });
 
     function setTyper(element, words) {
@@ -283,10 +328,13 @@ document.addEventListener('DOMContentLoaded', function () {
         var letterIndex = 0;
 
         var wordTypeInterval;
+        var stayTimer;
+        var paused = false;
 
         startTyping();
 
         function startTyping() {
+            if (paused) return;
             wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
         }
 
@@ -299,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (letterIndex == word.length) {
                     direction = DIRECTION_BACKWARDS;
                     clearInterval(wordTypeInterval);
-                    setTimeout(startTyping, WORD_STAY_DELAY);
+                    stayTimer = setTimeout(startTyping, WORD_STAY_DELAY);
                 }
 
             } else if (direction == DIRECTION_BACKWARDS) {
@@ -324,6 +372,44 @@ document.addEventListener('DOMContentLoaded', function () {
                 wordIndex = 0;
             }
         }
+
+        // Paused, the line shows its whole phrase, so it still reads; it goes on from there.
+        return {
+            pause: function () {
+                paused = true;
+                clearInterval(wordTypeInterval);
+                clearTimeout(stayTimer);
+                letterIndex = words[wordIndex].length;
+                direction = DIRECTION_BACKWARDS;
+                element.textContent = words[wordIndex];
+                element.classList.add('vh-motion-paused');
+            },
+            resume: function () {
+                if (!paused) return;
+                paused = false;
+                element.classList.remove('vh-motion-paused');
+                stayTimer = setTimeout(startTyping, WORD_STAY_DELAY);
+            }
+        };
+    }
+
+    //---------------------- Scrollable code ----------------------
+    // A command or a file wider than its box scrolls sideways, which the keyboard can only do
+    // once the box takes the focus (WCAG 2.1.1). A box that overflows gets tabindex, and loses
+    // it when the window grows wide enough, so a short command adds no Tab stop.
+    const codeBoxes = document.querySelectorAll('#sp-main-body pre, .vh-terminal pre');
+    if (codeBoxes.length) {
+        const markScrollable = () => codeBoxes.forEach(pre => {
+            if (pre.scrollWidth > pre.clientWidth + 1) pre.setAttribute('tabindex', '0');
+            else pre.removeAttribute('tabindex');
+        });
+        markScrollable();
+        window.addEventListener('load', markScrollable);
+        let codeResize;
+        window.addEventListener('resize', () => {
+            clearTimeout(codeResize);
+            codeResize = setTimeout(markScrollable, 150);
+        });
     }
 
 

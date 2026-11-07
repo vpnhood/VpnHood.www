@@ -89,6 +89,8 @@
   "theme_default": "افتراضي",
   "theme_light": "فاتح",
   "theme_dark": "داكن",
+  "skip_to_content": "انتقل إلى المحتوى",
+  "motion_pause": "إيقاف الحركة مؤقتًا",
   "copy_to_clipboard": "نسخ إلى الحافظة",
   "copied_to_clipboard": "تم النسخ إلى الحافظة",
   "nav_guides": "الأدلة"

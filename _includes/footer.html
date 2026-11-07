@@ -109,6 +109,8 @@
 			</div>
 		</div>
 
+		{% include motion-toggle.html %}
+
 		{% if page.globe %}<!-- Interactive server globe (home page only). three.js is
      self-hosted, NOT loaded from cdnjs.cloudflare.com, because that CDN is unreliable/
      blocked in regions we target (e.g. China — see the China promo bar). -->
@@ -143,7 +145,9 @@
                 startEvent: 'vhPlayAnimate',
                 once: true,
                 easing: 'ease',
-                duration: 1000
+                duration: 1000,
+                // A visitor who asks for reduced motion gets the sections in place, not sliding in.
+                disable: !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
             });
         </script>
 

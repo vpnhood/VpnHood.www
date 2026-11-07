@@ -58,9 +58,37 @@ overflows its 27%-wide column.
 
 The self-typing text loop (currently the Premium card on `/free-vpn/`). Pass `keys="a,b,c"`
 — comma-separated key names from the page's i18n data file, typed in that order; optional
-`class`. Renders the animated span plus a hidden phrase list that `vh-general.js` reads, so
+`class`. Renders the animated span plus a phrase list that `vh-general.js` reads, so
 the copy is translatable and empty/missing keys are skipped. **Never hardcode typed phrases
-in JS.**
+in JS.** The list is visually hidden, not `hidden`: a screen reader reads it whole, and the
+half-typed span is `aria-hidden`. The loop has a pause button and stands still under reduced
+motion (see "Pause buttons").
+
+## Pause buttons — `_includes/motion-toggle.html` + `window.vhMotion` in `assets/js/vh-general.js`
+
+WCAG 2.2.2: anything that moves on its own for more than five seconds needs a way to stop it.
+`footer.html` renders the button once, in `<template id="vhMotionToggle">` (label
+`chrome.json` `motion_pause`, per-key English fallback, the same "Pause animation" with
+`aria-pressed` for its state). Each moving part calls `window.vhMotion.add({pause, resume},
+place, host)`: `place(button)` puts its copy, and `host` takes `.vh-motion-paused`, which also
+stops the CSS animations inside it. A visitor who asks for reduced motion gets every part paused
+from the start, AOS off (`footer.html`) and every CSS animation and transition reduced to nothing
+(`_default.scss`).
+
+- **Globe** (`globe.js`): the button sits beside the "See every location" link, as
+  `#globeWrapper` fades out under a mask; `.vh-globe-cta` is raised above the wrapper so both
+  take clicks. The rotation follows the clock, so paused time is taken off it. A pause during
+  the intro waits for it to end (`introDone()`, not `finishedIntro`, which waits for a country
+  tour the site never turns on); under reduced motion the intro runs out of sight.
+- **Typewriter**: the button ends the line; paused, the line shows its whole phrase.
+- **Sliding strips** (`.linear-slider-wrapper`): the button sits under the strip, as its ends
+  fade under a mask.
+
+## Skip link — `header.html`
+
+The first thing in `<body>`: "Skip to content" (`chrome.json` `skip_to_content`), off screen until
+it has the focus. It targets `#vhContentStart`, an empty span that closes `header.html`, not
+`#sp-main-body`, which the legal pages and `/free-vpn/download/linux/` do not have.
 
 ## Terminal — `_includes/terminal.html`
 

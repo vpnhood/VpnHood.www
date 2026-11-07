@@ -537,6 +537,10 @@
 // lands just under the last visible dots at every width.
 .vh-globe-cta{
     margin-top: -60px;
+    // Pulled into the box, it would sit under it, as #globeWrapper is positioned: raised, the
+    // link and the globe's pause button take the clicks.
+    position: relative;
+    z-index: 3;
 }
 @media (max-width: 991px) {
     .vh-globe-cta{

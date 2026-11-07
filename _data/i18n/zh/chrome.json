@@ -89,6 +89,8 @@
   "theme_default": "默认",
   "theme_light": "浅色",
   "theme_dark": "深色",
+  "skip_to_content": "跳到内容",
+  "motion_pause": "暂停动画",
   "copy_to_clipboard": "复制到剪贴板",
   "copied_to_clipboard": "已复制到剪贴板",
   "nav_guides": "使用指南"

@@ -1,0 +1,10 @@
+{% comment %} The pause button for what moves on its own (WCAG 2.2.2): the home globe, the
+     typewriter, the sliding strips. footer.html renders it once, in a <template>, and
+     window.vhMotion in vh-general.js gives each moving part its own copy, so no page carries
+     the markup. The label stays "Pause animation" and aria-pressed says whether it is paused;
+     CSS swaps the pause and play icons. A visitor who asks for reduced motion gets everything
+     paused from the start.
+
+     The label falls back to English per key, as an unnamed control does not degrade. {% endcomment %}
+{% assign vh_motion_label = tc.motion_pause | default: site.data.i18n.en.chrome.motion_pause %}
+<template id="vhMotionToggle"><button type="button" class="vh-motion-toggle" aria-pressed="false" aria-label="{{ vh_motion_label }}" title="{{ vh_motion_label }}"><svg class="vh-motion-icon-pause" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg><svg class="vh-motion-icon-play" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg></button></template>

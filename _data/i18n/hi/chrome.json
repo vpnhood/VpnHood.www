@@ -89,6 +89,8 @@
   "theme_default": "डिफ़ॉल्ट",
   "theme_light": "लाइट",
   "theme_dark": "डार्क",
+  "skip_to_content": "सामग्री पर जाएँ",
+  "motion_pause": "एनिमेशन रोकें",
   "copy_to_clipboard": "क्लिपबोर्ड पर कॉपी करें",
   "copied_to_clipboard": "क्लिपबोर्ड पर कॉपी किया गया",
   "nav_guides": "गाइड्स"

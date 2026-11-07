@@ -89,6 +89,8 @@
   "theme_default": "Standard",
   "theme_light": "Hell",
   "theme_dark": "Dunkel",
+  "skip_to_content": "Zum Inhalt springen",
+  "motion_pause": "Animation anhalten",
   "copy_to_clipboard": "In Zwischenablage kopieren",
   "copied_to_clipboard": "In die Zwischenablage kopiert",
   "nav_guides": "Anleitungen"

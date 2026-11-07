@@ -84,6 +84,16 @@ var animations = {
 // Boolean to enable or disable rendering when window is in or out of focus
 var isHidden = false;
 
+// Pausing (WCAG 2.2.2): the pause button (window.vhMotion, vh-general.js) stops the loop and
+// the country tour. The rotation follows the clock, so the time spent paused is taken off it
+// and the globe goes on from where it stopped. A pause asked for before the intro is over
+// waits for its end, so a visitor who asks for reduced motion still sees the globe drawn.
+var motionPaused = false;
+var pauseAfterIntro = false;
+var pausedAt = 0;
+var pausedFor = 0;
+var countryWaiting = false;
+
 /* THEME */
 
 // The globe is drawn straight over the page background, so its dots have to flip with the
@@ -331,12 +341,22 @@ function onFocusChange(event) {
 
 function animate() {
 
-  if (isHidden === false) {
+  if (isHidden === false && motionPaused === false) {
     requestAnimationFrame(animate);
   }
 
   if (groups.globeDots) {
     introAnimate();
+  }
+
+  // A pause asked for during the intro takes effect once it is drawn; this frame is still
+  // rendered, so the globe shows complete and still.
+  if (pauseAfterIntro && introDone()) {
+    pauseAfterIntro = false;
+    setGlobePaused(true);
+    if (globeCanvas()) {
+      globeCanvas().style.visibility = '';
+    }
   }
 
   if (animations.finishedIntro === true) {
@@ -347,7 +367,7 @@ function animate() {
     animateCountryCycle();
   }
 
-  camera.controls.setAzimuthalAngle(Math.cos(Date.now()*0.0000005)*-360);
+  camera.controls.setAzimuthalAngle(Math.cos((Date.now() - pausedFor)*0.0000005)*-360);
   camera.controls.setPolarAngle(1);
 
   camera.controls.update();
@@ -889,6 +909,76 @@ function returnCameraAngles(latitude, longitude) {
   };
 
 }
+
+/* PAUSING */
+
+function globeCanvas() {
+  return document.querySelector('#globeWrapper .js-canvas');
+}
+
+// The intro is over once the dots and the globe have faded in. (finishedIntro waits for the
+// country tour as well, which this site never turns on, so it never comes.)
+function introDone() {
+  return animations.dots.current > animations.dots.total && animations.globe.current > animations.globe.total;
+}
+
+function setGlobePaused(paused) {
+  if (paused && !introDone()) {
+    pauseAfterIntro = true;
+    // Reduced motion: the intro runs out of sight, and the globe shows once it stands still.
+    if (window.vhMotion && window.vhMotion.reduce && globeCanvas()) {
+      globeCanvas().style.visibility = 'hidden';
+    }
+    return;
+  }
+  if (!paused) {
+    pauseAfterIntro = false;
+    if (globeCanvas()) {
+      globeCanvas().style.visibility = '';
+    }
+  }
+  if (paused === motionPaused) {
+    return;
+  }
+  motionPaused = paused;
+  if (paused) {
+    pausedAt = Date.now();
+    if (animations.countries.timeout) {
+      clearTimeout(animations.countries.timeout);
+      animations.countries.timeout = null;
+      countryWaiting = true;
+    }
+  }
+  else {
+    pausedFor += Date.now() - pausedAt;
+    if (countryWaiting) {
+      countryWaiting = false;
+      animations.countries.timeout = setTimeout(showNextCountry, animations.countries.duration);
+    }
+    requestAnimationFrame(animate);
+  }
+}
+
+// vh-general.js loads after this file, so the button is asked for once the page is parsed.
+document.addEventListener('DOMContentLoaded', function () {
+  var wrapper = document.getElementById('globeWrapper');
+  if (wrapper && window.vhMotion && window.WebGLRenderingContext) {
+    window.vhMotion.add({
+      pause: function () { setGlobePaused(true); },
+      resume: function () { setGlobePaused(false); }
+    }, function (button) {
+      // Beside the link under the globe: #globeWrapper fades out under a mask, and would
+      // fade a button inside it too.
+      var cta = wrapper.nextElementSibling;
+      if (cta && cta.classList.contains('vh-globe-cta')) {
+        cta.append(button);
+      }
+      else {
+        wrapper.after(button);
+      }
+    }, wrapper);
+  }
+});
 
 /* INITIALISATION */
 

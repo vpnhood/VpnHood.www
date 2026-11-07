@@ -89,6 +89,8 @@
   "theme_default": "По умолчанию",
   "theme_light": "Светлая",
   "theme_dark": "Темная",
+  "skip_to_content": "Перейти к содержимому",
+  "motion_pause": "Приостановить анимацию",
   "copy_to_clipboard": "Скопировать",
   "copied_to_clipboard": "Скопировано",
   "nav_guides": "Руководства"

@@ -89,6 +89,8 @@
   "theme_default": "Predeterminado",
   "theme_light": "Claro",
   "theme_dark": "Oscuro",
+  "skip_to_content": "Saltar al contenido",
+  "motion_pause": "Pausar la animación",
   "copy_to_clipboard": "Copiar al portapapeles",
   "copied_to_clipboard": "Copiado al portapapeles",
   "nav_guides": "Guías"

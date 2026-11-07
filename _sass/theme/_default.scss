@@ -529,6 +529,118 @@ button.vh-mega-toggle{
 ::view-transition-new(root){
     animation-duration: 0.6s;
 }
+
+// ---- Accessibility --------------------------------------------------------------------
+// Skip link (header.html): off screen until it has the focus, then over the header.
+.vh-skip-link{
+    position: fixed;
+    top: 0.75rem;
+    inset-inline-start: 0.75rem;
+    z-index: 100000;
+    padding: 0.6rem 1.1rem;
+    border-radius: 50px;
+    background-color: var(--purple-470);
+    color: var(--vh-on-accent);
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(-200%);
+}
+.vh-skip-link:focus{
+    transform: none;
+    color: var(--vh-on-accent);
+    outline: 2px solid var(--vh-accent-ink);
+    outline-offset: 2px;
+}
+#vhContentStart:focus{
+    outline: none;
+}
+
+// The header is fixed, so an item that takes the keyboard focus scrolls in below it, never under
+// it (WCAG 2.4.11): going back up a page with Shift+Tab brings items in from the top. 9rem clears
+// the tallest header, two rows at 136px.
+:focus-visible{
+    scroll-margin-top: 9rem;
+}
+
+// A link in running text is underlined, not told apart by colour alone (WCAG 1.4.1): in the
+// dark theme the link colour is too close to the text around it. The docs already do this.
+// Buttons and text buttons carry a class, so they keep their own look.
+#sp-main-body p a:not([class]){
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+// A code box that overflows takes the focus to scroll by keyboard (vh-general.js).
+pre[tabindex]:focus-visible{
+    outline: 2px solid var(--vh-accent-ink);
+    outline-offset: 2px;
+}
+
+// Pause buttons (_includes/motion-toggle.html, window.vhMotion): the theme toggle's round box,
+// solid, as it can sit over moving art.
+.vh-motion-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid var(--vh-border-strong);
+    border-radius: 50%;
+    background-color: var(--vh-page-bg);
+    color: var(--vh-text);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.vh-motion-toggle:hover,
+.vh-motion-toggle:focus-visible{
+    color: var(--vh-accent-ink);
+    background-color: var(--vh-surface-hover);
+}
+.vh-motion-toggle .vh-motion-icon-play,
+.vh-motion-toggle[aria-pressed="true"] .vh-motion-icon-pause{
+    display: none;
+}
+.vh-motion-toggle[aria-pressed="true"] .vh-motion-icon-play{
+    display: block;
+}
+// Where each sits: beside the link under the globe, under a sliding strip, at the end of the
+// typewriter's line. The globe and the strips fade out under masks, so neither holds its button.
+.vh-globe-cta .vh-motion-toggle{
+    margin-inline-start: 1rem;
+    vertical-align: middle;
+}
+.linear-slider-wrapper + .vh-motion-toggle{
+    display: flex;
+    margin: 0.75rem auto 0;
+}
+.multi-text-writer-words + .vh-motion-toggle{
+    margin-inline-start: auto;
+}
+.multiTextWriter.vh-motion-paused::after{
+    content: none;
+}
+// A paused part's own decorations stop with it: the globe's ring and stars.
+.vh-motion-paused,
+.vh-motion-paused *,
+.vh-motion-paused *::before,
+.vh-motion-paused *::after{
+    animation-play-state: paused !important;
+}
+
+// A visitor who asks for reduced motion gets none: the decorative loops stand still and
+// transitions are instant. The globe, the typewriter and the strips pause through
+// window.vhMotion, and AOS is off (footer.html).
+@media (prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 // The off-canvas gets the same dropdown as the header; only the separator above it
 // (the nav rows it follows already carry hairlines) is mobile-specific.
 .vh-lang-mobile{

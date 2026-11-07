@@ -89,6 +89,8 @@
   "theme_default": "Varsayılan",
   "theme_light": "Açık",
   "theme_dark": "Koyu",
+  "skip_to_content": "İçeriğe geç",
+  "motion_pause": "Animasyonu duraklat",
   "copy_to_clipboard": "Panoya kopyalayın",
   "copied_to_clipboard": "Panoya kopyalandı",
   "nav_guides": "Rehberler"

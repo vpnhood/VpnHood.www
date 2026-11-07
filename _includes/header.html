@@ -300,6 +300,9 @@
   <body
     class="site helix-ultimate hu en-us {{ vh_dir }} sticky-header layout-fluid offcanvas-init offcanvs-position-left"
   >
+    <!-- Skip link (WCAG 2.4.1): the first thing a keyboard user reaches, hidden until it has
+         the focus. Its target closes this include, so every page with the header has one. -->
+    <a class="vh-skip-link" href="#vhContentStart">{{ tc.skip_to_content | default: site.data.i18n.en.chrome.skip_to_content }}</a>
     <!-- No GTM <noscript> iframe: without JavaScript there is no consent banner, so it would
          track visitors in the consent regions who never agreed. -->
 
@@ -796,6 +799,7 @@
             </div>
           </div>
         </header>
+        <span id="vhContentStart" tabindex="-1"></span>
         <!-- NOTE: .body-wrapper + .body-innerwrapper are intentionally left OPEN here;
              footer.html closes them (along with </body></html>). Do NOT auto-format/balance
              this include — doing so breaks the page wrapper and mobile overflow clipping. -->
