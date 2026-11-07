@@ -32,7 +32,7 @@
   "q_reseller_open_source": "لماذا تبيع خدمة VPN مفتوحة المصدر؟",
   "a_reseller_open_source": "لأن عملاءك يمكنهم التحقق منها بأنفسهم. VpnHood! CONNECT والخادم ونظام VpnHood! ENGINE المعتمد عليها، كلها منشورة على GitHub بموجب ترخيص LGPL، وقد <a href=\"/security-audit/\">دققتها شركة Include Security</a> لصالح مختبر Red Team التابع لـ Open Technology Fund. يطلب منك الـ VPN المغلق تصديق الوعود، بينما يتيح هذا للجميع مراجعة الكود، مما يسهّل عليك البيع ويقلل من استفسارات الدعم الفني.",
   "q_reseller_app_cost": "هل يدفع عملائي مقابل التطبيق؟",
-  "a_reseller_app_cost": "لا. يتوفر VpnHood! CONNECT للتنزيل مجانًا على Android وiOS وWindows وLinux. على Android، يوفر التطبيق أيضًا خوادم مجانية مدعومة بالإعلانات، ليتمكن المستخدمون من تجربته قبل الشراء. أما على iOS وWindows وLinux فلا تتوفر خوادم مجانية، لذا يحتاج عملاؤك إلى باقة مدفوعة للاتصال، والرمز المميز لهذه الباقة هو ما تبيعه أنت.",
+  "a_reseller_app_cost": "لا. يتوفر VpnHood! CONNECT للتنزيل مجانًا على Android وiOS وWindows وLinux. على Android، يوفر التطبيق أيضًا خوادم مجانية مدعومة بالإعلانات، ليتمكن المستخدمون من تجربته قبل الشراء. أما على iOS وWindows وLinux فلا تتوفر خوادم مجانية، لذا يحتاج عملاؤك إلى باقة مدفوعة للاتصال، والرمز المميز لهذه الباقة هو ما تبيعه أنت. على iOS يسجّل عملاؤك الدخول بدلاً من كتابة الرمز.",
   "q_audit_independent": "هل خضع VpnHood!‎ لتدقيق أمني مستقل؟",
   "a_audit_independent": "نعم. قامت شركة Include Security بمراجعة تطبيق Android وتطبيق Windows وخادم VPN، بتكليف وتمويل كامل من Red Team Lab التابع لمنظمة Open Technology Fund. التقرير منشور بالكامل للعامة.",
   "q_audit_who_paid": "من تكفّل بمصاريف التدقيق الأمني لـ VpnHood!‎؟",

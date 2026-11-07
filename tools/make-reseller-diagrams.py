@@ -24,9 +24,9 @@ diagrams reuse those classes rather than inventing new ones.
 Each diagram states one idea and no more:
 
   partner-flow        the order goes down the chain and the key comes back up the same
-                      chain; the customer only ever meets the partner's store. Our side is
-                      drawn as "the VpnHood! STORE" because that is what a partner sees -
-                      the Partner Hub is our implementation detail, not their vocabulary.
+                      chain; the customer only ever buys from the partner's store. Our side
+                      is the VpnHood! Partner Hub, the name the module, its guide and the
+                      terms all use. The customer then connects with our CONNECT app.
   white-label-flow    every sale, wherever it was made, lands in the partner's store,
                       which gets the key from us and hands it to the partner's own app.
                       The website is always there; the two app stores are drawn dashed
