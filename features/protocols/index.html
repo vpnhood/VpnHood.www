@@ -55,7 +55,6 @@ extra_css:
                           <ul class="row list-unstyled row-gap-4 mb-0">
                             <li class="col-lg-4" data-aos="fade-up">
                               <div class="vh-card-dark vh-feature-panel h-100">
-                                <span class="vh-feature-icon">{% include icons/shield-check.svg %}</span>
                                 <h3 class="h4 d-flex align-items-center gap-2 mb-3">{{ t.tcp_title }} <span class="vh-feature-chip">{{ t.default_label }}</span></h3>
                                 <ul class="list-unstyled vh-feature-points mb-0">
                                   <li>{% include icons/check-circle.svg %}<span>{{ t.tcp_good }}</span></li>
@@ -65,7 +64,6 @@ extra_css:
                             </li>
                             <li class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                               <div class="vh-card-dark vh-feature-panel h-100">
-                                <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
                                 <h3 class="h4 d-flex align-items-center gap-2 mb-3">{{ t.udp_title }}</h3>
                                 <ul class="list-unstyled vh-feature-points mb-0">
                                   <li>{% include icons/check-circle.svg %}<span>{{ t.udp_good }}</span></li>
@@ -75,7 +73,6 @@ extra_css:
                             </li>
                             <li class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                               <div class="vh-card-dark vh-feature-panel h-100">
-                                <span class="vh-feature-icon">{% include icons/protocols.svg %}</span>
                                 <h3 class="h4 d-flex align-items-center gap-2 mb-3">{{ t.quic_title }}</h3>
                                 <ul class="list-unstyled vh-feature-points mb-0">
                                   <li>{% include icons/check-circle.svg %}<span>{{ t.quic_good }}</span></li>
@@ -114,9 +111,9 @@ extra_css:
                           {%- assign vh_td = site.data.i18n[vh_lang].self_hosted_vpn_docs_vpn_detection -%}
                           {%- assign vh_th = site.data.i18n[vh_lang].self_hosted_vpn_docs_how_it_works %}
                           <ul class="row list-unstyled row-gap-4 mb-0">
-                            {% include feature-more-card.html icon="eye-off" href="/features/cloak-mode/" title=vh_ti.cloak_mode_title text=vh_ti.cloak_mode_short %}
-                            {% include feature-more-card.html icon="shield-check" href="/self-hosted-vpn/docs/vpn-detection/" title=vh_td.title text=vh_tc.more_detect_desc delay="100" %}
-                            {% include feature-more-card.html icon="network" href="/self-hosted-vpn/docs/how-it-works/" title=vh_th.title text=t.more_how_desc delay="200" %}
+                            {% include feature-more-card.html href="/features/cloak-mode/" title=vh_ti.cloak_mode_title text=vh_ti.cloak_mode_short %}
+                            {% include feature-more-card.html href="/self-hosted-vpn/docs/vpn-detection/" title=vh_td.title text=vh_tc.more_detect_desc delay="100" %}
+                            {% include feature-more-card.html href="/self-hosted-vpn/docs/how-it-works/" title=vh_th.title text=t.more_how_desc delay="200" %}
                           </ul>
                         </div>
 

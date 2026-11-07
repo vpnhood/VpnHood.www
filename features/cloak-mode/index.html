@@ -127,9 +127,9 @@ extra_css:
                           {%- assign vh_td = site.data.i18n[vh_lang].self_hosted_vpn_docs_vpn_detection -%}
                           {%- assign vh_tb = site.data.i18n[vh_lang].vpnhood_server_docs_ip_blocking %}
                           <ul class="row list-unstyled row-gap-4 mb-0">
-                            {% include feature-more-card.html icon="eye-off" href="/self-hosted-vpn/docs/vpn-detection/" title=vh_td.title text=t.more_detect_desc %}
-                            {% include feature-more-card.html icon="protocols" href="/features/protocols/" title=vh_ti.protocols_title text=vh_ti.protocols_short delay="100" %}
-                            {% include feature-more-card.html icon="server" href="/vpnhood-server/docs/ip-blocking/" title=vh_tb.title text=t.more_ip_desc delay="200" %}
+                            {% include feature-more-card.html href="/self-hosted-vpn/docs/vpn-detection/" title=vh_td.title text=t.more_detect_desc %}
+                            {% include feature-more-card.html href="/features/protocols/" title=vh_ti.protocols_title text=vh_ti.protocols_short delay="100" %}
+                            {% include feature-more-card.html href="/vpnhood-server/docs/ip-blocking/" title=vh_tb.title text=t.more_ip_desc delay="200" %}
                           </ul>
                         </div>
 
