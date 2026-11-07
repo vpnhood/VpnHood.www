@@ -290,11 +290,15 @@ def linux_requirements() -> None:
     a.render("linux-requirements", product="vpnhood-client")
 
 
+# The end of the access key, from the top of its blade round its teeth to the bottom of the blade
+KEY_END = ("H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 "
+           "Q 790 612 778 612 H 740 Q 728 612 728 600 V 542")
+
+
 def draw_key(a: Art, cx, cy, scale=1.0, angle=45, width=11) -> None:
     """The access key, drawn flat around the middle of the canvas with its bow on the left, then placed."""
     a.add(f'<g transform="translate({cx} {cy}) rotate({angle}) scale({scale:g}) translate(-500 -500)">')
-    a.solid('<path d="M 440 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 '
-            'Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 440 A 175 175 0 1 1 440 458 Z" {fill} {stroke}/>', width=round(width / scale, 1))
+    a.solid(f'<path d="M 440 458 {KEY_END} H 440 A 175 175 0 1 1 440 458 Z" {{fill}} {{stroke}}/>', width=round(width / scale, 1))
     a.add(f'<circle cx="222" cy="500" r="62" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="6"/>')
     a.led(350, 500, r=17)
     a.bar(430, 488, 300, 24, fill=MINT, glow=True)
@@ -345,13 +349,28 @@ def first_key_ask() -> None:
 
 
 def first_key_own() -> None:
-    """Run your own server: a stack of servers, and in front of it a key made there."""
+    """Run your own server: a pencil drawing a key, the part it has reached solid, the teeth still dotted."""
     a = Art("fkOwn")
-    a.ambient(cy=450)
-    for n, y in enumerate((120, 300, 480)):
-        a.server_unit(120, y, 680, 150, rim=(n == 0), lit=(n == 0))
-    draw_key(a, 600, 740, scale=.72, angle=-24, width=12)
-    a.ambient(cy=920, rx=300, ry=45, opacity=.45)
+    a.ambient(cy=540)
+    a.add('<g transform="translate(480 640) scale(.98) translate(-500 -500)">')
+    a.add(f'<path d="M 650 458 {KEY_END} H 650" fill="none" stroke="{VIOLET}" stroke-opacity=".85" stroke-width="19" stroke-dasharray="3 36" stroke-linecap="round"/>')
+    a.add(f'<clipPath id="{a.id("Drawn")}"><rect x="0" y="200" width="650" height="600"/></clipPath>',
+          f'<path d="M 440 458 {KEY_END} H 440 A 175 175 0 1 1 440 458 Z" fill="{a.url("Body")}" clip-path="{a.url("Drawn")}"/>')
+    drawn = "M 650 458 H 440 A 175 175 0 1 0 440 542 H 650"
+    a.add(f'<path d="{drawn}" fill="none" stroke="{a.url("Rim")}" stroke-width="26" stroke-linecap="round" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<path d="{drawn}" fill="none" stroke="{a.url("Rim")}" stroke-width="14" stroke-linecap="round"/>')
+    a.add(f'<circle cx="222" cy="500" r="62" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="6"/>')
+    a.led(350, 500, r=17)
+    a.bar(430, 488, 190, 24, fill=MINT, glow=True)
+    a.add('</g>')
+    # the pencil, its point where the line has got to
+    a.add('<g transform="translate(627 599) rotate(-58)">')
+    a.solid('<path d="M 110 -52 H 520 Q 548 -52 548 -24 V 24 Q 548 52 520 52 H 110 Z" {fill} {stroke}/>', width=11)
+    a.add(f'<path d="M 110 -52 L 0 0 L 110 52 Z" fill="{LILAC}"/>',
+          f'<path d="M 42 -20 L 0 0 L 42 20 Z" fill="{VIOLET}"/>',
+          f'<rect x="440" y="-52" width="26" height="104" fill="{MINT}" opacity=".75"/>')
+    a.add('</g>')
+    a.ambient(cy=900, rx=320, ry=45, opacity=.45)
     a.render("own", product="vpnhood-client", prefix="first-key")
 
 

@@ -21,38 +21,26 @@
   <filter id="fkOwnSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
   <filter id="fkOwnSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="52"/></filter>
 </defs>
-<ellipse cx="500" cy="450" rx="440" ry="410" fill="url(#fkOwnAmbient)" opacity="1.0"/>
-<rect x="120" y="120" width="680" height="150" rx="42" fill="url(#fkOwnBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
-<rect x="120" y="120" width="680" height="150" rx="42" fill="none" stroke="url(#fkOwnRim)" stroke-width="20" filter="url(#fkOwnSoft)" opacity=".5"/>
-<rect x="120" y="120" width="680" height="150" rx="42" fill="none" stroke="url(#fkOwnRim)" stroke-width="8" stroke-linejoin="round"/>
-<circle cx="195.0" cy="195.0" r="53" fill="url(#fkOwnGlow)" filter="url(#fkOwnSoft)" opacity=".7"/>
-<circle cx="195.0" cy="195.0" r="16.5" fill="#8ef7e2"/>
-<circle cx="258.0" cy="195.0" r="16.5" fill="#c0a4ff" opacity=".45"/>
-<rect x="541.6" y="173.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="541.6" y="191.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="541.6" y="209.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="120" y="300" width="680" height="150" rx="42" fill="url(#fkOwnBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
-<circle cx="195.0" cy="375.0" r="16.5" fill="#c0a4ff" opacity=".45"/>
-<circle cx="258.0" cy="375.0" r="16.5" fill="#c0a4ff" opacity=".45"/>
-<rect x="541.6" y="353.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="541.6" y="371.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="541.6" y="389.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="120" y="480" width="680" height="150" rx="42" fill="url(#fkOwnBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
-<circle cx="195.0" cy="555.0" r="16.5" fill="#c0a4ff" opacity=".45"/>
-<circle cx="258.0" cy="555.0" r="16.5" fill="#c0a4ff" opacity=".45"/>
-<rect x="541.6" y="533.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="541.6" y="551.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<rect x="541.6" y="569.0" width="70" height="10" rx="5" fill="#c0a4ff" opacity="0.35"/>
-<g transform="translate(600 740) rotate(-24) scale(0.72) translate(-500 -500)">
-<path d="M 440 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 440 A 175 175 0 1 1 440 458 Z" fill="url(#fkOwnBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
-<path d="M 440 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 440 A 175 175 0 1 1 440 458 Z" fill="none" stroke="url(#fkOwnRim)" stroke-width="28.7" filter="url(#fkOwnSoft)" opacity=".5"/>
-<path d="M 440 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 440 A 175 175 0 1 1 440 458 Z" fill="none" stroke="url(#fkOwnRim)" stroke-width="16.7" stroke-linejoin="round"/>
+<ellipse cx="500" cy="540" rx="440" ry="410" fill="url(#fkOwnAmbient)" opacity="1.0"/>
+<g transform="translate(480 640) scale(.98) translate(-500 -500)">
+<path d="M 650 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 650" fill="none" stroke="#8257f5" stroke-opacity=".85" stroke-width="19" stroke-dasharray="3 36" stroke-linecap="round"/>
+<clipPath id="fkOwnDrawn"><rect x="0" y="200" width="650" height="600"/></clipPath>
+<path d="M 440 458 H 872 Q 892 458 892 478 V 628 Q 892 640 880 640 H 842 Q 830 640 830 628 V 542 H 790 V 600 Q 790 612 778 612 H 740 Q 728 612 728 600 V 542 H 440 A 175 175 0 1 1 440 458 Z" fill="url(#fkOwnBody)" clip-path="url(#fkOwnDrawn)"/>
+<path d="M 650 458 H 440 A 175 175 0 1 0 440 542 H 650" fill="none" stroke="url(#fkOwnRim)" stroke-width="26" stroke-linecap="round" filter="url(#fkOwnSoft)" opacity=".5"/>
+<path d="M 650 458 H 440 A 175 175 0 1 0 440 542 H 650" fill="none" stroke="url(#fkOwnRim)" stroke-width="14" stroke-linecap="round"/>
 <circle cx="222" cy="500" r="62" fill="#150a3a" stroke="#8257f5" stroke-opacity=".6" stroke-width="6"/>
 <circle cx="350" cy="500" r="54" fill="url(#fkOwnGlow)" filter="url(#fkOwnSoft)" opacity=".7"/>
 <circle cx="350" cy="500" r="17" fill="#8ef7e2"/>
-<rect x="430" y="488" width="300" height="24" rx="12" fill="#3ce8c8" filter="url(#fkOwnSoft)" opacity=".7"/>
-<rect x="430" y="488" width="300" height="24" rx="12" fill="#8ef7e2" opacity="1.0"/>
-<rect x="760" y="488" width="90" height="24" rx="12" fill="#c0a4ff" opacity="0.4"/>
+<rect x="430" y="488" width="190" height="24" rx="12" fill="#3ce8c8" filter="url(#fkOwnSoft)" opacity=".7"/>
+<rect x="430" y="488" width="190" height="24" rx="12" fill="#8ef7e2" opacity="1.0"/>
 </g>
-<ellipse cx="500" cy="920" rx="300" ry="45" fill="url(#fkOwnAmbient)" opacity="0.45"/>
+<g transform="translate(627 599) rotate(-58)">
+<path d="M 110 -52 H 520 Q 548 -52 548 -24 V 24 Q 548 52 520 52 H 110 Z" fill="url(#fkOwnBody)" stroke="#8257f5" stroke-opacity=".35" stroke-width="2"/>
+<path d="M 110 -52 H 520 Q 548 -52 548 -24 V 24 Q 548 52 520 52 H 110 Z" fill="none" stroke="url(#fkOwnRim)" stroke-width="23" filter="url(#fkOwnSoft)" opacity=".5"/>
+<path d="M 110 -52 H 520 Q 548 -52 548 -24 V 24 Q 548 52 520 52 H 110 Z" fill="none" stroke="url(#fkOwnRim)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M 110 -52 L 0 0 L 110 52 Z" fill="#c0a4ff"/>
+<path d="M 42 -20 L 0 0 L 42 20 Z" fill="#8257f5"/>
+<rect x="440" y="-52" width="26" height="104" fill="#8ef7e2" opacity=".75"/>
+</g>
+<ellipse cx="500" cy="900" rx="320" ry="45" fill="url(#fkOwnAmbient)" opacity="0.45"/>
 </svg>
