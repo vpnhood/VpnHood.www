@@ -23,6 +23,10 @@ extra_css:
   (ClientPacketHandler.ShouldDropUdpPacket, UDP to ports 80 and 443), only with the TCP proxy, and a server
   without QUIC packets forces it (ClientSession.UpdateConfig); off by default (UserSettings.DropQuic);
   the app shows it only with Cloak Mode on (ProtocolsView). Not said, on purpose: the port numbers.
+  Its name is Block QUIC in other apps, and the list of TCP, UDP and QUIC is Tunnel protocol (owner,
+  2026-11-05), so a reader tells the two QUICs apart; the headings and the boards keep the short
+  name, which the long one does not fit. Block UDP in other apps (UserSettings.DropUdp) stops all UDP
+  but DNS, with Cloak Mode only, and a server without UDP forces it; it holds Block QUIC on.
   The first board is the Cloak Mode feature page's, so this page's JSON carries its diagram_* keys,
   with "A device" and "Your server" for the reader of the docs.
 {%- endcomment -%}

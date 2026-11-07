@@ -21,7 +21,7 @@
   "tunnel_title": "加密隧道",
   "tunnel_tls": "默认情况下，应用通过 TLS（即 HTTPS 所用的加密协议）连接到服务器的 TCP 端口（未修改时为 <code>[server_port]</code>），并像 Web 应用一样使用 WebSocket 消息进行通信。隧道内的所有流量，从首字节到末字节，均由 TLS 全程加密。",
   "tunnel_cert": "在发送任何数据之前，应用都会验证服务器的证书。它仅接受由证书颁发机构针对访问密钥中指定域名签发的证书，或与密钥中所含指纹完全匹配的证书。正因如此，服务器既可以使用自签名证书启动，也能在续订<a href=\"/vpnhood-server/docs/domain/\">受信任证书</a>时确保原有密钥依然有效。",
-  "tunnel_protocols": "在协议设置中，用户可以选择 UDP 或 QUIC 来代替 TCP。UDP 使用 AES-GCM 加密的数据报将设备的数据包发送到服务器的 UDP 端口。QUIC 则在自带的 TLS 基础上，传输与 TCP 相同的消息。服务器会告知应用其支持的协议；若选择的协议不可用（例如位于<a href=\"/vpnhood-server/docs/reverse-proxy/\">反向代理</a>之后），应用将自动回退到 TCP。不过，若网络屏蔽了 UDP 端口，设置为 UDP 的应用将无法传输流量，直到用户切回 TCP。",
+  "tunnel_protocols": "在应用的<b>隧道协议</b>中，用户可以选择 UDP 或 QUIC 来代替 TCP。UDP 使用 AES-GCM 加密的数据报将设备的数据包发送到服务器的 UDP 端口。QUIC 则在自带的 TLS 基础上，传输与 TCP 相同的消息。服务器会告知应用其支持的协议；若选择的协议不可用（例如位于<a href=\"/vpnhood-server/docs/reverse-proxy/\">反向代理</a>之后），应用将自动回退到 TCP。不过，若网络屏蔽了 UDP 端口，设置为 UDP 的应用将无法传输流量，直到用户切回 TCP。",
   "tunnel_probe": "任何非 VpnHood 应用向服务器发出的请求，都只会收到 HTTP 错误响应，就像访问需要登录的网站一样。",
   "tcp_title": "TCP：数据包模式或单连接单请求模式",
   "tcp_packets": "默认情况下，应用将 TCP 作为数据包通过隧道传输，服务器则像路由器一样通过自身的网络适配器转发它们。这是速度最快、最省电的方式。",
