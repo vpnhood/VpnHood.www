@@ -19,6 +19,16 @@
       <feComposite in="wobbly" in2="grainA" operator="in" result="eroded"/>
       <feMerge><feMergeNode in="eroded"/><feMergeNode in="eroded"/></feMerge>
     </filter>
+    <filter id="vhBlockQuicTallChalkFx" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="11" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="8"
+                         xChannelSelector="R" yChannelSelector="G" result="wobbly"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="4" seed="5" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" result="grainA"
+                     values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .7 .4 .2 0 .05"/>
+      <feComposite in="wobbly" in2="grainA" operator="in" result="eroded"/>
+      <feMerge><feMergeNode in="eroded"/><feMergeNode in="eroded"/></feMerge>
+    </filter>
     <filter id="vhBlockQuicTallBoard" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" seed="19" result="n"/>
       <feColorMatrix in="n" type="matrix"
@@ -29,7 +39,7 @@
   <rect width="560" height="760" rx="18" fill="#22202f"/>
   <rect width="560" height="760" rx="18" filter="url(#vhBlockQuicTallBoard)"/>
 
-  <g filter="url(#vhBlockQuicTallChalk)">
+  <g class="vh-chalk" filter="url(#vhBlockQuicTallChalk)" style="--vh-chalk-fx: url(#vhBlockQuicTallChalkFx)">
     <path d="M 314.9 106.0 L 358.6 109.6 L 359.6 232.1 L 314.6 231.4 Z" fill="none" stroke="#a9a7b8" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M 325.1 107.2 L 325.4 128.9" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 346.6 107.8 L 347.5 128.6" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.9 129.6 L 358.7 127.8" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 335.2 128.2 L 335.7 149.7" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.7 149.5 L 358.3 149.5" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 324.1 149.4 L 324.4 169.8" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 346.0 149.6 L 347.8 169.1" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.2 169.0 L 357.7 169.3" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 336.7 170.5 L 336.8 190.1" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.4 191.1 L 358.0 191.5" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 325.2 190.2 L 325.4 211.3" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 346.4 190.9 L 346.1 211.2" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.1 210.3 L 358.3 210.5" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 336.3 211.0 L 335.1 233.0" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/>
     <path d="M 311.9 428.4 L 358.0 428.8 L 358.1 553.9 L 314.4 554.2 Z" fill="none" stroke="#a9a7b8" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M 324.6 429.4 L 325.4 450.5" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 347.0 430.8 L 346.0 450.2" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.1 449.8 L 358.5 450.5" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 335.6 450.1 L 336.9 470.4" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.6 471.7 L 358.8 471.7" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 324.7 471.4 L 325.8 491.1" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 347.7 471.7 L 346.4 492.9" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 313.6 491.0 L 357.5 492.0" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 335.1 492.2 L 335.9 512.3" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.5 512.9 L 358.9 513.4" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 325.7 513.5 L 325.7 533.3" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 346.1 512.6 L 347.2 534.3" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 314.3 533.5 L 357.2 533.6" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/><path d="M 335.1 532.6 L 335.1 554.5" fill="none" stroke="#a9a7b8" stroke-width="1.8" stroke-linecap="round"/>
     <path d="M 24.1 108.5 L 206.0 109.1 L 206.4 233.0 L 22.8 234.1 Z" fill="none" stroke="#ecebe3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M 31.3 158.5 L 31.6 180.2" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/>

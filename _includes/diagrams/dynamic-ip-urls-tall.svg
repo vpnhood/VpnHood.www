@@ -19,6 +19,16 @@
       <feComposite in="wobbly" in2="grainA" operator="in" result="eroded"/>
       <feMerge><feMergeNode in="eroded"/><feMergeNode in="eroded"/></feMerge>
     </filter>
+    <filter id="vhDynUrlsTallChalkFx" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="11" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="8"
+                         xChannelSelector="R" yChannelSelector="G" result="wobbly"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="4" seed="5" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" result="grainA"
+                     values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .7 .4 .2 0 .05"/>
+      <feComposite in="wobbly" in2="grainA" operator="in" result="eroded"/>
+      <feMerge><feMergeNode in="eroded"/><feMergeNode in="eroded"/></feMerge>
+    </filter>
     <filter id="vhDynUrlsTallBoard" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" seed="19" result="n"/>
       <feColorMatrix in="n" type="matrix"
@@ -29,7 +39,7 @@
   <rect width="560" height="780" rx="18" fill="#22202f"/>
   <rect width="560" height="780" rx="18" filter="url(#vhDynUrlsTallBoard)"/>
 
-  <g filter="url(#vhDynUrlsTallChalk)">
+  <g class="vh-chalk" filter="url(#vhDynUrlsTallChalk)" style="--vh-chalk-fx: url(#vhDynUrlsTallChalkFx)">
     <path transform="translate(52.4 32.4) scale(0.2017)" d="M254.1 18.63c-81.4 0-231.43 155.97-171.63 300.77 8 25.3 27.83 50.4 49.13 77.1 24.4 30.6 51.6 63.2 68.7 96.9h20.5c-18.1-39.8-48.5-75.9-74.6-108.6-27.4-34.3-48.73-65.2-48.73-87.9.1-9.1 2.23-18.1 5.53-26.3 23-61.4 114-119.7 148.5-135l3.6-2 3.9 1.3c60.9 20.9 129.3 66.7 154 135.7 4.1 11.7 5.9 18 5.6 27.3-.5 15.8-24.5 54.7-55 88.7-29.1 32.4-62.4 67.7-80 106.7h20.5c16.8-32.2 46.2-64 73.3-94.2 23.2-25.6 45.3-50 54.9-74.8 52.9-124-99.2-305.67-178.2-305.67z" fill="none" stroke="#ecebe3" stroke-width="14.9" stroke-linejoin="round"/><path transform="translate(52.4 32.4) scale(0.2017)" d="M254.9 154.1c-38.7 21.5-85.1 52.2-113.7 88.2 9.7 83 59 146.1 118.3 146.1 59.2 0 108.3-62.7 118.2-145.3-28.9-42.1-78-72.9-122.8-89z" fill="none" stroke="#a9a7b8" stroke-width="10.9"/><path transform="translate(52.4 32.4) scale(0.2017)" d="M196.6 237.1h2.4c13.1.1 26.1 2.7 39.1 7.4-16.8 40.6-59 42-78.1 0 12.2-4.8 24.4-7.2 36.6-7.4z" fill="#ecebe3"/><path transform="translate(52.4 32.4) scale(0.2017)" d="M321.5 237.1c13-.1 26 2.3 39.1 7.4-19.2 42-61.3 40.6-78.2 0 13.1-4.7 26.1-7.3 39.1-7.4z" fill="#ecebe3"/>
     <path d="M 99.4 302.0 L 61.6 298.6 L 61.8 224.7 L 102.8 226.2 L 122.8 242.1 L 123.6 276.4" fill="none" stroke="#ecebe3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M 104.2 224.4 L 105.7 243.0" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/><path d="M 105.6 243.2 L 124.6 242.4" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/><path d="M 70.7 249.9 L 93.2 250.9" fill="none" stroke="#a9a7b8" stroke-width="3.0" stroke-linecap="round"/><path d="M 71.3 263.2 L 112.2 263.8" fill="none" stroke="#9fe8d2" stroke-width="3.0" stroke-linecap="round"/><path d="M 70.4 277.3 L 91.9 277.1" fill="none" stroke="#9fe8d2" stroke-width="3.0" stroke-linecap="round"/><circle cx="126.1" cy="298.0" r="21.0" fill="none" stroke="#a9a7b8" stroke-width="2.8"/><ellipse cx="126.0" cy="298.0" rx="8.8" ry="21.0" fill="none" stroke="#a9a7b8" stroke-width="2.2"/><path d="M 104.3 298.8 L 146.1 297.3" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/><path d="M 108.4 286.9 L 144.0 287.6" fill="none" stroke="#a9a7b8" stroke-width="2.0" stroke-linecap="round"/><path d="M 107.7 308.5 L 144.2 308.5" fill="none" stroke="#a9a7b8" stroke-width="2.0" stroke-linecap="round"/>
     <circle cx="127.3" cy="439.5" r="11.0" fill="none" stroke="#a9a7b8" stroke-width="3.0"/><path d="M 106.9 480.4 C 106.9 451.3 149.1 451.3 149.1 480.4" fill="none" stroke="#a9a7b8" stroke-width="3.0" stroke-linecap="round"/><circle cx="81.7" cy="442.3" r="12.5" fill="none" stroke="#ecebe3" stroke-width="3.0"/><path d="M 58.0 490.0 C 58.0 457.0 106.0 457.0 106.0 490.0" fill="none" stroke="#ecebe3" stroke-width="3.0" stroke-linecap="round"/>

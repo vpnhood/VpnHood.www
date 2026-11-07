@@ -1645,6 +1645,15 @@ a.vh-feature-chip:hover{
     height: auto;
     border-radius: 18px;
 }
+// The chalk look warps every line by less than a pixel. Firefox moves pixels only in whole
+// steps, so on a normal screen that warp came out as nothing and the diagrams looked clean.
+// Each diagram also carries a filter that warps about twice as far, which Firefox draws much
+// like the others draw the first; the diagram generators name it in --vh-chalk-fx.
+@supports (-moz-appearance: none){
+    .vh-topology-svg .vh-chalk{
+        filter: var(--vh-chalk-fx);
+    }
+}
 
 // The Android card on the download pages (_includes/android-download.html): the two buttons
 // as wide as the wider one, and under them the panel Direct Link opens. Its padding is inside

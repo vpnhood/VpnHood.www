@@ -19,6 +19,16 @@
       <feComposite in="wobbly" in2="grainA" operator="in" result="eroded"/>
       <feMerge><feMergeNode in="eroded"/><feMergeNode in="eroded"/></feMerge>
     </filter>
+    <filter id="vhFlowChalkFx" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="11" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="8"
+                         xChannelSelector="R" yChannelSelector="G" result="wobbly"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="4" seed="5" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" result="grainA"
+                     values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .7 .4 .2 0 .05"/>
+      <feComposite in="wobbly" in2="grainA" operator="in" result="eroded"/>
+      <feMerge><feMergeNode in="eroded"/><feMergeNode in="eroded"/></feMerge>
+    </filter>
     <filter id="vhFlowBoard" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" seed="19" result="n"/>
       <feColorMatrix in="n" type="matrix"
@@ -29,7 +39,7 @@
   <rect width="900" height="700" rx="18" fill="#22202f"/>
   <rect width="900" height="700" rx="18" filter="url(#vhFlowBoard)"/>
 
-  <g filter="url(#vhFlowChalk)">
+  <g class="vh-chalk" filter="url(#vhFlowChalk)" style="--vh-chalk-fx: url(#vhFlowChalkFx)">
     <text x="450.0" y="62.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="30" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_title | default: vh_flow_en.diagram_title }}{{ vh_bidi_out }}</text>
     <g opacity="0.15"><path d="M 315.8 141.4 L 634.3 143.8 L 633.6 258.0 L 317.9 256.0 Z" fill="none" stroke="#ecebe3" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></g><g opacity="0.30"><path d="M 303.3 129.6 L 620.8 128.4 L 624.0 244.8 L 304.1 243.4 Z" fill="none" stroke="#ecebe3" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></g>
     <path d="M 288.7 114.1 L 610.0 118.0 L 610.4 233.3 L 289.4 233.2 Z" fill="none" stroke="#ecebe3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
