@@ -8,7 +8,7 @@ policy, one `.md` each, named `<scope>-<document>.md`. What reaches `develop` is
 written for forkers; how we publish is here:
 
 - **Effective date:** a substantive change moves the document's `Effective:` line in the same commit.
-  An edit that only changes a URL is not substantive. The two MANAGER documents came over from
+  An edit that only changes a URL is not substantive. The MANAGER terms of use came over from
   the wiki unchanged and carry none yet; add one with their next substantive change.
 - **Never rename a source file:** the sync step fetches it by name, and two policies print the
   GitHub history URL of their own file as their archive.
