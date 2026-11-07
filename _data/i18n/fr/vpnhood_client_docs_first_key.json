@@ -11,7 +11,7 @@
   "ask_trust": "Essayez d'obtenir votre clé auprès de personnes réputées, car votre trafic passe par leur serveur. Gardez-la pour vous : toute personne qui la possède peut utiliser ce serveur.",
   "own_title": "Gérez votre propre serveur",
   "own_desc": "Si vous n'avez personne à qui la demander, gérez votre propre serveur et créez-y vos clés. <a href=\"/self-hosted-vpn/\">Découvrez comment gérer votre propre VPN</a>.",
-  "connect_title": "Utilisez une application avec ses propres serveurs",
+  "connect_title": "Ou passez-vous de clé : utilisez une application avec ses propres serveurs",
   "connect_desc": "VpnHood! CONNECT a ses propres serveurs et n'a donc pas besoin de clé d'accès. <a href=\"/free-vpn/\">Découvrez VpnHood! CONNECT</a>.",
   "next_download": "Télécharger VpnHood! CLIENT",
   "next_linux": "Installer VpnHood! CLIENT sur Linux"

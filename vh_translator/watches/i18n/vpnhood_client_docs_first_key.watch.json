@@ -13,7 +13,7 @@
     "ask_trust": "Try to get your key from reputable people, as your traffic goes through their server. Keep it to yourself: anyone who has it can use that server.",
     "own_title": "Run your own server",
     "own_desc": "If you have nobody to ask, run a server of your own and create your keys there. <a href=\"/self-hosted-vpn/\">See how to run your own VPN</a>.",
-    "connect_title": "Use an app with its own servers",
+    "connect_title": "Or skip the key: use an app with its own servers",
     "connect_desc": "VpnHood! CONNECT has servers of its own, so it needs no access key. <a href=\"/free-vpn/\">See VpnHood! CONNECT</a>.",
     "next_download": "Download VpnHood! CLIENT",
     "next_linux": "Install VpnHood! CLIENT on Linux"

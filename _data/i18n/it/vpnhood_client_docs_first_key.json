@@ -11,7 +11,7 @@
   "ask_trust": "Cerca di ottenere la chiave da persone di buona reputazione, perché il tuo traffico passa dal loro server. Tienila per te: chiunque la possieda può usare quel server.",
   "own_title": "Gestisci un server tuo",
   "own_desc": "Se non hai nessuno a cui chiederla, gestisci un server tuo e crea lì le tue chiavi. <a href=\"/self-hosted-vpn/\">Scopri come gestire la tua VPN</a>.",
-  "connect_title": "Usa un'app con i propri server",
+  "connect_title": "Oppure salta la chiave: usa un'app con i propri server",
   "connect_desc": "VpnHood! CONNECT ha i propri server, quindi non ha bisogno di una chiave di accesso. <a href=\"/free-vpn/\">Scopri VpnHood! CONNECT</a>.",
   "next_download": "Scarica VpnHood! CLIENT",
   "next_linux": "Installa VpnHood! CLIENT su Linux"

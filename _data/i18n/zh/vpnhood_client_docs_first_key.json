@@ -11,7 +11,7 @@
   "ask_trust": "请尽量从信誉良好的人那里获取密钥，因为您的流量会经过对方的服务器。请妥善保管：任何持有密钥的人都能使用该服务器。",
   "own_title": "运行您自己的服务器",
   "own_desc": "如果找不到人索取，可以运行自己的服务器，并在上面创建密钥。<a href=\"/self-hosted-vpn/\">了解如何运行您自己的 VPN</a>。",
-  "connect_title": "使用自带服务器的应用",
+  "connect_title": "或者跳过密钥：使用自带服务器的应用",
   "connect_desc": "VpnHood! CONNECT 自带服务器，因此无需访问密钥。<a href=\"/free-vpn/\">了解 VpnHood! CONNECT</a>。",
   "next_download": "下载 VpnHood! CLIENT",
   "next_linux": "在 Linux 上安装 VpnHood! CLIENT"

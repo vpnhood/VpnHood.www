@@ -364,28 +364,26 @@ def first_key_ask() -> None:
 
 
 def first_key_own() -> None:
-    """Run your own server: a pencil drawing a key, the part it has reached solid, the teeth still dotted."""
+    """Run your own server: a hammer forging the key on an anvil, the blade glowing where it lands."""
     a = Art("fkOwn")
-    a.ambient(cy=540)
-    a.add('<g transform="translate(480 640) scale(.98) translate(-500 -500)">')
-    a.add(f'<path d="M 650 458 {KEY_END} H 650" fill="none" stroke="{VIOLET}" stroke-opacity=".85" stroke-width="19" stroke-dasharray="3 36" stroke-linecap="round"/>')
-    a.add(f'<clipPath id="{a.id("Drawn")}"><rect x="0" y="200" width="650" height="600"/></clipPath>',
-          f'<path d="M 440 458 {KEY_END} H 440 A 175 175 0 1 1 440 458 Z" fill="{a.url("Body")}" clip-path="{a.url("Drawn")}"/>')
-    drawn = "M 650 458 H 440 A 175 175 0 1 0 440 542 H 650"
-    a.add(f'<path d="{drawn}" fill="none" stroke="{a.url("Rim")}" stroke-width="26" stroke-linecap="round" filter="{a.url("Soft")}" opacity=".5"/>',
-          f'<path d="{drawn}" fill="none" stroke="{a.url("Rim")}" stroke-width="14" stroke-linecap="round"/>')
-    a.add(f'<circle cx="222" cy="500" r="62" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="6"/>')
-    a.led(350, 500, r=17)
-    a.bar(430, 488, 190, 24, fill=MINT, glow=True)
+    a.ambient(cy=510)
+    a.add('<g transform="translate(0 -50)">')
+    a.solid('<path d="M 84 628 Q 200 622 300 610 H 862 Q 880 610 880 628 V 690 Q 880 706 862 706 H 712 '
+            'Q 642 712 622 790 Q 614 830 692 846 Q 718 852 718 876 V 906 Q 718 920 704 920 H 296 '
+            'Q 282 920 282 906 V 876 Q 282 852 308 846 Q 386 830 378 790 Q 358 712 288 706 '
+            'Q 168 696 84 628 Z" {fill} {stroke}/>', width=12)
+    draw_key(a, 380, 484, scale=.72, angle=0)
+    a.add(f'<circle cx="470" cy="454" r="125" fill="{a.url("Glow")}" opacity=".8"/>')
+    # the hammer, its face on the blade and its handle up to the right
+    a.add('<g transform="translate(470 432) rotate(-18)">')
+    a.solid('<rect x="74" y="-128" width="440" height="56" rx="24" {fill} {stroke}/>', width=11)
+    a.solid('<rect x="-80" y="-172" width="160" height="172" rx="18" {fill} {stroke}/>', width=12)
+    a.add(f'<rect x="-64" y="-42" width="128" height="24" rx="8" fill="{LILAC}" opacity=".8"/>')
     a.add('</g>')
-    # the pencil, its point where the line has got to
-    a.add('<g transform="translate(627 599) rotate(-58)">')
-    a.solid('<path d="M 110 -52 H 520 Q 548 -52 548 -24 V 24 Q 548 52 520 52 H 110 Z" {fill} {stroke}/>', width=11)
-    a.add(f'<path d="M 110 -52 L 0 0 L 110 52 Z" fill="{LILAC}"/>',
-          f'<path d="M 42 -20 L 0 0 L 42 20 Z" fill="{VIOLET}"/>',
-          f'<rect x="440" y="-52" width="26" height="104" fill="{MINT}" opacity=".75"/>')
+    # the strike: short streaks off the metal, either side of the face, not sparkles
+    for x1, y1, x2, y2 in ((372, 446, 322, 424), (360, 398, 318, 358), (562, 438, 632, 418), (580, 396, 646, 356)):
+        a.add(f'<path d="M {x1} {y1} L {x2} {y2}" fill="none" stroke="{MINT}" stroke-width="15" stroke-linecap="round"/>')
     a.add('</g>')
-    a.ambient(cy=900, rx=320, ry=45, opacity=.45)
     a.render("own", product="vpnhood-client", prefix="first-key")
 
 

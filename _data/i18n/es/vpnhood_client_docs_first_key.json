@@ -11,7 +11,7 @@
   "ask_trust": "Intenta conseguir tu clave de personas de buena reputación, porque tu tráfico pasa por su servidor. Y guárdala para ti: cualquiera que la tenga puede usar ese servidor.",
   "own_title": "Monta tu propio servidor",
   "own_desc": "Si no tienes a quién pedírsela, monta tu propio servidor y crea allí tus claves. <a href=\"/self-hosted-vpn/\">Mira cómo montar tu propia VPN</a>.",
-  "connect_title": "Usa una app con servidores propios",
+  "connect_title": "O sáltate la clave: usa una app con servidores propios",
   "connect_desc": "VpnHood! CONNECT tiene servidores propios, así que no necesita clave de acceso. <a href=\"/free-vpn/\">Conoce VpnHood! CONNECT</a>.",
   "next_download": "Descarga VpnHood! CLIENT",
   "next_linux": "Instalar VpnHood! CLIENT en Linux"

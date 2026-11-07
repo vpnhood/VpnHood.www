@@ -11,7 +11,7 @@
   "ask_trust": "Versuchen Sie, Ihren Schlüssel von seriösen Personen zu bekommen, denn Ihr Datenverkehr läuft über deren Server. Behalten Sie ihn für sich: Wer ihn hat, kann diesen Server nutzen.",
   "own_title": "Betreiben Sie einen eigenen Server",
   "own_desc": "Wenn Sie niemanden fragen können, betreiben Sie einen eigenen Server und erstellen dort Ihre Schlüssel. <a href=\"/self-hosted-vpn/\">So betreiben Sie Ihr eigenes VPN</a>.",
-  "connect_title": "Nutzen Sie eine App mit eigenen Servern",
+  "connect_title": "Oder ohne Schlüssel: Nutzen Sie eine App mit eigenen Servern",
   "connect_desc": "VpnHood! CONNECT hat eigene Server und braucht daher keinen Zugangsschlüssel. <a href=\"/free-vpn/\">Mehr über VpnHood! CONNECT</a>.",
   "next_download": "VpnHood! CLIENT herunterladen",
   "next_linux": "VpnHood! CLIENT unter Linux installieren"
