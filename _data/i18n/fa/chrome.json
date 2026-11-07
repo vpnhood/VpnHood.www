@@ -85,8 +85,10 @@
   "oc_site_menu": "منوی سایت",
   "oc_features": "امکانات",
   "lang_change": "تغییر زبان",
-  "theme_switch_to_light": "تغییر به حالت روشن",
-  "theme_switch_to_dark": "تغییر به حالت تاریک",
+  "theme_change": "تغییر حالت نمایش",
+  "theme_auto": "خودکار",
+  "theme_light": "روشن",
+  "theme_dark": "تاریک",
   "copy_to_clipboard": "کپی در کلیپ‌بورد",
   "copied_to_clipboard": "در کلیپ‌بورد کپی شد",
   "nav_guides": "راهنماها"

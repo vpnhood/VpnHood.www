@@ -85,8 +85,10 @@
   "oc_site_menu": "Menu du site",
   "oc_features": "Fonctionnalités",
   "lang_change": "Changer de langue",
-  "theme_switch_to_light": "Passer au mode clair",
-  "theme_switch_to_dark": "Passer au mode sombre",
+  "theme_change": "Changer de thème",
+  "theme_auto": "Automatique",
+  "theme_light": "Clair",
+  "theme_dark": "Sombre",
   "copy_to_clipboard": "Copier dans le presse-papiers",
   "copied_to_clipboard": "Copié dans le presse-papiers",
   "nav_guides": "Guides"

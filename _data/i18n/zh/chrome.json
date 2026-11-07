@@ -85,8 +85,10 @@
   "oc_site_menu": "网站菜单",
   "oc_features": "功能",
   "lang_change": "切换语言",
-  "theme_switch_to_light": "切换至浅色主题",
-  "theme_switch_to_dark": "切换至深色主题",
+  "theme_change": "切换主题",
+  "theme_auto": "自动",
+  "theme_light": "浅色",
+  "theme_dark": "深色",
   "copy_to_clipboard": "复制到剪贴板",
   "copied_to_clipboard": "已复制到剪贴板",
   "nav_guides": "使用指南"

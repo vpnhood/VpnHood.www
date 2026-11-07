@@ -109,7 +109,7 @@
 [data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon) .text-white{
     color: #fff !important;
 }
-// The language selector ships as a dark dropdown; on a light page it is a light one.
+// The language and theme menus ship as dark dropdowns; on a light page they are light ones.
 [data-theme="light"] .dropdown-menu-dark{
     --bs-dropdown-color: var(--vh-text-muted);
     --bs-dropdown-bg: #fff;
@@ -403,20 +403,6 @@
 [data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon, .vh-bg-purple-300, .vh-bg-purple-400, #appWrapper) :is(path, circle, rect, g, line, polyline, polygon)[stroke="#fff"],
 [data-theme="light"] :is(.vh-btn-primary, .vh-download-btn, .list-check-icon, .vh-bg-purple-300, .vh-bg-purple-400, #appWrapper) :is(path, circle, rect, g, line, polyline, polygon)[stroke="white"]{
     stroke: #fff;
-}
-
-// ---------------------------------------------------------------------------
-// Theme toggle
-// ---------------------------------------------------------------------------
-// The control offers the theme you are *not* in, so the icons swap with the theme.
-.vh-theme-toggle .vh-theme-icon-moon{
-    display: none;
-}
-[data-theme="light"] .vh-theme-toggle .vh-theme-icon-sun{
-    display: none;
-}
-[data-theme="light"] .vh-theme-toggle .vh-theme-icon-moon{
-    display: block;
 }
 
 // Feature spoke screenshots are real app UI and must not change between themes, so the

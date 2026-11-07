@@ -85,8 +85,10 @@
   "oc_site_menu": "قائمة الموقع",
   "oc_features": "الميزات",
   "lang_change": "تغيير اللغة",
-  "theme_switch_to_light": "التبديل إلى الوضع الفاتح",
-  "theme_switch_to_dark": "التبديل إلى الوضع الداكن",
+  "theme_change": "تغيير المظهر",
+  "theme_auto": "تلقائي",
+  "theme_light": "فاتح",
+  "theme_dark": "داكن",
   "copy_to_clipboard": "نسخ إلى الحافظة",
   "copied_to_clipboard": "تم النسخ إلى الحافظة",
   "nav_guides": "الأدلة"

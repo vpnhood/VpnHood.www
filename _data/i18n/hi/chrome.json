@@ -85,8 +85,10 @@
   "oc_site_menu": "साइट मेन्यू",
   "oc_features": "फ़ीचर्स",
   "lang_change": "भाषा बदलें",
-  "theme_switch_to_light": "लाइट थीम पर स्विच करें",
-  "theme_switch_to_dark": "डार्क थीम पर स्विच करें",
+  "theme_change": "थीम बदलें",
+  "theme_auto": "ऑटो",
+  "theme_light": "लाइट",
+  "theme_dark": "डार्क",
   "copy_to_clipboard": "क्लिपबोर्ड पर कॉपी करें",
   "copied_to_clipboard": "क्लिपबोर्ड पर कॉपी किया गया",
   "nav_guides": "गाइड्स"

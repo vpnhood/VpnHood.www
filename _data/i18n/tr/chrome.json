@@ -85,8 +85,10 @@
   "oc_site_menu": "Site menüsü",
   "oc_features": "Özellikler",
   "lang_change": "Dil değiştir",
-  "theme_switch_to_light": "Açık temaya geç",
-  "theme_switch_to_dark": "Koyu temaya geç",
+  "theme_change": "Temayı değiştir",
+  "theme_auto": "Otomatik",
+  "theme_light": "Açık",
+  "theme_dark": "Koyu",
   "copy_to_clipboard": "Panoya kopyalayın",
   "copied_to_clipboard": "Panoya kopyalandı",
   "nav_guides": "Rehberler"

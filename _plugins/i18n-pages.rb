@@ -31,7 +31,11 @@ module VhI18nPages
     # shares renderer state with its source and silently renders the source
     # page's Liquid context (English) into the clone's destination.
     def clone(site, page, lang)
-      copy = Jekyll::Page.new(site, site.source, File.dirname(page.relative_path), page.name)
+      # A root page's dirname is ".": its clone's path would be ./index.html, which a
+      # `defaults` scope in _config.yml written for index.html does not match.
+      dir = File.dirname(page.relative_path)
+      dir = "" if dir == "."
+      copy = Jekyll::Page.new(site, site.source, dir, page.name)
       copy.data["lang"] = lang
       copy.data["permalink"] = "/#{lang}#{page.url}"
       # Territory-qualified OG locale (fa_IR, zh_CN, ...) from _data/languages.yml.

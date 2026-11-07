@@ -3,7 +3,7 @@
 {%- assign vh_page_lang = page.lang | default: 'en' -%}
 {%- assign vh_dir = site.data.languages[vh_page_lang].dir | default: 'ltr' -%}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark">
+<html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark" data-vh-auto-theme="{{ page.auto_theme | default: 'system' }}">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -17,19 +17,25 @@
          (GTM's snippet injects itself before the first <script>, not before these
          metas, so it cannot push them down.) -->
 
-    <!-- Colour theme bootstrap. Dark is the default and is what the markup ships with,
-         so this only ever has to *upgrade* to light — and it does so before first paint,
-         which is why it is inline and blocking rather than in /assets/js/theme.js.
-         Preview either theme without touching the stored choice via ?vh_theme=light|dark. -->
+    <!-- Colour theme bootstrap. The markup ships dark, so this only ever has to *upgrade* to
+         light — and it does so before first paint, which is why it is inline and blocking
+         rather than in /assets/js/theme.js. A stored Light or Dark applies to every page.
+         Under Auto (nothing stored) a page with data-vh-auto-theme="system" follows the
+         system setting and a showcase page stays dark; _config.yml lists the showcase pages.
+         Preview a mode without touching the stored choice via ?vh_theme=auto|light|dark. -->
     <script>
       (function () {
-        try {
-          var t = localStorage.getItem("vh_theme");
-          var q = window.location.search;
-          if (q.indexOf("vh_theme=light") > -1) t = "light";
-          else if (q.indexOf("vh_theme=dark") > -1) t = "dark";
-          if (t === "light") document.documentElement.setAttribute("data-theme", "light");
-        } catch (e) {}
+        var r = document.documentElement;
+        var m = null;
+        try { m = localStorage.getItem("vh_theme"); } catch (e) {}
+        var p = /[?&]vh_theme=(auto|light|dark)/.exec(window.location.search);
+        if (p) m = p[1];
+        if (m !== "light" && m !== "dark") m = "auto";
+        r.setAttribute("data-vh-theme-mode", m);
+        if (m === "light" || (m === "auto" && r.getAttribute("data-vh-auto-theme") === "system" &&
+            window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+          r.setAttribute("data-theme", "light");
+        }
       })();
     </script>
 

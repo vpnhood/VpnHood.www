@@ -150,7 +150,7 @@ the limits.
   `npx wrangler@4 dev` in `workers/search/` with a `.dev.vars` (see `wrangler.jsonc`). The
   live widget accepts `www.vpnhood.com` only.
 
-## Theme toggle — `_includes/theme-toggle.html` + `assets/js/theme.js`
+## Theme menu — `_includes/theme-toggle.html` + `assets/js/theme.js`
 
 See [colour-themes.md](colour-themes.md).
 
@@ -187,7 +187,7 @@ auto-format/"balance" these two includes** — an HTML formatter that closes the
 early breaks the page wrapper (the home globe stops being clipped by
 `.body-innerwrapper{overflow-x:hidden}` and the mobile layout overflows). `.prettierignore`
 guards them. `header.html` div balance must be net **+2** opens. It also opens `<html>` with
-`data-theme="dark"` and runs the pre-paint theme bootstrap. Both are shared by every page —
+`data-theme="dark"` and `data-vh-auto-theme`, and runs the pre-paint theme bootstrap. Both are shared by every page —
 edits there are global; make them deliberate.
 
 ## CTA tracking

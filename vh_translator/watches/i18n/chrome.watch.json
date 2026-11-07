@@ -87,8 +87,10 @@
     "oc_site_menu": "Site menu",
     "oc_features": "Features",
     "lang_change": "Change language",
-    "theme_switch_to_light": "Switch to light theme",
-    "theme_switch_to_dark": "Switch to dark theme",
+    "theme_change": "Change theme",
+    "theme_auto": "Auto",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
     "copy_to_clipboard": "Copy to clipboard",
     "copied_to_clipboard": "Copied to clipboard",
     "nav_guides": "Guides"

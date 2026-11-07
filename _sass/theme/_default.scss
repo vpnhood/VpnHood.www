@@ -483,9 +483,30 @@ button.vh-mega-toggle{
     display: flex;
     align-items: center;
 }
-.vh-lang-menu .dropdown-menu{
+.vh-lang-menu .dropdown-menu,
+.vh-theme-menu .dropdown-menu{
+    --bs-dropdown-link-active-bg: var(--purple-300);
     min-width: 9rem;
     font-size: 14px;
+}
+.vh-theme-menu .dropdown-item{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+// The button shows the visitor's mode: Auto until they pick Light or Dark. Nothing here
+// depends on the theme on screen, as Auto can be either.
+.vh-theme-toggle .vh-theme-icon-sun,
+.vh-theme-toggle .vh-theme-icon-moon{
+    display: none;
+}
+[data-vh-theme-mode="light"] .vh-theme-toggle .vh-theme-icon-sun,
+[data-vh-theme-mode="dark"] .vh-theme-toggle .vh-theme-icon-moon{
+    display: block;
+}
+[data-vh-theme-mode="light"] .vh-theme-toggle .vh-theme-icon-auto,
+[data-vh-theme-mode="dark"] .vh-theme-toggle .vh-theme-icon-auto{
+    display: none;
 }
 // The off-canvas gets the same dropdown as the header; only the separator above it
 // (the nav rows it follows already carry hairlines) is mobile-specific.
