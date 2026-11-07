@@ -238,6 +238,13 @@
     <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/poppins/poppins-latin-400.woff2" />
     <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/poppins/poppins-latin-600.woff2" />
     <link href="/assets/css/fonts.css" rel="stylesheet" />
+    {% if vh_dir == "rtl" %}
+    <!-- Poppins has no Persian or Arabic letters, so each device drew them in a font of its
+         own. Vazirmatn supplies them, under Poppins' name (see fonts-arabic.css), and only
+         these pages load it. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/vazirmatn/vazirmatn-arabic.woff2" />
+    <link href="/assets/css/fonts-arabic.css" rel="stylesheet" />
+    {% endif %}
     <!-- Page-specific CSS, then VpnHood's own global styles (compiled from SCSS) -->
     {% if page.extra_css %}{% for c in page.extra_css %}
     <link href="{{ c }}" rel="stylesheet" />

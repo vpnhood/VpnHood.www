@@ -41,7 +41,7 @@ Entry files live in `assets/css/*.scss` and need the two `---` front-matter line
 | `comparison.scss` | `pages/_comparison` | `/free-vpn/comparison/` only |
 
 Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hosted Poppins)
-→ page `extra_css` → `style.css` → `aos.css`.
+→ `fonts-arabic.css` (RTL pages only) → page `extra_css` → `style.css` → `aos.css`.
 
 - Use palette/utility classes already defined in the theme (`vh-txt-grad-purple-400`,
   `vh-btn vh-btn-primary`, `section-title`, `section-space`, Bootstrap
@@ -103,7 +103,12 @@ legacy CMS `/templates`, `/media`, `/plugins` folders.
   the generated `assets/css/fonts.css` — rerun `python tools/fetch-fonts.py` to change the
   weights or subsets, and never hand-edit either output. Each face keeps `font-display:swap`
   and a `unicode-range`, so a visitor downloads only the subsets their text needs and the
-  system font shows until then. GTM is one of two remote scripts left, and it now renders
+  system font shows until then. Poppins has no Persian or Arabic letters, so the same tool
+  writes `assets/css/fonts-arabic.css` and `assets/fonts/vazirmatn/` (one variable woff2, OFL):
+  Vazirmatn as faces named Poppins with an Arabic `unicode-range`, one per Poppins weight because
+  a browser joins faces only when their weights match, so every rule and inline diagram that
+  names Poppins draws those letters from it. `header.html` links and preloads it
+  on RTL pages only, so no other language downloads it. GTM is one of two remote scripts left, and it now renders
   only when `jekyll.environment == "production"`: a local `jekyll serve` used to send page
   views and CTA clicks to the live GA4 property, which put our own testing in the reports.
   The other is Cloudflare Turnstile's `api.js`, which `search.js` loads on `/search/` only:

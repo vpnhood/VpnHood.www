@@ -676,7 +676,7 @@ iconify-icon {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 0;
-    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 40%, var(--purple-400) 100%)
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 40%, var(--purple-130) 100%)
 }
 .section-title{
     font-size: 40px;
@@ -897,8 +897,10 @@ iconify-icon {
     -webkit-text-fill-color: transparent;
     height: 49px;
 }
+// The fade spans the whole box, so a wrapped heading's last line sits at its end: the end colour
+// has to stay readable on the page, or that line sinks into the background.
 .vh-txt-grad-purple-400{
-    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 33%, var(--purple-400) 95%);
+    background-image: linear-gradient(to bottom, var(--vh-heading-grad-top) 33%, var(--purple-130) 95%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
