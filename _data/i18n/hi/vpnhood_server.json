@@ -50,5 +50,5 @@
   "install_desc": "एक नई Linux मशीन पर एक लाइन पेस्ट करें। यह सर्विस को इंस्टॉल, कॉन्फ़िगर और चालू कर देता है। फिर अपनी पहली एक्सेस की (key) पाएँ।",
   "install_caption_install": "Linux (x64 या ARM64) पर इंस्टॉल करें",
   "install_caption_key": "एक्सेस की (key) जनरेट करें",
-  "install_guide": "Linux और Docker के लिए पूरी सेटअप गाइड"
+  "install_guide": "Linux, Docker और Windows के लिए पूरी सेटअप गाइड"
 }

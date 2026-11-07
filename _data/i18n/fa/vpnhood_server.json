@@ -50,5 +50,5 @@
   "install_desc": "یک خط کد را در یک سیستم خام Linux وارد کنید؛ سرویس به‌طور خودکار نصب، تنظیم و اجرا می‌شود. سپس اولین کلید دسترسی‌تان را دریافت کنید.",
   "install_caption_install": "نصب در Linux (نسخه x64 یا ARM64)",
   "install_caption_key": "ساخت کلید دسترسی",
-  "install_guide": "راهنمای کامل راه‌اندازی برای Linux و Docker"
+  "install_guide": "راهنمای کامل راه‌اندازی برای Linux، Docker و Windows"
 }

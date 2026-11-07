@@ -12,12 +12,13 @@
   "linux_tun": "The server's VPN adapter needs a TUN device and the <code>[cmd_ip]</code> and <code>[cmd_iptables]</code> commands, which nearly every server has. Without them, the server runs as a proxy only: apps still connect, and their traffic goes through the server's proxy instead of its adapter.",
   "linux_unsupported": "Not supported: Alpine and the other distributions built on musl instead of glibc, where you can run the server in Docker, and distributions older than glibc 2.27, such as CentOS 7.",
   "docker_title": "Docker",
-  "docker_desc": "The server's Docker image runs on any Linux machine with Docker and its compose plugin, on x64 or ARM64, Alpine included: see <a href=\"/vpnhood-server/docs/docker/\">Install VpnHood! SERVER with Docker</a>. A container has no TUN device, so there the server runs as a proxy only.",
+  "docker_desc": "The server's Docker image runs on any Linux machine with Docker and its compose plugin, on x64 or ARM64, Alpine included: see <a href=\"/vpnhood-server/docs/install/docker/\">Install VpnHood! SERVER with Docker</a>. A container has no TUN device, so there the server runs as a proxy only.",
   "windows_title": "Windows",
   "windows_desc": "The server also runs on Windows 10, Windows 11 and Windows Server 2016 or later, with these limits:",
   "win_x64": "x64 only: there is no package for Windows on ARM.",
   "win_ipv6": "Windows' NAT translates only IPv4, so IPv6 traffic always goes through the server's proxy.",
   "win_hyperv": "On Windows 10 and 11, the server's VPN adapter needs Hyper-V turned on, as Windows' NAT comes with it, and Home editions have no Hyper-V. Without it, the server runs as a proxy only. Windows Server needs nothing turned on.",
+  "windows_install": "To install it, see <a href=\"/vpnhood-server/docs/install/windows/\">Install VpnHood! SERVER on Windows</a>.",
   "processor_title": "Processor",
   "processor_desc": "An ARM64 processor, or an x64 processor with SSE4.2 and POPCNT, as .NET 11 requires. Every x64 processor from the last ten years has them, but some VPS providers hide them behind a basic virtual processor, which Linux names <code>[cpu_kvm_name]</code>. On such a machine the server stops as soon as it starts, with the error <code>[cpu_error]</code>.",
   "processor_check": "To check an x64 Linux machine, run this on it:",
@@ -26,6 +27,6 @@
   "network_ip": "A public IP address, which apps connect to.",
   "network_port": "A TCP port open, both in the machine's firewall and in your hosting provider's. The server listens on port <code>[server_port]</code> by default, and we recommend it, as networks rarely block it, but any port works. To change it, and for the server's UDP port, see <a href=\"/vpnhood-server/docs/ip-addresses/\">Set your server's IP addresses</a>.",
   "next_title": "Next steps",
-  "next_install": "Install VpnHood! SERVER on Linux",
+  "next_install": "Install VpnHood! SERVER",
   "next_manager": "Let VpnHood! MANAGER install the server for you"
 }

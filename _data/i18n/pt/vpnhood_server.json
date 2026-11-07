@@ -50,5 +50,5 @@
   "install_desc": "Cole uma linha em um servidor Linux novo. O comando instala, configura e inicia o serviço. Depois, basta gerar sua primeira chave de acesso.",
   "install_caption_install": "Instalar no Linux (x64 ou ARM64)",
   "install_caption_key": "Gerar uma chave de acesso",
-  "install_guide": "Guia completo de instalação para Linux e Docker"
+  "install_guide": "Guia completo de instalação para Linux, Docker e Windows"
 }

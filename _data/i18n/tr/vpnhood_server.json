@@ -50,5 +50,5 @@
   "install_desc": "Temiz bir Linux sunucusuna tek bir satır yapıştırın. Servisi otomatik olarak kurar, yapılandırır ve başlatır. Ardından ilk erişim anahtarınızı hemen oluşturun.",
   "install_caption_install": "Linux'a kurun (x64 veya ARM64)",
   "install_caption_key": "Erişim anahtarı oluşturun",
-  "install_guide": "Linux ve Docker için eksiksiz kurulum kılavuzu"
+  "install_guide": "Linux, Docker ve Windows için eksiksiz kurulum kılavuzu"
 }

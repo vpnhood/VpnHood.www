@@ -147,12 +147,12 @@
 
 .vh-docs-nav a:hover,
 .vh-docs-nav a:focus-visible,
-.vh-docs-nav [aria-current="page"]{
+.vh-docs-nav [aria-current]{
     color: var(--vh-text);
     background-color: var(--vh-surface);
 }
 
-.vh-docs-nav [aria-current="page"]{
+.vh-docs-nav [aria-current]{
     font-weight: 600;
 }
 
@@ -502,6 +502,105 @@
 .vh-docs-article .vh-docs-flow--compare .vh-docs-flow-desc + .vh-docs-flow-desc{
     margin-top: .6rem;
     color: var(--vh-text);
+}
+
+// The install page's choice of system: a card for each, its large picture over its name and
+// one line. The name is the card's only link, stretched over the whole card, so the picture
+// opens the page too. Three in a row; on a phone one under another, each picture narrower
+// than the column, or the second card starts two screens down.
+.vh-docs-article .vh-docs-systems{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-docs-article .vh-docs-systems > li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border: 1px solid var(--vh-hairline);
+    border-radius: 16px;
+    background-color: var(--vh-surface);
+    transition: border-color .15s ease;
+}
+
+.vh-docs-article .vh-docs-systems > li:hover,
+.vh-docs-article .vh-docs-systems > li:focus-within{
+    border-color: var(--vh-border-strong);
+}
+
+.vh-docs-systems img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.vh-docs-system-text{
+    padding: 0 1.25rem 1.25rem;
+}
+
+.vh-docs-article .vh-docs-systems h2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .25rem .6rem;
+    margin: 0 0 .4rem;
+    font-size: 1.25rem;
+}
+
+.vh-docs-article .vh-docs-systems h2 a{
+    color: var(--vh-text);
+    text-decoration: none;
+}
+
+.vh-docs-article .vh-docs-systems > li:hover h2 a{
+    color: var(--vh-accent-ink);
+}
+
+.vh-docs-systems h2 a::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+}
+
+.vh-docs-systems h2 a:focus-visible{
+    outline: 0;
+}
+
+.vh-docs-systems h2 a:focus-visible::after{
+    outline: 2px solid rgba(var(--purple-300-rgb), .6);
+    outline-offset: 2px;
+}
+
+.vh-docs-system-tag{
+    padding: .1rem .55rem;
+    border: 1px solid var(--vh-border-strong);
+    border-radius: 999px;
+    color: var(--vh-accent-ink);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.vh-docs-article .vh-docs-systems p{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767.98px){
+    .vh-docs-article .vh-docs-systems{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .vh-docs-systems img{
+        max-width: 15rem;
+        margin-inline: auto;
+    }
 }
 
 // A diagram: the blackboard of the marketing pages (.vh-topology and .vh-topology-svg in

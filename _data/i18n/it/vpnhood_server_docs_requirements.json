@@ -12,12 +12,13 @@
   "linux_tun": "L'adattatore VPN del server richiede un dispositivo TUN e i comandi <code>[cmd_ip]</code> e <code>[cmd_iptables]</code>, presenti su quasi tutti i server. Senza di essi, il server funziona solo come proxy: le app si connettono comunque e il loro traffico passa dal proxy del server invece che dal suo adattatore.",
   "linux_unsupported": "Non supportate: Alpine e le altre distribuzioni basate su musl invece di glibc, dove puoi eseguire il server in Docker, e le distribuzioni precedenti a glibc 2.27, come CentOS 7.",
   "docker_title": "Docker",
-  "docker_desc": "L'immagine Docker del server funziona su qualsiasi macchina Linux con Docker e il suo plugin compose, su x64 o ARM64, Alpine compresa: vedi <a href=\"/vpnhood-server/docs/docker/\">Installa VpnHood! SERVER con Docker</a>. Un container non ha un dispositivo TUN, quindi lì il server funziona solo come proxy.",
+  "docker_desc": "L'immagine Docker del server funziona su qualsiasi macchina Linux con Docker e il suo plugin compose, su x64 o ARM64, Alpine compresa: vedi <a href=\"/vpnhood-server/docs/install/docker/\">Installa VpnHood! SERVER con Docker</a>. Un container non ha un dispositivo TUN, quindi lì il server funziona solo come proxy.",
   "windows_title": "Windows",
   "windows_desc": "Il server funziona anche su Windows 10, Windows 11 e Windows Server 2016 o successivi, con questi limiti:",
   "win_x64": "Solo x64: non esiste un pacchetto per Windows su ARM.",
   "win_ipv6": "Il NAT di Windows converte solo IPv4, quindi il traffico IPv6 passa sempre dal proxy del server.",
   "win_hyperv": "Su Windows 10 e 11, l'adattatore VPN del server richiede Hyper-V attivo, perché il NAT di Windows arriva con esso, e le edizioni Home non hanno Hyper-V. Senza, il server funziona solo come proxy. Windows Server non richiede di attivare nulla.",
+  "windows_install": "Per installarlo, vedi <a href=\"/vpnhood-server/docs/install/windows/\">Installa VpnHood! SERVER su Windows</a>.",
   "processor_title": "Processore",
   "processor_desc": "Un processore ARM64, oppure un processore x64 con SSE4.2 e POPCNT, come richiede .NET 11. Tutti i processori x64 degli ultimi dieci anni li hanno, ma alcuni provider VPS li nascondono dietro un processore virtuale di base, che Linux chiama <code>[cpu_kvm_name]</code>. Su una macchina del genere il server si arresta appena avviato, con l'errore <code>[cpu_error]</code>.",
   "processor_check": "Per controllare una macchina Linux x64, esegui questo comando sulla macchina:",
@@ -26,6 +27,6 @@
   "network_ip": "Un indirizzo IP pubblico, a cui si connettono le app.",
   "network_port": "Una porta TCP aperta, sia nel firewall della macchina sia in quello dell'hosting provider. Per impostazione predefinita il server è in ascolto sulla porta <code>[server_port]</code>, che consigliamo perché le reti la bloccano di rado, ma va bene qualsiasi porta. Per cambiarla, e per la porta UDP del server, vedi <a href=\"/vpnhood-server/docs/ip-addresses/\">Imposta gli indirizzi IP del tuo server</a>.",
   "next_title": "Passaggi successivi",
-  "next_install": "Installa VpnHood! SERVER su Linux",
+  "next_install": "Installa VpnHood! SERVER",
   "next_manager": "Lascia che VpnHood! MANAGER installi il server per te"
 }

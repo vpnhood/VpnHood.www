@@ -50,5 +50,5 @@
   "install_desc": "Pega una sola línea en un servidor Linux limpio. Instala el servicio, lo configura y lo inicia. Luego, genera tu primera clave de acceso.",
   "install_caption_install": "Instalar en Linux (x64 o ARM64)",
   "install_caption_key": "Generar una clave de acceso",
-  "install_guide": "Guía completa de instalación para Linux y Docker"
+  "install_guide": "Guía completa de instalación para Linux, Docker y Windows"
 }

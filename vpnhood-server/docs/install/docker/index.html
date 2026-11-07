@@ -1,6 +1,6 @@
 ---
 layout: none
-i18n: vpnhood_server_docs_docker
+i18n: vpnhood_server_docs_install_docker
 nav_active: self-hosted
 extra_css:
   - /assets/css/custom.css
@@ -23,7 +23,7 @@ extra_css:
   _data/code.yml, filled in by copy.html.
 {%- endcomment -%}
 {% capture vh_article %}
-{% include docs-hero.html art="vpnhood-server/docs/hero-docker.svg" %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-install-docker.svg" %}
 
 <h2 id="before-you-start">{{ t.before_title }}</h2>
 <ul>
@@ -37,7 +37,7 @@ extra_css:
 
 <h2 id="standalone">{{ t.install_title }}</h2>
 <p>{{ t.step_install_run }}</p>
-{% include terminal.html cmd='sudo su -c "bash <( wget -qO- https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh)"' %}
+{% include terminal.html cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'" %}
 <p>{% include copy.html s=t.step_install_options %}</p>
 <p>{% include copy.html s=t.step_install_storage %}</p>
 

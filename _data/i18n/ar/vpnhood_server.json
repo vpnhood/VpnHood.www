@@ -50,5 +50,5 @@
   "install_desc": "الصق سطرًا واحدًا في خادم Linux جديد؛ ليتم تثبيت الخدمة وضبطها وتشغيلها تلقائيًا، ثم استخرج مفتاح الوصول الأول بسهولة.",
   "install_caption_install": "التثبيت على Linux (بمعمارية x64 أو ARM64)",
   "install_caption_key": "إنشاء مفتاح وصول",
-  "install_guide": "دليل الإعداد الكامل لنظام Linux وDocker"
+  "install_guide": "دليل الإعداد الكامل لنظام Linux وDocker وWindows"
 }

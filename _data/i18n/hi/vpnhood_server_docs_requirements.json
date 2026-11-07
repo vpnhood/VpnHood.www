@@ -12,12 +12,13 @@
   "linux_tun": "सर्वर के VPN अडैप्टर को एक TUN डिवाइस और <code>[cmd_ip]</code> व <code>[cmd_iptables]</code> कमांड चाहिए, जो लगभग हर सर्वर में होते हैं। इनके बिना सर्वर सिर्फ़ प्रॉक्सी के रूप में चलता है: ऐप्स फिर भी कनेक्ट होते हैं, और उनका ट्रैफ़िक सर्वर के अडैप्टर की जगह उसके प्रॉक्सी से जाता है।",
   "linux_unsupported": "सपोर्टेड नहीं: Alpine और glibc की जगह musl पर बने दूसरे डिस्ट्रीब्यूशन, जहाँ आप सर्वर को Docker में चला सकते हैं, और glibc 2.27 से पुराने डिस्ट्रीब्यूशन, जैसे CentOS 7।",
   "docker_title": "Docker",
-  "docker_desc": "सर्वर की Docker इमेज Docker और उसके compose प्लगइन वाली किसी भी Linux मशीन पर, x64 या ARM64 पर, Alpine समेत, चलती है: <a href=\"/vpnhood-server/docs/docker/\">Docker के साथ VpnHood! SERVER इंस्टॉल करें</a> देखें। कंटेनर में TUN डिवाइस नहीं होता, इसलिए वहाँ सर्वर सिर्फ़ प्रॉक्सी के रूप में चलता है।",
+  "docker_desc": "सर्वर की Docker इमेज Docker और उसके compose प्लगइन वाली किसी भी Linux मशीन पर, x64 या ARM64 पर, Alpine समेत, चलती है: <a href=\"/vpnhood-server/docs/install/docker/\">Docker के साथ VpnHood! SERVER इंस्टॉल करें</a> देखें। कंटेनर में TUN डिवाइस नहीं होता, इसलिए वहाँ सर्वर सिर्फ़ प्रॉक्सी के रूप में चलता है।",
   "windows_title": "Windows",
   "windows_desc": "सर्वर Windows 10, Windows 11 और Windows Server 2016 या उसके बाद के वर्ज़न पर भी चलता है, इन सीमाओं के साथ:",
   "win_x64": "सिर्फ़ x64: ARM वाले Windows के लिए कोई पैकेज नहीं है।",
   "win_ipv6": "Windows का NAT सिर्फ़ IPv4 ट्रांसलेट करता है, इसलिए IPv6 ट्रैफ़िक हमेशा सर्वर के प्रॉक्सी से जाता है।",
   "win_hyperv": "Windows 10 और 11 पर सर्वर के VPN अडैप्टर के लिए Hyper-V चालू होना चाहिए, क्योंकि Windows का NAT उसी के साथ आता है, और Home एडिशन में Hyper-V नहीं होता। इसके बिना सर्वर सिर्फ़ प्रॉक्सी के रूप में चलता है। Windows Server में कुछ भी चालू करने की ज़रूरत नहीं है।",
+  "windows_install": "इसे इंस्टॉल करने के लिए, <a href=\"/vpnhood-server/docs/install/windows/\">Windows पर VpnHood! SERVER इंस्टॉल करें</a> देखें।",
   "processor_title": "प्रोसेसर",
   "processor_desc": "एक ARM64 प्रोसेसर, या SSE4.2 और POPCNT वाला x64 प्रोसेसर, जैसा .NET 11 को चाहिए। पिछले दस साल के हर x64 प्रोसेसर में ये होते हैं, लेकिन कुछ VPS प्रोवाइडर इन्हें एक बेसिक वर्चुअल प्रोसेसर के पीछे छिपा देते हैं, जिसे Linux <code>[cpu_kvm_name]</code> कहता है। ऐसी मशीन पर सर्वर शुरू होते ही <code>[cpu_error]</code> एरर के साथ बंद हो जाता है।",
   "processor_check": "किसी x64 Linux मशीन को जाँचने के लिए, उस पर यह चलाएँ:",
@@ -26,6 +27,6 @@
   "network_ip": "एक पब्लिक IP एड्रेस, जिससे ऐप्स कनेक्ट होते हैं।",
   "network_port": "मशीन के फ़ायरवॉल और आपके होस्टिंग प्रोवाइडर दोनों में एक TCP पोर्ट खुला होना चाहिए। सर्वर डिफ़ॉल्ट रूप से पोर्ट <code>[server_port]</code> पर सुनता है, और हम इसी की सलाह देते हैं, क्योंकि नेटवर्क इसे शायद ही कभी ब्लॉक करते हैं, लेकिन कोई भी पोर्ट काम करता है। इसे बदलने और सर्वर के UDP पोर्ट के लिए <a href=\"/vpnhood-server/docs/ip-addresses/\">अपने सर्वर के IP पते सेट करें</a> देखें।",
   "next_title": "अगले कदम",
-  "next_install": "Linux पर VpnHood! SERVER इंस्टॉल करें",
+  "next_install": "VpnHood! SERVER इंस्टॉल करें",
   "next_manager": "VpnHood! MANAGER को आपके लिए सर्वर इंस्टॉल करने दें"
 }

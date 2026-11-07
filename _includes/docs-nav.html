@@ -5,7 +5,8 @@
   language-neutral `url` and an optional `label` key, which defaults to the URL's
   last segment. Labels come from nav_labels.json, so a page is called the same in
   the sidebar as in the breadcrumb. List only pages that exist: the link check
-  fails on anything else.
+  fails on anything else. A page under a listed one, such as install/linux/, marks
+  that one as where the reader is, but keeps it a link, as it is not the page itself.
 {%- endcomment -%}
 <nav class="vh-docs-nav" aria-label="{{ vh_nl.aria_docs_nav | default: vh_nl_en.aria_docs_nav }}">
   {%- for vh_dn_group in vh_dn %}
@@ -20,7 +21,7 @@
       {%- unless vh_dn_label -%}{%- assign vh_dn_label = vh_nl_en[vh_dn_key] -%}{%- endunless -%}
       {%- unless vh_dn_label -%}{%- assign vh_dn_label = vh_dn_key | replace: "-", " " | capitalize -%}{%- endunless %}
     {%- comment -%} The current page is text, not a link, as in the breadcrumb: a link to the page you are on is a dead end (tools/check-self-links.py). {%- endcomment %}
-    <li>{% if vh_dn_page.url == vh_base_url %}<span aria-current="page">{{ vh_dn_label }}</span>{% else %}<a href="{{ vh_base }}{{ vh_dn_page.url }}">{{ vh_dn_label }}</a>{% endif %}</li>
+    <li>{% if vh_dn_page.url == vh_base_url %}<span aria-current="page">{{ vh_dn_label }}</span>{% else %}<a href="{{ vh_base }}{{ vh_dn_page.url }}"{% if vh_base_url contains vh_dn_page.url %} aria-current="true"{% endif %}>{{ vh_dn_label }}</a>{% endif %}</li>
     {%- endfor %}
   </ul>
   {%- endfor %}

@@ -50,5 +50,5 @@
   "install_desc": "Paste one line on a fresh Linux box. It installs the service, configures it, and starts it. Then ask it for your first access key.",
   "install_caption_install": "Install on Linux (x64 or ARM64)",
   "install_caption_key": "Generate an access key",
-  "install_guide": "Full setup guide for Linux and Docker"
+  "install_guide": "Full setup guide for Linux, Docker and Windows"
 }

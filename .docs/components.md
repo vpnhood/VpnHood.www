@@ -103,7 +103,7 @@ The card is a headline, a line on what MANAGER does instead and a button to the 
 from the page's `mgr_box_title`, `mgr_box_desc` and `mgr_box_cta`, each with a per-key English
 fallback. Write them benefit first, as "Easily add, manage and monitor your servers with
 VpnHood! MANAGER" does. `href` is the MANAGER page without the language prefix. The pairs
-today: `install/` and `docker/` → `add-server/` (`#docker`), `domain/` →
+today: `install/linux/`, `install/docker/` and `install/windows/` → `add-server/` (`#docker`), `domain/` →
 `certificates/#domain`, `ip-addresses/` → `access-points/`, `reverse-proxy/` →
 `access-points/#reverse-proxy`, `ip-blocking/` → `server-profiles/#censored-network`. The
 look is its own, so it never reads as a note: the brand's violet-to-mint rim and a tint of

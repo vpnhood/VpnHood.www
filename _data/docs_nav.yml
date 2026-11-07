@@ -23,7 +23,6 @@ vpnhood-server:
     pages:
       - url: /vpnhood-server/docs/requirements/
       - url: /vpnhood-server/docs/install/
-      - url: /vpnhood-server/docs/docker/
       - url: /vpnhood-server/docs/ip-blocking/
       - url: /vpnhood-server/docs/certificates/
   - group: reference

@@ -50,5 +50,5 @@
   "install_desc": "在崭新的 Linux 服务器上粘贴一行命令即可。它会自动完成安装、配置并启动服务，随后即可生成您的首个访问密钥。",
   "install_caption_install": "在 Linux 上安装（x64 或 ARM64）",
   "install_caption_key": "生成访问密钥",
-  "install_guide": "Linux 与 Docker 完整安装指南"
+  "install_guide": "Linux、Docker 与 Windows 完整安装指南"
 }

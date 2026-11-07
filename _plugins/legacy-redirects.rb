@@ -22,6 +22,9 @@ module VhLegacyRedirects
     "/blog/" => "/guides/",
     "/blog/welcome-to-the-vpnhood-blog/" => "/guides/",
     "/blog/what-is-split-tunneling/" => "/guides/what-is-split-tunneling/",
+    # The install page became a choice of three systems, each with a page under it. Its
+    # own address stays, as the choice; the Docker page's moved under it.
+    "/vpnhood-server/docs/docker/" => "/vpnhood-server/docs/install/docker/",
     # Legal documents moved to /legal/<scope>/<document>/ (.docs/legal-pages.md). The old
     # addresses are printed in installed apps, store listings and emails: never remove these.
     # /terms-of-use/ was every product's terms page before the per-product split, so it goes

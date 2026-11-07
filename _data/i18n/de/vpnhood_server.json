@@ -50,5 +50,5 @@
   "install_desc": "Fügen Sie eine einzige Zeile auf einem frischen Linux-System ein. Sie installiert den Dienst, richtet ihn ein und startet ihn. Fordern Sie danach Ihren ersten Zugangsschlüssel an.",
   "install_caption_install": "Auf Linux installieren (x64 oder ARM64)",
   "install_caption_key": "Zugangsschlüssel erstellen",
-  "install_guide": "Vollständige Installationsanleitung für Linux und Docker"
+  "install_guide": "Vollständige Installationsanleitung für Linux, Docker und Windows"
 }
