@@ -118,10 +118,10 @@ extra_css:
                         </div>
 
                         <div class="section-space pt-0">
+                          {%- assign vh_ti = site.data.i18n[vh_lang].features_index %}
                           <div class="section-start-text" data-aos="fade-up">
-                            <h2 class="section-title vh-txt-grad-purple-400 mb-0">{{ t.more_title }}</h2>
+                            <h2 class="section-title vh-txt-grad-purple-400 mb-0">{{ vh_ti.more_title }}</h2>
                           </div>
-                          {%- assign vh_ti = site.data.i18n[vh_lang].features_index -%}
                           {%- assign vh_td = site.data.i18n[vh_lang].self_hosted_vpn_docs_vpn_detection -%}
                           {%- assign vh_tb = site.data.i18n[vh_lang].vpnhood_server_docs_ip_blocking %}
                           <ul class="row list-unstyled row-gap-4 mb-0">

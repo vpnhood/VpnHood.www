@@ -34,7 +34,6 @@
   "step3_title": "Vérifiez qu'il est activé",
   "step3_desc": "De retour sur l'écran d'accueil, Furtif s'affiche à côté de Protocole.",
   "steps_shot_alt": "L'écran d'accueil de l'application VpnHood!, avec Furtif à côté de Protocole",
-  "more_title": "Pour aller plus loin",
   "more_detect_desc": "Ce qui trahit un VPN, ce que le mode furtif y change et ce qu'il ne peut pas cacher.",
   "more_ip_desc": "Pour votre propre serveur : que faire quand un réseau bloque son adresse."
 }
