@@ -40,6 +40,22 @@ sources, and dispatches a `vhThemeChange` event. Preview a mode with
 **`?vh_theme=default|light|dark`** (does not overwrite the stored choice) — same idea as
 `?vh_lang=fa` and the China bar's `?geo=CN`.
 
+## The fade between themes
+
+A page that changes theme fades into the next one over 0.6s instead of switching at once. In
+practice that means entering or leaving the docs on a light system. `@view-transition` in
+`_sass/theme/_default.scss` turns on the browser's cross-fade, unless the visitor asks for reduced
+motion, and `theme.js` cancels it on `pageswap` when the next page has the same theme. It works
+that out from the next page's URL, so that test must match the rule at the top of `header.html`.
+
+**Cancel on `pageswap`, never on the new page.** `pageswap` fires before the browser snapshots the
+page being left. Cancelling on `pagereveal` instead still paid for the snapshot on every click:
+first paint came about 85ms later on a CPU slowed four times. Cancelled on `pageswap`, an ordinary
+click shows no measurable cost, and only a click that really fades pays, about 90ms.
+
+A browser without the feature switches at once. On a slow connection the fade lands on the
+preloader, not the page.
+
 ## Menu — `_includes/theme-toggle.html`
 
 A round button with a dropdown, rendered twice, exactly like the language selector:

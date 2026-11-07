@@ -508,6 +508,17 @@ button.vh-mega-toggle{
 [data-vh-theme-mode="dark"] .vh-theme-toggle .vh-theme-icon-default{
     display: none;
 }
+// Entering the docs on a light system changes the theme, so the page fades instead of
+// switching at once. theme.js cancels this between pages of one theme.
+@media (prefers-reduced-motion: no-preference){
+    @view-transition{
+        navigation: auto;
+    }
+}
+::view-transition-old(root),
+::view-transition-new(root){
+    animation-duration: 0.6s;
+}
 // The off-canvas gets the same dropdown as the header; only the separator above it
 // (the nav rows it follows already carry hairlines) is mobile-specific.
 .vh-lang-mobile{

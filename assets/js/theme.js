@@ -10,6 +10,7 @@
 //   the choice in localStorage("vh_theme"); Default is the absence of a stored value;
 // - follows a live change of the system setting while in Default;
 // - reads the choice again on a page restored by Back or Forward, which runs no script;
+// - limits the fade between pages to a change of theme;
 // - swaps <meta name="theme-color"> so the mobile browser chrome matches;
 // - swaps decorative images that ship a light-theme counterpart via data-vh-light-src
 //   (the dark original stays in `src`, so no-JS and dark visitors fetch only that one);
@@ -35,10 +36,13 @@
   // The bootstrap has already worked out the mode, a ?vh_theme= preview included.
   var mode = root.getAttribute("data-vh-theme-mode") || DEFAULT;
 
-  function resolve() {
+  function themeFor(followsSystem) {
     if (mode !== DEFAULT) return mode;
-    var followsSystem = root.getAttribute("data-vh-default-theme") === "system";
     return followsSystem && systemLight && systemLight.matches ? LIGHT : DARK;
+  }
+
+  function resolve() {
+    return themeFor(root.getAttribute("data-vh-default-theme") === "system");
   }
 
   function stored() {
@@ -118,6 +122,17 @@
     if (!ev.persisted || /[?&]vh_theme=/.test(window.location.search)) return;
     mode = stored();
     apply();
+  });
+
+  // The fade between pages (@view-transition in _default.scss) is only for a change of theme.
+  // It is cancelled here, on the page being left, because pageswap fires before the browser
+  // snapshots that page: cancelling on the new page would leave every click paying for the
+  // snapshot. The URL test must match the rule at the top of header.html.
+  window.addEventListener("pageswap", function (ev) {
+    if (!ev.viewTransition) return;
+    var entry = ev.activation && ev.activation.entry;
+    var next = entry && entry.url ? themeFor(/\/(docs|search)\//.test(new URL(entry.url).pathname)) : null;
+    if (next === null || next === resolve()) ev.viewTransition.skipTransition();
   });
 
   // Sync the rest of the page with what the pre-paint bootstrap decided. Not stored: a
