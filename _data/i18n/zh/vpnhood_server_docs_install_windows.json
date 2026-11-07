@@ -31,7 +31,7 @@
   "updates_keep": "建议尽量保持自动更新。部分版本会修复安全问题。更新后的应用仍可连接旧版服务器，但连接 v9.0.859 之前的服务器时无法使用 UDP，而且应用对早于 VpnHood 9.1 的服务器的支持仅持续到 2027 年 4 月。",
   "uninstall_title": "卸载",
   "uninstall_run": "如需移除服务器，请在 Windows 设置的“已安装的应用”中卸载，或运行卸载程序。它会停止服务器并删除相关任务与文件，但会在 <code>[server_storage_windows]</code> 中保留配置、访问密钥和证书，方便日后重新安装。",
-  "uninstall_caption_purge": "同时彻底删除配置与密钥：持有旧密钥的设备将无法再连接，即使重新安装也无法恢复",
+  "uninstall_caption_purge": "如需同时删除配置与密钥，请改为运行此命令：持有旧密钥的设备将无法再连接，即使重新安装也无法恢复",
   "uninstall_caption_firewall": "同时删除防火墙规则",
   "next_title": "后续步骤",
   "next_manager": "通过 VpnHood! MANAGER 网页控制面板管理多台服务器与密钥",

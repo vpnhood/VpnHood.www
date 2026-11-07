@@ -9,9 +9,11 @@ extra_css:
 {% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
 {%- comment -%}
   The owner asked for this page on 2026-11-05, in place of the wiki's, which the docs were
-  leaving behind. Every command here ran in Windows Sandbox (Windows 11, PowerShell 5.1)
-  against VpnHood! SERVER v9.1.866, whose install script is pub/lib/vh-installer/win/ in the
-  VpnHood repo. A client edition of Windows runs no script by default, so vhserver.ps1 goes
+  leaving behind. Every command here ran in Windows Sandbox (Windows 11, PowerShell 5.1) and
+  on a clean Windows Server 2025 VM, against VpnHood! SERVER v9.1.866, whose install script is
+  pub/lib/vh-installer/win/ in the VpnHood repo. On the VM a Linux client connected through the
+  real adapter with no Hyper-V role, and could not connect until the firewall rule was added;
+  the uninstaller deletes itself, so -purge goes in its place, not after it. A client edition of Windows runs no script by default, so vhserver.ps1 goes
   through -ExecutionPolicy Bypass: the wiki's ./vhserver.ps1 gen fails there. The installer does
   not touch Windows Firewall, and it says so, so the rule is a step here. The server's task
   repeats every minute, so stopping it disables the task first, as the installer does.

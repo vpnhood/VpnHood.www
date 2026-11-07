@@ -31,7 +31,7 @@
   "updates_keep": "Lassen Sie Updates möglichst aktiviert. Einige Versionen beheben Sicherheitslücken. Eine aktualisierte App verbindet sich weiterhin mit einem älteren Server, erhält aber von einem Server vor v9.0.859 kein UDP, und Apps unterstützen Server, die älter als VpnHood 9.1 sind, nur bis April 2027.",
   "uninstall_title": "Deinstallieren",
   "uninstall_run": "Um den Server zu entfernen, deinstallieren Sie ihn unter „Installierte Apps“ in den Windows-Einstellungen oder führen Sie sein Deinstallationsprogramm aus. Es stoppt den Server und entfernt seine Aufgaben und Dateien, behält aber seine Einstellungen, Zugangsschlüssel und Zertifikate für eine spätere Installation in <code>[server_storage_windows]</code>.",
-  "uninstall_caption_purge": "Einstellungen und Schlüssel unwiderruflich löschen: Bisherige Geräte können sich danach auch bei einer Neuinstallation nicht mehr verbinden.",
+  "uninstall_caption_purge": "Stattdessen dies ausführen, um auch Einstellungen und Schlüssel zu löschen: Bisherige Geräte können sich danach auch bei einer Neuinstallation nicht mehr verbinden.",
   "uninstall_caption_firewall": "Auch die Firewall-Regel entfernen",
   "next_title": "Nächste Schritte",
   "next_manager": "Mehrere Server und Schlüssel bequem über das Web-Panel mit VpnHood! MANAGER verwalten",

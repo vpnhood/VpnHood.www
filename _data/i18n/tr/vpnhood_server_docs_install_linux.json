@@ -45,7 +45,7 @@
   "updates_keep": "Mümkünse güncellemeleri açık tutun. Bazı sürümler güvenlik sorunlarını çözer. Güncellenen bir uygulama eski bir sunucuya yine bağlanır, ancak v9.0.859'dan önceki bir sunucudan UDP alamaz; uygulamalar VpnHood 9.1'den eski sunucuları yalnızca Nisan 2027'ye kadar destekler.",
   "uninstall_title": "Kaldır",
   "uninstall_run": "Sunucuyu kaldırmak için kaldırma aracını çalıştırın. Bu işlem sunucuyu durdurur, servislerini ve dosyalarını siler; ancak daha sonraki bir kurulum için ayarları, erişim anahtarlarını ve sertifikaları <code>[server_storage]</code> içinde saklar.",
-  "uninstall_caption_purge": "Ayarları ve anahtarları da silin: Bu anahtarlara sahip cihazlar, yeni bir kurulum yapılsa dahi artık bağlanamaz",
+  "uninstall_caption_purge": "Ayarları ve anahtarları da silmek için bunun yerine şunu çalıştırın: Bu anahtarlara sahip cihazlar, yeni bir kurulum yapılsa dahi artık bağlanamaz",
   "next_title": "Sonraki adımlar",
   "next_manager": "VpnHood! MANAGER ile bir web panelinden birden çok sunucuyu ve anahtarı yönetin",
   "next_addresses": "Sunucunun dinlediği ve anahtarlarına eklediği IP adreslerini belirleyin",

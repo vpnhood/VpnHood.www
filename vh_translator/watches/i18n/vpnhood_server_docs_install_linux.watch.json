@@ -47,7 +47,7 @@
     "updates_keep": "Keep updates on if you can. Some releases fix security issues. An updated app still connects to an older server, but gets no UDP from one before v9.0.859, and apps support servers older than VpnHood 9.1 only until April 2027.",
     "uninstall_title": "Uninstall",
     "uninstall_run": "To remove the server, run its uninstaller. It stops the server and removes its services and its files, but keeps its settings, access keys and certificates in <code>[server_storage]</code> for a later install.",
-    "uninstall_caption_purge": "Delete its settings and keys too: devices that hold its keys can no longer connect, even to a new install",
+    "uninstall_caption_purge": "Run this instead to delete its settings and keys too: devices that hold its keys can no longer connect, even to a new install",
     "next_title": "Next steps",
     "next_manager": "Manage many servers and keys from a web panel with VpnHood! MANAGER",
     "next_addresses": "Set the IP addresses the server listens on and puts in its keys",
