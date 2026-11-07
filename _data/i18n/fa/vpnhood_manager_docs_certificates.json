@@ -18,7 +18,7 @@
   "domain_autosign": "بخش <b>[manager_signing]</b> را ویرایش کرده و <b>[manager_autosign]</b> را انتخاب کنید. MANAGER درخواست گواهی را به Let's Encrypt ارسال می‌کند و این سرویس دامنه را از طریق پورت TCP شماره <code>[port_http]</code> سرور شما بررسی می‌کند.",
   "domain_signed": "صبر کنید تا <b>[manager_signature]</b> به <b>[manager_ca_signed]</b> تغییر کند. پس از آن، MANAGER گواهی را قبل از انقضا به‌طور خودکار تمدید می‌کند.",
   "domain_token": "بخش <b>[manager_visibility]</b> را ویرایش کنید و <b>[manager_public_in_token]</b> را انتخاب کنید. از این پس همه کلیدهای فارم این دامنه را در خود دارند و گواهی قبلی فارم به <b>[manager_public]</b> تغییر می‌کند.",
-  "shot_domain_alt": "یک گواهی برای server1.example.com در VpnHood! MANAGER طبق این مراحل: Signing AutoSign (۱)، Signature CA Signed (۲) و Visibility PublicInToken (۳)",
+  "shot_domain_alt": "یک گواهی برای server1.example.com در VpnHood! MANAGER طبق این مراحل: Signing AutoSign (۱)، Signature CA Signed (۲) و Visibility Public in keys (۳)",
   "shot_domain_caption": "گواهی دامنه پس از تکمیل: امضاشده توسط Let's Encrypt و درج‌شده در همه کلیدهای فارم.",
   "domain_keys": "کلیدهایی که از این پس از MANAGER کپی می‌کنید دامنه را در خود دارند. اپلیکیشن‌هایی که کلید قدیمی‌تر دارند هنگام اتصال کلید جدید را دریافت می‌کنند، زیرا <b>[manager_push_token]</b> به‌طور پیش‌فرض فعال است. گواهی قبلی فارم را تا آن زمان نگه دارید؛ کلیدهای قدیمی‌تر فقط تا وقتی که این گواهی وجود دارد کار می‌کنند.",
   "domain_failed": "اگر بررسی با خطا مواجه شد، رکورد DNS را اصلاح کنید یا پورت را باز کنید: بخش <a href=\"#autosign\">AutoSign</a> در زیر، نحوه تلاش مجدد MANAGER را توضیح می‌دهد.",

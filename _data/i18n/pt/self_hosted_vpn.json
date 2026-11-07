@@ -50,10 +50,10 @@
   "step2_title": "Adicione seu servidor",
   "step2_desc": "Siga os passos de instalação para colocar o VpnHood! SERVER na sua máquina.",
   "step3_title": "Crie uma chave de acesso",
-  "step3_desc": "Gere uma chave na página Access Token com os limites que você escolher.",
+  "step3_desc": "Gere uma chave na página Access Keys com os limites que você escolher.",
   "step4_title": "Compartilhe a chave",
   "step4_desc": "Qualquer pessoa com o VpnHood! CLIENT pode colá-la e conectar-se instantaneamente.",
-  "manual_note": "Prefere não usar o painel do VpnHood! MANAGER? O VpnHood! SERVER também funciona como servidor independente: <a href=\"/vpnhood-server/docs/install/#standalone\">instale no Linux ou via Docker</a>.",
+  "manual_note": "Prefere não usar o painel do VpnHood! MANAGER? O VpnHood! SERVER também funciona como servidor independente: <a href=\"/vpnhood-server/docs/install/\">instale no Linux ou via Docker</a>.",
   "new_tab": "(abre em uma nova aba)",
   "cta": "Sua VPN, seu servidor, suas regras — e a primeira chave de acesso está a minutos de distância.",
   "cta_btn": "Abrir o VpnHood! MANAGER"

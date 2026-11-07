@@ -20,7 +20,7 @@
   "ddns_name": "Consigue un nombre en un servicio de DNS dinámico, y haz que tu router, o un pequeño programa en la máquina, lo mantenga actualizado. Elige un nombre que no incluya la palabra «VPN»: las aplicaciones lo transmiten sin cifrar al inicio de cada conexión, donde la red puede leerlo.",
   "ddns_port": "Reenvía también el puerto TCP <code>[port_http]</code> a la máquina mientras uses el nombre: el certificado se verifica a través de él, y se renueva a través de él cada pocos meses.",
   "ddns_cert": "Da a la granja un certificado para el nombre, como muestra <a href=\"/vpnhood-manager/docs/certificates/#domain\">Usa tu propio dominio</a>: pon <b>[manager_signing]</b> en <b>[manager_autosign]</b> (1), espera a que <b>[manager_signature]</b> muestre <b>[manager_ca_signed]</b> (2), y luego pon <b>[manager_visibility]</b> en <b>[manager_public_in_token]</b> (3).",
-  "shot_cert_alt": "Certificado para server1.example.com en VpnHood! MANAGER configurado con estos pasos: Signing AutoSign (1), Signature CA Signed (2) y Visibility PublicInToken (3)",
+  "shot_cert_alt": "Certificado para server1.example.com en VpnHood! MANAGER configurado con estos pasos: Signing AutoSign (1), Signature CA Signed (2) y Visibility Public in keys (3)",
   "shot_cert_caption": "El certificado del nombre ya completado: firmado por Let's Encrypt e incluido en cada clave de la granja.",
   "ddns_trusted": "La firma es lo que hace que esto funcione: las aplicaciones solo consultan un nombre si su certificado es <b>[manager_ca_signed]</b>. Con un certificado autofirmado, solo prueban las direcciones de la clave.",
   "urls_title": "URLs de token de la granja",

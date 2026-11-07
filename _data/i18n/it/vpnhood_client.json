@@ -28,7 +28,7 @@
   "engine_kill_desc": "Blocca immediatamente il traffico se la VPN si disconnette, fino al ripristino del tunnel.",
   "engine_all": "Tutte le funzionalità",
   "server_title": "Si connette al tuo server, non al nostro",
-  "server_desc": "CLIENT non ha server propri. Si connette a un server VpnHood! gestito da te o da una persona di fiducia, tramite una chiave di accesso condivisa. Se nessuno ne ha ancora configurato uno, inizia da qui.",
+  "server_desc": "CLIENT non ha server propri. Si connette a un server VpnHood! gestito da te o da una persona di fiducia, tramite una chiave di accesso, chiamata anche chiave server, condivisa con te. Se nessuno ne ha ancora configurato uno, inizia da qui.",
   "server_start_title": "VPN self-hosted",
   "server_start_desc": "Come funziona la gestione del proprio server e quanto costa.",
   "server_server_title": "VpnHood! SERVER",

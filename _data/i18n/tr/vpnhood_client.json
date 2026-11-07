@@ -28,7 +28,7 @@
   "engine_kill_desc": "Bağlantı koptuğu anda, tünel yeniden kurulana kadar tüm trafiği engeller.",
   "engine_all": "Tüm özellikler",
   "server_title": "Bizim sunucumuza değil, kendi sunucunuza bağlanır",
-  "server_desc": "CLIENT'ın kendine ait sunucuları yoktur. Sizin veya güvendiğiniz birinin kurduğu VpnHood! SERVER'a, sağlanan bir erişim anahtarıyla bağlanır. Henüz bir sunucunuz yoksa buradan başlayın.",
+  "server_desc": "CLIENT'ın kendine ait sunucuları yoktur. Sizin veya güvendiğiniz birinin kurduğu VpnHood! SERVER'a, sağlanan bir erişim anahtarıyla (sunucu anahtarı olarak da bilinir) bağlanır. Henüz bir sunucunuz yoksa buradan başlayın.",
   "server_start_title": "Kendi Sunucunda VPN",
   "server_start_desc": "Kendi sunucunuzu çalıştırmanın gereksinimleri ve maliyetleri.",
   "server_server_title": "VpnHood! SERVER",

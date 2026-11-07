@@ -4,7 +4,7 @@
   "page_title": "VpnHood! CLIENT İndir",
   "page_desc": "Tamamen açık kaynaklı ve .NET platformuyla geliştirilen ilk VPN olan <b>VpnHood! ENGINE</b> gücküyle; hızlı, güvenli ve kesintisiz VPN deneyimi.",
   "notice_title": "Yerleşik sunucu yoktur.",
-  "notice_desc": "VpnHood! CLIENT kendi bünyesinde hiçbir VPN sunucusu barındırmaz, bu nedenle tek başına bağlanamaz. Sunucuyu çalıştıran kimseden bir <b>erişim anahtarı</b> almanız gerekir; bunu uygulamaya bir kez yapıştırarak bağlanabilirsiniz.",
+  "notice_desc": "VpnHood! CLIENT kendi bünyesinde hiçbir VPN sunucusu barındırmaz, bu nedenle tek başına bağlanamaz. Sunucuyu çalıştıran kimseden bir <b>erişim anahtarı</b> (sunucu anahtarı olarak da bilinir) almanız gerekir; bunu uygulamaya bir kez yapıştırarak bağlanabilirsiniz.",
   "android_title": "Android",
   "ios_title": "iOS",
   "windows_title": "Windows",

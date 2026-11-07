@@ -30,7 +30,7 @@
     "engine_kill_desc": "Blocks traffic the moment the tunnel drops, until it is back.",
     "engine_all": "All features",
     "server_title": "It connects to your server, not ours",
-    "server_desc": "CLIENT has no servers of its own. It connects to a VpnHood! server that you, or someone you trust, already runs, using an access key they give you. If nobody has set one up yet, start here.",
+    "server_desc": "CLIENT has no servers of its own. It connects to a VpnHood! server that you, or someone you trust, already runs, using an access key, also called a server key, that they give you. If nobody has set one up yet, start here.",
     "server_start_title": "Self-hosted VPN",
     "server_start_desc": "What running your own server involves, and what it costs.",
     "server_server_title": "VpnHood! SERVER",

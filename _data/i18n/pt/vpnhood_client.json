@@ -28,7 +28,7 @@
   "engine_kill_desc": "Bloqueia o tráfego instantaneamente se o túnel cair até que a conexão seja restabelecida.",
   "engine_all": "Todos os recursos",
   "server_title": "Conecta-se ao seu servidor, não ao nosso",
-  "server_desc": "O CLIENT não possui servidores próprios. Ele se conecta a um VpnHood! SERVER que você, ou alguém de sua confiança, já opera, usando uma chave de acesso fornecida. Se ninguém configurou um ainda, comece por aqui.",
+  "server_desc": "O CLIENT não possui servidores próprios. Ele se conecta a um VpnHood! SERVER que você, ou alguém de sua confiança, já opera, usando uma chave de acesso, também chamada de chave do servidor, fornecida a você. Se ninguém configurou um ainda, comece por aqui.",
   "server_start_title": "VPN auto-hospedada",
   "server_start_desc": "O que envolve gerenciar seu próprio servidor e quanto isso custa.",
   "server_server_title": "VpnHood! SERVER",

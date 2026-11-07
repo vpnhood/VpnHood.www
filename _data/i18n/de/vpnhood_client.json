@@ -28,7 +28,7 @@
   "engine_kill_desc": "Blockiert den gesamten Datenverkehr sofort, falls die Verbindung abbricht – bis der Tunnel wieder steht.",
   "engine_all": "Alle Funktionen",
   "server_title": "Verbindet sich mit Ihrem Server – nicht mit unserem",
-  "server_desc": "CLIENT hat keine eigenen Server. Die App verbindet sich über einen Zugangsschlüssel mit einem VpnHood! SERVER, den Sie oder jemand Ihres Vertrauens betreibt. Falls noch kein Server eingerichtet ist, starten Sie hier.",
+  "server_desc": "CLIENT hat keine eigenen Server. Die App verbindet sich über einen Zugangsschlüssel, auch Server-Schlüssel genannt, mit einem VpnHood! SERVER, den Sie oder jemand Ihres Vertrauens betreibt. Falls noch kein Server eingerichtet ist, starten Sie hier.",
   "server_start_title": "Selbstgehostetes VPN",
   "server_start_desc": "Was ein eigener Server erfordert und was er kostet.",
   "server_server_title": "VpnHood! SERVER",

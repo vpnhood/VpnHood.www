@@ -29,6 +29,7 @@ reverse proxy = پروکسی معکوس (never ریورس پروکسی, never re
 proxy = پروکسی (never پراکسی)
 farm / server farm = فارم / فارم سرور (never مزرعه, never farm)
 access key = کلید دسترسی · certificate = گواهی · container = کانتینر · firewall = فایروال
+premium code = کد ویژه (plural کدهای ویژه; never کد دسترسی)
 standalone = مستقل · managed = مدیریت‌شده · web panel = پنل وب
 server profile = پروفایل سرور (plural پروفایل‌های سرور)
 public IP address = IP عمومی (the technical term, against آدرس خصوصی; public is not ثابت)

@@ -232,10 +232,15 @@ def install() -> None:
     a.render("install")
 
 
+def brand_path(name: str) -> str:
+    """A system's mark, from the same Simple Icons file the requirements pages show, on a 24 grid."""
+    icon = (IMAGES.parent.parent / "_includes" / "icons" / "brands" / f"{name}.svg").read_text(encoding="utf-8")
+    return re.search(r'<path d="([^"]+)"', icon).group(1)
+
+
 def linux_mark(a: Art, x, y, size, glow=True) -> None:
-    """The Linux mark, from the same Simple Icons file the requirements pages show, in the rim's gradient."""
-    icon = (IMAGES.parent.parent / "_includes" / "icons" / "brands" / "linux.svg").read_text(encoding="utf-8")
-    path = re.search(r'<path d="([^"]+)"', icon).group(1)
+    """The Linux mark in the rim's gradient."""
+    path = brand_path("linux")
     place = f'transform="translate({x} {y}) scale({size / 24:g})"'
     if glow:
         a.add(f'<path d="{path}" {place} fill="{TEAL}" opacity=".5" filter="{a.url("Soft")}"/>')
@@ -277,26 +282,19 @@ def linux_requirements() -> None:
     a.render("linux-requirements", product="vpnhood-client")
 
 
-def docker() -> None:
-    """Docker: the server packed in a container, stacked with others on its host."""
-    a = Art("dhDocker")
-    a.ambient(cy=520)
-    boxes = ((180, 540, False), (520, 540, False), (350, 320, True))
-    for x, y, rim in boxes:
-        w, h = 300, 196
-        a.solid(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="26" {{fill}} {{stroke}}/>', rim=rim, width=10)
-        if not rim:
-            a.add(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="26" fill="none" stroke="{VIOLET}" stroke-opacity=".55" stroke-width="5"/>')
-        for n in range(5):
-            rx = x + 58 + n * 46
-            a.add(f'<path d="M {rx} {y + 40} V {y + h - 40}" stroke="{LILAC}" stroke-opacity="{.4 if rim else .25}" stroke-width="12" stroke-linecap="round"/>')
-        if rim:
-            a.led(x + w - 44, y + 44, r=14)
-    a.lane(150, 772, 700, 70)
-    for n in range(3):
-        a.add(f'<circle cx="{420 + n * 80}" cy="807" r="11" fill="{MINT if n == 2 else LILAC}" opacity="{.95 if n == 2 else .45}"/>')
-    a.ambient(cy=820, rx=330, ry=70, opacity=.5)
-    a.render("docker")
+def install_system(name: str, uid: str) -> None:
+    """One way to install: the system's mark, large, on the server it runs. The install page's cards show
+    these, and each system's page shows its own again beside its title."""
+    a = Art(uid)
+    a.ambient(cy=410)
+    place = f'transform="translate(250 90) scale({500 / 24:g})"'
+    path = brand_path(name)
+    # the blur outside the scale, or it grows with the mark past the edge of its filter's region
+    a.add(f'<g filter="{a.url("Soft")}" opacity=".5"><path d="{path}" {place} fill="{TEAL}"/></g>',
+          f'<path d="{path}" {place} fill="{a.url("Rim")}"/>')
+    a.server_unit(160, 650, 680, 150, rim=True, lit=True)
+    a.ambient(cy=880, rx=320, ry=60, opacity=.5)
+    a.render(f"install-{name}")
 
 
 def ip_blocking() -> None:
@@ -580,6 +578,27 @@ def farms() -> None:
         a.add(f'<path d="M 465 500 C 540 500 540 {y} 612 {y}" fill="none" stroke="{MINT}" stroke-width="10" stroke-dasharray="2 22" stroke-linecap="round" opacity=".9"/>')
     a.ambient(cy=870, rx=320, ry=60, opacity=.45)
     a.render("farms", product="vpnhood-manager")
+
+
+def farm_token() -> None:
+    """Farm token: a token that holds a farm's addresses, on its way into a key."""
+    a = Art("dhMgrFarmToken")
+    a.ambient(cy=470)
+    # the token: a disc, its addresses inside, one of them lit
+    a.solid('<circle cx="640" cy="400" r="245" {fill} {stroke}/>', width=10)
+    a.add(f'<circle cx="640" cy="400" r="196" fill="none" stroke="{LILAC}" stroke-opacity=".3" stroke-width="5" stroke-dasharray="4 16" stroke-linecap="round"/>')
+    a.bar(520, 318, 240, 26, fill=LILAC, opacity=.35)
+    a.bar(520, 387, 240, 26, fill=MINT, glow=True)
+    a.bar(520, 456, 170, 26, fill=LILAC, opacity=.35)
+    # the key that carries it, as on the farms page, its bow on the left
+    key = ('<path d="M 258.9 687.5 H 432.5 A 12.5 12.5 0 0 1 432.5 712.5 H 430 V 737.5 H 410 V 712.5 H 395 V 747.5 H 375 V 712.5 '
+           'H 258.9 A 70 70 0 1 1 258.9 687.5 Z" {fill} {stroke}/>')
+    a.solid(key, width=9)
+    a.add(f'<circle cx="190" cy="700" r="24" fill="{INDIGO_DEEP}" stroke="{VIOLET}" stroke-opacity=".6" stroke-width="5"/>')
+    a.led(190, 700, r=8)
+    a.add(f'<path d="M 470 690 C 520 650 540 640 556 622" fill="none" stroke="{MINT}" stroke-width="10" stroke-dasharray="4 22" stroke-linecap="round"/>')
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("farm-token", product="vpnhood-manager")
 
 
 def roles() -> None:
@@ -895,7 +914,9 @@ if __name__ == "__main__":
     install()
     linux()
     linux_requirements()
-    docker()
+    install_system("linux", "dhInstallLinux")
+    install_system("docker", "dhInstallDocker")
+    install_system("windows", "dhInstallWindows")
     ip_blocking()
     ip_addresses()
     server_certificates()
@@ -909,6 +930,7 @@ if __name__ == "__main__":
     certificates()
     server_profiles()
     farms()
+    farm_token()
     roles()
     troubleshooting()
     manager_promo()

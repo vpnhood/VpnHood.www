@@ -20,7 +20,7 @@
   "ddns_name": "Получите имя в службе динамического DNS и настройте его обновление на роутере или с помощью небольшой программы на машине. Выберите имя без слова «VPN»: приложения передают его в открытом виде в начале каждого подключения, и его видно в сети.",
   "ddns_port": "Пробросьте на машину и TCP-порт <code>[port_http]</code> на всё время использования имени: через него проверяется сертификат и каждые несколько месяцев продлевается.",
   "ddns_cert": "Добавьте ферме сертификат для этого имени, как показано в разделе <a href=\"/vpnhood-manager/docs/certificates/#domain\">Использование собственного домена</a>: установите для <b>[manager_signing]</b> значение <b>[manager_autosign]</b> (1), дождитесь, пока <b>[manager_signature]</b> покажет <b>[manager_ca_signed]</b> (2), затем установите для <b>[manager_visibility]</b> значение <b>[manager_public_in_token]</b> (3).",
-  "shot_cert_alt": "Сертификат для server1.example.com в VpnHood! MANAGER, настроенный по инструкции: Signing AutoSign (1), Signature CA Signed (2) и Visibility PublicInToken (3)",
+  "shot_cert_alt": "Сертификат для server1.example.com в VpnHood! MANAGER, настроенный по инструкции: Signing AutoSign (1), Signature CA Signed (2) и Visibility Public in keys (3)",
   "shot_cert_caption": "Готовый сертификат имени: подписан Let's Encrypt и включён в каждый ключ фермы.",
   "ddns_trusted": "Всё дело в подписи: приложения определяют адрес имени, только если его сертификат имеет статус <b>[manager_ca_signed]</b>. С самоподписанным сертификатом они пробуют только адреса из ключа.",
   "urls_title": "URL токена фермы",

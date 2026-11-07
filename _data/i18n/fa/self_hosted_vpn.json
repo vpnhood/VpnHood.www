@@ -50,10 +50,10 @@
   "step2_title": "سرور خود را اضافه کنید",
   "step2_desc": "مراحل نصب را دنبال کنید تا VpnHood! SERVER روی سیستم شما راه‌اندازی شود.",
   "step3_title": "یک کلید دسترسی بسازید",
-  "step3_desc": "از صفحه Access Token و با محدودیت‌های دلخواه خود، یک کلید صادر کنید.",
+  "step3_desc": "از صفحه Access Keys و با محدودیت‌های دلخواه خود، یک کلید صادر کنید.",
   "step4_title": "کلید را به اشتراک بگذارید",
   "step4_desc": "هر کسی که VpnHood! CLIENT را دارد، آن را وارد می‌کند و متصل می‌شود.",
-  "manual_note": "ترجیح می‌دهید از پنل VpnHood! MANAGER استفاده نکنید؟ VpnHood! SERVER می‌تواند به‌صورت سرور مستقل هم اجرا شود: <a href=\"/vpnhood-server/docs/install/#standalone\">نصب روی Linux یا Docker</a>.",
+  "manual_note": "ترجیح می‌دهید از پنل VpnHood! MANAGER استفاده نکنید؟ VpnHood! SERVER می‌تواند به‌صورت سرور مستقل هم اجرا شود: <a href=\"/vpnhood-server/docs/install/\">نصب روی Linux یا Docker</a>.",
   "new_tab": "(در تب جدید باز می‌شود)",
   "cta": "VPN شما، سرور شما، قوانین شما — و اولین کلید دسترسی تنها چند دقیقه با شما فاصله دارد.",
   "cta_btn": "باز کردن VpnHood! MANAGER"

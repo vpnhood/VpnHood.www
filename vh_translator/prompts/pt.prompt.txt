@@ -27,6 +27,7 @@ TERMS — the docs' technical words: one rendering per concept, in every string.
 reverse proxy = proxy reverso
 farm / server farm = o farm / o farm de servidores (masculine; never cluster, never fazenda)
 access key = chave de acesso · certificate = certificado · container = contêiner · firewall = firewall
+premium code = código Premium (never código de acesso)
 standalone = independente (never autônomo, never avulso) · managed = gerenciado · web panel = painel web
 server profile = perfil de servidor (plural perfis de servidor)
 public IP address = endereço IP público (public is not estático)

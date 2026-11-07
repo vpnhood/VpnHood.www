@@ -20,7 +20,7 @@
   "ddns_name": "Obtenha um nome em um serviço de DNS dinâmico, e faça seu roteador, ou um pequeno programa na máquina, mantê-lo atualizado. Escolha um nome sem a palavra VPN: os aplicativos o transmitem em texto simples no início de cada conexão, onde a rede pode lê-lo.",
   "ddns_port": "Encaminhe também a porta TCP <code>[port_http]</code> para a máquina, enquanto você usar o nome: o certificado é validado por ela e renovado por ela a cada poucos meses.",
   "ddns_cert": "Dê ao farm um certificado para o nome, como mostra <a href=\"/vpnhood-manager/docs/certificates/#domain\">Use seu próprio domínio</a>: defina <b>[manager_signing]</b> como <b>[manager_autosign]</b> (1), espere até <b>[manager_signature]</b> exibir <b>[manager_ca_signed]</b> (2) e depois defina <b>[manager_visibility]</b> como <b>[manager_public_in_token]</b> (3).",
-  "shot_cert_alt": "Certificado para server1.example.com no VpnHood! MANAGER configurado conforme o passo a passo: Signing AutoSign (1), Signature CA Signed (2) e Visibility PublicInToken (3)",
+  "shot_cert_alt": "Certificado para server1.example.com no VpnHood! MANAGER configurado conforme o passo a passo: Signing AutoSign (1), Signature CA Signed (2) e Visibility Public in keys (3)",
   "shot_cert_caption": "O certificado do nome pronto: assinado pela Let's Encrypt e incluído em todas as chaves do farm.",
   "ddns_trusted": "É a assinatura que faz isso funcionar: os aplicativos só consultam um nome quando o certificado dele é <b>[manager_ca_signed]</b>. Com um certificado autoassinado, eles tentam apenas os endereços da chave.",
   "urls_title": "URLs de token do farm",

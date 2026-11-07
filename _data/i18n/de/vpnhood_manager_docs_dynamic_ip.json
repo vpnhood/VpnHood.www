@@ -20,7 +20,7 @@
   "ddns_name": "Holen Sie sich einen Namen bei einem DDNS-Dienst, und lassen Sie Ihren Router oder ein kleines Programm auf dem Rechner ihn aktuell halten. Wählen Sie einen Namen ohne den Begriff „VPN“: Apps übertragen ihn unverschlüsselt zu Beginn jeder Verbindung, sodass er im Netzwerk einsehbar ist.",
   "ddns_port": "Leiten Sie auch den TCP-Port <code>[port_http]</code> an den Rechner weiter, solange Sie den Namen nutzen: Das Zertifikat wird darüber geprüft und alle paar Monate erneuert.",
   "ddns_cert": "Geben Sie der Farm ein Zertifikat für den Namen, wie <a href=\"/vpnhood-manager/docs/certificates/#domain\">Eigene Domain verwenden</a> zeigt: Setzen Sie <b>[manager_signing]</b> auf <b>[manager_autosign]</b> (1), warten Sie, bis <b>[manager_signature]</b> <b>[manager_ca_signed]</b> anzeigt (2), und setzen Sie dann <b>[manager_visibility]</b> auf <b>[manager_public_in_token]</b> (3).",
-  "shot_cert_alt": "Ein Zertifikat für server1.example.com in VpnHood! MANAGER, eingerichtet nach dieser Anleitung: Signing AutoSign (1), Signature CA Signed (2) und Visibility PublicInToken (3)",
+  "shot_cert_alt": "Ein Zertifikat für server1.example.com in VpnHood! MANAGER, eingerichtet nach dieser Anleitung: Signing AutoSign (1), Signature CA Signed (2) und Visibility Public in keys (3)",
   "shot_cert_caption": "Das fertige Zertifikat des Namens: von Let's Encrypt signiert und in jedem Schlüssel der Farm hinterlegt.",
   "ddns_trusted": "Erst die Signatur macht das möglich: Apps lösen einen Namen nur auf, wenn sein Zertifikat <b>[manager_ca_signed]</b> ist. Mit einem selbstsignierten Zertifikat versuchen sie nur die Adressen im Schlüssel.",
   "urls_title": "Token-URLs der Farm",

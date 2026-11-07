@@ -27,6 +27,7 @@ TERMS — the docs' technical words: one rendering per concept, in every string.
 reverse proxy = ters proxy
 farm / server farm = çiftlik / sunucu çiftliği (never havuz / grup)
 access key = erişim anahtarı · certificate = sertifika · firewall = güvenlik duvarı
+premium code = premium kod (never erişim kodu)
 container = konteyner (never kapsayıcı)
 standalone = bağımsız · managed = yönetilen · web panel = web paneli
 server profile = sunucu profili (plural sunucu profilleri)

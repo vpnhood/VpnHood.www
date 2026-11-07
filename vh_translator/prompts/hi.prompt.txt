@@ -27,6 +27,7 @@ TERMS — the docs' technical words: one rendering per concept, in every string.
 reverse proxy = रिवर्स प्रॉक्सी · proxy = प्रॉक्सी
 farm / server farm = फ़ार्म / सर्वर फ़ार्म
 access key = एक्सेस की (never "access key", never ऐक्सेस, never कुंजी)
+premium code = प्रीमियम कोड (never एक्सेस कोड)
 certificate = सर्टिफ़िकेट (with the nukta; never सर्टिफिकेट, never प्रमाणपत्र) · trusted certificate = विश्वसनीय सर्टिफ़िकेट
 container = कंटेनर · firewall = फ़ायरवॉल
 standalone = स्टैंडअलोन · managed = मैनेज्ड (never प्रबंधित) · web panel = वेब पैनल

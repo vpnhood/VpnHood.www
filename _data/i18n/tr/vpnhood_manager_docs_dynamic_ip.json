@@ -20,7 +20,7 @@
   "ddns_name": "Bir dinamik DNS hizmetinden bir ad alın ve yönlendiricinizin veya makinedeki küçük bir programın onu güncel tutmasını sağlayın. Adında VPN geçmeyen bir ad seçin: uygulamalar bunu her bağlantının başında ağın okuyabileceği şekilde şifresiz iletir.",
   "ddns_port": "Adı kullandığınız sürece TCP <code>[port_http]</code> portunu da makineye yönlendirin: sertifika bu port üzerinden doğrulanır ve birkaç ayda bir yenilenir.",
   "ddns_cert": "<a href=\"/vpnhood-manager/docs/certificates/#domain\">Kendi alan adınızı kullanın</a> bölümünde gösterildiği gibi çiftliğe bu ad için bir sertifika verin: <b>[manager_signing]</b> değerini <b>[manager_autosign]</b> yapın (1), <b>[manager_signature]</b> <b>[manager_ca_signed]</b> gösterene kadar bekleyin (2), ardından <b>[manager_visibility]</b> değerini <b>[manager_public_in_token]</b> yapın (3).",
-  "shot_cert_alt": "VpnHood! MANAGER'da bu adımlarla yapılandırılmış server1.example.com sertifikası: Signing AutoSign (1), Signature CA Signed (2) ve Visibility PublicInToken (3)",
+  "shot_cert_alt": "VpnHood! MANAGER'da bu adımlarla yapılandırılmış server1.example.com sertifikası: Signing AutoSign (1), Signature CA Signed (2) ve Visibility Public in keys (3)",
   "shot_cert_caption": "Tamamlandığında adın sertifikası: Let's Encrypt tarafından imzalanmış ve çiftliğin tüm anahtarlarında yer alıyor.",
   "ddns_trusted": "Bunu mümkün kılan imzadır: uygulamalar bir adı yalnızca sertifikası <b>[manager_ca_signed]</b> olduğunda sorgular. Kendinden imzalı bir sertifikayla yalnızca anahtardaki adresleri dener.",
   "urls_title": "Çiftlik token URL'leri",

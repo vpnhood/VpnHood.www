@@ -1,0 +1,68 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_farm_token
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The owner asked for this page on 2026-11-06, after naming the button: what a farm token is and how
+  to use it. Read from the code: ServerToken and Token in VpnHood.Core.Common, FarmTokenBuilder and
+  SessionService.BuildResponseAccessKey in the access server, VpnProfileService.UpdateServerTokenByUrl
+  in the app. An access key is a Token, whose ServerToken is the farm token; a server token alone has
+  no TokenId and no key secret, so it connects nobody. The two diagrams are drawn twice by
+  tools/make-docs-diagrams.py; the hero by tools/make-docs-heroes.py. The screenshot is real app UI,
+  so it has no light variant: the local test farm's Farm Token dialog, 600px wide at 2x, by
+  .tmp/keyrename/shot_token.js. MANAGER's screen text is a placeholder from _data/code.yml.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-farm-token.svg" %}
+
+<h2 id="what">{{ t.what_title }}</h2>
+<p>{{ t.what_parts }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/farm-token-key.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/farm-token-key-tall.svg %}
+</figure>
+<p>{% include copy.html s=t.what_holds %}</p>
+<p>{% include copy.html s=t.what_not %}</p>
+
+<h2 id="build">{{ t.build_title }}</h2>
+<p>{{ t.build_desc }}</p>
+<p>{% include copy.html s=t.build_error %}</p>
+
+<h2 id="new-token">{{ t.new_title }}</h2>
+<p>{{ t.new_desc }}</p>
+<ul>
+  <li>{% include copy.html s=t.new_push %}</li>
+  <li>{% include copy.html s=t.new_urls %}</li>
+</ul>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/farm-token-new.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/farm-token-new-tall.svg %}
+</figure>
+
+<h2 id="where">{{ t.where_title }}</h2>
+<p>{% include copy.html s=t.where_desc %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/farm-token.webp" alt="{{ t.shot_alt }}" width="600" height="428" loading="lazy">
+  <figcaption>{% include copy.html s=t.shot_caption %}</figcaption>
+</figure>
+
+<h2 id="use">{{ t.use_title }}</h2>
+<p>{% include copy.html s=t.use_rarely %}</p>
+<p>{{ t.use_decide }}</p>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/farms/#token-urls">{{ t.next_urls }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

@@ -22,7 +22,7 @@
     "ddns_name": "Get a name from a dynamic DNS service, and have your router, or a small program on the machine, keep it up to date. Choose a name that does not say VPN: apps send it in clear at the start of every connection, where the network can read it.",
     "ddns_port": "Forward TCP port <code>[port_http]</code> to the machine too, for as long as you use the name: the certificate is checked through it, and renewed through it every few months.",
     "ddns_cert": "Give the farm a certificate for the name, as <a href=\"/vpnhood-manager/docs/certificates/#domain\">Use your own domain</a> shows: set <b>[manager_signing]</b> to <b>[manager_autosign]</b> (1), wait until <b>[manager_signature]</b> reads <b>[manager_ca_signed]</b> (2), then set <b>[manager_visibility]</b> to <b>[manager_public_in_token]</b> (3).",
-    "shot_cert_alt": "A certificate for server1.example.com in VpnHood! MANAGER, set up as these steps describe: Signing AutoSign (1), Signature CA Signed (2) and Visibility PublicInToken (3)",
+    "shot_cert_alt": "A certificate for server1.example.com in VpnHood! MANAGER, set up as these steps describe: Signing AutoSign (1), Signature CA Signed (2) and Visibility Public in keys (3)",
     "shot_cert_caption": "The name's certificate when it is done: signed by Let's Encrypt, and carried in every key of the farm.",
     "ddns_trusted": "The signature is what makes this work: apps look a name up only when its certificate is <b>[manager_ca_signed]</b>. With a self-signed certificate, they try only the addresses in the key.",
     "urls_title": "Farm token URLs",

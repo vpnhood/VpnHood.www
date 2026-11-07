@@ -20,7 +20,7 @@
   "ddns_name": "किसी डायनामिक DNS सेवा से एक नाम लें, और अपने राउटर या मशीन पर किसी छोटे प्रोग्राम से इसे अप-टू-डेट रखें। ऐसा नाम चुनें जिसमें VPN शब्द न हो: हर कनेक्शन की शुरुआत में ऐप्स इसे बिना एन्क्रिप्शन के भेजते हैं, जहाँ नेटवर्क इसे पढ़ सकता है।",
   "ddns_port": "जब तक आप यह नाम इस्तेमाल करते हैं, तब तक TCP पोर्ट <code>[port_http]</code> भी मशीन पर फ़ॉरवर्ड रखें: सर्टिफ़िकेट की जाँच इसी के ज़रिए होती है, और हर कुछ महीनों में इसी से इसका नवीनीकरण होता है।",
   "ddns_cert": "फ़ार्म को इस नाम का सर्टिफ़िकेट दें, जैसा कि <a href=\"/vpnhood-manager/docs/certificates/#domain\">अपने खुद के डोमेन का उपयोग करें</a> में दिखाया गया है: <b>[manager_signing]</b> को <b>[manager_autosign]</b> पर सेट करें (1), <b>[manager_signature]</b> में <b>[manager_ca_signed]</b> दिखने तक इंतज़ार करें (2), फिर <b>[manager_visibility]</b> को <b>[manager_public_in_token]</b> पर सेट करें (3)।",
-  "shot_cert_alt": "VpnHood! MANAGER में server1.example.com के लिए सर्टिफ़िकेट, जो इन चरणों के अनुसार सेट किया गया है: Signing AutoSign (1), Signature CA Signed (2) और Visibility PublicInToken (3)",
+  "shot_cert_alt": "VpnHood! MANAGER में server1.example.com के लिए सर्टिफ़िकेट, जो इन चरणों के अनुसार सेट किया गया है: Signing AutoSign (1), Signature CA Signed (2) और Visibility Public in keys (3)",
   "shot_cert_caption": "नाम का सर्टिफ़िकेट तैयार होने के बाद: Let's Encrypt द्वारा हस्ताक्षरित, और फ़ार्म की प्रत्येक की में शामिल।",
   "ddns_trusted": "यह सिग्नेचर की वजह से काम करता है: ऐप्स किसी नाम को तभी लुकअप करते हैं जब उसका सर्टिफ़िकेट <b>[manager_ca_signed]</b> हो। सेल्फ़-साइंड सर्टिफ़िकेट के साथ वे सिर्फ़ की में मौजूद पतों पर कोशिश करते हैं।",
   "urls_title": "फ़ार्म टोकन URL",

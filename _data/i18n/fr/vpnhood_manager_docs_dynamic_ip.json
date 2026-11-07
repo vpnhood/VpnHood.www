@@ -20,7 +20,7 @@
   "ddns_name": "Obtenez un nom auprès d'un service de DNS dynamique, et faites-le tenir à jour par votre routeur ou par un petit programme sur la machine. Choisissez un nom sans le mot « VPN » : les applications l'envoient en clair au début de chaque connexion, où le réseau peut le lire.",
   "ddns_port": "Redirigez aussi le port TCP <code>[port_http]</code> vers la machine, tant que vous utilisez le nom : il permet de valider le certificat et de le renouveler tous les quelques mois.",
   "ddns_cert": "Donnez à la ferme un certificat pour ce nom, comme le montre <a href=\"/vpnhood-manager/docs/certificates/#domain\">Utiliser votre propre domaine</a> : réglez <b>[manager_signing]</b> sur <b>[manager_autosign]</b> (1), attendez que <b>[manager_signature]</b> indique <b>[manager_ca_signed]</b> (2), puis réglez <b>[manager_visibility]</b> sur <b>[manager_public_in_token]</b> (3).",
-  "shot_cert_alt": "Certificat pour server1.example.com dans VpnHood! MANAGER configuré selon ces étapes : Signing AutoSign (1), Signature CA Signed (2) et Visibility PublicInToken (3)",
+  "shot_cert_alt": "Certificat pour server1.example.com dans VpnHood! MANAGER configuré selon ces étapes : Signing AutoSign (1), Signature CA Signed (2) et Visibility Public in keys (3)",
   "shot_cert_caption": "Le certificat du nom une fois prêt : signé par Let's Encrypt et inclus dans chaque clé de la ferme.",
   "ddns_trusted": "C'est la signature qui rend cela possible : les applications ne résolvent un nom que si son certificat est <b>[manager_ca_signed]</b>. Avec un certificat auto-signé, elles n'essaient que les adresses de la clé.",
   "urls_title": "URL de jeton de la ferme",

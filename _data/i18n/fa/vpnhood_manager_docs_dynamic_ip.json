@@ -20,7 +20,7 @@
   "ddns_name": "از یک سرویس DDNS نامی بگیرید و کاری کنید که روتر یا یک برنامه کوچک روی سیستم آن را به‌روز نگه دارد. نامی انتخاب کنید که اسمی از VPN در آن نباشد: اپلیکیشن‌ها این نام را در ابتدای هر اتصال به‌صورت رمزگذاری‌نشده می‌فرستند و شبکه می‌تواند آن را بخواند.",
   "ddns_port": "تا زمانی که از این نام استفاده می‌کنید، پورت <code>[port_http]</code> از نوع TCP را هم به سیستم فوروارد کنید: بررسی گواهی و تمدید چندماه یک‌بار آن از طریق همین پورت انجام می‌شود.",
   "ddns_cert": "برای فارم یک گواهی به این نام بگیرید، همان‌طور که در <a href=\"/vpnhood-manager/docs/certificates/#domain\">استفاده از دامنه اختصاصی</a> آمده است: <b>[manager_signing]</b> را روی <b>[manager_autosign]</b> بگذارید (۱)، صبر کنید تا <b>[manager_signature]</b> مقدار <b>[manager_ca_signed]</b> را نشان دهد (۲)، سپس <b>[manager_visibility]</b> را روی <b>[manager_public_in_token]</b> بگذارید (۳).",
-  "shot_cert_alt": "یک گواهی برای server1.example.com در VpnHood! MANAGER طبق این مراحل: Signing AutoSign (۱)، Signature CA Signed (۲) و Visibility PublicInToken (۳)",
+  "shot_cert_alt": "یک گواهی برای server1.example.com در VpnHood! MANAGER طبق این مراحل: Signing AutoSign (۱)، Signature CA Signed (۲) و Visibility Public in keys (۳)",
   "shot_cert_caption": "گواهی این نام پس از تکمیل: امضاشده توسط Let's Encrypt و درج‌شده در همه کلیدهای فارم.",
   "ddns_trusted": "این کار به لطف امضای گواهی ممکن می‌شود: اپلیکیشن‌ها فقط وقتی یک نام را جست‌وجو می‌کنند که گواهی آن <b>[manager_ca_signed]</b> باشد. با گواهی خودامضا، فقط آدرس‌های داخل کلید را امتحان می‌کنند.",
   "urls_title": "آدرس‌های URL توکن فارم",

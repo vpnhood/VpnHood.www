@@ -36,7 +36,6 @@
   "farm_title": "集群显示红色消息",
   "farm_desc": "集群名称下方的红色消息表示 MANAGER 无法生成该集群的 Token，即密钥中告诉应用如何连接集群服务器的部分。在您解决问题之前，集群会保留上一个可用的 Token，因此其密钥携带的仍是旧地址。",
   "farm_self_signed": "如果提示 <b>[manager_err_farm_self_signed]</b>，说明应用既无法通过受信任的域名，也无法通过密钥中的地址找到该集群的服务器。请让集群中的一台服务器拥有一个 <b>[manager_mode]</b> 为 <b>[manager_public_in_token]</b> 的地址，方法参见<a href=\"/vpnhood-manager/docs/access-points/#settings\">接入点设置</a>；或<a href=\"/vpnhood-manager/docs/certificates/#domain\">为集群绑定自定义域名</a>。新集群在其第一台服务器安装完成之前，都会显示此消息。",
-  "farm_domain_only": "如果提示 <b>[manager_err_farm_domain_only]</b>，说明密钥所含证书的 <b>[manager_signing]</b> 被设为 <b>[manager_domain_only]</b>，而密钥无法携带此类证书。请为该证书选择其他 <b>[manager_signing]</b>，或在密钥中改用另一个证书：请参阅<a href=\"/vpnhood-manager/docs/certificates/#keys\">密钥中的证书</a>。",
   "key_title": "密钥无法打开",
   "key_desc": "如果密钥页面上的 <b>[manager_access_key]</b> 显示 <b>[manager_err_token_not_ready]</b>，说明该密钥所属的集群从未有过可用的 Token。请打开该集群，按上文所述处理其红色消息，密钥即可打开。",
   "apps_title": "应用无法连接",

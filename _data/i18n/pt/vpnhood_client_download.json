@@ -4,7 +4,7 @@
   "page_title": "Baixar VpnHood! CLIENT",
   "page_desc": "Uma solução de VPN rápida, segura e confiável com a potência do <b>VpnHood! ENGINE</b>, um projeto de código aberto e a primeira VPN desenvolvida inteiramente na plataforma .NET.",
   "notice_title": "Sem servidores integrados.",
-  "notice_desc": "O VpnHood! CLIENT não inclui servidores VPN próprios, portanto não se conecta sozinho. Você precisa de uma <b>chave de acesso</b> fornecida por quem opera o servidor — basta colar no app para se conectar.",
+  "notice_desc": "O VpnHood! CLIENT não inclui servidores VPN próprios, portanto não se conecta sozinho. Você precisa de uma <b>chave de acesso</b>, também chamada de chave do servidor, fornecida por quem opera o servidor — basta colar no app para se conectar.",
   "android_title": "Android",
   "ios_title": "iOS",
   "windows_title": "Windows",

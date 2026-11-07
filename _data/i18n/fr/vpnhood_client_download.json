@@ -4,7 +4,7 @@
   "page_title": "Télécharger VpnHood! CLIENT",
   "page_desc": "Une solution VPN rapide, sécurisée et fiable propulsée par <b>VpnHood! ENGINE</b>, un VPN open source conçu entièrement avec la plateforme .NET.",
   "notice_title": "Aucun serveur intégré.",
-  "notice_desc": "VpnHood! CLIENT n'inclut aucun serveur VPN et ne peut donc pas se connecter seul. Il vous faut une <b>clé d'accès</b> de la part de l'administrateur du serveur : collez-la simplement dans l'application pour vous connecter.",
+  "notice_desc": "VpnHood! CLIENT n'inclut aucun serveur VPN et ne peut donc pas se connecter seul. Il vous faut une <b>clé d'accès</b>, aussi appelée clé de serveur, de la part de l'administrateur du serveur : collez-la simplement dans l'application pour vous connecter.",
   "android_title": "Android",
   "ios_title": "iOS",
   "windows_title": "Windows",

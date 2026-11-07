@@ -20,7 +20,7 @@
   "ddns_name": "从动态 DNS 服务获取一个域名，并让路由器或机器上的小程序保持其更新。名称中切勿包含 VPN：应用在每次建立连接时都会明文发送该名称，网络中间节点可直接读取。",
   "ddns_port": "在使用该域名期间，也要将 TCP 端口 <code>[port_http]</code> 转发到这台机器：证书验证及每隔数月的续期都通过该端口进行。",
   "ddns_cert": "为集群添加该域名的证书（参见<a href=\"/vpnhood-manager/docs/certificates/#domain\">使用自定义域名</a>）：将 <b>[manager_signing]</b> 设为 <b>[manager_autosign]</b> (1)，等待 <b>[manager_signature]</b> 显示 <b>[manager_ca_signed]</b> (2)，然后将 <b>[manager_visibility]</b> 设为 <b>[manager_public_in_token]</b> (3)。",
-  "shot_cert_alt": "VpnHood! MANAGER 中 server1.example.com 的证书配置，对应步骤：Signing AutoSign (1)、Signature CA Signed (2) 与 Visibility PublicInToken (3)",
+  "shot_cert_alt": "VpnHood! MANAGER 中 server1.example.com 的证书配置，对应步骤：Signing AutoSign (1)、Signature CA Signed (2) 与 Visibility Public in keys (3)",
   "shot_cert_caption": "配置完成后的域名证书：已由 Let's Encrypt 签名，并包含在该集群的每个密钥中。",
   "ddns_trusted": "关键在于签名：只有证书为 <b>[manager_ca_signed]</b> 时，应用才会解析域名。使用自签名证书时，应用只会尝试密钥中的地址。",
   "urls_title": "集群 Token URL",

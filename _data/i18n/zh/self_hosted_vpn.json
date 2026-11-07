@@ -50,10 +50,10 @@
   "step2_title": "添加您的服务器",
   "step2_desc": "按照安装步骤在您的设备上部署 VpnHood! SERVER。",
   "step3_title": "创建访问密钥",
-  "step3_desc": "在访问令牌页面生成一个密钥，并根据需要设置限制。",
+  "step3_desc": "在访问密钥页面生成一个密钥，并根据需要设置限制。",
   "step4_title": "分享密钥",
   "step4_desc": "任何人只需将密钥粘贴到 VpnHood! CLIENT 中即可连接。",
-  "manual_note": "不想使用 VpnHood! MANAGER 管理面板？VpnHood! SERVER 也可以作为独立服务器运行：<a href=\"/vpnhood-server/docs/install/#standalone\">在 Linux 或 Docker 中安装</a>。",
+  "manual_note": "不想使用 VpnHood! MANAGER 管理面板？VpnHood! SERVER 也可以作为独立服务器运行：<a href=\"/vpnhood-server/docs/install/\">在 Linux 或 Docker 中安装</a>。",
   "new_tab": "（在新标签页中打开）",
   "cta": "您的 VPN，您的服务器，您做主——只需几分钟即可创建第一个访问密钥。",
   "cta_btn": "打开 VpnHood! MANAGER"

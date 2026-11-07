@@ -18,7 +18,7 @@
   "domain_autosign": "Modifiez <b>[manager_signing]</b> et choisissez <b>[manager_autosign]</b>. MANAGER demande un certificat à Let's Encrypt, qui vérifie le domaine via votre serveur sur le port TCP <code>[port_http]</code>.",
   "domain_signed": "Attendez que <b>[manager_signature]</b> affiche <b>[manager_ca_signed]</b>. Dès lors, MANAGER assure le renouvellement automatique du certificat avant son expiration.",
   "domain_token": "Modifiez <b>[manager_visibility]</b> et sélectionnez <b>[manager_public_in_token]</b>. Toutes les clés de la ferme intègrent désormais le domaine, et l'ancien certificat de la ferme passe en <b>[manager_public]</b>.",
-  "shot_domain_alt": "Certificat pour server1.example.com dans VpnHood! MANAGER configuré selon ces étapes : Signing AutoSign (1), Signature CA Signed (2) et Visibility PublicInToken (3)",
+  "shot_domain_alt": "Certificat pour server1.example.com dans VpnHood! MANAGER configuré selon ces étapes : Signing AutoSign (1), Signature CA Signed (2) et Visibility Public in keys (3)",
   "shot_domain_caption": "Le certificat du domaine une fois prêt : signé par Let's Encrypt et inclus dans chaque clé de la ferme.",
   "domain_keys": "Les clés copiées depuis MANAGER intègrent désormais le domaine. Les applications disposant d'une ancienne clé reçoivent la nouvelle dès leur connexion, l'option <b>[manager_push_token]</b> étant activée par défaut. Conservez l'ancien certificat de la ferme jusque-là : les anciennes clés ne fonctionnent que tant qu'il est présent.",
   "domain_failed": "En cas d'échec de la vérification, corrigez l'enregistrement DNS ou ouvrez le port requis : la section <a href=\"#autosign\">AutoSign</a> ci-dessous détaille les nouvelles tentatives de MANAGER.",

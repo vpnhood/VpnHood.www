@@ -18,7 +18,7 @@
   "domain_autosign": "<b>[manager_signing]</b> में बदलाव करें और <b>[manager_autosign]</b> चुनें। MANAGER इसके बाद Let's Encrypt से सर्टिफ़िकेट का अनुरोध करता है, जो TCP पोर्ट <code>[port_http]</code> पर आपके सर्वर के ज़रिए डोमेन की पुष्टि करता है।",
   "domain_signed": "जब तक <b>[manager_signature]</b> पर <b>[manager_ca_signed]</b> न दिखने लगे, तब तक प्रतीक्षा करें। इसके बाद, MANAGER सर्टिफ़िकेट की समय-सीमा समाप्त होने से पहले ही अपने-आप उसका नवीनीकरण कर देता है।",
   "domain_token": "<b>[manager_visibility]</b> में बदलाव करें और <b>[manager_public_in_token]</b> चुनें। अब फ़ार्म की प्रत्येक की में डोमेन शामिल हो जाता है, और फ़ार्म का पिछला सर्टिफ़िकेट <b>[manager_public]</b> बन जाता है।",
-  "shot_domain_alt": "VpnHood! MANAGER में server1.example.com के लिए सर्टिफ़िकेट, जो इन चरणों के अनुसार सेट किया गया है: Signing AutoSign (1), Signature CA Signed (2) और Visibility PublicInToken (3)",
+  "shot_domain_alt": "VpnHood! MANAGER में server1.example.com के लिए सर्टिफ़िकेट, जो इन चरणों के अनुसार सेट किया गया है: Signing AutoSign (1), Signature CA Signed (2) और Visibility Public in keys (3)",
   "shot_domain_caption": "डोमेन का सर्टिफ़िकेट तैयार होने के बाद: Let's Encrypt द्वारा हस्ताक्षरित, और फ़ार्म की प्रत्येक की में शामिल।",
   "domain_keys": "अब आप MANAGER से जो भी कीज़ कॉपी करेंगे, उनमें डोमेन शामिल होगा। पुरानी की वाले ऐप्स कनेक्ट होने पर नई की पा लेंगे, क्योंकि <b>[manager_push_token]</b> डिफ़ॉल्ट रूप से चालू रहता है। तब तक फ़ार्म का पिछला सर्टिफ़िकेट सुरक्षित रखें: पुरानी कीज़ तभी तक काम करती हैं जब तक वह मौजूद रहता है।",
   "domain_failed": "यदि जाँच विफल हो जाती है, तो DNS रिकॉर्ड ठीक करें या पोर्ट खोलें: नीचे दिया गया <a href=\"#autosign\">AutoSign</a> बताता है कि MANAGER दोबारा प्रयास कैसे करता है।",

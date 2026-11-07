@@ -28,7 +28,7 @@
   "engine_kill_desc": "Bloqueia a internet instantaneamente se a VPN cair, até que a conexão volte.",
   "engine_all": "Todos os recursos",
   "server_title": "Conecta ao seu servidor, não ao nosso",
-  "server_desc": "O CLIENT não tem servidores próprios. Ele se conecta a um VpnHood! SERVER que você, ou alguém de confiança, já gerencia usando uma chave de acesso. Se ainda não tiver um, comece por aqui.",
+  "server_desc": "O CLIENT não tem servidores próprios. Ele se conecta a um VpnHood! SERVER que você, ou alguém de confiança, já gerencia, usando uma chave de acesso, também chamada de chave do servidor, fornecida a você. Se ainda não tiver um, comece por aqui.",
   "server_start_title": "VPN auto-hospedada",
   "server_start_desc": "O que é preciso para hospedar seu próprio servidor e quanto custa.",
   "server_server_title": "VpnHood! SERVER",

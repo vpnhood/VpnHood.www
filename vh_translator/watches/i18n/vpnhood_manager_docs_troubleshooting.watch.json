@@ -38,7 +38,6 @@
     "farm_title": "A farm shows a red message",
     "farm_desc": "A red message under a farm's name means MANAGER could not build the farm's token, the part of a key that tells apps how to reach the farm's servers. Until you fix it, the farm keeps its last working token, so its keys carry its old addresses.",
     "farm_self_signed": "If it says <b>[manager_err_farm_self_signed]</b>, apps could find the farm's servers neither by a trusted domain nor by an address in the keys. Give one of its servers an address whose <b>[manager_mode]</b> is <b>[manager_public_in_token]</b>, as in <a href=\"/vpnhood-manager/docs/access-points/#settings\">An access point's settings</a>, or <a href=\"/vpnhood-manager/docs/certificates/#domain\">give the farm your own domain</a>. A new farm shows this until its first server is installed.",
-    "farm_domain_only": "If it says <b>[manager_err_farm_domain_only]</b>, the certificate the keys carry has its <b>[manager_signing]</b> set to <b>[manager_domain_only]</b>, which keys cannot carry. Choose another <b>[manager_signing]</b> for it, or put another certificate in the keys: see <a href=\"/vpnhood-manager/docs/certificates/#keys\">The certificate in the keys</a>.",
     "key_title": "A key will not open",
     "key_desc": "If <b>[manager_access_key]</b> on a key's page says <b>[manager_err_token_not_ready]</b>, the key's farm has never had a working token. Open the farm and fix its red message, as above, and the key opens.",
     "apps_title": "Apps cannot connect",

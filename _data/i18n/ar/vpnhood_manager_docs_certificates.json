@@ -18,7 +18,7 @@
   "domain_autosign": "عدّل <b>[manager_signing]</b> واختر <b>[manager_autosign]</b>. سيطلب MANAGER شهادة من Let's Encrypt، والتي ستتحقق من النطاق عبر خادمك على منفذ TCP رقم <code>[port_http]</code>.",
   "domain_signed": "انتظر حتى تظهر حالة <b>[manager_signature]</b> كـ <b>[manager_ca_signed]</b>. بدءًا من تلك اللحظة، سيجدد MANAGER الشهادة تلقائيًا قبل انتهاء صلاحيتها.",
   "domain_token": "عدّل <b>[manager_visibility]</b> واختر <b>[manager_public_in_token]</b>. سيحمل كل مفتاح في المزرعة هذا النطاق، وستتحول الشهادة السابقة للمزرعة إلى <b>[manager_public]</b>.",
-  "shot_domain_alt": "شهادة لنطاق server1.example.com في VpnHood! MANAGER، تم إعدادها وفق الخطوات الموضحة: Signing AutoSign (1)، وSignature CA Signed (2)، وVisibility PublicInToken (3)",
+  "shot_domain_alt": "شهادة لنطاق server1.example.com في VpnHood! MANAGER، تم إعدادها وفق الخطوات الموضحة: Signing AutoSign (1)، وSignature CA Signed (2)، وVisibility Public in keys (3)",
   "shot_domain_caption": "شهادة النطاق بعد اكتمالها: موقّعة من Let's Encrypt ومدمجة في كل مفتاح من مفاتيح المزرعة.",
   "domain_keys": "ستحمل أي مفاتيح تنسخها من MANAGER من الآن فصاعدًا هذا النطاق. وستتلقى التطبيقات التي تستخدم مفاتيح قديمة التحديث الجديد تلقائيًا بمجرد الاتصال، حيث يكون خيار <b>[manager_push_token]</b> مفعلاً افتراضيًا. احتفظ بالشهادة السابقة للمزرعة حتى ذلك الحين، فالمفاتيح القديمة لن تعمل إلا بوجودها.",
   "domain_failed": "إذا فشل التحقق، صحّح سجل DNS أو افتح المنفذ المطلوب: يوضح قسم <a href=\"#autosign\">AutoSign</a> أدناه كيف يعيد MANAGER المحاولة.",

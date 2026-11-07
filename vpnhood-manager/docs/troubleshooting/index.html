@@ -95,10 +95,7 @@ extra_css:
 
 <h2 id="farm" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-farm.svg" alt="" width="48" height="48" loading="lazy">{{ t.farm_title }}</h2>
 <p>{{ t.farm_desc }}</p>
-<ul>
-  <li>{% include copy.html s=t.farm_self_signed %}</li>
-  <li>{% include copy.html s=t.farm_domain_only %}</li>
-</ul>
+<p>{% include copy.html s=t.farm_self_signed %}</p>
 
 <h2 id="key" class="vh-docs-problem"><img src="/assets/images/vpnhood-manager/docs/trouble-key.svg" alt="" width="48" height="48" loading="lazy">{{ t.key_title }}</h2>
 <p>{% include copy.html s=t.key_desc %}</p>

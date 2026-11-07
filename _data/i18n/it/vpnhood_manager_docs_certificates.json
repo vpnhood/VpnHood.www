@@ -18,7 +18,7 @@
   "domain_autosign": "Modifica <b>[manager_signing]</b> e scegli <b>[manager_autosign]</b>. MANAGER richiederà un certificato a Let's Encrypt, che verificherà il dominio tramite il tuo server sulla porta TCP <code>[port_http]</code>.",
   "domain_signed": "Attendi che <b>[manager_signature]</b> mostri <b>[manager_ca_signed]</b>. Da quel momento, MANAGER rinnoverà il certificato automaticamente prima della scadenza.",
   "domain_token": "Modifica <b>[manager_visibility]</b> e seleziona <b>[manager_public_in_token]</b>. Ogni chiave della farm includerà il dominio, e il certificato precedente della farm diventerà <b>[manager_public]</b>.",
-  "shot_domain_alt": "Un certificato per server1.example.com in VpnHood! MANAGER con le impostazioni descritte: Signing AutoSign (1), Signature CA Signed (2) e Visibility PublicInToken (3)",
+  "shot_domain_alt": "Un certificato per server1.example.com in VpnHood! MANAGER con le impostazioni descritte: Signing AutoSign (1), Signature CA Signed (2) e Visibility Public in keys (3)",
   "shot_domain_caption": "Il certificato del dominio completato: firmato da Let's Encrypt e incluso in ogni chiave della farm.",
   "domain_keys": "Le chiavi che copi da MANAGER d'ora in poi contengono il dominio. Le app con una chiave precedente ricevono quella nuova quando si connettono, poiché <b>[manager_push_token]</b> è attivo per impostazione predefinita. Fino ad allora mantieni il certificato precedente della farm: le vecchie chiavi funzionano solo finché è presente.",
   "domain_failed": "Se la verifica non riesce, correggi il record DNS o apri la porta: scopri nella sezione <a href=\"#autosign\">AutoSign</a> come MANAGER effettua un nuovo tentativo.",

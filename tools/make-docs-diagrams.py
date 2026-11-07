@@ -11,6 +11,8 @@ Writes, under `_includes/diagrams/`:
   dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
   dynamic-ip-find.svg, dynamic-ip-find-tall.svg,
   dynamic-ip-urls.svg, dynamic-ip-urls-tall.svg  /vpnhood-manager/docs/dynamic-ip/
+  farm-token-key.svg, farm-token-key-tall.svg,  
+  farm-token-new.svg, farm-token-new-tall.svg  /vpnhood-manager/docs/farm-token/
   cloak-mode.svg, cloak-mode-tall.svg            /features/cloak-mode/, and
                                                  /self-hosted-vpn/docs/vpn-detection/, which
                                                  carries the same diagram_* keys
@@ -72,6 +74,11 @@ Each diagram states one idea and no more:
   block-quic      one app, in Cloak Mode, which can disguise TCP but not QUIC: its QUIC makes
                   cloak-mode's bumpy tunnel and the filter can drop it, and with Block QUIC
                   the device stops QUIC, inside the phone, and the app's TCP goes smooth.
+
+  farm-token-key  MANAGER builds one farm token and every key of the farm carries it, beside a
+                  part of its own: only the whole key connects.
+  farm-token-new  a new token reaches an app by two roads: from your server while it can connect,
+                  and from the file at a farm token URL when it cannot.
 
 Run from the repo root:  python tools/make-docs-diagrams.py
 """
@@ -496,10 +503,11 @@ def how_it_works() -> None:
     XU, XS, XW = 120, 460, 800
     pl, pr = XS - RACK_W / 2, XS + RACK_W / 2
     parts = [people(XU, Y), rack(XS, Y, RACK_W, RACK_H), globe(XW, Y)]
-    # the tunnel: a double line around the arrow, as on the guides' pictures
+    # the tunnel: a double line around the arrow, as on the guides' pictures. The data inside is
+    # chalk, as in cloak-mode's tunnels: in the lines' own mint, the three read as one stripe
     x1, x2 = XU + 58, pl - 14
     parts += [line(x1, Y - 11, x2 - 6, Y - 11, MINT, 2.0), line(x1, Y + 11, x2 - 6, Y + 11, MINT, 2.0),
-              arrow(x1 + 10, Y, x2, Y, MINT)]
+              arrow(x1 + 10, Y, x2, Y, CHALK)]
     m = (x1 + x2) / 2
     parts += [txt(m, Y - 26, T("diagram_tunnel"), 20, MINT),
               txt(m, Y + 40, T("diagram_tunnel_sub"), 17, CHALK_DIM)]
@@ -524,7 +532,7 @@ def how_it_works() -> None:
     parts = [people(X, YU), rack(X, YS, RACK_W, RACK_H), globe(X, YW)]
     y1, y2 = YU + 44, pt - 14
     parts += [line(X - 11, y1, X - 11, y2 - 6, MINT, 2.0), line(X + 11, y1, X + 11, y2 - 6, MINT, 2.0),
-              arrow(X, y1 + 10, X, y2, MINT)]
+              arrow(X, y1 + 10, X, y2, CHALK)]
     m = (y1 + y2) / 2
     parts += [txt(TX, m - 2, T("diagram_tunnel"), 21, MINT, "start"),
               txt(TX, m + 24, T("diagram_tunnel_sub"), 17, CHALK_DIM, "start")]
@@ -1005,6 +1013,112 @@ def block_quic() -> None:
     render("block-quic-tall", *DETECT, W, H, "vhBlockQuicTall", parts, "diagram_quic")
 
 
+# ===========================================================================
+# farm-token-key - one farm token, in every key of the farm, beside each key's own part
+# ===========================================================================
+FARM_TOKEN = ("vpnhood_manager_docs_farm_token", "vh_farmtoken_en")
+
+
+def key_cells(x, y, w_token, w_own, h, T, size):
+    """One access key as two cells: the farm token, the same in every key, and its own ID and secret."""
+    gap = 8
+    base = y + h / 2 + size * .36
+    return [box(x, y, w_token, h, MINT, 3.0), box(x + w_token + gap, y, w_own, h, VIOLET, 3.0),
+            txt(x + w_token / 2, base, T("diagram_token"), size, MINT),
+            txt(x + w_token + gap + w_own / 2, base, T("diagram_own"), size, VIOLET)]
+
+
+def small_key(cx, cy, scale):
+    """The access key at a size that leaves room beside it."""
+    return '<g transform="translate(%.1f %.1f) scale(%.2f)">%s</g>' % (cx, cy, scale, access_key(0, 0))
+
+
+def farm_token_key() -> None:
+    T, _ = strings(FARM_TOKEN[1])
+
+    # --- left to right: MANAGER, then two keys, each its two cells and the key they make --------
+    seed(41)
+    W, H = 920, 372
+    XM, Y = 116, 138
+    XC, WT, WO, CH = 274, 236, 208, 62
+    TOPS = (84, 176)
+    XK = 824
+    parts = [manager_hood(XM, Y), txt(XM, Y + 90, T("diagram_manager"), 20), txt(XM, Y + 116, T("diagram_builds"), 15, CHALK_DIM)]
+    parts += [txt(XC + WT / 2, 60, T("diagram_same"), 15, MINT), txt(XC + WT + 8 + WO / 2, 60, T("diagram_different"), 15, VIOLET),
+              txt(XK, 60, T("diagram_keys"), 15, CHALK)]
+    x0, xm = XM + HOOD_W / 2 + 12, (XM + HOOD_W / 2 + XC) / 2 + 4
+    for top in TOPS:
+        mid = top + CH / 2
+        parts += key_cells(XC, top, WT, WO, CH, T, 19)
+        parts.append(elbow([(x0, Y), (xm, Y), (xm, mid), (XC - 12, mid)], MINT))
+        parts.append(small_key(XK, mid - 8, .8))
+    parts += [txt(W / 2, H - 56, T("diagram_key_caption_1"), 19, AMBER), txt(W / 2, H - 28, T("diagram_key_caption_2"), 19, AMBER)]
+    render("farm-token-key", *FARM_TOKEN, W, H, "vhFarmTokenKey", parts, "diagram_key")
+
+    # --- top to bottom: MANAGER above the two keys, each key's picture beside its cells ---------
+    seed(41)
+    W, H = 560, 590
+    X, YM = 280, 76
+    XC, WT, WO, CH = 108, 216, 196, 58
+    TOPS = (284, 368)
+    parts = [manager_hood(X, YM), txt(X, YM + 88, T("diagram_manager"), 22), txt(X, YM + 114, T("diagram_builds"), 16, CHALK_DIM)]
+    parts += [txt(XC + WT / 2, TOPS[0] - 16, T("diagram_same"), 14, MINT), txt(XC + WT + 8 + WO / 2, TOPS[0] - 16, T("diagram_different"), 14, VIOLET)]
+    parts.append(arrow(XC + WT / 2, YM + 134, XC + WT / 2, TOPS[0] - 38, MINT))
+    for top in TOPS:
+        parts += key_cells(XC, top, WT, WO, CH, T, 18)
+        parts.append(small_key(58, top + CH / 2 - 5, .55))
+    parts += [txt(W / 2, H - 76, T("diagram_key_caption_1"), 18, AMBER), txt(W / 2, H - 46, T("diagram_key_caption_2"), 18, AMBER)]
+    render("farm-token-key-tall", *FARM_TOKEN, W, H, "vhFarmTokenKeyTall", parts, "diagram_key")
+
+
+# ===========================================================================
+# farm-token-new - the two roads a new farm token takes to an app
+# ===========================================================================
+def farm_token_new() -> None:
+    T, CODE = strings(FARM_TOKEN[1])
+
+    # --- left to right: MANAGER, then your server over the file, then the app -------------------
+    seed(43)
+    W, H = 920, 452
+    XM, Y = 116, 196
+    XN, Y1, Y2 = 452, 84, 288
+    XA = 806
+    parts = [manager_hood(XM, Y), rack(XN, Y1, RACK_W, RACK_H), web_file(XN, Y2), phone(XA, Y)]
+    parts += [txt(XM, Y + 90, T("diagram_manager"), 20), txt(XM, Y + 116, T("diagram_new_token"), 15, CHALK_DIM),
+              txt(XN, Y1 + 72, T("diagram_server"), 21), txt(XN, Y1 + 96, CODE("manager_push_token"), 15, CHALK_DIM),
+              txt(XN, Y2 + 78, T("diagram_url"), 21), txt(XN, Y2 + 102, T("diagram_url_sub"), 15, CHALK_DIM),
+              txt(XA - PHONE_W / 2 - 18, Y + 8, T("diagram_app"), 21, CHALK, "end")]
+    x0, xm = XM + HOOD_W / 2 + 12, XM + HOOD_W / 2 + 96
+    parts += [elbow([(x0, Y), (xm, Y), (xm, Y1), (XN - RACK_W / 2 - 14, Y1)], MINT),
+              elbow([(x0, Y), (xm, Y), (xm, Y2), (XN - FILE_HALF_W - 14, Y2)], MINT)]
+    xr, xa = XN + RACK_W / 2 + 14, XA
+    parts += [elbow([(xr, Y1), (xa, Y1), (xa, Y - PHONE_H / 2 - 14)], MINT),
+              elbow([(XN + FILE_HALF_W + 26, Y2), (xa, Y2), (xa, Y + PHONE_H / 2 + 14)], MINT),
+              txt((xr + xa) / 2, Y1 - 14, T("diagram_can"), 16), txt((XN + FILE_HALF_W + 26 + xa) / 2, Y2 + 26, T("diagram_cannot"), 16)]
+    parts.append(txt(W / 2, H - 26, T("diagram_new_caption"), 19, AMBER))
+    render("farm-token-new", *FARM_TOKEN, W, H, "vhFarmTokenNew", parts, "diagram_new")
+
+    # --- top to bottom: MANAGER, your server beside the file, then the app ----------------------
+    seed(43)
+    W, H = 560, 800
+    X, YM, YN, YA = 280, 76, 322, 620
+    XL, XR = 140, 420
+    parts = [manager_hood(X, YM), rack(XL, YN, RACK_W, RACK_H), web_file(XR, YN), phone(X, YA)]
+    parts += [txt(X, YM + 88, T("diagram_manager"), 22), txt(X, YM + 114, T("diagram_new_token"), 16, CHALK_DIM),
+              txt(XL, YN + 74, T("diagram_server"), 20), txt(XL, YN + 98, CODE("manager_push_token"), 14, CHALK_DIM),
+              txt(XR, YN + 80, T("diagram_url"), 20), txt(XR, YN + 104, T("diagram_url_sub"), 14, CHALK_DIM),
+              txt(X, YA + 76, T("diagram_app"), 21)]
+    yb = YM + 134
+    parts += [elbow([(X, yb), (X, yb + 28), (XL, yb + 28), (XL, YN - RACK_H / 2 - 14)], MINT),
+              elbow([(X, yb), (X, yb + 28), (XR, yb + 28), (XR, YN - FILE_HALF_H - 14)], MINT)]
+    yl = YN + 118
+    parts += [elbow([(XL, yl), (XL, YA), (X - PHONE_W / 2 - 14, YA)], MINT),
+              elbow([(XR, yl), (XR, YA), (X + PHONE_W / 2 + 14, YA)], MINT),
+              txt(XL - 112, YA + 28, T("diagram_can"), 15, CHALK, "start"), txt(XR + 112, YA + 28, T("diagram_cannot"), 15, CHALK, "end")]
+    parts.append(txt(W / 2, H - 30, T("diagram_new_caption"), 17, AMBER))
+    render("farm-token-new-tall", *FARM_TOKEN, W, H, "vhFarmTokenNewTall", parts, "diagram_new")
+
+
 if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
@@ -1015,3 +1129,5 @@ if __name__ == "__main__":
     dynamic_ip_urls()
     cloak_mode()
     block_quic()
+    farm_token_key()
+    farm_token_new()

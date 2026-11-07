@@ -28,7 +28,7 @@
   "engine_kill_desc": "一旦隧道意外断开即刻切断网络流量，直至安全连接重新建立。",
   "engine_all": "全部功能",
   "server_title": "连接到您自己的服务器，而非我们的服务器",
-  "server_desc": "CLIENT 本身不提供任何内置服务器。它通过信任的人或您自己提供的访问密钥，连接到自主搭建的 VpnHood! 服务器。如果尚未配置，请从这里开始。",
+  "server_desc": "CLIENT 本身不提供任何内置服务器。它通过信任的人或您自己提供的访问密钥（也称服务器密钥），连接到自主搭建的 VpnHood! 服务器。如果尚未配置，请从这里开始。",
   "server_start_title": "自托管 VPN",
   "server_start_desc": "了解搭建专属服务器的步骤与相关成本。",
   "server_server_title": "VpnHood! SERVER",

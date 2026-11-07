@@ -18,7 +18,7 @@
   "domain_autosign": "Edit <b>[manager_signing]</b> and choose <b>[manager_autosign]</b>. MANAGER asks Let's Encrypt for a certificate, which checks the domain through your server on TCP port <code>[port_http]</code>.",
   "domain_signed": "Wait until <b>[manager_signature]</b> reads <b>[manager_ca_signed]</b>. From then on, MANAGER renews the certificate by itself before it expires.",
   "domain_token": "Edit <b>[manager_visibility]</b> and choose <b>[manager_public_in_token]</b>. Every key of the farm now carries the domain, and the farm's previous certificate becomes <b>[manager_public]</b>.",
-  "shot_domain_alt": "A certificate for server1.example.com in VpnHood! MANAGER, set up as these steps describe: Signing AutoSign (1), Signature CA Signed (2) and Visibility PublicInToken (3)",
+  "shot_domain_alt": "A certificate for server1.example.com in VpnHood! MANAGER, set up as these steps describe: Signing AutoSign (1), Signature CA Signed (2) and Visibility Public in keys (3)",
   "shot_domain_caption": "The domain's certificate when it is done: signed by Let's Encrypt, and carried in every key of the farm.",
   "domain_keys": "Keys you copy from MANAGER from now on carry the domain. Apps holding an older key get the new one when they connect, as <b>[manager_push_token]</b> is on by default. Keep the farm's previous certificate until then: older keys work only while it is there.",
   "domain_failed": "If the check fails, fix the DNS record or open the port: <a href=\"#autosign\">AutoSign</a>, below, says how MANAGER tries again.",

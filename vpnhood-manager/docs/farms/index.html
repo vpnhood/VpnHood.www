@@ -27,7 +27,7 @@ extra_css:
   left out: production may set its own. The screenshot is real app UI, so it has no light
   variant: the test project's Server Farm 1 (Vh/.user/docs/manager-test-projects.md), its
   Server Farm card 800px wide in MANAGER's dark theme, captured at 2x and cropped below
-  Allow Access Code by .tmp/mgr-farm-shot.js. MANAGER's screen text is a placeholder from
+  Allow Premium Code by .tmp/mgr-farm-shot.js. MANAGER's screen text is a placeholder from
   _data/code.yml, filled in by copy.html. No links to the GitHub wiki.
 {%- endcomment -%}
 {% capture vh_article %}
@@ -66,6 +66,7 @@ extra_css:
 
 <h2 id="token-urls">{{ t.urls_title }}</h2>
 <p>{{ t.urls_desc }}</p>
+<p>{% include copy.html s=t.urls_more %}</p>
 <p>{% include copy.html s=t.urls_add %}</p>
 <ul>
   <li>{% include copy.html s=t.urls_off %}</li>

@@ -4,7 +4,7 @@
   "page_title": "下载 VpnHood! CLIENT",
   "page_desc": "由开源的 <b>VpnHood! ENGINE</b> 驱动的快速、安全且可靠的 VPN 解决方案，它是首个完全基于 .NET 平台开发的 VPN。",
   "notice_title": "无内置服务器。",
-  "notice_desc": "VpnHood! CLIENT 本身不包含任何 VPN 服务器，因此无法单独连接网络。您需要向服务器管理员索取 <b>访问密钥</b>，将其粘贴到应用中即可轻松连网。",
+  "notice_desc": "VpnHood! CLIENT 本身不包含任何 VPN 服务器，因此无法单独连接网络。您需要向服务器管理员索取 <b>访问密钥</b>（也称服务器密钥），将其粘贴到应用中即可轻松连网。",
   "android_title": "Android",
   "ios_title": "iOS",
   "windows_title": "Windows",

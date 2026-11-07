@@ -28,6 +28,7 @@
   "push_reach": "应用只有使用已有的密钥连接，才能获取新密钥。因此，发生变更后，请将旧地址或旧证书保留几天（参见<a href=\"/vpnhood-manager/docs/access-points/#change\">更改地址</a>），或为集群添加 Token URL。",
   "urls_title": "集群 Token URL",
   "urls_desc": "集群 Token URL 指向网络上的一个文件，MANAGER 会在其中发布集群当前的地址和证书，并加以加密，只有该集群的密钥才能读取。集群的每个密钥都包含这些 URL；无法连接的应用会读取它们，并用找到的信息重试，即使它所知道的地址全部失效或被封锁也不例外。",
+  "urls_more": "<a href=\"/vpnhood-manager/docs/farm-token/\">什么是集群 Token？</a>介绍了该文件包含的内容，以及应用如何使用它。",
   "urls_add": "在集群页面中，选择 <b>[manager_farm_token_urls]</b>，然后选择 <b>[manager_add]</b>。<b>[manager_publish_url]</b> 是应用读取文件的位置：应位于您的用户能够访问的网站或 CDN 上。填写 <b>[manager_name]</b>，并通过 <b>[manager_auto_upload]</b> 选择文件的上传方式：",
   "urls_off": "<b>[manager_off]</b>：由您自行放置文件。在集群页面选择 <b>[manager_farm_token]</b>，然后选择 <b>[manager_download]</b>，每次变更后都要重复此操作。",
   "urls_upload": "<b>[manager_post]</b>、<b>[manager_put]</b> 或 <b>[manager_put_post]</b>：每次变更后，MANAGER 都会按照 <b>[manager_file_url]</b> 及其周围字段描述的请求上传文件。对于 GitHub、GitLab 或 Bitbucket 仓库中的文件，MANAGER 会根据 <b>[manager_publish_url]</b> 自动填写这些字段，您只需添加一个可写入该文件的 <b>[manager_access_token]</b>。",

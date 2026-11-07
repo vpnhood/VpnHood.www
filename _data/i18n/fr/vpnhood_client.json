@@ -28,7 +28,7 @@
   "engine_kill_desc": "Bloque tout le trafic dès que le tunnel s'interrompt, jusqu'à son rétablissement.",
   "engine_all": "Toutes les fonctionnalités",
   "server_title": "Connexion à votre serveur, pas au nôtre",
-  "server_desc": "CLIENT n'a aucun serveur propre. L'application se connecte au serveur VpnHood! que vous (ou un proche de confiance) gérez déjà, grâce à une clé d'accès fournie. Si rien n'est encore configuré, commencez ici.",
+  "server_desc": "CLIENT n'a aucun serveur propre. L'application se connecte au serveur VpnHood! que vous (ou un proche de confiance) gérez déjà, grâce à une clé d'accès, aussi appelée clé de serveur, qui vous est fournie. Si rien n'est encore configuré, commencez ici.",
   "server_start_title": "VPN auto-hébergé",
   "server_start_desc": "Tout savoir sur le fonctionnement et le coût de votre propre serveur.",
   "server_server_title": "VpnHood! SERVER",
