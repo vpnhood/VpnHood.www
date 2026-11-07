@@ -27,7 +27,7 @@ TERMS — the docs' technical words: one rendering per concept, in every string.
 proxy = بروكسي (never وكيل) · reverse proxy = بروكسي عكسي
 farm / server farm = مزرعة / مزرعة خوادم
 access key = مفتاح الوصول (plural مفاتيح الوصول)
-premium code = رمز مميز (definite الرمز المميز, plural رموز مميزة; never رمز الوصول) · farm token = رمز المزرعة (never رمز مميز, which is the premium code)
+premium code = رمز مميز (definite الرمز المميز, plural رموز مميزة; never رمز الوصول) · farm token = رمز المزرعة (never رمز مميز, which is the premium code) · server token = رمز الخادم
 certificate = شهادة · container = حاوية · firewall = جدار الحماية
 standalone = مستقل · managed = مُدار · web panel = لوحة تحكم ويب
 server profile = ملف تعريف الخادم (plural ملفات تعريف الخوادم)

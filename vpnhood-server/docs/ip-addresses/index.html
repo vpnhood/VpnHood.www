@@ -17,6 +17,10 @@ extra_css:
   Linux and Docker only, and no links to the GitHub wiki. Whole commands and files are
   markup; code inside a sentence is a placeholder from _data/code.yml, filled in by
   copy.html.
+  Server token URLs: read from FileAccessManager.GetAndUpdateServerToken, FileAccessManagerOptions,
+  FileAccessManagerCommand and the retry in VpnHoodApp's connect on 2026-11-06. What the token is and how
+  apps use it live on /vpnhood-manager/docs/farm-token/, so this page gives only the setup: what both
+  modes share is explained once (owner, 2026-11-06).
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-server/docs/hero-ip-addresses.svg" %}
@@ -63,6 +67,19 @@ extra_css:
 <p>{{ t.keys_desc }}</p>
 <p>{% include copy.html s=t.keys_how %}</p>
 <p>{% include copy.html s=t.keys_lost %}</p>
+
+<h3 id="server-token">{{ t.token_title }}</h3>
+<p>{{ t.token_desc }}</p>
+<p>{% include copy.html s=t.token_manager %}</p>
+<p>{% include copy.html s=t.token_add %}</p>
+{% include terminal.html caption=t.caption_token code='{
+  "FileAccessManager": {
+    "ServerTokenUrls": [ "https://www.example.com/enc-server-token" ]
+  }
+}' %}
+<p>{% include copy.html s=t.token_copy %}</p>
+<p>{% include copy.html s=t.token_check %}</p>
+<p>{% include copy.html s=t.token_keys %}</p>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
