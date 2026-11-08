@@ -35,29 +35,32 @@ extra_css:
                             <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
                           </div>
                           <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
-                            <div class="vh-feature-shot">
-                              {% include app-shot.html name="split-local-network" alt=t.shot_alt loading="eager" %}
+                            <div class="vh-feature-relay">
+                              <img src="/assets/images/features/art/split-local-network.webp" alt="" width="468" height="480" loading="eager" />
                             </div>
                           </div>
                         </div>
 
-                        <div class="row section-space gap-lg-0 gap-5">
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4">{{ t.how_title }}</h2>
-                              <p class="mb-0">{{ t.how_desc }}</p>
+                        <div class="row section-space align-items-center gap-lg-0 gap-5">
+                          <div class="col-lg-7 order-lg-2">
+                            <div class="d-flex flex-column gap-4">
+                              <div class="vh-card-dark vh-feature-panel" data-aos="fade-up">
+                                <h2 class="h4">{{ t.how_title }}</h2>
+                                <p class="mb-0">{{ t.how_desc }}</p>
+                              </div>
+                              <div class="vh-card-dark vh-feature-panel" data-aos="fade-up" data-aos-delay="100">
+                                <h2 class="h4">{{ t.when_title }}</h2>
+                                <p class="mb-0">{{ t.when_desc }}</p>
+                              </div>
+                              <div class="vh-card-dark vh-feature-panel" data-aos="fade-up" data-aos-delay="200">
+                                <h2 class="h4">{{ t.cost_title }}</h2>
+                                <p class="mb-0">{{ t.cost_desc }}</p>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4">{{ t.when_title }}</h2>
-                              <p class="mb-0">{{ t.when_desc }}</p>
-                            </div>
-                          </div>
-                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="vh-card-dark vh-feature-panel h-100">
-                              <h2 class="h4">{{ t.cost_title }}</h2>
-                              <p class="mb-0">{{ t.cost_desc }}</p>
+                          <div class="col-lg-5 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="vh-feature-shot">
+                              {% include app-shot.html name="split-local-network" alt=t.shot_alt %}
                             </div>
                           </div>
                         </div>
