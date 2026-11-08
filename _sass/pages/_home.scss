@@ -20,25 +20,9 @@
     // Keep the portrait opaque so decorative effects cannot show through her body.
     opacity: 1;
     filter: brightness(0.70);
+    // She is drawn on a transparent background, with her top and bottom faded in the picture
+    // (tools/make-guardian.py), so the stars and glows run on around her at every width.
     background: url("/assets/images/home/banner-guardian.webp") no-repeat center bottom;
-    // Her black field is darker than the page, so its bottom edge drew a line above the next
-    // section: it fades out over the cloak's last 170px. Only a mask's alpha counts.
-    -webkit-mask-image: linear-gradient(var(--purple-800) calc(100% - 170px), transparent);
-    mask-image: linear-gradient(var(--purple-800) calc(100% - 170px), transparent);
-}
-// On a screen wider than the portrait, her field's sides stood as straight edges across the
-// stars and glows beside it: they fade out over 200px as well.
-@media (min-width: 1921px) {
-    #bannerBgWrapper {
-        -webkit-mask-image: linear-gradient(var(--purple-800) calc(100% - 170px), transparent),
-            linear-gradient(90deg, transparent calc(50% - 960px), var(--purple-800) calc(50% - 760px),
-                var(--purple-800) calc(50% + 760px), transparent calc(50% + 960px));
-        -webkit-mask-composite: source-in;
-        mask-image: linear-gradient(var(--purple-800) calc(100% - 170px), transparent),
-            linear-gradient(90deg, transparent calc(50% - 960px), var(--purple-800) calc(50% - 760px),
-                var(--purple-800) calc(50% + 760px), transparent calc(50% + 960px));
-        mask-composite: intersect;
-    }
 }
 // The guardian sits in front of the existing decorative layers.
 #banner > .star-effect,
@@ -113,12 +97,6 @@
         padding-top: 125px;
     }
     #bannerBgWrapper {
-        // The hero stacks and she sits halfway down it, where her black field cut the stars
-        // and glows off in a straight line. Here she is cut out of it, with fades of her own
-        // (tools/make-guardian-cutout.py); her size and place stay as they were.
-        background-image: url("/assets/images/home/banner-guardian-cutout.webp");
-        -webkit-mask-image: none;
-        mask-image: none;
         background-size: 1100px;
         background-position-y: 210px;
     }

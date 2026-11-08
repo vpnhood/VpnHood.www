@@ -330,9 +330,6 @@
 [data-theme="light"] #bannerBgWrapper{
     background-image: url("/assets/images/home/banner-bg-light.webp");
     filter: none;
-    // Its field already melts into the page, so the dark portrait's fades stay off it.
-    -webkit-mask-image: none;
-    mask-image: none;
 }
 [data-theme="light"] #bannerCardBlur{
     background-color: rgba(var(--purple-700-rgb), 0.86);
