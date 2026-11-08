@@ -1,4 +1,6 @@
-#sp-main-body{padding:100px 0}
+// The bottom padding is the gap above the footer: one section gap, the same rhythm as
+// between sections, so the last section reads as part of the page, not of the footer.
+#sp-main-body{padding:100px 0 var(--vh-section-gap)}
 @media (min-width: 992px){
     #sp-main-body{padding-top:200px}
 }
@@ -666,9 +668,9 @@
 #managerFeaturesList .star-effect{
     bottom: 142px;
 }
+// Last on the page: #sp-main-body's bottom padding is the gap above the footer.
 #selfSetupButtons{
     margin-top: -50px;
-    padding-bottom: 100px;
 }
 @media (max-width: 1399px) {
     #managerFeaturesList{

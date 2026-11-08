@@ -803,6 +803,12 @@ iconify-icon {
 .section-space-bottom + .section-space-top{
     padding-top: 0;
 }
+// The same at the end of the page: #sp-main-body's bottom padding is the one
+// section gap above the footer, so the last section adds none of its own.
+#sp-main-body .section-space:last-child,
+#sp-main-body .section-space-bottom:last-child{
+    padding-bottom: 0;
+}
 .section-space .section-space{
     padding-top: calc(var(--vh-section-gap) * 0.625);
     padding-bottom: calc(var(--vh-section-gap) * 0.625);
