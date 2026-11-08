@@ -79,8 +79,21 @@
 /*-------------- VpnHood! Connect page --------------*/
 #screenshotSlider .item {
     flex-shrink: 0;
-    text-align: center;
-    white-space: nowrap;
+}
+// The strip's phones: CONNECT's whole screens, drawn by tools/make-app-shots.py with the status
+// bar, the home indicator and the phone's own round corners, shown 220 wide in a 10px bezel.
+// No caption: each screen names itself at its top.
+.vh-phone{
+    width: 240px;
+    padding: 10px;
+    border-radius: 38px;
+    background: var(--vh-device-bezel);
+    box-shadow: 0 0 0 2px var(--vh-device-rim), 0 20px 40px var(--vh-device-shadow);
+}
+.vh-phone img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
 #downloadIconsWrapper>div{
     position: relative;

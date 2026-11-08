@@ -129,6 +129,12 @@
     // scrolled-under cells don't bleed through it.
     --vh-table-sticky-bg: #150e34;
     --vh-map-dot: rgba(var(--purple-130-rgb), 0.55);       // land dots on the /free-vpn/ map
+    // The phone around the app's screens on /free-vpn/ (.vh-phone): its bezel, the rim's
+    // hairline and its shadow. Dark in both themes, as the app inside it is (_light.scss
+    // leaves them alone).
+    --vh-device-bezel: #0e0b24;
+    --vh-device-rim: #3b3566;
+    --vh-device-shadow: rgba(0, 0, 0, 0.45);
     // Vertical rhythm between page sections. 13.9vw hits exactly 200px at a
     // 1440px viewport, so every desktop screen keeps the designed spacing and
     // only narrower ones tighten, down to a 72px floor on phones.
@@ -938,10 +944,13 @@ iconify-icon {
 // RTL: the linear slider (vh-general.js) animates translateX(-x) and assumes an
 // LTR flex strip whose overflow extends rightward; in RTL the overflow extends
 // left, so the strip empties instead of looping. Keep the strip LTR so the loop
-// runs identically in every language (captions inside still render their own
-// bidi text correctly).
+// runs identically in every language, and each item right to left again: an item
+// that inherited LTR laid "تفکیک IPها" out backwards, its Latin word on the wrong side.
 [dir="rtl"] .linear-slider-items{
     direction: ltr;
+}
+[dir="rtl"] .linear-slider-items > *{
+    direction: rtl;
 }
 
 // RTL: our Bootstrap build is the LTR one — .text-start/.text-end pin left/right
@@ -1585,6 +1594,19 @@ iconify-icon {
     margin: 0 auto;
     // The ends fade on purpose: a name there drops to about 2.3:1, and crosses the middle in full.
     mask-image: linear-gradient(90deg,transparent 0,var(--purple-800) 20%,var(--purple-800) 80%,transparent);
+}
+// A finger or the mouse holds the strip and drags it (vh-general.js), anywhere in its window,
+// between the items too. A vertical swipe still scrolls the page and two fingers still zoom; a
+// mouse drag selects no text, and a long press on iOS opens no menu for the picture under it.
+.linear-slider-wrapper{
+    touch-action: pan-y pinch-zoom;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    cursor: grab;
+}
+.linear-slider-wrapper:active{
+    cursor: grabbing;
 }
 /*-------------- Flag pill --------------*/
 // A round flag beside a country name: the home #flagSlider items and the list

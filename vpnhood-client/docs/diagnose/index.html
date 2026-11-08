@@ -23,8 +23,8 @@ extra_css:
   it. Addresses go through the redactor, which is on by default, but the settings do not, so a
   custom DNS server shows as it is: the page says so. Sites are logged only at the Debug level.
 
-  The pictures are the app's own, cut to the part each step needs, which also drops the sample
-  data's old version number. Drawn with the store screenshot tool at 3x and brought down to 2x.
+  The pictures are the app's own in the reader's language, cut to the part each step needs, which
+  also drops the sample data's old version number: tools/make-app-shots.py draws them.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-client/docs/hero-diagnose.svg" %}
@@ -33,18 +33,18 @@ extra_css:
 <ol>
   <li>{{ t.step_open }}
     <figure class="vh-docs-shot">
-      <img src="/assets/images/vpnhood-client/docs/diagnose-menu.webp" alt="{{ t.shot_menu_alt }}" width="300" height="136" loading="lazy">
+      {% include app-shot.html name="diagnose-menu" alt=t.shot_menu_alt %}
     </figure>
   </li>
   <li>{{ t.step_repeat }}</li>
   <li>{{ t.step_stop }}
     <figure class="vh-docs-shot">
-      <img src="/assets/images/vpnhood-client/docs/diagnose-stop.webp" alt="{{ t.shot_stop_alt }}" width="240" height="246" loading="lazy">
+      {% include app-shot.html name="diagnose-stop" alt=t.shot_stop_alt %}
     </figure>
   </li>
   <li>{{ t.step_report }}
     <figure class="vh-docs-shot">
-      <img src="/assets/images/vpnhood-client/docs/diagnose-report.webp" alt="{{ t.shot_report_alt }}" width="336" height="226" loading="lazy">
+      {% include app-shot.html name="diagnose-report" alt=t.shot_report_alt %}
     </figure>
   </li>
   <li>{{ t.step_send }}</li>

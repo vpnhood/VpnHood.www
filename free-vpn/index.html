@@ -122,77 +122,21 @@ nav_active: free-vpn
                               class="linear-slider-items d-flex align-items-center gap-5"
                               role="list"
                             >
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_global_server_network }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/global-server-network.webp"
-                                  alt="{{ t.alt_servers_list }}"
-                                  width="280"
-                                  height="400"
-                                />
+                              {%- comment -%} Whole CONNECT screens in a phone, uncaptioned: each names itself at its top. {%- endcomment %}
+                              <div class="item vh-phone" role="listitem">
+                                {% include app-shot.html name="connect-home" alt=t.alt_home loading="eager" %}
                               </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_split_countries }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/split-countries.webp"
-                                  alt="{{ t.alt_exclude_country }}"
-                                  width="280"
-                                  height="400"
-                                />
+                              <div class="item vh-phone" role="listitem">
+                                {% include app-shot.html name="connect-locations" alt=t.alt_locations loading="eager" %}
                               </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_split_apps }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/split-apps.webp"
-                                  alt="{{ t.alt_apps_filter }}"
-                                  width="280"
-                                  height="400"
-                                />
+                              <div class="item vh-phone" role="listitem">
+                                {% include app-shot.html name="connect-cloak-mode" alt=t.alt_cloak_mode loading="eager" %}
                               </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_split_ips }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/split-ips.webp"
-                                  alt="{{ t.alt_ip_filter }}"
-                                  width="280"
-                                  height="400"
-                                />
+                              <div class="item vh-phone" role="listitem">
+                                {% include app-shot.html name="connect-split-tunneling" alt=t.alt_split_tunneling loading="eager" %}
                               </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_split_domains }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/split-domains.webp"
-                                  alt="{{ t.alt_ip_filter }}"
-                                  width="280"
-                                  height="400"
-                                />
-                              </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_protocols }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/protocols.webp"
-                                  alt="{{ t.alt_protocols }}"
-                                  width="280"
-                                  height="400"
-                                />
-                              </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_smart_proxies }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/smart-proxies.webp"
-                                  alt="{{ t.alt_languages }}"
-                                  width="280"
-                                  height="400"
-                                />
-                              </div>
-                              <div class="item" role="listitem">
-                                <h3 class="h6">{{ t.slide_private_dns }}</h3>
-                                <img
-                                  src="/assets/images/vpnhood-connect/screenshot/private-dns.webp"
-                                  alt="{{ t.alt_languages }}"
-                                  width="280"
-                                  height="400"
-                                />
+                              <div class="item vh-phone" role="listitem">
+                                {% include app-shot.html name="connect-quick-launch" alt=t.alt_quick_launch loading="eager" %}
                               </div>
                             </div>
                           </div>

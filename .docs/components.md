@@ -82,7 +82,15 @@ from the start, AOS off (`footer.html`) and every CSS animation and transition r
   tour the site never turns on); under reduced motion the intro runs out of sight.
 - **Typewriter**: the button ends the line; paused, the line shows its whole phrase.
 - **Sliding strips** (`.linear-slider-wrapper`): the button sits under the strip, as its ends
-  fade under a mask.
+  fade under a mask. A finger or the mouse button holds a strip still, and a drag moves it either
+  way, paused too, so a visitor who asked for reduced motion can still see every item; let go, it
+  goes on by itself unless its button paused it. `touch-action: pan-y pinch-zoom` leaves a
+  vertical swipe to scroll the page, which lets go of the strip, and two fingers to zoom. A loop
+  runs from the first item to its copy, the gap after the last item included: half the strip's
+  width came half a gap short, and the strip skipped 24px at every wrap. A strip starts with its
+  first item in the middle, the last items' copies before it: at the left end the first item sat
+  under the fade and was the first to leave. No strip holds a link; one that does needs a drag
+  kept from clicking it.
 
 ## Skip link — `header.html`
 
@@ -281,31 +289,47 @@ notice (`/legal/website/privacy-policy/`) describes this; change both together.
 
 ## App screenshots — `_includes/app-shot.html` + `tools/make-app-shots.py`
 
-A feature page shows the app's own screen, in the reader's language: a Persian reader sees
-the Persian app, right to left, as their phone shows it. Every picture in
-`assets/images/app/<lang>/` is drawn by the app's real UI, never taken by hand. The store
+A page that shows the app shows it in the reader's language: a Persian reader sees the Persian
+app, right to left, as their phone shows it. Every picture in `assets/images/app/<lang>/` is
+drawn by the app's real UI, never taken by hand: the feature pages' screens, `/free-vpn/`'s
+strip (`connect-*`, from CONNECT) and the CLIENT docs' details (`diagnose-*`). The store
 screenshot tool in the VpnHood repo (`src/Apps/Tools/StoreScreenshots`, whose README explains
-it) starts the Avalonia UI headless against the CLIENT store fixture, with no app, VPN or
+it) starts the Avalonia UI headless against a product's store fixture, with no app, VPN or
 device, once per language in `_data/i18n/`.
 
-    python tools/make-app-shots.py                    # every picture in every language, ~3 min
+    python tools/make-app-shots.py                    # every picture in every language, ~4 min
     python tools/make-app-shots.py --only home --lang en,fa
     python tools/make-app-shots.py --check            # missing or extra files, writes nothing
 
-It needs the .NET SDK, Pillow, and the `VpnHood` and `Vpnhood.App.Client` repos beside this
-one. The languages, the Android phone's capabilities and the demo apps come from
-`Vpnhood.App.Client/store/screenshots.json`, and a screen the Google Play set also shows takes
-that shot's patch, so the site shows what the listing shows. The screens are `SHOTS` in the
-script: a route (the tool's `PageRoutes.cs`), and where needed a taller screen (`height`), the
-empty bottom cut off (`trim`) or the top of a long page with no scroll bar (`cut`), a patch over
-the fixture and controls to hide. Each picture is 840 wide; the script writes their heights to
-`_data/app_shots.yml`. Never edit either output by hand. Rerun it after a change to the app's
-screens or words: the same inputs draw the same bytes, so git shows only what changed.
+It needs the .NET SDK, Pillow, and the `VpnHood`, `Vpnhood.App.Client` and
+`Vpnhood.App.Connect` repos beside this one. The languages, the Android phone's capabilities and
+the demo apps come from that product's `store/screenshots.json`, and a screen its Google Play
+set also shows takes that shot's patch, so the site shows what the listing shows. The screens
+are `SHOTS` in the script: a route (the tool's `PageRoutes.cs`, which also opens the menu and
+the message a diagnosis ends with), and where needed a taller screen (`height`), the empty
+bottom cut off (`trim`), the top of a long page with no scroll bar (`cut`), a box cut out
+(`crop`, measured on the English screen and mirrored right to left) or the message box found on
+the page (`box`), a ring (`ring`), or else the whole screen in the Google Play set's own phone,
+status bar and home indicator included, with the phone's round corners (`phone`), a patch over
+the fixture (filled split lists and a rated proxy list among them, with reserved example names
+and addresses) and controls to hide. The script writes each picture's
+size to `_data/app_shots.yml`. Never edit either output by hand. Rerun it after a change to the
+app's screens or words: the same inputs draw the same bytes, so git shows only what changed.
 
 A page shows one with `{% include app-shot.html name="protocols" alt=t.shot_alt %}` (add
 `loading="eager"` above the fold). The include picks the page's language, falls back to
-English for a language with no picture, and takes the height from the data file. The pictures
-are app UI: the same in both themes, never in `make-light-art.py`.
+English for a language with no picture, and gives half the picture's pixel size as its width
+and height: each is drawn at twice the size it is shown (the feature pages' screens a little
+more, and CSS sizes those). The pictures are app UI: the same in both themes, never in
+`make-light-art.py`.
+
+`/free-vpn/`'s strip shows five of CONNECT's Google Play screens whole (`connect-*`: home
+connected, locations, Cloak Mode, Split Tunneling, Quick Launch), each drawn by that shot's own
+patch, with no caption, as each names itself at its top. Each sits 220 wide in `.vh-phone`
+(`_custom.scss`), a 10px bezel on the `--vh-device-*` tokens, dark in both themes as the app
+inside it is; the strip starts with the home screen in the middle (see "Pause buttons"). It was
+eight crops of settings screens with captions, until the owner chose this on 2026-11-07: the
+strip is something a visitor glances at, never a list of features, which have their own pages.
 
 The Cloak Mode page shows the bottom of `home` with a ring around the Protocol row
 (`.vh-feature-shot-mark`, in percentages of that crop). The row spans the screen, so the ring

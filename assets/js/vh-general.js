@@ -212,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // presentation only, so hide them from assistive tech or every item is
         // announced twice.
         const originalCount = container.children.length;
+        if (!originalCount) return;
         container.innerHTML += container.innerHTML;
         Array.from(container.children).slice(originalCount).forEach(el => el.setAttribute('aria-hidden', 'true'));
 
@@ -219,26 +220,64 @@ document.addEventListener('DOMContentLoaded', function () {
         let scrollLeft = 0;
         const scrollSpeed = 3; // Adjust the scroll speed as needed
         let paused = false;
+        let held = null; // the pointer holding the strip, and its last x
+
+        // Puts the strip at x, wrapped into one loop whichever way it went. A loop runs from the
+        // first item to its copy, the gap after the last item included: half the strip's width
+        // came half a gap short, and the strip skipped that much at every wrap.
+        const moveTo = x => {
+            const loop = container.children[originalCount].offsetLeft - container.children[0].offsetLeft;
+            scrollLeft = loop > 0 ? (x % loop + loop) % loop : 0;
+            container.style.transform = `translateX(-${scrollLeft}px)`;
+        };
+
+        // A strip starts with its first item in the middle, the last ones' copies before it: the
+        // first item is the one a strip leads with (/free-vpn/'s connected home screen), and at
+        // the left end it sat under the fade and was the first to leave.
+        const first = container.children[0];
+        moveTo(first.offsetLeft + first.offsetWidth / 2 - container.parentElement.clientWidth / 2);
 
         function animateCarousel(timestamp) {
             if (paused) return;
-            if (!lastTimestamp) {
+            // A held strip stands still, and goes on from where it was let go.
+            if (!lastTimestamp || held) {
                 lastTimestamp = timestamp;
             }
 
             const deltaTime = timestamp - lastTimestamp;
             lastTimestamp = timestamp;
 
-            scrollLeft += scrollSpeed * deltaTime / 60; // Normalize speed
-            if (scrollLeft >= container.scrollWidth / 2) {
-                scrollLeft = 0;
-            }
-            container.style.transform = `translateX(-${scrollLeft}px)`;
+            moveTo(scrollLeft + scrollSpeed * deltaTime / 60); // Normalize speed
             requestAnimationFrame(animateCarousel);
         }
 
         let lastTimestamp = null;
         requestAnimationFrame(animateCarousel);
+
+        // A finger or the mouse button on the strip holds it, and a drag moves it either way,
+        // paused too, so a visitor who asked for reduced motion can still see every item. Once
+        // let go it goes on by itself, unless its pause button stopped it. A vertical swipe
+        // still scrolls the page (touch-action in _default.scss), which lets go of the strip.
+        // The window listens, not the strip: the items overflow the strip's own box, which the
+        // strip carries off to the left as it moves, so a press between two items hit nothing.
+        const view = container.parentElement;
+        view.addEventListener('pointerdown', e => {
+            if (held || e.button !== 0) return;
+            held = { id: e.pointerId, x: e.clientX };
+            view.setPointerCapture(e.pointerId);
+        });
+        view.addEventListener('pointermove', e => {
+            if (!held || e.pointerId !== held.id) return;
+            moveTo(scrollLeft + held.x - e.clientX);
+            held.x = e.clientX;
+        });
+        const letGo = e => {
+            if (held && e.pointerId === held.id) held = null;
+        };
+        view.addEventListener('pointerup', letGo);
+        view.addEventListener('pointercancel', letGo);
+        // A mouse drag would otherwise pick up the picture under it.
+        view.addEventListener('dragstart', e => e.preventDefault());
 
         // The pause button goes under the strip: its ends fade under a mask, which would
         // fade a button inside it too.
