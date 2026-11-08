@@ -1187,6 +1187,14 @@ a.vh-feature-chip:hover{
     color: var(--vh-accent-ink);
 }
 
+// The features index lists its features in groups, a heading each. The groups are parts of one
+// list, so two of them sit three quarters of a page-section gap apart: 150px on wide screens,
+// scaling down with it, but never under its 72px floor, so phones keep theirs. Consecutive
+// sections already share one gap, the upper one's bottom padding, so only that one changes.
+.vh-feature-group:has(+ .vh-feature-group){
+    padding-bottom: max(72px, calc(var(--vh-section-gap) * 0.75));
+}
+
 // Index cards lay a small mark beside the text: the app's own feature illustration where
 // one exists, otherwise a line symbol in the site's icon disc. Flex follows the page
 // direction, so the mark sits on the left in LTR and on the right in RTL with no extra rule.
