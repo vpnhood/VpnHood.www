@@ -726,11 +726,12 @@
     object-position: bottom;
 }
 
-// A ring around the row the text is about, here the last of those four. The shot is pinned in
-// both themes and never mirrors, so the ring keeps the same colour and the same side everywhere.
+// A ring around the row the text is about, here the last of those four. The row spans the
+// screen, so the ring fits a right-to-left language's picture too, and the picture is the same
+// in both themes, so the ring keeps its colour. Measured on tools/make-app-shots.py's home.
 .vh-feature-shot-mark{
     position: absolute;
-    inset: 72% 3.6% 7.2%;
+    inset: 72% 3.9% 7.3%;
     border: 2px solid var(--green-200);
     border-radius: 10px;
     box-shadow: 0 0 14px rgba(var(--green-200-rgb), .45);

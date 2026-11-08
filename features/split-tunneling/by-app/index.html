@@ -36,13 +36,7 @@ extra_css:
                           </div>
                           <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
                             <div class="vh-feature-shot">
-                              <img
-                                src="/assets/images/features/split-by-app-app.webp"
-                                alt="{{ t.shot_alt }}"
-                                width="840"
-                                height="1615"
-                                loading="eager"
-                              />
+                              {% include app-shot.html name="split-apps" alt=t.shot_alt loading="eager" %}
                             </div>
                           </div>
                         </div>

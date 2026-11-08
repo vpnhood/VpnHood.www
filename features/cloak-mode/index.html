@@ -36,13 +36,7 @@ extra_css:
                           </div>
                           <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
                             <div class="vh-feature-shot">
-                              <img
-                                src="/assets/images/features/cloak-mode-app.webp"
-                                alt="{{ t.shot_alt }}"
-                                width="840"
-                                height="1615"
-                                loading="eager"
-                              />
+                              {% include app-shot.html name="cloak-mode" alt=t.shot_alt loading="eager" %}
                             </div>
                           </div>
                         </div>
@@ -104,13 +98,7 @@ extra_css:
                           <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
                             <div class="vh-feature-shot vh-feature-shot-detail">
                               <div class="position-relative">
-                                <img
-                                  src="/assets/images/features/home-app.webp"
-                                  alt="{{ t.steps_shot_alt }}"
-                                  width="840"
-                                  height="1615"
-                                  loading="lazy"
-                                />
+                                {% include app-shot.html name="home" alt=t.steps_shot_alt %}
                                 <span class="vh-feature-shot-mark" aria-hidden="true"></span>
                               </div>
                             </div>

@@ -279,6 +279,38 @@ Preview with `?geo=DE` (banner) or `?geo=US` (none); clear `vh_consent` to see i
 local build never loads GTM, so the banner can be clicked safely. The website's privacy
 notice (`/legal/website/privacy-policy/`) describes this; change both together.
 
+## App screenshots — `_includes/app-shot.html` + `tools/make-app-shots.py`
+
+A feature page shows the app's own screen, in the reader's language: a Persian reader sees
+the Persian app, right to left, as their phone shows it. Every picture in
+`assets/images/app/<lang>/` is drawn by the app's real UI, never taken by hand. The store
+screenshot tool in the VpnHood repo (`src/Apps/Tools/StoreScreenshots`, whose README explains
+it) starts the Avalonia UI headless against the CLIENT store fixture, with no app, VPN or
+device, once per language in `_data/i18n/`.
+
+    python tools/make-app-shots.py                    # every picture in every language, ~3 min
+    python tools/make-app-shots.py --only home --lang en,fa
+    python tools/make-app-shots.py --check            # missing or extra files, writes nothing
+
+It needs the .NET SDK, Pillow, and the `VpnHood` and `Vpnhood.App.Client` repos beside this
+one. The languages, the Android phone's capabilities and the demo apps come from
+`Vpnhood.App.Client/store/screenshots.json`, and a screen the Google Play set also shows takes
+that shot's patch, so the site shows what the listing shows. The screens are `SHOTS` in the
+script: a route (the tool's `PageRoutes.cs`), and where needed a taller screen (`height`), the
+empty bottom cut off (`trim`) or the top of a long page with no scroll bar (`cut`), a patch over
+the fixture and controls to hide. Each picture is 840 wide; the script writes their heights to
+`_data/app_shots.yml`. Never edit either output by hand. Rerun it after a change to the app's
+screens or words: the same inputs draw the same bytes, so git shows only what changed.
+
+A page shows one with `{% include app-shot.html name="protocols" alt=t.shot_alt %}` (add
+`loading="eager"` above the fold). The include picks the page's language, falls back to
+English for a language with no picture, and takes the height from the data file. The pictures
+are app UI: the same in both themes, never in `make-light-art.py`.
+
+The Cloak Mode page shows the bottom of `home` with a ring around the Protocol row
+(`.vh-feature-shot-mark`, in percentages of that crop). The row spans the screen, so the ring
+fits right-to-left languages too; if the home screen's rows move, measure them again.
+
 ## Pricing — `_data/pricing.yml` + `_data/i18n/en/free_vpn_go_premium.json`
 
 Every number on `/free-vpn/go-premium/` comes from `_data/pricing.yml`: the free price,

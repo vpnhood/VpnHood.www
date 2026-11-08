@@ -1,0 +1,12 @@
+{%- comment -%}
+  A screen of the VpnHood! app, in the page's language: the reader sees the words and the
+  direction their own app shows. Drawn by tools/make-app-shots.py, which also writes each
+  picture's height to _data/app_shots.yml (every one is 840 wide); never edit either by hand.
+  A language with no picture of its own shows the English one.
+
+  {% include app-shot.html name="protocols" alt=t.shot_alt loading="eager" %}
+{%- endcomment -%}
+{%- assign vh_shot = site.data.app_shots[include.name] -%}
+{%- assign vh_shot_lang = vh_lang | default: 'en' -%}
+{%- unless vh_shot[vh_shot_lang] -%}{%- assign vh_shot_lang = 'en' -%}{%- endunless -%}
+<img src="/assets/images/app/{{ vh_shot_lang }}/{{ include.name }}.webp" alt="{{ include.alt }}" width="840" height="{{ vh_shot[vh_shot_lang] }}" loading="{{ include.loading | default: 'lazy' }}" />

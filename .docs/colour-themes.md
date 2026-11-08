@@ -137,9 +137,10 @@ cross-fades the flat field into the light page background (`PAGE_BG`, which must
 sync with `--purple-800` in `_sass/theme/_light.scss`) so a full-bleed backdrop has no
 seam. CSS can't express that.
 
-**Never convert anything depicting the real app UI.** The CONNECT screenshots, the phone
-mockup, and `vpnhood-connect/download-pending-bg.webp` (which looks like a backdrop but is
-a phone running the app) must render identically in both themes — `#appWrapper` becomes a
+**Never convert anything depicting the real app UI.** The app screenshots in `app/`
+(`tools/make-app-shots.py`), the CONNECT screenshots, the phone mockup, and
+`vpnhood-connect/download-pending-bg.webp` (which looks like a backdrop but is a phone running
+the app) must render identically in both themes — `#appWrapper` becomes a
 dark showcase panel on a light page instead. Also skipped, deliberately: brand logos, the
 flag/brand marks, and art that already reads on white (the hero glows, the resilient
 underline, the guarantee ring, the rocket, the `light-bg-*` blurs, the open-source swirl).

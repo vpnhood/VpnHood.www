@@ -28,8 +28,9 @@ field is cross-faded into the light theme's page background so a full-bleed back
 no seam where the image stops. SVGs are recoloured through an explicit per-file map —
 they are hand-authored vector art, so guessing is worse than naming the swaps.
 
-DELIBERATELY NOT CONVERTED: anything depicting the real (dark) app UI — the CONNECT
-screenshots, the phone mockup, and `vpnhood-connect/download-pending-bg.webp`, which looks
+DELIBERATELY NOT CONVERTED: anything depicting the real (dark) app UI — the app screenshots
+in `app/` (make-app-shots.py), the CONNECT screenshots, the phone mockup, and
+`vpnhood-connect/download-pending-bg.webp`, which looks
 like a backdrop but is a phone running the app. Those must render identically in both
 themes. Also skipped: the brand logos and flag/brand marks, and art that already reads on
 a light page (the soft purple/green hero glows, the resilient underline, the guarantee
