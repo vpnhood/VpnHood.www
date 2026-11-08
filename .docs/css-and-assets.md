@@ -97,7 +97,11 @@ legacy CMS `/templates`, `/media`, `/plugins` folders.
   preference + auto-switch — see [translations.md](translations.md)), `theme.js` (colour
   theme — see [colour-themes.md](colour-themes.md)).
 - **Images:** every dark backdrop has a generated `<name>-light.<ext>` sibling for the light
-  theme — produced by `tools/make-light-art.py`, never hand-edited.
+  theme — produced by `tools/make-light-art.py`, never hand-edited. The home hero's guardian
+  is opaque on her black field, which fills the hero on a desktop; up to 991px she sits
+  halfway down it, so `banner-guardian-cutout.webp`, the same picture with the field
+  transparent, replaces her there. `tools/make-guardian-cutout.py` produces it from
+  `banner-guardian.webp`; rerun it when that changes, never edit the output.
 - **Self-host third-party assets — do NOT hot-link public CDNs.** We target China (see the
   China promo bar), and the **Great Firewall blocks/throttles `cdnjs.cloudflare.com`,
   `unpkg.com`, and all Google hosts (`fonts.googleapis.com`/`fonts.gstatic.com`,
