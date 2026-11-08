@@ -21,6 +21,7 @@ WebP noise).
 
     python tools/make-split-art.py            # writes every image below
     python tools/make-split-art.py --check    # report images that differ from a fresh draw
+    python tools/make-split-art.py --app      # the app's own two copies (--app --check to check them)
 
 Writes assets/images/features/art/<name>.webp for the VARIANTS below and for FROM_SOURCE,
 the two original drawings. split-overview.webp, the Split Tunneling page's hero, is also its
@@ -28,6 +29,13 @@ card on the home page, the features index and CLIENT's page. Never edit those by
 or change one, edit this script and rerun. The art sits on a transparent ground,
 so it needs no light counterpart (see make-light-art.py). Needs Pillow, numpy, Node and the
 VpnHood.AppUi.Spa repo beside this one, for its Playwright. Run from the repo root.
+
+The app shows the same two drawings, sharper (640x656): split-ip.webp on its Split Tunneling
+screen and access-local-network.webp on Local network, in its asset store in the VpnHood repo
+(src/AppUi/VpnHood.AppUi.Assets.Classic/assets/images). --app carves them the same way, from
+their untouched originals in tools/split-art/app/, and writes them there. Then run the store's
+_zip-assets.ps1, as its assets/ and ui.zip are committed together, and redraw the site's pictures
+of those screens: make-app-shots.py --only split-tunneling,split-local-network,connect-split-tunneling.
 """
 from __future__ import annotations
 
@@ -59,6 +67,9 @@ VARIANTS = {
     "split-dns": [["pill", {"x": 52, "y": 96, "w": 82}, "DNS", "violet"]],
 }
 FROM_SOURCE = {"split-by-ip": "gate-ip.webp", "split-local-network": "gate-local-network.webp"}
+# The app's own copies of the two drawings: untouched in tools/split-art/app/, carved into the app's asset store.
+APP_ART = ROOT.parent / "VpnHood" / "src" / "AppUi" / "VpnHood.AppUi.Assets.Classic" / "assets" / "images"
+APP_SOURCE = ["split-ip.webp", "access-local-network.webp"]
 # The bubble zones of the two originals: left above the up arrow, right above the through arrow.
 LEFT, RIGHT = (slice(30, 192), slice(10, 150)), (slice(110, 225), slice(355, 468))
 
@@ -77,8 +88,11 @@ def clean_gate() -> tuple[Image.Image, Image.Image]:
     return Image.fromarray(base.astype(np.uint8)), Image.fromarray(shield)
 
 
-def carve_door(gate: Image.Image, hood_png: Path) -> tuple[Image.Image, np.ndarray]:
-    """The gate with the hexagon gone and the hood carved in its place, and how much of each pixel that is (0..1)."""
+def carve_door(gate: Image.Image, hood_png: Path, out_size: tuple[int, int] = (468, 480)) -> tuple[Image.Image, np.ndarray]:
+    """The gate with the hexagon gone and the hood carved in its place, and how much of each pixel that is (0..1).
+
+    The work is done on the drawing at four times 468x480, whatever its own size, so every measure below is in
+    468x480 pixels; the result comes out at `out_size`, the app's 640x656 copies as sharp as they came in."""
     S = 4
     big = np.array(gate.resize((468 * S, 480 * S), Image.LANCZOS)).astype(float)
     H, W = big.shape[:2]
@@ -172,19 +186,37 @@ def carve_door(gate: Image.Image, hood_png: Path) -> tuple[Image.Image, np.ndarr
     for c in range(3):
         big[..., c] += grain * (Mo * 8 + (1 - Mo) * around * 4) + coarse * Mo * 8
 
-    carved = Image.fromarray(np.clip(big, 0, 255).astype(np.uint8)).resize((468, 480), Image.LANCZOS)
+    carved = Image.fromarray(np.clip(big, 0, 255).astype(np.uint8)).resize(out_size, Image.LANCZOS)
     touched = (np.array(hm.filter(ImageFilter.MaxFilter(4 * S + 1))) > 0) | (around > 0.004) | (Mo > 0)
-    region = Image.fromarray((touched * 255).astype(np.uint8)).resize((468, 480), Image.BOX).point(lambda v: 255 if v else 0)
-    region = np.array(region.filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1))).astype(float) / 255
-    return carved, region
+    region = Image.fromarray((touched * 255).astype(np.uint8)).resize(out_size, Image.BOX).point(lambda v: 255 if v else 0)
+    k = out_size[0] / 468  # the region's margin and feather, 2px and 1px at 468, in the output's pixels
+    region = region.filter(ImageFilter.MaxFilter(2 * round(2 * k) + 1)).filter(ImageFilter.GaussianBlur(k))
+    return carved, np.array(region).astype(float) / 255
 
 
-def draw(tmp: Path) -> dict[str, Image.Image]:
+def render(tmp: Path) -> None:
+    """The bubbles of every variant and the hood's mask, drawn by make-split-art.js into tmp."""
     if not PLAYWRIGHT.is_dir():
         sys.exit(f"Playwright not found at {PLAYWRIGHT}: the VpnHood.AppUi.Spa repo must sit beside this one, with its npm packages installed.")
     spec = tmp / "variants.json"
     spec.write_text(json.dumps(VARIANTS), encoding="utf-8")
     subprocess.run(["node", str(ROOT / "tools" / "make-split-art.js"), str(PLAYWRIGHT), str(tmp), str(spec)], check=True)
+
+
+def draw_app(tmp: Path) -> dict[str, Image.Image]:
+    """The app's two copies, each carved at its own size and laid over itself: no bubble reaches the door."""
+    render(tmp)
+    out = {}
+    for source in APP_SOURCE:
+        img = Image.open(SRC / "app" / source).convert("RGBA")
+        carved, region = carve_door(img, tmp / "hood-mask.png", img.size)
+        px = np.array(img).astype(float) * (1 - region[..., None]) + np.array(carved).astype(float) * region[..., None]
+        out[Path(source).stem] = Image.fromarray(np.clip(np.rint(px), 0, 255).astype(np.uint8))
+    return out
+
+
+def draw(tmp: Path) -> dict[str, Image.Image]:
+    render(tmp)
     base, shield = clean_gate()
     carved, region = carve_door(base, tmp / "hood-mask.png")
     images = {}
@@ -210,15 +242,20 @@ def draw(tmp: Path) -> dict[str, Image.Image]:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--check", action="store_true", help="report images that differ from a fresh draw; write nothing")
+    ap.add_argument("--app", action="store_true", help="the app's own two copies, in the VpnHood repo, not the site's")
     args = ap.parse_args()
+    if args.app and not APP_ART.is_dir():
+        sys.exit(f"The app's asset store is not at {APP_ART}: the VpnHood repo must sit beside this one.")
+    # The app's copies keep near their old weight: they came at a quality well above the site's.
+    out_dir, quality = (APP_ART, 95) if args.app else (ART, 88)
     with tempfile.TemporaryDirectory() as t:
         tmp = Path(t)
-        drawn = draw(tmp)
+        drawn = draw_app(tmp) if args.app else draw(tmp)
         stale = []
         for name, img in drawn.items():
-            path = ART / f"{name}.webp"
+            path = out_dir / f"{name}.webp"
             fresh = tmp / f"{name}.webp"
-            img.save(fresh, quality=88, method=6)
+            img.save(fresh, quality=quality, method=6)
             if not path.exists() or path.read_bytes() != fresh.read_bytes():
                 stale.append(name)
                 if not args.check:
