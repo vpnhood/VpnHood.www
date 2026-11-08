@@ -1344,8 +1344,9 @@ a.vh-feature-chip:hover{
     opacity: .55;
 }
 
-// The app's relay illustration beside "How it works". Transparent brand art that reads on
-// both themes, so it is not run through make-light-art.
+// A feature page's illustration, at the top of the page beside its title; the app's screenshot
+// sits further down, beside the text it shows. Transparent brand art that reads on both themes,
+// so it is not run through make-light-art.
 .vh-feature-relay{
     display: flex;
     justify-content: center;
