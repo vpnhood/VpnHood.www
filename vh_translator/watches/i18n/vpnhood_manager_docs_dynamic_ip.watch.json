@@ -30,7 +30,7 @@
     "keys_title": "Keys you have already given out",
     "keys_desc": "Keys you copy from MANAGER from now on carry the name or the URLs. An app holding an older key gets the new one the next time it connects, as <b>[manager_push_token]</b> is on by default, so set this up while the address in its key still works. An app that can no longer reach the server needs a new key from you.",
     "limits_title": "Keep in mind",
-    "limit_drop": "<b>Connected apps drop.</b> Apps connected at that moment lose the connection. They can connect again once the name or the file shows the new address, usually within a few minutes.",
+    "limit_drop": "<b>Connected apps drop.</b> Apps connected at that moment lose the connection. With a dynamic DNS name, apps on Android, Windows and Linux find the new address and connect again by themselves, usually within ten minutes, unless they are set to UDP. Apps on iOS, and those with farm token URLs alone, can connect again once the name or the file shows the new address, usually within a few minutes.",
     "limit_shared": "<b>A shared address does not work.</b> Some providers put many customers behind one public address, often called CGNAT, and connections from outside never reach your router. If the address your router shows is not the one websites see, ask your provider for a public address of your own.",
     "limit_lines": "<b>Two internet lines do not work with this.</b> Behind a router that sends each connection out over another line, the address seems to change all the time, and the server keeps reconfiguring. On such a server, turn <b>[manager_auto_config]</b> off and set the addresses yourself.",
     "standalone_title": "On a standalone server",
