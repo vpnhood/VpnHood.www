@@ -7,7 +7,7 @@
   "linux_desc": "推荐使用 Linux：只有在 Linux 上，服务器才能像处理 IPv4 一样处理 IPv6。服务器可在 x64 和 ARM64 上运行，支持以下发行版及基于它们的发行版：",
   "th_distribution": "发行版",
   "th_versions": "版本",
-  "arch_rolling": "最新版本",
+  "arch_rolling": "滚动发行",
   "linux_needs": "安装命令需要 root 权限和 systemd，systemd 会将服务器作为服务运行。如果系统缺少服务器所需的 ICU 库，安装命令会自动安装它。",
   "linux_tun": "服务器的 VPN 适配器需要 TUN 设备以及 <code>[cmd_ip]</code> 和 <code>[cmd_iptables]</code> 命令，几乎所有服务器都具备这些。缺少它们时，应用仍可连接，但始终处于<a href=\"/features/cloak-mode/\">伪装模式</a>。",
   "linux_unsupported": "不支持：Alpine 以及其他基于 musl 而非 glibc 的发行版（可在这些系统上用 Docker 运行服务器），以及早于 glibc 2.27 的发行版，例如 CentOS 7。",

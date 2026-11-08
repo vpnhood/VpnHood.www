@@ -7,7 +7,7 @@
   "linux_desc": "Linux es el sistema recomendado: solo en él el servidor gestiona IPv6 igual que IPv4. El servidor funciona en x64 y ARM64, en estas distribuciones y en las basadas en ellas:",
   "th_distribution": "Distribución",
   "th_versions": "Versiones",
-  "arch_rolling": "Última versión",
+  "arch_rolling": "Publicación continua",
   "linux_needs": "El comando de instalación necesita acceso root y systemd, que ejecuta el servidor como servicio. Si el sistema no tiene ICU, una biblioteca que el servidor necesita, el comando la instala.",
   "linux_tun": "El adaptador VPN del servidor necesita un dispositivo TUN y los comandos <code>[cmd_ip]</code> y <code>[cmd_iptables]</code>, que casi todos los servidores tienen. Sin ellos, las apps se siguen conectando, pero siempre en <a href=\"/features/cloak-mode/\">Modo Camuflaje</a>.",
   "linux_unsupported": "No compatibles: Alpine y las demás distribuciones basadas en musl en lugar de glibc, donde puedes ejecutar el servidor en Docker, y las distribuciones anteriores a glibc 2.27, como CentOS 7.",

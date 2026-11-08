@@ -7,7 +7,7 @@
   "linux_desc": "Önerilen sistem Linux'tur: sunucu IPv6'yı yalnızca orada IPv4 gibi işler. Sunucu x64 ve ARM64 üzerinde, bu dağıtımlarda ve bunlara dayanan dağıtımlarda çalışır:",
   "th_distribution": "Dağıtım",
   "th_versions": "Sürümler",
-  "arch_rolling": "En son sürüm",
+  "arch_rolling": "Sürekli sürüm (rolling release)",
   "linux_needs": "Kurulum komutu root erişimi ve sunucuyu bir servis olarak çalıştıran systemd gerektirir. Sistemde sunucunun ihtiyaç duyduğu bir kütüphane olan ICU yoksa komut onu kurar.",
   "linux_tun": "Sunucunun VPN adaptörü bir TUN aygıtı ile <code>[cmd_ip]</code> ve <code>[cmd_iptables]</code> komutlarına ihtiyaç duyar; bunlar neredeyse her sunucuda vardır. Bunlar olmadan uygulamalar yine bağlanır, ancak her zaman <a href=\"/features/cloak-mode/\">Kamufle Modu</a> kullanılır.",
   "linux_unsupported": "Desteklenmeyenler: Alpine ve glibc yerine musl üzerine kurulu diğer dağıtımlar (bunlarda sunucuyu Docker'da çalıştırabilirsiniz) ve CentOS 7 gibi glibc 2.27'den eski dağıtımlar.",

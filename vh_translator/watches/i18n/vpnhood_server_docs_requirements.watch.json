@@ -9,7 +9,7 @@
     "linux_desc": "Linux is the recommended system: only there does the server handle IPv6 as it does IPv4. The server runs on x64 and ARM64, on these distributions and the ones built on them:",
     "th_distribution": "Distribution",
     "th_versions": "Versions",
-    "arch_rolling": "Latest version",
+    "arch_rolling": "Rolling release",
     "linux_needs": "The install command needs root access and systemd, which runs the server as a service. Where the system has no ICU, a library the server needs, the command installs it.",
     "linux_tun": "The server's VPN adapter needs a TUN device and the <code>[cmd_ip]</code> and <code>[cmd_iptables]</code> commands, which nearly every server has. Without them, apps still connect, but always in <a href=\"/features/cloak-mode/\">Cloak Mode</a>.",
     "linux_unsupported": "Not supported: Alpine and the other distributions built on musl instead of glibc, where you can run the server in Docker, and distributions older than glibc 2.27, such as CentOS 7.",
