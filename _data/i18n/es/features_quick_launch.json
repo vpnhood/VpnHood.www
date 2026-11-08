@@ -22,6 +22,7 @@
   "app_step1": "Abre el menú, toca <b>Configuraciones</b> y luego <b>Lanzamiento rápido</b>.",
   "app_step2": "Toca <b>Activa el inicio rápido</b>.",
   "app_step3": "Cuando Android te lo pregunte, añade el botón.",
+  "app_fallback": "Si Android no te lo pregunta, añade el botón a mano.",
   "hand_title": "A mano",
   "hand_note": "Cualquier versión de Android",
   "hand_step1": "Desliza hacia abajo desde la parte superior de la pantalla para abrir los ajustes rápidos (configuración rápida en algunos teléfonos).",

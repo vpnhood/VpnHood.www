@@ -22,6 +22,7 @@
   "app_step1": "Abra o menu, toque em <b>Configurações</b> e depois em <b>Lançamento Rápido</b>.",
   "app_step2": "Toque em <b>Ative a inicialização rápida</b>.",
   "app_step3": "Quando o Android perguntar, adicione o bloco.",
+  "app_fallback": "Se o Android não perguntar, adicione o bloco manualmente.",
   "hand_title": "Manualmente",
   "hand_note": "Qualquer versão do Android",
   "hand_step1": "Deslize de cima para baixo na tela para abrir as configurações rápidas.",

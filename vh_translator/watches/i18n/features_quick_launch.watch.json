@@ -24,6 +24,7 @@
     "app_step1": "Open the menu, tap <b>Settings</b>, then <b>Quick Launch</b>.",
     "app_step2": "Tap <b>Turn on quick launch</b>.",
     "app_step3": "When Android asks, add the tile.",
+    "app_fallback": "If Android doesn't ask, add the tile by hand instead.",
     "hand_title": "By hand",
     "hand_note": "Any Android version",
     "hand_step1": "Swipe down from the top of the screen to open Quick Settings.",

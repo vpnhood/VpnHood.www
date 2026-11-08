@@ -22,6 +22,7 @@
   "app_step1": "Ouvrez le menu, appuyez sur <b>Paramètres</b>, puis sur <b>Lancement Rapide</b>.",
   "app_step2": "Appuyez sur <b>Activer le lancement rapide</b>.",
   "app_step3": "Quand Android vous le demande, ajoutez le bloc.",
+  "app_fallback": "Si Android ne vous le demande pas, ajoutez plutôt le bloc à la main.",
   "hand_title": "À la main",
   "hand_note": "Toute version d'Android",
   "hand_step1": "Balayez vers le bas depuis le haut de l'écran pour ouvrir les réglages rapides.",

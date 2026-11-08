@@ -22,6 +22,7 @@
   "app_step1": "打开菜单，点按<b>设置</b>，然后点按<b>快速启动</b>。",
   "app_step2": "点按<b>启用快速启动</b>。",
   "app_step3": "当 Android 询问时，添加该快捷开关。",
+  "app_fallback": "如果 Android 没有询问，请改为手动添加快捷开关。",
   "hand_title": "手动添加",
   "hand_note": "任何 Android 版本",
   "hand_step1": "从屏幕顶部向下滑动，打开快捷设置（部分手机称“控制中心”）。",

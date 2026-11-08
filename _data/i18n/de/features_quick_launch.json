@@ -22,6 +22,7 @@
   "app_step1": "Öffnen Sie das Menü, tippen Sie auf <b>Einstellungen</b> und dann auf <b>Schnellstart</b>.",
   "app_step2": "Tippen Sie auf <b>Schnellstart aktivieren</b>.",
   "app_step3": "Wenn Android nachfragt, fügen Sie die Kachel hinzu.",
+  "app_fallback": "Wenn Android nicht nachfragt, fügen Sie die Kachel stattdessen von Hand hinzu.",
   "hand_title": "Von Hand",
   "hand_note": "Jede Android-Version",
   "hand_step1": "Wischen Sie vom oberen Bildschirmrand nach unten, um die Schnelleinstellungen zu öffnen.",

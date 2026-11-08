@@ -22,6 +22,7 @@
   "app_step1": "Menüyü açın, <b>Ayarlar</b>'a, ardından <b>Hızlı Başlat</b>'a dokunun.",
   "app_step2": "<b>Hızlı başlatmayı etkinleştirin</b> düğmesine dokunun.",
   "app_step3": "Android sorduğunda düğmeyi ekleyin.",
+  "app_fallback": "Android sormazsa düğmeyi elle ekleyin.",
   "hand_title": "Elle",
   "hand_note": "Her Android sürümü",
   "hand_step1": "Hızlı ayarları açmak için ekranın üstünden aşağı kaydırın.",

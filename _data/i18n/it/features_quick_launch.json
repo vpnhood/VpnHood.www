@@ -22,6 +22,7 @@
   "app_step1": "Apri il menu, tocca <b>Impostazioni</b> e poi <b>Avvio rapido</b>.",
   "app_step2": "Tocca <b>Attiva avvio rapido</b>.",
   "app_step3": "Quando Android te lo chiede, aggiungi il riquadro.",
+  "app_fallback": "Se Android non te lo chiede, aggiungi il riquadro a mano.",
   "hand_title": "A mano",
   "hand_note": "Qualsiasi versione di Android",
   "hand_step1": "Scorri verso il basso dall'alto dello schermo per aprire le impostazioni rapide.",
