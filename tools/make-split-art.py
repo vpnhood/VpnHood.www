@@ -22,10 +22,10 @@ WebP noise).
     python tools/make-split-art.py            # writes every image below
     python tools/make-split-art.py --check    # report images that differ from a fresh draw
 
-Writes assets/images/features/art/<name>.webp for the VARIANTS below and for FROM_SOURCE:
-the two original drawings, and split-tunneling.webp, the Split Tunneling card on the home
-page, the features index and CLIENT's page, which shows the IP drawing. Never edit those by
-hand; to add or change one, edit this script and rerun. The art sits on a transparent ground,
+Writes assets/images/features/art/<name>.webp for the VARIANTS below and for FROM_SOURCE,
+the two original drawings. split-overview.webp, the Split Tunneling page's hero, is also its
+card on the home page, the features index and CLIENT's page. Never edit those by hand; to add
+or change one, edit this script and rerun. The art sits on a transparent ground,
 so it needs no light counterpart (see make-light-art.py). Needs Pillow, numpy, Node and the
 VpnHood.AppUi.Spa repo beside this one, for its Playwright. Run from the repo root.
 """
@@ -58,7 +58,7 @@ VARIANTS = {
                         ["pill", {"x": 343, "y": 122, "w": 118}, "news.com", "teal"]],
     "split-dns": [["pill", {"x": 52, "y": 96, "w": 82}, "DNS", "violet"]],
 }
-FROM_SOURCE = {"split-by-ip": "gate-ip.webp", "split-local-network": "gate-local-network.webp", "split-tunneling": "gate-ip.webp"}
+FROM_SOURCE = {"split-by-ip": "gate-ip.webp", "split-local-network": "gate-local-network.webp"}
 # The bubble zones of the two originals: left above the up arrow, right above the through arrow.
 LEFT, RIGHT = (slice(30, 192), slice(10, 150)), (slice(110, 225), slice(355, 468))
 
