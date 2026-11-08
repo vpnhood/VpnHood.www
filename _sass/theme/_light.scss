@@ -179,6 +179,12 @@
 [data-theme="light"] .vh-offcanvas{
     box-shadow: 0 0 40px rgba(23, 18, 58, 0.18);
 }
+// The docs sidebar is the same kind of drawer below 992px (_docs.scss).
+@media (max-width: 991.98px){
+    [data-theme="light"] .vh-docs-side{
+        box-shadow: 0 0 40px rgba(23, 18, 58, 0.18);
+    }
+}
 // Helix draws the burger in white and the pre-loader on its own near-black field.
 [data-theme="light"] .burger-icon > span{
     background-color: var(--vh-text);

@@ -91,6 +91,21 @@
       });
     }
 
+    // ---- Docs drawer (_includes/docs.html, below 992px). Bootstrap puts its backdrop
+    // beside it, inside #sp-main-body, whose z-index: 0 (_custom.scss) holds both under
+    // the fixed header. Lift that main above the header while the drawer is open, so the
+    // drawer covers the header and the backdrop dims it, and drop it once it has slid out. ----
+    var docsSide = document.getElementById('vhDocsSide');
+    var docsMain = docsSide && docsSide.closest('#sp-main-body');
+    if (docsMain) {
+      docsSide.addEventListener('show.bs.offcanvas', function () {
+        docsMain.classList.add('vh-docs-drawer-open');
+      });
+      docsSide.addEventListener('hidden.bs.offcanvas', function () {
+        docsMain.classList.remove('vh-docs-drawer-open');
+      });
+    }
+
     // ---- Optional Bootstrap tooltips/popovers (no-op unless a page opts in) ----
     if (window.bootstrap) {
       document.querySelectorAll('[data-bs-toggle="tooltip"], .hasTooltip').forEach(function (el) {

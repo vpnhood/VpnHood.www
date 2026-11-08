@@ -10,17 +10,40 @@
   header.html assigns would not exist yet when the copy needs them. The sidebar is
   _data/docs_nav.yml keyed by the product folder; a section with no entry gets the
   article alone. The site search box (search-form.html) tops the sidebar.
+
+  Below 992px the sidebar is a drawer (Bootstrap's responsive .offcanvas-lg), opened by
+  the button at the start of the breadcrumb row, so a phone opens every page at its
+  title rather than at the page list. One copy of the links serves both widths; from
+  992px up Bootstrap hides the drawer's header and the button, and the sidebar is the
+  plain column it always was. The drawer is named after the section, as its index is.
 {%- endcomment -%}
 {%- assign vh_dn_section = vh_base_url | split: "/" | where_exp: "s", "s != ''" | first -%}
-{%- assign vh_dn = site.data.docs_nav[vh_dn_section] %}
+{%- assign vh_dn = site.data.docs_nav[vh_dn_section] -%}
+{%- assign vh_nl = site.data.i18n[vh_lang].nav_labels -%}
+{%- assign vh_nl_en = site.data.i18n.en.nav_labels %}
 <main id="sp-main-body" class="vh-docs">
   <div class="container">
-    {% include breadcrumb.html visible=true %}
+    <div class="vh-docs-top">
+      {%- if vh_dn %}
+      {%- assign vh_ds_open = vh_nl.browse_docs | default: vh_nl_en.browse_docs %}
+      <button class="vh-docs-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#vhDocsSide" aria-controls="vhDocsSide" aria-label="{{ vh_ds_open }}" title="{{ vh_ds_open }}"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"></path><path d="M4 6h.01M4 12h.01M4 18h.01"></path></svg></button>
+      {%- endif %}
+      {% include breadcrumb.html visible=true %}
+    </div>
     <div class="vh-docs-grid{% unless vh_dn %} vh-docs-grid--solo{% endunless %}">
       {%- if vh_dn %}
-      <div class="vh-docs-side">
-        {% include search-form.html id="vhDocsSearch" %}
-        {% include docs-nav.html %}
+      {%- assign vh_ds_key = vh_dn_section -%}
+      {%- if vh_ds_key == "self-hosted-vpn" -%}{%- assign vh_ds_key = "docs" -%}{%- endif -%}
+      {%- assign vh_ds_title = vh_nl[vh_ds_key] | default: vh_nl_en[vh_ds_key] %}
+      <div id="vhDocsSide" class="vh-docs-side offcanvas-lg offcanvas-start" tabindex="-1" aria-labelledby="vhDocsSideTitle">
+        <div class="offcanvas-header">
+          <p id="vhDocsSideTitle" class="offcanvas-title">{{ vh_ds_title }}</p>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#vhDocsSide" aria-label="{{ tc.oc_close }}"></button>
+        </div>
+        <div class="offcanvas-body">
+          {% include search-form.html id="vhDocsSearch" %}
+          {% include docs-nav.html %}
+        </div>
       </div>
       {%- endif %}
       <article class="vh-docs-article">

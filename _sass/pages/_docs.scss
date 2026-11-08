@@ -9,11 +9,40 @@
     padding-bottom: 6rem;
 }
 
+// The breadcrumb row: on phones and tablets the button that opens the sidebar's
+// drawer comes first (_includes/docs.html).
+.vh-docs-top{
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    margin-bottom: 2.5rem;
+}
+
+.vh-docs-toggle{
+    display: none;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 1px solid var(--vh-border);
+    border-radius: 10px;
+    background-color: var(--vh-surface-raised);
+    color: var(--vh-text-muted);
+}
+
+.vh-docs-toggle:hover,
+.vh-docs-toggle:focus-visible{
+    border-color: var(--vh-border-strong);
+    color: var(--vh-text);
+}
+
 .vh-breadcrumb ol{
     display: flex;
     flex-wrap: wrap;
     gap: .35rem .6rem;
-    margin: 0 0 2.5rem;
+    margin: 0;
     padding: 0;
     list-style: none;
     font-size: 14px;
@@ -51,12 +80,65 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
-// The sidebar: the search box over the section's pages, sticky as one piece.
-.vh-docs-side{
-    position: sticky;
-    top: 9.5rem;
-    padding-inline-end: 1.5rem;
-    border-inline-end: 1px solid var(--vh-hairline);
+// The sidebar: the search box over the section's pages, sticky as one piece. It is a
+// Bootstrap .offcanvas-lg, which from 992px up lays its body out as a flex row:
+// a column here.
+@media (min-width: 992px){
+    .vh-docs-side{
+        position: sticky;
+        top: 9.5rem;
+        padding-inline-end: 1.5rem;
+        border-inline-end: 1px solid var(--vh-hairline);
+    }
+    .vh-docs-side .offcanvas-body{
+        display: block;
+    }
+}
+
+// Below 992px it is a drawer from the start side, coloured as the site menu's.
+// Bootstrap is compiled left-to-right, so the Persian and Arabic trees move it to
+// the right by hand.
+@media (max-width: 991.98px){
+    .vh-docs-toggle{
+        display: flex;
+    }
+    .vh-docs-side{
+        --bs-offcanvas-width: 320px;
+        --bs-offcanvas-bg: var(--vh-drawer-bg);
+        --bs-offcanvas-color: var(--vh-text);
+        --bs-offcanvas-border-color: var(--vh-hairline);
+    }
+    .vh-docs-side .offcanvas-header{
+        padding: 1.25rem 1.25rem .5rem;
+    }
+    .vh-docs-side .offcanvas-title{
+        margin: 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--vh-text);
+    }
+    .vh-docs-side .offcanvas-body{
+        padding: .75rem 1.25rem 2rem;
+    }
+    // Above the fixed header (99) while the drawer is open (main.js).
+    #sp-main-body.vh-docs-drawer-open{
+        z-index: 1045;
+    }
+    [dir="rtl"] .vh-docs-side.offcanvas-start{
+        right: 0;
+        left: auto;
+        border-right: 0;
+        border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+        transform: translateX(100%);
+    }
+    [dir="rtl"] .vh-docs-side.offcanvas-start.showing,
+    [dir="rtl"] .vh-docs-side.offcanvas-start.show:not(.hiding){
+        transform: none;
+    }
+    [dir="rtl"] .vh-docs-side .btn-close{
+        margin-right: auto;
+        margin-left: calc(-.5 * var(--bs-offcanvas-padding-x));
+    }
 }
 
 // The site search box (_includes/search-form.html), in the sidebar and atop /search/: a
@@ -161,12 +243,6 @@
     .vh-docs-grid{
         grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
-    }
-    .vh-docs-side{
-        position: static;
-        padding: 0 0 1.5rem;
-        border-inline-end: 0;
-        border-bottom: 1px solid var(--vh-hairline);
     }
 }
 
