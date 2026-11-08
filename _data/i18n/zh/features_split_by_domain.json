@@ -6,7 +6,7 @@
   "lead": "精准控制特定域名的流量：走 VPN、直连或彻底拦截。",
   "shot_alt": "VpnHood! 应用中的按域名分流设置界面",
   "platforms_label": "支持平台",
-  "platforms": "Android、iOS、Windows 和 Linux",
+  "platforms": "Android、iOS、Windows 和 Linux。在 VpnHood! CONNECT 上需要高级版。",
   "cta": "获取 VpnHood! CONNECT",
   "back_parent": "所有分流选项",
   "how_title": "工作原理",

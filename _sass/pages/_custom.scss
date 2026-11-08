@@ -1241,6 +1241,16 @@ a.vh-feature-chip:hover{
     color: var(--purple-120);
 }
 
+// Steps of one line each, with no title of their own (Quick Launch's ways to add the tile):
+// the line sits level with its number, and the steps stand closer, as they are short.
+.vh-timeline-plain > li:not(:last-child){
+    padding-bottom: 18px;
+}
+
+.vh-timeline-plain > li > p{
+    padding-top: 10px;
+}
+
 // The example proxy list URL. It is one long unbreakable token inside a narrow card, so it
 // wraps mid-string and sits on its own tinted line instead of running into the copy.
 .vh-code{

@@ -6,7 +6,7 @@
   "lead": "Choisissez les adresses IP routées par le VPN, directement sur l'appareil ou dans l'application, et gérez l'IPv6.",
   "shot_alt": "Écran du Split tunneling par adresse IP dans l'application VpnHood!",
   "platforms_label": "Disponible sur",
-  "platforms": "Android, iOS, Windows et Linux",
+  "platforms": "Android, iOS, Windows et Linux. Sur VpnHood! CONNECT, cette option nécessite Premium.",
   "cta": "Obtenir VpnHood! CONNECT",
   "back_parent": "Toutes les options de split tunneling",
   "how_title": "Comment ça marche",

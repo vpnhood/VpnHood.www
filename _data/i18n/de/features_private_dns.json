@@ -6,7 +6,7 @@
   "lead": "Android verschlüsselt DNS-Abfragen mit Privates DNS, und VpnHood! integriert dies direkt in den Tunnel: Ihr gewählter Anbieter bleibt aktiv, die App zeigt den Systemstatus transparent an und leitet verschlüsselte Abfragen zuverlässig weiter. Auf allen Plattformen können Sie zudem eigene DNS-Server für den Tunnel festlegen.",
   "shot_alt": "Der DNS-Bereich in der VpnHood!-App mit dem Status von Privates DNS und der Adapter-DNS-Auswahl",
   "platforms_label": "Verfügbar für",
-  "platforms": "Privates DNS ab Android 9 (über die Android-Systemeinstellungen). Adapter-DNS auf allen Plattformen.",
+  "platforms": "Privates DNS ab Android 9 (über die Android-Systemeinstellungen). Adapter-DNS auf allen Plattformen. Bei VpnHood! CONNECT erfordern die DNS-Einstellungen der App Premium.",
   "cta": "VpnHood! CONNECT holen",
   "all_features": "Alle Funktionen",
   "why_title": "Warum das wichtig ist",

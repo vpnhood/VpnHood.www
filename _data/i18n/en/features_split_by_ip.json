@@ -6,7 +6,7 @@
   "lead": "Decide which IP addresses use the VPN, on the device or inside the app, and what happens to IPv6.",
   "shot_alt": "The Split tunneling by IP address screen in the VpnHood! app",
   "platforms_label": "Available on",
-  "platforms": "Android, iOS, Windows and Linux",
+  "platforms": "Android, iOS, Windows and Linux. On VpnHood! CONNECT it needs Premium.",
   "cta": "Get VpnHood! CONNECT",
   "back_parent": "All split tunneling options",
   "how_title": "How it works",

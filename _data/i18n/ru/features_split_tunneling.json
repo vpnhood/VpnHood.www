@@ -6,7 +6,7 @@
   "lead": "Выбирайте, что направлять через VPN, а что напрямую: по странам, доменам, приложениям, IP-адресам или локальной сети.",
   "shot_alt": "Экран «Раздельное туннелирование» в приложении VpnHood!",
   "platforms_label": "Доступно на",
-  "platforms": "Android, iOS, Windows и Linux. Разделение по приложениям доступно только на Android.",
+  "platforms": "Android, iOS, Windows и Linux. Разделение по приложениям доступно только на Android, а в VpnHood! CONNECT для разделения по доменам или IP-адресам нужен Premium.",
   "cta": "Скачать VpnHood! CONNECT",
   "all_features": "Все возможности",
   "how_title": "Как это работает",

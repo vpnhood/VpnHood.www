@@ -20,6 +20,7 @@ Learn more = Saiba mais
 Free vs Premium = Grátis vs Premium
 Cloak Mode = Modo invisível (never Modo Camuflagem / Modo Cloak / Cloak Mode)
 Quick Launch = Início rápido
+Quick Settings tile = atalho (what people in Portugal say; never bloco)
 Always On = Sempre ligado
 Smart Proxies = Proxies inteligentes (the feature page's own title)
 

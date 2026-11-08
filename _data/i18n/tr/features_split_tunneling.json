@@ -6,7 +6,7 @@
   "lead": "Neyin VPN üzerinden gideceğine, neyin doğrudan bağlanacağına siz karar verin: ülkeye, alan adına, uygulamaya, IP adresine veya yerel ağa göre.",
   "shot_alt": "VpnHood! uygulamasındaki Bölünmüş Tünelleme ekranı",
   "platforms_label": "Kullanabileceğiniz platformlar",
-  "platforms": "Android, iOS, Windows ve Linux. Uygulamalara göre tünelleme yalnızca Android'de mevcuttur.",
+  "platforms": "Android, iOS, Windows ve Linux. Uygulamalara göre tünelleme yalnızca Android'de mevcuttur; VpnHood! CONNECT'te alan adına veya IP adresine göre tünelleme Premium gerektirir.",
   "cta": "VpnHood! CONNECT'i Edinin",
   "all_features": "Tüm özellikler",
   "how_title": "Nasıl çalışır?",

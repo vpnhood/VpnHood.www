@@ -8,7 +8,7 @@
     "lead": "Include, exclude, or block specific domains from VPN traffic.",
     "shot_alt": "The Split tunneling by domain screen in the VpnHood! app",
     "platforms_label": "Available on",
-    "platforms": "Android, iOS, Windows and Linux",
+    "platforms": "Android, iOS, Windows and Linux. On VpnHood! CONNECT it needs Premium.",
     "cta": "Get VpnHood! CONNECT",
     "back_parent": "All split tunneling options",
     "how_title": "How it works",

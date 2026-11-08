@@ -20,6 +20,7 @@ Learn more = Узнать больше
 Free vs Premium = Бесплатно и Premium
 Cloak Mode = Режим маскировки (never Cloak Mode in a Russian sentence)
 Quick Launch = Быстрый запуск
+Quick Settings tile = кнопка (never плитка)
 Always On = Всегда включен (in running text: функция «Всегда включен»; bare in titles and table rows)
 Smart Proxies = Умные прокси (the feature page's own title)
 

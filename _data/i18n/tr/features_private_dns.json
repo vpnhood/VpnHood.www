@@ -6,7 +6,7 @@
   "lead": "Android, DNS sorgularını Özel DNS ile şifreler. VpnHood! ise bu trafiği doğrudan tünelin parçası olarak korur: Tercih ettiğiniz sağlayıcıyı önceliklendirir, sistemin durumunu şeffafça gösterir ve şifrelenmiş sorguları kesintisiz iletir. Üstelik tüm platformlarda tünelin kullanacağı DNS sunucularını kendiniz seçebilirsiniz.",
   "shot_alt": "VpnHood! uygulamasındaki DNS ekranı; Özel DNS durumunu ve Bağdaştırıcı DNS seçimini gösteriyor",
   "platforms_label": "Desteklenen platformlar",
-  "platforms": "Sistem ayarını kullandığı için Android 9 ve üzerinde Özel DNS; tüm platformlarda Bağdaştırıcı DNS.",
+  "platforms": "Sistem ayarını kullandığı için Android 9 ve üzerinde Özel DNS; tüm platformlarda Bağdaştırıcı DNS. VpnHood! CONNECT'te uygulamanın DNS ayarları Premium gerektirir.",
   "cta": "VpnHood! CONNECT Edinin",
   "all_features": "Tüm özellikler",
   "why_title": "Neden önemli?",

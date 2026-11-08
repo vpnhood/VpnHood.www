@@ -6,7 +6,7 @@
   "lead": "自由决定哪些 IP 地址通过 VPN，支持设备级或应用内配置，并可灵活管理 IPv6。",
   "shot_alt": "VpnHood! 应用中的按 IP 地址分流设置界面",
   "platforms_label": "支持平台",
-  "platforms": "Android、iOS、Windows 和 Linux",
+  "platforms": "Android、iOS、Windows 和 Linux。在 VpnHood! CONNECT 上需要高级版。",
   "cta": "获取 VpnHood! CONNECT",
   "back_parent": "所有分流选项",
   "how_title": "工作原理",

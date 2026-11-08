@@ -6,7 +6,7 @@
   "lead": "Decidi cosa passa attraverso la VPN e cosa si connette direttamente: per paese, per dominio, per app, per indirizzo IP o per rete locale.",
   "shot_alt": "La schermata dello Split tunneling nell'app VpnHood!",
   "platforms_label": "Disponibile su",
-  "platforms": "Android, iOS, Windows e Linux. Lo split per app è disponibile solo su Android.",
+  "platforms": "Android, iOS, Windows e Linux. Lo split per app è disponibile solo su Android e, su VpnHood! CONNECT, lo split per dominio o indirizzo IP richiede Premium.",
   "cta": "Scarica VpnHood! CONNECT",
   "all_features": "Tutte le funzionalità",
   "how_title": "Come funziona",

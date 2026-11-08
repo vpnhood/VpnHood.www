@@ -6,7 +6,7 @@
   "lead": "Android protegge le query con il DNS privato e VpnHood! lo integra nel tunnel: rispetta il provider che hai scelto, mostra lo stato del sistema e instrada le richieste crittografate senza interruzioni. Su ogni piattaforma puoi anche scegliere i server DNS usati dal tunnel.",
   "shot_alt": "Schermata DNS nell'app VpnHood!, con lo stato del DNS privato e la scelta del DNS della scheda",
   "platforms_label": "Disponibile su",
-  "platforms": "DNS privato su Android 9 e versioni successive (impostazione di sistema). DNS scheda di rete su tutte le piattaforme.",
+  "platforms": "DNS privato su Android 9 e versioni successive (impostazione di sistema). DNS scheda di rete su tutte le piattaforme. Su VpnHood! CONNECT, le impostazioni DNS dell'app richiedono Premium.",
   "cta": "Scarica VpnHood! CONNECT",
   "all_features": "Tutte le funzionalità",
   "why_title": "Perché è importante",

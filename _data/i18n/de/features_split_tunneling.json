@@ -6,7 +6,7 @@
   "lead": "Bestimmen Sie, was über das VPN läuft und was sich direkt verbindet: nach Land, Domain, App, IP-Adresse oder lokalem Netzwerk.",
   "shot_alt": "Der Bereich „Split-Tunneling“ in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
-  "platforms": "Android, iOS, Windows und Linux. Split-Tunneling nach Apps ist derzeit nur unter Android verfügbar.",
+  "platforms": "Android, iOS, Windows und Linux. Split-Tunneling nach Apps ist nur unter Android verfügbar, und bei VpnHood! CONNECT erfordert die Aufteilung nach Domain oder IP-Adresse Premium.",
   "cta": "VpnHood! CONNECT holen",
   "all_features": "Alle Funktionen",
   "how_title": "So funktioniert es",

@@ -6,7 +6,7 @@
   "lead": "حدّد عناوين IP التي تستخدم الـ VPN، سواء عبر نظام الجهاز أو داخل التطبيق، وتحكّم في حركة مرور IPv6.",
   "shot_alt": "شاشة النفق المقسم حسب عنوان IP في تطبيق VpnHood!‎",
   "platforms_label": "متوفر على",
-  "platforms": "Android وiOS وWindows وLinux",
+  "platforms": "Android وiOS وWindows وLinux. ويتطلب في VpnHood! CONNECT الباقة المميزة.",
   "cta": "احصل على VpnHood! CONNECT",
   "back_parent": "جميع خيارات النفق المقسم",
   "how_title": "كيف تعمل هذه الميزة؟",

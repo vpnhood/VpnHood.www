@@ -6,7 +6,7 @@
   "lead": "Decide qué direcciones IP usan la VPN, en el dispositivo o dentro de la app, y gestiona el tráfico IPv6.",
   "shot_alt": "Pantalla de túnel dividido por dirección IP en la aplicación VpnHood!",
   "platforms_label": "Disponible en",
-  "platforms": "Android, iOS, Windows y Linux",
+  "platforms": "Android, iOS, Windows y Linux. En VpnHood! CONNECT requiere Premium.",
   "cta": "Obtener VpnHood! CONNECT",
   "back_parent": "Todas las opciones de túnel dividido",
   "how_title": "Cómo funciona",

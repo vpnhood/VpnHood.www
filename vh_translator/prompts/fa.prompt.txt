@@ -21,6 +21,7 @@ Learn more = بیشتر بدانید
 Free vs Premium = رایگان در برابر ویژه
 Cloak Mode = حالت مخفی (never حالت استتار, never Cloak Mode in a Persian sentence, never حالت Cloak Mode)
 Quick Launch = راه‌اندازی سریع
+Quick Settings = تنظیمات سریع (what Persian users and tech sites say; never تنظیمات فوری) · Quick Settings tile (an app's button there) = دکمه (never کاشی; the owner: it is just a button)
 Always On = همیشه روشن
 Smart Proxies = پروکسی‌های هوشمند (the feature page's own title)
 Windows = ویندوز · Windows Server = ویندوز سرور · Linux = لینوکس · Android = اندروید · Android TV = اندروید تی‌وی

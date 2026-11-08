@@ -20,6 +20,7 @@ Learn more = En savoir plus
 Free vs Premium = Gratuit vs Premium
 Cloak Mode = Mode furtif (mid-sentence: le mode furtif; never Mode Camouflage / Mode Cloak / Cloak Mode)
 Quick Launch = Lancement rapide
+Quick Settings tile = bloc (the word Android's own dialog shows; the press also says tuile)
 Always On = Toujours actif
 Smart Proxies = Smart Proxies (the feature page's own title)
 

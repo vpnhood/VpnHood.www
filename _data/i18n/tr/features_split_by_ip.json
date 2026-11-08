@@ -6,7 +6,7 @@
   "lead": "Hangi IP adreslerinin VPN'i kullanacağını cihaz veya uygulama düzeyinde belirleyin, IPv6 trafiğini kolayca yönetin.",
   "shot_alt": "VpnHood! uygulamasında IP adresine göre bölünmüş tünelleme ekranı",
   "platforms_label": "Kullanılabilen platformlar:",
-  "platforms": "Android, iOS, Windows ve Linux",
+  "platforms": "Android, iOS, Windows ve Linux. VpnHood! CONNECT'te Premium gerektirir.",
   "cta": "VpnHood! CONNECT Edinin",
   "back_parent": "Tüm bölünmüş tünelleme seçenekleri",
   "how_title": "Nasıl çalışır?",

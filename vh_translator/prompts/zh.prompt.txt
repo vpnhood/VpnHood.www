@@ -20,6 +20,7 @@ Learn more = 了解更多
 Free vs Premium = 免费版与高级版
 Cloak Mode = 伪装模式 (never 隐身模式 / 隐匿模式, never Cloak 模式)
 Quick Launch = 快速启动 (never 快捷启动)
+Quick Settings tile = 快捷开关 (what users, Huawei and Xiaomi say; never 磁贴 or 图块)
 Always On = 始终开启
 Smart Proxies = 智能代理 (the feature page's own title)
 

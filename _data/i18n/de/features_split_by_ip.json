@@ -6,7 +6,7 @@
   "lead": "Bestimmen Sie, welche IP-Adressen das VPN nutzen – auf Geräteebene oder direkt in der App – und wie IPv6 verarbeitet wird.",
   "shot_alt": "Die Ansicht „Split-Tunneling nach IP-Adresse“ in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
-  "platforms": "Android, iOS, Windows und Linux",
+  "platforms": "Android, iOS, Windows und Linux. Bei VpnHood! CONNECT erfordert es Premium.",
   "cta": "VpnHood! CONNECT holen",
   "back_parent": "Alle Split-Tunneling-Optionen",
   "how_title": "So funktioniert es",

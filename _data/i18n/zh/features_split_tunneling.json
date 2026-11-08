@@ -6,7 +6,7 @@
   "lead": "自由决定哪些流量走 VPN，哪些流量直连：支持按国家、域名、应用、IP 地址或局域网灵活配置。",
   "shot_alt": "VpnHood! 应用中的分流设置界面",
   "platforms_label": "支持平台",
-  "platforms": "Android、iOS、Windows 和 Linux。按应用分流仅在 Android 上可用。",
+  "platforms": "Android、iOS、Windows 和 Linux。按应用分流仅在 Android 上可用；在 VpnHood! CONNECT 上，按域名或 IP 地址分流需要高级版。",
   "cta": "获取 VpnHood! CONNECT",
   "all_features": "所有功能",
   "how_title": "工作原理",

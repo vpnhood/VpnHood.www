@@ -20,6 +20,7 @@ Learn more = और जानें
 Free vs Premium = मुफ़्त बनाम प्रीमियम
 Cloak Mode = क्लोक मोड (never "Cloak Mode" in a Hindi sentence)
 Quick Launch = त्वरित लॉन्च
+Quick Settings = क्विक सेटिंग्स (what people say; never फटाफट सेटिंग) · tile = टाइल
 Always On = हमेशा चालू (in running text: हमेशा चालू फ़ीचर; bare in titles and table rows)
 Smart Proxies = स्मार्ट प्रॉक्सी (the feature page's own title)
 

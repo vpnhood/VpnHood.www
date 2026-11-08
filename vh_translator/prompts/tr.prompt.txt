@@ -20,6 +20,7 @@ Learn more = Daha fazla bilgi edinin
 Free vs Premium = Ücretsiz ve Premium
 Cloak Mode = Kamufle Modu (never Gizleme Modu, never Cloak Mode in a Turkish sentence)
 Quick Launch = Hızlı Başlat
+Quick Settings tile = düğme (as Samsung and users say; never kutu or kutucuk, which reads as a checkbox)
 Always On = Her Zaman Açık
 Smart Proxies = Akıllı Proxy'ler (the feature page's own title)
 

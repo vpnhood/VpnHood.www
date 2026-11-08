@@ -6,7 +6,7 @@
   "lead": "Выбирайте, какие IP-адреса направлять через VPN на уровне системы или приложения, и управляйте трафиком IPv6.",
   "shot_alt": "Экран настройки раздельного туннелирования по IP-адресам в приложении VpnHood!",
   "platforms_label": "Доступно на",
-  "platforms": "Android, iOS, Windows и Linux",
+  "platforms": "Android, iOS, Windows и Linux. В VpnHood! CONNECT для этого нужен Premium.",
   "cta": "Скачать VpnHood! CONNECT",
   "back_parent": "Все варианты раздельного туннелирования",
   "how_title": "Как это работает",

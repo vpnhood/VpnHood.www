@@ -6,7 +6,7 @@
   "lead": "Android chiffre les requêtes DNS avec le DNS privé, et VpnHood! l'intègre directement au tunnel : votre fournisseur reste prioritaire, l'application affiche l'état du système et achemine vos requêtes chiffrées sans interruption. Sur chaque plateforme, vous pouvez également choisir les serveurs DNS utilisés par le tunnel.",
   "shot_alt": "Écran DNS dans l'application VpnHood!, affichant le statut du DNS privé et le choix du DNS de l'adaptateur",
   "platforms_label": "Disponible sur",
-  "platforms": "DNS privé sur Android 9 et versions ultérieures (paramètre système Android). DNS de l'adaptateur sur toutes les plateformes.",
+  "platforms": "DNS privé sur Android 9 et versions ultérieures (paramètre système Android). DNS de l'adaptateur sur toutes les plateformes. Sur VpnHood! CONNECT, les réglages DNS de l'application nécessitent Premium.",
   "cta": "Obtenir VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "why_title": "Pourquoi est-ce important ?",

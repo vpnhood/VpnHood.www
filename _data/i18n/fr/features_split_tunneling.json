@@ -6,7 +6,7 @@
   "lead": "Choisissez ce qui passe par le VPN et ce qui se connecte directement : par pays, domaine, application, adresse IP ou réseau local.",
   "shot_alt": "Écran du Split tunneling dans l'application VpnHood!",
   "platforms_label": "Disponible sur",
-  "platforms": "Android, iOS, Windows et Linux. Le filtrage par application est disponible uniquement sur Android.",
+  "platforms": "Android, iOS, Windows et Linux. Le filtrage par application est disponible uniquement sur Android, et sur VpnHood! CONNECT le filtrage par domaine ou par adresse IP nécessite Premium.",
   "cta": "Obtenir VpnHood! CONNECT",
   "all_features": "Toutes les fonctionnalités",
   "how_title": "Comment ça marche",

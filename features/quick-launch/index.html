@@ -57,13 +57,50 @@ extra_css:
                           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="vh-card-dark vh-feature-panel h-100">
                               <h2 class="h4">{{ t.when_title }}</h2>
-                              <p class="mb-0">{{ t.when_desc }}</p>
+                              <p class="mb-0">{% include copy.html s=t.when_desc %}</p>
                             </div>
                           </div>
                           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="vh-card-dark vh-feature-panel h-100">
                               <h2 class="h4">{{ t.cost_title }}</h2>
                               <p class="mb-0">{{ t.cost_desc }}</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="section-space pt-0">
+                          <div class="section-start-text" data-aos="fade-up">
+                            <h2 class="section-title vh-txt-grad-purple-400">{{ t.steps_title }}</h2>
+                            <p class="section-desc small-width">{{ t.steps_desc }}</p>
+                          </div>
+                          <div class="row row-gap-4">
+                            <div class="col-lg-6" data-aos="fade-up">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <h3 class="h4 d-flex flex-wrap align-items-center gap-2 mb-4">{{ t.app_title }} <span class="vh-feature-chip">{{ t.app_note }}</span></h3>
+                                <ol class="list-unstyled vh-timeline vh-timeline-plain mb-0">
+                                  {%- for vh_n in (1..3) -%}
+                                  {%- capture vh_key %}app_step{{ vh_n }}{% endcapture %}
+                                  <li>
+                                    <span class="vh-step-num" aria-hidden="true">{{ vh_n }}</span>
+                                    <p class="mb-0">{{ t[vh_key] }}</p>
+                                  </li>
+                                  {%- endfor %}
+                                </ol>
+                              </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel h-100">
+                                <h3 class="h4 d-flex flex-wrap align-items-center gap-2 mb-4">{{ t.hand_title }} <span class="vh-feature-chip">{{ t.hand_note }}</span></h3>
+                                <ol class="list-unstyled vh-timeline vh-timeline-plain mb-0">
+                                  {%- for vh_n in (1..5) -%}
+                                  {%- capture vh_key %}hand_step{{ vh_n }}{% endcapture %}
+                                  <li>
+                                    <span class="vh-step-num" aria-hidden="true">{{ vh_n }}</span>
+                                    <p class="mb-0">{{ t[vh_key] }}</p>
+                                  </li>
+                                  {%- endfor %}
+                                </ol>
+                              </div>
                             </div>
                           </div>
                         </div>

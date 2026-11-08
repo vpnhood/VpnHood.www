@@ -6,7 +6,7 @@
   "lead": "O Android criptografa consultas com o DNS privado, e o VpnHood! integra isso ao túnel: mantém o provedor escolhido no comando, mostra o status do sistema e transmite as consultas criptografadas sem perdas. Em qualquer plataforma, você também pode escolher os servidores DNS do próprio túnel.",
   "shot_alt": "Tela de DNS no aplicativo VpnHood!, exibindo o status do DNS privado e a escolha do DNS do Adaptador",
   "platforms_label": "Disponível para",
-  "platforms": "DNS privado no Android 9 ou superior, por usar uma configuração do sistema. DNS do Adaptador em todas as plataformas.",
+  "platforms": "DNS privado no Android 9 ou superior, por usar uma configuração do sistema. DNS do Adaptador em todas as plataformas. No VpnHood! CONNECT, as configurações de DNS do app exigem Premium.",
   "cta": "Baixar o VpnHood! CONNECT",
   "all_features": "Todos os recursos",
   "why_title": "Por que isso é importante",
