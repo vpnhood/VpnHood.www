@@ -1,6 +1,7 @@
 // The bubbles of each split-tunneling art variant, for tools/make-split-art.py: teal coins turned in 3D with a
 // white line glyph, and tilted 3D pills holding text, in the style of the two original variants. Drawn on a
-// transparent 468x480 canvas at 3x; the Python script scales them down over the clean gate.
+// transparent 468x480 canvas at 3x; the Python script scales them down over the clean gate. Also draws the hood
+// mask the Python script carves into the gate's door.
 //
 //   node tools/make-split-art.js <playwright module dir> <out dir> <variants json>
 const [, , PLAYWRIGHT, OUT, VARIANTS_JSON] = process.argv;
@@ -54,5 +55,11 @@ html, body { margin: 0; background: transparent; }
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: path.join(OUT, `${name}-bubbles.png`), omitBackground: true, clip: { x: 0, y: 0, width: 468, height: 480 } });
   }
+  // The hood carved into the door: the site's own mark, the favicon's path, white on black, 1024 px square.
+  const favicon = fs.readFileSync(path.join(__dirname, '..', 'assets', 'images', 'favicon.svg'), 'utf8');
+  const d = favicon.match(/ d="([^"]+)"/)[1];
+  const mask = await browser.newPage({ viewport: { width: 1024, height: 1024 } });
+  await mask.setContent(`<style>html,body{margin:0;background:#000}</style><svg width="1024" height="1024" viewBox="0 0 32 32"><path fill="#fff" d="${d}"/></svg>`);
+  await mask.screenshot({ path: path.join(OUT, 'hood-mask.png') });
   await browser.close();
 })().catch(e => { console.error(e.message); process.exit(1); });
