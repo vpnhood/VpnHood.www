@@ -215,6 +215,41 @@
     color: var(--vh-text);
 }
 
+// The shortcut's hint in the docs box (vh-general.js): before the magnifier, from 992px up
+// on a device with a mouse, and only while the box is empty and not focused.
+.vh-search-kbd{
+    display: none;
+}
+
+@media (min-width: 992px) and (hover: hover){
+    .vh-docs-top .vh-search-input{
+        padding-inline-end: 5.6rem;
+    }
+    .vh-docs-top .vh-search-kbd{
+        position: absolute;
+        inset-block: 0;
+        inset-inline-end: 2.6rem;
+        display: flex;
+        align-items: center;
+        height: 1.45rem;
+        margin-block: auto;
+        padding: 0 .4rem;
+        border: 1px solid var(--vh-border);
+        border-radius: 6px;
+        background: none;
+        color: var(--vh-text-dim);
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+        pointer-events: none;
+    }
+    .vh-docs-top .vh-search-input:focus ~ .vh-search-kbd,
+    .vh-docs-top .vh-search-input:not(:placeholder-shown) ~ .vh-search-kbd{
+        display: none;
+    }
+}
+
 .vh-docs-nav-group{
     margin: 0 0 .5rem;
     font-size: 12px;

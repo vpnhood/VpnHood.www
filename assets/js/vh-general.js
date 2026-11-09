@@ -54,6 +54,36 @@ document.addEventListener('click', function (e) {
     });
 });
 
+//---------------------- Search shortcut ----------------------
+// Ctrl K (⌘ K on a Mac) or "/" puts the cursor in the page's search box (search-form.html),
+// as docs sites do: on a docs page the box sits in the breadcrumb row and scrolls away with
+// it. "/" only while the reader is not typing somewhere else. The K is matched by its key,
+// not its letter, so it works on a Persian or Russian layout too. A page without a box
+// leaves Ctrl K to the browser. The box's hint (.vh-search-kbd) shows ⌘ K on a Mac.
+(function () {
+    const mac = /mac|iphone|ipad/i.test((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '');
+    if (mac) {
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.vh-search-kbd > span').forEach(function (k) { k.textContent = '⌘ K'; });
+        });
+    }
+    document.addEventListener('keydown', function (e) {
+        if (e.defaultPrevented || e.altKey || e.shiftKey) return;
+        const input = document.querySelector('.vh-search-input');
+        if (!input) return;
+        const t = e.target;
+        const typing = t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName);
+        const combo = e.code === 'KeyK' && (e.ctrlKey || e.metaKey);
+        const slash = e.key === '/' && !e.ctrlKey && !e.metaKey && !typing;
+        if (!combo && !slash) return;
+        e.preventDefault();
+        const r = input.getBoundingClientRect();
+        if (r.top < 140 || r.bottom > window.innerHeight) window.scrollTo({ top: 0 });
+        input.focus({ preventScroll: true });
+        input.select();
+    });
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // The desktop mega-menu opens on CSS :hover (or keyboard focus), and the overlay

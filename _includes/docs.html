@@ -14,7 +14,8 @@
   The site search box (search-form.html) sits in the breadcrumb row, as docs sites keep
   search in their top bar, in view at every width: at the row's end from 992px up, on a
   line of its own under the breadcrumb below that. It is never inside the page list, or
-  a phone would have to open the drawer to search.
+  a phone would have to open the drawer to search. It scrolls away with the row, so Ctrl K
+  or "/" brings the reader back to it, and on desktop the box shows that shortcut.
 
   Below 992px the sidebar is a drawer (Bootstrap's responsive .offcanvas-lg), opened by
   the button at the start of the breadcrumb row, so a phone opens every page at its
@@ -35,7 +36,7 @@
       {%- endif %}
       {% include breadcrumb.html visible=true %}
       {%- if vh_dn %}
-      {% include search-form.html id="vhDocsSearch" %}
+      {% include search-form.html id="vhDocsSearch" hint=true %}
       {%- endif %}
     </div>
     <div class="vh-docs-grid{% unless vh_dn %} vh-docs-grid--solo{% endunless %}">

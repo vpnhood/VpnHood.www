@@ -156,14 +156,17 @@ calls Google: it goes through our Worker at `search.vpnhood.com`, which holds th
 the limits.
 
 - **The box** is `search-form.html`, an ordinary GET form to the language's `/search/`, so it
-  needs no script. `docs.html` puts it in the breadcrumb row of every docs page with a
-  sidebar: at the row's end from 992px up, on a line of its own under the breadcrumb below
-  that. Docs sites keep search in their top bar, in view at every width; inside the page list
-  (until 2026-11-08) a phone had to open the drawer to reach it. `/search/` repeats it under
-  its title. Its one label is `nav_labels.json` `search`, which also names `/search/`
-  in the breadcrumb. The field is a `.form-control` styled through `.vh-search`: Helix's
-  `input[type="search"]` rule would otherwise paint it white, with an `!important` padding,
-  and Helix's `box-shadow: none !important` on every search field is why focus is an outline.
+  needs no script. `docs.html` puts it in the breadcrumb row of every docs page with a sidebar:
+  at the row's end from 992px up, on a line of its own under the breadcrumb below that. Docs
+  sites keep search in their top bar, in view at every width; inside the page list (until
+  2026-11-08) a phone had to open the drawer to reach it. It scrolls away with the row, so Ctrl
+  K (⌘ K on a Mac) or `/` puts the cursor in it from anywhere on the page (`vh-general.js`), and
+  the docs box shows that shortcut inside its end from 992px up on a device with a mouse
+  (`hint=true`, `.vh-search-kbd`). `/search/` repeats it under its title. Its one label is
+  `nav_labels.json` `search`, which also names `/search/` in the breadcrumb. The field is a
+  `.form-control` styled through `.vh-search`: Helix's `input[type="search"]` rule would
+  otherwise paint it white, with an `!important` padding, and Helix's `box-shadow: none
+  !important` on every search field is why focus is an outline.
 - **`/search/`** is a docs-style page (`noindex`, out of the sitemap, in all 13 trees). Its
   messages are `search.json` keys rendered into `data-vh-msg-*`; `[query]` is filled in as
   text. `search.js` reads `?q=`, renders a Turnstile widget (managed mode, shown only when
