@@ -1,6 +1,6 @@
-// The bottom padding is the gap above the footer: one section gap, the same rhythm as
-// between sections, so the last section reads as part of the page, not of the footer.
-#sp-main-body{padding:100px 0 var(--vh-section-gap)}
+// The bottom padding is the gap above the footer: one and a half section gaps, so the page
+// ends clearly apart from the footer instead of reading as one more section boundary.
+#sp-main-body{padding:100px 0 calc(var(--vh-section-gap) * 1.5)}
 @media (min-width: 992px){
     #sp-main-body{padding-top:200px}
 }

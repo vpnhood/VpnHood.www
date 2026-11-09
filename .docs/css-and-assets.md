@@ -49,11 +49,12 @@ Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hos
   partial, not inline.
 - Gaps never stack. Consecutive sections share one gap, and the last section on a page adds
   none of its own (`#sp-main-body .section-space:last-child` in `_default.scss`):
-  `#sp-main-body`'s bottom padding, one `--vh-section-gap` (72–200px), is the gap above the
-  footer, the same rhythm as between sections. Less makes the last section look like part of
-  the footer; more looks like an empty page. Never give a page's last block a bottom padding
-  or margin of its own; until 2026-11-07 the feature pages, `/guides/`, `/vpnhood-manager/`
-  and the legal pages ended in 200–350px of nothing that way.
+  `#sp-main-body`'s bottom padding, one and a half `--vh-section-gap` (108–300px), is the gap
+  above the footer. One gap (72–200px, 2026-11-07) put the end of the page as close to the
+  footer as one section is to the next, and the owner found it too tight (2026-11-08); the
+  extra half marks the end of the page. Never give a page's last block a bottom padding or
+  margin of its own: until 2026-11-07 the feature pages, `/guides/`, `/vpnhood-manager/` and
+  the legal pages stacked theirs on top and ended in 200–350px, each page a different amount.
 - **Never write a literal `white` / `#fff` / `rgba(255,255,255,…)` (or any raw colour) in
   our SCSS** — use a `--vh-*` token or the brand ramp, or the light theme has nothing to
   re-point.
