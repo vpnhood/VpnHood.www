@@ -20,7 +20,7 @@
   "win_hyperv": "在 Windows 10 和 11 上，服务器的 VPN 适配器需要启用 Hyper-V，因为 Windows 的 NAT 随 Hyper-V 提供，而家庭版没有 Hyper-V。未启用时，应用仍可连接，但始终处于伪装模式。Windows Server 无需启用任何功能。",
   "windows_install": "如需安装，请参见<a href=\"/vpnhood-server/docs/install/windows/\">在 Windows 上安装 VpnHood! SERVER</a>。",
   "processor_title": "处理器",
-  "processor_desc": "ARM64 处理器，或支持 SSE4.2 和 POPCNT 的 x64 处理器，这是 .NET 11 的要求。近十年的 x64 处理器都支持它们，但部分 VPS 提供商会用一个基础虚拟处理器将其隐藏，Linux 把这种处理器显示为 <code>[cpu_kvm_name]</code>。在这样的机器上，Linux 安装程序会停止并给出提示；在 Docker 或 Windows 上，服务器一启动就会停止，并报错 <code>[cpu_error]</code>。",
+  "processor_desc": "ARM64 处理器，或支持 SSE4.2 和 POPCNT 的 x64 处理器，这是 .NET 11 的要求。近十年的 x64 处理器都支持它们，但部分 VPS 提供商会用一个基础虚拟处理器将其隐藏，Linux 把这种处理器显示为 <code>[cpu_kvm_name]</code>。在这样的机器上，安装程序会停止并给出提示；在 Docker 中，服务器一启动就会停止，并报错 <code>[cpu_error]</code>。",
   "processor_check": "要检查一台 x64 Linux 机器，请在该机器上运行：",
   "processor_fix": "如果输出 <code>[cpu_not_supported]</code>，请让您的提供商将该机器的 CPU 类型改为 <code>[cpu_type_host]</code> 或 <code>[cpu_type_v2]</code>。如果对方无法更改，请选择其他提供商。",
   "network_title": "网络",

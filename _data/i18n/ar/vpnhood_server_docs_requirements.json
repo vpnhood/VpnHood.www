@@ -20,7 +20,7 @@
   "win_hyperv": "على Windows 10 و 11، يحتاج محوّل VPN في الخادم إلى تشغيل Hyper-V، لأن NAT في Windows يأتي معه، ولا تحتوي إصدارات Home على Hyper-V. وبدونه تظل التطبيقات تتصل، لكنها تعمل دائمًا في وضع التخفي. أما Windows Server فلا يحتاج إلى تشغيل أي شيء.",
   "windows_install": "لتثبيته، راجع <a href=\"/vpnhood-server/docs/install/windows/\">تثبيت VpnHood! SERVER على Windows</a>.",
   "processor_title": "المعالج",
-  "processor_desc": "معالج ARM64، أو معالج x64 يدعم SSE4.2 و POPCNT، كما يتطلب ‎.NET 11. كل معالجات x64 من السنوات العشر الأخيرة تدعمها، لكن بعض مزودي VPS يخفونها خلف معالج افتراضي بسيط يسميه Linux <code>[cpu_kvm_name]</code>. على جهاز كهذا يتوقف برنامج التثبيت على Linux ويخبرك بذلك، أما في Docker أو على Windows فيتوقف الخادم فور تشغيله مع الخطأ <code>[cpu_error]</code>.",
+  "processor_desc": "معالج ARM64، أو معالج x64 يدعم SSE4.2 و POPCNT، كما يتطلب ‎.NET 11. كل معالجات x64 من السنوات العشر الأخيرة تدعمها، لكن بعض مزودي VPS يخفونها خلف معالج افتراضي بسيط يسميه Linux <code>[cpu_kvm_name]</code>. على جهاز كهذا يتوقف برنامج التثبيت ويخبرك بذلك، أما في Docker فيتوقف الخادم فور تشغيله مع الخطأ <code>[cpu_error]</code>.",
   "processor_check": "للتحقق من جهاز Linux بمعالج x64، شغّل هذا الأمر عليه:",
   "processor_fix": "إذا طبع <code>[cpu_not_supported]</code>، فاطلب من مزود الخدمة تغيير نوع CPU للجهاز إلى <code>[cpu_type_host]</code> أو <code>[cpu_type_v2]</code>. وإذا تعذّر ذلك، فاختر مزودًا آخر.",
   "network_title": "الشبكة",

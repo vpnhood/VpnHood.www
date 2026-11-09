@@ -20,7 +20,7 @@
   "win_hyperv": "Windows 10 ve 11'de sunucunun VPN adaptörü Hyper-V'nin açık olmasını gerektirir, çünkü Windows'un NAT'ı onunla gelir; Home sürümlerinde ise Hyper-V yoktur. Hyper-V olmadan uygulamalar yine bağlanır, ancak her zaman Kamufle Modu kullanılır. Windows Server'da hiçbir şeyi açmak gerekmez.",
   "windows_install": "Kurmak için <a href=\"/vpnhood-server/docs/install/windows/\">Windows'a VpnHood! SERVER Kurun</a> sayfasına bakın.",
   "processor_title": "İşlemci",
-  "processor_desc": "Bir ARM64 işlemci veya .NET 11'in gerektirdiği gibi SSE4.2 ve POPCNT destekli bir x64 işlemci. Son on yılın tüm x64 işlemcilerinde bunlar vardır, ancak bazı VPS sağlayıcıları bunları, Linux'un <code>[cpu_kvm_name]</code> olarak adlandırdığı basit bir sanal işlemcinin arkasına gizler. Böyle bir makinede Linux yükleyicisi durur ve bunu bildirir; Docker'da veya Windows'ta ise sunucu başlar başlamaz <code>[cpu_error]</code> hatasıyla durur.",
+  "processor_desc": "Bir ARM64 işlemci veya .NET 11'in gerektirdiği gibi SSE4.2 ve POPCNT destekli bir x64 işlemci. Son on yılın tüm x64 işlemcilerinde bunlar vardır, ancak bazı VPS sağlayıcıları bunları, Linux'un <code>[cpu_kvm_name]</code> olarak adlandırdığı basit bir sanal işlemcinin arkasına gizler. Böyle bir makinede yükleyici durur ve bunu bildirir; Docker'da ise sunucu başlar başlamaz <code>[cpu_error]</code> hatasıyla durur.",
   "processor_check": "Bir x64 Linux makineyi kontrol etmek için bu komutu makinede çalıştırın:",
   "processor_fix": "Komut <code>[cpu_not_supported]</code> yazdırırsa sağlayıcınızdan makinenin CPU türünü <code>[cpu_type_host]</code> veya <code>[cpu_type_v2]</code> olarak değiştirmesini isteyin. Bunu yapamıyorsa başka bir sağlayıcı seçin.",
   "network_title": "Ağ",

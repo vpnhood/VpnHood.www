@@ -22,7 +22,7 @@
     "win_hyperv": "On Windows 10 and 11, the server's VPN adapter needs Hyper-V turned on, as Windows' NAT comes with it, and Home editions have no Hyper-V. Without it, apps still connect, but always in Cloak Mode. Windows Server needs nothing turned on.",
     "windows_install": "To install it, see <a href=\"/vpnhood-server/docs/install/windows/\">Install VpnHood! SERVER on Windows</a>.",
     "processor_title": "Processor",
-    "processor_desc": "An ARM64 processor, or an x64 processor with SSE4.2 and POPCNT, as .NET 11 requires. Every x64 processor from the last ten years has them, but some VPS providers hide them behind a basic virtual processor, which Linux names <code>[cpu_kvm_name]</code>. On such a machine the Linux installer stops and says so; in Docker or on Windows, the server stops as soon as it starts, with the error <code>[cpu_error]</code>.",
+    "processor_desc": "An ARM64 processor, or an x64 processor with SSE4.2 and POPCNT, as .NET 11 requires. Every x64 processor from the last ten years has them, but some VPS providers hide them behind a basic virtual processor, which Linux names <code>[cpu_kvm_name]</code>. On such a machine the installer stops and says so; in Docker, the server stops as soon as it starts, with the error <code>[cpu_error]</code>.",
     "processor_check": "To check an x64 Linux machine, run this on it:",
     "processor_fix": "If it prints <code>[cpu_not_supported]</code>, ask your provider to change the machine's CPU type to <code>[cpu_type_host]</code> or <code>[cpu_type_v2]</code>. If they cannot, choose another provider.",
     "network_title": "Network",
