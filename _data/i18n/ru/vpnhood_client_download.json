@@ -20,6 +20,7 @@
   "ios_devices_note": "Работает на iPhone и iPad.",
   "windows_min_version": "Поддерживается на <b>Windows 10</b> и выше.",
   "windows_x64_only": "Только для Windows x64.",
+  "windows_processor_note": "Нужен процессор с поддержкой SSE4.2 и POPCNT, как у любого процессора последних десяти лет.",
   "direct_link_note": "Используйте прямую ссылку, если у вас нет доступа к Google Play.",
   "android_web_note": "Версия по прямой ссылке не использует Google Play.",
   "android_arm64_title": "Версия для ARM64",

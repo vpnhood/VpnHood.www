@@ -14,6 +14,7 @@
   "need_nft": "Para el Kill Switch, <code>[pkg_nftables]</code>, que añade el instalador, y cgroup v2. Sin ellos, la aplicación lo indica y no se conecta mientras el Kill Switch esté activado.",
   "need_quic": "Para QUIC, MsQuic, que añade el instalador. Donde no puede, como en Amazon Linux 2023, la aplicación se conecta sin QUIC.",
   "need_desktop": "Para la ventana, un escritorio. El instalador añade las bibliotecas que necesita la ventana. Sin escritorio, tendrás el servicio VPN y los comandos.",
+  "processor_desc": "Un procesador ARM64, o un procesador x64 con SSE4.2 y POPCNT, como exige .NET 11. Todos los procesadores x64 de los últimos diez años los tienen, pero a una máquina virtual se le puede asignar un procesador básico sin ellos, que Linux llama <code>[cpu_kvm_name]</code>. En una máquina así, el instalador se detiene y lo indica.",
   "next_client": "Instalar VpnHood! CLIENT en Linux",
   "next_connect": "Instalar VpnHood! CONNECT en Linux"
 }

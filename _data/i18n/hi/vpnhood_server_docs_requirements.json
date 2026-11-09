@@ -20,7 +20,7 @@
   "win_hyperv": "Windows 10 और 11 पर सर्वर के VPN अडैप्टर के लिए Hyper-V चालू होना चाहिए, क्योंकि Windows का NAT उसी के साथ आता है, और Home एडिशन में Hyper-V नहीं होता। इसके बिना भी ऐप्स कनेक्ट होते हैं, लेकिन हमेशा क्लोक मोड में। Windows Server में कुछ भी चालू करने की ज़रूरत नहीं है।",
   "windows_install": "इसे इंस्टॉल करने के लिए, <a href=\"/vpnhood-server/docs/install/windows/\">Windows पर VpnHood! SERVER इंस्टॉल करें</a> देखें।",
   "processor_title": "प्रोसेसर",
-  "processor_desc": "एक ARM64 प्रोसेसर, या SSE4.2 और POPCNT वाला x64 प्रोसेसर, जैसा .NET 11 को चाहिए। पिछले दस साल के हर x64 प्रोसेसर में ये होते हैं, लेकिन कुछ VPS प्रोवाइडर इन्हें एक बेसिक वर्चुअल प्रोसेसर के पीछे छिपा देते हैं, जिसे Linux <code>[cpu_kvm_name]</code> कहता है। ऐसी मशीन पर सर्वर शुरू होते ही <code>[cpu_error]</code> एरर के साथ बंद हो जाता है।",
+  "processor_desc": "एक ARM64 प्रोसेसर, या SSE4.2 और POPCNT वाला x64 प्रोसेसर, जैसा .NET 11 को चाहिए। पिछले दस साल के हर x64 प्रोसेसर में ये होते हैं, लेकिन कुछ VPS प्रोवाइडर इन्हें एक बेसिक वर्चुअल प्रोसेसर के पीछे छिपा देते हैं, जिसे Linux <code>[cpu_kvm_name]</code> कहता है। ऐसी मशीन पर Linux इंस्टॉलर रुक जाता है और यह बता देता है; Docker में या Windows पर सर्वर शुरू होते ही <code>[cpu_error]</code> एरर के साथ बंद हो जाता है।",
   "processor_check": "किसी x64 Linux मशीन को जाँचने के लिए, उस पर यह चलाएँ:",
   "processor_fix": "अगर यह <code>[cpu_not_supported]</code> दिखाए, तो अपने प्रोवाइडर से मशीन का CPU टाइप <code>[cpu_type_host]</code> या <code>[cpu_type_v2]</code> करने को कहें। अगर वे ऐसा न कर सकें, तो कोई दूसरा प्रोवाइडर चुनें।",
   "network_title": "नेटवर्क",

@@ -20,6 +20,7 @@
   "ios_devices_note": "适用于 iPhone 和 iPad。",
   "windows_min_version": "支持 <b>Windows 10</b> 及以上版本。",
   "windows_x64_only": "仅限 Windows x64 版本。",
+  "windows_processor_note": "需要支持 SSE4.2 和 POPCNT 的处理器，近十年的处理器都支持。",
   "direct_link_note": "建议仅在无法访问 Google Play 时使用直链下载。",
   "android_web_note": "直链下载的版本不使用 Google Play。该版本不提供免费服务器，需<a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">升级高级版</b></a>后方可使用。",
   "android_arm64_title": "ARM64 版本",

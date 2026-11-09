@@ -20,7 +20,7 @@
   "win_hyperv": "Sous Windows 10 et 11, l'adaptateur VPN du serveur a besoin que Hyper-V soit activé, car le NAT de Windows est fourni avec lui, et les éditions Famille n'ont pas Hyper-V. Sans lui, les applications se connectent quand même, mais toujours en mode furtif. Windows Server n'a rien à activer.",
   "windows_install": "Pour l'installer, voir <a href=\"/vpnhood-server/docs/install/windows/\">Installer VpnHood! SERVER sur Windows</a>.",
   "processor_title": "Processeur",
-  "processor_desc": "Un processeur ARM64, ou un processeur x64 avec SSE4.2 et POPCNT, comme l'exige .NET 11. Tous les processeurs x64 des dix dernières années les ont, mais certains fournisseurs de VPS les masquent derrière un processeur virtuel basique, que Linux nomme <code>[cpu_kvm_name]</code>. Sur une telle machine, le serveur s'arrête dès son démarrage avec l'erreur <code>[cpu_error]</code>.",
+  "processor_desc": "Un processeur ARM64, ou un processeur x64 avec SSE4.2 et POPCNT, comme l'exige .NET 11. Tous les processeurs x64 des dix dernières années les ont, mais certains fournisseurs de VPS les masquent derrière un processeur virtuel basique, que Linux nomme <code>[cpu_kvm_name]</code>. Sur une telle machine, l'installateur Linux s'arrête et le signale. Dans Docker ou sous Windows, le serveur s'arrête dès son démarrage avec l'erreur <code>[cpu_error]</code>.",
   "processor_check": "Pour vérifier une machine Linux x64, exécutez cette commande sur la machine :",
   "processor_fix": "Si la commande affiche <code>[cpu_not_supported]</code>, demandez à votre fournisseur de passer le type de CPU de la machine à <code>[cpu_type_host]</code> ou <code>[cpu_type_v2]</code>. S'il ne le peut pas, choisissez un autre fournisseur.",
   "network_title": "Réseau",

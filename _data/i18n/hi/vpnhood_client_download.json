@@ -20,6 +20,7 @@
   "ios_devices_note": "iPhone और iPad पर चलता है।",
   "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्ज़न पर समर्थित।",
   "windows_x64_only": "केवल Windows x64 वर्ज़न के लिए।",
+  "windows_processor_note": "SSE4.2 और POPCNT वाला प्रोसेसर चाहिए, जो पिछले दस साल के हर प्रोसेसर में होते हैं।",
   "direct_link_note": "डायरेक्ट लिंक से केवल तभी डाउनलोड करें जब आपके पास Google Play तक पहुँच न हो।",
   "android_web_note": "डायरेक्ट लिंक वाला वर्शन Google Play का उपयोग नहीं करता।",
   "android_arm64_title": "ARM64 वर्शन",

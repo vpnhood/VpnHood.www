@@ -20,6 +20,7 @@
   "ios_devices_note": "iPhone और iPad पर काम करता है।",
   "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्शन को सपोर्ट करता है।",
   "windows_x64_only": "केवल Windows x64 वर्शन के लिए।",
+  "windows_processor_note": "SSE4.2 और POPCNT वाला प्रोसेसर चाहिए, जो पिछले दस साल के हर प्रोसेसर में होते हैं।",
   "direct_link_note": "डायरेक्ट लिंक से तभी डाउनलोड करना सबसे अच्छा है जब आपके पास Google Play तक पहुंच न हो।",
   "android_web_note": "डायरेक्ट लिंक वाला वर्शन Google Play का उपयोग नहीं करता। इसमें कोई मुफ़्त सर्वर उपलब्ध नहीं हैं, और इसका उपयोग करने के लिए आपको <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">प्रीमियम में अपग्रेड करना</b></a> होगा।",
   "android_arm64_title": "ARM64 वर्शन",

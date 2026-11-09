@@ -14,6 +14,7 @@
   "need_nft": "断网保护需要 <code>[pkg_nftables]</code>（安装程序会添加）和 cgroup v2。缺少它们时，应用会给出提示，并且在断网保护开启期间不会连接。",
   "need_quic": "QUIC 需要 MsQuic（安装程序会添加）。在无法添加的系统上（例如 Amazon Linux 2023），应用会在不使用 QUIC 的情况下连接。",
   "need_desktop": "窗口需要桌面环境。安装程序会添加窗口所需的库。没有桌面环境时，您将获得 VPN 服务和命令。",
+  "processor_desc": "ARM64 处理器，或支持 SSE4.2 和 POPCNT 的 x64 处理器，这是 .NET 11 的要求。近十年的 x64 处理器都支持它们，但虚拟机可能只分配到一个不支持它们的基础处理器，Linux 把这种处理器显示为 <code>[cpu_kvm_name]</code>。在这样的机器上，安装程序会停止并给出提示。",
   "next_client": "在 Linux 上安装 VpnHood! CLIENT",
   "next_connect": "在 Linux 上安装 VpnHood! CONNECT"
 }

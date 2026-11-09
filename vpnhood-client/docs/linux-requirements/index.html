@@ -23,8 +23,10 @@ extra_css:
   run, with a desktop or without; that release's installer finished there, and later ones stop
   at the start, so the page says only that the app cannot run, true of both.
   Amazon Linux 2023: the MsQuic step says unsupported, so the
-  app uses TCP. Red Hat is not listed, as it was not tested. The processor's copy is the server
-  page's: the client is on .NET 11 too, which is where the limit comes from; not tested here.
+  app uses TCP. Red Hat is not listed, as it was not tested. The processor: the client is on
+  .NET 11 too, which is where the limit comes from, so the check and the fix are the server
+  page's; the text is the page's own, as the installer refuses such a machine at its start and
+  no client runs in Docker. Tested 2026-11-09 against faked /proc/cpuinfo flags only.
   Names and versions are markup; the versions are dir="ltr", or an RTL page turns their list
   around.
 {%- endcomment -%}
@@ -62,7 +64,7 @@ extra_css:
 </ul>
 
 <h2 id="processor" class="vh-docs-icon-title"><span class="vh-docs-title-icon">{% include icons/cpu.svg %}</span>{{ vh_sr.processor_title }}</h2>
-<p>{% include copy.html s=vh_sr.processor_desc %}</p>
+<p>{% include copy.html s=t.processor_desc %}</p>
 {% include terminal.html caption=vh_sr.processor_check cmd='grep -qw sse4_2 /proc/cpuinfo && grep -qw popcnt /proc/cpuinfo && echo Supported || echo "Not supported"' %}
 <p>{% include copy.html s=vh_sr.processor_fix %}</p>
 

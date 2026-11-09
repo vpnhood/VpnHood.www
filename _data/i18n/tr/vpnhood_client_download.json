@@ -20,6 +20,7 @@
   "ios_devices_note": "iPhone ve iPad üzerinde çalışır.",
   "windows_min_version": "<b>Windows 10</b> ve üzerini destekler.",
   "windows_x64_only": "Yalnızca Windows x64 sürümü.",
+  "windows_processor_note": "SSE4.2 ve POPCNT destekli bir işlemci gerekir; son on yılın tüm işlemcilerinde bunlar vardır.",
   "direct_link_note": "Doğrudan bağlantıyı yalnızca Google Play'e erişiminiz olmadığında tercih etmeniz önerilir.",
   "android_web_note": "Doğrudan bağlantıdaki sürüm Google Play'i kullanmaz.",
   "android_arm64_title": "ARM64 sürümü",

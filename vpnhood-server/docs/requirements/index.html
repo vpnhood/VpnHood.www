@@ -36,7 +36,8 @@ extra_css:
   hides them all, whatever the hardware. ARM64's minimum did not change. The check greps two of
   the six flags: kvm64 lacks every one, and a real processor with SSE4.2 and POPCNT has the
   rest. It sat on the install pages, as a card with an anchor #cpu, until the owner moved it
-  here (2026-11-03).
+  here (2026-11-03). The Linux installer refuses such a machine at its start, by /proc/cpuinfo's
+  flags; the Windows installer does not check, and a container's server still stops as it starts.
 {%- endcomment -%}
 {% capture vh_article %}
 {% include docs-hero.html art="vpnhood-server/docs/hero-requirements.svg" %}

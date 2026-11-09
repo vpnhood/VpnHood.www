@@ -20,6 +20,7 @@
   "ios_devices_note": "Funciona en iPhone y iPad.",
   "windows_min_version": "Compatible con <b>Windows 10</b> y versiones posteriores.",
   "windows_x64_only": "Solo disponible para Windows x64.",
+  "windows_processor_note": "Requiere un procesador con SSE4.2 y POPCNT, que tienen todos los procesadores de los últimos diez años.",
   "direct_link_note": "Usa el enlace directo únicamente si no tienes acceso a Google Play.",
   "android_web_note": "La versión del enlace directo no usa Google Play.",
   "android_arm64_title": "Versión ARM64",

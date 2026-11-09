@@ -20,6 +20,7 @@
   "ios_devices_note": "Läuft auf iPhone und iPad.",
   "windows_min_version": "Unterstützt <b>Windows 10</b> und höher.",
   "windows_x64_only": "Nur Windows x64-Version.",
+  "windows_processor_note": "Benötigt einen Prozessor mit SSE4.2 und POPCNT, die jeder Prozessor der letzten zehn Jahre hat.",
   "direct_link_note": "Nutzen Sie den direkten Link nur, wenn Sie keinen Zugriff auf Google Play haben.",
   "android_web_note": "Die Version über den direkten Link nutzt Google Play nicht. Sie enthält keine kostenlosen Server. Um sie zu nutzen, müssen Sie <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium werden</b></a>.",
   "android_arm64_title": "ARM64-Version",
