@@ -22,8 +22,8 @@ between dark and white as the visitor moved around the top menu. A survey of 23 
 none that mix the two inside their marketing pages: a site follows the system everywhere,
 nowhere, or in its docs only, and a partner page always behaves like the site's other marketing
 pages. The docs are a place a reader goes to on purpose, with their own sidebar and breadcrumb,
-so the one jump left is into them. `/search/` goes with them because its box is only in the docs
-sidebar. Keep it that way: a page outside the docs does not follow the system.
+so the one jump left is into them. `/search/` goes with them because its box is only on the docs
+pages. Keep it that way: a page outside the docs does not follow the system.
 
 ## How it's applied
 

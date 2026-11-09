@@ -9,7 +9,12 @@
   Not a Jekyll layout: a layout renders after the page body, so the variables
   header.html assigns would not exist yet when the copy needs them. The sidebar is
   _data/docs_nav.yml keyed by the product folder; a section with no entry gets the
-  article alone. The site search box (search-form.html) tops the sidebar.
+  article alone.
+
+  The site search box (search-form.html) sits in the breadcrumb row, as docs sites keep
+  search in their top bar, in view at every width: at the row's end from 992px up, on a
+  line of its own under the breadcrumb below that. It is never inside the page list, or
+  a phone would have to open the drawer to search.
 
   Below 992px the sidebar is a drawer (Bootstrap's responsive .offcanvas-lg), opened by
   the button at the start of the breadcrumb row, so a phone opens every page at its
@@ -29,6 +34,9 @@
       <button class="vh-docs-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#vhDocsSide" aria-controls="vhDocsSide" aria-label="{{ vh_ds_open }}" title="{{ vh_ds_open }}"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"></path><path d="M4 6h.01M4 12h.01M4 18h.01"></path></svg></button>
       {%- endif %}
       {% include breadcrumb.html visible=true %}
+      {%- if vh_dn %}
+      {% include search-form.html id="vhDocsSearch" %}
+      {%- endif %}
     </div>
     <div class="vh-docs-grid{% unless vh_dn %} vh-docs-grid--solo{% endunless %}">
       {%- if vh_dn %}
@@ -41,7 +49,6 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#vhDocsSide" aria-label="{{ tc.oc_close }}"></button>
         </div>
         <div class="offcanvas-body">
-          {% include search-form.html id="vhDocsSearch" %}
           {% include docs-nav.html %}
         </div>
       </div>

@@ -10,12 +10,24 @@
 }
 
 // The breadcrumb row: on phones and tablets the button that opens the sidebar's
-// drawer comes first (_includes/docs.html).
+// drawer comes first (_includes/docs.html). The search box ends it from 992px up and
+// takes a line of its own under the breadcrumb below that.
 .vh-docs-top{
     display: flex;
     align-items: center;
     gap: .85rem;
     margin-bottom: 2.5rem;
+}
+
+// From no width of its own, so a long trail wraps inside beside the drawer button
+// rather than dropping under it as a whole.
+.vh-docs-top .vh-breadcrumb{
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.vh-docs-top .vh-search{
+    flex: 0 0 18rem;
 }
 
 .vh-docs-toggle{
@@ -80,9 +92,8 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
-// The sidebar: the search box over the section's pages, sticky as one piece. It is a
-// Bootstrap .offcanvas-lg, which from 992px up lays its body out as a flex row:
-// a column here.
+// The sidebar: the section's pages, sticky. It is a Bootstrap .offcanvas-lg, which
+// from 992px up lays its body out as a flex row: a column here.
 @media (min-width: 992px){
     .vh-docs-side{
         position: sticky;
@@ -101,6 +112,12 @@
 @media (max-width: 991.98px){
     .vh-docs-toggle{
         display: flex;
+    }
+    .vh-docs-top{
+        flex-wrap: wrap;
+    }
+    .vh-docs-top .vh-search{
+        flex-basis: 100%;
     }
     .vh-docs-side{
         --bs-offcanvas-width: 320px;
@@ -141,14 +158,14 @@
     }
 }
 
-// The site search box (_includes/search-form.html), in the sidebar and atop /search/: a
-// field with its magnifier button inside the end, the field's own clear button hidden.
-// The field is a .form-control, which keeps Helix's white input[type="search"] rule (with
-// its !important padding) off it, and is styled through .vh-search to outrank Bootstrap's.
-// Helix also forces box-shadow: none on every search field, so focus shows as an outline.
+// The site search box (_includes/search-form.html), in the docs' breadcrumb row and atop
+// /search/: a field with its magnifier button inside the end, the field's own clear button
+// hidden. The field is a .form-control, which keeps Helix's white input[type="search"] rule
+// (with its !important padding) off it, and is styled through .vh-search to outrank
+// Bootstrap's. Helix also forces box-shadow: none on every search field, so focus shows as
+// an outline.
 .vh-search{
     position: relative;
-    margin-bottom: 1.75rem;
 }
 
 .vh-search .vh-search-input{

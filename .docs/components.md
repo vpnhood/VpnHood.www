@@ -156,9 +156,11 @@ calls Google: it goes through our Worker at `search.vpnhood.com`, which holds th
 the limits.
 
 - **The box** is `search-form.html`, an ordinary GET form to the language's `/search/`, so it
-  needs no script. `docs.html` puts it at the top of every docs sidebar (on phones and tablets, the top
-  of the sidebar's drawer); `/search/` repeats
-  it under its title. Its one label is `nav_labels.json` `search`, which also names `/search/`
+  needs no script. `docs.html` puts it in the breadcrumb row of every docs page with a
+  sidebar: at the row's end from 992px up, on a line of its own under the breadcrumb below
+  that. Docs sites keep search in their top bar, in view at every width; inside the page list
+  (until 2026-11-08) a phone had to open the drawer to reach it. `/search/` repeats it under
+  its title. Its one label is `nav_labels.json` `search`, which also names `/search/`
   in the breadcrumb. The field is a `.form-control` styled through `.vh-search`: Helix's
   `input[type="search"]` rule would otherwise paint it white, with an `!important` padding,
   and Helix's `box-shadow: none !important` on every search field is why focus is an outline.
