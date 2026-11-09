@@ -47,14 +47,21 @@ Head load order: `bootstrap.css` → `helix-theme.css` → `fonts.css` (self-hos
   `vh-btn vh-btn-primary`, `section-title`, `section-space`, Bootstrap
   `row`/`col-*`/spacing). New CSS is a last resort; add it to the relevant `_sass/pages/`
   partial, not inline.
-- Gaps never stack. Consecutive sections share one gap, and the last section on a page adds
-  none of its own (`#sp-main-body .section-space:last-child` in `_default.scss`):
-  `#sp-main-body`'s bottom padding, one and a half `--vh-section-gap` (108–300px), is the gap
-  above the footer. One gap (72–200px, 2026-11-07) put the end of the page as close to the
-  footer as one section is to the next, and the owner found it too tight (2026-11-08); the
-  extra half marks the end of the page. Never give a page's last block a bottom padding or
-  margin of its own: until 2026-11-07 the feature pages, `/guides/`, `/vpnhood-manager/` and
-  the legal pages stacked theirs on top and ended in 200–350px, each page a different amount.
+- Gaps never stack. Consecutive sections share one gap, and the last section on a page adds none
+  of its own (`#sp-main-body .section-space:last-child` in `_default.scss`): `#sp-main-body`'s
+  bottom padding, one and a quarter `--vh-section-gap` (90–250px), is the gap above the footer.
+  One gap (72–200px, 2026-11-07) put the end of the page as close to the footer as one section
+  is to the next, and the owner found it too tight; one and a half (108–300px) was too much
+  (both 2026-11-08). The extra quarter marks the end of the page. Never give a page's last block
+  a bottom padding or margin of its own: until 2026-11-07 the feature pages, `/guides/`,
+  `/vpnhood-manager/` and the legal pages stacked theirs on top and ended in 200–350px, each
+  page a different amount.
+- The top works the same way: `#sp-main-body`'s top padding (100px, 200px from 992px up) clears
+  the fixed header and is the only space above a page's first content, about 109px under the
+  header on a desktop and 35px on a phone, as on the docs pages. A page's first block adds
+  no top padding or margin of its own: until 2026-11-08 the legal documents (120px), the
+  account deletion page, the feature, guide, Reseller, Security Audit, CLIENT and download
+  pages added 24–120px, and their titles started up to 229px under the header.
 - **Never write a literal `white` / `#fff` / `rgba(255,255,255,…)` (or any raw colour) in
   our SCSS** — use a `--vh-*` token or the brand ramp, or the light theme has nothing to
   re-point.

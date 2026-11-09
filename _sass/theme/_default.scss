@@ -783,13 +783,6 @@ pre[tabindex]:focus-visible{
         display:none !important;
     }
 }
-/*-------------- Iconify style --------------*/
-iconify-icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    transform: translateY(3px);
-}
 /*-------------- General --------------*/
 .section-space{
     padding-top: var(--vh-section-gap);
@@ -899,9 +892,6 @@ iconify-icon {
 }
 .vh-text-btn:hover:after{
     width: 100%;
-}
-.vh-text-btn>iconify-icon{
-    transform: translateY(0) !important;
 }
 // RTL: inline icons that depict a direction (arrows) declare class="vh-rtl-mirror"
 // on their <svg> and are mirrored here so they point into the reading direction.

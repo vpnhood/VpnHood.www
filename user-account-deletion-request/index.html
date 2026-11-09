@@ -31,12 +31,12 @@ nav_active: resources
     
         
                                     <div class="com-content-article__body">
-        <div class="container text-center"><iconify-icon icon="line-md:account-alert-loop" class="my-5 txt-blue-d-1" id="singleLargeIcon"></iconify-icon>
+        <div class="legal-content">
+<!-- Laid out as the legal documents are (_legal.scss): their reading column, line height and
+     space under the title. mb-0: last on the page, and #sp-main-body's bottom padding is the
+     gap above the footer. -->
 <h1>{{ t.page_title }}</h1>
-<!-- text-start, not text-left: Bootstrap 5 renamed it, so the old name is a dead class and the
-     paragraph silently inherited the container's text-center. Logical alignment is also what an
-     RTL locale needs here. -->
-<p class="text-start mb-5">{{ t.page_desc | replace: 'href="/', vh_href_lang }}</p>
+<p class="mb-0">{{ t.page_desc | replace: 'href="/', vh_href_lang }}</p>
 </div>     </div>
 
         

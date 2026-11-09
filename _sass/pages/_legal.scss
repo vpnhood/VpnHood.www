@@ -5,7 +5,7 @@
 .legal-content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 120px 0 0; // clear the fixed header; #sp-main-body's bottom padding is the gap above the footer
+  padding: 0; // #sp-main-body's padding clears the fixed header and is the gap above the footer
 
   h1 {
     margin-bottom: 1.5rem;
