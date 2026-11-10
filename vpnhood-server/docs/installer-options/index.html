@@ -12,7 +12,8 @@ extra_css:
   their options for a script live here, and install/linux/ and install/docker/ link here once. Checked
   against the v9.1.866 release's VpnHoodServer-linux-x64.sh and VpnHoodServer.docker.sh,
   which match their sources in the VpnHood repo (pub/lib/vh-installer/linux/,
-  src/Apps/Server/pub/Linux-Docker/). Only the options a reader types: those the Linux
+  src/Apps/Server/pub/Linux-Docker/); -osupdate and its question against install.sh's source
+  (2026-11-09). Only the options a reader types: those the Linux
   installer's -help lists, and the Docker installer's -install-docker and -q. Left out:
   -packageUrl, -packageFile, -versionTag, -destination and -container, which the updater
   passes; and the Docker installer's -composeUrl and -composeFile. The Docker installer has
@@ -33,6 +34,7 @@ extra_css:
     <tr><td><code>-q</code></td><td>{{ t.opt_q }}</td></tr>
     <tr><td><code>-noautostart</code></td><td>{% include copy.html s=t.opt_no_autostart %}</td></tr>
     <tr><td><code>-noautoupdate</code></td><td>{{ t.opt_no_autoupdate }}</td></tr>
+    <tr><td><code>-osupdate</code></td><td>{% include copy.html s=t.opt_osupdate %}</td></tr>
     <tr><td><code>-minClient<wbr>Protocol<wbr>Version</code></td><td>{% include copy.html s=t.opt_min_protocol %}</td></tr>
     <tr><td><code>-help</code></td><td>{{ t.opt_help }}</td></tr>
   </tbody>
@@ -40,6 +42,10 @@ extra_css:
 <p>{{ t.linux_add }}</p>
 {% include terminal.html caption=t.caption_linux cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -q'" %}
 <p>{% include copy.html s=t.linux_change %}</p>
+
+<h3 id="os-updates">{{ t.os_title }}</h3>
+<p>{% include copy.html s=t.os_desc %}</p>
+<p>{% include copy.html s=t.os_off %}</p>
 
 <h2 id="docker">{{ t.docker_title }}</h2>
 <p>{% include copy.html s=t.docker_question %}</p>

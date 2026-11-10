@@ -44,6 +44,7 @@
     "updates_title": "Updates",
     "updates_desc": "Unless you turned it off at install, the server updates itself to each new release: the <code>[server_updater]</code> service checks every 12 hours.",
     "updates_off": "To turn this off, run the standalone install command again and answer <code>[answer_no]</code> to <code>[autoupdate_prompt_linux]</code>. The installer keeps your answer and your settings, so the server stays on its version until you run the command yourself.",
+    "updates_os": "These are the server's own updates. The installer can also keep the operating system patched, restarting the machine at night when a fix needs it: see <a href=\"/vpnhood-server/docs/installer-options/#os-updates\">Operating system updates</a>.",
     "updates_keep": "Keep updates on if you can. Some releases fix security issues. An updated app still connects to an older server, but gets no UDP from one before v9.0.859, and apps support servers older than VpnHood 9.1 only until April 2027.",
     "uninstall_title": "Uninstall",
     "uninstall_run": "To remove the server, run its uninstaller. It stops the server and removes its services and its files, but keeps its settings, access keys and certificates in <code>[server_storage]</code> for a later install.",

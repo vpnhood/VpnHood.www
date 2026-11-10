@@ -42,6 +42,7 @@
   "updates_title": "Güncellemeler",
   "updates_desc": "Kurulum sırasında kapatmadığınız sürece sunucu yeni sürümlere otomatik güncellenir: <code>[server_updater]</code> hizmeti her 12 saatte bir kontrol eder.",
   "updates_off": "Bunu kapatmak için tek başına kurulum komutunu tekrar çalıştırın ve <code>[autoupdate_prompt_linux]</code> sorusuna <code>[answer_no]</code> yanıtını verin. Yükleyici yanıtınızı ve ayarlarınızı korur; böylece komutu siz manuel çalıştırmadıkça sunucu mevcut sürümünde kalır.",
+  "updates_os": "Bunlar sunucunun kendi güncellemeleridir. Yükleyici ayrıca işletim sistemini güncel tutabilir ve bir düzeltme gerektirdiğinde makineyi gece yeniden başlatabilir: Bkz. <a href=\"/vpnhood-server/docs/installer-options/#os-updates\">İşletim sistemi güncellemeleri</a>.",
   "updates_keep": "Mümkünse güncellemeleri açık tutun. Bazı sürümler güvenlik sorunlarını çözer. Güncellenen bir uygulama eski bir sunucuya yine bağlanır, ancak v9.0.859'dan önceki bir sunucudan UDP alamaz; uygulamalar VpnHood 9.1'den eski sunucuları yalnızca Nisan 2027'ye kadar destekler.",
   "uninstall_title": "Kaldır",
   "uninstall_run": "Sunucuyu kaldırmak için kaldırma aracını çalıştırın. Bu işlem sunucuyu durdurur, servislerini ve dosyalarını siler; ancak daha sonraki bir kurulum için ayarları, erişim anahtarlarını ve sertifikaları <code>[server_storage]</code> içinde saklar.",

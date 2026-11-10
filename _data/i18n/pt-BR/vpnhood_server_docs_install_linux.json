@@ -42,6 +42,7 @@
   "updates_title": "Atualizações",
   "updates_desc": "A menos que você tenha desativado durante a instalação, o servidor se atualiza automaticamente a cada nova versão: o serviço <code>[server_updater]</code> verifica a cada 12 horas.",
   "updates_off": "Para desativar isso, execute novamente o comando de instalação do servidor independente e responda <code>[answer_no]</code> a <code>[autoupdate_prompt_linux]</code>. O instalador guarda sua resposta e suas configurações, então o servidor permanece na versão atual até você mesmo executar o comando.",
+  "updates_os": "Estas são as atualizações do próprio servidor. O instalador também pode manter o sistema operacional atualizado, reiniciando a máquina à noite quando uma correção exigir: consulte <a href=\"/vpnhood-server/docs/installer-options/#os-updates\">Atualizações do sistema operacional</a>.",
   "updates_keep": "Mantenha as atualizações ativadas, se possível. Algumas versões corrigem falhas de segurança. Um aplicativo atualizado ainda se conecta a um servidor mais antigo, mas fica sem UDP em um servidor anterior à v9.0.859, e os aplicativos suportam servidores anteriores ao VpnHood 9.1 apenas até abril de 2027.",
   "uninstall_title": "Desinstalar",
   "uninstall_run": "Para remover o servidor, execute o desinstalador. Ele encerra o servidor e remove serviços e arquivos, mas preserva configurações, chaves de acesso e certificados em <code>[server_storage]</code> para uma futura reinstalação.",
