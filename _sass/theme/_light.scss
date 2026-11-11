@@ -331,18 +331,73 @@
 // To add one: register the dark source in that script, run it, then point a rule here at
 // the result. See its docstring for what is deliberately NOT converted — the app
 // screenshots above all.
-// Light mode keeps the original abstract banner and its original card treatment.
-// banner-bg.webp remains its source; the dark guardian is a separate asset.
+// Temporary localhost preview of the original polar guardian (2026-11-09).
+// The existing guardian pipeline keeps her body opaque and feathers only the edges.
+// A pale veil on the same silhouette softens contrast without revealing effects through her.
 [data-theme="light"] #bannerBgWrapper{
-    background-image: url("/assets/images/home/banner-bg-light.webp");
+    --vh-polar-preview-size: auto;
+    --vh-polar-preview-position: center bottom;
+    background-image: url("/assets/images/home/banner-polar-preview.webp");
+    background-size: var(--vh-polar-preview-size);
+    background-position: var(--vh-polar-preview-position);
     filter: none;
+}
+[data-theme="light"] #bannerBgWrapper::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-color: rgba(var(--purple-800-rgb), 0.45);
+    mask-image: url("/assets/images/home/banner-polar-preview.webp");
+    mask-repeat: no-repeat;
+    mask-size: var(--vh-polar-preview-size);
+    mask-position: var(--vh-polar-preview-position);
+}
+// Temporary alternate: ?vh_theme=light#bannerBgWrapper. The ordinary light URL keeps
+// the approved first portrait; both use the same opaque body and 45% pale veil.
+[data-theme="light"] #bannerBgWrapper:target{
+    background-image: url("/assets/images/home/banner-polar-glare-preview.webp");
+}
+[data-theme="light"] #bannerBgWrapper:target::after{
+    mask-image: url("/assets/images/home/banner-polar-glare-preview.webp");
+}
+// Temporary side-light alternate: ?vh_theme=light&guardian=side-light#banner.
+[data-theme="light"] #banner:target > #bannerBgWrapper{
+    background-image: url("/assets/images/home/banner-polar-side-light-preview.webp");
+}
+[data-theme="light"] #banner:target > #bannerBgWrapper::after{
+    // Temporary test: less pale wash on the left, keeping the right-side glare.
+    background: linear-gradient(to right,
+        rgba(var(--purple-800-rgb), 0.30) 0%,
+        rgba(var(--purple-800-rgb), 0.30) 44%,
+        rgba(var(--purple-800-rgb), 0.45) 56%,
+        rgba(var(--purple-800-rgb), 0.45) 100%);
+    mask-image: url("/assets/images/home/banner-polar-side-light-preview.webp");
+}
+@media (max-width: 991px) {
+    [data-theme="light"] #bannerBgWrapper{
+        --vh-polar-preview-size: 1100px;
+        --vh-polar-preview-position: center 210px;
+    }
+}
+@media (max-width: 767px) {
+    [data-theme="light"] #bannerBgWrapper{
+        --vh-polar-preview-size: 920px;
+        --vh-polar-preview-position: center 295px;
+    }
+}
+@media (max-width: 575px) {
+    [data-theme="light"] #bannerBgWrapper{
+        --vh-polar-preview-size: 253%;
+        --vh-polar-preview-position: center 47%;
+    }
 }
 [data-theme="light"] #bannerCardBlur{
     background-color: rgba(var(--purple-700-rgb), 0.86);
 }
 [data-theme="light"] #banner > #purpleLight,
 [data-theme="light"] #banner > #greenLight{
-    z-index: -1;
+    z-index: -2;
 }
 [data-theme="light"] #features{
     background-image: url("/assets/images/home/features-bg-light.webp");
