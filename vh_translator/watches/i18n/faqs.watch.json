@@ -12,7 +12,7 @@
     "q_connect_vs_client": "VpnHood! CONNECT vs. VpnHood! CLIENT?",
     "a_connect_vs_client": "VpnHood! CONNECT is a free VPN that users can enjoy without limitations. However, while VpnHood! CLIENT is also free, it does not include servers for direct connections. It connects to a VpnHood! server that you, or someone you trust, already runs, using an access key, also called a server key, that they give you.",
     "q_supported_platforms": "What platforms does VpnHood support?",
-    "a_supported_platforms": "VpnHood! CLIENT runs on Android, iOS (iPhone and iPad), Windows, and Linux. VpnHood! CONNECT runs on Android, iOS (iPhone and iPad), Windows, and Linux. On iOS, Windows and Linux, VpnHood! CONNECT has no free servers; you'll need to purchase a premium code, which is available on the <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">pricing</a> page.",
+    "a_supported_platforms": "VpnHood! CLIENT runs on Android, iOS (iPhone and iPad), Apple TV, Windows, and Linux. VpnHood! CONNECT runs on Android, iOS (iPhone and iPad), Windows, and Linux. On iOS, Windows and Linux, VpnHood! CONNECT has no free servers; you'll need to purchase a premium code, which is available on the <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">pricing</a> page.",
     "q_is_open_source": "Is VpnHood open source?",
     "a_is_open_source": "Yes, all of it. VpnHood! CONNECT, VpnHood! CLIENT, the server, and the VpnHood! ENGINE behind them are published on GitHub, and the project has been audited by <a href=\"/security-audit/\">Include Security for the Open Technology Fund's Red Team Lab</a>. You can read the code yourself rather than take our word for it.",
     "q_is_undetectable": "Is VpnHood undetectable?",

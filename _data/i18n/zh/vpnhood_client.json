@@ -1,9 +1,9 @@
 {
   "meta_title": "VpnHood! CLIENT",
-  "meta_description": "VpnHood! CLIENT 是一款专为自托管 VPN 服务器打造的免费开源应用，科学上网更自由。只需在 Android、iOS、Windows 或 Linux 上粘贴访问密钥即可轻松连接。",
+  "meta_description": "VpnHood! CLIENT 是一款专为自托管 VPN 服务器打造的免费开源应用，科学上网更自由。只需在 Android、iOS、Apple TV、Windows 或 Linux 上粘贴访问密钥即可轻松连接。",
   "page_title": "VpnHood! CLIENT",
   "page_desc": "极速、安全、可靠的 VPN 解决方案，由开源的 <b>VpnHood! ENGINE</b> 驱动，这是首款完全基于 .NET 平台开发的 VPN。",
-  "intro": "VpnHood! CLIENT 是一款供用户使用的免费开源应用，支持 Android、iOS、Windows 和 Linux。界面直观易用，拿到密钥就能立刻上手：",
+  "intro": "VpnHood! CLIENT 是一款供用户使用的免费开源应用，支持 Android、iOS、Apple TV、Windows 和 Linux。界面直观易用，拿到密钥就能立刻上手：",
   "li_key_title": "粘贴密钥，即刻连接",
   "li_key_desc": "添加访问密钥即可连接——无需账号、无需注册、零配置。",
   "li_fast_title": "疾速轻量",

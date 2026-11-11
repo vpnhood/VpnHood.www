@@ -10,7 +10,7 @@
   "q_connect_vs_client": "ما الفرق بين VpnHood! CONNECT وVpnHood! CLIENT؟",
   "a_connect_vs_client": "تطبيق VpnHood! CONNECT هو خدمة VPN مجانية بالكامل دون قيود. أما تطبيق VpnHood! CLIENT فهو مجاني أيضًا، ولكنه لا يتضمن خوادم مدمجة للاتصال المباشر؛ بل يتصل بخادم VpnHood! SERVER يديره شخص تثق به أو تديره بنفسك، وذلك عبر مفتاح وصول مخصص (يُسمى أيضًا مفتاح الخادم).",
   "q_supported_platforms": "ما هي الأنظمة التي يدعمها VpnHood؟",
-  "a_supported_platforms": "يعمل VpnHood! CLIENT على أنظمة Android وiOS (iPhone وiPad) وWindows وLinux. ويعمل VpnHood! CONNECT على أنظمة Android وiOS (iPhone وiPad) وWindows وLinux. لا تتوفر خوادم مجانية لتطبيق VpnHood! CONNECT على أنظمة iOS وWindows وLinux؛ وستحتاج لشراء رمز مميز متوفر في صفحة <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">الأسعار</a>.",
+  "a_supported_platforms": "يعمل VpnHood! CLIENT على أنظمة Android وiOS (iPhone وiPad) وApple TV وWindows وLinux. ويعمل VpnHood! CONNECT على أنظمة Android وiOS (iPhone وiPad) وWindows وLinux. لا تتوفر خوادم مجانية لتطبيق VpnHood! CONNECT على أنظمة iOS وWindows وLinux؛ وستحتاج لشراء رمز مميز متوفر في صفحة <a href=\"/free-vpn/go-premium/\" class=\"text-decoration-underline\">الأسعار</a>.",
   "q_is_open_source": "هل VpnHood مفتوح المصدر؟",
   "a_is_open_source": "نعم، بالكامل. VpnHood! CONNECT وVpnHood! CLIENT والخادم ونظام VpnHood! ENGINE المعتمد عليها، كلها منشورة على GitHub. كما خضع المشروع لتدقيق أمني أجرته شركة <a href=\"/security-audit/\">Include Security لصالح مختبر Red Team التابع لـ Open Technology Fund</a>. يمكنك مراجعة الكود البرمجي بنفسك للتأكد بنفسك.",
   "q_is_undetectable": "هل يمكن حجب VpnHood أو اكتشافه؟",

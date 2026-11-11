@@ -24,7 +24,7 @@ Quick Launch = راه‌اندازی سریع
 Quick Settings = تنظیمات سریع (what Persian users and tech sites say; never تنظیمات فوری) · Quick Settings tile (an app's button there) = دکمه (never کاشی; the owner: it is just a button)
 Always On = همیشه روشن
 Smart Proxies = پروکسی‌های هوشمند (the feature page's own title)
-Windows = ویندوز · Windows Server = ویندوز سرور · Linux = لینوکس · Android = اندروید · Android TV = اندروید تی‌وی
+Windows = ویندوز · Windows Server = ویندوز سرور · Linux = لینوکس · Android = اندروید · Android TV = اندروید تی‌وی · Apple TV = اپل تی‌وی
 iPhone = آیفون · iPad = آیپد · Google = گوگل · Google Play = گوگل پلی · Google Analytics = گوگل آنالیتیکس
 App Store = اپ استور · Apple = اپل · Instagram = اینستاگرام · LinkedIn = لینکدین · Netflix = نتفلیکس · Docker = داکر
 iOS = iOS (Persian has no one word for it; آیفون و آیپد only where the English names them)
