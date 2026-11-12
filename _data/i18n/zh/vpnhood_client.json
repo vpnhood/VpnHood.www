@@ -8,7 +8,7 @@
   "li_key_desc": "添加访问密钥即可连接——无需账号、无需注册、零配置。",
   "li_fast_title": "疾速轻量",
   "li_fast_desc": "轻量低耗，整日后台运行无负担；极速畅连，流媒体播放与视频通话游刃有余。",
-  "phones_alt": "两部手机上的 VpnHood! CLIENT：一台已连接并显示实时下载和上传速度，另一台列出公共和私有访问密钥配置文件",
+  "phones_alt": "两部手机上的 VpnHood! CLIENT：一台已连接并显示实时下载和上传速度，另一台列出通过访问密钥添加的服务器",
   "download_client": "下载 VpnHood! CLIENT",
   "li_own_title": "自建服务器，规则完全由您定",
   "li_own_desc": "应用仅直连您的服务器。无需注册 VpnHood 账号，流量不经由我们，隐私全由自己掌控。",

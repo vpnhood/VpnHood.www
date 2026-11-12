@@ -300,7 +300,8 @@ A page that shows the app shows it in the reader's language: a Persian reader se
 app, right to left, as their phone shows it. Every picture in `assets/images/app/<lang>/` is
 drawn by the app's real UI, never taken by hand: the feature pages' screens and `/free-vpn/`'s
 strip (`connect-*`) from CONNECT, as those pages offer CONNECT's download (owner, 2026-11-12),
-and the CLIENT docs' details (`diagnose-*`, `tv-*`) from CLIENT. The store
+and the CLIENT page's two phones (`client-phones`) and the CLIENT docs' details (`diagnose-*`,
+`tv-*`) from CLIENT. The store
 screenshot tool in the VpnHood repo (`src/Apps/Tools/StoreScreenshots`, whose README explains
 it) starts the Avalonia UI headless against a product's store fixture, with no app, VPN or
 device, once per language in `_data/i18n/`.
@@ -318,9 +319,10 @@ the message a diagnosis ends with), and where needed a taller screen (`height`),
 bottom cut off (`trim`), the top of a long page with no scroll bar (`cut`), a box cut out
 (`crop`, measured on the English screen and mirrored right to left) or the message box found on
 the page (`box`), a ring (`ring`), or else the whole screen in the Google Play set's own phone,
-status bar and home indicator included, with the phone's round corners (`phone`), a patch over
-the fixture (filled split lists and a rated proxy list among them, with reserved example names
-and addresses) and controls to hide. The script writes each picture's
+status bar and home indicator included, with the phone's round corners (`phone`), or two whole
+screens in two phones the script draws (`pair`), a patch over the fixture (filled split lists and
+a rated proxy list among them, with reserved example names and addresses) and controls to hide; a
+picture can leave a Google Play shot's patch out (`listing`). The script writes each picture's
 size to `_data/app_shots.yml`. Never edit either output by hand. Rerun it after a change to the
 app's screens or words: the same inputs draw the same bytes, so git shows only what changed.
 
@@ -338,6 +340,14 @@ patch, with no caption, as each names itself at its top. Each sits 220 wide in `
 inside it is; the strip starts with the home screen in the middle (see "Pause buttons"). It was
 eight crops of settings screens with captions, until the owner chose this on 2026-11-07: the
 strip is something a visitor glances at, never a list of features, which have their own pages.
+
+The CLIENT page's `client-phones` is the home screen, connected as in CLIENT's Google Play set,
+behind the server list with the fixture's two profiles; the Play set shows that list empty, with
+its warning. Both phones are the same size and lean apart, and each shadow fades out inside the
+picture, so the light theme shows no box. Right to left the pair is mirrored but its screens are
+not, so the front phone never covers the side the back screen's rows start from. It shows the
+version the TV sets name, as the TV card under it does. It was a composite of two 2025 store
+screenshots in English until 2026-11-12 (owner: "ok go").
 
 A TV's whole screen (`tv-*` and `connect-tv-*`) sits in `.vh-tv` (`_custom.scss`) wherever it
 shows, the docs too: a 6px bezel with a TV's small corners on two feet that lean out, on the

@@ -8,7 +8,7 @@
   "li_key_desc": "Bir erişim anahtarı ekle ve bağlan; hesap yok, kayıt olmak yok, ayar yapmak yok.",
   "li_fast_title": "Hızlı ve hafif",
   "li_fast_desc": "Tüm gün açık bırakılabilecek kadar hafif; yayınlar ve görüntülü görüşmeler için fazlasıyla hızlı.",
-  "phones_alt": "İki telefonda VpnHood! CLIENT: Biri bağlı ve canlı indirme/yükleme hızını gösteriyor, diğeri ise genel ve özel erişim anahtarı profillerini listeliyor",
+  "phones_alt": "İki telefonda VpnHood! CLIENT: Biri bağlı ve canlı indirme/yükleme hızını gösteriyor, diğeri ise erişim anahtarlarıyla eklenen sunucuları listeliyor",
   "download_client": "VpnHood! CLIENT İndir",
   "li_own_title": "Sizin sunucunuz, sizin kurallarınız",
   "li_own_desc": "Uygulama yalnızca sizin sunucunuzla iletişim kurar. Arka planda bir VpnHood hesabı yoktur, trafiğiniz üzerimizden geçmez ve üçüncü taraflara güvenmeniz gerekmez.",

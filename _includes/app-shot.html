@@ -5,9 +5,12 @@
   hand. A language with no picture of its own shows the English one.
 
   {% include app-shot.html name="protocols" alt=t.shot_alt loading="eager" %}
+
+  `class` puts classes on the picture, for one that sits in no frame of its own, as the CLIENT
+  page's phones (class="img-fluid mx-auto").
 {%- endcomment -%}
 {%- assign vh_shot = site.data.app_shots[include.name] -%}
 {%- assign vh_shot_lang = vh_lang | default: 'en' -%}
 {%- unless vh_shot[vh_shot_lang] -%}{%- assign vh_shot_lang = 'en' -%}{%- endunless -%}
 {%- assign vh_shot_size = vh_shot[vh_shot_lang] -%}
-<img src="/assets/images/app/{{ vh_shot_lang }}/{{ include.name }}.webp" alt="{{ include.alt }}" width="{{ vh_shot_size[0] | divided_by: 2 }}" height="{{ vh_shot_size[1] | divided_by: 2 }}" loading="{{ include.loading | default: 'lazy' }}" />
+<img src="/assets/images/app/{{ vh_shot_lang }}/{{ include.name }}.webp" alt="{{ include.alt }}" width="{{ vh_shot_size[0] | divided_by: 2 }}" height="{{ vh_shot_size[1] | divided_by: 2 }}" loading="{{ include.loading | default: 'lazy' }}"{% if include.class %} class="{{ include.class }}"{% endif %} />

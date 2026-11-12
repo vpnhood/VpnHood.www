@@ -10,7 +10,8 @@ phone's capabilities and the demo apps come from that product's store configurat
 or CONNECT's), and a screen its Google Play set also shows takes that shot's patch and hidden
 controls, so the site shows what the listing shows. /free-vpn/'s strip shows CONNECT's screens
 whole, in that set's own phone: the status bar and the home indicator come with them. The
-screens are SHOTS below.
+CLIENT page's two phones are a pair of CLIENT's Google Play screens, each in a phone drawn here.
+The screens are SHOTS below.
 
     python tools/make-app-shots.py                     # every picture in every language
     python tools/make-app-shots.py --only home --lang en,fa
@@ -36,7 +37,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+import numpy as np
+from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 VH = ROOT.parent / "VpnHood"
@@ -67,6 +69,10 @@ TV_SCALE = 1.5
 DOCS = 2
 # The ring that marks what a docs step is about: the site's green, as on the feature pages.
 RING = (99, 230, 190)
+# A pair of phones (the CLIENT page): each screen 330 wide in a phone drawn here, built at twice
+# that and brought down to PAIR_WIDTH, twice the 636 the page's column shows it at.
+PAIR_SCREEN = 330
+PAIR_WIDTH = 1272
 
 
 # The Smart Proxies page shows a list the app has rated. Addresses are from the ranges reserved
@@ -109,6 +115,9 @@ PROXIES_ON = {"userSettings": {"proxySettings": {"mode": "Manual"}}, "proxyEndPo
 #   phone   instead, the whole screen in the Google Play set's phone, its status bar and home
 #           indicator included, this many pixels wide and its corners round as the phone's
 #   tv      instead, a TV's whole screen, with the capabilities and patch of the TV store set
+#   pair    instead, two routes, each screen whole as `phone` cuts it, in two phones drawn here
+#           that lean apart, the first behind
+#   listing the routes that take their Google Play shot's patch and hidden controls (all unless said)
 #   patch   what the app must be showing, laid over the store shot's own (FixtureComposer)
 #   hide    controls to leave out, each a path of x:Names from the page down
 SHOTS: list[dict] = [
@@ -157,6 +166,13 @@ SHOTS: list[dict] = [
     {"name": "connect-cloak-mode", "route": "/protocols/cloak-mode", **STRIP},
     {"name": "connect-split-tunneling", "route": "/split-tunneling", **STRIP},
     {"name": "connect-quick-launch", "route": "/settings/quick-launch", **STRIP},
+
+    # the CLIENT page: the home screen, connected as its Google Play shot is, behind the server
+    # list with the fixture's two profiles (the Play set shows it empty, with its warning); the
+    # version is the one the TV sets show, as the TV card under the phones does, where the phone
+    # fixture still says 8.1.835
+    {"name": "client-phones", "product": "client", "pair": ["/", "/servers"], "listing": ["/"],
+     "patch": {"descriptor": {"version": "9.1.868.0"}}},
 ]
 
 
@@ -249,7 +265,7 @@ def ring(image: Image.Image, box: list[float], scale: float) -> Image.Image:
     return out
 
 
-def phone_screen(image: Image.Image, device: dict, width: int) -> Image.Image:
+def phone_screen(image: Image.Image, device: dict, width: int, rounded: bool = True) -> Image.Image:
     """The screen of the store's phone, cut out of the picture of it: the phone sits in the middle
     of the device's canvas, its screen all of it but the bezel (PhoneFrame.cs in the tool). Brought
     down to `width`, then its corners rounded as the phone's own, the rim beyond them left clear;
@@ -261,12 +277,96 @@ def phone_screen(image: Image.Image, device: dict, width: int) -> Image.Image:
     image = image.crop(tuple(round(v * scale) for v in (left, top, left + screen_w, top + screen_h)))
     w, h = width, round(image.height * width / image.width)
     image = image.resize((w, h), Image.LANCZOS).convert("RGBA")
+    if not rounded:
+        return image
     big = 4
     mask = Image.new("L", (w * big, h * big), 0)
     ImageDraw.Draw(mask).rounded_rectangle([0, 0, w * big - 1, h * big - 1],
                                            radius=round(device["screenRadius"] * w / screen_w * big), fill=255)
     image.putalpha(mask.resize((w, h), Image.LANCZOS))
     return image
+
+
+def rounded_mask(size: tuple[int, int], radius: int) -> Image.Image:
+    mask = Image.new("L", size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, size[0] - 1, size[1] - 1], radius=radius, fill=255)
+    return mask
+
+
+def perspective_coeffs(pa: list, pb: list) -> list[float]:
+    matrix = []
+    for p1, p2 in zip(pa, pb):
+        matrix.append([p1[0], p1[1], 1, 0, 0, 0, -p2[0] * p1[0], -p2[0] * p1[1]])
+        matrix.append([0, 0, 0, p1[0], p1[1], 1, -p2[1] * p1[0], -p2[1] * p1[1]])
+    a, b = np.array(matrix, dtype=float), np.array(pb, dtype=float).reshape(8)
+    return np.linalg.lstsq(a, b, rcond=None)[0].tolist()
+
+
+def phone_body(screen: Image.Image, s: int) -> Image.Image:
+    """A screen in a phone: a metal frame, a dark bezel and three side buttons, at `s` times."""
+    frame, bezel, margin = 5 * s, 14 * s, 6 * s   # margin: room for the side buttons
+    pw, ph = screen.width + 2 * (frame + bezel), screen.height + 2 * (frame + bezel)
+    canvas = Image.new("RGBA", (pw + 2 * margin, ph), (0, 0, 0, 0))
+    d = ImageDraw.Draw(canvas)
+    button = (120, 132, 156, 255)
+    d.rounded_rectangle([margin - 4 * s, ph * 0.24, margin + 2 * s, ph * 0.24 + 46 * s], radius=3 * s, fill=button)
+    d.rounded_rectangle([margin - 4 * s, ph * 0.24 + 60 * s, margin + 2 * s, ph * 0.24 + 106 * s], radius=3 * s, fill=button)
+    d.rounded_rectangle([margin + pw - 2 * s, ph * 0.30, margin + pw + 4 * s, ph * 0.30 + 90 * s], radius=3 * s, fill=button)
+    d.rounded_rectangle([margin, 0, margin + pw - 1, ph - 1], radius=62 * s, fill=(171, 181, 201, 255))
+    d.rounded_rectangle([margin + frame, frame, margin + pw - 1 - frame, ph - 1 - frame], radius=57 * s,
+                        fill=(10, 13, 38, 255))
+    canvas.paste(screen, (margin + frame + bezel, frame + bezel), rounded_mask(screen.size, 40 * s))
+    return canvas
+
+
+def keystone(image: Image.Image, k: float) -> Image.Image:
+    """The top edge narrower by k of the width at each corner, as if the phone leans away at the
+    top; the same for both phones, so neither reads wider than the other."""
+    w, h = image.size
+    t = k * w
+    return image.transform((w, h), Image.PERSPECTIVE, perspective_coeffs(
+        [(t, 0), (w - 1 - t, 0), (w - 1, h - 1), (0, h - 1)], [(0, 0), (w - 1, 0), (w - 1, h - 1), (0, h - 1)]),
+        Image.BICUBIC)
+
+
+def phone_pair(back: Image.Image, front: Image.Image, rtl: bool = False) -> Image.Image:
+    """Two screens in two phones of the same size that lean apart, `front` lower and in front:
+    depth comes from that, never from a smaller phone or a one-sided taper, which read as
+    squashed. Each shadow is blurred with room on every side and fades out towards the picture's
+    sides, so a light page shows no box around a phone (owner, 2026-11-11). Built at 2x, then
+    brought down to PAIR_WIDTH. Right to left, the pair is mirrored and the screens are not, so
+    the front phone covers the back screen's left, away from where its rows' words start."""
+    if rtl:
+        return ImageOps.mirror(phone_pair(ImageOps.mirror(back), ImageOps.mirror(front)))
+    s = 2
+    phones = [keystone(phone_body(x.resize((PAIR_SCREEN * s, round(x.height * PAIR_SCREEN * s / x.width)),
+                                           Image.LANCZOS), s), 0.030).rotate(angle, Image.BICUBIC, expand=True)
+              for x, angle in ((back, 8), (front, -8))]
+    a, b = phones
+    overlap, drop = 175 * s, 110 * s
+    blur, offset, opacity = 22 * s, (10 * s, 22 * s), 110
+    pad = 3 * blur + 4 * s   # Pillow's Gaussian is three box blurs, which end at 3 x blur
+    side, fade = 18 * s, 40 * s
+    w = a.width + b.width - overlap + 2 * pad
+    h = max(a.height, b.height) + drop + 2 * pad
+    shade = Image.new("RGBA", (w, h), (8, 8, 24, 0))
+    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    for image, (x, y) in ((a, (pad, pad)), (b, (pad + a.width - overlap, pad + drop))):
+        silhouette = Image.new("RGBA", (image.width + 2 * pad, image.height + 2 * pad), (8, 8, 24, 0))
+        silhouette.paste(Image.new("RGBA", image.size, (8, 8, 24, opacity)), (pad, pad), image.getchannel("A"))
+        shade.alpha_composite(silhouette.filter(ImageFilter.GaussianBlur(blur)), (x + offset[0] - pad, y + offset[1] - pad))
+        layer.alpha_composite(image, (x, y))
+    left, _, right, _ = layer.getbbox()
+    left, right = left - side, right + side
+    xs = np.arange(w)
+    ramp = np.clip(np.minimum(xs - left, right - xs) / fade, 0, 1)
+    ramp = ramp * ramp * (3 - 2 * ramp)
+    shade.putalpha(Image.fromarray(np.round(np.asarray(shade.getchannel("A"), dtype=float) * ramp[None, :])
+                                   .astype(np.uint8)))
+    shade.alpha_composite(layer)
+    _, top, _, bottom = shade.getbbox()
+    out = shade.crop((left, top, right, bottom))
+    return out.resize((PAIR_WIDTH, round(out.height * PAIR_WIDTH / out.width)), Image.LANCZOS)
 
 
 def mirrored(box: list[float], width: float) -> list[float]:
@@ -325,22 +425,25 @@ def write_config(product: str, shots: list[dict], langs: list[str]) -> Path:
     patch_files = set()
     for shot in shots:
         platform = store["platforms"][TV if shot.get("tv") else PLATFORM]
-        like = {x["route"]: x for x in platform["shots"]}.get(shot["route"], {})
+        likes = {x["route"]: x for x in platform["shots"]}
         if platform.get("patchFile"):
             patch_files.add(platform["patchFile"])
         if shot.get("tv"):
             device = dict(next(iter(platform["devices"].values())), label="site", scale=TV_SCALE)
-        elif shot.get("phone"):
+        elif shot.get("phone") or shot.get("pair"):
             device = dict(platform["devices"][PHONE], label="site")
         else:
             device = {"label": "site", "frame": "none", "cssWidth": WIDTH,
                       "cssHeight": shot.get("height", HEIGHT), "scale": shot.get("scale", SCALE)}
-        spec = {
-            "route": shot["route"],
-            "label": shot["name"],
-            "patch": merge(json.loads(json.dumps(like.get("patch") or {})), shot.get("patch")),
-            "hide": like.get("hide", []) + shot.get("hide", []),
-        }
+        specs = []
+        for route in shot.get("pair") or [shot["route"]]:
+            like = likes.get(route, {}) if route in shot.get("listing", [route]) else {}
+            specs.append({
+                "route": route,
+                "label": shot["name"],
+                "patch": merge(json.loads(json.dumps(like.get("patch") or {})), shot.get("patch")),
+                "hide": like.get("hide", []) + shot.get("hide", []),
+            })
         platforms[shot["name"]] = {
             "label": shot["name"],
             "store": "site",
@@ -348,7 +451,7 @@ def write_config(product: str, shots: list[dict], langs: list[str]) -> Path:
             "patch": platform.get("patch"),
             "patchFile": platform.get("patchFile"),
             "devices": {"site": device},
-            "shots": [spec],
+            "shots": specs,
         }
 
     work = WORK / product
@@ -437,8 +540,13 @@ def main() -> int:
         for shot in mine:
             device = written["platforms"][shot["name"]]["devices"]["site"]
             for lang in langs:
-                image = Image.open(out / "final" / shot["name"] / f"1_{tags[lang]}.png").convert("RGB")
-                image = finish(image, shot, lang in rtl, device)
+                drawn = [Image.open(out / "final" / shot["name"] / f"{n}_{tags[lang]}.png").convert("RGB")
+                         for n in range(1, len(shot.get("pair") or [None]) + 1)]
+                if shot.get("pair"):
+                    image = phone_pair(*(phone_screen(x, device, PAIR_SCREEN * 2, rounded=False) for x in drawn),
+                                       rtl=lang in rtl)
+                else:
+                    image = finish(drawn[0], shot, lang in rtl, device)
                 target = file_for(lang, shot["name"])
                 target.parent.mkdir(parents=True, exist_ok=True)
                 image.save(target, "WEBP", quality=88, method=6)
