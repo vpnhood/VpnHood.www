@@ -16,7 +16,7 @@
   "row_locations": "服务器节点 <span class=\"small vh-txt-purple-100\">(国家/地区)</span>",
   "row_ad_free": "无广告",
   "row_resilient_servers": "稳定可靠的服务器",
-  "row_premium_platforms": "Windows、iOS 与 Linux",
+  "row_premium_platforms": "Windows、iOS、Apple TV 与 Linux",
   "row_ultra_fast_server": "极速服务器",
   "row_always_on": "始终开启",
   "row_split_ips": "按 IP 地址分流",

@@ -1,6 +1,6 @@
 {
   "meta_title": "免费 VPN，免注册即可科学上网 | VpnHood! CONNECT",
-  "meta_description": "免费开源 VPN，专为绕过滤火墙与 DPI 深度包检测而设计，科学上网稳定隐蔽。Android 平台完全免费；iOS、Windows 与 Linux 支持高级版。",
+  "meta_description": "免费开源 VPN，专为绕过滤火墙与 DPI 深度包检测而设计，科学上网稳定隐蔽。Android 平台完全免费；iOS、Apple TV、Windows 与 Linux 支持高级版。",
   "hero_logo_alt": "VpnHood! CONNECT 图标",
   "hero_title": "免费 VPN，免注册",
   "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -46,7 +46,7 @@
   "waiting_for_you": "期待您的加入",
   "premium_label": "升级高级版",
   "premium_title": "解锁高级功能，超越免费版",
-  "premium_desc": "免费版由广告支持，因此并非在所有国家/地区都可用，且在 iOS、Windows 和 Linux 上需要高级代码。升级高级版可解锁更多节点、超高速服务器，支持 5 台设备同时在线，并享受无广告的纯净应用体验。",
+  "premium_desc": "免费版由广告支持，因此并非在所有国家/地区都可用，且在 iOS、Apple TV、Windows 和 Linux 上需要高级代码。升级高级版可解锁更多节点、超高速服务器，支持 5 台设备同时在线，并享受无广告的纯净应用体验。",
   "rocket_alt": "火箭",
   "guarantee_number": "30",
   "guarantee_days": "天",

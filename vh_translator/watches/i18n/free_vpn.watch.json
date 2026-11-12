@@ -2,7 +2,7 @@
   "version": 1,
   "items": {
     "meta_title": "Free VPN, No Registration Needed | VpnHood! CONNECT",
-    "meta_description": "Free, open-source VPN engineered to stay undetectable behind firewalls and DPI filters. Free on Android; Premium on iOS, Windows and Linux.",
+    "meta_description": "Free, open-source VPN engineered to stay undetectable behind firewalls and DPI filters. Free on Android; Premium on iOS, Apple TV, Windows and Linux.",
     "hero_logo_alt": "VpnHood! CONNECT logo",
     "hero_title": "Free VPN, No Registration",
     "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -48,7 +48,7 @@
     "waiting_for_you": "Waiting for you",
     "premium_label": "Go premium",
     "premium_title": "Enhance the capabilities of the free version",
-    "premium_desc": "The free plan is funded by ads, so it is not available in every country, and on iOS, Windows and Linux it needs a premium code. Premium adds more locations, ultra fast servers, five devices at once and an app without ads.",
+    "premium_desc": "The free plan is funded by ads, so it is not available in every country, and on iOS, Apple TV, Windows and Linux it needs a premium code. Premium adds more locations, ultra fast servers, five devices at once and an app without ads.",
     "rocket_alt": "Rocket",
     "guarantee_number": "30",
     "guarantee_days": "Days",

@@ -1,6 +1,6 @@
 {
   "meta_title": "VPN grátis sem cadastro | VpnHood! CONNECT",
-  "meta_description": "VPN grátis e de código aberto, criada para ser indetectável contra firewalls e bloqueios de DPI. Grátis no Android; Premium no iOS, Windows e Linux.",
+  "meta_description": "VPN grátis e de código aberto, criada para ser indetectável contra firewalls e bloqueios de DPI. Grátis no Android; Premium no iOS, Apple TV, Windows e Linux.",
   "hero_logo_alt": "Logotipo do VpnHood! CONNECT",
   "hero_title": "VPN grátis, sem cadastro",
   "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -46,7 +46,7 @@
   "waiting_for_you": "Esperando por você",
   "premium_label": "Seja Premium",
   "premium_title": "Potencialize a versão gratuita",
-  "premium_desc": "O plano Grátis é mantido por anúncios, por isso não está disponível em todos os países, e no iOS, Windows e Linux requer um código Premium. O plano Premium oferece mais localizações, servidores ultrarrápidos, até 5 dispositivos simultâneos e um aplicativo totalmente sem anúncios.",
+  "premium_desc": "O plano Grátis é mantido por anúncios, por isso não está disponível em todos os países, e no iOS, Apple TV, Windows e Linux requer um código Premium. O plano Premium oferece mais localizações, servidores ultrarrápidos, até 5 dispositivos simultâneos e um aplicativo totalmente sem anúncios.",
   "rocket_alt": "Foguete",
   "guarantee_number": "30",
   "guarantee_days": "Dias",
