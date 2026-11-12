@@ -321,6 +321,25 @@ def client_diagnose() -> None:
     a.render("diagnose", product="vpnhood-client")
 
 
+def client_tv() -> None:
+    """Use it on your TV: a TV showing the app connected, and in front of it the phone that sets it up."""
+    a = Art("dhTv")
+    a.ambient(cy=450)
+    a.solid('<rect x="90" y="170" width="820" height="500" rx="36" {fill} {stroke}/>', width=11)
+    a.solid('<path d="M 440 670 H 560 V 760 H 700 Q 720 760 720 780 Q 720 800 700 800 H 300 Q 280 800 280 780 Q 280 760 300 760 H 440 Z" {fill} {stroke}/>', width=10)
+    a.add(f'<circle cx="330" cy="420" r="120" fill="none" stroke="{TEAL}" stroke-width="44" opacity=".5" filter="{a.url("Soft")}"/>',
+          f'<circle cx="330" cy="420" r="120" fill="none" stroke="{MINT}" stroke-width="22"/>',
+          f'<path d="M 275 420 L 318 465 L 392 378" fill="none" stroke="{MINT}" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>')
+    for y, w in ((300, 300), (380, 240)):
+        a.bar(520, y, w, 26, opacity=.42)
+    a.solid('<rect x="640" y="430" width="250" height="470" rx="44" {fill} {stroke}/>', width=11)
+    for y, w in ((520, 150), (590, 110), (660, 150), (730, 90)):
+        a.bar(690, y, w, 22, opacity=.5)
+    a.add(f'<circle cx="765" cy="835" r="18" fill="{MINT}"/>')
+    a.ambient(cy=930, rx=300, ry=40, opacity=.45)
+    a.render("tv", product="vpnhood-client")
+
+
 def first_key() -> None:
     """Get an access key: one large key, its line of text lit along the blade."""
     a = Art("dhFirstKey")
@@ -902,6 +921,34 @@ def trouble_lost() -> None:
     a.render("lost", product="vpnhood-manager", prefix="trouble")
 
 
+def trouble_tv_phone() -> None:
+    """A phone that can't open the TV's page: the phone, puzzled, one eyebrow up, a question mark beside it."""
+    a = Art("tsTvPhone")
+    a.ambient(cy=540, opacity=.8)
+    stroke(a, "M 700 215 Q 700 125 785 125 Q 870 125 870 205 Q 870 265 800 285 V 310", width=34)
+    a.add(f'<circle cx="800" cy="375" r="23" fill="{MINT}"/>')
+    a.solid('<rect x="170" y="130" width="450" height="760" rx="100" {fill} {stroke}/>', width=36)
+    eyes(a, 395, 430, gap=180, r=44, rs=(.85, 1.15))
+    stroke(a, "M 270 325 L 340 335 M 440 300 L 520 275", color=LILAC, width=26, glow=False)
+    a.add(f'<circle cx="395" cy="610" r="34" fill="none" stroke="{MINT}" stroke-width="28"/>')
+    a.bar(335, 790, 120, 22, opacity=.5)
+    a.render("tv-phone", product="vpnhood-client", prefix="trouble")
+
+
+def trouble_tv_lost() -> None:
+    """A page that stops answering: the TV has left the screen and dozed off, eyes shut, a Z rising from it."""
+    a = Art("tsTvLost")
+    a.ambient(cy=540, opacity=.8)
+    stroke(a, "M 690 95 H 790 L 690 205 H 790", width=28)
+    stroke(a, "M 840 40 H 900 L 840 105 H 900", color=LILAC, width=20, glow=False)
+    a.solid('<path d="M 430 760 H 570 V 850 H 700 Q 730 850 730 880 Q 730 910 700 910 H 300 Q 270 910 270 880 Q 270 850 300 850 H 430 Z" {fill} {stroke}/>', width=26)
+    a.solid('<rect x="80" y="260" width="840" height="510" rx="90" {fill} {stroke}/>', width=36)
+    for cx in (350, 650):
+        stroke(a, f"M {cx - 75} 470 Q {cx} 540 {cx + 75} 470", width=34)
+    stroke(a, "M 440 640 H 560", color=LILAC, width=28, glow=False)
+    a.render("tv-lost", product="vpnhood-client", prefix="trouble")
+
+
 def trouble_farm() -> None:
     """A farm with a red message: a barn, worried, a red flag on its roof."""
     a = Art("tsFarm")
@@ -1042,6 +1089,9 @@ if __name__ == "__main__":
     linux_requirements()
     client_diagnose()
     first_key()
+    client_tv()
+    trouble_tv_phone()
+    trouble_tv_lost()
     first_key_ask()
     first_key_own()
     first_key_connect()

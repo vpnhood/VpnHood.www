@@ -1,0 +1,122 @@
+---
+# Held back until VpnHood! CONNECT is out on Apple TV and Android TV (owner, 2026-11-11): the page
+# is ready, and setting this to true publishes it in every language and its card on /features/.
+published: false
+layout: none
+i18n: features_tv
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The TV, as a feature (owner, 2026-11-11). Feature pages speak to CONNECT's readers, so the
+  pictures are CONNECT's TV screens and nothing here is about an access key: CLIENT's readers get
+  one line that sends them to CLIENT's TV docs, which has the key's steps. The troubleshooting is
+  the same section as on those docs (_includes/tv-trouble.html). The pictures are drawn by
+  tools/make-app-shots.py (connect-tv-home, connect-tv-remote-access); the address in the second
+  is a sample.
+{%- endcomment -%}
+<main id="sp-main-body">
+          <div class="container">
+            <div class="container-inner">
+              <div class="row">
+                <div id="sp-component" class="col-lg-12">
+                  <div class="sp-column">
+                    <div id="system-message-container" aria-live="polite"></div>
+                    <div class="com-content-article item-page">
+                      <div class="com-content-article__body">
+
+                        <p class="mb-0">
+                          <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/features/">{{ t.all_features }}</a>
+                        </p>
+
+                        <div class="row align-items-center gap-lg-0 gap-5 pt-lg-4 pb-5">
+                          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="section-label">
+                              <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                            </div>
+                            <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                            <p class="section-desc">{{ t.lead }}</p>
+                            <p class="vh-feature-platforms">
+                              <span class="vh-feature-platforms-label">{{ t.platforms_label }}</span>
+                              {{ t.platforms }}
+                            </p>
+                            <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
+                          </div>
+                          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="vh-feature-shot vh-feature-shot-tv">
+                              {% include app-shot.html name="connect-tv-home" alt=t.shot_alt loading="eager" %}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="section-space" data-aos="fade-up">
+                          <div class="vh-card-dark vh-feature-panel">
+                            <div class="row align-items-center g-4">
+                              <div class="col-lg-6">
+                                <h2 class="h4">{{ t.remote_title }}</h2>
+                                <p class="mb-0">{{ t.remote_desc }}</p>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="vh-feature-shot vh-feature-shot-tv">
+                                  {% include app-shot.html name="connect-tv-remote-access" alt=t.remote_alt %}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row section-space gap-lg-0 gap-5">
+                          <div class="col-lg-4" data-aos="fade-up">
+                            <div class="vh-card-dark vh-feature-panel h-100">
+                              <h2 class="h4">{{ t.how_title }}</h2>
+                              <p class="mb-0">{{ t.how_desc }}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="vh-card-dark vh-feature-panel h-100">
+                              <h2 class="h4">{{ t.when_title }}</h2>
+                              <p class="mb-0">{{ t.when_desc }}</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="vh-card-dark vh-feature-panel h-100">
+                              <h2 class="h4">{{ t.cost_title }}</h2>
+                              <p class="mb-0">{{ t.cost_desc }}</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="section-space" data-aos="fade-up">
+                          <div class="vh-card-dark vh-feature-panel">
+                            <h2 class="h4">{{ t.start_title }}</h2>
+                            <ol>
+                              <li>{{ t.start_install }}</li>
+                              <li>{{ t.start_connect }}</li>
+                              <li>{{ t.start_phone }}</li>
+                            </ol>
+                            <p class="mb-0">{% include copy.html s=t.start_client %}</p>
+                          </div>
+                        </div>
+
+                        <div class="section-space" data-aos="fade-up">
+                          <div class="vh-card-dark vh-feature-panel">
+                            <div class="vh-docs-article">
+                              {% include tv-trouble.html first=true %}
+                            </div>
+                          </div>
+                        </div>
+
+                        {% include feature-end.html %}
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+{% include footer.html %}

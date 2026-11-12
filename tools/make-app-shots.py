@@ -45,6 +45,7 @@ ASSETS = VH / "src/AppUi/VpnHood.AppUi.Assets.Classic/assets"
 STORES = {"client": ROOT.parent / "Vpnhood.App.Client/store", "connect": ROOT.parent / "Vpnhood.App.Connect/store"}
 PLATFORM = "android-phone"  # the store set whose capabilities and screens the site follows
 PHONE = "android-phone"  # ...and its phone, for a picture that shows the phone's whole screen
+TV = "apple-tv"  # the store set of a TV's screens: the TV layout, whole, on that set's own device
 
 OUT = ROOT / "assets/images/app"
 DATA = ROOT / "_data/app_shots.yml"
@@ -60,6 +61,8 @@ TRIM_MARGIN = 16
 # /free-vpn/'s strip shows each screen 220 wide in a phone of the site's own (.vh-phone in
 # _custom.scss), drawn at 440.
 STRIP = {"phone": 440}
+# A TV's screen is 960 x 540 logical pixels, drawn at 1.5 as the docs show it 720 wide.
+TV_SCALE = 1.5
 # The docs' details are drawn at 2x, the size their pages show halved.
 DOCS = 2
 # The ring that marks what a docs step is about: the site's green, as on the feature pages.
@@ -104,6 +107,7 @@ PROXIES_ON = {"userSettings": {"proxySettings": {"mode": "Manual"}}, "proxyEndPo
 #   ring    then draw a ring around this box, [left, top, width, height], in the cut picture
 #   phone   instead, the whole screen in the Google Play set's phone, its status bar and home
 #           indicator included, this many pixels wide and its corners round as the phone's
+#   tv      instead, a TV's whole screen, with the capabilities and patch of the TV store set
 #   patch   what the app must be showing, laid over the store shot's own (FixtureComposer)
 #   hide    controls to leave out, each a path of x:Names from the page down
 SHOTS: list[dict] = [
@@ -136,6 +140,13 @@ SHOTS: list[dict] = [
      "patch": {"state": {"connectionState": "Connected", "hasDiagnoseRequested": True, "isDiagnosing": True,
                          "canDiagnose": False, "sessionStatus": {"speed": {"received": 1164000, "sent": 893900}}}}},
     {"name": "diagnose-report", "route": "/diagnose-finished", "scale": DOCS, "box": 8},
+
+    # /vpnhood-client/docs/tv/: a TV's home screen, connected, and its Remote Access screen
+    {"name": "tv-home", "route": "/", "tv": True},
+    {"name": "tv-remote-access", "route": "/remote-access", "tv": True},
+    # /features/tv/: the same two in CONNECT, whose readers the feature pages speak to
+    {"name": "connect-tv-home", "product": "connect", "route": "/", "tv": True},
+    {"name": "connect-tv-remote-access", "product": "connect", "route": "/remote-access", "tv": True},
 
     # /free-vpn/'s strip: CONNECT's own Google Play screens, each with that shot's patch, the home
     # screen connected among them
@@ -266,6 +277,8 @@ def finish(image: Image.Image, shot: dict, rtl: bool, device: dict) -> Image.Ima
     and mirrored where the app lays the screen out right to left."""
     if shot.get("phone"):
         return phone_screen(image, device, shot["phone"])
+    if shot.get("tv"):
+        return image
     scale = shot.get("scale", SCALE)
     if shot.get("trim"):
         image = trim(image, scale)
@@ -295,11 +308,10 @@ def build_tool() -> Path:
 def write_config(product: str, shots: list[dict], langs: list[str]) -> Path:
     """A store configuration of the site's own: one 'store' per picture, as each has its own
     screen, every one with the Android phone's capabilities, drawn on a bare device or, for a
-    picture of the whole screen, in the store's own phone."""
+    picture of the whole screen, in the store's own phone; a TV's screen has the TV set's
+    capabilities and its device."""
     store_dir = STORES[product]
     store = read_jsonc(store_dir / "screenshots.json")
-    platform = store["platforms"][PLATFORM]
-    store_shots = {x["route"]: x for x in platform["shots"]}
 
     locales = {x["culture"]: x for x in store["locales"]}
     missing = [x for x in langs if x not in locales]
@@ -308,8 +320,19 @@ def write_config(product: str, shots: list[dict], langs: list[str]) -> Path:
                  f"{', '.join(locales)}. Add the language to the app first.")
 
     platforms = {}
+    patch_files = set()
     for shot in shots:
-        like = store_shots.get(shot["route"], {})
+        platform = store["platforms"][TV if shot.get("tv") else PLATFORM]
+        like = {x["route"]: x for x in platform["shots"]}.get(shot["route"], {})
+        if platform.get("patchFile"):
+            patch_files.add(platform["patchFile"])
+        if shot.get("tv"):
+            device = dict(next(iter(platform["devices"].values())), label="site", scale=TV_SCALE)
+        elif shot.get("phone"):
+            device = dict(platform["devices"][PHONE], label="site")
+        else:
+            device = {"label": "site", "frame": "none", "cssWidth": WIDTH,
+                      "cssHeight": shot.get("height", HEIGHT), "scale": shot.get("scale", SCALE)}
         spec = {
             "route": shot["route"],
             "label": shot["name"],
@@ -322,18 +345,15 @@ def write_config(product: str, shots: list[dict], langs: list[str]) -> Path:
             "installDir": "-",
             "patch": platform.get("patch"),
             "patchFile": platform.get("patchFile"),
-            "devices": {"site": dict(platform["devices"][PHONE], label="site") if shot.get("phone") else {
-                "label": "site", "frame": "none",
-                "cssWidth": WIDTH, "cssHeight": shot.get("height", HEIGHT), "scale": shot.get("scale", SCALE),
-            }},
+            "devices": {"site": device},
             "shots": [spec],
         }
 
     work = WORK / product
     work.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(store_dir / "fixture.json", work / "fixture.json")
-    if platform.get("patchFile"):
-        shutil.copyfile(store_dir / platform["patchFile"], work / platform["patchFile"])
+    for name in patch_files:
+        shutil.copyfile(store_dir / name, work / name)
     config = {
         "installRoot": ".",
         "locales": [locales[x] for x in langs],

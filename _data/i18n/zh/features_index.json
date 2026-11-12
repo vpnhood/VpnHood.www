@@ -36,6 +36,9 @@
   "quick_launch_title": "快速启动",
   "quick_launch_short": "在 Android 快捷设置面板中一键快速连接。",
   "quick_launch_plat": "仅限 Android",
+  "tv_title": "在电视上",
+  "tv_short": "在 Apple TV 和 Android TV 上使用应用，并用手机进行设置。",
+  "tv_plat": "Apple TV 和 Android TV",
   "more_title": "继续阅读",
   "end_title": "想试试吗？",
   "end_desc": "为您的手机或电脑获取应用。"

@@ -753,8 +753,15 @@
     height: auto;
 }
 
-.vh-docs-article .vh-docs-art-section h3{
+.vh-docs-article .vh-docs-art-section h3,
+.vh-docs-article .vh-docs-art-section h4{
     margin-top: 0;
+}
+
+// A step under a problem (the TV page's troubleshooting): smaller than the problem's own heading.
+.vh-docs-article .vh-docs-art-section h4{
+    font-size: 1.0625rem;
+    font-weight: 600;
 }
 
 .vh-docs-article .vh-docs-art-section p:last-child{
@@ -768,6 +775,28 @@
     }
     .vh-docs-art-section > img{
         width: 6rem;
+    }
+}
+
+// The app's own pictures beside a step (the TV page's troubleshooting): wide, transparent and drawn
+// for the app's dark screen, so each sits on the device's dark card in both themes, about the size
+// the app shows it.
+.vh-docs-article .vh-docs-art-section--app{
+    grid-template-columns: 10rem minmax(0, 1fr);
+}
+
+.vh-docs-art-section--app > img{
+    padding: .5rem;
+    border-radius: 12px;
+    background: var(--vh-device-bezel);
+}
+
+@media (max-width: 767.98px){
+    .vh-docs-article .vh-docs-art-section--app{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .vh-docs-art-section--app > img{
+        width: 10rem;
     }
 }
 

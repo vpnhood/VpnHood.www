@@ -169,6 +169,24 @@ extra_css:
                                 </div>
                               </div>
                             </li>
+                            {%- comment -%} the TV's card shows once its page is published (features/tv/index.html) {%- endcomment -%}
+                            {%- assign vh_tv_page = site.pages | where: "url", "/features/tv/" | first -%}
+                            {%- if vh_tv_page %}
+                            <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                              <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
+                                <div class="vh-feature-art">
+                                  <img src="/assets/images/features/art/tv.webp" alt="" width="468" height="480" loading="lazy" />
+                                </div>
+                                <div class="vh-feature-body">
+                                  <h3 class="h5 mb-2">
+                                    <a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/features/tv/">{{ t.tv_title }}</a>
+                                  </h3>
+                                  <p class="mb-3">{{ t.tv_short }}</p>
+                                  <span class="vh-feature-chip">{{ t.tv_plat }}</span>
+                                </div>
+                              </div>
+                            </li>
+                            {%- endif %}
                           </ul>
                         </div>
 

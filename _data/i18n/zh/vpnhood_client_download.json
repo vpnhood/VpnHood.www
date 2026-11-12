@@ -19,6 +19,7 @@
   "ios_min_version": "支持 <b>iOS 18.0</b> 及以上版本。",
   "ios_devices_note": "适用于 iPhone 和 iPad。",
   "apple_tv_note": "Apple TV 需 <b>tvOS 17.0</b> 及以上版本。",
+  "tv_guide_link": "在电视上设置。",
   "windows_min_version": "支持 <b>Windows 10</b> 及以上版本。",
   "windows_x64_only": "仅支持 Windows x64 版本。",
   "windows_processor_note": "需要支持 SSE4.2 和 POPCNT 的处理器，近十年的处理器都支持。",

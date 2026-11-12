@@ -39,5 +39,6 @@
   "diagnose": "Отправить диагностический отчёт",
   "help": "Помощь",
   "linux": "Linux",
-  "linux-requirements": "Требования для Linux"
+  "linux-requirements": "Требования для Linux",
+  "tv": "На телевизоре"
 }

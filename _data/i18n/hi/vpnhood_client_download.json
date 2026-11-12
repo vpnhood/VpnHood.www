@@ -19,6 +19,7 @@
   "ios_min_version": "<b>iOS 18.0</b> और इसके बाद के वर्ज़न पर काम करता है।",
   "ios_devices_note": "iPhone और iPad पर चलता है।",
   "apple_tv_note": "Apple TV के लिए <b>tvOS 17.0</b> या इसके बाद का वर्ज़न ज़रूरी है।",
+  "tv_guide_link": "इसे टीवी पर सेट अप करें।",
   "windows_min_version": "<b>Windows 10</b> और उससे ऊपर के वर्ज़न पर समर्थित।",
   "windows_x64_only": "केवल Windows x64 वर्ज़न के लिए।",
   "windows_processor_note": "SSE4.2 और POPCNT वाला प्रोसेसर चाहिए, जो पिछले दस साल के हर प्रोसेसर में होते हैं।",

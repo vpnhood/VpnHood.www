@@ -19,6 +19,7 @@
   "ios_min_version": "<b>iOS 18.0</b> ve üzerini destekler.",
   "ios_devices_note": "iPhone ve iPad üzerinde çalışır.",
   "apple_tv_note": "Apple TV için <b>tvOS 17.0</b> ve üzeri gerekir.",
+  "tv_guide_link": "TV'nizde kurun.",
   "windows_min_version": "<b>Windows 10</b> ve üzerini destekler.",
   "windows_x64_only": "Yalnızca Windows x64 sürümü.",
   "windows_processor_note": "SSE4.2 ve POPCNT destekli bir işlemci gerekir; son on yılın tüm işlemcilerinde bunlar vardır.",

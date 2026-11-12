@@ -19,6 +19,7 @@
   "ios_min_version": "Compatível com <b>iOS 18.0</b> ou superior.",
   "ios_devices_note": "Funciona no iPhone e iPad.",
   "apple_tv_note": "A Apple TV requer <b>tvOS 17.0</b> ou superior.",
+  "tv_guide_link": "Configure na sua TV.",
   "windows_min_version": "Compatível com <b>Windows 10</b> ou superior.",
   "windows_x64_only": "Apenas versão Windows x64.",
   "windows_processor_note": "Requer um processador com SSE4.2 e POPCNT, que todos os processadores dos últimos dez anos têm.",

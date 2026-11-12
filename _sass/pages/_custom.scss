@@ -729,6 +729,16 @@
     border-radius: 22px;
 }
 
+// A TV's whole screen (/features/tv/): landscape, so wider, with the corners of a screen, not a phone.
+.vh-feature-shot-tv{
+    max-width: 560px;
+    border-radius: 22px;
+}
+
+.vh-feature-shot-tv img{
+    border-radius: 10px;
+}
+
 // A detail of a screen, not the whole phone: wider, so the app's words can be read, and cut to
 // the home screen's four rows at the bottom of the shot.
 .vh-feature-shot-detail{

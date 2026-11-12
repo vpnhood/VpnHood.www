@@ -1,0 +1,32 @@
+{%- comment -%}
+  A TV's troubleshooting: what to do when the phone can't open Remote Access's page, and when the
+  page stops answering. One section for the two pages a TV user reads, CLIENT's TV docs
+  (/vpnhood-client/docs/tv/) and the feature page (/features/tv/), so a CONNECT reader gets it
+  without CLIENT's access key steps. Its words are the TV docs' trouble_* and lost_* keys, which
+  name no product; each falls back to English. The five steps are the app's own, in its order, with
+  its own pictures (the docs page's notes say where they come from); the two problems have a
+  character each from tools/make-docs-heroes.py. Decorative, so alt="". A page that is not a docs
+  page wraps it in .vh-docs-article, which holds these blocks' styles.
+{%- endcomment -%}
+{%- assign vh_tt = site.data.i18n[vh_lang].vpnhood_client_docs_tv -%}
+{%- assign vh_tt_en = site.data.i18n.en.vpnhood_client_docs_tv -%}
+<h2 id="troubleshooting"{% if include.first %} class="mt-0"{% endif %}>{{ vh_tt.trouble_title | default: vh_tt_en.trouble_title }}</h2>
+
+<h3 id="phone" class="vh-docs-problem"><img src="/assets/images/vpnhood-client/docs/trouble-tv-phone.svg" alt="" width="48" height="48" loading="lazy">{{ vh_tt.trouble_phone_title | default: vh_tt_en.trouble_phone_title }}</h3>
+<p>{{ vh_tt.trouble_desc | default: vh_tt_en.trouble_desc }}</p>
+{%- assign vh_tt_steps = "network:same-network,vpn:phone-vpn,nearby:nearby-devices,router:router,computer:computer" | split: "," -%}
+{%- for vh_tt_step in vh_tt_steps -%}
+{%- assign vh_tt_pair = vh_tt_step | split: ":" -%}
+{%- assign vh_tt_title = "trouble_" | append: vh_tt_pair[0] | append: "_title" -%}
+{%- assign vh_tt_desc = "trouble_" | append: vh_tt_pair[0] | append: "_desc" %}
+<section class="vh-docs-art-section vh-docs-art-section--app">
+  <img src="/assets/images/vpnhood-client/docs/remote-access-{{ vh_tt_pair[0] }}.webp" alt="" width="640" height="400" loading="lazy">
+  <div>
+    <h4 id="{{ vh_tt_pair[1] }}">{{ vh_tt[vh_tt_title] | default: vh_tt_en[vh_tt_title] }}</h4>
+    <p>{{ vh_tt[vh_tt_desc] | default: vh_tt_en[vh_tt_desc] }}</p>
+  </div>
+</section>
+{%- endfor %}
+
+<h3 id="lost" class="vh-docs-problem"><img src="/assets/images/vpnhood-client/docs/trouble-tv-lost.svg" alt="" width="48" height="48" loading="lazy">{{ vh_tt.lost_title | default: vh_tt_en.lost_title }}</h3>
+<p class="mb-0">{{ vh_tt.lost_desc | default: vh_tt_en.lost_desc }}</p>

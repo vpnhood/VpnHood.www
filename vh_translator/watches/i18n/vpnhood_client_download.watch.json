@@ -21,6 +21,7 @@
     "ios_min_version": "Support <b>iOS 18.0</b> and above.",
     "ios_devices_note": "Runs on iPhone and iPad.",
     "apple_tv_note": "Apple TV needs <b>tvOS 17.0</b> and above.",
+    "tv_guide_link": "Set it up on your TV.",
     "windows_min_version": "Support <b>Windows 10</b> and above.",
     "windows_x64_only": "Windows x64 version only.",
     "windows_processor_note": "Needs a processor with SSE4.2 and POPCNT, as every processor of the last ten years has.",

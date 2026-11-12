@@ -1,0 +1,76 @@
+---
+layout: none
+i18n: vpnhood_client_docs_tv
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  CLIENT on a TV, one page for Apple TV and Android TV, as both run the same TV layout (owner,
+  2026-11-11). CONNECT is not named: it is on no TV yet, and gets its part when it is. Checked
+  against the Avalonia UI of v9.1.872: a TV's Add server and its Settings row open the Remote
+  Access screen (PairingView), which serves the app's pages to a browser on the LAN for as long as
+  it is open. The troubleshooting steps are the app's own five, in its order
+  (REMOTE_ACCESS_HELP_* in VpnHood.AppUi.Assets.Classic), and "stops answering" is its
+  TV_UNREACHABLE message. The bold words are each language's app labels from the same file:
+  ADD_SERVER, REMOTE_ACCESS, DONE, MANAGE_FROM_YOUR_PHONE, REMOTE_ACCESS_HELP. The pictures are
+  the TV layout in the reader's language, drawn by tools/make-app-shots.py; the address in the
+  Remote Access one is a sample. The troubleshooting is
+  _includes/tv-trouble.html, shared with /features/tv/. Its five steps show the app's own pictures
+  from its "Trouble using your phone?" dialog, so the page and the TV match: copies of
+  VpnHood.AppUi.Assets.Classic's images/remote-access-*.webp, byte for byte - copy them again when
+  the app's change.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-client/docs/hero-tv.svg" %}
+
+<h2 id="need">{{ t.need_title }}</h2>
+<ul>
+  <li>{{ t.need_tv }}</li>
+  <li>{% include copy.html s=t.need_key %}</li>
+  <li>{{ t.need_phone }}</li>
+</ul>
+
+<h2 id="install">{{ t.install_title }}</h2>
+<ul>
+  <li>{{ t.install_apple }}</li>
+  <li>{% include copy.html s=t.install_android %}</li>
+</ul>
+
+<h2 id="add-key">{{ t.add_title }}</h2>
+<p>{{ t.add_desc }}</p>
+<ol>
+  <li>{{ t.add_step_open }}
+    <figure class="vh-docs-shot">
+      {% include app-shot.html name="tv-remote-access" alt=t.shot_remote_alt %}
+    </figure>
+  </li>
+  <li>{{ t.add_step_scan }}</li>
+  <li>{{ t.add_step_paste }}</li>
+  <li>{{ t.add_step_done }}</li>
+</ol>
+<p>{{ t.add_keep_open }}</p>
+
+<h2 id="connect">{{ t.connect_title }}</h2>
+<p>{{ t.connect_desc }}</p>
+<figure class="vh-docs-shot">
+  {% include app-shot.html name="tv-home" alt=t.shot_home_alt %}
+</figure>
+
+<h2 id="settings">{{ t.settings_title }}</h2>
+<p>{{ t.settings_desc }}</p>
+
+<h2 id="safety">{{ t.safety_title }}</h2>
+<p>{{ t.safety_desc }}</p>
+
+{% include tv-trouble.html %}
+
+<h2 id="next-steps">{{ site.data.i18n[vh_lang].linux_app.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/features/">{{ t.next_features }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}
