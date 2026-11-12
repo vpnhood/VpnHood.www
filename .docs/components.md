@@ -348,6 +348,31 @@ The Cloak Mode page shows the bottom of `home` with a ring around the Protocol r
 (`.vh-feature-shot-mark`, in percentages of that crop). The row spans the screen, so the ring
 fits right-to-left languages too; if the home screen's rows move, measure them again.
 
+## Alert — `.vh-alert` in `_custom.scss`
+
+What a feature page's reader must see before following it, such as a system the app is not out
+on yet: a box tinted in the accent, with an icon on a filled disc, a bold title and a line under
+it, on the theme's tokens, so both themes have it. A page's own notes stay quiet (`.vh-note`, and
+the docs' `.vh-docs-note` and `.vh-docs-warn`); an alert is for the one thing that would let a
+reader down. The markup is `<div class="vh-alert" role="note">` holding `.vh-alert-icon` (an
+inline SVG in `currentColor`) and a `<div>` with `.vh-alert-title` and `.vh-alert-desc`. In use
+on /features/tv/ for Android TV, with Android TV's mark, until CONNECT's TV version is on Google
+Play (owner, 2026-11-12: "more bold like an alert").
+
+## Platform row — `.vh-platforms` in `_custom.scss`
+
+Where the systems are a feature page's subject, the hero lists them as a row: each system's mark,
+its name and the version it needs, in place of the one-line "Available on" of the other feature
+pages (`.vh-feature-platforms`). The marks are one colour in `.vh-feature-icon`'s lavender, as
+the docs' `.vh-docs-os` has them, so the row reads as one set. The markup is
+`<ul class="vh-platforms">` with a `<li class="vh-platform">` per system, holding
+`.vh-platform-icon` (a mark from `_includes/icons/brands/`) and a `<span>` with
+`.vh-platform-name` and `.vh-platform-req`. It wraps to one system per line on a phone. In use
+on /features/tv/ for Apple TV and Android TV (owner, 2026-11-12: "use android tv and apple tv
+icon on that page"). Their marks, `apple-tv.svg` and `android-tv.svg`, are a TV on two feet
+with Apple's logo or Android's head cut out of its screen, drawn from the site's own Apple and
+Android marks.
+
 ## Pricing — `_data/pricing.yml` + `_data/i18n/en/free_vpn_go_premium.json`
 
 Every number on `/free-vpn/go-premium/` comes from `_data/pricing.yml`: the free price,

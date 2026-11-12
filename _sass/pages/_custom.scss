@@ -1159,6 +1159,97 @@ a.vh-feature-chip:hover{
     margin-inline-end: .35rem;
 }
 
+// An alert on a feature page: what a reader must see before following the page, such as a
+// system the app is not out on yet (/features/tv/'s Android TV, owner 2026-11-12: "more bold
+// like an alert"). A box tinted in the accent, its icon on a filled disc, so it stands apart
+// from the page's copy and from the quiet .vh-note; on the theme's tokens, so both themes
+// have it with nothing in _light.scss.
+.vh-alert{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 560px;
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(var(--vh-accent-ink-rgb), .6);
+    border-radius: 14px;
+    background-color: rgba(var(--vh-accent-ink-rgb), .16);
+}
+
+.vh-alert-icon{
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background-color: var(--vh-accent-ink);
+    color: var(--vh-on-accent);
+}
+
+.vh-alert-icon svg{
+    width: 1.65rem;
+    height: 1.65rem;
+}
+
+.vh-alert-title{
+    margin: 0;
+    color: var(--vh-text);
+    font-weight: 700;
+}
+
+.vh-alert-desc{
+    margin: 0;
+    color: var(--vh-text-soft);
+}
+
+// The systems an app runs on, each with its mark, its name and the version it needs, where the
+// systems are the page's subject (/features/tv/'s Apple TV and Android TV, owner 2026-11-12:
+// "use android tv and apple tv icon on that page"); other feature pages keep the one-line
+// .vh-feature-platforms. The marks are one colour in .vh-feature-icon's lavender, as
+// .vh-docs-os has them, so the row reads as one set rather than two logos.
+.vh-platforms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2.5rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vh-platform{
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+}
+
+.vh-platform-icon{
+    flex: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: var(--purple-120);
+}
+
+.vh-platform-icon svg{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.vh-platform-name{
+    display: block;
+    color: var(--vh-text);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.vh-platform-req{
+    display: block;
+    color: var(--vh-text-dim);
+    font-size: .9rem;
+    line-height: 1.3;
+}
+
 .vh-feature-card-link{
     color: var(--vh-text);
     text-decoration: none;

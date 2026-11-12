@@ -169,9 +169,6 @@ extra_css:
                                 </div>
                               </div>
                             </li>
-                            {%- comment -%} the TV's card shows once its page is published (features/tv/index.html) {%- endcomment -%}
-                            {%- assign vh_tv_page = site.pages | where: "url", "/features/tv/" | first -%}
-                            {%- if vh_tv_page %}
                             <li class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                               <div class="vh-card-dark vh-feature-panel vh-feature-card vh-feature-inline h-100">
                                 <div class="vh-feature-art">
@@ -186,7 +183,6 @@ extra_css:
                                 </div>
                               </div>
                             </li>
-                            {%- endif %}
                           </ul>
                         </div>
 

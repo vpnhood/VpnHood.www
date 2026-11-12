@@ -1,7 +1,4 @@
 ---
-# Held back until VpnHood! CONNECT is out on Apple TV and Android TV (owner, 2026-11-11): the page
-# is ready, and setting this to true publishes it in every language and its card on /features/.
-published: false
 layout: none
 i18n: features_tv
 extra_css:
@@ -17,6 +14,15 @@ extra_css:
   the same section as on those docs (_includes/tv-trouble.html). The pictures are drawn by
   tools/make-app-shots.py (connect-tv-home, connect-tv-remote-access); the address in the second
   is a sample.
+  The hero names both TVs, in the lead and as a row of the two systems, each with its mark, name
+  and the version it needs (owner, 2026-11-12: "we should use android tv and apple tv icon on
+  that page"). The marks are _includes/icons/brands/apple-tv.svg and android-tv.svg: a TV on two
+  feet with Apple's logo or Android's head cut out of its screen, drawn from the site's own
+  Apple and Android marks (assets/images/general/*-icon-grad-purple-300.svg).
+  Published with CONNECT out on Apple TV and its Android TV version still in Google Play's review
+  (owner, 2026-11-12): until Play approves it, the hero shows the android_soon alert under the
+  row, with Android TV's mark, Android TV is "soon" in features_tv.json's meta_description and in
+  features_index.json's tv_plat, and the first step names only the App Store.
 {%- endcomment -%}
 <main id="sp-main-body">
           <div class="container">
@@ -39,10 +45,29 @@ extra_css:
                             </div>
                             <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
                             <p class="section-desc">{{ t.lead }}</p>
-                            <p class="vh-feature-platforms">
-                              <span class="vh-feature-platforms-label">{{ t.platforms_label }}</span>
-                              {{ t.platforms }}
-                            </p>
+                            <ul class="vh-platforms">
+                              <li class="vh-platform">
+                                <span class="vh-platform-icon">{% include icons/brands/apple-tv.svg %}</span>
+                                <span>
+                                  <span class="vh-platform-name">{{ t.apple_tv }}</span>
+                                  <span class="vh-platform-req">{{ t.apple_tv_req }}</span>
+                                </span>
+                              </li>
+                              <li class="vh-platform">
+                                <span class="vh-platform-icon">{% include icons/brands/android-tv.svg %}</span>
+                                <span>
+                                  <span class="vh-platform-name">{{ t.android_tv }}</span>
+                                  <span class="vh-platform-req">{{ t.android_tv_req }}</span>
+                                </span>
+                              </li>
+                            </ul>
+                            <div class="vh-alert" role="note">
+                              <span class="vh-alert-icon">{% include icons/brands/android-tv.svg %}</span>
+                              <div>
+                                <p class="vh-alert-title">{{ t.android_soon_title }}</p>
+                                <p class="vh-alert-desc">{{ t.android_soon_desc }}</p>
+                              </div>
+                            </div>
                             <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
                           </div>
                           <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
