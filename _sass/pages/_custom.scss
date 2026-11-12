@@ -1768,3 +1768,103 @@ a.vh-feature-chip:hover{
 .vh-android-choice svg{
     flex: 0 0 auto;
 }
+
+// VpnHood! SERVER page --------------------------------------------------------
+// The hero art stands in a soft violet glow, so the drawing reads as the page's picture
+// rather than an icon left beside the title. Behind the art, never over the words.
+.vh-server-hero-art{
+    position: relative;
+    isolation: isolate;
+}
+
+.vh-server-hero-art::before{
+    content: "";
+    position: absolute;
+    inset: 6%;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(var(--purple-300-rgb), .34), rgba(var(--green-300-rgb), .08) 65%, transparent);
+    filter: blur(28px);
+}
+
+// The four reasons are few and wordy, so their pictures are larger than the index cards' marks.
+.vh-server-why .vh-feature-art{
+    width: 96px;
+    height: 96px;
+}
+
+// The two ways to install it. MANAGER comes first and has the look of the docs' MANAGER promo
+// (.vh-docs-managed in _docs.scss), at a product page's size: the brand's violet-to-mint rim
+// over a tint of both, with a violet glow, so it reads as the way most people should take.
+.vh-server-managed{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.25rem 2.5rem;
+    border: 1.5px solid transparent;
+    border-radius: 24px;
+    background:
+        linear-gradient(120deg, rgba(var(--purple-300-rgb), .2), rgba(var(--green-300-rgb), .08)) padding-box,
+        linear-gradient(var(--vh-surface-raised), var(--vh-surface-raised)) padding-box,
+        linear-gradient(120deg, var(--purple-300), var(--green-300)) border-box;
+    box-shadow: 0 24px 60px -28px rgba(var(--purple-300-rgb), .65);
+}
+
+.vh-server-managed-art{
+    flex: none;
+    width: 200px;
+    height: auto;
+}
+
+.vh-server-managed h3{
+    margin: .75rem 0 .6rem;
+    color: var(--vh-text);
+}
+
+.vh-server-managed p{
+    margin-bottom: 1.5rem;
+}
+
+.vh-server-managed-chip{
+    display: inline-block;
+    padding: .25rem .8rem;
+    border: 1px solid rgba(var(--green-300-rgb), .45);
+    border-radius: 999px;
+    color: var(--vh-green-ink);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+// Standalone follows on the same column, plainer: a heading, a line and the commands.
+.vh-server-standalone{
+    max-width: 1000px;
+    margin: 3.5rem auto 0;
+}
+
+.vh-server-standalone h3{
+    margin-bottom: .6rem;
+    color: var(--vh-text);
+}
+
+@media (max-width: 767.98px){
+    .vh-server-managed{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .vh-server-managed-art{
+        width: 120px;
+    }
+}
+
+// On a phone the larger pictures would leave the words a narrow column: back to the cards' usual size.
+@media (max-width: 575.98px){
+    .vh-server-why .vh-feature-art{
+        width: 64px;
+        height: 64px;
+    }
+}

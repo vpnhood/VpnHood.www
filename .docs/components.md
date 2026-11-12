@@ -241,9 +241,10 @@ to Google directly, and the click is never delayed. Tagged today: the header's
 `header-download`, `header-go-premium`, `header-log-in` and the mobile menu's
 `menu-download`, `menu-go-premium`, `menu-log-in`, and the pricing table's
 `pricing-download`, `pricing-buy-1-month`, `pricing-buy-6-months`,
-`pricing-buy-12-months`, and the server docs' MANAGER promo, `docs-start-manager` (its
-`vh_href` names the MANAGER page). Keep ids kebab-case and `<place>-<action>`, so the same action
-in two places stays comparable.
+`pricing-buy-12-months`, the server docs' MANAGER promo, `docs-start-manager` (its
+`vh_href` names the MANAGER page), and the SERVER page's three buttons that open MANAGER,
+`server-hero-manager`, `server-install-manager` and `server-cta-manager`. Keep ids kebab-case
+and `<place>-<action>`, so the same action in two places stays comparable.
 
 Nothing reaches GA4 until GTM (container `GTM-M39NR6ZS`) forwards it, and that side is
 live: two Data Layer Variables (`DLV - vh_cta`, `DLV - vh_href`), a Custom Event trigger
