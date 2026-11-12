@@ -46,7 +46,7 @@
   "selling_title": "客户为何愿意买单",
   "selling_desc": "应用可免费下载，源代码完全公开。客户购买的是开启高级版网络的代码。这就是他们选择付费、而不去使用低价竞品的原因。",
   "why_cross_platform_title": "跨平台支持，即刻开售",
-  "why_cross_platform_desc": "VpnHood! CONNECT 可在 Android、iOS、Windows 和 Linux 上免费下载，无需任何开发，从第一天起即可面向广大受众。在 iOS 上，客户通过登录而不是输入代码来使用，我们会在您开通账户时说明如何设置。",
+  "why_cross_platform_desc": "VpnHood! CONNECT 可在 Android、iOS、Apple TV、Windows 和 Linux 上免费下载，无需任何开发，从第一天起即可面向广大受众。在 iOS 和 Apple TV 上，客户通过登录而不是输入代码来使用，我们会在您开通账户时说明如何设置。",
   "why_open_source_title": "开源透明，通过安全审计",
   "why_open_source_desc": "VpnHood! CONNECT、服务端以及背后的 VpnHood! ENGINE 均在 GitHub 上基于 LGPL 协议开源，并已通过 Include Security 为开放技术基金会（OTF）红队实验室进行的安全审计。客户可以直接查阅代码而无需口头承诺，您也无需支付任何许可费，利润全归自己。",
   "why_undetectable_title": "无法被探测的伪装协议",

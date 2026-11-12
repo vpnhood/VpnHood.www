@@ -298,8 +298,9 @@ notice (`/legal/website/privacy-policy/`) describes this; change both together.
 
 A page that shows the app shows it in the reader's language: a Persian reader sees the Persian
 app, right to left, as their phone shows it. Every picture in `assets/images/app/<lang>/` is
-drawn by the app's real UI, never taken by hand: the feature pages' screens, `/free-vpn/`'s
-strip (`connect-*`, from CONNECT) and the CLIENT docs' details (`diagnose-*`). The store
+drawn by the app's real UI, never taken by hand: the feature pages' screens and `/free-vpn/`'s
+strip (`connect-*`) from CONNECT, as those pages offer CONNECT's download (owner, 2026-11-12),
+and the CLIENT docs' details (`diagnose-*`, `tv-*`) from CLIENT. The store
 screenshot tool in the VpnHood repo (`src/Apps/Tools/StoreScreenshots`, whose README explains
 it) starts the Avalonia UI headless against a product's store fixture, with no app, VPN or
 device, once per language in `_data/i18n/`.

@@ -46,7 +46,7 @@
   "selling_title": "Ce que paient vos clients",
   "selling_desc": "Les applications sont gratuites et le code source est public. Vos clients paient pour le code qui débloque le réseau Premium — et voici pourquoi ils choisissent votre offre plutôt qu'une alternative moins chère.",
   "why_cross_platform_title": "Multiplateforme et prêt à vendre",
-  "why_cross_platform_desc": "VpnHood! CONNECT est téléchargeable gratuitement sur Android, iOS, Windows et Linux : touchez un large public dès le premier jour, sans aucun développement. Sur iOS, votre client se connecte à son compte au lieu de saisir le code, et nous vous expliquons cette configuration à l'ouverture de votre compte.",
+  "why_cross_platform_desc": "VpnHood! CONNECT est téléchargeable gratuitement sur Android, iOS, Apple TV, Windows et Linux : touchez un large public dès le premier jour, sans aucun développement. Sur iOS et Apple TV, votre client se connecte à son compte au lieu de saisir le code, et nous vous expliquons cette configuration à l'ouverture de votre compte.",
   "why_open_source_title": "Open source et audité",
   "why_open_source_desc": "VpnHood! CONNECT, le serveur et VpnHood! ENGINE sont sur GitHub sous licence LGPL, audités par Include Security pour le Red Team Lab de l'Open Technology Fund. Vos clients peuvent vérifier le code par eux-mêmes, et aucuns frais de licence ne viennent réduire vos marges.",
   "why_undetectable_title": "Protocole indétectable",

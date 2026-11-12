@@ -96,8 +96,9 @@ DOMAINS_ON = {"userSettings": {"splitTunneling": {"useDomain": True}}, "splitDom
 PROXIES_ON = {"userSettings": {"proxySettings": {"mode": "Manual"}}, "proxyEndPoints": DEMO_PROXIES}
 
 # Each picture: its file name, the app page by its route (PageRoutes.cs in the tool), the
-# product whose store fixture draws it (CLIENT unless said), and what is not the default. All
-# lengths are the app's logical pixels:
+# product whose store fixture draws it (CONNECT unless said: the feature pages, guides and
+# /free-vpn/ speak to CONNECT's readers and offer its download, so only CLIENT's docs show
+# CLIENT), and what is not the default. All lengths are the app's logical pixels:
 #   height  a taller screen, for a page the phone would scroll
 #   scale   pixels per logical pixel, SCALE unless said
 #   trim    then cut the empty screen below the last card, for a page shorter than that
@@ -135,26 +136,27 @@ SHOTS: list[dict] = [
 
     # /vpnhood-client/docs/diagnose/: the menu with Diagnose ringed, the home screen while
     # diagnosing, and the message when it is stopped
-    {"name": "diagnose-menu", "route": "/menu", "scale": DOCS, "crop": [0, 81, 300, 136], "ring": [6, 47, 288, 42]},
-    {"name": "diagnose-stop", "route": "/", "scale": DOCS, "crop": [60, 182, 240, 246],
+    {"name": "diagnose-menu", "product": "client", "route": "/menu", "scale": DOCS, "crop": [0, 81, 300, 136],
+     "ring": [6, 47, 288, 42]},
+    {"name": "diagnose-stop", "product": "client", "route": "/", "scale": DOCS, "crop": [60, 182, 240, 246],
      "patch": {"state": {"connectionState": "Connected", "hasDiagnoseRequested": True, "isDiagnosing": True,
                          "canDiagnose": False, "sessionStatus": {"speed": {"received": 1164000, "sent": 893900}}}}},
-    {"name": "diagnose-report", "route": "/diagnose-finished", "scale": DOCS, "box": 8},
+    {"name": "diagnose-report", "product": "client", "route": "/diagnose-finished", "scale": DOCS, "box": 8},
 
     # /vpnhood-client/docs/tv/: a TV's home screen, connected, and its Remote Access screen
-    {"name": "tv-home", "route": "/", "tv": True},
-    {"name": "tv-remote-access", "route": "/remote-access", "tv": True},
-    # /features/tv/: the same two in CONNECT, whose readers the feature pages speak to
-    {"name": "connect-tv-home", "product": "connect", "route": "/", "tv": True},
-    {"name": "connect-tv-remote-access", "product": "connect", "route": "/remote-access", "tv": True},
+    {"name": "tv-home", "product": "client", "route": "/", "tv": True},
+    {"name": "tv-remote-access", "product": "client", "route": "/remote-access", "tv": True},
+    # /features/tv/: the same two in CONNECT
+    {"name": "connect-tv-home", "route": "/", "tv": True},
+    {"name": "connect-tv-remote-access", "route": "/remote-access", "tv": True},
 
     # /free-vpn/'s strip: CONNECT's own Google Play screens, each with that shot's patch, the home
     # screen connected among them
-    {"name": "connect-home", "product": "connect", "route": "/", **STRIP},
-    {"name": "connect-locations", "product": "connect", "route": "/servers", **STRIP},
-    {"name": "connect-cloak-mode", "product": "connect", "route": "/protocols/cloak-mode", **STRIP},
-    {"name": "connect-split-tunneling", "product": "connect", "route": "/split-tunneling", **STRIP},
-    {"name": "connect-quick-launch", "product": "connect", "route": "/settings/quick-launch", **STRIP},
+    {"name": "connect-home", "route": "/", **STRIP},
+    {"name": "connect-locations", "route": "/servers", **STRIP},
+    {"name": "connect-cloak-mode", "route": "/protocols/cloak-mode", **STRIP},
+    {"name": "connect-split-tunneling", "route": "/split-tunneling", **STRIP},
+    {"name": "connect-quick-launch", "route": "/settings/quick-launch", **STRIP},
 ]
 
 
@@ -420,7 +422,7 @@ def main() -> int:
 
     dll = build_tool()
     for product in STORES:
-        mine = [x for x in shots if x.get("product", "client") == product]
+        mine = [x for x in shots if x.get("product", "connect") == product]
         if not mine:
             continue
         config = write_config(product, mine, langs)
