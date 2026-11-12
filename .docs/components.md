@@ -338,6 +338,11 @@ inside it is; the strip starts with the home screen in the middle (see "Pause bu
 eight crops of settings screens with captions, until the owner chose this on 2026-11-07: the
 strip is something a visitor glances at, never a list of features, which have their own pages.
 
+A TV's whole screen (`tv-*` and `connect-tv-*`) sits in `.vh-tv` (`_custom.scss`) wherever it
+shows, the docs too: a 6px bezel with a TV's small corners on two feet that lean out, on the
+same `--vh-device-*` tokens. The owner, on 2026-11-11, found the rounded panel the feature pages
+put around a phone made the TV look like a tablet.
+
 The Cloak Mode page shows the bottom of `home` with a ring around the Protocol row
 (`.vh-feature-shot-mark`, in percentages of that crop). The row spans the screen, so the ring
 fits right-to-left languages too; if the home screen's rows move, measure them again.

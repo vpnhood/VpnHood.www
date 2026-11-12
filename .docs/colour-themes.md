@@ -142,8 +142,8 @@ seam. CSS can't express that.
 `vpnhood-connect/download-pending-bg.webp` (which looks like a backdrop but is a phone running
 the app) must render identically in both themes — `#appWrapper` becomes a
 dark showcase panel on a light page instead, and the phone `/free-vpn/`'s strip puts around
-its screens (`.vh-phone`) stays dark on its `--vh-device-*` tokens, which `_light.scss` leaves
-alone. Also skipped, deliberately: brand logos, the
+its screens (`.vh-phone`) and the TV around a TV's screen (`.vh-tv`) stay dark on their
+`--vh-device-*` tokens, which `_light.scss` leaves alone. Also skipped, deliberately: brand logos, the
 flag/brand marks, and art that already reads on white (the hero glows, the resilient
 underline, the guarantee ring, the rocket, the `light-bg-*` blurs, the open-source swirl).
 The script's docstring carries the same list — keep the two in agreement.

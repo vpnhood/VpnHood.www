@@ -78,6 +78,28 @@ nav_active: self-hosted
     </div>
 </div>
 
+{%- comment -%}
+  The TV (owner, 2026-11-11): CLIENT's TV screen, drawn per language by tools/make-app-shots.py.
+  The link stays on CLIENT's TV docs after the "On your TV" feature page is published: that page
+  speaks to CONNECT's readers, with CONNECT's screens and download.
+{%- endcomment %}
+<div class="section-space" data-aos="fade-up">
+  <div class="vh-card-dark vh-feature-panel">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <h2 class="h4">{{ t.tv_title }}</h2>
+        <p>{{ t.tv_desc }}</p>
+        <p class="mb-0"><a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/vpnhood-client/docs/tv/"><span>{{ t.tv_link }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></p>
+      </div>
+      <div class="col-lg-6">
+        <div class="vh-tv">
+          {% include app-shot.html name="tv-home" alt=t.tv_alt %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="section-space">
   <div class="section-start-text text-center" data-aos="fade-up">
     <h2 class="section-title vh-txt-grad-purple-400">{{ t.engine_title }}</h2>

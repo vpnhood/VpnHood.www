@@ -838,6 +838,12 @@
     color: var(--vh-text-dim);
 }
 
+// A TV's screen sits in its TV (.vh-tv, _custom.scss) where a screenshot would, with room below
+// for the TV's feet.
+.vh-docs-article .vh-tv{
+    margin: 1.75rem 0 calc(2rem + 24px);
+}
+
 // A section's index (_includes/docs-index.html): each page's title as a link, its
 // summary below.
 .vh-docs-article .vh-docs-index{

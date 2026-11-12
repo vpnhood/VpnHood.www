@@ -97,6 +97,41 @@
     width: 100%;
     height: auto;
 }
+// A TV's whole screen (the tv-* shots) in a TV: a thin bezel with a TV's small corners, on two
+// feet that lean out, so it never reads as a tablet (owner, 2026-11-11). Dark in both themes on
+// the --vh-device-* tokens, as .vh-phone; the margin below holds the feet.
+.vh-tv{
+    position: relative;
+    max-width: 560px;
+    margin: 0 auto 24px;
+    padding: 6px;
+    border-radius: 6px;
+    background: var(--vh-device-bezel);
+    box-shadow: 0 0 0 2px var(--vh-device-rim), 0 20px 40px var(--vh-device-shadow);
+}
+.vh-tv img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+.vh-tv::before,
+.vh-tv::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 6%;
+    aspect-ratio: 3 / 2;
+    background: var(--vh-device-rim);
+}
+.vh-tv::before{
+    left: 9%;
+    clip-path: polygon(45% 0, 100% 0, 55% 100%, 0 100%);
+}
+.vh-tv::after{
+    right: 9%;
+    clip-path: polygon(0 0, 55% 0, 100% 100%, 45% 100%);
+}
 #downloadIconsWrapper>div{
     position: relative;
     display: flex;
@@ -727,16 +762,6 @@
     width: 100%;
     height: auto;
     border-radius: 22px;
-}
-
-// A TV's whole screen (/features/tv/): landscape, so wider, with the corners of a screen, not a phone.
-.vh-feature-shot-tv{
-    max-width: 560px;
-    border-radius: 22px;
-}
-
-.vh-feature-shot-tv img{
-    border-radius: 10px;
 }
 
 // A detail of a screen, not the whole phone: wider, so the app's words can be read, and cut to
