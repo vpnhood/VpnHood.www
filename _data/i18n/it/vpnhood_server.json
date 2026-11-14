@@ -7,7 +7,7 @@
   "hero_solo_btn": "Installalo da solo",
   "f_anywhere_title": "Gira ovunque tu possa noleggiare un server",
   "f_anywhere_desc": "Linux (x64 o ARM64), Windows o Docker: su qualsiasi VPS o macchina dedicata che soddisfi i <a href=\"/vpnhood-server/docs/requirements/\">requisiti di sistema</a>. VpnHood! MANAGER lo installa per te, oppure incolli un solo comando. È subito attivo sulla porta 443, senza bisogno di configurare la rete.",
-  "f_stealth_title": "Difficile da individuare, impossibile da bloccare",
+  "f_stealth_title": "Difficile da individuare, ancora più difficile da bloccare",
   "f_stealth_desc": "Con la Modalità camuffamento, il tunnel prende la forma di normale traffico web, e chi lo sonda senza autenticarsi riceve una semplice risposta da server web invece di qualcosa che valga la pena testare. Non c'è garanzia che ogni rete lo lasci passare, ma c'è ben poco da riconoscere.",
   "f_engine_title": "Solido per natura",
   "f_engine_desc": "VpnHood! ENGINE garantisce connessioni stabili e crittografate anche sulle reti più restrittive, su TCP, UDP e QUIC, con supporto per IPv4 e IPv6.",

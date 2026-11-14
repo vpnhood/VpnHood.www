@@ -7,7 +7,7 @@
   "hero_solo_btn": "Instalarlo por tu cuenta",
   "f_anywhere_title": "Funciona en cualquier servidor que alquiles",
   "f_anywhere_desc": "Linux (x64 o ARM64), Windows o Docker: funciona en cualquier VPS o máquina dedicada que cumpla los <a href=\"/vpnhood-server/docs/requirements/\">requisitos del sistema</a>. VpnHood! MANAGER lo instala por ti, o pegas un solo comando. Escucha en el puerto 443 desde el primer momento, sin configurar redes.",
-  "f_stealth_title": "Difícil de detectar, imposible de bloquear",
+  "f_stealth_title": "Difícil de detectar, aún más difícil de bloquear",
   "f_stealth_desc": "Con el Modo Camuflaje, el túnel adopta la forma del tráfico web habitual, y un sondeo no autenticado recibe una simple respuesta de servidor web en lugar de algo que valga la pena analizar. No hay garantía de que todas las redes lo dejen pasar, pero apenas ofrece patrones que detectar.",
   "f_engine_title": "Robusto por diseño",
   "f_engine_desc": "VpnHood! ENGINE mantiene la conexión cifrada y estable en redes hostiles mediante TCP, UDP y QUIC, compatible con IPv4 e IPv6.",

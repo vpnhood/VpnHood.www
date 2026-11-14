@@ -41,7 +41,7 @@
   "publish_standard_title": "Nous créons et publions votre application",
   "publish_standard_desc": "Vous ouvrez les comptes sur les magasins et vous nous donnez le nom de votre société, votre logo et quelques informations de base. Nous faisons le reste et nous maintenons votre application à jour. Contactez-nous pour connaître les tarifs.",
   "publish_custom_title": "Vous voulez votre propre interface ?",
-  "publish_custom_desc": "C'est le seul cas où un développeur est nécessaire, car une interface personnalisée doit suivre chaque nouvelle version de l'application. Nous pouvons la créer et la maintenir pour vous, moyennant un coût supplémentaire. Vos propres développeurs peuvent aussi s'en charger, et nous leur montrerons par où commencer.",
+  "publish_custom_desc": "C'est le seul cas où un développeur est nécessaire, car une interface personnalisée doit suivre chaque nouvelle version de l'application. Nous pouvons la créer et la maintenir pour vous, moyennant un coût supplémentaire. Vos propres développeurs peuvent aussi s'en charger : <a href=\"https://developer.vpnhood.com/articles/build-your-app.html\">notre site pour développeurs</a> leur montre par où commencer.",
   "start_label": "Pour commencer",
   "start_title": "Commencez par vendre, puis ajoutez votre application",
   "start_s1_title": "Ouvrez un compte partenaire",

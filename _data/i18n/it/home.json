@@ -41,7 +41,7 @@
   "steadfast_icon_alt": "Icona Affidabilità",
   "open_source_shape_alt": "Forma open source",
   "open_source_title": "Trasparente, verificato e open source",
-  "open_source_desc1": "L'intero codice sorgente di VpnHood è pubblico su GitHub. Nessun file binario opaco, nessuna richiesta di rete inspiegabile: puoi esaminarlo, verificarlo o contribuire direttamente.",
+  "open_source_desc1": "L'intero codice sorgente di VpnHood è pubblico su GitHub. Nessun file binario opaco, nessuna richiesta di rete inspiegabile: puoi esaminarlo, verificarlo, contribuire al progetto o usarlo per <a href=\"https://developer.vpnhood.com/\">creare la tua app VPN</a>.",
   "open_source_desc2": "VpnHood è stato sottoposto a un audit di sicurezza completo da parte di <b>Include Security</b>, gestito dal Red Team Lab dell'<b>Open Technology Fund</b>.",
   "github_btn": "Progetto su GitHub",
   "audit_btn": "Leggi l'audit di sicurezza",

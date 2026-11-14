@@ -41,7 +41,7 @@
   "publish_standard_title": "Uygulamanızı biz oluşturur ve yayınlarız",
   "publish_standard_desc": "Siz mağaza hesaplarını açar ve bize şirket adınızı, logonuzu ve birkaç temel bilgiyi verirsiniz. Gerisini biz yapar, uygulamanızı güncel tutarız. Fiyatlar için bizimle iletişime geçin.",
   "publish_custom_title": "Kendi arayüzünüzü mü istiyorsunuz?",
-  "publish_custom_desc": "Geliştirici yalnızca bu durumda gerekir, çünkü özel bir arayüzün uygulamanın her yeni sürümüne ayak uydurması gerekir. Bunu ek ücret karşılığında sizin için oluşturup bakımını yapabiliriz. Ya da kendi geliştiricileriniz yapabilir; nereden başlayacaklarını onlara gösteririz.",
+  "publish_custom_desc": "Geliştirici yalnızca bu durumda gerekir, çünkü özel bir arayüzün uygulamanın her yeni sürümüne ayak uydurması gerekir. Bunu ek ücret karşılığında sizin için oluşturup bakımını yapabiliriz. Ya da kendi geliştiricileriniz yapabilir; <a href=\"https://developer.vpnhood.com/articles/build-your-app.html\">geliştirici sitemiz</a> onlara nereden başlayacaklarını gösterir.",
   "start_label": "Başlarken",
   "start_title": "Önce satışa başlayın, sonra uygulamanızı ekleyin",
   "start_s1_title": "İş ortağı hesabı açın",

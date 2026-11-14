@@ -383,6 +383,19 @@ icon on that page"). Their marks, `apple-tv.svg` and `android-tv.svg`, are a TV 
 with Apple's logo or Android's head cut out of its screen, drawn from the site's own Apple and
 Android marks.
 
+## Product icons — `.vh-product-icon` in `_custom.scss`
+
+Where a card names one of our products, its head can show the product's own icon: its hood from
+the logo, in `.vh-feature-icon`'s disc like any card icon. `_includes/icons/product-connect.svg`
+and `product-client.svg` share one hood, so each has a badge at the bottom left that says what
+the product is for: a globe for VpnHood! CONNECT, a key for VpnHood! CLIENT.
+`product-manager.svg` is MANAGER's own hood, alone. They are drawn from the logos by
+`python tools/make-product-icons.py`; rerun it after a logo changes, never edit them by hand.
+The logo's ring and name ribbon are left out, as the name cannot be read at a card icon's size
+(owner, 2026-11-13: "remove circle and label, they are not readable"). `.vh-product-icon` draws
+them at 24px in the disc, a little larger than the set's 20px. In use on About us' product cards;
+VpnHood! SERVER has no logo, so its card keeps `server.svg`.
+
 ## Pricing — `_data/pricing.yml` + `_data/i18n/en/free_vpn_go_premium.json`
 
 Every number on `/free-vpn/go-premium/` comes from `_data/pricing.yml`: the free price,

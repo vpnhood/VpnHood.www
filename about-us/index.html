@@ -8,49 +8,206 @@ nav_active: resources
 {% include header.html %}
 {% assign vh_lang = page.lang | default: 'en' %}
 {% assign t = site.data.i18n[vh_lang][page.i18n] %}
-<main id="sp-main-body" >
+{%- capture vh_arrow -%}
+<svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5zm0 1.5h16v-1.5H4z" opacity="0.5"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"></path></g></svg>
+{%- endcapture -%}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
 
-										<div class="container">
-					<div class="container-inner">
-						
-	
-<div class="row">
-	
-<div id="sp-component" class="col-lg-12 ">
-	<div class="sp-column ">
-		<div id="system-message-container" aria-live="polite"></div>
+                <div class="row align-items-center gap-lg-0 gap-5 pb-4">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
+                    <p class="section-desc mb-0">{{ t.page_desc }}</p>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-hero-art">
+                      <img src="/assets/images/general/purple-line-globe.svg" data-vh-light-src="/assets/images/general/purple-line-globe-light.svg" alt="{{ t.hero_alt }}" width="897" height="631" loading="eager" />
+                    </div>
+                  </div>
+                </div>
 
+                <div class="section-start-text mt-5 pt-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.why_label }}</p>
+                  </div>
+                  <h2 id="why" class="section-title vh-txt-grad-purple-400">{{ t.why_title }}</h2>
+                  <p class="section-desc">{{ t.why_desc }}</p>
+                </div>
 
-		
-		<div class="com-content-article item-page">
-    
-    
-        
-        
-    
-    
-        
-                                    <div class="com-content-article__body">
-        <div class="section-start-text pb-5 mb-5" data-aos="fade-up" data-aos-duration="1000">
-    <h1 class="section-title vh-txt-grad-purple-400">{{ t.page_title }}</h1>
-    <p class="section-desc">{{ t.page_desc }}</p>
-</div>
-<p>{{ t.intro }}</p>
-<p class="h3 text-white mt-5">{{ t.traffic_title }}</p>
-<p>{{ t.traffic_desc }}</p>
-<p class="h3 text-white mt-5">{{ t.architecture_title }}</p>
-<p>{{ t.architecture_desc }}</p>
-<p class="mt-5">{{ t.saas_desc }}</p>     </div>
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.diff_label }}</p>
+                  </div>
+                  <h2 id="different" class="section-title vh-txt-grad-purple-400">{{ t.diff_title }}</h2>
+                  <p class="section-desc">{{ t.diff_desc }}</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <h3 class="h5">{{ t.scratch_title }}</h3>
+                      <p class="mb-0">{{ t.scratch_desc }}</p>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <h3 class="h5">{{ t.hidden_title }}</h3>
+                      <p class="mb-0">{{ t.hidden_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/features/cloak-mode/">
+                        <span>{{ t.hidden_link }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <h3 class="h5">{{ t.open_title }}</h3>
+                      <p class="mb-0">{{ t.open_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/security-audit/">
+                        <span>{{ t.open_link }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <h3 class="h5">{{ t.self_title }}</h3>
+                      <p class="mb-0">{{ t.self_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/self-hosted-vpn/">
+                        <span>{{ t.self_link }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-        
-                                        </div>
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.make_label }}</p>
+                  </div>
+                  <h2 id="products" class="section-title vh-txt-grad-purple-400">{{ t.make_title }}</h2>
+                  <p class="section-desc">{{ t.make_desc }}</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-feature-head">
+                        <span class="vh-feature-icon vh-product-icon">{% include icons/product-connect.svg %}</span>
+                        <h3 class="h5">{{ t.connect_title }}</h3>
+                      </div>
+                      <p class="mb-0">{{ t.connect_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/free-vpn/">
+                        <span>{{ t.learn_more }}</span><span class="visually-hidden">: {{ t.connect_title }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-feature-head">
+                        <span class="vh-feature-icon vh-product-icon">{% include icons/product-client.svg %}</span>
+                        <h3 class="h5">{{ t.client_title }}</h3>
+                      </div>
+                      <p class="mb-0">{{ t.client_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/vpnhood-client/">
+                        <span>{{ t.learn_more }}</span><span class="visually-hidden">: {{ t.client_title }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-feature-head">
+                        <span class="vh-feature-icon">{% include icons/server.svg %}</span>
+                        <h3 class="h5">{{ t.server_title }}</h3>
+                      </div>
+                      <p class="mb-0">{{ t.server_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/vpnhood-server/">
+                        <span>{{ t.learn_more }}</span><span class="visually-hidden">: {{ t.server_title }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-feature-head">
+                        <span class="vh-feature-icon vh-product-icon">{% include icons/product-manager.svg %}</span>
+                        <h3 class="h5">{{ t.manager_title }}</h3>
+                      </div>
+                      <p class="mb-0">{{ t.manager_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/vpnhood-manager/">
+                        <span>{{ t.learn_more }}</span><span class="visually-hidden">: {{ t.manager_title }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-feature-head">
+                        <span class="vh-feature-icon">{% include icons/store.svg %}</span>
+                        <h3 class="h5">{{ t.reseller_title }}</h3>
+                      </div>
+                      <p class="mb-0">{{ t.reseller_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="{{ vh_base }}/reseller/">
+                        <span>{{ t.learn_more }}</span><span class="visually-hidden">: {{ t.reseller_title }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vh-card-light vh-feature-card rounded-4 p-4 h-100 d-flex flex-column">
+                      <div class="vh-feature-head">
+                        <span class="vh-feature-icon">{% include icons/code.svg %}</span>
+                        <h3 class="h5">{{ t.developer_title }}</h3>
+                      </div>
+                      <p class="mb-0">{{ t.developer_desc }}</p>
+                      <a class="vh-text-btn vh-txt-purple-300 mt-auto pt-3 align-self-start" href="https://developer.vpnhood.com/">
+                        <span>{{ t.developer_link }}</span>{{ vh_arrow }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.company_label }}</p>
+                  </div>
+                  <h2 id="company" class="section-title vh-txt-grad-purple-400">{{ t.company_title }}</h2>
+                  <p class="section-desc">{{ t.company_desc }}</p>
+                </div>
+                <div class="vh-card-light rounded-4 p-4 p-md-5" data-aos="fade-up" data-aos-duration="1000">
+                  <dl class="vh-facts">
+                    <dt>{{ t.fact_company }}</dt>
+                    <dd><span dir="ltr">OmegaHood LLC</span></dd>
+                    <dt>{{ t.fact_code }}</dt>
+                    <dd><a href="https://github.com/vpnhood" target="_blank" rel="noopener"><span dir="ltr">github.com/vpnhood</span><span class="visually-hidden"> {{ tc.new_tab }}</span></a></dd>
+                    <dt>{{ t.fact_audit }}</dt>
+                    <dd><a href="{{ vh_base }}/security-audit/">{{ t.fact_audit_value }}</a></dd>
+                    <dt>{{ t.fact_changelog }}</dt>
+                    <dd><a href="https://github.com/vpnhood/VpnHood/blob/main/CHANGELOG.md" target="_blank" rel="noopener">{{ t.fact_changelog_value }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a></dd>
+                    <dt>{{ t.fact_contact }}</dt>
+                    <dd><a href="{{ vh_base }}/contact-us/">{{ t.fact_contact_value }}</a></dd>
+                  </dl>
+                </div>
 
-			</div>
-</div>
-</div>
-											</div>
-				</div>
-						
-	</main>
+                <div class="mt-5 pt-5" data-aos="fade-up">
+                  <div class="vh-card-dark vh-feature-panel text-center py-5">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.end_title }}</h2>
+                    <p class="section-desc">{{ t.end_desc }}</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                      <a class="vh-btn vh-btn-primary" href="{{ vh_base }}/free-vpn/download/" data-vh-track="about-end-download">{{ t.end_download }}</a>
+                      <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/contact-us/">{{ t.end_contact }}</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 {% include footer.html %}

@@ -41,7 +41,7 @@
   "publish_standard_title": "我们构建并发布您的应用",
   "publish_standard_desc": "您只需开通应用商店账号，并向我们提供公司名称、徽标和一些基本信息。其余工作由我们完成，并持续更新您的应用。请联系我们了解价格。",
   "publish_custom_title": "想要自己的界面？",
-  "publish_custom_desc": "只有这种情况才需要开发人员，因为定制界面必须跟上应用的每个新版本。我们可以为您构建和维护，需额外付费。您也可以让自己的开发人员来做，我们会告诉他们从哪里开始。",
+  "publish_custom_desc": "只有这种情况才需要开发人员，因为定制界面必须跟上应用的每个新版本。我们可以为您构建和维护，需额外付费。您也可以让自己的开发人员来做：<a href=\"https://developer.vpnhood.com/articles/build-your-app.html\">我们的开发者网站</a>会告诉他们从哪里开始。",
   "start_label": "开始使用",
   "start_title": "先开始销售，再添加您的应用",
   "start_s1_title": "开通合作伙伴账户",

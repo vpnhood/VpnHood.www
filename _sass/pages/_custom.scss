@@ -650,6 +650,12 @@
 .vh-feature-head h3{
     margin: 0;
 }
+// A product's own icon in a card's disc (About us' product cards): its hood from the logo, with a badge, drawn by
+// tools/make-product-icons.py. A little larger than the set's 20px, as a hood has more detail than a line icon.
+.vh-feature-head .vh-product-icon svg{
+    width: 24px;
+    height: 24px;
+}
 // Titles inherit the muted body colour otherwise, so they read as one block with
 // the copy below them. The icon's lavender ties the two halves of a card together.
 .vh-feature-card h3{
@@ -1515,41 +1521,41 @@ a.vh-feature-chip:hover{
     opacity: .75;
 }
 
-// The audit's scope as a spec table: a narrow label column so the values line
-// up, hairlines between rows, and one column on a phone.
-.vh-audit-facts{
+// Facts as a spec table (the audit's scope, the company on About us): a narrow label
+// column so the values line up, hairlines between rows, and one column on a phone.
+.vh-facts{
     display: grid;
     grid-template-columns: minmax(9rem, 15rem) 1fr;
     margin: 0;
 }
 
-.vh-audit-facts dt,
-.vh-audit-facts dd{
+.vh-facts dt,
+.vh-facts dd{
     margin: 0;
     padding: .85rem 0;
     border-top: 1px solid var(--vh-hairline);
 }
 
-.vh-audit-facts dt{
+.vh-facts dt{
     padding-inline-end: 1.5rem;
     color: var(--vh-text-dim);
     font-weight: 400;
 }
 
-.vh-audit-facts dd{
+.vh-facts dd{
     color: var(--vh-text);
 }
 
-.vh-audit-facts dt:first-of-type,
-.vh-audit-facts dt:first-of-type + dd{
+.vh-facts dt:first-of-type,
+.vh-facts dt:first-of-type + dd{
     border-top: 0;
     padding-top: 0;
 }
 
 @media (max-width: 575.98px){
-    .vh-audit-facts{ grid-template-columns: 1fr; }
-    .vh-audit-facts dd{ border-top: 0; padding-top: 0; }
-    .vh-audit-facts dt{ padding-bottom: .2rem; }
+    .vh-facts{ grid-template-columns: 1fr; }
+    .vh-facts dd{ border-top: 0; padding-top: 0; }
+    .vh-facts dt{ padding-bottom: .2rem; }
 }
 
 // The terminal window (_includes/terminal.html), first drawn for the install block on
