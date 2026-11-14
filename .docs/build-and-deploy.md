@@ -104,7 +104,7 @@ site build: Jekyll excludes `workers/`, and a push to `main` never deploys it.
   Email Routing is on for the subdomain `alerts.vpnhood.com` only, with its own MX and SPF
   records, so vpnhood.com's Google mail is untouched; the binding can send only to that one
   verified destination address. The subdomain also sends the MANAGER's alerts through Azure
-  (VpnHood.AccessServer's `docs/main-database.md`): its SPF lists both
+  (VpnHood.Manager's `docs/main-database.md`): its SPF lists both
   `include:_spf.mx.cloudflare.net` and `include:spf.protection.outlook.com`, so a change to
   it keeps both.
 
