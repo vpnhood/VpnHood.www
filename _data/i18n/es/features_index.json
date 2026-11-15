@@ -13,7 +13,7 @@
   "g3_title": "Mantener la protección",
   "g4_title": "Para el día a día",
   "cloak_mode_title": "Modo Camuflaje",
-  "cloak_mode_short": "Disfraza el tráfico VPN como navegación web común para burlar cualquier filtro o bloqueo.",
+  "cloak_mode_short": "Disfraza el tráfico VPN como navegación web común, así que una red difícilmente puede saber que usas una VPN y los filtros no encuentran ningún patrón conocido.",
   "cloak_mode_plat": "Todas las plataformas",
   "protocols_title": "Protocolos",
   "protocols_short": "Cambia entre UDP, TCP y QUIC según las exigencias de tu conexión.",

@@ -46,7 +46,7 @@
   "why_open_source_desc": "客户端和服务端代码均在 GitHub 公开供审查。您可以随时检查技术实现，或自行搭建私有服务器。",
   "why_split_title": "高级分流功能",
   "why_split_desc": "可按国家、应用或局域网自由选择走 VPN 的流量，灵活适配您常用的各类服务。",
-  "why_stealth_title": "针对受限网络的伪装模式",
-  "why_stealth_desc": "伪装模式有助于将 VPN 流量伪装成普通的 HTTPS 流量。实际效果取决于网络的过滤方式；任何连接都无法保证一直不被封锁。",
+  "why_stealth_title": "保护隐私、应对受限网络的伪装模式",
+  "why_stealth_desc": "伪装模式有助于将 VPN 流量伪装成普通的 HTTPS 流量，让您所在的网络很难看出您在使用 VPN。实际效果取决于网络的过滤方式；任何连接都无法保证一直不被封锁。",
   "view_on_github": "在 GitHub 上查看"
 }

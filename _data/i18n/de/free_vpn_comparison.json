@@ -46,7 +46,7 @@
   "why_open_source_desc": "Der Code für Client und Server ist transparent auf GitHub verfügbar. So können Sie den Quellcode jederzeit prüfen und Ihren eigenen Server betreiben.",
   "why_split_title": "Fortschrittliches Split-Tunneling",
   "why_split_desc": "Bestimmen Sie flexibel nach Ländern, Apps oder lokalem Netzwerk, welcher Datenverkehr über das VPN läuft, und passen Sie Ihre Verbindung optimal an.",
-  "why_stealth_title": "Tarnmodus für blockierte Netzwerke",
-  "why_stealth_desc": "Der Tarnmodus hilft, VPN-Datenverkehr wie gewöhnlichen HTTPS-Datenverkehr aussehen zu lassen. Die Wirkung hängt von den Filtermethoden des Netzwerks ab; keine Verbindung bleibt garantiert ungesperrt.",
+  "why_stealth_title": "Tarnmodus für Privatsphäre und blockierte Netzwerke",
+  "why_stealth_desc": "Der Tarnmodus hilft, VPN-Datenverkehr wie gewöhnlichen HTTPS-Datenverkehr aussehen zu lassen, sodass Ihr Netzwerk kaum erkennen kann, dass Sie ein VPN nutzen. Die Wirkung hängt von den Filtermethoden des Netzwerks ab; keine Verbindung bleibt garantiert ungesperrt.",
   "view_on_github": "Auf GitHub ansehen"
 }

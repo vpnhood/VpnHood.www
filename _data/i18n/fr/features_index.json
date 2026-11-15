@@ -13,7 +13,7 @@
   "g3_title": "Rester protégé",
   "g4_title": "Au quotidien",
   "cloak_mode_title": "Mode furtif",
-  "cloak_mode_short": "Masque le trafic VPN sous l'apparence d'un trafic web classique pour déjouer les filtres.",
+  "cloak_mode_short": "Masque le trafic VPN sous l'apparence d'un trafic web classique : un réseau peut difficilement savoir que vous utilisez un VPN, et un filtre n'y trouve aucun motif familier.",
   "cloak_mode_plat": "Toutes les plateformes",
   "protocols_title": "Protocoles",
   "protocols_short": "Basculez entre UDP, TCP et QUIC selon votre réseau.",

@@ -46,7 +46,7 @@
   "why_open_source_desc": "Tanto el código del cliente como del servidor están disponibles en GitHub para su revisión. Puedes auditar el código y alojar tu propio servidor.",
   "why_split_title": "Túnel dividido avanzado",
   "why_split_desc": "Elige qué tráfico pasa por la VPN por país, aplicación o red local para adaptar la conexión a tus necesidades.",
-  "why_stealth_title": "Modo Camuflaje para redes con bloqueos",
-  "why_stealth_desc": "El Modo Camuflaje ayuda a camuflar el tráfico VPN como tráfico HTTPS habitual. Su eficacia depende de los métodos de filtrado de la red; nada garantiza que una conexión no acabe bloqueada.",
+  "why_stealth_title": "Modo Camuflaje para la privacidad y las redes con bloqueos",
+  "why_stealth_desc": "El Modo Camuflaje ayuda a camuflar el tráfico VPN como tráfico HTTPS habitual, de modo que tu red difícilmente puede saber que usas una VPN. Su eficacia depende de los métodos de filtrado de la red; nada garantiza que una conexión no acabe bloqueada.",
   "view_on_github": "Ver en GitHub"
 }

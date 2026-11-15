@@ -46,7 +46,7 @@
   "why_open_source_desc": "Le code source du client et du serveur est accessible sur GitHub. Examinez-le librement et déployez votre propre serveur.",
   "why_split_title": "Split tunneling avancé",
   "why_split_desc": "Sélectionnez le trafic qui passe par le VPN par pays, par application ou sur le réseau local, et personnalisez votre connexion selon vos besoins.",
-  "why_stealth_title": "Mode furtif pour les réseaux bloqués",
-  "why_stealth_desc": "Le mode furtif aide à faire passer le trafic VPN pour du trafic HTTPS ordinaire. Son efficacité dépend des méthodes de filtrage du réseau ; rien ne garantit qu'une connexion ne sera jamais bloquée.",
+  "why_stealth_title": "Mode furtif pour la confidentialité et les réseaux bloqués",
+  "why_stealth_desc": "Le mode furtif aide à faire passer le trafic VPN pour du trafic HTTPS ordinaire, si bien que votre réseau peut difficilement savoir que vous utilisez un VPN. Son efficacité dépend des méthodes de filtrage du réseau ; rien ne garantit qu'une connexion ne sera jamais bloquée.",
   "view_on_github": "Voir sur GitHub"
 }

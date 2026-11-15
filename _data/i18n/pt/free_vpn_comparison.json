@@ -46,7 +46,7 @@
   "why_open_source_desc": "O código do cliente e do servidor está disponível no GitHub para auditoria. Você pode conferir a implementação e hospedar seu próprio servidor.",
   "why_split_title": "Split tunneling avançado",
   "why_split_desc": "Escolha qual tráfego passa pela VPN por país, aplicativo ou rede local, personalizando a conexão exatamente como você precisa.",
-  "why_stealth_title": "Modo invisível para redes bloqueadas",
-  "why_stealth_desc": "O Modo invisível ajuda a disfarçar o tráfego da VPN como tráfego HTTPS comum. A eficácia depende dos métodos de filtragem da rede; nenhuma conexão tem garantia de continuar desbloqueada.",
+  "why_stealth_title": "Modo invisível para privacidade e redes bloqueadas",
+  "why_stealth_desc": "O Modo invisível ajuda a disfarçar o tráfego da VPN como tráfego HTTPS comum, para que a sua rede dificilmente perceba que usa uma VPN. A eficácia depende dos métodos de filtragem da rede; nenhuma conexão tem garantia de continuar desbloqueada.",
   "view_on_github": "Ver no GitHub"
 }

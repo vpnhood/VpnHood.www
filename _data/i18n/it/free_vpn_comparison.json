@@ -46,7 +46,7 @@
   "why_open_source_desc": "Il codice del client e del server è disponibile su GitHub. Puoi esaminare l'implementazione o gestire il tuo server personale.",
   "why_split_title": "Split tunneling avanzato",
   "why_split_desc": "Scegli quale traffico far passare attraverso la VPN per paese, app o rete locale, personalizzando la connessione in base ai tuoi servizi.",
-  "why_stealth_title": "Modalità camuffamento per reti con restrizioni",
-  "why_stealth_desc": "La Modalità camuffamento aiuta a camuffare il traffico VPN da normale traffico HTTPS. L'efficacia dipende dai metodi di filtraggio della rete; non c'è garanzia che una connessione non venga bloccata.",
+  "why_stealth_title": "Modalità camuffamento per privacy e reti con restrizioni",
+  "why_stealth_desc": "La Modalità camuffamento aiuta a camuffare il traffico VPN da normale traffico HTTPS, così la tua rete difficilmente si accorge che usi una VPN. L'efficacia dipende dai metodi di filtraggio della rete; non c'è garanzia che una connessione non venga bloccata.",
   "view_on_github": "Vedi su GitHub"
 }
