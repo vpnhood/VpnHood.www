@@ -16,11 +16,6 @@
       "src": "/assets/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "/assets/images/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
     }
   ],
   "categories": [ "utilities", "productivity" ],

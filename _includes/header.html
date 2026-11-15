@@ -219,7 +219,10 @@
          advertises `sizes="16x16 32x32 48x48"` outscores an SVG that declares
          no size — Edge/Chrome then show the .ico and the SVG is never used.
          Declaring a single size on the .ico, and listing the SVG last, is the
-         documented way round it. -->
+         documented way round it.
+         site.webmanifest lists the PNGs only, never favicon.svg: Chrome prefers
+         an SVG for the installed app's icon, and in a dark theme that one is a
+         white mark on nothing, so the install dialog shows a white blob. -->
     <link rel="icon" href="/assets/images/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
