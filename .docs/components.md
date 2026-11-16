@@ -302,7 +302,7 @@ drawn by the app's real UI, never taken by hand: the feature pages' screens and 
 strip (`connect-*`) from CONNECT, as those pages offer CONNECT's download (owner, 2026-11-12),
 and the CLIENT page's two phones (`client-phones`) and the CLIENT docs' details (`diagnose-*`,
 `tv-*`) from CLIENT. The store
-screenshot tool in the VpnHood repo (`src/Apps/Tools/StoreScreenshots`, whose README explains
+screenshot tool in the VpnHood repo (`tools/StoreScreenshots`, whose README explains
 it) starts the Avalonia UI headless against a product's store fixture, with no app, VPN or
 device, once per language in `_data/i18n/`.
 

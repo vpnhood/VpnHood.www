@@ -32,7 +32,7 @@ VpnHood.AppUi.Spa repo beside this one, for its Playwright. Run from the repo ro
 
 The app shows the same two drawings, sharper (640x656): split-ip.webp on its Split Tunneling
 screen and access-local-network.webp on Local network, in its asset store in the VpnHood repo
-(src/AppUi/VpnHood.AppUi.Assets.Classic/assets/images). --app carves them the same way, from
+(src/libs/AppUi/VpnHood.AppUi.Assets.Classic/assets/images). --app carves them the same way, from
 their untouched originals in tools/split-art/app/, and writes them there. Then run the store's
 _zip-assets.ps1, as its assets/ and ui.zip are committed together, and redraw the site's pictures
 of those screens: make-app-shots.py --only split-tunneling,split-local-network,connect-split-tunneling.

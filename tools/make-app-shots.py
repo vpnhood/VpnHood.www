@@ -4,7 +4,7 @@
 A page shows the app's own screen, and a reader whose app speaks Persian should see it in
 Persian, right to left, as their phone shows it. So every picture here is drawn by the app's
 real UI once per language in _data/i18n/: the store screenshot tool in the VpnHood repo
-(src/Apps/Tools/StoreScreenshots; its README explains it) starts the Avalonia UI headless
+(tools/StoreScreenshots; its README explains it) starts the Avalonia UI headless
 against a product's store fixture, with no app, VPN or device. The languages, the Android
 phone's capabilities and the demo apps come from that product's store configuration (CLIENT's
 or CONNECT's), and a screen its Google Play set also shows takes that shot's patch and hidden
@@ -42,8 +42,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 VH = ROOT.parent / "VpnHood"
-TOOL = VH / "src/Apps/Tools/StoreScreenshots"
-ASSETS = VH / "src/AppUi/VpnHood.AppUi.Assets.Classic/assets"
+TOOL = VH / "tools/StoreScreenshots"
+ASSETS = VH / "src/libs/AppUi/VpnHood.AppUi.Assets.Classic/assets"
 STORES = {"client": ROOT.parent / "Vpnhood.App.Client/store", "connect": ROOT.parent / "Vpnhood.App.Connect/store"}
 PLATFORM = "android-phone"  # the store set whose capabilities and screens the site follows
 PHONE = "android-phone"  # ...and its phone, for a picture that shows the phone's whole screen
