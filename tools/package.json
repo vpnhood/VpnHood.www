@@ -1,0 +1,8 @@
+{
+  "name": "vpnhood-www-tools",
+  "private": true,
+  "description": "What the site's drawing tools run in Node: Playwright for make-split-art.js. Install with npm ci --prefix tools.",
+  "devDependencies": {
+    "playwright": "1.62.0"
+  }
+}

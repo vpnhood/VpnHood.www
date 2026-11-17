@@ -28,7 +28,7 @@ the two original drawings. split-overview.webp, the Split Tunneling page's hero,
 card on the home page, the features index and CLIENT's page. Never edit those by hand; to add
 or change one, edit this script and rerun. The art sits on a transparent ground,
 so it needs no light counterpart (see make-light-art.py). Needs Pillow, numpy, Node and the
-VpnHood.AppUi.Spa repo beside this one, for its Playwright. Run from the repo root.
+tools' own Playwright: npm ci --prefix tools, once. Run from the repo root.
 
 The app shows the same two drawings, sharper (640x656): split-ip.webp on its Split Tunneling
 screen and access-local-network.webp on Local network, in its asset store in the VpnHood repo
@@ -52,7 +52,7 @@ from PIL import Image, ImageDraw, ImageFilter
 ROOT = Path(__file__).resolve().parent.parent
 ART = ROOT / "assets" / "images" / "features" / "art"
 SRC = ROOT / "tools" / "split-art"
-PLAYWRIGHT = ROOT.parent / "VpnHood.AppUi.Spa" / "src" / "VpnHood.AppUi.Presentation.Classic.Spa" / "node_modules" / "playwright"
+PLAYWRIGHT = ROOT / "tools" / "node_modules" / "playwright"
 
 # Coins sit where the local-network art has its three; pills where the IP art has its two.
 C1 = {"x": 28, "y": 47, "w": 50, "h": 68}
@@ -197,7 +197,7 @@ def carve_door(gate: Image.Image, hood_png: Path, out_size: tuple[int, int] = (4
 def render(tmp: Path) -> None:
     """The bubbles of every variant and the hood's mask, drawn by make-split-art.js into tmp."""
     if not PLAYWRIGHT.is_dir():
-        sys.exit(f"Playwright not found at {PLAYWRIGHT}: the VpnHood.AppUi.Spa repo must sit beside this one, with its npm packages installed.")
+        sys.exit(f"Playwright not found at {PLAYWRIGHT}: run npm ci --prefix tools from the repo root.")
     spec = tmp / "variants.json"
     spec.write_text(json.dumps(VARIANTS), encoding="utf-8")
     subprocess.run(["node", str(ROOT / "tools" / "make-split-art.js"), str(PLAYWRIGHT), str(tmp), str(spec)], check=True)
