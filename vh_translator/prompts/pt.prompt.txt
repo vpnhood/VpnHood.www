@@ -1,4 +1,5 @@
-Portuguese glossary.
+European Portuguese glossary: Portuguese as written in Portugal (AO90 spelling), never Brazilian Portuguese.
+Brazilian readers have their own pt-BR pages; these are read in Portugal and the African Portuguese-speaking countries.
 
 NAMES — same wording everywhere, including mid-sentence.
 These are the ones a translator cannot get right from a single string alone.
@@ -8,13 +9,14 @@ Kill Switch = Kill Switch
 Private DNS = DNS privado
 Split DNS = DNS dividido (the app's label)
 Split tunneling = Túnel dividido
-Go premium = Seja Premium
+Go premium = Passar a Premium (a heading may say "Passe a Premium")
 Premium Pricing = Preços Premium
-Features = Recursos
-Self-Hosted VPN = VPN auto-hospedada
-Download Now = Baixar Agora
-(opens in new tab) = (abre em uma nova aba)
-Split tunneling by app / by country = Túnel dividido por aplicativos / por países
+Features = Funcionalidades (never Recursos)
+Self-Hosted VPN = VPN auto-alojada (never auto-hospedada)
+Download Now = Transferir agora
+Download (menu item, page name) = Download
+(opens in new tab) = (abre num novo separador)
+Split tunneling by app / by country = Túnel dividido por aplicações / por países
 Frequently Asked Questions = Perguntas frequentes
 Learn more = Saiba mais
 Free vs Premium = Grátis vs Premium
@@ -23,22 +25,59 @@ Quick Launch = Início rápido
 Quick Settings tile = atalho (what people in Portugal say; never bloco)
 Always On = Sempre ligado
 Smart Proxies = Proxies inteligentes (the feature page's own title)
+Next steps = Próximos passos
+What it costs you = O que lhe custa · Get <product> = Obter o <product>
+A button or screen of the app, named as the user sees it, keeps the app's label (its pt.json): Ligar, Desligar, Definições, Subscrição, Acesso remoto, Dividir países.
+Android's own settings keep Android's Portugal labels: VPN sempre ativa, Bloquear ligações sem VPN, Definições rápidas.
+A MANAGER label printed by a [manager_*] placeholder stays English; give it a Portuguese noun where the grammar needs one (a opção <b>[manager_auto_config]</b>).
 
 TERMS — the docs' technical words: one rendering per concept, in every string.
 reverse proxy = proxy reverso
 farm / server farm = o farm / o farm de servidores (masculine; never cluster, never fazenda)
-access key = chave de acesso · certificate = certificado · container = contêiner · firewall = firewall
+access key = chave de acesso · certificate = certificado · trusted certificate = certificado fidedigno · container = contentor · firewall = firewall
 premium code = código Premium (never código de acesso)
-standalone = independente (never autônomo, never avulso) · managed = gerenciado · web panel = painel web
+standalone = independente (never autónomo, never avulso) · managed = gerido · management = gestão · web panel = painel web
 server profile = perfil de servidor (plural perfis de servidor)
 public IP address = endereço IP público (public is not estático)
+host (verb) = alojar · hosting = alojamento · run (a server, a command) = executar
+connection = ligação · connect / disconnect (in prose) = ligar-se / desligar-se
+detect / detection / undetectable = detetar / deteção / indetetável
+log = o log / os logs (never registo, which is sign-up and a DNS record) · DNS record = registo DNS
+certificate authority = autoridade de certificação · probe = sondagem · IP range = intervalo de IP
+hosting / cloud provider = fornecedor de alojamento / fornecedor de cloud (operador is only the internet provider)
+encrypt / encrypted / encryption = encriptar / encriptado / encriptação (never criptografar)
+default = predefinido · by default = por predefinição (never padrão) · operating system = sistema operativo
+request = pedido (never requisição) · status = estado · router = router · boot = arranque
+Genders: a firewall, o URL, a Cloudflare, o Let's Encrypt, o VPS, a app.
 
-PROSE — preferred wording in running text; a preference, not a ban.
-feature(s) = recursos · download (verb) = baixar (not "descarregar")
-open source = código aberto (not "open source")
-app = aplicativo · plan = plano/planos · reseller = revendedor
+PROSE — Portugal's words in running text, never the Brazilian ones in brackets.
+app = app (feminine: a app) or aplicação [aplicativo] · file = ficheiro [arquivo] · user = utilizador [usuário]
+password = palavra-passe [senha] · screen = ecrã [tela] · phone = telemóvel [celular] · tab = separador [aba]
+download (verb) = transferir [baixar] · share = partilhar [compartilhar] · team = equipa [equipe]
+subscription / subscribe = subscrição / subscrever [assinatura / assinar] · sign-up = registo / registar-se [cadastro / registrar]
+contact = contacto [contato] · settings = definições [configurações, except the app's own label] · logo = logótipo
+internet provider = operador [provedor] · browser = browser · open source = código aberto · plan = plano · reseller = revendedor
+developer = programador [desenvolvedor] · sign in / sign out = iniciar / terminar sessão [fazer login] · delete = eliminar [excluir, which means exclude]
+type = escrever [digitar] · enter (a value) = introduzir · press = premir (prima) · save = guardar (money: poupar) [economizar]
+upload = carregar · leak = fuga [vazamento] · monitor = monitorizar · reliable = fiável · remote control = comando [controle remoto]
+camera = câmara · order (in a shop) = encomenda · with us = connosco [conosco]
 
-KEYWORDS — meta_title and meta_description keys ONLY (Search Console, Aug–Oct 2026: the /pt/
-pages are found with Brazilian searches). People search "VPN grátis", "VPN grátis sem cadastro",
-"baixar VPN grátis" and "VPN de código aberto". In those two keys: Free VPN = VPN grátis, no
-registration / no sign-up / no account = sem cadastro, unlimited data = sem limite de dados.
+KEYWORDS — meta_title and meta_description keys ONLY (Search Console 16 months and Google Trends for
+Portugal, 2026-11-16). Portugal searches in English for "free vpn", "open source vpn", "download vpn" and
+"vpn app", and in Portuguese for "vpn grátis", "melhor VPN grátis" and "testar VPN"; "sem cadastro" and
+"baixar VPN" are Brazilian searches and belong to pt-BR. In those two keys: Free VPN = VPN grátis;
+download (noun) = download ("download grátis"); app = app; open source = open source; no sign-up = sem registo;
+unlimited data = sem limite de dados.
+
+RULES
+- Address the reader formally without "você": leave the subject out, use the third person and "o seu / a sua" ("Instale a app no seu telemóvel"); never "tu".
+- Buttons use the infinitive ("Transferir agora"); instructions in running text use the formal imperative ("Transfira", "Toque em Conectar").
+- Possessives take the article: "o seu servidor", "os seus utilizadores", "a sua loja".
+- Continuous actions are "estar a" + infinitive ("está a ligar-se"), never the gerund ("conectando").
+- Pronouns follow the verb in an affirmative main clause ("permite-lhe", "liga-se"), and come before it after não, que, já, também and the like.
+- "em um / em uma" is "num / numa".
+- Spelling is Portugal's AO90: deteção, receção, perspetiva, aspeto, facto, contacto, anónimo, económico, registo.
+- Headings and buttons in sentence case: only the first word and names take a capital.
+- After a colon, a title goes on in lower case unless a name follows.
+- Quotation marks in prose are «».
+- A why-question is "Porque é que…?" or "Por que razão…?", never Brazil's "Por que…?".

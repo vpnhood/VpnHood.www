@@ -1,18 +1,18 @@
 {
-  "meta_title": "Túnel dividido por país na VPN | VpnHood!",
-  "meta_description": "Direcione o tráfego pela VPN ou fora dela com base no país de destino, ou exclua seu próprio país por completo. Disponível no VpnHood!",
+  "meta_title": "Túnel dividido da VPN por países | VpnHood!",
+  "meta_description": "Direcione o tráfego pela VPN ou fora dela com base no país de destino, ou exclua o seu próprio país por completo. Disponível no VpnHood!",
   "eyebrow": "Túnel dividido",
   "title": "Túnel dividido por países",
   "lead": "Direcione o tráfego pela VPN ou fora dela com base no país de destino.",
-  "shot_alt": "A tela de túnel dividido por países no aplicativo VpnHood!",
+  "shot_alt": "O ecrã Túnel dividido por países na aplicação VpnHood!",
   "platforms_label": "Disponível para",
   "platforms": "Android, iOS, Windows e Linux",
-  "cta": "Baixar VpnHood! CONNECT",
+  "cta": "Obter o VpnHood! CONNECT",
   "back_parent": "Todas as opções de túnel dividido",
   "how_title": "Como funciona",
-  "how_desc": "Os destinos são filtrados por país. Exclua o seu próprio país para acessar serviços locais diretamente na velocidade máxima enquanto o tráfego internacional passa pelo túnel, ou faça o inverso e use o túnel apenas para os países selecionados.",
+  "how_desc": "Os destinos são identificados pelo país. Exclua o seu próprio país e os serviços locais ligam-se diretamente, à velocidade máxima, enquanto tudo o que vai para o estrangeiro passa pelo túnel; ou faça o inverso e envie pelo túnel apenas os países que escolher.",
   "when_title": "Quando usar",
-  "when_desc": "A opção \"Excluir meu país\" é ideal para o dia a dia: bancos locais, apps de entrega e sites do governo continuam funcionando normalmente, enquanto a VPN cuida do resto.",
-  "cost_title": "O que você precisa saber",
-  "cost_desc": "O tráfego destinado a um país excluído revela seu IP real para esses sites. É o equilíbrio ideal entre privacidade e velocidade."
+  "when_desc": "A opção Excluir o meu país é a definição para o dia a dia: os sites locais de bancos, entregas e serviços públicos continuam a funcionar, e a VPN trata do resto.",
+  "cost_title": "O que lhe custa",
+  "cost_desc": "O tráfego para um país excluído revela o seu endereço IP real a esses sites. É essa a troca que faz pela velocidade."
 }

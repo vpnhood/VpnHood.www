@@ -13,7 +13,7 @@
     "opt_no_autostart": "Answers no to the first question: the server does not start at boot. A new install then has no service, so you <a href=\"/vpnhood-server/docs/install/linux/#manage\">start the server yourself</a>.",
     "opt_no_autoupdate": "Answers no to the second question: the server does not update itself.",
     "opt_osupdate": "Answers yes to the third question: the operating system installs its security fixes every night, and restarts when one needs it. See <a href=\"#os-updates\">Operating system updates</a>.",
-    "opt_min_protocol": "Answers the third question with a number from <code>[min_protocol_default]</code> to <code>[min_protocol_proof]</code>: the oldest app protocol the server accepts. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Turn away probes</a> says when to set <code>[min_protocol_proof]</code>. A managed server takes its minimum from its <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">server profile</a>.",
+    "opt_min_protocol": "Answers the fourth question with a number from <code>[min_protocol_default]</code> to <code>[min_protocol_proof]</code>: the oldest app protocol the server accepts. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Turn away probes</a> says when to set <code>[min_protocol_proof]</code>. A managed server takes its minimum from its <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">server profile</a>.",
     "opt_help": "Lists the options, and installs nothing.",
     "linux_add": "Options go at the end of the install command, inside its quotes.",
     "caption_linux": "For example, in a script, with no questions",

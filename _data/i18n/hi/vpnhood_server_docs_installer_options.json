@@ -11,7 +11,7 @@
   "opt_no_autostart": "पहले सवाल का जवाब no देता है: सर्वर बूट पर शुरू नहीं होता है। नए इंस्टॉलेशन में कोई सर्विस नहीं होती, इसलिए आप <a href=\"/vpnhood-server/docs/install/linux/#manage\">सर्वर खुद शुरू करते हैं</a>।",
   "opt_no_autoupdate": "दूसरे सवाल का जवाब no देता है: सर्वर अपने आप अपडेट नहीं होता है।",
   "opt_osupdate": "तीसरे सवाल का जवाब yes देता है: ऑपरेटिंग सिस्टम हर रात अपने सिक्योरिटी फ़िक्स इंस्टॉल करता है, और किसी फ़िक्स को ज़रूरत हो तो रीस्टार्ट होता है। देखें <a href=\"#os-updates\">ऑपरेटिंग सिस्टम अपडेट</a>।",
-  "opt_min_protocol": "तीसरे सवाल का जवाब <code>[min_protocol_default]</code> से <code>[min_protocol_proof]</code> तक की संख्या से देता है: सर्वर जो सबसे पुराना ऐप प्रोटोकॉल स्वीकार करता है। <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">प्रोब को रोकें</a> बताता है कि <code>[min_protocol_proof]</code> कब सेट करें। मैनेज्ड सर्वर अपना न्यूनतम अपनी <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">सर्वर प्रोफ़ाइल</a> से लेता है।",
+  "opt_min_protocol": "चौथे सवाल का जवाब <code>[min_protocol_default]</code> से <code>[min_protocol_proof]</code> तक की संख्या से देता है: सर्वर जो सबसे पुराना ऐप प्रोटोकॉल स्वीकार करता है। <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">प्रोब को रोकें</a> बताता है कि <code>[min_protocol_proof]</code> कब सेट करें। मैनेज्ड सर्वर अपना न्यूनतम अपनी <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">सर्वर प्रोफ़ाइल</a> से लेता है।",
   "opt_help": "विकल्पों की सूची दिखाता है, और कुछ भी इंस्टॉल नहीं करता।",
   "linux_add": "विकल्प इंस्टॉल कमांड के अंत में, कोट्स के अंदर जोड़े जाते हैं।",
   "caption_linux": "उदाहरण के लिए, स्क्रिप्ट में, बिना किसी सवाल के",

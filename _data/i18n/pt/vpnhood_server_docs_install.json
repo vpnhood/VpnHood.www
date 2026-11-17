@@ -2,12 +2,12 @@
   "meta_title": "Instalar o VpnHood! SERVER no Linux, Docker ou Windows | VpnHood!",
   "meta_description": "Escolha como instalar o VpnHood! SERVER: no Linux, o sistema recomendado, no Docker ou no Windows. Em cada um basta um comando, ou adicione o servidor pelo VpnHood! MANAGER.",
   "title": "Instalar o VpnHood! SERVER",
-  "lead": "Escolha o sistema em que seu servidor vai rodar. Um servidor gerenciado é <a href=\"/vpnhood-manager/docs/add-server/\">adicionado pelo VpnHood! MANAGER</a>; para um independente, as páginas abaixo o instalam com um único comando.",
+  "lead": "Escolha o sistema em que o seu servidor vai ser executado. Um servidor gerido é <a href=\"/vpnhood-manager/docs/add-server/\">adicionado a partir do VpnHood! MANAGER</a>; para um independente, as páginas abaixo instalam-no com um único comando.",
   "recommended": "Recomendado",
   "linux_title": "Linux",
-  "linux_desc": "O servidor roda como serviço, e só aqui trata o IPv6 como trata o IPv4.",
+  "linux_desc": "O servidor é executado como serviço, e só aqui trata o IPv6 como trata o IPv4.",
   "docker_title": "Docker",
-  "docker_desc": "O servidor roda em um contêiner em qualquer máquina Linux com Docker, onde os apps usam sempre o Modo invisível.",
+  "docker_desc": "O servidor é executado num contentor em qualquer máquina Linux com Docker, onde as apps usam sempre o Modo invisível.",
   "windows_title": "Windows",
-  "windows_desc": "O servidor roda no Windows 10, no Windows 11 ou no Windows Server, em x64. Os apps transmitem o IPv6 como no Modo invisível."
+  "windows_desc": "O servidor é executado no Windows 10, no Windows 11 ou no Windows Server, em x64. As apps transportam o IPv6 tal como no Modo invisível."
 }

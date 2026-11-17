@@ -1,18 +1,18 @@
 {
-  "meta_title": "Acesse dispositivos locais conectado à VPN | VpnHood!",
-  "meta_description": "Mantenha impressoras, TVs e outros aparelhos da rede local acessíveis mesmo com a VPN ligada. Túnel dividido na rede local com o VpnHood!.",
+  "meta_title": "Aceda a dispositivos locais com a VPN ligada | VpnHood!",
+  "meta_description": "Mantenha impressoras, TVs e outros dispositivos da sua rede local acessíveis com a VPN ligada. Túnel dividido para rede local no VpnHood!.",
   "eyebrow": "Túnel dividido",
   "title": "Túnel dividido para rede local",
   "lead": "Mantenha impressoras, TVs e outros aparelhos da rede local acessíveis mesmo com a VPN ativada.",
-  "shot_alt": "Tela de Túnel dividido para rede local no aplicativo VpnHood!",
+  "shot_alt": "O ecrã Túnel dividido para rede local na aplicação VpnHood!",
   "platforms_label": "Disponível para",
   "platforms": "Android, iOS, Windows e Linux",
-  "cta": "Baixar VpnHood! CONNECT",
+  "cta": "Obter o VpnHood! CONNECT",
   "back_parent": "Todas as opções de túnel dividido",
   "how_title": "Como funciona",
-  "how_desc": "O tráfego para endereços locais é enviado diretamente, fora do túnel. Assim, seus aparelhos continuam visíveis sem precisar desligar a VPN.",
+  "how_desc": "O tráfego para endereços locais é enviado diretamente, em vez de entrar no túnel, para que os dispositivos à sua volta continuem visíveis sem ter de desligar a VPN.",
   "when_title": "Quando usar",
-  "when_desc": "Para transmitir para a TV, imprimir, acessar um NAS, controlar a casa inteligente ou usar qualquer aparelho no mesmo Wi-Fi.",
-  "cost_title": "O que você deve saber",
-  "cost_desc": "O tráfego local fica visível para a própria rede local, exatamente como sem VPN. Em redes Wi-Fi públicas, o ideal é deixar desativado."
+  "when_desc": "Transmitir para uma TV, imprimir, um NAS, a central de casa inteligente: tudo o que esteja na mesma rede Wi-Fi que o seu dispositivo.",
+  "cost_title": "O que lhe custa",
+  "cost_desc": "O tráfego local fica exposto à rede local, exatamente como estava antes da VPN. Numa rede Wi-Fi pública, poderá preferir deixar esta opção desativada."
 }

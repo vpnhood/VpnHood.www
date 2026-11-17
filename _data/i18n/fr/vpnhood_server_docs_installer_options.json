@@ -11,7 +11,7 @@
   "opt_no_autostart": "Répond non à la première question : le serveur ne démarre pas au boot. Aucun service n'étant créé, vous devez <a href=\"/vpnhood-server/docs/install/linux/#manage\">lancer le serveur vous-même</a>.",
   "opt_no_autoupdate": "Répond non à la deuxième question : le serveur ne se met pas à jour automatiquement.",
   "opt_osupdate": "Répond oui à la troisième question : le système d'exploitation installe ses correctifs de sécurité chaque nuit, et redémarre lorsque l'un d'eux l'exige. Voir <a href=\"#os-updates\">Mises à jour du système d'exploitation</a>.",
-  "opt_min_protocol": "Répond à la troisième question par un nombre de <code>[min_protocol_default]</code> à <code>[min_protocol_proof]</code> : le protocole d'application le plus ancien que le serveur accepte. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Repousser les sondes</a> indique quand choisir <code>[min_protocol_proof]</code>. Un serveur géré prend son minimum dans son <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">profil de serveur</a>.",
+  "opt_min_protocol": "Répond à la quatrième question par un nombre de <code>[min_protocol_default]</code> à <code>[min_protocol_proof]</code> : le protocole d'application le plus ancien que le serveur accepte. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Repousser les sondes</a> indique quand choisir <code>[min_protocol_proof]</code>. Un serveur géré prend son minimum dans son <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">profil de serveur</a>.",
   "opt_help": "Affiche les options sans rien installer.",
   "linux_add": "Les options s'ajoutent à la fin de la commande d'installation, entre les guillemets.",
   "caption_linux": "Exemple dans un script, sans aucune question",

@@ -1,14 +1,14 @@
 {
   "meta_title": "Instalar o VpnHood! CONNECT no Linux | VpnHood!",
-  "meta_description": "Instale o VpnHood! CONNECT no Linux com um comando, faça login na sua conta Premium e conecte-se pela janela do aplicativo ou pela linha de comando.",
+  "meta_description": "Instale o VpnHood! CONNECT no Linux com um comando, inicie sessão na sua conta Premium e ligue-se a partir da janela da app ou da linha de comandos.",
   "title": "Instalar o VpnHood! CONNECT no Linux",
-  "lead": "Um único comando instala o aplicativo, com sua janela e um conjunto de comandos. Faça login uma vez pela janela ou pelos comandos e depois conecte-se como preferir, com ou sem ambiente gráfico.",
-  "before_need": "Um plano Premium, pois a versão para Linux não possui servidores grátis: <a href=\"/free-vpn/go-premium/\">seja Premium</a>.",
-  "connect_desktop": "Abra o [app] pelo menu de aplicativos, faça login na sua conta Premium e conecte-se.",
-  "connect_terminal": "Em um terminal, ou em uma máquina sem ambiente gráfico, faça login, conecte-se e verifique a conexão:",
-  "connect_note": "<code>[cmd] sign-in</code> pede a sua senha. Se você tem um código Premium em vez de uma conta, execute no lugar dele <code>[cmd] premium-code</code> com o código.",
-  "cmd_sign_in": "Faz login na sua conta. Pede a sua senha ou a lê da entrada padrão.",
-  "cmd_sign_out": "Sai da sua conta.",
-  "cmd_premium_code": "Define o código Premium com que o aplicativo se conecta. <code>[premium_remove]</code> o remove.",
+  "lead": "Um único comando instala a app, com a sua janela e um conjunto de comandos. Inicie sessão uma vez a partir de qualquer um deles e depois ligue-se a partir de qualquer um, com ou sem ambiente gráfico.",
+  "before_need": "Um plano Premium, já que a versão para Linux não tem servidores gratuitos: <a href=\"/free-vpn/go-premium/\">passe para o Premium</a>.",
+  "connect_desktop": "Abra o [app] a partir do menu de aplicações, inicie sessão na sua conta Premium e ligue-se.",
+  "connect_terminal": "Num terminal, ou numa máquina sem ambiente gráfico, inicie sessão, ligue-se e verifique a ligação:",
+  "connect_note": "<code>[cmd] sign-in</code> pede a sua palavra-passe. Se tiver um código Premium em vez de uma conta, execute <code>[cmd] premium-code</code> com o código no seu lugar.",
+  "cmd_sign_in": "Inicia sessão na sua conta. Pede a sua palavra-passe ou lê-a da entrada padrão.",
+  "cmd_sign_out": "Termina a sessão da sua conta.",
+  "cmd_premium_code": "Define o código Premium com que a app se liga. <code>[premium_remove]</code> remove-o.",
   "always_on_note": "O Sempre ligado exige Premium."
 }

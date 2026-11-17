@@ -11,7 +11,7 @@
   "opt_no_autostart": "İlk soruya hayır yanıtı verir: Sunucu açılışta başlamaz. Yeni kurulumda servis oluşturulmaz, bu yüzden <a href=\"/vpnhood-server/docs/install/linux/#manage\">sunucuyu kendiniz başlatırsınız</a>.",
   "opt_no_autoupdate": "İkinci soruya hayır yanıtı verir: Sunucu kendini otomatik olarak güncellemez.",
   "opt_osupdate": "Üçüncü soruya evet yanıtı verir: İşletim sistemi güvenlik düzeltmelerini her gece yükler ve bir düzeltme gerektirdiğinde yeniden başlar. Bkz. <a href=\"#os-updates\">İşletim sistemi güncellemeleri</a>.",
-  "opt_min_protocol": "Üçüncü soruyu <code>[min_protocol_default]</code> ile <code>[min_protocol_proof]</code> arasında bir sayıyla yanıtlar: Sunucunun kabul ettiği en eski uygulama protokolü. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Taramaları geri çevirin</a>, <code>[min_protocol_proof]</code> değerinin ne zaman ayarlanacağını açıklar. Yönetilen bir sunucu asgari değeri <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">sunucu profilinden</a> alır.",
+  "opt_min_protocol": "Dördüncü soruyu <code>[min_protocol_default]</code> ile <code>[min_protocol_proof]</code> arasında bir sayıyla yanıtlar: Sunucunun kabul ettiği en eski uygulama protokolü. <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">Taramaları geri çevirin</a>, <code>[min_protocol_proof]</code> değerinin ne zaman ayarlanacağını açıklar. Yönetilen bir sunucu asgari değeri <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">sunucu profilinden</a> alır.",
   "opt_help": "Seçenekleri listeler ve hiçbir şey yüklemez.",
   "linux_add": "Seçenekler, kurulum komutunun sonuna ve tırnak işaretlerinin içine eklenir.",
   "caption_linux": "Örneğin, bir script içinde, soru sorulmadan",

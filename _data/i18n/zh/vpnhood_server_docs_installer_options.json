@@ -11,7 +11,7 @@
   "opt_no_autostart": "对第一个问题回答“否”：禁止服务器开机自启。新安装将不会注册系统服务，需<a href=\"/vpnhood-server/docs/install/linux/#manage\">手动启动服务器</a>。",
   "opt_no_autoupdate": "对第二个问题回答“否”：禁止服务器自动更新。",
   "opt_osupdate": "对第三个问题回答“是”：操作系统每晚安装安全修复，并在某个修复需要时重启。详见<a href=\"#os-updates\">操作系统更新</a>。",
-  "opt_min_protocol": "用 <code>[min_protocol_default]</code> 到 <code>[min_protocol_proof]</code> 之间的数字回答第三个问题：服务器接受的最旧应用协议。<a href=\"/vpnhood-server/docs/ip-blocking/#probes\">拒绝探测</a>说明了何时设为 <code>[min_protocol_proof]</code>。受管服务器从其<a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">服务器配置方案</a>获取最低版本。",
+  "opt_min_protocol": "用 <code>[min_protocol_default]</code> 到 <code>[min_protocol_proof]</code> 之间的数字回答第四个问题：服务器接受的最旧应用协议。<a href=\"/vpnhood-server/docs/ip-blocking/#probes\">拒绝探测</a>说明了何时设为 <code>[min_protocol_proof]</code>。受管服务器从其<a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">服务器配置方案</a>获取最低版本。",
   "opt_help": "列出所有可用选项，不执行安装。",
   "linux_add": "参数选项需添加到安装命令末尾的引号内。",
   "caption_linux": "示例：在脚本中静默执行安装，无交互提示",

@@ -11,7 +11,7 @@
   "opt_no_autostart": "يجيب بـ \"لا\" على السؤال الأول: لن يبدأ الخادم بالعمل عند إقلاع النظام. لن تتوفر خدمة تلقائية عند التثبيت الجديد، لذا ستحتاج إلى <a href=\"/vpnhood-server/docs/install/linux/#manage\">تشغيل الخادم بنفسك</a>.",
   "opt_no_autoupdate": "يجيب بـ \"لا\" على السؤال الثاني: لا يقوم الخادم بتحديث نفسه تلقائيًا.",
   "opt_osupdate": "يجيب بـ \"نعم\" على السؤال الثالث: يثبّت نظام التشغيل إصلاحاته الأمنية كل ليلة، ويُعاد تشغيله عندما يتطلب أحدها ذلك. راجع <a href=\"#os-updates\">تحديثات نظام التشغيل</a>.",
-  "opt_min_protocol": "يجيب عن السؤال الثالث برقم من <code>[min_protocol_default]</code> إلى <code>[min_protocol_proof]</code>: أقدم بروتوكول تطبيق يقبله الخادم. يوضح <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">صدّ الفحوصات</a> متى تضبطه على <code>[min_protocol_proof]</code>. يأخذ الخادم المُدار حدّه الأدنى من <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">ملف تعريف الخادم</a> الخاص به.",
+  "opt_min_protocol": "يجيب عن السؤال الرابع برقم من <code>[min_protocol_default]</code> إلى <code>[min_protocol_proof]</code>: أقدم بروتوكول تطبيق يقبله الخادم. يوضح <a href=\"/vpnhood-server/docs/ip-blocking/#probes\">صدّ الفحوصات</a> متى تضبطه على <code>[min_protocol_proof]</code>. يأخذ الخادم المُدار حدّه الأدنى من <a href=\"/vpnhood-manager/docs/server-profiles/#censored-network\">ملف تعريف الخادم</a> الخاص به.",
   "opt_help": "يعرض قائمة بالخيارات المتاحة، دون تثبيت أي شيء.",
   "linux_add": "تُضاف الخيارات في نهاية أمر التثبيت، داخل علامات الاقتباس الخاصة به.",
   "caption_linux": "مثال: التثبيت عبر برمجية نصية بدون طرح أي أسئلة",
