@@ -3,7 +3,7 @@
 The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
 Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
-the CLIENT, CONNECT, MANAGER and VpnHood ID privacy policies and terms of use, plus the website's
+the CLIENT, CONNECT, MANAGER, VpnHood ID and STORE privacy policies and terms of use, plus the website's
 privacy policy, one `.md` each, named `<scope>-<document>.md`. What reaches `develop` is published. That folder's README is
 written for forkers; how we publish is here:
 
@@ -29,8 +29,11 @@ Every document lives at `/legal/<scope>/<document>/`, and every `/legal/<scope>/
 | `/legal/website/` | the website's one document (same include, `terms="false"`) |
 | `/legal/website/privacy-policy/` | `website-privacy-policy.md` |
 
-`<product>` is `connect`, `client`, `manager` or `id` (the VpnHood ID, whose sign-in pages link
-its two documents: they are set as its pool's `PrivacyPolicyUri` and `TermsOfUseUri`). A new source file is pushed to the VpnHood repo
+`<product>` is `connect`, `client`, `manager`, `id` (the VpnHood ID, whose sign-in pages link
+its two documents: they are set as its pool's `PrivacyPolicyUri` and `TermsOfUseUri`) or `store`
+(VpnHood! STORE, whose sign-up page links its two documents and records which version of them a store's
+owner accepted: the store's settings name their addresses and that version, the later of the two
+`Effective:` dates). A new source file is pushed to the VpnHood repo
 before its `sync_repo` line lands here, or the fail-fast sync stops every build. These addresses are printed in installed apps,
 store listings, Google's OAuth consent screen and emails, so:
 
