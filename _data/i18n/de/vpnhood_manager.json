@@ -23,7 +23,7 @@
   "f_live_title": "Alles in Echtzeit im Blick",
   "f_live_desc": "Welche Server laufen, wer gerade online ist, wie schnell der Traffic fließt, aus welchen Ländern er kommt und wohin jedes Gigabyte ging.",
   "f_team_title": "Holen Sie Ihr Team oder Ihren Code an Bord",
-  "f_team_desc": "Laden Sie Personen ein und vergeben Sie individuelle Rollen. Oder geben Sie einem Bot einen API-Schlüssel: Jede Ansicht im Panel basiert auf derselben REST-API, auf der Sie aufbauen können.",
+  "f_team_desc": "Laden Sie Personen ein und vergeben Sie individuelle Rollen. Oder geben Sie einem Bot einen API-Schlüssel: Jede Ansicht im Panel basiert auf derselben <a href=\"https://developer.vpnhood.com/manager-api/\">REST-API</a>, auf der Sie aufbauen können.",
   "why_title": "Brauche ich das überhaupt?",
   "why_desc": "Nein. VpnHood! SERVER enthält bereits eine integrierte Zugriffsverwaltung, sodass Sie Ihren Server problemlos ganz ohne Panel betreiben können. VpnHood! MANAGER kommt ins Spiel, wenn aus einem Server mehrere werden: mit Lastenausgleich, Monitoring, Berichten, Benutzerverwaltung und einer Benutzeroberfläche im eigenen Design.",
   "start_self_hosted": "Eigenes VPN starten",

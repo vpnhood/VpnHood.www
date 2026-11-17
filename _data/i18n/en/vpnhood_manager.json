@@ -23,7 +23,7 @@
   "f_live_title": "See it all, as it happens",
   "f_live_desc": "Which servers are up, who is online right now, how fast traffic is moving, which countries it comes from, and where every gigabyte went.",
   "f_team_title": "Bring your team, or your code",
-  "f_team_desc": "Invite people and give each the role you choose. Or hand a bot an API key: every screen in the panel is the same REST API you can build on.",
+  "f_team_desc": "Invite people and give each the role you choose. Or hand a bot an API key: every screen in the panel is the same <a href=\"https://developer.vpnhood.com/manager-api/\">REST API</a> you can build on.",
   "why_title": "Do I even need it?",
   "why_desc": "No. VpnHood! SERVER ships with a small built-in file-based access manager, so you can run a server on your own with no panel at all. MANAGER is what you add when one server becomes several: load balancing between them, monitoring and reports, user management, and an interface you can brand as your own.",
   "start_self_hosted": "Start self-hosted VPN",

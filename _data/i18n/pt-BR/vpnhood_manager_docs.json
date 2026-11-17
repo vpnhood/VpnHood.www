@@ -2,5 +2,5 @@
   "meta_title": "Documentação do VpnHood! MANAGER | VpnHood!",
   "meta_description": "Aprenda a usar o VpnHood! MANAGER, o painel web para instalar servidores VPN, distribuir os usuários entre eles e criar chaves de acesso.",
   "title": "Documentação do VpnHood! MANAGER",
-  "lead": "O VpnHood! MANAGER é o painel web que instala seus servidores, distribui os usuários entre eles em <a href=\"/vpnhood-manager/docs/farms/\">farms de servidores</a> e emite as chaves de acesso deles. Estas páginas explicam as telas do painel. Para configurar seu primeiro servidor, comece por <a href=\"/vpnhood-manager/docs/add-server/\">Adicionar um servidor</a>."
+  "lead": "O VpnHood! MANAGER é o painel web que instala seus servidores, distribui os usuários entre eles em <a href=\"/vpnhood-manager/docs/farms/\">farms de servidores</a> e emite as chaves de acesso deles. Estas páginas explicam as telas do painel. Para configurar seu primeiro servidor, comece por <a href=\"/vpnhood-manager/docs/add-server/\">Adicionar um servidor</a>. Para fazer pelo seu próprio código o que o painel faz, use a <a href=\"https://developer.vpnhood.com/manager-api/\">API do VpnHood! MANAGER</a>."
 }

@@ -23,7 +23,7 @@
   "f_live_title": "Acompanhe tudo em tempo real",
   "f_live_desc": "Veja quais os servidores ativos, quem está online neste momento, a velocidade do tráfego, os países de origem e para onde foi cada gigabyte.",
   "f_team_title": "Traga sua equipe ou seu código",
-  "f_team_desc": "Convide pessoas e defina as permissões de cada uma. Ou conecte um bot com uma chave de API: cada tela no painel é alimentada pela mesma REST API pronta para você criar.",
+  "f_team_desc": "Convide pessoas e defina as permissões de cada uma. Ou conecte um bot com uma chave de API: cada tela no painel é alimentada pela mesma <a href=\"https://developer.vpnhood.com/manager-api/\">REST API</a> pronta para você criar.",
   "why_title": "Eu realmente preciso disso?",
   "why_desc": "Não necessariamente. O VpnHood! SERVER já vem com um gerenciador de acesso básico integrado, permitindo que você rode seu próprio servidor sem precisar de nenhum painel. O MANAGER entra em cena quando você passa a ter vários servidores: ele oferece balanceamento de carga, monitoramento, relatórios, gestão de usuários e uma interface totalmente personalizável com a sua marca.",
   "start_self_hosted": "Criar VPN auto-hospedada",

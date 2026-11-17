@@ -23,7 +23,7 @@
   "f_live_title": "实时掌控一切动态",
   "f_live_desc": "随时了解服务器运行状态、当前在线人数、流量速度、访问来源国家以及每个千兆字节的流向。",
   "f_team_title": "携手您的团队，或是构建您的代码",
-  "f_team_desc": "邀请成员并分配专属角色，或为机器人配置一个 API 密钥。面板上的每一个功能，都基于完全开放的 REST API 打造，任您自由拓展。",
+  "f_team_desc": "邀请成员并分配专属角色，或为机器人配置一个 API 密钥。面板上的每一个功能，都基于完全开放的 <a href=\"https://developer.vpnhood.com/manager-api/\">REST API</a> 打造，任您自由拓展。",
   "why_title": "我真的需要它吗？",
   "why_desc": "不需要。VpnHood! SERVER 自带轻量级的文件权限管理功能，无需任何面板即可独立运行。而当您需要管理多台服务器时，MANAGER 便派上用场——它支持负载均衡、监控与报告、用户管理，还能让您打造专属的品牌界面。",
   "start_self_hosted": "开启自托管 VPN",

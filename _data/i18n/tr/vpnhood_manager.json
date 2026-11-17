@@ -23,7 +23,7 @@
   "f_live_title": "Her şeyi anlık olarak takip edin",
   "f_live_desc": "Hangi sunucular ayakta, şu an kimler çevrimiçi, trafik hızı ne durumda, istekler hangi ülkelerden geliyor ve her gigabayt nereye harcandı, hepsi gözünüzün önünde.",
   "f_team_title": "Ekibini veya kodunu getir",
-  "f_team_desc": "Ekibini davet et, rollerini belirle ya da bir bota API anahtarı ver. Paneldeki her ekran, üzerine uygulama geliştirebileceğin güçlü bir REST API'dir.",
+  "f_team_desc": "Ekibini davet et, rollerini belirle ya da bir bota API anahtarı ver. Paneldeki her ekran, üzerine uygulama geliştirebileceğin güçlü bir <a href=\"https://developer.vpnhood.com/manager-api/\">REST API</a>'dir.",
   "why_title": "Gerçekten ihtiyacım var mı?",
   "why_desc": "Hayır. VpnHood! SERVER, dahili dosya tabanlı erişim yöneticisiyle gelir; böylece panele ihtiyaç duymadan sunucunu tek başına çalıştırabilirsin. VpnHood! MANAGER; tek sunucu birden fazla olduğunda yük dengeleme, izleme, raporlama, kullanıcı yönetimi ve tamamen sana özel markalayabileceğin bir arayüz için ekleyeceğin çözümdür.",
   "start_self_hosted": "Kendi VPN'ini kur",
