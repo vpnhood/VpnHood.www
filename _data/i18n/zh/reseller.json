@@ -56,7 +56,7 @@
   "get_label": "合作模式",
   "get_title": "我们为您提供什么",
   "get_pricing_title": "分销商专属价格",
-  "get_pricing_desc": "以低于零售价的价格购买高级代码，自主制定售价。所有分销商不论采购量多少都适用同一费率，费用从您充值的预付余额中扣除。",
+  "get_pricing_desc": "以低于零售价的价格购买高级代码，自主制定售价。费用从您充值的预付余额中扣除。",
   "get_module_title": "免费使用 VpnHood! PARTNER",
   "get_module_desc": "全自动销售的 WHMCS 模块完全开源且免费。安装并登录即可运行，零许可费，不按坐席收费。",
   "get_products_title": "专属定制的产品",
