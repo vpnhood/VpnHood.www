@@ -28,7 +28,7 @@
   "need_whmcs_title": "Your own WHMCS",
   "need_whmcs_desc": "The store you already run, or one you set up for this, on your own WHMCS licence and hosting. VpnHood! PARTNER installs into it like any other module.",
   "need_account_title": "A partner account",
-  "need_account_desc": "We open it and send you the sign-in details. That is the only thing you type in.",
+  "need_account_desc": "We open it once your first top-up is in, and send you the sign-in details. That is the only thing you type in.",
   "need_credit_title": "A prepaid balance",
   "need_credit_desc": "Every code your store sells is paid from it. Keep it topped up and orders never stall.",
   "install_label": "Setup",
@@ -55,6 +55,6 @@
   "next_title": "In-app purchases need your own app",
   "next_desc": "VpnHood! PARTNER sells through your website. To sell inside an app as well, on Google Play or the App Store, the app has to be yours: that is the white-label route, and it starts from exactly what you set up here.",
   "next_cta": "See how white-label works",
-  "cta": "Tell us what you sell and we will open a partner account.",
+  "cta": "Tell us what you sell and we will send you the next steps.",
   "cta_btn": "Contact our reseller team"
 }

@@ -28,7 +28,7 @@
   "need_whmcs_title": "Ihr eigenes WHMCS",
   "need_whmcs_desc": "Ihr bestehender Shop oder ein neu dafür eingerichteter, mit Ihrer eigenen WHMCS-Lizenz und Ihrem eigenen Hosting. VpnHood! PARTNER lässt sich wie jedes andere Modul installieren.",
   "need_account_title": "Ein Partner-Konto",
-  "need_account_desc": "Wir richten es ein und senden Ihnen die Zugangsdaten. Das ist das Einzige, was Sie eingeben müssen.",
+  "need_account_desc": "Wir richten es ein, sobald Ihre erste Aufladung eingegangen ist, und senden Ihnen die Zugangsdaten. Das ist das Einzige, was Sie eingeben müssen.",
   "need_credit_title": "Ein Guthaben",
   "need_credit_desc": "Jeder verkaufte Code wird davon bezahlt. Halten Sie es aufgeladen, damit Bestellungen immer sofort durchlaufen.",
   "install_label": "Einrichtung",
@@ -55,6 +55,6 @@
   "next_title": "In-App-Käufe erfordern Ihre eigene App",
   "next_desc": "Mit VpnHood! PARTNER verkaufen Sie über Ihre Website. Für In-App-Verkäufe bei Google Play oder im App Store benötigen Sie eine eigene White-Label-App – die direkt auf Ihrem bestehenden Setup aufbaut.",
   "next_cta": "Mehr über White-Label erfahren",
-  "cta": "Teilen Sie uns mit, was Sie verkaufen – wir richten Ihr Partner-Konto ein.",
+  "cta": "Teilen Sie uns mit, was Sie verkaufen – wir senden Ihnen die nächsten Schritte.",
   "cta_btn": "Reseller-Team kontaktieren"
 }

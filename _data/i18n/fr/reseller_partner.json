@@ -28,7 +28,7 @@
   "need_whmcs_title": "Votre propre WHMCS",
   "need_whmcs_desc": "Votre plateforme actuelle ou une nouvelle installation dédiée, avec votre propre licence WHMCS et votre hébergement. VpnHood! PARTNER s'y intègre comme n'importe quel module.",
   "need_account_title": "Un compte partenaire",
-  "need_account_desc": "Nous le créons et vous envoyons vos identifiants. C'est tout ce que vous aurez à saisir.",
+  "need_account_desc": "Nous le créons dès réception de votre première recharge et vous envoyons vos identifiants. C'est tout ce que vous aurez à saisir.",
   "need_credit_title": "Un solde prépayé",
   "need_credit_desc": "Chaque code vendu y est débité. Gardez-le approvisionné pour un traitement fluide des commandes.",
   "install_label": "Configuration",
@@ -55,6 +55,6 @@
   "next_title": "Paiements in-app : passez à votre propre application",
   "next_desc": "VpnHood! PARTNER fonctionne depuis votre site web. Pour vendre directement dans l'application via Google Play ou l'App Store, optez pour notre solution en marque blanche, conçue sur la même base.",
   "next_cta": "Découvrir la marque blanche",
-  "cta": "Présentez-nous votre activité pour ouvrir un compte partenaire.",
+  "cta": "Présentez-nous votre activité et nous vous enverrons les prochaines étapes.",
   "cta_btn": "Contacter l'équipe revendeurs"
 }

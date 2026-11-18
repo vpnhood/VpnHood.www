@@ -28,7 +28,7 @@
   "need_whmcs_title": "La tua istanza WHMCS",
   "need_whmcs_desc": "Il negozio che usi già o uno creato per l'occasione, con la tua licenza WHMCS e il tuo hosting. VpnHood! PARTNER si installa come qualsiasi altro modulo.",
   "need_account_title": "Un account partner",
-  "need_account_desc": "Lo creiamo noi e ti inviamo le credenziali di accesso: non dovrai inserire altro.",
+  "need_account_desc": "Lo creiamo noi appena arriva la tua prima ricarica e ti inviamo le credenziali di accesso: non dovrai inserire altro.",
   "need_credit_title": "Un credito prepagato",
   "need_credit_desc": "Viene scalato a ogni codice venduto nel tuo store. Mantienilo attivo per non bloccare gli ordini.",
   "install_label": "Configurazione",
@@ -55,6 +55,6 @@
   "next_title": "Vuoi gli acquisti in-app? Serve un'app tutta tua",
   "next_desc": "VpnHood! PARTNER ti permette di vendere dal tuo sito web. Per offrire acquisti in-app su Google Play o App Store, ti serve un'app personalizzata: scopri la soluzione white-label, pronta a partire da questa stessa configurazione.",
   "next_cta": "Scopri come funziona il white-label",
-  "cta": "Raccontaci cosa offri: apriremo subito il tuo account partner.",
+  "cta": "Raccontaci cosa offri: ti invieremo i prossimi passi.",
   "cta_btn": "Contatta il team rivenditori"
 }

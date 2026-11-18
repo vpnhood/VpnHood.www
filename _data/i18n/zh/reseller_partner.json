@@ -28,7 +28,7 @@
   "need_whmcs_title": "您自己的 WHMCS 系统",
   "need_whmcs_desc": "您现有的商城，或为此专门搭建的商城，使用您自己的 WHMCS 许可证和主机。VpnHood! PARTNER 可像普通模块一样轻松安装。",
   "need_account_title": "合作伙伴账户",
-  "need_account_desc": "由我们为您开通并发送登录凭证。这是您唯一需要手动输入的信息。",
+  "need_account_desc": "收到您的首次充值后，由我们为您开通并发送登录凭证。这是您唯一需要手动输入的信息。",
   "need_credit_title": "预存余额",
   "need_credit_desc": "商城售出的每个高级代码都将直接从中扣款。只需保证余额充足，订单即可自动处理，从不断单。",
   "install_label": "配置流程",
@@ -55,6 +55,6 @@
   "next_title": "如需应用内购买，请使用自有应用",
   "next_desc": "VpnHood! PARTNER 支持在您的网站上销售。如需在 Google Play 或 App Store 中支持应用内购买，则需推出您的自有应用：这正是白标定制方案，且完全基于您现有的配置扩展而来。",
   "next_cta": "了解白标方案运作方式",
-  "cta": "告诉我们您销售的产品，我们将为您开通合作伙伴账户。",
+  "cta": "告诉我们您销售的产品，我们将向您发送后续步骤。",
   "cta_btn": "联系分销商团队"
 }

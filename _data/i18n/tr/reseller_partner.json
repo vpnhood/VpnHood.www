@@ -28,7 +28,7 @@
   "need_whmcs_title": "Size ait bir WHMCS",
   "need_whmcs_desc": "Mevcut sisteminiz veya bunun için kuracağınız yeni bir yapı; kendi WHMCS lisansınız ve barındırmanızla. VpnHood! PARTNER, tıpkı diğer modüller gibi kolayca kurulur.",
   "need_account_title": "İş ortağı hesabı",
-  "need_account_desc": "Hesabınızı açıp giriş bilgilerinizi gönderiyoruz. Yapmanız gereken tek şey bu bilgileri girmek.",
+  "need_account_desc": "İlk bakiye yüklemeniz gerçekleşir gerçekleşmez hesabınızı açıp giriş bilgilerinizi gönderiyoruz. Yapmanız gereken tek şey bu bilgileri girmek.",
   "need_credit_title": "Ön ödemeli bakiye",
   "need_credit_desc": "Sattığınız her kod bakiyenizden düşer. Bakiyenizi dolu tutun, siparişleriniz hiç aksamasın.",
   "install_label": "Kurulum",
@@ -55,6 +55,6 @@
   "next_title": "Uygulama içi satın almalar için kendi uygulamanız gerekir",
   "next_desc": "VpnHood! PARTNER web siteniz üzerinden satış yapar. Google Play veya App Store'da uygulama içinden de satış yapmak istiyorsanız uygulamanın size ait olması gerekir: White-label tam da burada devreye girer ve burada kurduğunuz altyapı üzerinden ilerler.",
   "next_cta": "White-label nasıl çalışır, keşfedin",
-  "cta": "Ne sattığınızı bize anlatın, ortaklık hesabınızı hemen açalım.",
+  "cta": "Ne sattığınızı bize anlatın, sonraki adımları size gönderelim.",
   "cta_btn": "Bayilik ekibimizle iletişime geçin"
 }

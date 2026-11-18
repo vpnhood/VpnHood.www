@@ -28,7 +28,7 @@
   "need_whmcs_title": "Seu próprio WHMCS",
   "need_whmcs_desc": "A loja que você já tem ou uma nova para isso, com sua própria licença do WHMCS e sua própria hospedagem. O VpnHood! PARTNER se integra como qualquer outro módulo.",
   "need_account_title": "Uma conta de parceiro",
-  "need_account_desc": "Nós criamos sua conta e enviamos os dados de acesso. É só isso que você precisa inserir.",
+  "need_account_desc": "Nós criamos sua conta assim que a primeira recarga for confirmada e enviamos os dados de acesso. É só isso que você precisa inserir.",
   "need_credit_title": "Saldo pré-pago",
   "need_credit_desc": "Cada código vendido é debitado dele. Mantenha o saldo recarregado para nunca pausar as vendas.",
   "install_label": "Configuração",
@@ -55,6 +55,6 @@
   "next_title": "Vendas integradas exigem um aplicativo próprio",
   "next_desc": "O VpnHood! PARTNER permite vender em seu site. Para oferecer compras integradas no Google Play ou na App Store, você precisará do seu próprio aplicativo: essa é a nossa solução white-label, desenvolvida a partir de tudo o que você já configurou aqui.",
   "next_cta": "Veja como funciona o white-label",
-  "cta": "Conte-nos sobre o seu negócio e criaremos sua conta de parceiro.",
+  "cta": "Conte-nos sobre o seu negócio e enviaremos os próximos passos.",
   "cta_btn": "Fale com nossa equipe de revenda"
 }
