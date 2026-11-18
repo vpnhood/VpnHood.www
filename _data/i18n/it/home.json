@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! — VPN gratis, invisibile e open source",
-  "meta_description": "VpnHood è una VPN gratuita e open source che resiste al DPI: camuffa il tuo traffico da normale navigazione, per più privacy e per superare censura e firewall.",
+  "meta_description": "Una VPN gratuita e open source che resiste al DPI: sembra una normale navigazione, per più privacy e per superare censura, firewall e restrizioni di rete.",
   "banner_privacy": "proteggi la tua privacy",
   "hero_title": "VPN gratis e invisibile",
   "best_vpn_heading": "Il miglior VPN con server <span id=\"resilientText\">affidabili</span>",
@@ -10,7 +10,7 @@
   "phone_alt": "App VpnHood! CONNECT su uno smartphone",
   "app_name": "VpnHood! <span class=\"text-uppercase vh-txt-purple-300 ms-2\">connect</span>",
   "li_secure": "Sicura per definizione: crittografia moderna, completamente open source",
-  "li_undetectable": "Invisibile: supera il DPI, la censura e i firewall che bloccano le VPN",
+  "li_undetectable": "Invisibile: supera il DPI, la censura, le restrizioni di rete e i firewall che bloccano le VPN",
   "li_free_service": "Gratis: nessun account, nessun abbonamento, supportato da pubblicità",
   "download_now": "Scarica ora",
   "note_free_availability": "Il piano Gratis è supportato dalla pubblicità, pertanto non è disponibile in Cina, in Russia o in altri Paesi in cui gli annunci non vengono mostrati. Il piano Premium non ha questa limitazione.",

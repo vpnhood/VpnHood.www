@@ -3,7 +3,7 @@
   "meta_description": "伪装模式将 VPN 流量伪装成普通网页流量：隐私更有保障，深度包检测（DPI）也无特征可匹配，助您科学上网。VpnHood! 提供此功能。",
   "eyebrow": "功能",
   "title": "伪装模式",
-  "lead": "将您的 VPN 流量伪装成普通网络流量，让途经的网络很难看出您在使用 VPN。因此它能有效抵御深度包检测（DPI），帮您突破 VPN 封锁和网络审查。",
+  "lead": "将您的 VPN 流量伪装成普通网络流量，让途经的网络很难看出您在使用 VPN。因此它能有效抵御深度包检测（DPI），帮您突破 VPN 封锁、网络审查和网络限制。",
   "shot_alt": "VpnHood! 应用中的伪装模式界面",
   "platforms_label": "支持平台",
   "platforms": "Android、iOS、Windows 和 Linux",

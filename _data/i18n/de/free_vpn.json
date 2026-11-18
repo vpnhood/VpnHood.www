@@ -1,6 +1,6 @@
 {
   "meta_title": "Kostenloses VPN ohne Registrierung | VpnHood! CONNECT",
-  "meta_description": "Kostenloses Open-Source-VPN, entwickelt, um Firewalls und DPI-Filter unbemerkt zu umgehen. Kostenlos auf Android; Premium auf iOS, Apple TV, Windows und Linux.",
+  "meta_description": "Kostenloses Open-Source-VPN, gebaut, um hinter Firewalls, DPI und Netzwerkbeschränkungen unerkannt zu bleiben. Kostenlos auf Android; Premium auf iOS, Apple TV, Windows und Linux.",
   "hero_logo_alt": "VpnHood! CONNECT Logo",
   "hero_title": "Kostenloses VPN ohne Registrierung",
   "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -19,7 +19,7 @@
   "explore_features": "Alle Funktionen entdecken",
   "stealth_label": "Privat und ohne Sperren",
   "stealth_title": "Unerkennbar, wo andere kostenlose VPNs blockiert werden",
-  "stealth_desc": "Die meisten kostenlosen VPNs verbergen, was Sie tun, aber wer das Netzwerk beobachtet, kann trotzdem erkennen, dass Sie eines nutzen: Ihre Protokolle sind gut dokumentiert, und sie zu erkennen ist Routine. VpnHood tarnt seinen Datenverkehr als ganz normales verschlüsseltes Surfen, sodass es keine bekannte Signatur gibt. So bleibt auch Ihr VPN unbemerkt, und es funktioniert trotz Zensur und in Netzwerken, die VPNs blockieren: im eingeschränkten öffentlichen WLAN, im abgeschotteten Firmennetzwerk oder hinter einem staatlichen Filter.",
+  "stealth_desc": "Die meisten kostenlosen VPNs verbergen, was Sie tun, aber wer das Netzwerk beobachtet, kann trotzdem erkennen, dass Sie eines nutzen: Ihre Protokolle sind gut dokumentiert, und sie zu erkennen ist Routine. VpnHood tarnt seinen Datenverkehr als ganz normales verschlüsseltes Surfen, sodass es keine bekannte Signatur gibt. So bleibt auch Ihr VPN unbemerkt, und es funktioniert trotz Zensur und Netzwerkbeschränkungen weiter: im öffentlichen WLAN, das VPNs blockiert, im abgeschotteten Firmennetzwerk oder hinter einem staatlichen Filter.",
   "stealth_link": "Kostenlose VPN-Tarife vergleichen",
   "unlimited_label": "Ohne Kleingedrucktes",
   "unlimited_title": "Was „unbegrenzt“ bei uns bedeutet",

@@ -1,6 +1,6 @@
 {
   "meta_title": "免费 VPN，免注册即可科学上网 | VpnHood! CONNECT",
-  "meta_description": "免费开源 VPN，专为绕过滤火墙与 DPI 深度包检测而设计，科学上网稳定隐蔽。Android 平台完全免费；iOS、Apple TV、Windows 与 Linux 支持高级版。",
+  "meta_description": "免费开源的科学上网 VPN，专为在防火墙、DPI 和网络限制下保持隐蔽而设计。Android 平台完全免费；iOS、Apple TV、Windows 与 Linux 支持高级版。",
   "hero_logo_alt": "VpnHood! CONNECT 图标",
   "hero_title": "免费 VPN，免注册",
   "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -19,7 +19,7 @@
   "explore_features": "探索全部功能",
   "stealth_label": "隐私无忧，畅通无阻",
   "stealth_title": "告别封锁，真正隐形的免费 VPN",
-  "stealth_desc": "大多数免费 VPN 能隐藏您在做什么，但监视网络的人仍能看出您在使用 VPN：它们的协议有详尽的公开文档，识别它们早已是常规操作。VpnHood 将自己的流量调整得像普通的加密网页浏览，没有熟悉的特征可供匹配。这样一来，您的 VPN 本身也不会引人注意；无论是在网络审查之下，还是在封锁 VPN 的网络中，例如受限的公共 Wi-Fi、严格管制的办公网络或国家级防火墙之后，都能保持连接。",
+  "stealth_desc": "大多数免费 VPN 能隐藏您在做什么，但监视网络的人仍能看出您在使用 VPN：它们的协议有详尽的公开文档，识别它们早已是常规操作。VpnHood 将自己的流量调整得像普通的加密网页浏览，没有熟悉的特征可供匹配。这样一来，您的 VPN 本身也不会引人注意；无论是在网络审查还是网络限制之下，例如封锁 VPN 的公共 Wi-Fi、严格管制的办公网络或国家级防火墙之后，都能保持连接。",
   "stealth_link": "对比免费版 VPN 套餐",
   "unlimited_label": "毫无隐藏套路",
   "unlimited_title": "我们所说的“无限”究竟代表什么",

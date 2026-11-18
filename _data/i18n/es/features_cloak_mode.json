@@ -3,7 +3,7 @@
   "meta_description": "El Modo Camuflaje disfraza el tráfico VPN como tráfico web normal: más privacidad y ninguna firma que la inspección profunda de paquetes (DPI) pueda reconocer. Disponible en VpnHood!",
   "eyebrow": "Función",
   "title": "Modo Camuflaje",
-  "lead": "Camufla tu tráfico VPN como navegación web normal, así que las redes por las que pasa difícilmente pueden saber que usas una VPN. Eso lo hace resistente a la inspección profunda de paquetes (DPI) y te permite superar los bloqueos de VPN y la censura.",
+  "lead": "Camufla tu tráfico VPN como navegación web normal, así que las redes por las que pasa difícilmente pueden saber que usas una VPN. Eso lo hace resistente a la inspección profunda de paquetes (DPI) y te permite superar los bloqueos de VPN, la censura y las restricciones de red.",
   "shot_alt": "Pantalla de Modo Camuflaje en la aplicación VpnHood!",
   "platforms_label": "Disponible en",
   "platforms": "Android, iOS, Windows y Linux",

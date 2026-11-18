@@ -3,7 +3,7 @@
   "meta_description": "Kamufle Modu, VPN trafiğini sıradan web trafiği gibi gösterir; böylece daha fazla gizlilik sağlar ve derin paket incelemesinin (DPI) eşleştirebileceği bir imza bırakmaz. VpnHood!'da.",
   "eyebrow": "Özellik",
   "title": "Kamufle Modu",
-  "lead": "VPN trafiğinizi normal web trafiği gibi gösterir; böylece geçtiği ağlar VPN kullandığınızı pek anlayamaz. Bu da onu derin paket incelemesine (DPI) karşı dayanıklı kılar ve VPN engellemelerini ve sansürü aşmanızı sağlar.",
+  "lead": "VPN trafiğinizi normal web trafiği gibi gösterir; böylece geçtiği ağlar VPN kullandığınızı pek anlayamaz. Bu da onu derin paket incelemesine (DPI) karşı dayanıklı kılar ve VPN engellemelerini, sansürü ve ağ kısıtlamalarını aşmanızı sağlar.",
   "shot_alt": "VpnHood! uygulamasındaki Kamufle Modu ekranı",
   "platforms_label": "Desteklenen platformlar",
   "platforms": "Android, iOS, Windows ve Linux",

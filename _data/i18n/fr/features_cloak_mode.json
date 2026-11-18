@@ -3,7 +3,7 @@
   "meta_description": "Le mode furtif déguise le trafic VPN en trafic web ordinaire : davantage de confidentialité, et aucune signature pour l'inspection approfondie des paquets (DPI). Disponible sur VpnHood!",
   "eyebrow": "Fonctionnalité",
   "title": "Mode furtif",
-  "lead": "Masque votre trafic VPN sous l'apparence d'un trafic web ordinaire, si bien que les réseaux qu'il traverse peuvent difficilement savoir que vous utilisez un VPN. Il résiste ainsi à l'inspection approfondie des paquets (DPI) et vous permet de contourner les blocages de VPN et la censure.",
+  "lead": "Masque votre trafic VPN sous l'apparence d'un trafic web ordinaire, si bien que les réseaux qu'il traverse peuvent difficilement savoir que vous utilisez un VPN. Il résiste ainsi à l'inspection approfondie des paquets (DPI) et vous permet de contourner les blocages de VPN, la censure et les restrictions réseau.",
   "shot_alt": "L'écran du mode furtif dans l'application VpnHood!",
   "platforms_label": "Disponible sur",
   "platforms": "Android, iOS, Windows et Linux",

@@ -3,7 +3,7 @@
   "meta_description": "O Modo invisível disfarça o tráfego da VPN como navegação comum: mais privacidade e nenhuma assinatura para a inspeção profunda de pacotes (DPI) reconhecer. Disponível no VpnHood!",
   "eyebrow": "Recurso",
   "title": "Modo invisível",
-  "lead": "Disfarça o tráfego da VPN como tráfego comum de internet, para que as redes por onde ele passa dificilmente percebam que você usa uma VPN. Isso o torna resistente à inspeção profunda de pacotes (DPI) e ajuda você a superar bloqueios de VPN e a censura.",
+  "lead": "Disfarça o tráfego da VPN como tráfego comum de internet, para que as redes por onde ele passa dificilmente percebam que você usa uma VPN. Isso o torna resistente à inspeção profunda de pacotes (DPI) e ajuda você a superar bloqueios de VPN, a censura e as restrições de rede.",
   "shot_alt": "A tela do Modo invisível no aplicativo VpnHood!",
   "platforms_label": "Disponível para",
   "platforms": "Android, iOS, Windows e Linux",

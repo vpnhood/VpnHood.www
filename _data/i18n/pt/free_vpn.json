@@ -1,6 +1,6 @@
 {
   "meta_title": "VPN grátis sem registo | VpnHood! CONNECT",
-  "meta_description": "VPN grátis e open source, concebida para se manter indetetável atrás de firewalls e filtros DPI. Grátis no Android; Premium no iOS, Apple TV, Windows e Linux.",
+  "meta_description": "VPN grátis e open source, concebida para se manter indetetável atrás de firewalls, DPI e restrições de rede. Grátis no Android; Premium no iOS, Apple TV, Windows e Linux.",
   "hero_logo_alt": "Logótipo do VpnHood! CONNECT",
   "hero_title": "VPN grátis, sem registo",
   "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -19,7 +19,7 @@
   "explore_features": "Explorar todas as funcionalidades",
   "stealth_label": "Privada e sem bloqueios",
   "stealth_title": "Indetetável onde outras VPNs gratuitas são bloqueadas",
-  "stealth_desc": "A maioria das VPNs gratuitas esconde a sua atividade, mas quem observa a rede ainda consegue perceber que usa uma: os protocolos delas estão bem documentados e reconhecê-los é rotina. O VpnHood molda o tráfego para parecer navegação encriptada comum, por isso não há nenhuma assinatura conhecida para identificar. Isso também mantém a sua VPN longe dos olhares e a funcionar apesar da censura e em redes que bloqueiam VPNs: Wi-Fi público restrito, uma rede de trabalho fechada ou um filtro nacional.",
+  "stealth_desc": "A maioria das VPNs gratuitas esconde a sua atividade, mas quem observa a rede ainda consegue perceber que usa uma: os protocolos delas estão bem documentados e reconhecê-los é rotina. O VpnHood molda o tráfego para parecer navegação encriptada comum, por isso não há nenhuma assinatura conhecida para identificar. Isso também mantém a sua VPN longe dos olhares e a funcionar apesar da censura e das restrições de rede: Wi-Fi público que bloqueia VPNs, uma rede de trabalho fechada ou um filtro nacional.",
   "stealth_link": "Compare os planos de VPN grátis",
   "unlimited_label": "Sem letra miudinha",
   "unlimited_title": "O que significa ilimitado aqui",

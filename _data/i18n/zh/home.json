@@ -1,6 +1,6 @@
 {
   "meta_title": "VpnHood! — 免费、不可检测的开源科学上网 VPN",
-  "meta_description": "VpnHood 是一款免费开源、可抵御 DPI 的科学上网 VPN：将您的流量伪装成普通网络浏览，隐私更有保障，轻松突破网络审查与防火墙。",
+  "meta_description": "一款免费开源、可抵御 DPI 的科学上网 VPN：看起来就像普通网络浏览，隐私更有保障，并能突破网络审查、防火墙和网络限制。",
   "banner_privacy": "保护您的隐私",
   "hero_title": "免费、不易被屏蔽的 VPN",
   "best_vpn_heading": "拥有<span id=\"resilientText\">抗封锁</span>服务器的最佳 VPN",
@@ -10,7 +10,7 @@
   "phone_alt": "智能手机上的 VpnHood! CONNECT 应用",
   "app_name": "VpnHood! <span class=\"text-uppercase vh-txt-purple-300 ms-2\">connect</span>",
   "li_secure": "安全可靠 — 采用现代加密技术，代码完全开源",
-  "li_undetectable": "深度隐蔽 — 有效绕过 DPI 深度包检测、网络审查和各类防火墙封锁",
+  "li_undetectable": "深度隐蔽 — 有效绕过 DPI 深度包检测、网络审查、网络限制和各类防火墙封锁",
   "li_free_service": "免费版 —— 无需账号，无需订阅，广告支持",
   "download_now": "立即下载",
   "note_free_availability": "免费版由广告赞助支持，因此在中国大陆、俄罗斯或无法展示广告的其他国家和地区暂不可用。高级版则完全不受此限制。",

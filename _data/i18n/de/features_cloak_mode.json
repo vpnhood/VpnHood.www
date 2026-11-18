@@ -3,7 +3,7 @@
   "meta_description": "Der Tarnmodus verkleidet VPN-Datenverkehr als normalen Web-Datenverkehr: mehr Privatsphäre und keine Signatur für Deep Packet Inspection (DPI). Verfügbar in VpnHood!",
   "eyebrow": "Funktion",
   "title": "Tarnmodus",
-  "lead": "Tarnt Ihren VPN-Datenverkehr als normalen Web-Datenverkehr, sodass die Netzwerke, die er durchquert, kaum erkennen können, dass Sie ein VPN nutzen. Das macht ihn widerstandsfähig gegen Deep Packet Inspection (DPI) und bringt Sie an VPN-Sperren und Zensur vorbei.",
+  "lead": "Tarnt Ihren VPN-Datenverkehr als normalen Web-Datenverkehr, sodass die Netzwerke, die er durchquert, kaum erkennen können, dass Sie ein VPN nutzen. Das macht ihn widerstandsfähig gegen Deep Packet Inspection (DPI) und bringt Sie an VPN-Sperren, Zensur und Netzwerkbeschränkungen vorbei.",
   "shot_alt": "Der Bildschirm „Tarnmodus“ in der VpnHood!-App",
   "platforms_label": "Verfügbar für",
   "platforms": "Android, iOS, Windows und Linux",

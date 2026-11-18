@@ -3,7 +3,7 @@
   "meta_description": "Cloak Mode disguises VPN traffic as ordinary web traffic: more privacy, and no signature for deep packet inspection (DPI) to match. Available in VpnHood!",
   "eyebrow": "Feature",
   "title": "Cloak Mode",
-  "lead": "Disguises your VPN traffic as regular web traffic, so the networks it crosses can hardly tell you use a VPN. That makes it resistant to deep packet inspection (DPI) and gets you past VPN blocks and censorship.",
+  "lead": "Disguises your VPN traffic as regular web traffic, so the networks it crosses can hardly tell you use a VPN. That makes it resistant to deep packet inspection (DPI) and gets you past VPN blocks, censorship and network restrictions.",
   "shot_alt": "The Cloak Mode screen in the VpnHood! app",
   "platforms_label": "Available on",
   "platforms": "Android, iOS, Windows and Linux",

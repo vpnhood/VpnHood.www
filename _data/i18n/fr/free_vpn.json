@@ -1,6 +1,6 @@
 {
   "meta_title": "VPN gratuit sans inscription | VpnHood! CONNECT",
-  "meta_description": "VPN open source et gratuit, conçu pour rester indétectable face aux pare-feu et au DPI. Gratuit sur Android ; Premium sur iOS, Apple TV, Windows et Linux.",
+  "meta_description": "VPN open source et gratuit, conçu pour rester indétectable face aux pare-feu, au DPI et aux restrictions réseau. Gratuit sur Android ; Premium sur iOS, Apple TV, Windows et Linux.",
   "hero_logo_alt": "Logo VpnHood! CONNECT",
   "hero_title": "VPN gratuit, sans inscription",
   "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -19,7 +19,7 @@
   "explore_features": "Découvrez toutes les fonctionnalités",
   "stealth_label": "Privé et sans blocage",
   "stealth_title": "Indétectable là où les autres VPN gratuits sont bloqués",
-  "stealth_desc": "La plupart des VPN gratuits masquent ce que vous faites, mais quiconque observe le réseau peut tout de même voir que vous en utilisez un : leurs protocoles sont bien documentés, et les reconnaître relève de la routine. VpnHood façonne son trafic pour qu'il ressemble à une navigation chiffrée ordinaire, sans signature familière à reconnaître. Votre VPN passe ainsi lui aussi inaperçu, et il continue de fonctionner malgré la censure et sur les réseaux qui bloquent les VPN : Wi-Fi public restreint, réseau d'entreprise verrouillé ou filtre national.",
+  "stealth_desc": "La plupart des VPN gratuits masquent ce que vous faites, mais quiconque observe le réseau peut tout de même voir que vous en utilisez un : leurs protocoles sont bien documentés, et les reconnaître relève de la routine. VpnHood façonne son trafic pour qu'il ressemble à une navigation chiffrée ordinaire, sans signature familière à reconnaître. Votre VPN passe ainsi lui aussi inaperçu, et il continue de fonctionner malgré la censure et les restrictions réseau : Wi-Fi public qui bloque les VPN, réseau d'entreprise verrouillé ou filtre national.",
   "stealth_link": "Comparer les offres VPN gratuites",
   "unlimited_label": "Sans petites lignes",
   "unlimited_title": "Ce que « illimité » signifie vraiment",

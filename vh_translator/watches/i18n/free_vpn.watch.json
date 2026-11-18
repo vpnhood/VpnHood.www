@@ -2,7 +2,7 @@
   "version": 1,
   "items": {
     "meta_title": "Free VPN, No Registration Needed | VpnHood! CONNECT",
-    "meta_description": "Free, open-source VPN engineered to stay undetectable behind firewalls and DPI filters. Free on Android; Premium on iOS, Apple TV, Windows and Linux.",
+    "meta_description": "Free, open-source VPN built to stay undetectable behind firewalls, DPI and network restrictions. Free on Android; Premium on iOS, Apple TV, Windows and Linux.",
     "hero_logo_alt": "VpnHood! CONNECT logo",
     "hero_title": "Free VPN, No Registration",
     "app_name": "VpnHood! <span class=\"text-uppercase\">CONNECT</span>",
@@ -21,7 +21,7 @@
     "explore_features": "Explore full features",
     "stealth_label": "Private and unblocked",
     "stealth_title": "Undetectable where other free VPNs get blocked",
-    "stealth_desc": "Most free VPNs hide what you do, but anyone watching the network can still tell you use one: their protocols are well documented, and recognizing them is routine. VpnHood shapes its traffic to look like ordinary encrypted browsing, so there is no familiar signature to match. That keeps your VPN out of sight too, and keeps it working through censorship and on networks that block VPNs: restricted public Wi-Fi, a locked-down work network or a national filter.",
+    "stealth_desc": "Most free VPNs hide what you do, but anyone watching the network can still tell you use one: their protocols are well documented, and recognizing them is routine. VpnHood shapes its traffic to look like ordinary encrypted browsing, so there is no familiar signature to match. That keeps your VPN out of sight too, and keeps it working through censorship and network restrictions: public Wi-Fi that blocks VPNs, a locked-down work network or a national filter.",
     "stealth_link": "Compare free VPN tiers",
     "unlimited_label": "No small print",
     "unlimited_title": "What unlimited means here",
