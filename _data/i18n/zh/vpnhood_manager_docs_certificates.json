@@ -28,7 +28,7 @@
   "shot_dialog_alt": "VpnHood! MANAGER 中的证书详情，展示可见性、签名方式、使用者、优先级和签名状态",
   "shot_dialog_caption": "MANAGER 为新集群自动创建的证书。",
   "set_visibility": "<b>[manager_visibility]</b> 决定谁能获取该证书的域名。<b>[manager_public_in_token]</b> 会将其写入集群的每个密钥中；同时只能有一个证书具备此状态，将其分配给其他证书时，当前证书将变更为 <b>[manager_public]</b>。若单台独立服务器使用的 <b>[manager_public]</b> 证书为 <b>[manager_ca_signed]</b>，则仅在 MANAGER 将客户端分配给该服务器时，客户端才会获取它。设置为 <b>[manager_private]</b> 的证书则绝不会下发给客户端。无论如何设置，只要客户端请求该域名，服务器都会出示该证书。",
-  "set_signing": "<b>[manager_signing]</b> 决定签名方式。<b>[manager_manual]</b> 保持当前状态不变。<b>[manager_autosign]</b> 由 Let's Encrypt 签名并由 MANAGER 自动续期，详见下文。<b>[manager_domain_only]</b> 适用于证书托管在其他地方的域名：MANAGER 不会将其部署到服务器上，密钥也无法携带它。",
+  "set_signing": "<b>[manager_signing]</b> 决定签名方式。<b>[manager_manual]</b> 保持当前状态不变。<b>[manager_autosign]</b> 由 Let's Encrypt 签名并由 MANAGER 自动续期，详见下文。<b>[manager_domain_only]</b> 适用于证书托管在其他地方的域名，例如位于您服务器前面的 CDN 的域名：MANAGER 不会将其部署到服务器上，而携带该域名的密钥不包含任何服务器地址，因此应用只能通过该域名、经 443 端口访问服务器。",
   "set_used_by": "<b>[manager_used_by]</b> 可设为 <b>[manager_server_farm]</b>（适用于集群中的所有服务器）或指定集群中的某台服务器。请将密钥中使用的证书保持为 <b>[manager_server_farm]</b>，以便所有服务器都能向持有该密钥的客户端出示证书。",
   "set_priority": "当 MANAGER 向客户端提供多个证书时，<b>[manager_priority]</b>（包括 <b>[manager_priority_normal]</b>、<b>[manager_priority_low]</b> 或 <b>[manager_priority_lowest]</b>）用于对 <b>[manager_public]</b> 证书的域名进行排序。这不会改变服务器出示哪个证书。",
   "set_signature": "<b>[manager_signature]</b> 在由证书颁发机构签名时显示为 <b>[manager_ca_signed]</b>，否则显示为 <b>[manager_self_signed]</b>。客户端像浏览器一样通过颁发机构和域名验证 <b>[manager_ca_signed]</b> 证书，因此证书续期后密钥依然有效。对于 <b>[manager_self_signed]</b> 证书，客户端仅通过密钥中记录的指纹进行验证。",

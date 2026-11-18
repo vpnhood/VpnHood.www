@@ -17,7 +17,8 @@ extra_css:
   console of 2026-10-29), and is always farm-wide; a new
   certificate for a domain the farm has replaces the old one and keeps its visibility if
   higher; every non-DomainOnly certificate goes to its servers whatever its visibility, and
-  a server picks one by SNI; the token carries the PublicInToken certificate's name and
+  a server picks one by SNI; a DomainOnly name in the keys (4.0.434, FarmTokenBuilder) comes
+  with no server address, and apps reach it on 443; the token carries the PublicInToken certificate's name and
   hash, with IsValidHostName from its CA signature; a self-signed token certificate needs a
   PublicInToken address; Push token to clients sends a key that carries only the domain when
   an app connects, and one with addresses once every server in it is ready (the agent's
