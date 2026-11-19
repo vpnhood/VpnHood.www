@@ -888,9 +888,10 @@ pre[tabindex]:focus-visible{
     background-color: rgb(var(--bs-link-hover-color-rgb));
     transition: width 0.3s ease-in-out;
 }
+// Hover keeps the letter-spacing: narrowing the text moved its edge from under the
+// pointer, so the hover ended, the text widened back and the link kept pulsing.
 .vh-text-btn:hover{
     color: rgb(var(--bs-link-hover-color-rgb));
-    letter-spacing: 0;
 }
 .vh-text-btn:hover:after{
     width: 100%;
