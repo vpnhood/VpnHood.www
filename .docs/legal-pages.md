@@ -58,6 +58,11 @@ Retired so far (2026-10-19 move; before it the privacy pages sat at the root and
 `/terms-of-use/` was every product's terms page before the per-product split (and may still be
 linked from checkouts), so it goes to the index, not to one product's terms.
 
+The old Joomla site's `/products/vpnhood-store/privacy-policy/` goes to
+`/legal/vpnhood-store/privacy-policy/`: the unpublished STORE listing on the old Play account
+still links it. That address has the plugin's stub only, no Cloudflare rule (the Free plan's last
+rules are kept for this site's own pages).
+
 The Cloudflare side (zone `vpnhood.com`, phase `http_request_dynamic_redirect`; Free plan, 10
 rules, 7 used): three Single Redirects, 301, query string kept. Each matches only the exact old
 paths, with or without the trailing slash, compared with `lower(http.request.uri.path) in {...}`;

@@ -25,6 +25,10 @@ module VhLegacyRedirects
     # The install page became a choice of three systems, each with a page under it. Its
     # own address stays, as the choice; the Docker page's moved under it.
     "/vpnhood-server/docs/docker/" => "/vpnhood-server/docs/install/docker/",
+    # Addresses of the old Joomla site that Google still crawled in November 2026 and
+    # reported as 404s: its home alias and CONNECT's product page.
+    "/home/" => "/",
+    "/products/vpnhood-connect/" => "/free-vpn/",
     # Legal documents moved to /legal/<scope>/<document>/ (.docs/legal-pages.md). The old
     # addresses are printed in installed apps, store listings and emails: never remove these.
     # /terms-of-use/ was every product's terms page before the per-product split, so it goes
@@ -39,19 +43,25 @@ module VhLegacyRedirects
     "/vpnhood-manager-privacy-policy/" => "/legal/vpnhood-manager/privacy-policy/",
     "/legal/vpnhood-connect-terms-of-use/" => "/legal/vpnhood-connect/terms-of-use/",
     "/legal/vpnhood-client-terms-of-use/" => "/legal/vpnhood-client/terms-of-use/",
-    "/legal/vpnhood-manager-terms-of-use/" => "/legal/vpnhood-manager/terms-of-use/"
+    "/legal/vpnhood-manager-terms-of-use/" => "/legal/vpnhood-manager/terms-of-use/",
+    # The old Joomla site's STORE privacy policy, still linked from the unpublished STORE
+    # listing on the old Play account.
+    "/products/vpnhood-store/privacy-policy/" => "/legal/vpnhood-store/privacy-policy/"
   }.freeze
 
   # Paths that only ever existed in English. Posts were never translated, so a
   # /<lang>/blog/ URL never existed and a stub there would be pure noise; legal pages
-  # are English only by policy.
+  # are English only by policy, and Google reports only the English addresses of the old
+  # Joomla pages.
   ENGLISH_ONLY = ["/blog/", "/blog/welcome-to-the-vpnhood-blog/",
                   "/blog/what-is-split-tunneling/",
                   "/privacy-policy/", "/terms-of-use/", "/legal/privacy-policy/",
                   "/legal/terms-of-use/", "/vpnhood-connect-privacy-policy/",
                   "/vpnhood-client-privacy-policy/", "/vpnhood-manager-privacy-policy/",
                   "/legal/vpnhood-connect-terms-of-use/", "/legal/vpnhood-client-terms-of-use/",
-                  "/legal/vpnhood-manager-terms-of-use/"].freeze
+                  "/legal/vpnhood-manager-terms-of-use/",
+                  "/home/", "/products/vpnhood-connect/",
+                  "/products/vpnhood-store/privacy-policy/"].freeze
 
   class Generator < Jekyll::Generator
     safe false

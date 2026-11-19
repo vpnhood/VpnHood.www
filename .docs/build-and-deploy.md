@@ -130,6 +130,11 @@ CONNECT now); `/free-vpn/free-vs-premium/` → `/free-vpn/go-premium/` (it was o
 compare table go-premium also renders, and Search Console showed it ranking on brand terms
 at 0.7% CTR and on no "free vs premium" query at all).
 
+Old Joomla addresses that Search Console still reported as 404s in November 2026 get a stub
+only, no Cloudflare rule: `/home/` → `/`, `/products/vpnhood-connect/` → `/free-vpn/`, and
+`/products/vpnhood-store/privacy-policy/` (see `.docs/legal-pages.md`). The Free plan has
+three Single Redirects left, and they are kept for pages of this site.
+
 ## Plugins (`_config.yml`)
 
 `jekyll-seo-tag`, `jekyll-sitemap`, plus the project plugins: `_plugins/i18n-meta.rb`
