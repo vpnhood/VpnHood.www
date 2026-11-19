@@ -28,7 +28,7 @@
   "connect_title": "VpnHood! CONNECT",
   "connect_desc": "Dünyanın dört bir yanındaki kendi sunucularımızda çalışan VPN uygulamamız: reklamlarla ücretsiz ya da reklamsız Premium.",
   "client_title": "VpnHood! CLIENT",
-  "client_desc": "Kendi VPN sunucunuz için ücretsiz, açık kaynaklı uygulama: Android, iOS, Apple TV, Windows veya Linux'ta bir erişim anahtarı yapıştırın ve bağlanın.",
+  "client_desc": "Kendi VPN sunucunuz için ücretsiz, açık kaynaklı uygulama: Android, Android TV, iOS, Apple TV, Windows veya Linux'ta bir erişim anahtarı yapıştırın ve bağlanın.",
   "server_title": "VpnHood! SERVER",
   "server_desc": "Linux, Windows ve Docker için ücretsiz, açık kaynak VPN sunucusu. Kendi makinenizde çalışır ve kullanıcılarınızın trafiğini taşır.",
   "manager_title": "VpnHood! MANAGER",

@@ -80,6 +80,7 @@ nav_active: free-vpn
                               {% include android-download.html id="connect" play="com.vpnhood.connect.android" repo="VpnHood.App.Connect" file="VpnHoodConnect" %}
                               <ul class="mb-0 small">
                                 <li>{{ t.android_min_version }}</li>
+                                <li>{{ t.android_devices_note }} <a href="{{ vh_base }}/features/tv/"><b class="text-decoration-underline">{{ t.tv_guide_link }}</b></a></li>
                               </ul>
                             </div>
                           </div>
@@ -126,7 +127,7 @@ nav_active: free-vpn
                               <ul class="mb-0 small">
                                 <li>{{ t.ios_min_version }}</li>
                                 <li>{{ t.ios_devices_note }}</li>
-                                <li>{{ t.apple_tv_note }}</li>
+                                <li>{{ t.apple_tv_note }} <a href="{{ vh_base }}/features/tv/"><b class="text-decoration-underline">{{ t.tv_guide_link }}</b></a></li>
                                 <li>
                                   {{ t.ios_premium_note | replace: 'href="/', vh_href_lang }}
                                 </li>

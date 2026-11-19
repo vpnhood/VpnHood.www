@@ -28,7 +28,7 @@
   "connect_title": "VpnHood! CONNECT",
   "connect_desc": "我们的 VPN 应用，运行在我们遍布全球的自有服务器上：免费版含广告，高级版无广告。",
   "client_title": "VpnHood! CLIENT",
-  "client_desc": "为您自己的 VPN 服务器打造的免费开源应用：在 Android、iOS、Apple TV、Windows 或 Linux 上粘贴访问密钥即可连接。",
+  "client_desc": "为您自己的 VPN 服务器打造的免费开源应用：在 Android、Android TV、iOS、Apple TV、Windows 或 Linux 上粘贴访问密钥即可连接。",
   "server_title": "VpnHood! SERVER",
   "server_desc": "适用于 Linux、Windows 和 Docker 的免费开源 VPN 服务端。它运行在您自己的机器上，承载您用户的流量。",
   "manager_title": "VpnHood! MANAGER",

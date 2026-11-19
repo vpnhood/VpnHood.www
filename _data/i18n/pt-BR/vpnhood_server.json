@@ -30,7 +30,7 @@
   "prod_3": "Bloqueia varreduras de rede maliciosas feitas por usuários, mantendo seu IP limpo e longe de listas de abuso.",
   "prod_4": "Funciona atrás do Cloudflare e similares, identificando o IP real de cada cliente.",
   "prod_5": "Com o MANAGER, cada plano define o limite de tráfego e a velocidade das chaves.",
-  "run_note": "De qualquer forma, seus usuários se conectam com o VpnHood! CLIENT, grátis para Android, iOS, Apple TV, Windows e Linux. Seu próprio aplicativo white-label pode se conectar aos mesmos servidores.",
+  "run_note": "De qualquer forma, seus usuários se conectam com o VpnHood! CLIENT, grátis para Android, Android TV, iOS, Apple TV, Windows e Linux. Seu próprio aplicativo white-label pode se conectar aos mesmos servidores.",
   "run_note_link": "Conheça os aplicativos white-label",
   "prod_1_title": "Reinício sem interrupções",
   "prod_2_title": "Sem necessidade de root",

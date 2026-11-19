@@ -30,7 +30,7 @@
   "prod_3": "Blocca i tentativi di scansione di rete da parte degli utenti, proteggendo il tuo IP da segnalazioni di abuso.",
   "prod_4": "Funziona dietro Cloudflare e servizi simili, rilevando comunque il vero IP di ogni client.",
   "prod_5": "Con MANAGER, ogni piano stabilisce il limite di traffico e la velocità delle proprie chiavi.",
-  "run_note": "In ogni caso, i tuoi utenti si connettono con VpnHood! CLIENT, gratuito su Android, iOS, Apple TV, Windows e Linux. Anche la tua app white-label personalizzata può connettersi agli stessi server.",
+  "run_note": "In ogni caso, i tuoi utenti si connettono con VpnHood! CLIENT, gratuito su Android, Android TV, iOS, Apple TV, Windows e Linux. Anche la tua app white-label personalizzata può connettersi agli stessi server.",
   "run_note_link": "Scopri le app white-label",
   "prod_1_title": "Riavvio a caldo",
   "prod_2_title": "Nessun root richiesto",

@@ -1,6 +1,6 @@
 {
   "meta_title": "VPN para Apple TV e Android TV, configurada no telemóvel | VpnHood!",
-  "meta_description": "O VpnHood! funciona na Apple TV, e em breve na Android TV, com um ecrã feito para o comando. Inicie sessão e altere definições no telemóvel com o Acesso remoto.",
+  "meta_description": "O VpnHood! funciona na Apple TV e na Android TV, com um ecrã feito para o comando. Inicie sessão e altere definições no telemóvel com o Acesso remoto.",
   "eyebrow": "Funcionalidade",
   "title": "Na sua TV",
   "lead": "Funciona na Apple TV e na Android TV, com um ecrã feito para o comando. É o seu telemóvel que escreve.",
@@ -9,8 +9,6 @@
   "apple_tv_req": "tvOS 17.0 ou mais recente",
   "android_tv": "Android TV",
   "android_tv_req": "Android 7.0 ou mais recente",
-  "android_soon_title": "Em breve na Android TV",
-  "android_soon_desc": "O VpnHood! CONNECT para Android TV está a caminho do Google Play.",
   "cta": "Obter o VpnHood! CONNECT",
   "all_features": "Todas as funcionalidades",
   "remote_title": "O seu telemóvel é o comando",
@@ -23,7 +21,7 @@
   "cost_title": "O que lhe custa",
   "cost_desc": "O telemóvel tem de estar na mesma rede que a TV enquanto faz alterações, e a ligação entre os dois não é encriptada, por isso faça-as numa rede de confiança.",
   "start_title": "Como começar",
-  "start_install": "Instale a aplicação a partir da App Store numa Apple TV.",
+  "start_install": "Instale a aplicação a partir da App Store numa Apple TV, ou a partir do Google Play numa Android TV.",
   "start_connect": "Prima <b>Ligar</b> com o comando.",
   "start_phone": "Para iniciar sessão ou alterar uma definição, siga a TV: mostra um código para ler com o telemóvel.",
   "start_client": "Usa o VpnHood! CLIENT? Liga-se com uma chave de acesso, que adiciona a partir do telemóvel: <a href=\"/vpnhood-client/docs/tv/\">veja como</a>."

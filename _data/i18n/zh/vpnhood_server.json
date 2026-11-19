@@ -30,7 +30,7 @@
   "prod_3": "自动拦截试图通过服务器扫描网络的用户，保护您的 IP 免遭滥用投诉。",
   "prod_4": "支持部署在 Cloudflare 等反向代理之后，且依然能识别每个客户端的真实 IP。",
   "prod_5": "配合 MANAGER，每个套餐都能灵活限制密钥的流量额度与连接网速。",
-  "run_note": "无论选择哪种方式，用户均可通过 VpnHood! CLIENT 轻松连接，支持 Android、iOS、Apple TV、Windows 和 Linux，完全免费。您专属的白标定制应用也能接入相同的服务器。",
+  "run_note": "无论选择哪种方式，用户均可通过 VpnHood! CLIENT 轻松连接，支持 Android、Android TV、iOS、Apple TV、Windows 和 Linux，完全免费。您专属的白标定制应用也能接入相同的服务器。",
   "run_note_link": "查看白标应用",
   "prod_1_title": "热重启",
   "prod_2_title": "无需 Root 权限",

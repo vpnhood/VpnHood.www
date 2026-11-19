@@ -19,10 +19,6 @@ extra_css:
   that page"). The marks are _includes/icons/brands/apple-tv.svg and android-tv.svg: a TV on two
   feet with Apple's logo or Android's head cut out of its screen, drawn from the site's own
   Apple and Android marks (assets/images/general/*-icon-grad-purple-300.svg).
-  Published with CONNECT out on Apple TV and its Android TV version still in Google Play's review
-  (owner, 2026-11-12): until Play approves it, the hero shows the android_soon alert under the
-  row, with Android TV's mark, Android TV is "soon" in features_tv.json's meta_description and in
-  features_index.json's tv_plat, and the first step names only the App Store.
 {%- endcomment -%}
 <main id="sp-main-body">
           <div class="container">
@@ -61,13 +57,6 @@ extra_css:
                                 </span>
                               </li>
                             </ul>
-                            <div class="vh-alert" role="note">
-                              <span class="vh-alert-icon">{% include icons/brands/android-tv.svg %}</span>
-                              <div>
-                                <p class="vh-alert-title">{{ t.android_soon_title }}</p>
-                                <p class="vh-alert-desc">{{ t.android_soon_desc }}</p>
-                              </div>
-                            </div>
                             <a class="vh-btn vh-btn-primary mt-4" href="{{ vh_base }}/free-vpn/download/">{{ t.cta }}</a>
                           </div>
                           <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">

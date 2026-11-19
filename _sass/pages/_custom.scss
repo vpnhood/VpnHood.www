@@ -166,6 +166,13 @@
     height: 25%;
     box-shadow: inset 10px 10px 84px -7px rgba(var(--purple-300-rgb), .3);
 }
+/* The download pages' platform cards, four to a row from 1400px: at h3's 28px, "Android / Android TV"
+   wraps, which drops that card's buttons below the others'. */
+@media (min-width: 1400px){
+    #downloadTable .title-and-icon h2{
+        font-size: 1.5rem;
+    }
+}
 #appWrapper{
     position: relative;
     background: url("/assets/images/vpnhood-connect/download-pending-bg.webp") no-repeat center center;

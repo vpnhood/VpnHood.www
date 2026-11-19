@@ -28,7 +28,7 @@
   "connect_title": "VpnHood! CONNECT",
   "connect_desc": "Notre application VPN, avec nos propres serveurs dans le monde entier : gratuite avec des publicités, ou Premium sans publicité.",
   "client_title": "VpnHood! CLIENT",
-  "client_desc": "L'application gratuite et open source pour votre propre serveur VPN : collez une clé d'accès et connectez-vous, sur Android, iOS, Apple TV, Windows ou Linux.",
+  "client_desc": "L'application gratuite et open source pour votre propre serveur VPN : collez une clé d'accès et connectez-vous, sur Android, Android TV, iOS, Apple TV, Windows ou Linux.",
   "server_title": "VpnHood! SERVER",
   "server_desc": "Le serveur VPN gratuit et open source pour Linux, Windows et Docker. Il tourne sur votre propre machine et achemine le trafic de vos utilisateurs.",
   "manager_title": "VpnHood! MANAGER",

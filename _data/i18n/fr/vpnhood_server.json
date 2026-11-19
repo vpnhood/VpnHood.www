@@ -30,7 +30,7 @@
   "prod_3": "Bloque automatiquement les analyses réseau suspectes pour préserver la réputation de votre adresse IP.",
   "prod_4": "Fonctionne derrière Cloudflare ou similaire, tout en détectant la véritable adresse IP de chaque client.",
   "prod_5": "Avec MANAGER, chaque offre définit le volume de données et le débit alloués à ses clés.",
-  "run_note": "Dans les deux cas, vos utilisateurs se connectent via VpnHood! CLIENT, gratuit sur Android, iOS, Apple TV, Windows et Linux. Votre propre application en marque blanche peut aussi se connecter à ces mêmes serveurs.",
+  "run_note": "Dans les deux cas, vos utilisateurs se connectent via VpnHood! CLIENT, gratuit sur Android, Android TV, iOS, Apple TV, Windows et Linux. Votre propre application en marque blanche peut aussi se connecter à ces mêmes serveurs.",
   "run_note_link": "Découvrir les applications en marque blanche",
   "prod_1_title": "Redémarrage à chaud",
   "prod_2_title": "Aucun accès root requis",
