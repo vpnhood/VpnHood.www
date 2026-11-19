@@ -8,6 +8,8 @@
   window.addEventListener('load', function () {
     var loader = document.querySelector('.sp-pre-loader');
     var play = function () {
+      // .vh-played starts what CSS plays once the page shows (the /free-vpn/ shine).
+      document.documentElement.classList.add('vh-played');
       document.dispatchEvent(new CustomEvent('vhPlayAnimate'));
     };
     if (!loader) {
@@ -29,19 +31,19 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     // ---- Sticky header ----
+    // #sp-header is position:fixed from the start (helix-theme.css), so .header-sticky only
+    // raises it and fades it in. Nothing holds its place: Helix's placeholder, sized to the
+    // header once a visitor had scrolled 100px, pushed the whole page 65px down at that moment,
+    // a layout shift on every page (CLS over 0.1 in Search Console, 2026-11-19).
     var header = document.getElementById('sp-header');
     if (header && document.body.classList.contains('sticky-header')) {
-      var placeholder = document.querySelector('.sticky-header-placeholder');
-      var headerHeight = header.offsetHeight;
       var offsetTop = header.getBoundingClientRect().top + window.pageYOffset;
       var STICKY_OFFSET = 100;
       var onScroll = function () {
         if (window.pageYOffset >= offsetTop + STICKY_OFFSET) {
           header.classList.add('header-sticky');
-          if (placeholder) placeholder.style.height = headerHeight + 'px';
         } else if (header.classList.contains('header-sticky')) {
           header.classList.remove('header-sticky');
-          if (placeholder) placeholder.style.height = '';
         }
       };
       onScroll();

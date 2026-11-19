@@ -246,43 +246,43 @@ document.addEventListener('DOMContentLoaded', function () {
         container.innerHTML += container.innerHTML;
         Array.from(container.children).slice(originalCount).forEach(el => el.setAttribute('aria-hidden', 'true'));
 
-        // Set up animation
-        let scrollLeft = 0;
-        const scrollSpeed = 3; // Adjust the scroll speed as needed
+        // The strip slides by a Web Animation of its transform, which the compositor runs off
+        // the main thread. It used to be moved from a requestAnimationFrame loop that wrote the
+        // transform and read offsetLeft on every frame, so the browser recomputed styles on
+        // every frame, for good: on a phone that kept the main thread busy enough that a tap
+        // waited half a second (INP over 500ms in Search Console, from 2026-10-22).
+        const SPEED = 0.05; // px per ms: the old loop's 3px per 1/60 s
         let paused = false;
         let held = null; // the pointer holding the strip, and its last x
 
-        // Puts the strip at x, wrapped into one loop whichever way it went. A loop runs from the
-        // first item to its copy, the gap after the last item included: half the strip's width
-        // came half a gap short, and the strip skipped that much at every wrap.
+        // A loop runs from the first item to its copy, the gap after the last item included:
+        // half the strip's width came half a gap short, and the strip skipped that much at every
+        // wrap. Measured again when the layout can change (a resize, the fonts and flags arriving).
+        let loop = 1;
+        const animation = container.animate(
+            [{ transform: 'translateX(0)' }, { transform: 'translateX(-1px)' }],
+            { duration: 1 / SPEED, iterations: Infinity, easing: 'linear' });
+        const position = () => ((animation.currentTime || 0) * SPEED) % loop;
+        // Puts the strip at x, wrapped into one loop whichever way it went.
         const moveTo = x => {
-            const loop = container.children[originalCount].offsetLeft - container.children[0].offsetLeft;
-            scrollLeft = loop > 0 ? (x % loop + loop) % loop : 0;
-            container.style.transform = `translateX(-${scrollLeft}px)`;
+            animation.currentTime = ((x % loop + loop) % loop) / SPEED;
         };
+        const measure = () => {
+            const at = position() / loop;
+            loop = Math.max(1, container.children[originalCount].offsetLeft - container.children[0].offsetLeft);
+            animation.effect.setKeyframes([{ transform: 'translateX(0)' }, { transform: `translateX(-${loop}px)` }]);
+            animation.effect.updateTiming({ duration: loop / SPEED });
+            moveTo(at * loop);
+        };
+        measure();
+        window.addEventListener('load', measure);
+        window.addEventListener('resize', measure);
 
         // A strip starts with its first item in the middle, the last ones' copies before it: the
         // first item is the one a strip leads with (/free-vpn/'s connected home screen), and at
         // the left end it sat under the fade and was the first to leave.
         const first = container.children[0];
         moveTo(first.offsetLeft + first.offsetWidth / 2 - container.parentElement.clientWidth / 2);
-
-        function animateCarousel(timestamp) {
-            if (paused) return;
-            // A held strip stands still, and goes on from where it was let go.
-            if (!lastTimestamp || held) {
-                lastTimestamp = timestamp;
-            }
-
-            const deltaTime = timestamp - lastTimestamp;
-            lastTimestamp = timestamp;
-
-            moveTo(scrollLeft + scrollSpeed * deltaTime / 60); // Normalize speed
-            requestAnimationFrame(animateCarousel);
-        }
-
-        let lastTimestamp = null;
-        requestAnimationFrame(animateCarousel);
 
         // A finger or the mouse button on the strip holds it, and a drag moves it either way,
         // paused too, so a visitor who asked for reduced motion can still see every item. Once
@@ -294,15 +294,18 @@ document.addEventListener('DOMContentLoaded', function () {
         view.addEventListener('pointerdown', e => {
             if (held || e.button !== 0) return;
             held = { id: e.pointerId, x: e.clientX };
+            animation.pause();
             view.setPointerCapture(e.pointerId);
         });
         view.addEventListener('pointermove', e => {
             if (!held || e.pointerId !== held.id) return;
-            moveTo(scrollLeft + held.x - e.clientX);
+            moveTo(position() + held.x - e.clientX);
             held.x = e.clientX;
         });
         const letGo = e => {
-            if (held && e.pointerId === held.id) held = null;
+            if (!held || e.pointerId !== held.id) return;
+            held = null;
+            if (!paused) animation.play();
         };
         view.addEventListener('pointerup', letGo);
         view.addEventListener('pointercancel', letGo);
@@ -312,12 +315,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // The pause button goes under the strip: its ends fade under a mask, which would
         // fade a button inside it too.
         window.vhMotion.add({
-            pause: () => { paused = true; },
+            pause: () => { paused = true; animation.pause(); },
             resume: () => {
                 if (!paused) return;
                 paused = false;
-                lastTimestamp = null;
-                requestAnimationFrame(animateCarousel);
+                if (!held) animation.play();
             }
         }, button => container.parentElement.after(button), container.parentElement);
     });
