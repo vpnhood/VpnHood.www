@@ -286,9 +286,18 @@ Cloudflare lookup the China bar uses, done once per session (`sessionStorage vh_
 An unknown country (lookup failed) loads nothing and shows nothing. The choice is
 `localStorage vh_consent` (`granted` / `denied`); "Cookie settings" in the footer reopens the
 banner and appears only in those regions or after a choice. Declining after an Accept deletes
-the `_ga*` cookies and reloads. After an Accept, the loader tells Google analytics is granted
-and the ad signals are denied (Consent Mode), since the site has no ads. There is no GTM
-`<noscript>` iframe: without JavaScript there is no banner to ask.
+the `_ga*` cookies and reloads, and every page deletes them again while the choice is `denied`:
+Analytics, still running at the Decline, writes its session cookie (`_ga_<id>`) again while
+the page unloads. Whenever it loads Tag Manager, the loader tells Google that
+analytics is granted and the ad signals are denied (Consent Mode), since the site has no ads
+and the privacy notice names none. Without that default Google also sends its ad signals to
+`stats.g.doubleclick.net` (measured 2026-11-19 for a visitor outside the consent regions).
+`node tools/check-analytics-consent.js [base-url]` checks all of this: one page view and no ad
+signal for a visitor outside the regions and for one who presses Accept, the banner and nothing
+sent for one who has not chosen, and no `_ga*` cookie after a Decline. It aborts every Google
+request, so nothing reaches the property; Tag Manager loads only in a production build, so run
+it against the live site or a local `JEKYLL_ENV=production` build. There is no
+GTM `<noscript>` iframe: without JavaScript there is no banner to ask.
 
 Preview with `?geo=DE` (banner) or `?geo=US` (none); clear `vh_consent` to see it again. A
 local build never loads GTM, so the banner can be clicked safely. The website's privacy

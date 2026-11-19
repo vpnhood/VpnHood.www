@@ -80,16 +80,16 @@
     {%- if jekyll.environment == "production" %}
     <script>
       (function (w, d) {
-        w.vhLoadGtm = function (consented) {
+        w.vhLoadGtm = function () {
           if (w.vhGtmLoaded) return;
           w.vhGtmLoaded = true;
           w.dataLayer = w.dataLayer || [];
-          if (consented) {
-            // What the visitor accepted is analytics; the site has no ads.
-            (function () { w.dataLayer.push(arguments); })("consent", "default", {
-              analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied",
-              ad_personalization: "denied" });
-          }
+          // Analytics only, for every visitor: the site has no ads, and the privacy notice
+          // names none. Without this default Google also sends its ad signals
+          // (stats.g.doubleclick.net) for a visitor outside the consent regions.
+          (function () { w.dataLayer.push(arguments); })("consent", "default", {
+            analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied",
+            ad_personalization: "denied" });
           w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
           var f = d.getElementsByTagName("script")[0],
             j = d.createElement("script");
@@ -99,10 +99,10 @@
         };
         var choice = null;
         try { choice = localStorage.getItem("vh_consent"); } catch (e) {}
-        if (choice === "granted") return w.vhLoadGtm(true);
+        if (choice === "granted") return w.vhLoadGtm();
         if (choice === "denied") return;
         w.vhCountry.then(function (c) {
-          if (c && w.vhConsentRegions.indexOf(c) < 0) w.vhLoadGtm(false);
+          if (c && w.vhConsentRegions.indexOf(c) < 0) w.vhLoadGtm();
         });
       })(window, document);
     </script>

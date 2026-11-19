@@ -2,7 +2,8 @@
 // settings". Only visitors in window.vhConsentRegions (header.html) see them, or anyone who
 // already chose; the choice lives in localStorage vh_consent. Accept loads Tag Manager
 // (window.vhLoadGtm, production builds only). Declining after an Accept deletes Google
-// Analytics' cookies and reloads, so nothing already running keeps collecting.
+// Analytics' cookies and reloads, so nothing already running keeps collecting, and every page
+// deletes them again while the choice is "denied".
 (function () {
   var KEY = 'vh_consent';
 
@@ -39,7 +40,7 @@
       store(choice);
       banner.hidden = true;
       if (choice === 'granted') {
-        if (window.vhLoadGtm) window.vhLoadGtm(true);
+        if (window.vhLoadGtm) window.vhLoadGtm();
       } else if (before === 'granted') {
         deleteGaCookies();
         location.reload();
@@ -57,6 +58,11 @@
       if (inRegion && !stored()) banner.hidden = false;
     });
   }
+
+  // A visitor who declined keeps no Analytics cookie. Analytics, still running when Decline is
+  // pressed, writes its session cookie (_ga_<id>) again while the page unloads for the reload,
+  // so every page deletes what is left; Tag Manager never loads again to write it back.
+  if (stored() === 'denied') deleteGaCookies();
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
