@@ -22,6 +22,7 @@ Cloak Mode = Modalità camuffamento (never Modalità Mascheramento / Modalità C
 Quick Launch = Avvio rapido
 Always On = Always On
 Smart Proxies = Proxy intelligenti (the feature page's own title)
+Undetectable = non rilevabile (never invisibile or irrintracciabile; invisibile only where the English says invisible)
 
 TERMS — the docs' technical words: one rendering per concept, in every string.
 reverse proxy = reverse proxy (never proxy inverso)
