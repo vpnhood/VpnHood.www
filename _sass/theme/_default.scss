@@ -1413,137 +1413,47 @@ pre[tabindex]:focus-visible{
     width: 50px;
     animation: blob-6-anim 3s infinite ease;
 }
+// The blobs move by transform only, so the compositor animates them and the main thread never
+// sees a frame of it. They used to animate top and left, which laid out and repainted the
+// 50px blur on every frame, for good: on a phone that kept the main thread busy enough that a
+// tap waited half a second (INP over 500ms in Search Console, from 2026-10-22). Each step is
+// the old one's top/left less the blob's own (.blob-N above), which is still where it rests
+// when motion is reduced, so the path is the same to the pixel.
 @keyframes blob-1-anim {
-    0% {
-        top: 50px;
-        left: 250px;
-        transform: scale(1);
-    }
-    30% {
-        top: 150px;
-        left: 150px;
-        transform: scale(1.2);
-    }
-    60% {
-        top: 100px;
-        left: 200px;
-        transform: scale(1.3);
-    }
-    100% {
-        top: 50px;
-        left: 250px;
-        transform: scale(1);
-    }
+    0%   { transform: translate(0, 0) scale(1); }
+    30%  { transform: translate(-100px, 100px) scale(1.2); }
+    60%  { transform: translate(-50px, 50px) scale(1.3); }
+    100% { transform: translate(0, 0) scale(1); }
 }
 @keyframes blob-2-anim {
-    0% {
-        top: 50px;
-        left: 0;
-        transform: scale(1);
-    }
-    30% {
-        top: 100px;
-        left: 80px;
-        transform: scale(1.2);
-    }
-    60% {
-        top: 200px;
-        left: 200px;
-        transform: scale(1.3);
-    }
-    100% {
-        top: 50px;
-        left: 0;
-        transform: scale(1);
-    }
+    0%   { transform: translate(0, 0) scale(1); }
+    30%  { transform: translate(80px, 50px) scale(1.2); }
+    60%  { transform: translate(200px, 150px) scale(1.3); }
+    100% { transform: translate(0, 0) scale(1); }
 }
 @keyframes blob-3-anim {
-    0% {
-        top: 20px;
-        left: 300px;
-        transform: scale(1);
-    }
-    30% {
-        top: 100px;
-        left: 150px;
-        transform: scale(1.2);
-    }
-    60% {
-        top: 100px;
-        left: 250px;
-        transform: scale(1.3);
-    }
-    100% {
-        top: 20px;
-        left: 300px;
-        transform: scale(1);
-    }
+    0%   { transform: translate(0, -180px) scale(1); }
+    30%  { transform: translate(-150px, -100px) scale(1.2); }
+    60%  { transform: translate(-50px, -100px) scale(1.3); }
+    100% { transform: translate(0, -180px) scale(1); }
 }
 @keyframes blob-4-anim {
-    0% {
-        top: 150px;
-        left: 150px;
-        transform: scale(1);
-    }
-    30% {
-        top: 100px;
-        left: 80px;
-        transform: scale(1.2);
-    }
-    60% {
-        top: 200px;
-        left: 200px;
-        transform: scale(1.3);
-    }
-    100% {
-        top: 150px;
-        left: 150px;
-        transform: scale(1);
-    }
+    0%   { transform: translate(0, 0) scale(1); }
+    30%  { transform: translate(-70px, -50px) scale(1.2); }
+    60%  { transform: translate(50px, 50px) scale(1.3); }
+    100% { transform: translate(0, 0) scale(1); }
 }
 @keyframes blob-5-anim {
-    0% {
-        top: 150px;
-        left: 0;
-        transform: scale(1);
-    }
-    30% {
-        top: 100px;
-        left: 80px;
-        transform: scale(1.2);
-    }
-    60% {
-        top: 200px;
-        left: 200px;
-        transform: scale(1.3);
-    }
-    100% {
-        top: 150px;
-        left: 0;
-        transform: scale(1);
-    }
+    0%   { transform: translate(-100px, 50px) scale(1); }
+    30%  { transform: translate(-20px, 0) scale(1.2); }
+    60%  { transform: translate(100px, 100px) scale(1.3); }
+    100% { transform: translate(-100px, 50px) scale(1); }
 }
 @keyframes blob-6-anim {
-    0% {
-        top: 200px;
-        left: 100px;
-        transform: scale(1);
-    }
-    30% {
-        top: 150px;
-        left: 0;
-        transform: scale(1.2);
-    }
-    60% {
-        top: 0;
-        left: 200px;
-        transform: scale(1.3);
-    }
-    100% {
-        top: 200px;
-        left: 100px;
-        transform: scale(1);
-    }
+    0%   { transform: translate(0, -50px) scale(1); }
+    30%  { transform: translate(-100px, -100px) scale(1.2); }
+    60%  { transform: translate(100px, -250px) scale(1.3); }
+    100% { transform: translate(0, -50px) scale(1); }
 }
 
 /*-------------- Shining star --------------*/
@@ -1561,8 +1471,16 @@ pre[tabindex]:focus-visible{
     top: var(--star-top);
     width: var(--size);
 }
+// The shine crosses the name once, when the preloader has gone (.vh-played, main.js), and
+// rests on its first frame, which is also its last. An endless loop repainted the clipped text
+// on the main thread for every frame, for good: on a phone that kept the main thread busy
+// enough that a tap waited half a second (INP over 500ms in Search Console, from 2026-10-22).
+// A background-clip: text shine cannot move on the compositor, so it moves once. Three seconds
+// is also inside WCAG 2.2.2's five, so it needs no pause button.
+.vh-played .shining-text{
+    animation: shining-text-anim 3s linear 1;
+}
 .shining-text{
-    animation: shining-text-anim 3s linear infinite;
     background: linear-gradient(to right, var(--purple-300), var(--purple-130), var(--purple-120), var(--purple-300));
     background-size: 200%;
     -webkit-background-clip: text;

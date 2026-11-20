@@ -90,7 +90,57 @@ from the start, AOS off (`footer.html`) and every CSS animation and transition r
   width came half a gap short, and the strip skipped 24px at every wrap. A strip starts with its
   first item in the middle, the last items' copies before it: at the left end the first item sat
   under the fade and was the first to leave. No strip holds a link; one that does needs a drag
-  kept from clicking it.
+  kept from clicking it. A strip slides by a Web Animation of its transform (`element.animate`),
+  never a `requestAnimationFrame` loop; a drag sets its `currentTime`.
+
+### Motion stays off the main thread (INP)
+
+Anything that moves for good animates **only `transform` and `opacity`**, which the compositor
+runs without the page's main thread. On 2026-11-19 Search Console flagged 193 mobile URLs for
+INP over 500ms (the example `/fa/free-vpn/download/`, from 2026-10-22). Three endless loops kept a
+phone's main thread busy even while nobody touched the page, so every tap waited behind them.
+Measured idle, with mobile emulation and a 4× slower CPU, the main thread went from 66% busy to 1%
+on the download pages, 65% to 2% on the home page and 98% to 23% on `/free-vpn/`:
+
+- the hero **blobs** (`.blob-N`) animated `top` and `left`: a layout and a repaint of their 50px
+  blur on every frame. Their keyframes are now `translate()` offsets from each blob's own
+  `top`/`left`, the same path to the pixel;
+- the **sliding strips** wrote their transform and read `offsetLeft` on every frame: a style
+  recalculation per frame. Now a Web Animation (above);
+- the **`/free-vpn/` shine** (`.shining-text`) animates `background-position` under
+  `background-clip: text`, which can only be repainted. It now runs one pass when the preloader
+  has gone (`html.vh-played`, set in `main.js`) and rests on its first frame.
+
+Animating `top`/`left`/`width`/`height`/`margin`, `background-position`, `box-shadow` or `filter`
+for good, or moving something from a frame loop, brings this back. Something that cannot move on
+the compositor runs once, within WCAG 2.2.2's five seconds. To check a page, compare
+`Performance.getMetrics` `TaskDuration` over five idle seconds (Puppeteer, CPU throttled ×4)
+with and without the change.
+
+### Nothing moves the page as it scrolls (CLS)
+
+On the same day Search Console flagged 324 mobile URLs for CLS over 0.1 (the examples
+`/fa/free-vpn/download/` and `/zh/free-vpn/`, 0.13, from 2026-08-21). `#sp-header` is
+`position: fixed` from the start (`helix-theme.css`), but Helix's `.sticky-header-placeholder`
+took the header's height once a visitor had scrolled 100px and dropped it again above that, so
+the whole page jumped 65px each time it crossed the line: 0.07 to 0.09 a crossing in the lab.
+The placeholder is gone, and `.header-sticky` only raises the header and fades it in
+(`main.js`). The blobs' old `top`/`left` animation counted as layout shift too, a few
+thousandths each time. To check a page, sum the `layout-shift` entries
+(`PerformanceObserver`, no recent input) while scrolling it at a phone's width.
+
+### The largest paint is preloaded (LCP)
+
+Also on 2026-11-19: 193 mobile URLs over 2.5s for LCP (`/fa/free-vpn/download/`, 3.1s). A
+content page's largest paint is the glow behind `<main>` (`light-bg-left.svg`, the
+`#sp-main-body::before` background in `_custom.scss`), and the home page's is the guardian
+banner (`#bannerBgWrapper`), both backgrounds a stylesheet names, so the browser found them only
+once every stylesheet was in: 0.2–0.8s after the first paint, 1.3s on the home page.
+`header.html` preloads the page's `preload_image`, or the glow on any page with `custom.css`,
+**after** the stylesheets: above them the 63KB banner took a slow line's bandwidth from the CSS
+and put the first paint back by a second. Now the largest paint lands with the first. A page
+whose hero changes updates `preload_image` with it: the home page's still named the phone picture
+three weeks after the banner replaced it.
 
 ## Skip link — `header.html`
 

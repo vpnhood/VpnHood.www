@@ -230,11 +230,6 @@
     <!-- Kept in sync with the active theme by /assets/js/theme.js -->
     <meta name="theme-color" content="#122272" />
 
-    <!-- Optional LCP image preload -->
-    {% if page.preload_image %}
-    <link rel="preload" as="image" href="{{ page.preload_image }}" fetchpriority="high" />
-    {% endif %}
-
     <!-- Framework CSS: Bootstrap 5.3.3 compiled from vendored Sass source
          (assets/css/bootstrap.scss → _sass/vendor/bootstrap/), then the Helix
          theme (vendored static CSS) on top -->
@@ -263,6 +258,18 @@
     <link href="{{ c }}" rel="stylesheet" />
     {% endfor %}{% endif %}
     <link href="/assets/css/style.css" rel="stylesheet" />
+    <!-- LCP image preload. The largest thing a page paints is a background its stylesheet
+         names, so without this the browser finds it only once every stylesheet is in, one round
+         trip after the first paint (LCP over 2.5s in Search Console, 2026-11-19). A page names
+         its own with preload_image (home: the guardian banner); a content page's is the glow
+         behind <main> (#sp-main-body::before in _custom.scss), the same file in both themes.
+         It comes after the stylesheets on purpose: above them, the home banner's 63KB took
+         bandwidth from the CSS on a slow line and put the first paint back by a second. -->
+    {% if page.preload_image %}
+    <link rel="preload" as="image" href="{{ page.preload_image }}" fetchpriority="high" />
+    {% elsif page.extra_css contains "/assets/css/custom.css" %}
+    <link rel="preload" as="image" href="/assets/images/general/light-bg-left.svg" fetchpriority="high" />
+    {% endif %}
     <!-- AOS animation CSS is non-blocking: it only defines reveal states that are
          initialized later (vhPlayAnimate, in the footer), not initial layout. -->
     <link
@@ -329,7 +336,6 @@
 
     <div class="body-wrapper">
       <div class="body-innerwrapper">
-        <div class="sticky-header-placeholder"></div>
         <header id="sp-header" class="full-header full-header-center">
           <!-- China-only promo bar is injected here client-side (CN visitors only)
                by /assets/js/china-bar.js — intentionally NOT in static HTML so it
