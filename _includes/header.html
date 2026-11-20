@@ -6,6 +6,8 @@
      setting, and every other page stays dark: see .docs/colour-themes.md. {%- endcomment -%}
 {%- assign vh_default_theme = 'dark' -%}
 {%- if page.url contains '/docs/' or page.url contains '/search/' -%}{%- assign vh_default_theme = 'system' -%}{%- endif -%}
+{%- assign vh_light_preload = nil -%}
+{%- if page.preload_image_light -%}{%- assign vh_light_preload = site.static_files | where: "path", page.preload_image_light | first -%}{%- endif -%}
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang }}" dir="{{ vh_dir }}" data-theme="dark" data-vh-default-theme="{{ vh_default_theme }}">
   <head>
@@ -40,6 +42,20 @@
             window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)) {
           r.setAttribute("data-theme", "light");
         }
+        {%- if vh_light_preload %}
+        // This page's largest paint is a banner each theme draws in its own picture, so its
+        // preload is added here, where the theme is known, right after the last stylesheet, where
+        // a static preload sits: added any earlier, it slowed the banner on slow 4G (2026-11-19).
+        var img = r.getAttribute("data-theme") === "light" ? {{ page.preload_image_light | jsonify }} : {{ page.preload_image | jsonify }};
+        new MutationObserver(function (ms, o) {
+          var css = document.querySelector('link[href="/assets/css/style.css"]');
+          if (!css) return;
+          o.disconnect();
+          var l = document.createElement("link");
+          l.rel = "preload"; l.as = "image"; l.href = img; l.fetchPriority = "high";
+          css.after(l);
+        }).observe(document.head, { childList: true });
+        {%- endif %}
       })();
     </script>
 
@@ -265,7 +281,10 @@
          behind <main> (#sp-main-body::before in _custom.scss), the same file in both themes.
          It comes after the stylesheets on purpose: above them, the home banner's 63KB took
          bandwidth from the CSS on a slow line and put the first paint back by a second. -->
-    {% if page.preload_image %}
+    {% if vh_light_preload %}{% comment %}A banner with a light picture too (preload_image_light, once
+      that file is in the site): the theme bootstrap adds the preload of the visitor's own theme
+      here, so a light visitor no longer fetches the dark picture as well.{% endcomment %}
+    {% elsif page.preload_image %}
     <link rel="preload" as="image" href="{{ page.preload_image }}" fetchpriority="high" />
     {% elsif page.extra_css contains "/assets/css/custom.css" %}
     <link rel="preload" as="image" href="/assets/images/general/light-bg-left.svg" fetchpriority="high" />

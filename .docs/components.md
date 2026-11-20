@@ -142,6 +142,19 @@ and put the first paint back by a second. Now the largest paint lands with the f
 whose hero changes updates `preload_image` with it: the home page's still named the phone picture
 three weeks after the banner replaced it.
 
+A hero with a picture per theme also names the light one, `preload_image_light` (the home page:
+`banner-guardian-light.webp`). Once that file is in the site, the page has no static preload:
+the theme bootstrap at the top of `header.html`, which knows the theme before the first paint,
+adds the preload for its own theme's picture right after `style.css` appears (a
+`MutationObserver`), so a light visitor no longer fetches the dark picture as well. The price is
+a dark visitor's: a static preload is found while the page still arrives, a script's only when
+the parser reaches `style.css`, about 30ms later. Measured on 2026-11-19 against the live home
+page, slow 4G and a 4× slower CPU, medians of five and seven runs that each spread by about
+0.3s: the banner painted at 3.17s and 3.06s with the static preload, 3.20s and 3.19s added this
+way, 3.28s when the bootstrap added it at once and 3.39s at once with a low priority. Until the
+light file is in the site the page keeps the static preload, so commit the picture together
+with its `_light.scss` rule.
+
 ## Skip link — `header.html`
 
 The first thing in `<body>`: "Skip to content" (`chrome.json` `skip_to_content`), off screen until
