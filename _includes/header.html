@@ -289,8 +289,10 @@
     {% elsif page.extra_css contains "/assets/css/custom.css" %}
     <link rel="preload" as="image" href="/assets/images/general/light-bg-left.svg" fetchpriority="high" />
     {% endif %}
-    <!-- AOS animation CSS is non-blocking: it only defines reveal states that are
-         initialized later (vhPlayAnimate, in the footer), not initial layout. -->
+    <!-- AOS animation CSS is non-blocking, so the start state of each kind of reveal the site
+         uses is inline below. Without it a reveal could paint in its final place, slide to its
+         start when aos.css arrived, then back when AOS played it: the home page's phones went
+         right, then left. -->
     <link
       href="/assets/css/aos.css"
       rel="stylesheet"
@@ -300,6 +302,19 @@
     <noscript>
       <link href="/assets/css/aos.css" rel="stylesheet" />
     </noscript>
+    {% comment %}aos.css (AOS 2.3.1) has the same values, and its .aos-animate rules outrank
+      these. A new data-aos kind adds its line. Reduced motion turns AOS off and removes the
+      attributes, so the media query only keeps those visitors from a hidden first paint.{% endcomment %}
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        [data-aos^="fade"], [data-aos^="zoom"] { opacity: 0; }
+        [data-aos="fade-up"] { transform: translate3d(0, 100px, 0); }
+        [data-aos="fade-right"] { transform: translate3d(-100px, 0, 0); }
+        [data-aos="fade-left"] { transform: translate3d(100px, 0, 0); }
+        [data-aos="zoom-in"] { transform: scale(0.6); }
+        [data-aos="flip-left"] { transform: perspective(2500px) rotateY(-100deg); }
+      }
+    </style>
     <style>
       body {
         font-family: "Poppins", sans-serif;

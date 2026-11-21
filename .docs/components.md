@@ -155,6 +155,19 @@ way, 3.28s when the bootstrap added it at once and 3.39s at once with a low prio
 light file is in the site the page keeps the static preload, so commit the picture together
 with its `_light.scss` rule.
 
+### Reveals start hidden from the first paint
+
+`aos.css` loads without blocking the first paint (`header.html`), so on a fast line the page
+could paint before it arrived. A reveal then showed in its final place, slid to its start as
+`aos.css` came in, and slid back when AOS played it: the home page's phones went right, then
+left, and the hero's text and glows faded out and in (owner, 2026-11-20). `header.html` now has
+the start state of each kind of reveal the site uses inline (`fade`, `fade-up`, `fade-left`,
+`fade-right`, `zoom-in`, `flip-left`), with `aos.css`'s values, so the first paint already has
+it. A new `data-aos` kind adds its line there. The rules sit under
+`prefers-reduced-motion: no-preference`, as AOS is off for the rest. An ID rule that sets
+`opacity` or `transform` still wins over both, as `#bannerBgWrapper`'s `opacity: 1` keeps the
+guardian, the home page's largest paint, visible from the first paint.
+
 ## Skip link — `header.html`
 
 The first thing in `<body>`: "Skip to content" (`chrome.json` `skip_to_content`), off screen until
