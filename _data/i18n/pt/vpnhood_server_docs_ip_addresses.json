@@ -31,7 +31,7 @@
   "token_title": "URLs de token do servidor",
   "token_desc": "O token do servidor é a parte de uma chave de acesso que indica às apps como chegar ao seu servidor. Com um URL de token do servidor, uma app que não se consegue ligar lê o token atual num ficheiro na web e tenta de novo.",
   "token_manager": "No VpnHood! MANAGER, a mesma coisa chama-se <a href=\"/vpnhood-manager/docs/farm-token/\">token do farm</a>, porque aí abrange todos os servidores de um farm. Essa página mostra o que contém e <a href=\"/vpnhood-manager/docs/farm-token/#new-token\">como as apps obtêm um novo</a>. Num servidor independente, só a configuração difere.",
-  "token_add": "Escolha um URL num site ou numa CDN a que os seus utilizadores consigam aceder. Indique-o em <code>[setting_server_token_urls]</code> no <code>[server_appsettings]</code> e depois reinicie o servidor.",
+  "token_add": "Escolha um URL https:// num site ou numa CDN a que os seus utilizadores consigam aceder, pois as apps não leem o token do servidor por http sem encriptação. Indique-o em <code>[setting_server_token_urls]</code> no <code>[server_appsettings]</code> e depois reinicie o servidor.",
   "caption_token": "Um URL, ao lado das suas outras definições em <code>[setting_file_access_manager]</code>",
   "token_copy": "Depois de reiniciar, copie <code>[server_token_file]</code> para esse URL, e volte a fazê-lo após cada alteração aos endereços ou ao certificado do servidor, pois nada o carrega por si. O ficheiro é encriptado para que só as chaves do seu servidor o possam ler.",
   "token_check": "Para verificar, crie uma chave com <code>[vhserver_gen]</code>: os URLs que contém aparecem por baixo de <code>[tokenupdateurls_label]</code>.",

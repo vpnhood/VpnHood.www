@@ -31,7 +31,7 @@
   "token_title": "服务器 Token URL",
   "token_desc": "服务器 Token 是访问密钥的一部分，用于告诉应用如何连接到您的服务器。有了服务器 Token URL，无法连接的应用会从网络上的一个文件读取当前 Token 并重试。",
   "token_manager": "VpnHood! MANAGER 将同样的东西称为<a href=\"/vpnhood-manager/docs/farm-token/\">集群 Token</a>，因为它在那里涵盖集群中的每台服务器。该页面介绍了它包含的内容以及<a href=\"/vpnhood-manager/docs/farm-token/#new-token\">应用如何获取新 Token</a>。在独立服务器上，只有设置方式不同。",
-  "token_add": "在您的用户能够访问的网站或 CDN 上选择一个 URL。将其添加到 <code>[server_appsettings]</code> 的 <code>[setting_server_token_urls]</code> 中，然后重启服务器。",
+  "token_add": "在您的用户能够访问的网站或 CDN 上选择一个 https:// URL，因为应用不会通过明文 http 读取服务器 Token。将其添加到 <code>[server_appsettings]</code> 的 <code>[setting_server_token_urls]</code> 中，然后重启服务器。",
   "caption_token": "一个 URL，与 <code>[setting_file_access_manager]</code> 下的其他设置放在一起",
   "token_copy": "重启后，将 <code>[server_token_file]</code> 复制到该 URL；每次更改服务器的地址或证书后都要重复此操作，因为不会有任何程序替您上传。该文件已加密，只有您服务器的密钥才能读取。",
   "token_check": "如需验证，请使用 <code>[vhserver_gen]</code> 创建密钥：它包含的 URL 会显示在 <code>[tokenupdateurls_label]</code> 下方。",

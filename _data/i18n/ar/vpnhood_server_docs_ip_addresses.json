@@ -31,7 +31,7 @@
   "token_title": "روابط رمز الخادم",
   "token_desc": "رمز الخادم هو الجزء من مفتاح الوصول الذي يخبر التطبيقات بكيفية الوصول إلى خادمك. وبفضل رابط رمز الخادم، يقرأ التطبيق الذي لا يستطيع الاتصال الرمز الحالي من ملف على الويب ويعيد المحاولة.",
   "token_manager": "يسمّي VpnHood! MANAGER الشيء نفسه <a href=\"/vpnhood-manager/docs/farm-token/\">رمز المزرعة</a>، لأنه هناك يشمل كل خوادم المزرعة. توضح تلك الصفحة ما يحتويه و<a href=\"/vpnhood-manager/docs/farm-token/#new-token\">كيف تحصل التطبيقات على رمز جديد</a>. أما على الخادم المستقل، فلا يختلف سوى الإعداد.",
-  "token_add": "اختر رابطًا على موقع أو شبكة CDN يمكن لمستخدميك الوصول إليها. أضفه إلى <code>[setting_server_token_urls]</code> في <code>[server_appsettings]</code>، ثم أعد تشغيل الخادم.",
+  "token_add": "اختر رابط https:// على موقع أو شبكة CDN يمكن لمستخدميك الوصول إليها، إذ لا تقرأ التطبيقات رمز الخادم عبر http العادي. أضفه إلى <code>[setting_server_token_urls]</code> في <code>[server_appsettings]</code>، ثم أعد تشغيل الخادم.",
   "caption_token": "رابط واحد، إلى جانب إعداداتك الأخرى ضمن <code>[setting_file_access_manager]</code>",
   "token_copy": "بعد إعادة التشغيل، انسخ <code>[server_token_file]</code> إلى ذلك الرابط، وكرر ذلك بعد كل تغيير في عناوين الخادم أو شهادته، إذ لا يوجد ما يرفعه نيابةً عنك. الملف مشفّر بحيث لا تقرؤه إلا مفاتيح خادمك.",
   "token_check": "للتحقق، أنشئ مفتاحًا عبر <code>[vhserver_gen]</code>: تظهر الروابط التي يحملها تحت <code>[tokenupdateurls_label]</code>.",
