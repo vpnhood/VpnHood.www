@@ -28,6 +28,7 @@
   "manager_desc": "Her iki yükleyici de <code>[flag_http_base_url]</code>, <code>[flag_http_authorization]</code> ve <code>[flag_management_secret]</code> parametrelerini kabul eder. Bu parametreler, sunucunun <code>[server_appsettings]</code> dosyasını VpnHood! MANAGER'a bağlayacak şekilde yapılandırarak sunucuyu yönetilen bir sunucu haline getirir. Bunları manuel olarak yazmanıza gerek yoktur: <a href=\"/vpnhood-manager/docs/add-server/\">Sunucu ekleyin</a> bölümünde gösterildiği gibi, MANAGER'ın sunduğu yükleme komutunda bu değerler otomatik olarak yer alır.",
   "uninstaller_title": "Kaldırma aracı",
   "uninstaller_desc": "Docker olmadan kurulan bir sunucunun kaldırma aracı, sunucu ayarlarını, erişim anahtarlarını ve sertifikalarını da tamamen silen tek bir <code>[flag_purge]</code> seçeneği alır. Ayrıntılar için bkz. <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">Kaldırma</a>.",
+  "uninstaller_old": "v9.0.856 sürümünden önce kurulan ve o zamandan beri kendini güncellememiş bir sunucunun kaldırma aracı yoktur ve Windows'ta Yüklü uygulamalar listesinde görünmez. Güncellemek için kurulum komutunu yeniden çalıştırın, ardından sunucuyu kaldırın.",
   "next_title": "Sonraki adımlar",
   "next_keys": "Cihazlarınızın bağlanması için gereken erişim anahtarlarını <a href=\"/vpnhood-server/docs/install/linux/#access-key\">Linux üzerinde</a> veya <a href=\"/vpnhood-server/docs/install/docker/#access-key\">Docker'da</a> oluşturun",
   "next_addresses": "Sunucunun dinleyeceği ve anahtarlarına ekleyeceği IP adreslerini belirleyin",

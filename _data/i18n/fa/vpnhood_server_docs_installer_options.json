@@ -28,6 +28,7 @@
   "manager_desc": "هر دو نصاب از <code>[flag_http_base_url]</code>، <code>[flag_http_authorization]</code> و <code>[flag_management_secret]</code> نیز پشتیبانی می‌کنند. این گزینه‌ها فایل <code>[server_appsettings]</code> سرور را طوری تنظیم می‌کنند که به VpnHood! MANAGER متصل شده و به یک سرور مدیریت‌شده تبدیل شود. نیازی به تایپ آن‌ها نیست: دستور نصبی که MANAGER برای سرور نمایش می‌دهد این مقادیر را در خود دارد، همان‌طور که در <a href=\"/vpnhood-manager/docs/add-server/\">افزودن سرور</a> توضیح داده شده است.",
   "uninstaller_title": "حذف‌کننده (Uninstaller)",
   "uninstaller_desc": "حذف‌کننده سروری که بدون داکر نصب شده باشد، از گزینه <code>[flag_purge]</code> پشتیبانی می‌کند که تنظیمات، کلیدهای دسترسی و گواهی‌های سرور را نیز حذف می‌کند. به بخش <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">حذف سرور</a> مراجعه کنید.",
+  "uninstaller_old": "سروری که پیش از نسخه v9.0.856 نصب شده و از آن زمان خودش را به‌روز نکرده است، حذف‌کننده ندارد و در ویندوز هم در Installed apps دیده نمی‌شود. دستور نصب آن را دوباره اجرا کنید تا به‌روز شود، سپس آن را حذف کنید.",
   "next_title": "مراحل بعدی",
   "next_keys": "کلیدهای دسترسی مورد نیاز برای اتصال دستگاه‌ها را ایجاد کنید؛ <a href=\"/vpnhood-server/docs/install/linux/#access-key\">در لینوکس</a> یا <a href=\"/vpnhood-server/docs/install/docker/#access-key\">در داکر</a>",
   "next_addresses": "آدرس‌های IP که سرور روی آن‌ها گوش می‌دهد و در کلیدها قرار می‌گیرند را تنظیم کنید",

@@ -28,6 +28,7 @@
   "manager_desc": "يقبل كلا برنامجي التثبيت أيضاً <code>[flag_http_base_url]</code> و <code>[flag_http_authorization]</code> و <code>[flag_management_secret]</code>. حيث تستبدل ملف <code>[server_appsettings]</code> الخاص بالخادم بملف آخر يربطه بـ VpnHood! MANAGER، مما يجعله خادماً مُداراً. لست بحاجة لكتابتها: فأمر التثبيت الذي يعرضه MANAGER لأي خادم يتضمنها معبأة مسبقاً، كما هو موضح في <a href=\"/vpnhood-manager/docs/add-server/\">إضافة خادم</a>.",
   "uninstaller_title": "أداة إلغاء التثبيت",
   "uninstaller_desc": "تقبل أداة إلغاء تثبيت الخادم المثبّت بدون Docker خياراً واحداً هو <code>[flag_purge]</code>، والذي يحذف أيضاً إعدادات الخادم ومفاتيح الوصول والشهادات. راجع <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">إلغاء التثبيت</a>.",
+  "uninstaller_old": "الخادم المثبّت قبل الإصدار v9.0.856 والذي لم يحدّث نفسه منذ ذلك الحين لا يحتوي على أداة إلغاء تثبيت، ولا يظهر في التطبيقات المثبتة على Windows. شغّل أمر التثبيت الخاص به مرة أخرى لتحديثه، ثم ألغِ تثبيته.",
   "next_title": "الخطوات التالية",
   "next_keys": "أنشئ مفاتيح الوصول التي تتصل بها أجهزتك، <a href=\"/vpnhood-server/docs/install/linux/#access-key\">على Linux</a> أو <a href=\"/vpnhood-server/docs/install/docker/#access-key\">في Docker</a>",
   "next_addresses": "عيّن عناوين IP التي يستمع إليها الخادم ويضمّنها في مفاتيحه",

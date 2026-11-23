@@ -28,6 +28,7 @@
   "manager_desc": "दोनों इंस्टॉलर्स <code>[flag_http_base_url]</code>, <code>[flag_http_authorization]</code> और <code>[flag_management_secret]</code> भी स्वीकार करते हैं। वे सर्वर की <code>[server_appsettings]</code> को बदलकर इसे VpnHood! MANAGER से कनेक्ट करते हैं, जिससे यह एक मैनेज्ड सर्वर बन जाता है। आपको इन्हें टाइप करने की ज़रूरत नहीं है: MANAGER सर्वर के लिए जो इंस्टॉल कमांड दिखाता है, उसमें ये पहले से भरे होते हैं, जैसा कि <a href=\"/vpnhood-manager/docs/add-server/\">सर्वर जोड़ें</a> में दिखाया गया है।",
   "uninstaller_title": "अनइंस्टॉलर",
   "uninstaller_desc": "बिना Docker के इंस्टॉल किए गए सर्वर का अनइंस्टॉलर एक ही विकल्प लेता है, <code>[flag_purge]</code>, जो सर्वर की सेटिंग्स, एक्सेस कीज़ और सर्टिफ़िकेट भी हटा देता है। देखें <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">अनइंस्टॉल करें</a>।",
+  "uninstaller_old": "v9.0.856 से पहले इंस्टॉल किया गया सर्वर, जिसने तब से ख़ुद को अपडेट नहीं किया है, उसमें अनइंस्टॉलर नहीं होता, और Windows पर वह Installed apps में नहीं दिखता। उसे अपडेट करने के लिए उसका इंस्टॉल कमांड फिर से चलाएं, फिर उसे अनइंस्टॉल करें।",
   "next_title": "आगे के कदम",
   "next_keys": "अपने डिवाइसेस को कनेक्ट करने के लिए एक्सेस कीज़ बनाएं, <a href=\"/vpnhood-server/docs/install/linux/#access-key\">Linux पर</a> या <a href=\"/vpnhood-server/docs/install/docker/#access-key\">Docker में</a>",
   "next_addresses": "वे IP एड्रेस सेट करें जिन पर सर्वर सुनता है और उन्हें अपनी कीज़ में जोड़ता है",

@@ -28,6 +28,7 @@
   "manager_desc": "Les deux programmes d'installation acceptent également <code>[flag_http_base_url]</code>, <code>[flag_http_authorization]</code> et <code>[flag_management_secret]</code>. Ils remplacent le fichier <code>[server_appsettings]</code> du serveur pour le connecter à VpnHood! MANAGER, le transformant en serveur géré. Vous n'avez pas besoin de les saisir : ils sont déjà inclus dans la commande fournie par MANAGER, comme expliqué dans <a href=\"/vpnhood-manager/docs/add-server/\">Ajouter un serveur</a>.",
   "uninstaller_title": "Désinstallation",
   "uninstaller_desc": "Le programme de désinstallation d'un serveur installé sans Docker accepte l'option <code>[flag_purge]</code>, qui supprime aussi la configuration, les clés d'accès et les certificats du serveur. Voir <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">Désinstaller</a>.",
+  "uninstaller_old": "Un serveur installé avant la v9.0.856 qui ne s'est pas mis à jour depuis n'a pas de programme de désinstallation et, sous Windows, il n'apparaît pas dans Applications installées. Relancez sa commande d'installation pour le mettre à jour, puis désinstallez-le.",
   "next_title": "Étapes suivantes",
   "next_keys": "Créez les clés d'accès pour connecter vos appareils, <a href=\"/vpnhood-server/docs/install/linux/#access-key\">sur Linux</a> ou <a href=\"/vpnhood-server/docs/install/docker/#access-key\">avec Docker</a>",
   "next_addresses": "Définissez les adresses IP d'écoute du serveur incluses dans ses clés",

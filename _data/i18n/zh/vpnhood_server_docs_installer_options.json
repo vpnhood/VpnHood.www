@@ -28,6 +28,7 @@
   "manager_desc": "两种安装方式均支持 <code>[flag_http_base_url]</code>、<code>[flag_http_authorization]</code> 和 <code>[flag_management_secret]</code>。这些参数会替换服务器的 <code>[server_appsettings]</code>，将其连接至 VpnHood! MANAGER，使其成为受管服务器。您无需手动输入：正如<a href=\"/vpnhood-manager/docs/add-server/\">添加服务器</a>中所示，MANAGER 生成的安装命令已自动填入这些参数。",
   "uninstaller_title": "卸载程序",
   "uninstaller_desc": "非 Docker 方式安装的服务器卸载程序支持 <code>[flag_purge]</code> 选项，可同时彻底清除服务器的配置、访问密钥和证书。详情请参见<a href=\"/vpnhood-server/docs/install/linux/#uninstall\">卸载</a>。",
+  "uninstaller_old": "在 v9.0.856 之前安装、此后一直未自动更新的服务器没有卸载程序，在 Windows 上也不会出现在“已安装的应用”中。请再次运行其安装命令将其更新，然后再卸载。",
   "next_title": "后续步骤",
   "next_keys": "创建供设备连接的访问密钥，支持 <a href=\"/vpnhood-server/docs/install/linux/#access-key\">Linux</a> 或 <a href=\"/vpnhood-server/docs/install/docker/#access-key\">Docker</a> 环境",
   "next_addresses": "设置服务器监听并在密钥中包含的 IP 地址",
