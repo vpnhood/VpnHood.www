@@ -11,5 +11,7 @@
   "split_title": "O que é túnel dividido e quando você deve usá-lo?",
   "split_desc": "Como funciona, quando vale a pena usar, o impacto na conexão e a melhor opção para o seu caso.",
   "webrtc_title": "Por que os sites conseguem ver meu endereço IP pelo WebRTC?",
-  "webrtc_desc": "Um teste de WebRTC pode mostrar o endereço do seu próprio dispositivo enquanto você usa uma VPN. Entenda por que isso raramente é um vazamento e como evitar no navegador."
+  "webrtc_desc": "Um teste de WebRTC pode mostrar o endereço do seu próprio dispositivo enquanto você usa uma VPN. Entenda por que isso raramente é um vazamento e como evitar no navegador.",
+  "google_title": "Como o Google sabe minha localização quando uso uma VPN?",
+  "google_desc": "De onde o Google obtém sua localização além do seu endereço IP, por que um servidor compartilhado pode apontar para o seu país e o que você pode fazer."
 }

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780" width="900" height="780" role="img" aria-labelledby="vhGoogleDriftTitle">
+<title id="vhGoogleDriftTitle">Google watching as it moves a VPN server's address on the map, from the server's country to the country most of its users share their location from</title>
+<defs>
+  <linearGradient id="dTunnel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5" stop-opacity=".15"/>
+    <stop offset=".45" stop-color="#8257f5" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".45"/></linearGradient>
+  <linearGradient id="dDevice" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset="1" stop-color="#2b1470"/></linearGradient>
+  <linearGradient id="dLand" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".95"/><stop offset="1" stop-color="#150a3a" stop-opacity=".95"/></linearGradient>
+  <radialGradient id="dAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="dGlow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".9"/>
+    <stop offset=".5" stop-color="#3ce8c8" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="dSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<ellipse cx="450" cy="400" rx="430" ry="370" fill="url(#dAmbient)"/>
+<path d="M60 380 C 60 270 150 230 240 250 C 330 270 380 330 370 420 C 360 520 270 560 180 540 C 90 520 60 470 60 380 Z" fill="url(#dLand)" stroke="#c0a4ff" stroke-opacity=".4" stroke-width="3"/>
+<path d="M500 330 C 540 230 690 210 790 260 C 870 300 870 420 820 490 C 760 570 610 580 540 520 C 480 470 470 400 500 330 Z" fill="url(#dLand)" stroke="#c0a4ff" stroke-opacity=".4" stroke-width="3"/>
+<circle cx="590" cy="330" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="590" cy="330" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="680" cy="300" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="680" cy="300" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="760" cy="360" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="760" cy="360" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="630" cy="430" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="630" cy="430" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="720" cy="450" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="720" cy="450" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="790" cy="440" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="790" cy="440" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="560" cy="400" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="560" cy="400" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<circle cx="690" cy="380" r="16" fill="#c0a4ff" opacity=".85"/>
+<circle cx="690" cy="380" r="30" fill="none" stroke="#8ef7e2" stroke-width="4" opacity=".5"/>
+<rect x="120" y="600" width="230" height="74" rx="22" fill="url(#dDevice)" stroke="#c0a4ff" stroke-opacity=".35" stroke-width="3"/>
+<circle cx="152" cy="637" r="9" fill="#8ef7e2"/><circle cx="184" cy="637" r="9" fill="#c0a4ff" opacity=".45"/>
+<g fill="#c0a4ff" opacity=".4"><rect x="250" y="622" width="70" height="8" rx="4"/><rect x="250" y="634" width="70" height="8" rx="4"/><rect x="250" y="646" width="70" height="8" rx="4"/></g>
+<path d="M235 600 V 560" stroke="#c0a4ff" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+<g transform="translate(215 300) scale(0.62)">
+<path d="M0 -96 C 53 -96 86 -60 86 -14 C 86 38 30 86 0 122 C -30 86 -86 38 -86 -14 C -86 -60 -53 -96 0 -96 Z" fill="#150a3a" fill-opacity=".7" stroke="#c0a4ff" stroke-opacity=".55" stroke-width="6" stroke-dasharray="16 12"/>
+<circle cx="0" cy="-14" r="28" fill="#c0a4ff" opacity=".4"/>
+</g>
+<path d="M270 250 C 380 175 540 170 640 200" stroke="#8ef7e2" stroke-width="8" stroke-dasharray="3 20" stroke-linecap="round" fill="none" opacity=".9"/>
+<path d="M621 176 L 644 201 L 611 209" fill="none" stroke="#8ef7e2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+<g transform="translate(690 245) scale(0.62)">
+<circle cx="0" cy="-10" r="120" fill="url(#dGlow)" filter="url(#dSoft)" opacity=".55"/>
+<path d="M0 -96 C 53 -96 86 -60 86 -14 C 86 38 30 86 0 122 C -30 86 -86 38 -86 -14 C -86 -60 -53 -96 0 -96 Z" fill="url(#dDevice)" stroke="#8ef7e2" stroke-width="7"/>
+<circle cx="0" cy="-14" r="32" fill="#8ef7e2"/>
+</g>
+<ellipse cx="450" cy="92" rx="146" ry="81" fill="#c0a4ff" filter="url(#dSoft)" opacity=".35"/>
+<path d="M320.0 92 Q 450 -38 580.0 92 Q 450 222 320.0 92 Z" fill="#f4f0ff" stroke="#8257f5" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="450" cy="92" r="53" fill="#150a3a"/>
+<path d="M473.0 72.7 A 30 30 0 0 0 424.0 77.0" fill="none" stroke="#ea4335" stroke-width="13"/>
+<path d="M424.0 77.0 A 30 30 0 0 0 425.4 109.2" fill="none" stroke="#fbbc05" stroke-width="13"/>
+<path d="M425.4 109.2 A 30 30 0 0 0 473.0 111.3" fill="none" stroke="#34a853" stroke-width="13"/>
+<path d="M473.0 111.3 A 30 30 0 0 0 480.0 92.0" fill="none" stroke="#4285f4" stroke-width="13"/>
+<path d="M450.6 92 H 486.5" stroke="#4285f4" stroke-width="12.0"/>
+<circle cx="422" cy="64" r="6" fill="#ffffff" opacity=".9"/>
+<path d="M362 53 L 344 38" stroke="#c0a4ff" stroke-width="5" stroke-linecap="round"/>
+<path d="M406 31 L 397 10" stroke="#c0a4ff" stroke-width="5" stroke-linecap="round"/>
+<path d="M450 23 L 450 1" stroke="#c0a4ff" stroke-width="5" stroke-linecap="round"/>
+<path d="M494 31 L 503 10" stroke="#c0a4ff" stroke-width="5" stroke-linecap="round"/>
+<path d="M538 53 L 556 38" stroke="#c0a4ff" stroke-width="5" stroke-linecap="round"/>
+</svg>

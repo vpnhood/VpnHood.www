@@ -11,5 +11,7 @@
   "split_title": "Was ist Split-Tunneling und wann sollte man es nutzen?",
   "split_desc": "Funktionsweise, Vorteile, Grenzen – und welche Einstellung am besten zu Ihrem Anwendungsfall passt.",
   "webrtc_title": "Warum können Websites meine IP-Adresse über WebRTC sehen?",
-  "webrtc_desc": "Ein WebRTC-Test kann trotz VPN die eigene Adresse Ihres Geräts anzeigen. Warum das selten ein Leck ist und wie Sie es im Browser verhindern."
+  "webrtc_desc": "Ein WebRTC-Test kann trotz VPN die eigene Adresse Ihres Geräts anzeigen. Warum das selten ein Leck ist und wie Sie es im Browser verhindern.",
+  "google_title": "Woher kennt Google meinen Standort, wenn ich ein VPN nutze?",
+  "google_desc": "Woher Google Ihren Standort außer aus Ihrer IP-Adresse kennt, warum ein gemeinsam genutzter Server in Ihrem eigenen Land erscheinen kann und was Sie tun können."
 }

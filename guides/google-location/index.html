@@ -1,0 +1,194 @@
+---
+layout: none
+i18n: guides_google_location
+extra_css:
+  - /assets/css/custom.css
+nav_active: resources
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Moved from the GitHub wiki's How-Google-detects-my-location-when-I-use-a-VPN (the www plan's wiki
+  move, item 6), rewritten for ordinary users from Google's own help, read on 2026-11-24
+  (support.google.com/websearch/answer/179386): its four sources and their labels at the bottom of a
+  results page (From your device, Based on your places, Based on your past activity, From your
+  internet address), the device location kept in a cookie for 6 hours, Search customization. How
+  Google moves a shared server's address is what VPN providers report (Proton VPN's
+  google-location-error, Surfshark's), said as theirs. Google's Report IP problems form
+  (websearch/workflow/9308722): wrong country, may take more than a month. The operator's fix links
+  to ip-blocking's separate outgoing IP rather than repeating it. What a user can do is split in two
+  (owner, 2026-11-24: hiding your own location "does not work when other users use same server"):
+  their own signals, and a server whose address has moved. Art: google-location.svg and
+  google-location-drift.svg, drawn as the other guides' pictures, with Google as a watching eye whose
+  iris is its G in its four colours (owner, 2026-11-24: "add a G for google or its logo, make google more
+  bold like google is watchig you", after I said Google's brand rules do not allow its logo in our art).
+{%- endcomment -%}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <p class="mb-0">
+                  <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/guides/">{{ t.all_guides }}</a>
+                </p>
+
+                <div class="row align-items-center gap-lg-0 gap-5 pt-lg-4 pb-5">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                    <p class="section-desc">{{ t.lead }}</p>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-relay">
+                      <img src="/assets/images/guides/google-location.svg" alt="{{ t.hero_alt }}" width="468" height="468" loading="eager" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.sources_title }}</h2>
+                    <p class="section-desc">{{ t.sources_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.src_device_title }}</h3>
+                        <p class="mb-0">{{ t.src_device_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.src_places_title }}</h3>
+                        <p class="mb-0">{{ t.src_places_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.src_activity_title }}</h3>
+                        <p class="mb-0">{{ t.src_activity_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.src_ip_title }}</h3>
+                        <p class="mb-0">{{ t.src_ip_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-0" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.check_title }}</h2>
+                    <p class="section-desc mb-0">{{ t.check_desc }}</p>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="row align-items-center gap-lg-0 gap-5">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                      <div class="vh-guide-art">
+                        <img src="/assets/images/guides/google-location-drift.svg" alt="{{ t.drift_alt }}" width="900" height="780" loading="lazy" />
+                      </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                      <h2 class="section-title vh-txt-grad-purple-400">{{ t.drift_title }}</h2>
+                      <p class="section-desc">{{ t.drift_desc }}</p>
+                      <ul class="list-unstyled vh-guide-points mb-0">
+                        <li>
+                          <div>
+                            <h3 class="h5 mb-2">{{ t.drift1_title }}</h3>
+                            <p class="mb-0">{{ t.drift1_desc }}</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="h5 mb-2">{{ t.drift2_title }}</h3>
+                            <p class="mb-0">{{ t.drift2_desc }}</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="h5 mb-2">{{ t.drift3_title }}</h3>
+                            <p class="mb-0">{{ t.drift3_desc }}</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-space" id="your-location">
+                  <div class="section-start-text" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.signals_title }}</h2>
+                    <p class="section-desc">{{ t.signals_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-4" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_device_title }}</h3>
+                        <p class="mb-0">{{ t.fix_device_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_cookie_title }}</h3>
+                        <p class="mb-0">{{ t.fix_cookie_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_account_title }}</h3>
+                        <p class="mb-0">{{ t.fix_account_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space" id="server-moved">
+                  <div class="section-start-text" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.moved_title }}</h2>
+                    <p class="section-desc">{{ t.moved_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.moved_other_title }}</h3>
+                        <p class="mb-0">{{ t.moved_other_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.moved_own_title }}</h3>
+                        <p class="mb-0">{{ t.moved_own_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space" id="own-server">
+                  <div class="section-start-text mb-0" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.own_title }}</h2>
+                    <p class="section-desc">{{ t.own_desc }}</p>
+                    <p class="section-desc mb-0">{{ t.own_fix }}</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

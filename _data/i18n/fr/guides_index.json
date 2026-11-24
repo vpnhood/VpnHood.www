@@ -11,5 +11,7 @@
   "split_title": "Qu'est-ce que le split tunneling et quand l'utiliser ?",
   "split_desc": "Son fonctionnement, ses atouts, ses compromis et la bonne configuration selon votre utilisation du VPN.",
   "webrtc_title": "Pourquoi les sites web peuvent-ils voir mon adresse IP via WebRTC ?",
-  "webrtc_desc": "Un test WebRTC peut afficher l'adresse propre à votre appareil alors que vous utilisez un VPN. Pourquoi il s'agit rarement d'une fuite, et comment l'empêcher dans votre navigateur."
+  "webrtc_desc": "Un test WebRTC peut afficher l'adresse propre à votre appareil alors que vous utilisez un VPN. Pourquoi il s'agit rarement d'une fuite, et comment l'empêcher dans votre navigateur.",
+  "google_title": "Comment Google connaît-il ma position quand j'utilise un VPN ?",
+  "google_desc": "D'où Google tire votre position en dehors de votre adresse Internet, pourquoi un serveur partagé peut apparaître dans votre propre pays et ce que vous pouvez faire."
 }
