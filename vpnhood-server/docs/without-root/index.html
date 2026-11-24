@@ -10,8 +10,8 @@ extra_css:
 {%- comment -%}
   VpnHood! SERVER for a user without root, first moved from the GitHub wiki's
   How-to-run-VpnHood-Server-on-Linux-without-ROOT-access page (the www plan's wiki move, item 3).
-  Since 2026-11-24 a release carries an installer for it, VpnHoodServer-linux-user.sh (the VpnHood
-  repo's src/apps/Server/pub/Linux-User/install.sh, apart from root's installer on the owner's
+  Since 2026-11-24 a release carries an installer for it, VpnHoodServer-linux-noroot.sh (the
+  VpnHood repo's src/apps/Server/pub/Linux-NoRoot/install.sh, apart from root's installer on the owner's
   word), so the page leads with its command, a quick start as install/linux/ is: its questions and
   options are on installer-options/#user. It installs into ~/VpnHoodServer and starts at boot and
   updates itself by the user's own systemd services (lingering, which polkit lets a user turn on),
@@ -48,7 +48,7 @@ extra_css:
 
 <h2 id="install">{{ t.install_title }}</h2>
 <p>{% include copy.html s=t.step_install %}</p>
-{% include terminal.html cmd="bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-user.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'" %}
+{% include terminal.html cmd="bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-noroot.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'" %}
 <p>{% include copy.html s=t.step_install_options %}</p>
 
 <h3 id="access-key">{{ t.key_title }}</h3>

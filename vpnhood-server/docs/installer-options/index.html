@@ -20,8 +20,8 @@ extra_css:
   no -minClientProtocolVersion: a Docker server sets it in its settings, as ip-blocking/
   shows. MANAGER's three are named, not explained: MANAGER's command fills them in, and its
   steps live in its docs.
-  The installer without root (VpnHoodServer-linux-user.sh, the VpnHood repo's
-  src/apps/Server/pub/Linux-User/install.sh, 2026-11-24) gets what differs from the Linux
+  The installer without root (VpnHoodServer-linux-noroot.sh, the VpnHood repo's
+  src/apps/Server/pub/Linux-NoRoot/install.sh, 2026-11-24) gets what differs from the Linux
   installer only: no -osupdate, and -port with its question on a new install. It asks the
   minimum client protocol on a new install only, and refuses -port and -minClientProtocolVersion
   where the settings are there already, hence user_keep.
@@ -61,7 +61,7 @@ extra_css:
   </tbody>
 </table>
 <p>{% include copy.html s=t.user_keep %}</p>
-{% include terminal.html caption=t.caption_user cmd="bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-user.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -q -port 9443'" %}
+{% include terminal.html caption=t.caption_user cmd="bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-noroot.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -q -port 9443'" %}
 
 <h2 id="docker">{{ t.docker_title }}</h2>
 <p>{% include copy.html s=t.docker_question %}</p>
