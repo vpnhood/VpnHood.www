@@ -3,7 +3,7 @@
 The full picture behind the "Legal pages" summary in [CLAUDE.md](../CLAUDE.md).
 
 Source of truth is **`docs/legal/end-user/` in the `vpnhood/VpnHood` repo**, branch `develop`:
-the CLIENT, CONNECT, MANAGER, VpnHood ID and STORE privacy policies and terms of use, plus the website's
+the CLIENT, CONNECT, MANAGER, VpnHood ID and SELLER privacy policies and terms of use, plus the website's
 privacy policy, one `.md` each, named `<scope>-<document>.md`. What reaches `develop` is published. That folder's README is
 written for forkers; how we publish is here:
 
@@ -30,10 +30,10 @@ Every document lives at `/legal/<scope>/<document>/`, and every `/legal/<scope>/
 | `/legal/website/privacy-policy/` | `website-privacy-policy.md` |
 
 `<product>` is `connect`, `client`, `manager`, `id` (the VpnHood ID, whose sign-in pages link
-its two documents: they are set as its pool's `PrivacyPolicyUri` and `TermsOfUseUri`) or `store`
-(VpnHood! STORE, whose sign-up page links its two documents and records which version of them a store's
-owner accepted: the store's settings name their addresses and that version, the later of the two
-`Effective:` dates). A new source file is pushed to the VpnHood repo
+its two documents: they are set as its pool's `PrivacyPolicyUri` and `TermsOfUseUri`) or `seller`
+(VpnHood! SELLER, whose sign-up page links its two documents and records which version of them a seller
+account's owner accepted: its settings name their addresses and that version, the later of the two
+`Effective:` dates). Until 2026-11-24 VpnHood! SELLER was VpnHood! STORE, at `store`, now retired (below). A new source file is pushed to the VpnHood repo
 before its `sync_repo` line lands here, or the fail-fast sync stops every build. These addresses are printed in installed apps,
 store listings, Google's OAuth consent screen and emails, so:
 
@@ -58,8 +58,14 @@ Retired so far (2026-10-19 move; before it the privacy pages sat at the root and
 `/terms-of-use/` was every product's terms page before the per-product split (and may still be
 linked from checkouts), so it goes to the index, not to one product's terms.
 
+Retired 2026-11-24, when VpnHood! STORE became VpnHood! SELLER (named RESELLER for a day before, never
+published): `/legal/vpnhood-store/` and its two documents go to `/legal/vpnhood-seller/` and the same document. Their source files went with them:
+`vpnhood-store-*.md` were deleted in the VpnHood repo, and the SELLER documents link their last
+version as the archive. Their Cloudflare Single Redirect is made once the SELLER pages are live, as
+before that it would send the old addresses to a 404; the plugin's stubs cover them meanwhile.
+
 The old Joomla site's `/products/vpnhood-store/privacy-policy/` goes to
-`/legal/vpnhood-store/privacy-policy/`: the unpublished STORE listing on the old Play account
+`/legal/vpnhood-seller/privacy-policy/`: the unpublished STORE listing on the old Play account
 still links it. That address has the plugin's stub only, no Cloudflare rule (the Free plan's last
 rules are kept for this site's own pages).
 

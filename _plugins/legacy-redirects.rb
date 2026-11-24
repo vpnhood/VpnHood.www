@@ -46,7 +46,11 @@ module VhLegacyRedirects
     "/legal/vpnhood-manager-terms-of-use/" => "/legal/vpnhood-manager/terms-of-use/",
     # The old Joomla site's STORE privacy policy, still linked from the unpublished STORE
     # listing on the old Play account.
-    "/products/vpnhood-store/privacy-policy/" => "/legal/vpnhood-store/privacy-policy/"
+    "/products/vpnhood-store/privacy-policy/" => "/legal/vpnhood-seller/privacy-policy/",
+    # VpnHood! STORE became VpnHood! SELLER on 2026-11-24; its sign-up page linked these.
+    "/legal/vpnhood-store/" => "/legal/vpnhood-seller/",
+    "/legal/vpnhood-store/privacy-policy/" => "/legal/vpnhood-seller/privacy-policy/",
+    "/legal/vpnhood-store/terms-of-use/" => "/legal/vpnhood-seller/terms-of-use/"
   }.freeze
 
   # Paths that only ever existed in English. Posts were never translated, so a
@@ -61,7 +65,9 @@ module VhLegacyRedirects
                   "/legal/vpnhood-connect-terms-of-use/", "/legal/vpnhood-client-terms-of-use/",
                   "/legal/vpnhood-manager-terms-of-use/",
                   "/home/", "/products/vpnhood-connect/",
-                  "/products/vpnhood-store/privacy-policy/"].freeze
+                  "/products/vpnhood-store/privacy-policy/", "/legal/vpnhood-store/",
+                  "/legal/vpnhood-store/privacy-policy/",
+                  "/legal/vpnhood-store/terms-of-use/"].freeze
 
   class Generator < Jekyll::Generator
     safe false

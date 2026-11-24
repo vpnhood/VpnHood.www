@@ -71,8 +71,8 @@ jobs:
           sync_repo vpnhood-manager-terms-of-use VpnHood-MANAGER-Terms-of-Use
           sync_repo vpnhood-id-privacy-policy VpnHood-ID-Privacy-Policy
           sync_repo vpnhood-id-terms-of-use VpnHood-ID-Terms-of-Use
-          sync_repo vpnhood-store-privacy-policy VpnHood-STORE-Privacy-Policy
-          sync_repo vpnhood-store-terms-of-use VpnHood-STORE-Terms-of-Use
+          sync_repo vpnhood-seller-privacy-policy VpnHood-SELLER-Privacy-Policy
+          sync_repo vpnhood-seller-terms-of-use VpnHood-SELLER-Terms-of-Use
           sync_repo website-privacy-policy VpnHood-WEBSITE-Privacy-Policy
 
       # Translate anything stale (source copy edited without running the translator
