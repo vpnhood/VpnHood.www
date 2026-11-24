@@ -115,6 +115,9 @@ json_empty_list: "[]"
 ip_any_v4: "0.0.0.0"
 ip_any_v6: "[::]"
 log_public_endpoints: "PublicEndPoints has not been configured properly."
+log_address_in_use: "Address already in use"
+ss_users: "users:"
+ss_users_example: 'users:(("nginx",pid=812,fd=6))'
 
 # VpnHood! SERVER in Docker (from v8.2: the image updates itself, no Watchtower)
 installer_linux: "VpnHoodServer-linux.sh"

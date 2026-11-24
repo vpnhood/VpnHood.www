@@ -78,6 +78,11 @@ sudo docker start VpnHoodServer' %}
 {% include terminal.html cmd='sudo docker run -d --name VpnHoodServer --network host --restart always --stop-timeout 30 -v /opt/VpnHoodServer/storage:/app/storage vpnhood/vpnhoodserver' %}
 <p>{% include copy.html s=t.manual_update %}</p>
 
+<h2 id="common-issues">{{ t.issues_title }}</h2>
+<ul>
+  <li>{% include copy.html s=t.issue_in_use %}</li>
+</ul>
+
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
   <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>

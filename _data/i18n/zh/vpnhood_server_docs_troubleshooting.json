@@ -1,0 +1,16 @@
+{
+  "meta_title": "故障排除：VpnHood! SERVER 端口已被占用 | VpnHood!",
+  "meta_description": "解决 VpnHood! SERVER 最常遇到的问题，例如其端口已被其他程序占用，适用于受管服务器和独立服务器。",
+  "title": "故障排除",
+  "lead": "VpnHood! SERVER 已在运行，却因某些原因无法正常工作时的处理方法，适用于受管服务器和独立服务器。",
+  "inuse_title": "地址已被占用",
+  "inuse_see": "服务器正在运行，但应用无法连接。其日志 <code>[server_log]</code> 中会针对其端口显示 <code>[log_address_in_use]</code>，而当它一个端口都无法打开时，还会显示 <code>[manager_err_no_tcp]</code>。受管服务器会在 VpnHood! MANAGER 中显示同样的错误：请参阅<a href=\"/vpnhood-manager/docs/troubleshooting/#error\">服务器显示错误</a>。",
+  "inuse_why": "机器上的其他程序已占用了服务器的端口（若未更改，即 <code>[server_port]</code>）。最常见的是 nginx 或 Apache 等 Web 服务器、其他 VPN 或代理，或者另一个 VpnHood! SERVER 实例。",
+  "inuse_find": "要找出该程序，请在服务器上运行以下命令；如果您的端口不是 <code>[server_port]</code>，请换成您的端口：",
+  "inuse_name": "在其输出中，程序名称位于 <code>[ss_users]</code> 之后：<code>[ss_users_example]</code> 即为 nginx。",
+  "inuse_fix": "然后执行以下任一操作：",
+  "fix_stop": "<b>停止该程序</b>（如果您不需要它）。对于 nginx 等服务，以下命令还会禁止其开机自启：",
+  "fix_port": "<b>将服务器改用其他端口</b>，方法参见<a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">设置服务器 IP 地址</a>；受管服务器请在 MANAGER 中修改，方法参见<a href=\"/vpnhood-manager/docs/access-points/#change\">更改地址</a>。已分发的密钥仍携带旧端口：请参阅<a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">已分发的密钥处理</a>。",
+  "fix_copy": "<b>如果该程序是 VpnHoodServer</b>，表示还有另一个服务器实例在运行，例如一个安装在 Linux 上，另一个运行在 Docker 中。请保留其中一个，卸载另一个：请参阅 <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">Linux</a> 或 <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">Docker</a> 安装指南中的“卸载”部分。",
+  "inuse_restart": "然后使用 <code>[server_restart_linux]</code> 重启服务器（Docker 环境下则使用 <code>[docker_restart]</code>），使其重新打开端口。"
+}

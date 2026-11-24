@@ -1,0 +1,16 @@
+{
+  "meta_title": "Устранение неполадок в VpnHood! SERVER: порт уже занят | VpnHood!",
+  "meta_description": "Устраните самые частые проблемы VpnHood! SERVER на управляемом или автономном сервере, например когда его порт уже занят другой программой.",
+  "title": "Устранение неполадок",
+  "lead": "Что делать, если VpnHood! SERVER на управляемом или автономном сервере запущен, но что-то мешает ему работать.",
+  "inuse_title": "Адрес уже используется",
+  "inuse_see": "Сервер запущен, но приложения не могут подключиться. В журнале сервера <code>[server_log]</code> для его порта появляется сообщение <code>[log_address_in_use]</code>, а если сервер не смог открыть ни одного из своих портов, — <code>[manager_err_no_tcp]</code>. Управляемый сервер показывает ту же ошибку в VpnHood! MANAGER: см. <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">Сервер показывает ошибку</a>.",
+  "inuse_why": "Порт сервера уже занят другой программой на этой машине; если вы его не меняли, это порт <code>[server_port]</code>. Чаще всего это веб-сервер, например nginx или Apache, другой VPN или прокси либо вторая копия VpnHood! SERVER.",
+  "inuse_find": "Чтобы найти эту программу, выполните на сервере команду ниже, указав в ней свой порт, если это не <code>[server_port]</code>:",
+  "inuse_name": "В выводе команды имя программы стоит после <code>[ss_users]</code>: <code>[ss_users_example]</code> — это nginx.",
+  "inuse_fix": "Затем выполните одно из действий:",
+  "fix_stop": "<b>Остановите другую программу</b>, если она вам не нужна. Если это служба, например nginx, эта команда также отключит ее запуск при загрузке системы:",
+  "fix_port": "<b>Переведите сервер на другой порт</b>, как описано на странице <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">Настройка IP-адресов сервера</a>, а управляемый сервер — в MANAGER, как описано в разделе <a href=\"/vpnhood-manager/docs/access-points/#change\">Изменение адреса</a>. В ключах, которые вы уже раздали, остался старый порт: см. <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">Ранее созданные ключи</a>.",
+  "fix_copy": "<b>Если это программа VpnHoodServer</b>, значит, запущена еще одна копия сервера: например, одна установлена прямо в Linux, а другая — в Docker. Оставьте одну, а другую удалите: см. раздел «Удаление» <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">для Linux</a> или <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">для Docker</a>.",
+  "inuse_restart": "Затем перезапустите сервер командой <code>[server_restart_linux]</code> или <code>[docker_restart]</code> в Docker, чтобы он снова открыл свой порт."
+}

@@ -1,0 +1,16 @@
+{
+  "meta_title": "Troubleshooting VpnHood! SERVER: Port Already in Use | VpnHood!",
+  "meta_description": "Fix the problems VpnHood! SERVER most often runs into, such as another program already using its port, on a managed or a standalone server.",
+  "title": "Troubleshooting",
+  "lead": "What to do when VpnHood! SERVER runs but something keeps it from working, on a managed or a standalone server.",
+  "inuse_title": "Address already in use",
+  "inuse_see": "The server runs, but apps cannot connect. Its log, <code>[server_log]</code>, shows <code>[log_address_in_use]</code> for its port, and <code>[manager_err_no_tcp]</code> when it could open none of its ports. A managed server shows the same error in VpnHood! MANAGER: see <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">A server shows an error</a>.",
+  "inuse_why": "Another program on the machine already uses the server's port, <code>[server_port]</code> unless you changed it. Most often it is a web server such as nginx or Apache, another VPN or proxy, or a second copy of VpnHood! SERVER.",
+  "inuse_find": "To find it, run this on the server, with your port if it is not <code>[server_port]</code>:",
+  "inuse_name": "In what it prints, the program's name follows <code>[ss_users]</code>: <code>[ss_users_example]</code> is nginx.",
+  "inuse_fix": "Then do one of these:",
+  "fix_stop": "<b>Stop the other program</b> if you don't need it. For a service such as nginx, this also keeps it from starting at boot:",
+  "fix_port": "<b>Move the server to another port</b>, as in <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">Set your server's IP addresses</a>, or for a managed server in MANAGER, as in <a href=\"/vpnhood-manager/docs/access-points/#change\">Change an address</a>. Keys you have already given out carry the old port: see <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">Keys you have already given out</a>.",
+  "fix_copy": "<b>If the program is VpnHoodServer</b>, another copy of the server runs, such as one installed on Linux and one in Docker. Keep one, and uninstall the other: see Uninstall <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">on Linux</a> or <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">in Docker</a>.",
+  "inuse_restart": "Then restart the server with <code>[server_restart_linux]</code>, or with <code>[docker_restart]</code> in Docker, so it opens its port again."
+}

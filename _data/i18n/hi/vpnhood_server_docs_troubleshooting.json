@@ -1,0 +1,16 @@
+{
+  "meta_title": "समस्या निवारण: VpnHood! SERVER का पोर्ट पहले से इस्तेमाल में | VpnHood!",
+  "meta_description": "VpnHood! SERVER में सबसे ज़्यादा आने वाली समस्याएं ठीक करें, जैसे कि कोई दूसरा प्रोग्राम पहले से उसके पोर्ट का इस्तेमाल कर रहा हो, चाहे सर्वर मैनेज्ड हो या स्टैंडअलोन।",
+  "title": "समस्या निवारण",
+  "lead": "जब VpnHood! SERVER चल रहा हो, लेकिन कोई चीज़ उसे काम नहीं करने दे रही हो, तो मैनेज्ड या स्टैंडअलोन सर्वर पर क्या करें।",
+  "inuse_title": "पता पहले से इस्तेमाल में है",
+  "inuse_see": "सर्वर चल रहा है, लेकिन ऐप्स कनेक्ट नहीं हो पाते। इसके लॉग <code>[server_log]</code> में इसके पोर्ट के लिए <code>[log_address_in_use]</code> दिखता है, और जब यह अपना एक भी पोर्ट नहीं खोल पाता, तो <code>[manager_err_no_tcp]</code> भी दिखता है। मैनेज्ड सर्वर VpnHood! MANAGER में भी यही एरर दिखाता है: <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">सर्वर एरर दिखाता है</a> देखें।",
+  "inuse_why": "मशीन पर कोई दूसरा प्रोग्राम पहले से सर्वर के पोर्ट का इस्तेमाल कर रहा है, जो <code>[server_port]</code> है, अगर आपने उसे बदला नहीं है। ज़्यादातर यह इनमें से कोई होता है: nginx या Apache जैसा कोई वेब सर्वर, कोई दूसरा VPN या प्रॉक्सी, या VpnHood! SERVER की दूसरी कॉपी।",
+  "inuse_find": "उसे ढूंढने के लिए, सर्वर पर यह कमांड चलाएं; अगर आपका पोर्ट <code>[server_port]</code> नहीं है, तो उसकी जगह अपना पोर्ट डालें:",
+  "inuse_name": "यह जो प्रिंट करता है, उसमें प्रोग्राम का नाम <code>[ss_users]</code> के बाद आता है: <code>[ss_users_example]</code> का मतलब nginx है।",
+  "inuse_fix": "फिर इनमें से कोई एक काम करें:",
+  "fix_stop": "<b>दूसरे प्रोग्राम को बंद करें</b>, अगर आपको उसकी ज़रूरत नहीं है। nginx जैसी सर्विस के लिए, यह कमांड उसे बूट पर शुरू होने से भी रोकता है:",
+  "fix_port": "<b>सर्वर को दूसरे पोर्ट पर ले जाएं</b>, जैसा कि <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">अपने सर्वर के IP पते सेट करें</a> में बताया गया है, या मैनेज्ड सर्वर के लिए MANAGER में, जैसा कि <a href=\"/vpnhood-manager/docs/access-points/#change\">पता बदलें</a> में बताया गया है। जो कीज़ आप पहले ही दे चुके हैं, उनमें पुराना पोर्ट होता है: <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">वे कीज़ जो आप पहले ही दे चुके हैं</a> देखें।",
+  "fix_copy": "<b>अगर प्रोग्राम VpnHoodServer है</b>, तो सर्वर की एक और कॉपी चल रही है, जैसे एक Linux पर इंस्टॉल की गई और एक Docker में। एक को रखें और दूसरी को अनइंस्टॉल करें: देखें <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">Linux पर</a> या <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">Docker में</a> अनइंस्टॉल करें।",
+  "inuse_restart": "फिर सर्वर को <code>[server_restart_linux]</code> से रीस्टार्ट करें, या Docker में <code>[docker_restart]</code> से, ताकि वह अपना पोर्ट फिर से खोले।"
+}

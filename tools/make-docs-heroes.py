@@ -1123,6 +1123,41 @@ def vpn_detection() -> None:
     a.render("vpn-detection", product="self-hosted-vpn")
 
 
+def server_troubleshooting() -> None:
+    """Troubleshooting a server: a server of two units, the lower one's light out, and the wrench badge over its corner."""
+    a = Art("dhSrvTroubleshooting")
+    a.ambient(cy=470)
+    a.server_unit(130, 250, 560, 150, rim=True, lit=True)
+    a.server_unit(130, 440, 560, 150, rim=False, lit=False)
+    # the badge: a wrench, its open jaw away from the handle, as on MANAGER's troubleshooting
+    a.solid('<circle cx="730" cy="680" r="120" {fill} {stroke}/>', width=12)
+    wrench = 'M 756.8 624.4 A 35 35 0 1 0 785.1 652.7 M 726.2 683.3 L 674.5 735'
+    a.add(f'<path d="{wrench}" fill="none" stroke="{MINT}" stroke-width="42" stroke-linecap="round" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<path d="{wrench}" fill="none" stroke="{MINT}" stroke-width="26" stroke-linecap="round"/>')
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("troubleshooting")
+
+
+def trouble_port_in_use() -> None:
+    """A port already in use: the server holds out its plug, frowning, at a socket another plug already fills."""
+    a = Art("tsPortInUse")
+    a.ambient(cy=540, opacity=.8)
+    # the socket, top right, and the other program's plug in it, its cable off to the side
+    a.solid('<circle cx="700" cy="290" r="185" {fill} {stroke}/>', width=30)
+    a.add(f'<path d="M 790 290 H 960" stroke="{LILAC}" stroke-width="34" stroke-linecap="round" opacity=".85"/>',
+          f'<rect x="610" y="200" width="180" height="180" rx="40" fill="{LILAC}" opacity=".92"/>')
+    # the server's own plug, held out below the socket, with nowhere to go
+    a.add(f'<path d="M 560 720 C 640 720 650 620 640 560" fill="none" stroke="{MINT}" stroke-opacity=".8" stroke-width="30" stroke-linecap="round"/>',
+          f'<path d="M 612 470 V 420 M 668 470 V 420" stroke="{MINT}" stroke-width="28" stroke-linecap="round"/>')
+    a.solid('<rect x="575" y="460" width="130" height="120" rx="30" {fill} {stroke}/>', width=24)
+    # the server, cross: brows down, mouth turned down
+    a.solid('<rect x="80" y="430" width="480" height="470" rx="100" {fill} {stroke}/>', width=36)
+    eyes(a, 320, 640, gap=180, r=42)
+    stroke(a, "M 190 540 L 280 575 M 360 575 L 450 540", color=LILAC, width=26, glow=False)
+    stroke(a, "M 235 805 Q 320 745 405 805", width=32)
+    a.render("address-already-in-use", product="vpnhood-server", prefix="trouble")
+
+
 if __name__ == "__main__":
     self_hosted_docs()
     how_it_works()
@@ -1165,3 +1200,5 @@ if __name__ == "__main__":
     for problem in (trouble_status, trouble_ssh, trouble_never_connects, trouble_error,
                     trouble_lost, trouble_farm, trouble_key, trouble_apps):
         problem()
+    server_troubleshooting()
+    trouble_port_in_use()

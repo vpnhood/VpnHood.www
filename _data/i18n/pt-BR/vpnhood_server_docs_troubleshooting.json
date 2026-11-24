@@ -1,0 +1,16 @@
+{
+  "meta_title": "Solução de problemas no VpnHood! SERVER: porta já em uso | VpnHood!",
+  "meta_description": "Resolva os problemas mais comuns do VpnHood! SERVER, como outro programa já usando a porta do servidor, em um servidor gerenciado ou independente.",
+  "title": "Solução de problemas",
+  "lead": "O que fazer quando o VpnHood! SERVER está rodando, mas algo o impede de funcionar, em um servidor gerenciado ou independente.",
+  "inuse_title": "Endereço já em uso",
+  "inuse_see": "O servidor está rodando, mas os aplicativos não conseguem se conectar. O log do servidor, <code>[server_log]</code>, mostra <code>[log_address_in_use]</code> para a porta e <code>[manager_err_no_tcp]</code> quando ele não conseguiu abrir nenhuma das portas. Um servidor gerenciado mostra o mesmo erro no VpnHood! MANAGER: veja <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">Um servidor mostra um erro</a>.",
+  "inuse_why": "Outro programa na máquina já está usando a porta do servidor, que é <code>[server_port]</code> se você não a tiver alterado. Na maioria das vezes, é um servidor web como o nginx ou o Apache, outra VPN ou outro proxy, ou uma segunda cópia do VpnHood! SERVER.",
+  "inuse_find": "Para encontrá-lo, execute isto no servidor, trocando <code>[server_port]</code> pela sua porta, se for outra:",
+  "inuse_name": "Na saída do comando, o nome do programa vem depois de <code>[ss_users]</code>: <code>[ss_users_example]</code> é o nginx.",
+  "inuse_fix": "Em seguida, escolha uma destas soluções:",
+  "fix_stop": "<b>Pare o outro programa</b> se você não precisar dele. Em um serviço como o nginx, isso também impede que ele inicie junto com o sistema:",
+  "fix_port": "<b>Mude o servidor para outra porta</b>, como mostra <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">Defina os endereços IP do seu servidor</a> ou, em um servidor gerenciado, no MANAGER, como mostra <a href=\"/vpnhood-manager/docs/access-points/#change\">Alterar um endereço</a>. As chaves já distribuídas contêm a porta antiga: veja <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">Chaves já distribuídas</a>.",
+  "fix_copy": "<b>Se o programa for o VpnHoodServer</b>, há outra cópia do servidor rodando, por exemplo, uma instalada no Linux e outra no Docker. Mantenha uma e desinstale a outra: veja Desinstalar <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">no Linux</a> ou <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">no Docker</a>.",
+  "inuse_restart": "Em seguida, reinicie o servidor com <code>[server_restart_linux]</code> ou com <code>[docker_restart]</code> no Docker, para que ele abra a porta novamente."
+}

@@ -1,0 +1,46 @@
+---
+layout: none
+i18n: vpnhood_server_docs_troubleshooting
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  The server's troubleshooting page, named and laid out as MANAGER's (owner, 2026-11-24: "the title
+  should be Troubleshooting too to be symmetric with manager even that there is only one item"): the
+  failures a server most often runs into, each a heading with its character (trouble-<id>.svg by tools/make-docs-heroes.py, the id its heading's,
+  decorative, so alt=""). The first, Address already in use, moved from the GitHub wiki's page of
+  that name (the www plan's wiki move, item 4); its anchor is the wiki page's name. The Linux and
+  Docker install pages link to it from their Common issues.
+  Checked on 2026-11-24 with v9.1.872 in WSL: with the port taken, the server keeps running and logs
+  "Error listening on TcpEndPoint: 0.0.0.0:8443 System.Net.Sockets.SocketException Address already
+  in use" for each address, then "Bad Configuration. ... No working tcp end point is available after
+  configuration." when it opened none; it does not take the port up again by itself
+  (VpnHoodServer: BadConfig reconfigures only on a new ConfigCode), hence the restart. ss -ltnp
+  names the program after users:. Docker runs with network_mode host, so the same error, in the
+  same log through the storage volume. MANAGER shows the message as the server's error.
+  Linux and Docker only, as the other server pages. Code inside a sentence is a placeholder from
+  _data/code.yml, filled in by copy.html; whole commands are markup.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-troubleshooting.svg" %}
+
+<h2 id="address-already-in-use" class="vh-docs-problem"><img src="/assets/images/vpnhood-server/docs/trouble-address-already-in-use.svg" alt="" width="48" height="48" loading="lazy">{{ t.inuse_title }}</h2>
+<p>{% include copy.html s=t.inuse_see %}</p>
+<p>{% include copy.html s=t.inuse_why %}</p>
+<p>{% include copy.html s=t.inuse_find %}</p>
+{% include terminal.html cmd="sudo ss -ltnp 'sport = :443'" %}
+<p>{% include copy.html s=t.inuse_name %}</p>
+<p>{{ t.inuse_fix }}</p>
+<ul>
+  <li>{% include copy.html s=t.fix_stop %}
+{% include terminal.html cmd='sudo systemctl disable --now nginx' %}</li>
+  <li>{% include copy.html s=t.fix_port %}</li>
+  <li>{% include copy.html s=t.fix_copy %}</li>
+</ul>
+<p>{% include copy.html s=t.inuse_restart %}</p>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

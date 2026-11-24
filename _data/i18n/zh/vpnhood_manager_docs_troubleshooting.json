@@ -27,7 +27,7 @@
   "never_log": "查看服务器的日志，其中会说明它无法连接的原因：请参阅<a href=\"/vpnhood-server/docs/install/linux/#manage\">启动与停止服务器</a>；如使用 Docker，请参阅<a href=\"/vpnhood-server/docs/install/docker/#manage\">启动、停止与检查服务器</a>。",
   "error_title": "服务器显示错误",
   "error_desc": "当服务器无法应用其设置时，其状态会变为 <b>[manager_error]</b>，其页面会在 <b>[manager_error]</b> 下以红字显示原因。服务器每分钟重试一次，因此一旦您排除了原因，错误就会消失。",
-  "error_tcp": "如果提示 <b>[manager_err_no_tcp]</b>，说明服务器无法打开其任何 TCP 端口。在 <b>[manager_access_points]</b> 下，端口旁的红色图标表示服务器无法打开该端口：选择它即可查看原因。最常见的原因是其他程序已占用该端口。请释放该端口，或为该接入点换用其他端口，方法参见<a href=\"/vpnhood-manager/docs/access-points/#change\">更改地址</a>。",
+  "error_tcp": "如果提示 <b>[manager_err_no_tcp]</b>，说明服务器无法打开其任何 TCP 端口。在 <b>[manager_access_points]</b> 下，端口旁的红色图标表示服务器无法打开该端口：选择它即可查看原因。最常见的原因是其他程序已占用该端口。请<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">释放该端口</a>，或为该接入点换用其他端口，方法参见<a href=\"/vpnhood-manager/docs/access-points/#change\">更改地址</a>。",
   "error_version": "如果提示 <b>[manager_err_version]</b>，说明服务器版本过旧，MANAGER 不予接受：请再次运行其安装命令，该命令会安装最新版本。",
   "error_restart": "如果服务器的设置已连续失败一周，它就只会每半小时重试一次。排除原因后，请重启服务器，使其立即重试。",
   "lost_title": "服务器停止上报",

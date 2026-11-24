@@ -48,6 +48,8 @@
   "uninstall_title": "Desinstalar",
   "uninstall_run": "Para eliminar el servidor, ejecuta su desinstalador. Detendrá el servidor y eliminará sus servicios y archivos, pero conservará la configuración, las claves de acceso y los certificados en <code>[server_storage]</code> para futuras instalaciones.",
   "uninstall_caption_purge": "Ejecuta esto en su lugar para eliminar también la configuración y las claves: los dispositivos que las tengan ya no podrán conectarse, ni siquiera a una nueva instalación",
+  "issues_title": "Problemas frecuentes",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Dirección ya en uso</a>: las aplicaciones no pueden conectarse porque otro programa ya está usando el puerto del servidor.",
   "next_title": "Pasos siguientes",
   "next_manager": "Administra múltiples servidores y claves desde un panel web con VpnHood! MANAGER",
   "next_addresses": "Configura las direcciones IP en las que escucha el servidor y que incluye en sus claves",

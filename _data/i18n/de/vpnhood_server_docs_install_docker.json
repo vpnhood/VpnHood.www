@@ -39,6 +39,8 @@
   "manual_title": "Container manuell erstellen",
   "manual_desc": "Wenn Sie Container manuell verwalten, entspricht dies der Konfiguration des Installers. Führen Sie den Container wie der Installer im Host-Netzwerk aus.",
   "manual_update": "Um auf ein neueres Image zu aktualisieren, laden Sie <code>[docker_image]</code> herunter und erstellen Sie den Container neu.",
+  "issues_title": "Häufige Probleme",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Adresse wird bereits verwendet</a>: Apps können sich nicht verbinden, weil ein anderes Programm bereits den Port des Servers nutzt.",
   "next_title": "Nächste Schritte",
   "next_manager": "Verwalten Sie mehrere Server und Schlüssel über ein Web-Panel mit VpnHood! MANAGER",
   "next_addresses": "IP-Adressen für eingehende Verbindungen und Schlüssel festlegen",

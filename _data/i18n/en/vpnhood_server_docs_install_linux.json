@@ -48,6 +48,8 @@
   "uninstall_title": "Uninstall",
   "uninstall_run": "To remove the server, run its uninstaller. It stops the server and removes its services and its files, but keeps its settings, access keys and certificates in <code>[server_storage]</code> for a later install.",
   "uninstall_caption_purge": "Run this instead to delete its settings and keys too: devices that hold its keys can no longer connect, even to a new install",
+  "issues_title": "Common issues",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Address already in use</a>: apps cannot connect because another program already uses the server's port.",
   "next_title": "Next steps",
   "next_manager": "Manage many servers and keys from a web panel with VpnHood! MANAGER",
   "next_addresses": "Set the IP addresses the server listens on and puts in its keys",

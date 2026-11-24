@@ -39,6 +39,8 @@
   "manual_title": "Criar o contêiner manualmente",
   "manual_desc": "Se você prefere gerenciar contêineres manualmente, este é o contêiner criado pelo instalador. Execute-o na rede do host, assim como faz o instalador.",
   "manual_update": "Para atualizar para uma imagem mais recente, baixe <code>[docker_image]</code> e recrie o contêiner.",
+  "issues_title": "Problemas comuns",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Endereço já em uso</a>: os aplicativos não conseguem se conectar porque outro programa já está usando a porta do servidor.",
   "next_title": "Próximas etapas",
   "next_manager": "Gerencie múltiplos servidores e chaves em um painel web com o VpnHood! MANAGER",
   "next_addresses": "Defina os endereços IP em que o servidor opera e inclui nas chaves",

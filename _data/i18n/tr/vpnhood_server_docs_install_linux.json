@@ -48,6 +48,8 @@
   "uninstall_title": "Kaldır",
   "uninstall_run": "Sunucuyu kaldırmak için kaldırma aracını çalıştırın. Bu işlem sunucuyu durdurur, servislerini ve dosyalarını siler; ancak daha sonraki bir kurulum için ayarları, erişim anahtarlarını ve sertifikaları <code>[server_storage]</code> içinde saklar.",
   "uninstall_caption_purge": "Ayarları ve anahtarları da silmek için bunun yerine şunu çalıştırın: Bu anahtarlara sahip cihazlar, yeni bir kurulum yapılsa dahi artık bağlanamaz",
+  "issues_title": "Sık karşılaşılan sorunlar",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Adres zaten kullanımda</a>: Başka bir program sunucunun portunu zaten kullandığı için uygulamalar bağlanamıyor.",
   "next_title": "Sonraki adımlar",
   "next_manager": "VpnHood! MANAGER ile bir web panelinden birden çok sunucuyu ve anahtarı yönetin",
   "next_addresses": "Sunucunun dinlediği ve anahtarlarına eklediği IP adreslerini belirleyin",

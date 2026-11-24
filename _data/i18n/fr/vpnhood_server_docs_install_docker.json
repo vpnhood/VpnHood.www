@@ -39,6 +39,8 @@
   "manual_title": "Créer le conteneur manuellement",
   "manual_desc": "Si vous gérez vos conteneurs vous-même, voici celui généré par l'installateur. Lancez-le sur le réseau de l'hôte, tout comme le fait l'outil d'installation.",
   "manual_update": "Pour migrer vers une image plus récente, téléchargez <code>[docker_image]</code> avec pull et recréez le conteneur.",
+  "issues_title": "Problèmes courants",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Adresse déjà utilisée</a> : les applications ne peuvent pas se connecter, car un autre programme utilise déjà le port du serveur.",
   "next_title": "Étapes suivantes",
   "next_manager": "Gérez plusieurs serveurs et clés depuis une interface web avec VpnHood! MANAGER",
   "next_addresses": "Définir les adresses IP d'écoute du serveur et celles intégrées aux clés",

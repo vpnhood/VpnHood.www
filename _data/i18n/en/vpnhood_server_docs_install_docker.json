@@ -39,6 +39,8 @@
   "manual_title": "Create the container yourself",
   "manual_desc": "If you manage your containers by hand, this is the container the installer creates. Run it on the host's network, as the installer does.",
   "manual_update": "To move it to a newer image, pull <code>[docker_image]</code> and create the container again.",
+  "issues_title": "Common issues",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Address already in use</a>: apps cannot connect because another program already uses the server's port.",
   "next_title": "Next steps",
   "next_manager": "Manage many servers and keys from a web panel with VpnHood! MANAGER",
   "next_addresses": "Set the IP addresses the server listens on and puts in its keys",

@@ -1,0 +1,16 @@
+{
+  "meta_title": "VpnHood! SERVER Sorun Giderme: Port Zaten Kullanımda | VpnHood!",
+  "meta_description": "Yönetilen veya bağımsız bir sunucuda VpnHood! SERVER'ın en sık karşılaştığı sorunları, örneğin portunun başka bir program tarafından zaten kullanılmasını giderin.",
+  "title": "Sorun giderme",
+  "lead": "Yönetilen veya bağımsız bir sunucuda VpnHood! SERVER çalıştığı halde bir şey işini yapmasına engel oluyorsa ne yapmanız gerektiğini burada bulabilirsiniz.",
+  "inuse_title": "Adres zaten kullanımda",
+  "inuse_see": "Sunucu çalışıyor ancak uygulamalar bağlanamıyor. Sunucunun <code>[server_log]</code> günlüğünde portu için <code>[log_address_in_use]</code>, portlarının hiçbirini açamadığında ise <code>[manager_err_no_tcp]</code> yazar. Yönetilen bir sunucu aynı hatayı VpnHood! MANAGER'da gösterir: Bkz. <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">Sunucu hata gösteriyor</a>.",
+  "inuse_why": "Makinedeki başka bir program sunucunun portunu (siz değiştirmediyseniz <code>[server_port]</code>) zaten kullanıyor. Bu çoğu zaman nginx veya Apache gibi bir web sunucusu, başka bir VPN ya da proxy veya VpnHood! SERVER'ın ikinci bir kopyasıdır.",
+  "inuse_find": "Bu programı bulmak için sunucuda şu komutu çalıştırın; portunuz <code>[server_port]</code> değilse komuttaki portu kendi portunuzla değiştirin:",
+  "inuse_name": "Komutun çıktısında programın adı <code>[ss_users]</code> ifadesinden sonra gelir: <code>[ss_users_example]</code>, nginx demektir.",
+  "inuse_fix": "Ardından şunlardan birini yapın:",
+  "fix_stop": "İhtiyacınız yoksa <b>diğer programı durdurun</b>. Bu komut, nginx gibi bir hizmetin sistem açılışında başlamasını da engeller:",
+  "fix_port": "<b>Sunucuyu başka bir porta taşıyın</b>: <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">Sunucunuzun IP adreslerini belirleyin</a> sayfasındaki gibi ya da yönetilen bir sunucu için MANAGER'da <a href=\"/vpnhood-manager/docs/access-points/#change\">Adres değiştirme</a> bölümündeki gibi. Daha önce dağıttığınız anahtarlar eski portu taşır: Bkz. <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">Daha önce dağıtılan anahtarlar</a>.",
+  "fix_copy": "<b>Program VpnHoodServer ise</b> sunucunun başka bir kopyası çalışıyordur; örneğin biri doğrudan Linux'a, diğeri Docker'a kurulmuştur. Birini tutun ve diğerini kaldırın: <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">Linux'ta</a> veya <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">Docker'da</a> Kaldır bölümüne bakın.",
+  "inuse_restart": "Ardından portunu yeniden açması için sunucuyu <code>[server_restart_linux]</code> komutuyla ya da Docker'da <code>[docker_restart]</code> komutuyla yeniden başlatın."
+}

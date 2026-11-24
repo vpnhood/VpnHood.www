@@ -1,0 +1,16 @@
+{
+  "meta_title": "استكشاف أخطاء VpnHood! SERVER وإصلاحها: منفذ مستخدم بالفعل | VpnHood!‎",
+  "meta_description": "أصلح المشكلات التي يواجهها VpnHood! SERVER في أغلب الأحيان، مثل استخدام برنامج آخر لمنفذه بالفعل، سواء على خادم مُدار أو مستقل.",
+  "title": "استكشاف الأخطاء وإصلاحها",
+  "lead": "تعرّف على ما يجب فعله عندما يعمل VpnHood! SERVER لكن شيئًا ما يمنعه من أداء عمله، سواء كان خادمًا مُدارًا أو مستقلًا.",
+  "inuse_title": "العنوان مستخدم بالفعل",
+  "inuse_see": "يعمل الخادم، لكن التطبيقات لا تستطيع الاتصال. ويعرض سجله، <code>[server_log]</code>، الرسالة <code>[log_address_in_use]</code> لمنفذه، ثم <code>[manager_err_no_tcp]</code> إذا تعذّر عليه فتح أي من منافذه. ويعرض الخادم المُدار الخطأ نفسه في VpnHood! MANAGER: راجع <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">يعرض الخادم خطأً</a>.",
+  "inuse_why": "يستخدم برنامج آخر على الجهاز منفذ الخادم بالفعل، وهو <code>[server_port]</code> ما لم تكن قد غيّرته. وغالبًا ما يكون هذا البرنامج خادم ويب مثل nginx أو Apache، أو برنامج VPN أو بروكسي آخر، أو نسخة ثانية من VpnHood! SERVER.",
+  "inuse_find": "للعثور عليه، شغّل هذا الأمر على الخادم، مع كتابة منفذك بدلًا من <code>[server_port]</code> إن كان مختلفًا:",
+  "inuse_name": "في مخرجات الأمر، يأتي اسم البرنامج بعد <code>[ss_users]</code>: يشير <code>[ss_users_example]</code> مثلًا إلى nginx.",
+  "inuse_fix": "ثم نفّذ أحد الحلول التالية:",
+  "fix_stop": "<b>أوقف البرنامج الآخر</b> إن لم تكن بحاجة إليه. وبالنسبة لخدمة مثل nginx، يمنعها هذا الأمر أيضًا من العمل تلقائيًا عند تشغيل الجهاز:",
+  "fix_port": "<b>انقل الخادم إلى منفذ آخر</b>، كما هو موضح في <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">تعيين عناوين IP لخادمك</a>، أو في MANAGER إن كان الخادم مُدارًا، كما يوضح قسم <a href=\"/vpnhood-manager/docs/access-points/#change\">تغيير العنوان</a>. وتحمل المفاتيح التي شاركتها بالفعل المنفذ القديم: راجع <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">المفاتيح التي شاركتها بالفعل</a>.",
+  "fix_copy": "<b>إذا كان البرنامج VpnHoodServer</b>، فهناك نسخة أخرى من الخادم تعمل، كأن تكون إحداهما مثبّتة على Linux والأخرى في Docker. احتفظ بواحدة وألغِ تثبيت الأخرى: راجع «إلغاء التثبيت» <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">على Linux</a> أو <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">في Docker</a>.",
+  "inuse_restart": "ثم أعد تشغيل الخادم عبر <code>[server_restart_linux]</code>، أو باستخدام <code>[docker_restart]</code> داخل Docker، ليفتح منفذه من جديد."
+}

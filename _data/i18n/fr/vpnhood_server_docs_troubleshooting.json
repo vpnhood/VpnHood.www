@@ -1,0 +1,16 @@
+{
+  "meta_title": "Dépannage de VpnHood! SERVER : port déjà utilisé | VpnHood!",
+  "meta_description": "Résolvez les problèmes les plus fréquents de VpnHood! SERVER, comme un autre programme qui utilise déjà son port, sur un serveur géré ou autonome.",
+  "title": "Dépannage",
+  "lead": "Que faire lorsque VpnHood! SERVER s'exécute, mais que quelque chose l'empêche de fonctionner, sur un serveur géré ou autonome.",
+  "inuse_title": "Adresse déjà utilisée",
+  "inuse_see": "Le serveur s'exécute, mais les applications ne parviennent pas à se connecter. Son journal, <code>[server_log]</code>, affiche <code>[log_address_in_use]</code> pour son port, et <code>[manager_err_no_tcp]</code> s'il n'a pu ouvrir aucun de ses ports. Un serveur géré affiche la même erreur dans VpnHood! MANAGER : voir <a href=\"/vpnhood-manager/docs/troubleshooting/#error\">Un serveur affiche une erreur</a>.",
+  "inuse_why": "Un autre programme de la machine utilise déjà le port du serveur, <code>[server_port]</code> si vous ne l'avez pas modifié. Il s'agit le plus souvent d'un serveur web comme nginx ou Apache, d'un autre VPN ou proxy, ou d'une seconde instance de VpnHood! SERVER.",
+  "inuse_find": "Pour le trouver, exécutez ceci sur le serveur, en remplaçant <code>[server_port]</code> par votre port s'il est différent :",
+  "inuse_name": "Dans le résultat, le nom du programme suit <code>[ss_users]</code> : <code>[ss_users_example]</code> correspond à nginx.",
+  "inuse_fix": "Choisissez ensuite l'une de ces solutions :",
+  "fix_stop": "<b>Arrêtez l'autre programme</b> si vous n'en avez pas besoin. Pour un service comme nginx, cette commande l'empêche aussi de se lancer au démarrage de la machine :",
+  "fix_port": "<b>Attribuez un autre port au serveur</b>, comme l'indique <a href=\"/vpnhood-server/docs/ip-addresses/#standalone\">Définir les adresses IP de votre serveur</a>, ou, pour un serveur géré, dans MANAGER, comme l'indique <a href=\"/vpnhood-manager/docs/access-points/#change\">Modifier une adresse</a>. Les clés déjà distribuées contiennent l'ancien port : voir <a href=\"/vpnhood-server/docs/ip-addresses/#old-keys\">Clés déjà distribuées</a>.",
+  "fix_copy": "<b>Si le programme est VpnHoodServer</b>, une autre instance du serveur s'exécute, par exemple l'une installée sur Linux et l'autre sous Docker. Gardez-en une et désinstallez l'autre : voir Désinstaller <a href=\"/vpnhood-server/docs/install/linux/#uninstall\">sur Linux</a> ou <a href=\"/vpnhood-server/docs/install/docker/#uninstall\">sous Docker</a>.",
+  "inuse_restart": "Redémarrez ensuite le serveur avec <code>[server_restart_linux]</code>, ou avec <code>[docker_restart]</code> sous Docker, pour qu'il ouvre à nouveau son port."
+}

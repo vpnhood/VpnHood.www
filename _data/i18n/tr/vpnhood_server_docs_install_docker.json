@@ -39,6 +39,8 @@
   "manual_title": "Konteyneri kendiniz oluşturun",
   "manual_desc": "Konteynerlerinizi elle yönetiyorsanız, yükleyicinin oluşturduğu konteyner budur. Yükleyicinin yaptığı gibi konteyneri ana makinenin ağında çalıştırın.",
   "manual_update": "Konteyneri daha yeni bir imaja geçirmek için <code>[docker_image]</code> imajını çekin ve konteyneri yeniden oluşturun.",
+  "issues_title": "Sık karşılaşılan sorunlar",
+  "issue_in_use": "<a href=\"/vpnhood-server/docs/troubleshooting/#address-already-in-use\">Adres zaten kullanımda</a>: Başka bir program sunucunun portunu zaten kullandığı için uygulamalar bağlanamıyor.",
   "next_title": "Sonraki adımlar",
   "next_manager": "VpnHood! MANAGER ile birden çok sunucuyu ve anahtarı tek bir web panelinden yönetin",
   "next_addresses": "Sunucunun dinleyeceği ve anahtarlara ekleyeceği IP adreslerini belirleyin",

@@ -25,6 +25,7 @@ vpnhood-server:
       - url: /vpnhood-server/docs/install/
       - url: /vpnhood-server/docs/ip-blocking/
       - url: /vpnhood-server/docs/certificates/
+      - url: /vpnhood-server/docs/troubleshooting/
   - group: reference
     pages:
       - url: /vpnhood-server/docs/installer-options/
