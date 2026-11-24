@@ -554,6 +554,29 @@ def installer_options() -> None:
     a.render("installer-options")
 
 
+def configuration() -> None:
+    """Server configuration: the settings file, its braces around rows of names and values, one of them a switch."""
+    a = Art("dhConfig")
+    a.ambient(cy=480)
+    # the file: a page with its corner folded
+    a.solid('<path d="M 230 120 H 620 L 770 270 V 840 Q 770 880 730 880 H 270 Q 230 880 230 840 V 160 Q 230 120 270 120 Z" {fill} {stroke}/>', width=10)
+    a.add(f'<path d="M 620 120 V 230 Q 620 270 660 270 H 770" fill="none" stroke="{VIOLET}" stroke-opacity=".55" stroke-width="8" stroke-linejoin="round"/>')
+    # its braces, open and closed, around the settings
+    for d in ("M 350 330 Q 310 330 310 370 V 470 Q 310 505 280 505 Q 310 505 310 540 V 640 Q 310 680 350 680",
+              "M 650 330 Q 690 330 690 370 V 470 Q 690 505 720 505 Q 690 505 690 540 V 640 Q 690 680 650 680"):
+        a.add(f'<path d="{d}" fill="none" stroke="{a.url("Rim")}" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" filter="{a.url("Soft")}" opacity=".45"/>',
+              f'<path d="{d}" fill="none" stroke="{a.url("Rim")}" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>')
+    # the settings: a name and its value on each row, the middle one a switch that is on
+    for n, y in enumerate((360, 432, 504, 576, 648)):
+        a.bar(370, y - 10, 110, 20, fill=LILAC, opacity=.45)
+        if n == 2:
+            switch(a, 500, y - 31, True)
+        else:
+            a.bar(505, y - 10, 120 - (n % 2) * 40, 20, fill=MINT, opacity=.85)
+    a.ambient(cy=920, rx=300, ry=50, opacity=.45)
+    a.render("configuration")
+
+
 def manager_docs() -> None:
     """The MANAGER docs index: MANAGER's figure, with a page of instructions in front of it."""
     a = Art("dhMgrDocs")
@@ -1104,6 +1127,7 @@ if __name__ == "__main__":
     domain()
     reverse_proxy()
     installer_options()
+    configuration()
     manager_docs()
     add_server()
     access_points()

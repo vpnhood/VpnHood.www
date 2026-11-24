@@ -19,6 +19,7 @@
   "ip-blocking": "Блокировка по IP",
   "reference": "Справочник",
   "installer-options": "Параметры установки",
+  "configuration": "Конфигурация",
   "ip-addresses": "IP-адреса",
   "domain": "Доменное имя",
   "reverse-proxy": "Обратный прокси",

@@ -19,6 +19,7 @@
   "ip-blocking": "IP engelleme",
   "reference": "Referans",
   "installer-options": "Yükleyici seçenekleri",
+  "configuration": "Yapılandırma",
   "ip-addresses": "IP adresleri",
   "domain": "Alan adı",
   "reverse-proxy": "Ters proxy",

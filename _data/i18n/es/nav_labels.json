@@ -19,6 +19,7 @@
   "ip-blocking": "Bloqueo de IP",
   "reference": "Referencia",
   "installer-options": "Opciones del instalador",
+  "configuration": "Configuración",
   "ip-addresses": "Direcciones IP",
   "domain": "Nombre de dominio",
   "reverse-proxy": "Proxy inverso",

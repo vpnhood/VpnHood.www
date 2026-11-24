@@ -28,6 +28,7 @@ vpnhood-server:
   - group: reference
     pages:
       - url: /vpnhood-server/docs/installer-options/
+      - url: /vpnhood-server/docs/configuration/
       - url: /vpnhood-server/docs/ip-addresses/
       - url: /vpnhood-server/docs/domain/
       - url: /vpnhood-server/docs/reverse-proxy/

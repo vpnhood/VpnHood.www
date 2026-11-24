@@ -1,0 +1,228 @@
+---
+layout: none
+i18n: vpnhood_server_docs_configuration
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Every setting of a server's appsettings.json, moved from the GitHub wiki's
+  VpnHood-Server-Configuration page (the www plan's wiki move, item 2). Each row's id is the wiki's
+  anchor for it, the setting's name in lower case, so a link to a wiki section finds its row here.
+  Checked on 2026-11-23 against develop (VpnHood 4b388b4b9): AppSettings and ServerApp (the file,
+  VH_APPSETTINGS, the tracker), ServerConfig, FileAccessManagerOptions and FileAccessManager (the
+  UDP port it keeps, QUIC's port 0, the location lookup), SessionOptions, TrackingOptions,
+  NetFilterOptions, OsOptions and NLog.config (the track and session logs).
+  ServerConfig is laid over FileAccessManager's settings, and over a managed server's server profile
+  (VpnHoodServer.Configure), which is why it wins.
+  Left out on purpose: what an access manager sets and a person never does (ConfigCode,
+  Certificates, ServerSecret, EnableHttp01Challenge, UpdateStatusInterval); ManagementSecret,
+  which the Docker installer writes and nothing reads; DownloadsPath, which no app uses; and
+  StartPadding, experimental and off, which the site does not name (owner, 2026-11-05, on the
+  VPN detection page).
+  Linux and Docker only, as the other server pages. Code inside a sentence is a placeholder from
+  _data/code.yml, filled in by copy.html; the setting names and defaults in the tables are markup.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-configuration.svg" %}
+
+<h2 id="how">{{ t.how_title }}</h2>
+<p>{% include copy.html s=t.how_desc %}</p>
+
+{% include docs-managed.html href="/vpnhood-manager/docs/server-profiles/" %}
+
+<h2 id="standalone">{{ t.file_title }}</h2>
+<p>{% include copy.html s=t.file_where %}</p>
+<p>{% include copy.html s=t.file_docker %}</p>
+{% include terminal.html caption=t.caption_file code='{
+  "LogLevel": "Information",
+  "FileAccessManager": {
+    "PublicEndPoints": [ "203.0.113.10:443" ],
+    "Session": {
+      "Timeout": "01:30:00"
+    }
+  },
+  "ServerConfig": {
+    "Os": { "SwapMemorySizeMb": 2048 }
+  }
+}' %}
+<p>{% include copy.html s=t.file_restart %}</p>
+
+<h2 id="general">{{ t.general_title }}</h2>
+<p>{{ t.general_desc }}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="loglevel"><td><code>LogLevel</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"Information"</code></td><td>{% include copy.html s=t.r_log_level %}</td></tr>
+    <tr id="allowanonymoustracker"><td><code>AllowAnonymous<wbr>Tracker</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_tracker %}</td></tr>
+    <tr id="httpaccessmanager"><td><code>HttpAccess<wbr>Manager</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>null</code></td><td>{% include copy.html s=t.r_http %}</td></tr>
+    <tr><td><code>FileAccess<wbr>Manager</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"></td><td>{% include copy.html s=t.r_file %}</td></tr>
+    <tr id="serverconfig"><td><code>ServerConfig</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>null</code></td><td>{% include copy.html s=t.r_config %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="fileaccessmanager">{{ t.keys_title }}</h2>
+<p>{% include copy.html s=t.keys_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="publicendpoints"><td><code>PublicEndPoints</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_found }}</td><td>{% include copy.html s=t.r_public %}</td></tr>
+    <tr id="isvalidhostname"><td><code>IsValidHostName</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_valid_host %}</td></tr>
+    <tr id="hostport"><td><code>HostPort</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_host_port }}</td><td>{% include copy.html s=t.r_host_port %}</td></tr>
+    <tr id="sslcertificatespassword"><td><code>SslCertificates<wbr>Password</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>null</code></td><td>{% include copy.html s=t.r_ssl %}</td></tr>
+    <tr id="servertokenurls"><td><code>ServerTokenUrls</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>[]</code></td><td>{% include copy.html s=t.r_token_urls %}</td></tr>
+    <tr id="replyaccesskey"><td><code>ReplyAccessKey</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_reply %}</td></tr>
+    <tr id="useexternallocationservice"><td><code>UseExternal<wbr>Location<wbr>Service</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_location %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="server">{{ t.server_title }}</h2>
+<p>{% include copy.html s=t.server_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="tcpendpoints"><td><code>TcpEndPoints</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>["0.0.0.0:443",</code><br><code>"[::]:443"]</code></td><td>{% include copy.html s=t.r_tcp %}</td></tr>
+    <tr id="udpendpoints"><td><code>UdpEndPoints</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_udp }}</td><td>{% include copy.html s=t.r_udp %}</td></tr>
+    <tr id="quicendpoints"><td><code>QuicEndPoints</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_none }}</td><td>{% include copy.html s=t.r_quic %}</td></tr>
+    <tr id="dnsservers"><td><code>DnsServers</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_google }}</td><td>{% include copy.html s=t.r_dns %}</td></tr>
+    <tr id="loganonymizer"><td><code>LogAnonymizer</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_anonymizer %}</td></tr>
+    <tr id="reverseproxyproviders"><td><code>ReverseProxy<wbr>Providers</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>["Cloudflare"]</code></td><td>{% include copy.html s=t.r_proxy_providers %}</td></tr>
+    <tr id="reverseproxyipranges"><td><code>ReverseProxy<wbr>IpRanges</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>[]</code></td><td>{% include copy.html s=t.r_proxy_ranges %}</td></tr>
+    <tr id="mincompletionportthreads"><td><code>MinCompletion<wbr>PortThreads</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_min_threads }}</td><td>{% include copy.html s=t.r_min_threads %}</td></tr>
+    <tr id="maxcompletionportthreads"><td><code>MaxCompletion<wbr>PortThreads</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>65535</code></td><td>{% include copy.html s=t.r_max_threads %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="tracking">{{ t.tracking_title }}</h2>
+<p>{% include copy.html s=t.tracking_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="trackclientip"><td><code>TrackClientIp</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_track_client_ip %}</td></tr>
+    <tr id="tracklocalport"><td><code>TrackLocalPort</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_track_local_port %}</td></tr>
+    <tr id="trackdestinationip"><td><code>TrackDestinationIp</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_track_destination_ip %}</td></tr>
+    <tr id="trackdestinationport"><td><code>TrackDestination<wbr>Port</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_track_destination_port %}</td></tr>
+    <tr id="tracktcp"><td><code>TrackTcp</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_track_tcp %}</td></tr>
+    <tr id="trackudp"><td><code>TrackUdp</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_track_udp %}</td></tr>
+    <tr id="trackicmp"><td><code>TrackIcmp</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_track_icmp %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="session">{{ t.session_title }}</h2>
+<p>{% include copy.html s=t.session_desc %}</p>
+
+<h3 id="timeouts">{{ t.timeouts_title }}</h3>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="timeout"><td><code>Timeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"00:30:00"</code></td><td>{% include copy.html s=t.r_timeout %}</td></tr>
+    <tr id="tcpidletimeout"><td><code>TcpIdleTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"01:00:00"</code></td><td>{% include copy.html s=t.r_tcp_idle %}</td></tr>
+    <tr id="udptimeout"><td><code>UdpTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"00:01:00"</code></td><td>{% include copy.html s=t.r_udp_timeout %}</td></tr>
+    <tr id="icmptimeout"><td><code>IcmpTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"00:00:30"</code></td><td>{% include copy.html s=t.r_icmp_timeout %}</td></tr>
+    <tr id="tcpconnecttimeout"><td><code>TcpConnectTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"00:00:30"</code></td><td>{% include copy.html s=t.r_connect_timeout %}</td></tr>
+    <tr id="channelidletimeout"><td><code>ChannelIdleTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"00:00:40"</code></td><td>{% include copy.html s=t.r_channel_idle %}</td></tr>
+  </tbody>
+</table>
+
+<h3 id="limits">{{ t.limits_title }}</h3>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="maxpacketchannelcount"><td><code>MaxPacketChannel<wbr>Count</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>8</code></td><td>{% include copy.html s=t.r_max_packet_channels %}</td></tr>
+    <tr id="maxtcpchannelcount"><td><code>MaxTcpChannel<wbr>Count</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>1000</code></td><td>{% include copy.html s=t.r_max_tcp_channels %}</td></tr>
+    <tr id="maxtcpconnectwaitcount"><td><code>MaxTcpConnect<wbr>WaitCount</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>500</code></td><td>{% include copy.html s=t.r_max_connect_wait %}</td></tr>
+    <tr id="maxtcpconnectspersecond"><td><code>MaxTcpConnects<wbr>PerSecond</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>200</code></td><td>{% include copy.html s=t.r_max_connects %}</td></tr>
+    <tr id="maxudpclientcount"><td><code>MaxUdpClient<wbr>Count</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>500</code></td><td>{% include copy.html s=t.r_max_udp %}</td></tr>
+    <tr id="maxudpdnspacketspersecond"><td><code>MaxUdpDns<wbr>Packets<wbr>PerSecond</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>200</code></td><td>{% include copy.html s=t.r_max_dns %}</td></tr>
+    <tr id="maxicmpclientcount"><td><code>MaxIcmpClient<wbr>Count</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>20</code></td><td>{% include copy.html s=t.r_max_icmp %}</td></tr>
+    <tr id="maxunauthenticatedconnectioncount"><td><code>MaxUnauthenticated<wbr>Connection<wbr>Count</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>1000</code></td><td>{% include copy.html s=t.r_max_unauthenticated %}</td></tr>
+    <tr id="netscanlimit"><td><code>NetScanLimit</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_none }}</td><td>{% include copy.html s=t.r_net_scan_limit %}</td></tr>
+    <tr id="netscantimeout"><td><code>NetScanTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_none }}</td><td>{% include copy.html s=t.r_net_scan_timeout %}</td></tr>
+  </tbody>
+</table>
+
+<h3 id="tunnel">{{ t.tunnel_title }}</h3>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="allowtcpforwarding"><td><code>AllowTcp<wbr>Forwarding</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_allow_forwarding %}</td></tr>
+    <tr id="allowtcppacket"><td><code>AllowTcpPacket</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_allow_tcp_packet %}</td></tr>
+    <tr id="allowudppacket"><td><code>AllowUdpPacket</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_allow_udp_packet %}</td></tr>
+    <tr id="allowquicpacket"><td><code>AllowQuicPacket</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_allow_quic_packet %}</td></tr>
+    <tr id="minclientprotocolversion"><td><code>MinClientProtocol<wbr>Version</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_min_protocol }}</td><td>{% include copy.html s=t.r_min_protocol %}</td></tr>
+  </tbody>
+</table>
+
+<h3 id="buffers">{{ t.buffers_title }}</h3>
+<p>{% include copy.html s=t.buffers_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="tcpkernelbuffersize"><td><code>TcpKernelBuffer<wbr>Size</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_system }}</td><td>{% include copy.html s=t.r_tcp_kernel_buffer %}</td></tr>
+    <tr id="streamforwardingbuffersize"><td><code>StreamForwarding<wbr>BufferSize</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_stream_buffer }}</td><td>{% include copy.html s=t.r_stream_buffer %}</td></tr>
+    <tr id="udpforwardingbuffersize"><td><code>UdpForwarding<wbr>BufferSize</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_system }}</td><td>{% include copy.html s=t.r_udp_forwarding_buffer %}</td></tr>
+    <tr id="udpchannelbuffersize"><td><code>UdpChannel<wbr>BufferSize</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_system }}</td><td>{% include copy.html s=t.r_udp_channel_buffer %}</td></tr>
+  </tbody>
+</table>
+
+<h3 id="traffic-reports">{{ t.reports_title }}</h3>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="syncinterval"><td><code>SyncInterval</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"00:20:00"</code></td><td>{% include copy.html s=t.r_sync_interval %}</td></tr>
+    <tr id="synccachesize"><td><code>SyncCacheSize</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>100000000</code></td><td>{% include copy.html s=t.r_sync_cache %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="netfilter">{{ t.netfilter_title }}</h2>
+<p>{% include copy.html s=t.netfilter_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="networkisolation"><td><code>NetworkIsolation</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>true</code></td><td>{% include copy.html s=t.r_isolation %}</td></tr>
+    <tr id="includelocalnetwork"><td><code>IncludeLocal<wbr>Network</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_local_network %}</td></tr>
+    <tr id="includeipranges"><td><code>IncludeIpRanges</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_all }}</td><td>{% include copy.html s=t.r_include_ranges %}</td></tr>
+    <tr id="excludeipranges"><td><code>ExcludeIpRanges</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_none }}</td><td>{% include copy.html s=t.r_exclude_ranges %}</td></tr>
+    <tr id="vpnadapterincludeipranges"><td><code>VpnAdapterInclude<wbr>IpRanges</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_all }}</td><td>{% include copy.html s=t.r_adapter_include %}</td></tr>
+    <tr id="vpnadapterexcludeipranges"><td><code>VpnAdapterExclude<wbr>IpRanges</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}">{{ t.d_none }}</td><td>{% include copy.html s=t.r_adapter_exclude %}</td></tr>
+    <tr id="blockipv6"><td><code>BlockIpV6</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>false</code></td><td>{% include copy.html s=t.r_block_ipv6 %}</td></tr>
+    <tr id="blocktcpports"><td><code>BlockTcpPorts</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>["25"]</code></td><td>{% include copy.html s=t.r_block_tcp_ports %}</td></tr>
+    <tr id="blockudpports"><td><code>BlockUdpPorts</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>[]</code></td><td>{% include copy.html s=t.r_block_udp_ports %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="os">{{ t.os_title }}</h2>
+<p>{% include copy.html s=t.os_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_default }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="tcpcongestioncontrol"><td><code>TcpCongestion<wbr>Control</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"bbr"</code></td><td>{% include copy.html s=t.r_congestion %}</td></tr>
+    <tr id="connectiontrackingmax"><td><code>Connection<wbr>TrackingMax</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>1048576</code></td><td>{% include copy.html s=t.r_conntrack_max %}</td></tr>
+    <tr id="connectiontrackingtcpidletimeout"><td><code>Connection<wbr>Tracking<wbr>TcpIdleTimeout</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>"01:00:00"</code></td><td>{% include copy.html s=t.r_conntrack_timeout %}</td></tr>
+    <tr id="swapmemorysizemb"><td><code>SwapMemory<wbr>SizeMb</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>null</code></td><td>{% include copy.html s=t.r_swap %}</td></tr>
+    <tr id="addlisteneripstonetwork"><td><code>AddListenerIps<wbr>ToNetwork</code></td><td class="vh-docs-default" data-label="{{ t.th_default }}"><code>null</code></td><td>{% include copy.html s=t.r_listener_ips %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="older-names">{{ t.older_title }}</h2>
+<p>{% include copy.html s=t.older_desc %}</p>
+<table>
+  <thead><tr><th>{{ t.th_older }}</th><th>{{ t.th_now }}</th></tr></thead>
+  <tbody>
+    <tr id="tcptimeout"><td><code>Session.TcpTimeout</code></td><td><code>Session.TcpIdleTimeout</code></td></tr>
+    <tr id="streamproxybuffersize"><td><code>Session.StreamProxyBufferSize</code></td><td><code>Session.StreamForwardingBufferSize</code></td></tr>
+    <tr id="udpproxybuffersize"><td><code>Session.UdpProxyBufferSize</code></td><td><code>Session.UdpForwardingBufferSize</code></td></tr>
+    <tr id="allowtcpproxy"><td><code>Session.AllowTcpProxy</code></td><td><code>Session.AllowTcpForwarding</code></td></tr>
+    <tr><td><code>TcpCongestionControl</code></td><td><code>Os.TcpCongestionControl</code></td></tr>
+    <tr><td><code>SwapMemorySizeMb</code></td><td><code>Os.SwapMemorySizeMb</code></td></tr>
+    <tr><td><code>AddListenerIpsToNetwork</code></td><td><code>Os.AddListenerIpsToNetwork</code></td></tr>
+    <tr id="servertokenurl"><td><code>ServerTokenUrl</code></td><td><code>ServerTokenUrls</code></td></tr>
+    <tr><td><code>FileAccessServer</code></td><td><code>FileAccessManager</code></td></tr>
+    <tr><td><code>HttpAccessServer</code>, <code>RestAccessServer</code></td><td><code>HttpAccessManager</code></td></tr>
+  </tbody>
+</table>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

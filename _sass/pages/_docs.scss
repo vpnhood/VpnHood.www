@@ -319,6 +319,61 @@
     scroll-margin-top: 9.5rem;
 }
 
+// A reference table's row that a link opens, such as one setting on the configuration page: below
+// the sticky header, as a heading is, and marked while it is the one opened.
+.vh-docs-article tr[id]{
+    scroll-margin-top: 9.5rem;
+}
+
+.vh-docs-article tr[id]:target td{
+    background-color: rgba(var(--vh-text-rgb), .06);
+}
+
+// A setting's default, such as "00:30:00", is one value: it never breaks inside, even in a table of sentences.
+.vh-docs-article .vh-docs-prose-table td.vh-docs-default code{
+    white-space: nowrap;
+}
+
+// A table of settings on a phone: three columns leave the sentences a few words wide, so each row becomes a
+// card, the setting and its default on one line, labelled from the column's heading, and what it does below.
+@media (max-width: 575.98px){
+    .vh-docs-article .vh-docs-settings,
+    .vh-docs-article .vh-docs-settings tbody,
+    .vh-docs-article .vh-docs-settings tr{
+        display: block;
+        width: 100%;
+    }
+
+    .vh-docs-article .vh-docs-settings thead{
+        display: none;
+    }
+
+    .vh-docs-article .vh-docs-settings tr{
+        padding: .7rem .9rem;
+        border: 1px solid rgba(var(--vh-text-rgb), .15);
+        border-bottom-width: 0;
+    }
+
+    .vh-docs-article .vh-docs-settings tr:last-child{
+        border-bottom-width: 1px;
+    }
+
+    .vh-docs-article .vh-docs-settings td{
+        display: inline;
+        padding: 0;
+        border: 0;
+    }
+
+    .vh-docs-article .vh-docs-settings td.vh-docs-default:not(:empty)::before{
+        content: " · " attr(data-label) ": ";
+    }
+
+    .vh-docs-article .vh-docs-settings td:last-child{
+        display: block;
+        margin-top: .4rem;
+    }
+}
+
 .vh-docs-article h2{
     margin: 3rem 0 1rem;
     font-size: 1.6rem;

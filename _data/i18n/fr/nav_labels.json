@@ -19,6 +19,7 @@
   "ip-blocking": "Blocage d'adresses IP",
   "reference": "Référence",
   "installer-options": "Options d'installation",
+  "configuration": "Configuration",
   "ip-addresses": "Adresses IP",
   "domain": "Nom de domaine",
   "reverse-proxy": "Reverse proxy",
