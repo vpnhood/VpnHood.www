@@ -3,7 +3,8 @@
 
     1. an internal link is moved onto the page's own language tree, so
        href="/free-vpn/go-premium/" becomes href="/fa/free-vpn/go-premium/" on a
-       Persian page;
+       Persian page, except a link to /legal/, whose pages are English only, as
+       the footer's links to them are;
     2. a link to the page currently being rendered is unwrapped to plain text,
        because a link to the page you are already on is a dead end.
 
@@ -21,6 +22,8 @@
 {%- endcomment -%}
 {%- capture vh_fa_lang %}href="{{ vh_base }}/{% endcapture -%}
 {%- assign vh_fa = include.html | replace: 'href="/', vh_fa_lang -%}
+{%- capture vh_fa_legal %}href="{{ vh_base }}/legal/{% endcapture -%}
+{%- assign vh_fa = vh_fa | replace: vh_fa_legal, 'href="/legal/' -%}
 {%- capture vh_fa_self %}href="{{ page.url }}"{% endcapture -%}
 {%- if vh_fa contains vh_fa_self -%}
   {%- assign vh_fa_attrs = vh_fa | split: vh_fa_self | last | split: '>' | first -%}

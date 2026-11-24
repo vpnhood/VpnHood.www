@@ -36,7 +36,10 @@ nav_active: resources
     <p class="section-desc">{{ t.page_desc }}</p>
 </div>
 <p class="h3 text-white">{{ t.general_title }}</p>
-{% include faq.html heading=false explore=false %}
+{% assign vh_faq_page_list = site.data.faq_sets.all | concat: site.data.faq_sets.sets.privacy %}
+{% include faq.html heading=false explore=false schema_list=vh_faq_page_list %}
+<p class="h3 text-white mt-5 pt-4" id="privacy">{{ t.privacy_title }}</p>
+{% include faq.html set="privacy" id="faqPrivacy" heading=false explore=false schema=false %}
      </div>
 
         

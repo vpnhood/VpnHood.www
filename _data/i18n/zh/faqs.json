@@ -48,5 +48,9 @@
   "q_server_ip_blocked": "我的服务器 IP 还会被封锁吗？",
   "a_server_ip_blocked": "是的。伪装模式几乎不会在流量中留下可供识别的指纹，因此服务器被封锁通常是因为其 IP 地址。请对该地址保密，只与少数人分享。使用 MANAGER 时，将您的服务器集群指向一个 Token URL；这样当您将服务器迁移到新 IP 时，用户的应用会自行获取新地址。<a href=\"/vpnhood-server/docs/ip-blocking/\">防止服务器 IP 地址被封锁</a>介绍了其他有效做法，首先是为服务器的出站流量配置第二个 IP。",
   "q_send_report": "如何发送诊断报告？",
-  "a_send_report": "打开应用菜单，点按<b>诊断</b>，重现问题，点按<b>停止诊断</b>，然后将报告发送给我们。<a href=\"/vpnhood-client/docs/diagnose/\">查看步骤</a>。"
+  "a_send_report": "打开应用菜单，点按<b>诊断</b>，重现问题，点按<b>停止诊断</b>，然后将报告发送给我们。<a href=\"/vpnhood-client/docs/diagnose/\">查看步骤</a>。",
+  "q_vpn_see_traffic": "VPN 服务器能看到或篡改我的网络流量吗？",
+  "a_vpn_see_traffic": "任何 VPN 服务器看到的，都和不使用 VPN 时您的网络运营商看到的一样，因为正是它把您的流量转发到互联网上。在使用 HTTPS 的网站上（如今几乎所有网站都是如此），它能看到您访问了哪些网站，但看不到您在网站上阅读、输入或观看了什么，也无法篡改其中的任何内容。而在没有使用 HTTPS 的网站上，它就能读取并篡改一切。托管该服务器的公司也会看到同样的内容，只不过看到的是服务器的流量，而不是您的流量。VpnHood! CONNECT 的服务器不会记录您访问的网站，正如我们的<a href=\"/legal/vpnhood-connect/privacy-policy/#log-data-our-vpn-servers\">隐私政策</a>所述。",
+  "q_server_log_sites": "VpnHood! 服务器会记录我访问的网站吗？",
+  "a_server_log_sites": "默认不会。您访问了哪些网站，是 VPN 服务器可能保存的最私密的信息之一，因此 VpnHood! 服务器的日志会用一个代码代替每个互联网地址，而且这个代码无法还原成原来的地址。服务器运营者可以开启连接记录来应对滥用行为，而连接记录对每个连接的去向也只保存这样的代码，即使为了排查故障而将日志设为显示地址，也是如此。不过，服务器运营者仍可以通过其他方式监视服务器的流量，因此请使用由您信任的人运营的服务器，或<a href=\"/self-hosted-vpn/\">自己搭建一台</a>。"
 }

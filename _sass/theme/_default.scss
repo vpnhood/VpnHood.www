@@ -901,13 +901,15 @@ pre[tabindex]:focus-visible{
 // In-page anchor targets. #sp-header is position:fixed and up to 136px tall on desktop
 // (91px on one row, 136px when it wraps), so a jump to #compareTable or #faq landed the
 // section's top at y=0, i.e. entirely behind the nav - the compare table lost its whole
-// Free/Premium header row.
+// Free/Premium header row. #privacy is /faq/'s second group, where the wiki's privacy
+// pages point.
 #compareTable,
 #faq,
 #unlimited,
 #locations,
 #why,
-#engagement{
+#engagement,
+#privacy{
     scroll-margin-top: 9.5rem;
 }
 
@@ -916,7 +918,8 @@ pre[tabindex]:focus-visible{
     #faq,
     #unlimited,
     #why,
-    #engagement{
+    #engagement,
+    #privacy{
         scroll-margin-top: 6rem;
     }
 }

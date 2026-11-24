@@ -30,12 +30,19 @@
                     'section-space-top' to drop the big bottom gap; pages with
                     another section after the FAQ (e.g. home) keep the default.
     eyebrow - eyebrow label above the heading (default: the file's `eyebrow`).
+    id      - the accordion's id (default: 'faqAccordion'). A page with two
+              groups gives the second its own, or both would share one id and
+              opening a question in one group would close the other's.
     schema  - emit the FAQPage JSON-LD (default: true). Only /faq passes it
               through; every other page passes schema=false, because eight pages
               each declaring a different FAQPage entity is duplication for no
               gain - Google restricted FAQ rich results to government and health
               sites in 2023, so the markup is inert either way.
+    schema_list - the names the JSON-LD covers (default: the list shown). /faq
+              shows its questions in groups, a call each, and passes every
+              group's names to its first call, so the page declares one FAQPage.
 {%- endcomment -%}
+{%- assign vh_faq_id = include.id | default: 'faqAccordion' -%}
 {%- assign vh_faq_lang = page.lang | default: 'en' -%}
 {%- assign vh_faqs_en = site.data.i18n.en.faqs -%}
 {%- assign vh_faqs = site.data.i18n[vh_faq_lang].faqs | default: vh_faqs_en -%}
@@ -48,7 +55,7 @@
 {%- comment -%} Questions nest under the section title (h2) on content pages, or under the page's own h1 on /faq (heading=false). {%- endcomment -%}
 {%- if include.heading == false -%}{%- assign q_level = 'h2' -%}{%- else -%}{%- assign q_level = 'h3' -%}{%- endif -%}
 {%- capture faq_accordion -%}
-<div id="faqAccordion" class="accordion accordion-flush px-4 mx-auto">
+<div id="{{ vh_faq_id }}" class="accordion accordion-flush px-4 mx-auto">
 {% for vh_name in vh_faq_list %}{% assign vh_slug = vh_name | strip %}{% assign vh_qk = 'q_' | append: vh_slug %}{% assign vh_ak = 'a_' | append: vh_slug %}{% assign vh_q = vh_faqs[vh_qk] | default: vh_faqs_en[vh_qk] %}{% assign vh_a = vh_faqs[vh_ak] | default: vh_faqs_en[vh_ak] %}{% if vh_q == nil or vh_q == '' %}{% continue %}{% endif %}{% assign vh_side = forloop.index | modulo: 2 %}
   <div class="accordion-item" data-aos="fade-{% if vh_side == 1 %}right{% else %}left{% endif %}"{% unless forloop.first %} data-aos-delay="{{ forloop.index0 | times: 100 }}"{% endunless %}>
     <{{ q_level }} class="accordion-header">
@@ -56,7 +63,7 @@
         {{ vh_q }}
       </button>
     </{{ q_level }}>
-    <div id="faq-{{ vh_slug }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div id="faq-{{ vh_slug }}" class="accordion-collapse collapse" data-bs-parent="#{{ vh_faq_id }}">
       <div class="accordion-body">{% include faq-answer.html html=vh_a %}</div>
     </div>
   </div>
@@ -95,12 +102,13 @@
 {%- unless include.schema == false -%}
 {%- comment -%} vh_emitted, not forloop.first, so a skipped name cannot leave a stray comma. {%- endcomment -%}
 {%- assign vh_emitted = 0 -%}
+{%- assign vh_schema_list = include.schema_list | default: vh_faq_list -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {% for vh_name in vh_faq_list %}{% assign vh_slug = vh_name | strip %}{% assign vh_qk = 'q_' | append: vh_slug %}{% assign vh_ak = 'a_' | append: vh_slug %}{% assign vh_q = vh_faqs[vh_qk] | default: vh_faqs_en[vh_qk] %}{% if vh_q == nil or vh_q == '' %}{% continue %}{% endif %}{% assign vh_a = vh_faqs[vh_ak] | default: vh_faqs_en[vh_ak] %}{% capture vh_a_html %}{% include faq-answer.html html=vh_a %}{% endcapture %}{% if vh_emitted > 0 %},{% endif %}{% assign vh_emitted = vh_emitted | plus: 1 %}{
+    {% for vh_name in vh_schema_list %}{% assign vh_slug = vh_name | strip %}{% assign vh_qk = 'q_' | append: vh_slug %}{% assign vh_ak = 'a_' | append: vh_slug %}{% assign vh_q = vh_faqs[vh_qk] | default: vh_faqs_en[vh_qk] %}{% if vh_q == nil or vh_q == '' %}{% continue %}{% endif %}{% assign vh_a = vh_faqs[vh_ak] | default: vh_faqs_en[vh_ak] %}{% capture vh_a_html %}{% include faq-answer.html html=vh_a %}{% endcapture %}{% if vh_emitted > 0 %},{% endif %}{% assign vh_emitted = vh_emitted | plus: 1 %}{
       "@type": "Question",
       "name": {{ vh_q | strip | jsonify }},
       "acceptedAnswer": { "@type": "Answer", "text": {{ vh_a_html | strip | jsonify }} }

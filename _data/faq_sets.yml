@@ -13,11 +13,13 @@
 # renders as a link to the page you are already on, and the answer is usually a
 # short version of what that page says at length. The answers that link out are
 # is_vpnhood_free and supported_platforms (-> /free-vpn/go-premium/), why_slower
-# (-> /guides/vpn-speed/), many_servers_per_location (-> /free-vpn/locations/) and
-# server_ip_blocked (-> /vpnhood-server/docs/ip-blocking/).
+# (-> /guides/vpn-speed/), many_servers_per_location (-> /free-vpn/locations/),
+# server_ip_blocked (-> /vpnhood-server/docs/ip-blocking/), vpn_see_traffic
+# (-> CONNECT's privacy policy) and server_log_sites (-> /self-hosted-vpn/).
 #
-# `all` is the full ordered list, used by /faq/ and as the fallback when a page
-# names no set. `sets` holds the per-page selections. Pick 3-4 questions that
+# `all` is /faq/'s General group and the fallback when a page names no set;
+# `sets.privacy` is /faq/'s second group, under its Privacy heading. `sets` holds
+# the per-page selections. Pick 3-4 questions that
 # answer what a visitor to that page is actually wondering - the same six
 # answers repeated on eight URLs is near-duplicate body text.
 
@@ -129,3 +131,14 @@ sets:
     - server_requirements
     - server_needs_manager
     - server_ip_blocked
+
+  # /faq/'s Privacy group, under its own heading after General (`all`), which is
+  # why its questions are not in `all` too. Moved from the GitHub wiki's two privacy
+  # pages (the www plan's wiki move, item 7), rewritten against today's facts: the
+  # first follows CONNECT's privacy policy, which records no browsing, not the wiki's
+  # 30-day destination log; the second follows VpnHood's server, whose log writes a
+  # token for each public address unless LogAnonymizer is off, and whose track log
+  # writes a token for each destination either way (Redactor.Always).
+  privacy:
+    - vpn_see_traffic
+    - server_log_sites
