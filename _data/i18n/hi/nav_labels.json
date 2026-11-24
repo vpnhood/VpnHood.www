@@ -23,6 +23,7 @@
   "ip-addresses": "IP पते",
   "domain": "डोमेन नाम",
   "reverse-proxy": "रिवर्स प्रॉक्सी",
+  "without-root": "root के बिना",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "सर्टिफ़िकेट्स",
   "add-server": "सर्वर जोड़ें",

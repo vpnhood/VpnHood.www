@@ -23,6 +23,7 @@
   "ip-addresses": "IP 地址",
   "domain": "域名",
   "reverse-proxy": "反向代理",
+  "without-root": "无 root 权限",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "证书",
   "add-server": "添加服务器",

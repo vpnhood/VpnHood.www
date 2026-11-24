@@ -23,6 +23,7 @@
   "ip-addresses": "IP adresleri",
   "domain": "Alan adı",
   "reverse-proxy": "Ters proxy",
+  "without-root": "Root yetkisi olmadan",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Sertifikalar",
   "add-server": "Sunucu ekleyin",

@@ -23,6 +23,7 @@
   "ip-addresses": "Direcciones IP",
   "domain": "Nombre de dominio",
   "reverse-proxy": "Proxy inverso",
+  "without-root": "Sin root",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Certificados",
   "add-server": "Añadir un servidor",

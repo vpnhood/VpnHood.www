@@ -577,6 +577,28 @@ def configuration() -> None:
     a.render("configuration")
 
 
+def without_root() -> None:
+    """Without root: the server running from a folder of an ordinary user's own, the user's badge in front of it."""
+    a = Art("dhNoRoot")
+    a.ambient(cy=480)
+    # the folder: its tab on the left, then its body
+    a.solid('<path d="M 120 250 Q 120 200 170 200 H 380 Q 415 200 435 228 L 470 280 H 830 Q 880 280 880 330 V 770 '
+            'Q 880 820 830 820 H 170 Q 120 820 120 770 Z" {fill} {stroke}/>', width=10)
+    a.add(f'<path d="M 120 360 H 880" stroke="{VIOLET}" stroke-opacity=".45" stroke-width="5"/>')
+    # the server inside it, running
+    a.server_unit(190, 430, 440, 120, rim=False, lit=True)
+    a.bar(190, 610, 300, 20, fill=LILAC, opacity=.35)
+    a.bar(190, 660, 220, 20, fill=LILAC, opacity=.25)
+    # the user, in front: head and shoulders in a round badge
+    cx, cy = 720, 700
+    a.solid(f'<circle cx="{cx}" cy="{cy}" r="150" {{fill}} {{stroke}}/>', width=10)
+    a.add(f'<circle cx="{cx}" cy="{cy - 42}" r="74" fill="{TEAL}" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<circle cx="{cx}" cy="{cy - 42}" r="50" fill="{MINT}"/>',
+          f'<path d="M {cx - 88} {cy + 100} Q {cx - 88} {cy + 22} {cx} {cy + 22} Q {cx + 88} {cy + 22} {cx + 88} {cy + 100} Z" fill="{MINT}" opacity=".9"/>')
+    a.ambient(cy=900, rx=300, ry=50, opacity=.45)
+    a.render("without-root")
+
+
 def manager_docs() -> None:
     """The MANAGER docs index: MANAGER's figure, with a page of instructions in front of it."""
     a = Art("dhMgrDocs")
@@ -1128,6 +1150,7 @@ if __name__ == "__main__":
     reverse_proxy()
     installer_options()
     configuration()
+    without_root()
     manager_docs()
     add_server()
     access_points()

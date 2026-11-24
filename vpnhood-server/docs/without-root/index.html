@@ -1,0 +1,75 @@
+---
+layout: none
+i18n: vpnhood_server_docs_without_root
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  A standalone server run by a user without root, moved from the GitHub wiki's
+  How-to-run-VpnHood-Server-on-Linux-without-ROOT-access page (the www plan's wiki move, item 3).
+  Every step and limit was run on 2026-11-24 as a plain user in WSL's Ubuntu, with v9.1.872 from
+  VpnHood.App.Server's latest release: the package holds one folder, the version; port 443 is
+  refused (Permission denied) and the server goes on without it; 8443 works; the TUN device cannot
+  be made, so apps use TCP forwarding, Cloak Mode; the OS settings fail; gen puts the port in the
+  key; stop ends it; nohup's server outlives the shell that started it. .NET's Ping, which the
+  server forwards ICMP with, works for a plain user (ping_group_range, or the ping command), so the
+  wiki's "no ping" is gone. The storage is the working folder's (ServerApp: no publish.json two
+  folders up), hence one folder for every command. QUIC is off unless set, so MsQuic, which only
+  root installs, is not a limit here. No MANAGER promo: MANAGER installs its servers with root.
+  The install command needs root, said plainly, with no promise of an installer without it.
+  Whole commands are markup; code inside a sentence is a placeholder from _data/code.yml.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-server/docs/hero-without-root.svg" %}
+
+<h2 id="limits">{{ t.limits_title }}</h2>
+<ul>
+  <li>{% include copy.html s=t.lim_cloak %}</li>
+  <li>{% include copy.html s=t.lim_port %}</li>
+  <li>{{ t.lim_boot }}</li>
+  <li>{{ t.lim_updates }}</li>
+  <li>{% include copy.html s=t.lim_os %}</li>
+</ul>
+
+<h2 id="before-you-start">{{ t.before_title }}</h2>
+<ul>
+  <li>{% include copy.html s=t.req_machine %}</li>
+  <li>{{ t.req_icu }}</li>
+  <li>{{ t.req_port }}</li>
+</ul>
+
+<h2 id="run">{{ t.run_title }}</h2>
+<p>{% include copy.html s=t.step_folder %}</p>
+{% capture vh_port %}mkdir -p storage && echo '{ "FileAccessManager": { "TcpEndPoints": [ "0.0.0.0:8443", "[::]:8443" ] } }' > storage/appsettings.json{% endcapture %}
+{% include terminal.html caption=t.caption_download cmd='mkdir -p ~/vhserver && cd ~/vhserver
+arch=$([ "$(uname -m)" = aarch64 ] && echo arm64 || echo x64)
+curl -fLo server.tar.gz https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-$arch.tar.gz
+rm -rf bin && mkdir bin && tar -xzf server.tar.gz -C bin --strip-components=1 && rm server.tar.gz'
+  caption2=t.caption_port cmd2=vh_port
+  caption3=t.caption_start cmd3='nohup ./bin/VpnHoodServer >/dev/null 2>&1 &' %}
+<p>{% include copy.html s=t.step_settings %}</p>
+
+<h3 id="access-key">{{ t.key_title }}</h3>
+<p>{% include copy.html s=t.step_key %}</p>
+{% include terminal.html cmd='./bin/VpnHoodServer gen' %}
+<p>{% include copy.html s=t.step_key_check %}</p>
+
+<h2 id="manage">{{ t.manage_title }}</h2>
+<p>{{ t.step_stop }}</p>
+{% include terminal.html cmd='./bin/VpnHoodServer stop' %}
+<p>{% include copy.html s=t.step_update %}</p>
+<p>{{ t.step_remove }}</p>
+{% include terminal.html cmd='./bin/VpnHoodServer stop
+cd ~ && rm -rf ~/vhserver' %}
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/">{{ t.next_addresses }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

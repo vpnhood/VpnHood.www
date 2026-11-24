@@ -23,6 +23,7 @@
   "ip-addresses": "آدرس‌های IP",
   "domain": "نام دامنه",
   "reverse-proxy": "پروکسی معکوس",
+  "without-root": "بدون دسترسی root",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "گواهی‌ها",
   "add-server": "افزودن سرور",

@@ -23,6 +23,7 @@
   "ip-addresses": "عناوين IP",
   "domain": "اسم النطاق",
   "reverse-proxy": "بروكسي عكسي",
+  "without-root": "بدون صلاحيات root",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "الشهادات",
   "add-server": "إضافة خادم",

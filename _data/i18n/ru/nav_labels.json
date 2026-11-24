@@ -23,6 +23,7 @@
   "ip-addresses": "IP-адреса",
   "domain": "Доменное имя",
   "reverse-proxy": "Обратный прокси",
+  "without-root": "Без прав root",
   "vpnhood-manager": "VpnHood! MANAGER",
   "certificates": "Сертификаты",
   "add-server": "Добавление сервера",
