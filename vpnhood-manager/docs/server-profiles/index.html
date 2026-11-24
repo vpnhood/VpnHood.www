@@ -24,6 +24,18 @@ extra_css:
   ways off, and the users' QUIC or UDP off with TCP packets on; a changed profile
   reconfigures every server of its farms (ServerConfigureService.ReconfigServers). The
   reverse proxies are trusted by the server's own default, as MANAGER applies none.
+  The screenshot is real app UI, so it has no light variant: the docs test project's default
+  profile (Vh/.user/docs/manager-test-projects.md), its Server Profile card 800px wide in
+  MANAGER's dark theme at 2x, Network Filter and Tracking folded in the page only, Advanced edit
+  marked (owner, 2026-11-23: "should we add some screen shot of manager server profile, mention
+  its advanced button"), and the protocol warning MANAGER shows below protocol 15 taken out of
+  the page before the capture, as no docs picture shows it (owner, the same day: "make sure we
+  dont use that warning in our screen shots").
+  The Network Filter section (owner, the same day: "show network filter screenshot too there and add its
+  help"): the same profile's panel alone, General and Tracking folded, 768 px wide at 2x; its fields and their
+  help from ServerProfileCard.razor and Resource.resx (Block SMTP adds port 25 to Block TCP Ports or takes it
+  out; the kernel ranges' warning). Each row names the setting it sets and links to its row on
+  /vpnhood-server/docs/configuration/, which explains it; the field labels in the table are markup. The settings' meanings link to /vpnhood-server/docs/configuration/.
   MANAGER's screen text is a placeholder from _data/code.yml, filled in by copy.html. No
   links to the GitHub wiki.
 {%- endcomment -%}
@@ -36,9 +48,34 @@ extra_css:
 
 <h2 id="settings">{{ t.settings_title }}</h2>
 <p>{% include copy.html s=t.settings_card %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/server-profile.webp" alt="{{ t.shot_alt }}" width="800" height="555" loading="lazy">
+  <figcaption>{% include copy.html s=t.shot_caption %}</figcaption>
+</figure>
 <p>{{ t.settings_send }}</p>
 <p>{% include copy.html s=t.settings_refused %}</p>
 <p>{% include copy.html s=t.settings_dropped %}</p>
+
+<h2 id="network-filter">{{ t.netfilter_title }}</h2>
+<p>{% include copy.html s=t.netfilter_desc %}</p>
+<figure class="vh-docs-shot">
+  <img src="/assets/images/vpnhood-manager/docs/server-profile-network-filter.webp" alt="{{ t.netfilter_alt }}" width="768" height="500" loading="lazy">
+  <figcaption>{{ t.netfilter_caption }}</figcaption>
+</figure>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_field }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><b>Block IpV6</b></td><td>{% include copy.html s=t.nf_block_ipv6 %}</td></tr>
+    <tr><td><b>Include Local Network</b></td><td>{% include copy.html s=t.nf_local_network %}</td></tr>
+    <tr><td><b>Block SMTP (Port 25)</b></td><td>{% include copy.html s=t.nf_smtp %}</td></tr>
+    <tr><td><b>Block TCP Ports</b></td><td>{% include copy.html s=t.nf_tcp_ports %}</td></tr>
+    <tr><td><b>Block UDP Ports</b></td><td>{% include copy.html s=t.nf_udp_ports %}</td></tr>
+    <tr><td><b>Kernel Include IP Addresses</b></td><td>{% include copy.html s=t.nf_kernel_include %}</td></tr>
+    <tr><td><b>Kernel Exclude IP Addresses</b></td><td>{% include copy.html s=t.nf_kernel_exclude %}</td></tr>
+    <tr><td><b>Include IP Addresses</b></td><td>{% include copy.html s=t.nf_include %}</td></tr>
+    <tr><td><b>Exclude IP Addresses</b></td><td>{% include copy.html s=t.nf_exclude %}</td></tr>
+  </tbody>
+</table>
 
 <h2 id="censored-network">{{ t.censored_title }}</h2>
 <p>{% include copy.html s=t.censored_desc %}</p>
