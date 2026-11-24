@@ -8,7 +8,7 @@
   "th_distribution": "Distribution",
   "th_versions": "Versions",
   "arch_rolling": "Publication continue",
-  "linux_needs": "La commande d'installation demande un accès root et systemd, qui exécute le serveur comme service. Si le système n'a pas ICU, une bibliothèque dont le serveur a besoin, la commande l'installe. Sans accès root, vous pouvez tout de même <a href=\"/vpnhood-server/docs/without-root/\">exécuter le serveur vous-même</a>, avec quelques limites.",
+  "linux_needs": "La commande d'installation demande un accès root et systemd, qui exécute le serveur comme service. Si le système n'a pas ICU, une bibliothèque dont le serveur a besoin, la commande l'installe. Sans accès root, vous pouvez tout de même <a href=\"/vpnhood-server/docs/without-root/\">installer le serveur sous votre propre compte utilisateur</a>, avec quelques limites.",
   "linux_tun": "L'adaptateur VPN du serveur a besoin d'un périphérique TUN et des commandes <code>[cmd_ip]</code> et <code>[cmd_iptables]</code>, présents sur presque tous les serveurs. Sans eux, les applications se connectent quand même, mais toujours en <a href=\"/features/cloak-mode/\">mode furtif</a>.",
   "linux_unsupported": "Non prises en charge : Alpine et les autres distributions fondées sur musl au lieu de glibc, où vous pouvez faire tourner le serveur dans Docker, et les distributions antérieures à glibc 2.27, comme CentOS 7.",
   "docker_title": "Docker",

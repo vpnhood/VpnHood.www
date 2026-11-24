@@ -20,6 +20,11 @@ extra_css:
   no -minClientProtocolVersion: a Docker server sets it in its settings, as ip-blocking/
   shows. MANAGER's three are named, not explained: MANAGER's command fills them in, and its
   steps live in its docs.
+  The installer without root (VpnHoodServer-linux-user.sh, the VpnHood repo's
+  src/apps/Server/pub/Linux-User/install.sh, 2026-11-24) gets what differs from the Linux
+  installer only: no -osupdate, and -port with its question on a new install. It asks the
+  minimum client protocol on a new install only, and refuses -port and -minClientProtocolVersion
+  where the settings are there already, hence user_keep.
   Whole commands are markup; code inside a sentence is a placeholder from _data/code.yml,
   filled in by copy.html.
 {%- endcomment -%}
@@ -46,6 +51,17 @@ extra_css:
 <h3 id="os-updates">{{ t.os_title }}</h3>
 <p>{% include copy.html s=t.os_desc %}</p>
 <p>{% include copy.html s=t.os_off %}</p>
+
+<h3 id="user">{{ t.user_title }}</h3>
+<p>{% include copy.html s=t.user_desc %}</p>
+<table>
+  <thead><tr><th>{{ t.th_option }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr><td><code>-port</code></td><td>{{ t.opt_port }}</td></tr>
+  </tbody>
+</table>
+<p>{% include copy.html s=t.user_keep %}</p>
+{% include terminal.html caption=t.caption_user cmd="bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-user.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u) -q -port 9443'" %}
 
 <h2 id="docker">{{ t.docker_title }}</h2>
 <p>{% include copy.html s=t.docker_question %}</p>
