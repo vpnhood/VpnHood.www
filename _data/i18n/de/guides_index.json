@@ -9,5 +9,7 @@
   "speed_desc": "Basiswert ermitteln, Server gezielt wählen und die Messwerte richtig einordnen.",
   "read_more": "Anleitung lesen",
   "split_title": "Was ist Split-Tunneling und wann sollte man es nutzen?",
-  "split_desc": "Funktionsweise, Vorteile, Grenzen – und welche Einstellung am besten zu Ihrem Anwendungsfall passt."
+  "split_desc": "Funktionsweise, Vorteile, Grenzen – und welche Einstellung am besten zu Ihrem Anwendungsfall passt.",
+  "webrtc_title": "Warum können Websites meine IP-Adresse über WebRTC sehen?",
+  "webrtc_desc": "Ein WebRTC-Test kann trotz VPN die eigene Adresse Ihres Geräts anzeigen. Warum das selten ein Leck ist und wie Sie es im Browser verhindern."
 }

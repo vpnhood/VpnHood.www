@@ -144,6 +144,13 @@ ip_outgoing_example: "198.51.100.20"
 ip_range_example: "192.0.2.0/24"
 # a machine's own address on a home network, from the private ranges (RFC 1918)
 ip_home_example: "192.168.1.10"
+# the WebRTC guide: a private address of each kind, a public IPv6 one (documentation range), Firefox's settings
+ip_private_10_example: "10.0.0.5"
+ip_private_172_example: "172.16.0.5"
+ipv6_public_example: "2001:db8::25"
+ff_about_config: "about:config"
+ff_default_address_only: "media.peerconnection.ice.default_address_only"
+ff_peerconnection_enabled: "media.peerconnection.enabled"
 # and a name from the domains set aside for documentation (RFC 2606)
 domain_example: "server1.example.com"
 domain_api_example: "api.example.com"

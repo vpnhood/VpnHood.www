@@ -9,5 +9,7 @@
   "speed_desc": "Temel hızınızı ölçün, sunucuyu doğru seçin ve sonuçları net bir şekilde değerlendirin.",
   "read_more": "Rehberi okuyun",
   "split_title": "Bölünmüş tünelleme nedir ve ne zaman kullanılmalıdır?",
-  "split_desc": "Nasıl çalışır, ne zaman işe yarar, avantajları nelerdir ve VPN kullanım amacınıza en uygun ayar hangisidir?"
+  "split_desc": "Nasıl çalışır, ne zaman işe yarar, avantajları nelerdir ve VPN kullanım amacınıza en uygun ayar hangisidir?",
+  "webrtc_title": "Web siteleri WebRTC üzerinden IP adresimi neden görebiliyor?",
+  "webrtc_desc": "Bir WebRTC testi, VPN kullanırken cihazınızın kendi adresini gösterebilir. Bunun neden nadiren bir sızıntı olduğunu ve tarayıcınızda nasıl durdurulacağını öğrenin."
 }

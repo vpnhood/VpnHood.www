@@ -9,5 +9,7 @@
   "speed_desc": "Misura la velocità di base, scegli il server con cura e confronta i dati in modo accurato.",
   "read_more": "Leggi la guida",
   "split_title": "Cos'è lo Split tunneling e quando conviene usarlo?",
-  "split_desc": "Come funziona, quando è utile e quale impostazione scegliere in base alle tue esigenze."
+  "split_desc": "Come funziona, quando è utile e quale impostazione scegliere in base alle tue esigenze.",
+  "webrtc_title": "Perché i siti web possono vedere il mio indirizzo IP tramite WebRTC?",
+  "webrtc_desc": "Un test WebRTC può mostrare l'indirizzo del tuo dispositivo mentre usi una VPN. Perché quasi mai si tratta di una fuga e come evitarlo nel browser."
 }

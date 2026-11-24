@@ -11,6 +11,8 @@
     "speed_desc": "Take a baseline, pick the server deliberately, and read the difference honestly.",
     "read_more": "Read the guide",
     "split_title": "What is split tunneling, and when should you use it?",
-    "split_desc": "What it does, when it helps, what it costs, and which default fits your reason for using a VPN."
+    "split_desc": "What it does, when it helps, what it costs, and which default fits your reason for using a VPN.",
+    "webrtc_title": "Why can websites see my IP address through WebRTC?",
+    "webrtc_desc": "A WebRTC test can show your device's own address while you are on a VPN. Why that is rarely a leak, and how to stop it in your browser."
   }
 }

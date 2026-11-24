@@ -9,5 +9,7 @@
   "speed_desc": "Establece un punto de partida, elige el servidor adecuado e interpreta los resultados con precisión.",
   "read_more": "Leer la guía",
   "split_title": "¿Qué es el túnel dividido y cuándo deberías usarlo?",
-  "split_desc": "Cómo funciona, ventajas, posibles limitaciones y qué configuración se adapta mejor a tu uso de la VPN."
+  "split_desc": "Cómo funciona, ventajas, posibles limitaciones y qué configuración se adapta mejor a tu uso de la VPN.",
+  "webrtc_title": "¿Por qué los sitios web pueden ver mi dirección IP a través de WebRTC?",
+  "webrtc_desc": "Una prueba de WebRTC puede mostrar la dirección propia de tu dispositivo mientras usas una VPN. Por qué casi nunca es una fuga y cómo evitarlo en tu navegador."
 }

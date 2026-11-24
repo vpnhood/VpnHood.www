@@ -1,0 +1,193 @@
+---
+layout: none
+i18n: guides_webrtc_ip_leak
+extra_css:
+  - /assets/css/custom.css
+nav_active: resources
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  Moved from the GitHub wiki's Why-can-websites-see-my-IP-address-through-WebRTC (the www plan's wiki
+  move, item 5), for every device, not Windows alone. Checked on 2026-11-24: Chrome hands sites real
+  host addresses instead of mDNS names once they hold microphone or camera permission (its 2019
+  announcement); uBlock Origin's WebRTC setting left desktop browsers in v1.38, so it is out; WebRTC
+  Leak Prevent is on the Chrome Web Store for Manifest V3; Brave's WebRTC IP handling policy is under
+  Privacy and security, and on Android under Brave Shields & privacy; Firefox's about:config is a
+  computer's only. The app's labels are the app's (Allow Split Tunneling, Split IPv6, Protect, Bypass
+  VPN; Protect is UnsupportedIpV6Mode's default, Block). Art: webrtc-ip-leak.svg and webrtc-mask.svg,
+  drawn as the other guides' pictures.
+{%- endcomment -%}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                <p class="mb-0">
+                  <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/guides/">{{ t.all_guides }}</a>
+                </p>
+
+                <div class="row align-items-center gap-lg-0 gap-5 pt-lg-4 pb-5">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow }}</p>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ t.title }}</h1>
+                    <p class="section-desc">{{ t.lead }}</p>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-relay">
+                      <img src="/assets/images/guides/webrtc-ip-leak.svg" alt="{{ t.hero_alt }}" width="468" height="468" loading="eager" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-0" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.what_title }}</h2>
+                    <p class="section-desc mb-0">{{ t.what_desc }}</p>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="row align-items-center gap-lg-0 gap-5">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                      <div class="vh-guide-art">
+                        <img src="/assets/images/guides/webrtc-mask.svg" alt="{{ t.mask_alt }}" width="900" height="780" loading="lazy" />
+                      </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                      <h2 class="section-title vh-txt-grad-purple-400">{{ t.ways_title }}</h2>
+                      <p class="section-desc">{{ t.ways_desc }}</p>
+                      <ul class="list-unstyled vh-guide-points mb-0">
+                        <li>
+                          <div>
+                            <h3 class="h5 mb-2">{{ t.way1_title }}</h3>
+                            <p class="mb-0">{{ t.way1_desc }}</p>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <h3 class="h5 mb-2">{{ t.way2_title }}</h3>
+                            <p class="mb-0">{{ t.way2_desc }}</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.which_title }}</h2>
+                    <p class="section-desc">{{ t.which_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.which_private_title }}</h3>
+                        <p class="mb-0">{% include copy.html s=t.which_private_desc %}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.which_vpn_title }}</h3>
+                        <p class="mb-0">{{ t.which_vpn_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.which_ipv6_title }}</h3>
+                        <p class="mb-0">{% include copy.html s=t.which_ipv6_desc %}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.which_ipv4_title }}</h3>
+                        <p class="mb-0">{% include copy.html s=t.which_ipv4_desc %}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text mb-0" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.ipv6_title }}</h2>
+                    <p class="section-desc mb-0">{{ t.ipv6_desc }}</p>
+                  </div>
+                </div>
+
+                <div class="section-space">
+                  <div class="section-start-text" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.fix_title }}</h2>
+                    <p class="section-desc">{{ t.fix_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_perm_title }}</h3>
+                        <p class="mb-0">{{ t.fix_perm_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_chrome_title }}</h3>
+                        <p class="mb-0">{{ t.fix_chrome_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_firefox_title }}</h3>
+                        <p class="mb-0">{% include copy.html s=t.fix_firefox_desc %}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_brave_title }}</h3>
+                        <p class="mb-0">{{ t.fix_brave_desc }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <h3 class="h5 mb-2">{{ t.fix_off_title }}</h3>
+                        <p class="mb-0">{{ t.fix_off_desc }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-space" id="real-leak">
+                  <div class="section-start-text" data-aos="fade-up">
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.leak_title }}</h2>
+                    <p class="section-desc">{{ t.leak_desc }}</p>
+                  </div>
+                  <ul class="row list-unstyled row-gap-4 mb-0">
+                    <li class="col-lg-6" data-aos="fade-up">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <p class="mb-0">{{ t.leak_split }}</p>
+                      </div>
+                    </li>
+                    <li class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="vh-card-dark vh-feature-panel h-100">
+                        <p class="mb-0">{{ t.leak_ipv6 }}</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <p class="mt-4 mb-0" data-aos="fade-up">{% include copy.html s=t.leak_report %}</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% include footer.html %}

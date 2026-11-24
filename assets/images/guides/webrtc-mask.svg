@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780" width="900" height="780" role="img" aria-labelledby="vhWebrtcMaskTitle">
+<title id="vhWebrtcMaskTitle">The browser masks the device's address while the microphone is off, and lifts the mask once the microphone is allowed</title>
+<defs>
+  <linearGradient id="mTunnel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5" stop-opacity=".15"/>
+    <stop offset=".45" stop-color="#8257f5" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".45"/></linearGradient>
+  <linearGradient id="mDevice" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset="1" stop-color="#2b1470"/></linearGradient>
+  <linearGradient id="mRim" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset=".45" stop-color="#8257f5"/>
+    <stop offset=".78" stop-color="#3ce8c8"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <radialGradient id="mAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="mGlow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".9"/>
+    <stop offset=".5" stop-color="#3ce8c8" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="mSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<ellipse cx="450" cy="390" rx="430" ry="370" fill="url(#mAmbient)"/>
+<circle cx="170" cy="230" r="96" fill="#150a3a" fill-opacity=".85" stroke="#c0a4ff" stroke-opacity="0.4" stroke-width="4"/>
+<g transform="translate(170 234) scale(1.15)" opacity=".55">
+<rect x="-17" y="-44" width="34" height="56" rx="17" fill="#c0a4ff"/>
+<path d="M-30 -6 a30 30 0 0 0 60 0" fill="none" stroke="#c0a4ff" stroke-width="8" stroke-linecap="round"/>
+<path d="M0 24 v18 M-16 42 h32" stroke="#c0a4ff" stroke-width="8" stroke-linecap="round"/>
+<path d="M-40 -46 L40 46" stroke="#c0a4ff" stroke-width="9" stroke-linecap="round"/>
+</g>
+<path d="M290 230 H360" stroke="#c0a4ff" stroke-width="9" stroke-linecap="round" opacity="0.45"/>
+<rect x="380" y="170" width="440" height="120" rx="22" fill="#150a3a" fill-opacity=".9" stroke="#c0a4ff" stroke-opacity=".7" stroke-width="3"/>
+<rect x="420" y="220" width="82" height="20" rx="10" fill="#c0a4ff" opacity=".3"/>
+<circle cx="510" cy="230" r="5" fill="#c0a4ff" opacity="0.3"/>
+<rect x="518" y="220" width="82" height="20" rx="10" fill="#c0a4ff" opacity=".3"/>
+<circle cx="608" cy="230" r="5" fill="#c0a4ff" opacity="0.3"/>
+<rect x="616" y="220" width="82" height="20" rx="10" fill="#c0a4ff" opacity=".3"/>
+<circle cx="706" cy="230" r="5" fill="#c0a4ff" opacity="0.3"/>
+<rect x="714" y="220" width="82" height="20" rx="10" fill="#c0a4ff" opacity=".3"/>
+<rect x="404" y="180" width="392" height="100" rx="50" fill="url(#mDevice)" stroke="#c0a4ff" stroke-opacity=".6" stroke-width="3"/>
+<ellipse cx="522" cy="230" rx="43" ry="24" fill="#150a3a"/>
+<ellipse cx="678" cy="230" rx="43" ry="24" fill="#150a3a"/>
+<circle cx="170" cy="550" r="96" fill="#150a3a" fill-opacity=".85" stroke="#8ef7e2" stroke-opacity="0.7" stroke-width="4"/>
+<g transform="translate(170 554) scale(1.15)" opacity="1">
+<circle r="62" fill="url(#mGlow)" filter="url(#mSoft)" opacity=".6"/>
+<rect x="-17" y="-44" width="34" height="56" rx="17" fill="#8ef7e2"/>
+<path d="M-30 -6 a30 30 0 0 0 60 0" fill="none" stroke="#8ef7e2" stroke-width="8" stroke-linecap="round"/>
+<path d="M0 24 v18 M-16 42 h32" stroke="#8ef7e2" stroke-width="8" stroke-linecap="round"/>
+</g>
+<path d="M290 550 H360" stroke="#8ef7e2" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+<rect x="380" y="490" width="440" height="120" rx="22" fill="#150a3a" fill-opacity=".9" stroke="#8ef7e2" stroke-opacity=".7" stroke-width="3"/>
+<rect x="420" y="540" width="82" height="20" rx="10" fill="#8ef7e2" opacity="0.82"/>
+<circle cx="510" cy="550" r="5" fill="#8ef7e2" opacity="0.8"/>
+<rect x="518" y="540" width="82" height="20" rx="10" fill="#8ef7e2" opacity="0.88"/>
+<circle cx="608" cy="550" r="5" fill="#8ef7e2" opacity="0.8"/>
+<rect x="616" y="540" width="82" height="20" rx="10" fill="#8ef7e2" opacity="0.94"/>
+<circle cx="706" cy="550" r="5" fill="#8ef7e2" opacity="0.8"/>
+<rect x="714" y="540" width="82" height="20" rx="10" fill="#3ce8c8" filter="url(#mSoft)" opacity=".6"/>
+<rect x="714" y="540" width="82" height="20" rx="10" fill="#8ef7e2" opacity="1.00"/>
+<g transform="translate(600 410) rotate(-12)" opacity=".55"><rect x="-150" y="-36" width="300" height="72" rx="36" fill="url(#mDevice)" stroke="#c0a4ff" stroke-opacity=".6" stroke-width="3" stroke-dasharray="12 10"/><ellipse cx="-60" cy="0" rx="34" ry="17" fill="#150a3a"/><ellipse cx="60" cy="0" rx="34" ry="17" fill="#150a3a"/></g>
+</svg>
