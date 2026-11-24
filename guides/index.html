@@ -33,26 +33,35 @@ nav_active: resources
                   </div>
                 </div>
 
-                <ul class="row list-unstyled row-gap-4 justify-content-center section-space-bottom mb-0">
-                  <li class="col-lg-5 col-md-6" data-aos="fade-up">
-                    <div class="vh-card-dark vh-feature-panel h-100 position-relative">
-                      <span class="vh-feature-icon">{% include icons/gauge.svg %}</span>
-                      <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/vpn-speed/">{{ t.speed_title }}</a></h2>
-                      <p class="mb-0">{{ t.speed_desc }}</p>
+                <ul class="list-unstyled vh-guide-list section-space-bottom mb-0">
+                  <li data-aos="fade-up">
+                    <div class="vh-card-dark vh-guide-row">
+                      <img class="vh-guide-thumb" src="/assets/images/guides/vpn-speed.svg" alt="" width="112" height="112" loading="lazy" />
+                      <div class="vh-guide-row-text">
+                        <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/vpn-speed/">{{ t.speed_title }}</a></h2>
+                        <p class="mb-0">{{ t.speed_desc }}</p>
+                      </div>
+                      <span class="vh-guide-row-arrow" aria-hidden="true">{% include icons/arrow-right.svg %}</span>
                     </div>
                   </li>
-                  <li class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="vh-card-dark vh-feature-panel h-100 position-relative">
-                      <span class="vh-feature-icon">{% include icons/split-by-app.svg %}</span>
-                      <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/what-is-split-tunneling/">{{ t.split_title }}</a></h2>
-                      <p class="mb-0">{{ t.split_desc }}</p>
+                  <li data-aos="fade-up">
+                    <div class="vh-card-dark vh-guide-row">
+                      <img class="vh-guide-thumb" src="/assets/images/guides/split-tunneling.svg" alt="" width="112" height="112" loading="lazy" />
+                      <div class="vh-guide-row-text">
+                        <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/what-is-split-tunneling/">{{ t.split_title }}</a></h2>
+                        <p class="mb-0">{{ t.split_desc }}</p>
+                      </div>
+                      <span class="vh-guide-row-arrow" aria-hidden="true">{% include icons/arrow-right.svg %}</span>
                     </div>
                   </li>
-                  <li class="col-lg-5 col-md-6" data-aos="fade-up">
-                    <div class="vh-card-dark vh-feature-panel h-100 position-relative">
-                      <span class="vh-feature-icon">{% include icons/eye-off.svg %}</span>
-                      <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/webrtc-ip-leak/">{{ t.webrtc_title }}</a></h2>
-                      <p class="mb-0">{{ t.webrtc_desc }}</p>
+                  <li data-aos="fade-up">
+                    <div class="vh-card-dark vh-guide-row">
+                      <img class="vh-guide-thumb" src="/assets/images/guides/webrtc-ip-leak.svg" alt="" width="112" height="112" loading="lazy" />
+                      <div class="vh-guide-row-text">
+                        <h2 class="h5 mb-2"><a class="vh-feature-card-link stretched-link" href="{{ vh_base }}/guides/webrtc-ip-leak/">{{ t.webrtc_title }}</a></h2>
+                        <p class="mb-0">{{ t.webrtc_desc }}</p>
+                      </div>
+                      <span class="vh-guide-row-arrow" aria-hidden="true">{% include icons/arrow-right.svg %}</span>
                     </div>
                   </li>
                 </ul>

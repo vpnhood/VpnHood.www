@@ -840,6 +840,88 @@
     color: var(--purple-120);
 }
 
+// The guides index: a row a guide, its own art as the thumbnail, so a few read as a
+// deliberate list and many still fit, where a grid of big cards looked empty and could
+// not grow (owner, 2026-11-24). The row is one link (.stretched-link on its title).
+.vh-guide-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 920px;
+    margin-inline: auto;
+}
+
+.vh-guide-row{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 23px;
+    padding: 1.1rem 1.5rem 1.1rem 1.1rem;
+    transition: transform .2s ease;
+}
+
+.vh-guide-row:hover,
+.vh-guide-row:focus-within{
+    transform: translateY(-2px);
+}
+
+.vh-guide-thumb{
+    flex: none;
+    width: 112px;
+    height: 112px;
+}
+
+.vh-guide-row-text{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.vh-guide-row h2{
+    color: var(--purple-120);
+}
+
+.vh-guide-row-arrow{
+    flex: none;
+    color: var(--purple-120);
+    transition: transform .2s ease, color .2s ease;
+}
+
+.vh-guide-row-arrow svg{
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+.vh-guide-row:hover .vh-guide-row-arrow{
+    color: var(--vh-accent-ink);
+    transform: translateX(3px);
+}
+
+[dir="rtl"] .vh-guide-row-arrow svg{
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .vh-guide-row:hover .vh-guide-row-arrow{
+    transform: translateX(-3px);
+}
+
+@media (max-width: 575.98px){
+    .vh-guide-row{
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .vh-guide-thumb{
+        width: 72px;
+        height: 72px;
+    }
+
+    .vh-guide-row-arrow{
+        display: none;
+    }
+}
+
 // A card title that is a condition followed by its answer ("For speed: the
 // nearest one"): the condition keeps the quieter heading lavender and the answer,
 // wrapped in <b> in the JSON, steps up to the high-emphasis ink so it can be read
