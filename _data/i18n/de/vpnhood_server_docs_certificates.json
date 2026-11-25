@@ -11,7 +11,7 @@
   "kind_self_sees": "Ein von keiner Zertifizierungsstelle signiertes Zertifikat mit Fantasienamen, wie es ein neu installierter Server hat.",
   "kind_self_looks": "Das sieht aus wie ein privater Server, etwa ein Router oder ein Testrechner.",
   "kind_invalid": "Ungültig",
-  "kind_invalid_sees": "Ein selbstsigniertes Zertifikat mit dem Namen einer echten Website, unter einer Adresse, die nicht zu dieser Website gehört.",
+  "kind_invalid_sees": "Ein Zertifikat mit dem Namen einer echten Website, unter einer Adresse, die nicht zu dieser Website gehört, und nicht von der Zertifizierungsstelle dieser Website signiert.",
   "kind_invalid_looks": "Das sieht aus wie ein Server, der sich für etwas ausgibt, was er nicht ist.",
   "invalid_title": "Warum ein selbstsigniertes Zertifikat besser sein kann als ein ungültiges",
   "invalid_both": "Ein Browser lehnt beide ab. Der Unterschied liegt darin, was sie jeweils behaupten.",

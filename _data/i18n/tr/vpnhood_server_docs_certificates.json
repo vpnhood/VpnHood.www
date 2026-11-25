@@ -11,7 +11,7 @@
   "kind_self_sees": "Hiçbir yetkilinin imzalamadığı, rastgele bir ada sahip bir sertifika; yeni kurulmuş bir sunucudaki gibi.",
   "kind_self_looks": "Yönlendirici veya test makinesi gibi özel bir sunucuya benzer.",
   "kind_invalid": "Geçersiz",
-  "kind_invalid_sees": "Gerçek bir sitenin adını taşıyan, ancak o sitenin kullanmadığı bir adreste bulunan kendinden imzalı bir sertifika.",
+  "kind_invalid_sees": "Gerçek bir sitenin adını taşıyan, o sitenin kullanmadığı bir adreste bulunan ve o sitenin sertifika yetkilisinin imzalamadığı bir sertifika.",
   "kind_invalid_looks": "Olmadığı bir şeymiş gibi davranan bir sunucuya benzer.",
   "invalid_title": "Kendinden imzalı sertifika neden geçersiz olandan daha iyi olabilir?",
   "invalid_both": "Tarayıcı ikisini de reddeder. Fark, her birinin ne iddia ettiğindedir.",

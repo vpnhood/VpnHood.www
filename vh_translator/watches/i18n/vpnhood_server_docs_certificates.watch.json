@@ -13,7 +13,7 @@
     "kind_self_sees": "A certificate no authority signed, with a made-up name, as on a new server.",
     "kind_self_looks": "It looks like a private server, such as a router or a test machine.",
     "kind_invalid": "Invalid",
-    "kind_invalid_sees": "A self-signed certificate that names a real site, at an address that is not that site's.",
+    "kind_invalid_sees": "A certificate that names a real site, at an address that is not that site's, and that the site's authority did not sign.",
     "kind_invalid_looks": "It looks like a server pretending to be something it is not.",
     "invalid_title": "Why self-signed can beat invalid",
     "invalid_both": "A browser rejects both. The difference is what each one claims.",

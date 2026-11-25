@@ -11,7 +11,7 @@
   "kind_self_sees": "Un certificado que ninguna autoridad ha firmado, con un nombre ficticio, como el de un servidor recién instalado.",
   "kind_self_looks": "Parece un servidor privado, como un router o un equipo de pruebas.",
   "kind_invalid": "No válido",
-  "kind_invalid_sees": "Un certificado autofirmado con el nombre de un sitio real, en una dirección IP que ese sitio no usa.",
+  "kind_invalid_sees": "Un certificado con el nombre de un sitio real, en una dirección IP que ese sitio no usa, y que la autoridad de ese sitio no firmó.",
   "kind_invalid_looks": "Parece un servidor que se hace pasar por lo que no es.",
   "invalid_title": "Por qué un certificado autofirmado puede ser mejor que uno no válido",
   "invalid_both": "Un navegador rechaza ambos. La diferencia está en lo que afirma cada uno.",

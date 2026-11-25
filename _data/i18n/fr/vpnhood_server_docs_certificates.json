@@ -11,7 +11,7 @@
   "kind_self_sees": "Un certificat qu'aucune autorité n'a signé, avec un nom fictif, comme sur un serveur tout juste installé.",
   "kind_self_looks": "Cela ressemble à un serveur privé, comme un routeur ou une machine de test.",
   "kind_invalid": "Invalide",
-  "kind_invalid_sees": "Un certificat auto-signé portant le nom d'un vrai site, à une adresse qui n'appartient pas à ce site.",
+  "kind_invalid_sees": "Un certificat portant le nom d'un vrai site, à une adresse qui n'appartient pas à ce site, et que l'autorité de ce site n'a pas signé.",
   "kind_invalid_looks": "Cela ressemble à un serveur qui se fait passer pour ce qu'il n'est pas.",
   "invalid_title": "Pourquoi un certificat auto-signé peut valoir mieux qu'un certificat invalide",
   "invalid_both": "Un navigateur rejette les deux. La différence tient à ce que chacun affirme.",
