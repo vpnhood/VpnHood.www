@@ -902,14 +902,17 @@ pre[tabindex]:focus-visible{
 // (91px on one row, 136px when it wraps), so a jump to #compareTable or #faq landed the
 // section's top at y=0, i.e. entirely behind the nav - the compare table lost its whole
 // Free/Premium header row. #privacy is /faq/'s second group, where the wiki's privacy
-// pages point.
+// pages point; #connect-keeps is the guide's section the first of those answers links to, and
+// #hosting the section that guide's hosting company point links down to.
 #compareTable,
 #faq,
 #unlimited,
 #locations,
 #why,
 #engagement,
-#privacy{
+#privacy,
+#connect-keeps,
+#hosting{
     scroll-margin-top: 9.5rem;
 }
 
@@ -919,7 +922,9 @@ pre[tabindex]:focus-visible{
     #unlimited,
     #why,
     #engagement,
-    #privacy{
+    #privacy,
+    #connect-keeps,
+    #hosting{
         scroll-margin-top: 6rem;
     }
 }

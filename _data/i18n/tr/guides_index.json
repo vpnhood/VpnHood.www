@@ -13,5 +13,7 @@
   "webrtc_title": "Web siteleri WebRTC üzerinden IP adresimi neden görebiliyor?",
   "webrtc_desc": "Bir WebRTC testi, VPN kullanırken cihazınızın kendi adresini gösterebilir. Bunun neden nadiren bir sızıntı olduğunu ve tarayıcınızda nasıl durdurulacağını öğrenin.",
   "google_title": "VPN kullanırken Google konumumu nasıl biliyor?",
-  "google_desc": "Google'ın internet adresiniz dışında konumunuzu nereden öğrendiğini, paylaşılan bir sunucunun neden ülkenizi gösterebileceğini ve neler yapabileceğinizi öğrenin."
+  "google_desc": "Google'ın internet adresiniz dışında konumunuzu nereden öğrendiğini, paylaşılan bir sunucunun neden ülkenizi gösterebileceğini ve neler yapabileceğinizi öğrenin.",
+  "see_title": "Bir VPN neleri görebilir ve neleri saklar?",
+  "see_desc": "Her VPN sunucusunun trafiğinizden neleri görebildiğini, VpnHood! CONNECT'in neleri sakladığını, bir sunucunun sahibinin neler yapabileceğini ve bunları kodumuzda nasıl kontrol edebileceğinizi öğrenin."
 }

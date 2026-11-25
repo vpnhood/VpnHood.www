@@ -13,5 +13,7 @@
   "webrtc_title": "为什么网站能通过 WebRTC 看到我的 IP 地址？",
   "webrtc_desc": "使用 VPN 时，WebRTC 测试可能会显示您设备自身的地址。了解为何这很少是真正的泄露，以及如何在浏览器中阻止。",
   "google_title": "使用 VPN 时，Google 是如何知道我的位置的？",
-  "google_desc": "了解除 IP 地址外 Google 还从哪里获取您的位置、为什么共享服务器可能指向您自己的国家，以及您可以怎么做。"
+  "google_desc": "了解除 IP 地址外 Google 还从哪里获取您的位置、为什么共享服务器可能指向您自己的国家，以及您可以怎么做。",
+  "see_title": "VPN 能看到什么，又会保留什么？",
+  "see_desc": "任何 VPN 服务器能看到您流量中的哪些内容、VpnHood! CONNECT 会保留什么、服务器运营者能做什么，以及如何在我们的源代码中核实。"
 }

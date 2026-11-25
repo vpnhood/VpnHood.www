@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 780" width="900" height="780" role="img" aria-labelledby="vhVpnSeeSwitchesTitle">
+<title id="vhVpnSeeSwitchesTitle">A VpnHood! server's settings as they come: the log's codes switched on, the connection records and the record of your address switched off, and where each connection goes kept in the records only as a code</title>
+<defs>
+  <linearGradient id="wTunnel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8257f5" stop-opacity=".15"/>
+    <stop offset=".45" stop-color="#8257f5" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#3ce8c8" stop-opacity=".45"/></linearGradient>
+  <linearGradient id="wDevice" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset="1" stop-color="#2b1470"/></linearGradient>
+  <linearGradient id="wCard" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".96"/><stop offset="1" stop-color="#150a3a" stop-opacity=".96"/></linearGradient>
+  <radialGradient id="wAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="wGlow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".9"/>
+    <stop offset=".5" stop-color="#3ce8c8" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="wSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<ellipse cx="450" cy="400" rx="430" ry="360" fill="url(#wAmbient)"/>
+<rect x="140" y="80" width="620" height="620" rx="34" fill="url(#wCard)" stroke="#c0a4ff" stroke-opacity=".45" stroke-width="3"/>
+<rect x="140" y="80" width="620" height="74" rx="34" fill="#8257f5" fill-opacity=".28"/>
+<rect x="140" y="120" width="620" height="34" fill="#8257f5" fill-opacity=".28"/>
+<rect x="176" y="102" width="56" height="32" rx="8" fill="url(#wDevice)" stroke="#c0a4ff" stroke-opacity=".5" stroke-width="2"/>
+<circle cx="220" cy="118" r="5" fill="#8ef7e2"/>
+<rect x="250" y="110" width="170" height="16" rx="8" fill="#c0a4ff" opacity=".7"/>
+<rect x="186" y="192" width="68" height="76" rx="10" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".7" stroke-width="4"/>
+<g fill="#8ef7e2"><rect x="200" y="210" width="40" height="9" rx="4.5"/><rect x="200" y="228" width="30" height="9" rx="4.5"/><rect x="200" y="246" width="36" height="9" rx="4.5"/></g>
+<rect x="290" y="208" width="170" height="37" rx="19" fill="#150a3a" stroke="#8ef7e2" stroke-opacity=".7" stroke-width="3"/><text x="375" y="233" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" font-weight="600" fill="#8ef7e2">v4-3f9a…</text>
+<rect x="590" y="198" width="120" height="64" rx="32" fill="#3ce8c8" fill-opacity=".55" stroke="#8ef7e2" stroke-width="3"/><circle cx="678" cy="230" r="24" fill="#8ef7e2"/>
+<g fill="none" stroke="#c0a4ff" stroke-width="6" stroke-linecap="round" opacity=".8"><path d="M190 336 h60 M190 360 h60 M190 384 h60"/></g>
+<rect x="290" y="351" width="190" height="18" rx="9" fill="#c0a4ff" opacity=".5"/>
+<rect x="590" y="328" width="120" height="64" rx="32" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".55" stroke-width="3"/><circle cx="622" cy="360" r="24" fill="#c0a4ff" opacity=".55"/>
+<g fill="#c0a4ff" opacity="0.8"><circle cx="220" cy="472" r="16"/><path d="M192 516 Q 192 492 220 492 Q 248 492 248 516 Z"/></g>
+<rect x="290" y="481" width="160" height="18" rx="9" fill="#c0a4ff" opacity=".5"/>
+<rect x="590" y="458" width="120" height="64" rx="32" fill="#150a3a" stroke="#c0a4ff" stroke-opacity=".55" stroke-width="3"/><circle cx="622" cy="490" r="24" fill="#c0a4ff" opacity=".55"/>
+<g fill="none" stroke="#c0a4ff" stroke-width="5" opacity="0.8"><circle cx="220" cy="620" r="30"/><ellipse cx="220" cy="620" rx="13.5" ry="30"/><path d="M190 620 H 250 M193.9 605.0 H 246.1 M193.9 635.0 H 246.1"/></g>
+<rect x="290" y="598" width="170" height="37" rx="19" fill="#150a3a" stroke="#8ef7e2" stroke-opacity=".7" stroke-width="3"/><text x="375" y="623" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" font-weight="600" fill="#8ef7e2">v4-b07d…</text>
+<rect x="590" y="588" width="120" height="64" rx="32" fill="#150a3a" stroke="#8ef7e2" stroke-opacity=".6" stroke-width="3"/>
+<g transform="translate(629 588) scale(0.85)"><rect x="0" y="19" width="42" height="32" rx="9" fill="#8ef7e2"/><path d="M9 19 v-8 a12 12 0 0 1 24 0 v8" fill="none" stroke="#8ef7e2" stroke-width="7" stroke-linecap="round"/><circle cx="21" cy="34" r="5" fill="#150a3a"/></g>
+</svg>

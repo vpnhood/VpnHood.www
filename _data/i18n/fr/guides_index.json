@@ -13,5 +13,7 @@
   "webrtc_title": "Pourquoi les sites web peuvent-ils voir mon adresse IP via WebRTC ?",
   "webrtc_desc": "Un test WebRTC peut afficher l'adresse propre à votre appareil alors que vous utilisez un VPN. Pourquoi il s'agit rarement d'une fuite, et comment l'empêcher dans votre navigateur.",
   "google_title": "Comment Google connaît-il ma position quand j'utilise un VPN ?",
-  "google_desc": "D'où Google tire votre position en dehors de votre adresse Internet, pourquoi un serveur partagé peut apparaître dans votre propre pays et ce que vous pouvez faire."
+  "google_desc": "D'où Google tire votre position en dehors de votre adresse Internet, pourquoi un serveur partagé peut apparaître dans votre propre pays et ce que vous pouvez faire.",
+  "see_title": "Que peut voir un VPN et que conserve-t-il ?",
+  "see_desc": "Ce que tout serveur VPN peut voir de votre trafic, ce que VpnHood! CONNECT conserve, ce que peut faire l'administrateur d'un serveur, et comment le vérifier dans notre code."
 }
