@@ -139,7 +139,7 @@ extra_css:
                             <div class="d-flex flex-column gap-4">
                               <div class="vh-card-dark vh-feature-panel" data-aos="fade-up">
                                 <h2 class="h4">{{ t.how_title }}</h2>
-                                <p class="mb-0">{{ t.how_desc }}</p>
+                                <p class="mb-0">{% include copy.html s=t.how_desc %}</p>
                               </div>
                               <div class="vh-card-dark vh-feature-panel" data-aos="fade-up" data-aos-delay="100">
                                 <h2 class="h4">{{ t.when_title }}</h2>

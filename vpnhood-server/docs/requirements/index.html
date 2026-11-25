@@ -62,7 +62,7 @@ extra_css:
     <tr><td><span class="vh-docs-os">{% include icons/brands/archlinux.svg %}Arch Linux</span></td><td>{{ t.arch_rolling }}</td></tr>
   </tbody>
 </table>
-<p>{{ t.linux_needs }}</p>
+<p>{% include copy.html s=t.linux_needs %}</p>
 <p class="vh-docs-limit">{% include icons/alert.svg %}<span>{% include copy.html s=t.linux_tun %}</span></p>
 <p class="vh-docs-limit">{% include icons/alert.svg %}<span>{{ t.linux_unsupported }}</span></p>
 
