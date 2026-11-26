@@ -110,7 +110,14 @@ holds the toggle). Playwright can be borrowed from `VpnHood.Client.WebUI/node_mo
 force AOS elements visible (`[data-aos]` → `aos-animate`, opacity 1, transform none) and
 remove `.sp-pre-loader` before capturing, or the shots come out ghosted.
 
-## Light-mode art — always via `tools/make-light-art.py`
+## Light-mode decorative art — via `tools/make-light-art.py`
+
+The user-approved home portrait, `banner-guardian-light.webp`, is a separately drawn
+polar original exported through the guardian pipeline, with its source in VpnHood.Artworks.
+Preserve its lighting. The About Us team photograph also has a separately drawn daylight
+original, `about/about-team-daylight.webp`, with its full master, native symbol layers
+and prompt in VpnHood.Artworks. Keep the daylight original; do not invert the night
+photograph or apply a CSS filter. The conversion workflow below applies to decorative glows.
 
 The backdrops are light-on-dark glows authored for the dark theme, so each one has a
 generated `<name>-light.<ext>` sibling. **That script is the only way light art is

@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -21,3 +21,7 @@ node_modules/
 
 # Working plans and private notes. Never committed — this repo is public.
 /.user/
+
+# Generated Python bytecode.
+__pycache__/
+*.py[cod]

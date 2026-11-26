@@ -109,7 +109,13 @@ legacy CMS `/templates`, `/media`, `/plugins` folders.
   `banner-guardian.webp`, is made by `tools/make-guardian.py` from her transparent original
   in `tools/guardian/`, with her top and bottom faded in the picture, as up to 991px she sits
   halfway down the hero where a CSS mask cannot reach her edges. Replace the original and
-  rerun it to change her; never edit the output.
+  rerun it to change her; never edit the output. The approved light counterpart is
+  `banner-guardian-light.webp`, exported through the same pipeline from a separately drawn
+  polar original retained in VpnHood.Artworks; keep its existing lighting rather than
+  recolouring the dark guardian. The About Us photograph similarly uses a separately
+  drawn daylight original, `about/about-team-daylight.webp`, retained with its editable
+  source in VpnHood.Artworks. Preserve its natural daylight; it is not inverted by the
+  decorative-glow generator.
 - **Self-host third-party assets — do NOT hot-link public CDNs.** We target China (see the
   China promo bar), and the **Great Firewall blocks/throttles `cdnjs.cloudflare.com`,
   `unpkg.com`, and all Google hosts (`fonts.googleapis.com`/`fonts.gstatic.com`,

@@ -15,7 +15,9 @@ run on around her instead of ending at the edge of a black box:
   would end in a straight line. Up to 991px she sits halfway down the hero, so both edges
   show there, and CSS cannot fade them: a mask follows the hero's box, not her picture.
 
-The light theme shows banner-bg-light.webp at every width, so she needs no light counterpart.
+The light theme uses banner-guardian-light.webp, exported through this same pipeline from
+the separately drawn polar original retained in VpnHood.Artworks. This default command
+builds only the dark guardian; do not recolour it to replace the approved light artwork.
 
     python tools/make-guardian.py            # writes the hero image
     python tools/make-guardian.py --check    # reports an image that differs from a fresh run

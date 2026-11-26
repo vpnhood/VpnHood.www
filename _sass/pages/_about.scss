@@ -1,0 +1,91 @@
+// Approved About Us artwork. The detailed source and prompt are retained in VpnHood.Artworks.
+// Shared crop and page-color fade; light mode selects a separately drawn daylight original.
+.vh-about-hero-art {
+  display: none;
+}
+
+[data-theme] {
+  .vh-about-hero {
+    position: relative;
+    isolation: isolate;
+    z-index: 2;
+    min-height: 31rem;
+    align-items: center;
+    margin: 0 0 3rem;
+    padding: 3rem 0 6rem !important;
+  }
+
+  .vh-about-hero-copy {
+    position: relative;
+    width: min(100%, 41rem);
+    padding: 0;
+    margin-right: auto;
+  }
+
+  .vh-about-hero-light-art {
+    display: none;
+  }
+
+  .vh-about-hero-art {
+    display: block;
+    position: absolute;
+    width: auto;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    left: calc((100% - 100vw) / 2 + 18vw);
+    right: calc((100% - 100vw) / 2 + 2vw);
+    top: calc(50% - 13.3333333vw - 1rem);
+    height: 26.6666667vw;
+    z-index: -1;
+    pointer-events: none;
+    background: url('/assets/images/about/about-team.webp') center / 100% auto no-repeat;
+    opacity: 1;
+    mask-image:
+      linear-gradient(to right, transparent 0%, var(--vh-page-bg) 12%, var(--vh-page-bg) 95%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, var(--vh-page-bg) 20%, var(--vh-page-bg) 68%, transparent 100%);
+    mask-composite: intersect;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+        rgba(var(--purple-800-rgb), .96) 0%,
+        rgba(var(--purple-800-rgb), .83) 16%,
+        rgba(var(--purple-800-rgb), .58) 30%,
+        rgba(var(--purple-800-rgb), .30) 46%,
+        rgba(var(--purple-800-rgb), .10) 66%,
+        rgba(var(--purple-800-rgb), .02) 84%,
+        rgba(var(--purple-800-rgb), .02) 100%);
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .vh-about-hero {
+      min-height: 35rem;
+      padding: 0 0 15rem !important;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .vh-about-hero-art {
+      left: calc((100% - 100vw) / 2);
+      right: calc((100% - 100vw) / 2);
+      top: calc(100% - 14.5rem);
+      height: 14.5rem;
+      background-size: auto 14.5rem;
+      background-position: 52% bottom;
+      mask-image: linear-gradient(to bottom, transparent 0%, var(--vh-page-bg) 20%, var(--vh-page-bg) 70%, transparent 100%);
+      mask-composite: add;
+
+      &::after {
+        background: linear-gradient(to right,
+          rgba(var(--purple-800-rgb), .52) 0%,
+          rgba(var(--purple-800-rgb), .32) 30%,
+          rgba(var(--purple-800-rgb), .12) 64%,
+          rgba(var(--purple-800-rgb), .03) 100%);
+      }
+    }
+  }
+}

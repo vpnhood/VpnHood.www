@@ -1,0 +1,100 @@
+---
+layout: none
+i18n: vpnhood_manager_docs_policies
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  What a user is offered at a location, and the settings behind it, for the people who set them (owner,
+  2026-11-25, on the developer site's connection-options page: "What's the use of this page? Who can use this?",
+  then "do your best" on splitting it by reader: the settings here, the API on the developer site's "Your own
+  screens over the app's logic", the premium-mark rule in VpnHood's docs).
+  Written for the MANAGER and app of 2026-11-25, from both sources: Access Key Profiles sits under Access Keys in
+  the project menu (ProjectNavMenu.razor); a profile's card edits Policies as JSON in camelCase (the console
+  client's ClientPolicy), from a sample when it has none (AccessTokenProfileCard.razor). The tower picks the policy
+  of the device's country by its IP, else "*", else connects ordinarily with no limit (ClientPolicyCalculator); a
+  key of a profile that is not public is premium; a plain connection's ad comes from the profile's Ad Requirement.
+  A rewarded ad during a plain free connection buys premium, PremiumByRewardedAd's minutes, and during one a
+  rewarded ad started adds NormalByRewardedAd's again (RewardedAdSessionPolicy, RewardedAdService). The app shows
+  free choices only at locations with free servers and the trial and premium for an ad only at ones with premium
+  servers, an ad's choice only where it shows rewarded ads, a purchase only where it sells premium, and asks when a
+  trial or a rewarded ad is on offer (ServerLocationItemBuilder, PromoteView); it gets changed policies with the
+  key the hello reply carries, which only a farm that pushes its token sends (SessionService.BuildFarmAccessKey).
+  The diagram is tools/make-docs-diagrams.py's policies_options; its labels are the app's own (en.json). AdMob's
+  rule: https://support.google.com/admob/answer/7313578. No links to the GitHub wiki.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="vpnhood-manager/docs/hero-policies.svg" %}
+
+<h2 id="where">{{ t.where_title }}</h2>
+<p>{% include copy.html s=t.where_desc %}</p>
+<p>{% include copy.html s=t.where_json %}</p>
+{% include terminal.html caption=t.caption_json code='[
+  {
+    "clientCountries": [ "BR", "MX" ],
+    "normal": 30,
+    "normalByRewardedAd": 120
+  },
+  {
+    "clientCountries": [ "*" ],
+    "normal": 30,
+    "premiumByRewardedAd": 60,
+    "premiumByPurchase": true
+  }
+]' %}
+<p>{% include copy.html s=t.where_apply %}</p>
+
+<h2 id="offered">{{ t.decide_title }}</h2>
+<p>{{ t.decide_desc }}</p>
+<ul>
+  <li>{% include copy.html s=t.decide_country %}</li>
+  <li>{% include copy.html s=t.decide_location %}</li>
+  <li>{% include copy.html s=t.decide_app %}</li>
+</ul>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/policies-options.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/policies-options-tall.svg %}
+</figure>
+<p>{{ t.decide_asks }}</p>
+<p>{% include copy.html s=t.decide_private %}</p>
+
+<h2 id="settings">{{ t.settings_title }}</h2>
+<p>{% include copy.html s=t.settings_desc %}</p>
+<table class="vh-docs-prose-table vh-docs-settings">
+  <thead><tr><th>{{ t.th_setting }}</th><th>{{ t.th_effect }}</th></tr></thead>
+  <tbody>
+    <tr id="clientcountries"><td><code>clientCountries</code></td><td>{% include copy.html s=t.r_countries %}</td></tr>
+    <tr id="normal"><td><code>normal</code></td><td>{% include copy.html s=t.r_normal %}</td></tr>
+    <tr id="normalbyrewardedad"><td><code>normalBy<wbr>RewardedAd</code></td><td>{% include copy.html s=t.r_normal_ad %}</td></tr>
+    <tr id="premiumbytrial"><td><code>premiumByTrial</code></td><td>{% include copy.html s=t.r_trial %}</td></tr>
+    <tr id="premiumbytrialdailylimit"><td><code>premiumByTrial<wbr>DailyLimit</code></td><td>{% include copy.html s=t.r_trial_limit %}</td></tr>
+    <tr id="premiumbyrewardedad"><td><code>premiumBy<wbr>RewardedAd</code></td><td>{% include copy.html s=t.r_premium_ad %}</td></tr>
+    <tr id="premiumbypurchase"><td><code>premiumBy<wbr>Purchase</code></td><td>{% include copy.html s=t.r_purchase %}</td></tr>
+    <tr id="purchaseurl"><td><code>purchaseUrl</code></td><td>{% include copy.html s=t.r_purchase_url %}</td></tr>
+    <tr id="premiumbycode"><td><code>premiumByCode</code></td><td>{% include copy.html s=t.r_code %}</td></tr>
+    <tr id="freelocations"><td><code>freeLocations</code></td><td>{% include copy.html s=t.r_free_locations %}</td></tr>
+    <tr id="autolocationonly"><td><code>autoLocation<wbr>Only</code></td><td>{% include copy.html s=t.r_auto_only %}</td></tr>
+    <tr id="unblockableonly"><td><code>unblockable<wbr>Only</code></td><td>{% include copy.html s=t.r_unblockable_only %}</td></tr>
+  </tbody>
+</table>
+
+<h2 id="rewarded-ads">{{ t.rewarded_title }}</h2>
+<p>{% include copy.html s=t.rewarded_desc %}</p>
+<p>{{ t.rewarded_ways }}</p>
+<ul>
+  <li>{% include copy.html s=t.rewarded_short %}</li>
+  <li>{% include copy.html s=t.rewarded_choice %}</li>
+</ul>
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-manager/docs/add-server/#access-keys">{{ t.next_keys }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

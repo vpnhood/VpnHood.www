@@ -819,6 +819,27 @@ def roles() -> None:
     a.render("roles", product="vpnhood-manager")
 
 
+def policies() -> None:
+    """Policies: the globe of a policy's countries, over a card of the choices it offers, the one picked lit."""
+    a = Art("dhMgrPolicies")
+    a.ambient(cy=470)
+    # the card of choices: three rows, the middle one picked
+    a.solid('<rect x="330" y="230" width="500" height="540" rx="40" {fill} {stroke}/>', width=10)
+    for n in range(3):
+        y = 300 + n * 145
+        picked = n == 1
+        a.add(f'<rect x="390" y="{y}" width="380" height="105" rx="30" fill="{INDIGO_DEEP}" fill-opacity=".8" '
+              f'stroke="{MINT if picked else VIOLET}" stroke-opacity="{.9 if picked else .3}" stroke-width="{7 if picked else 2}"/>')
+        a.bar(432, y + 32, 230 - n * 40, 22, fill=MINT if picked else LILAC, opacity=.9 if picked else .4, glow=picked)
+        a.bar(432, y + 68, 130, 14, fill=LILAC, opacity=.3)
+    # the globe of the policy's countries, over the card's corner
+    a.solid('<circle cx="250" cy="300" r="118" {fill} {stroke}/>', width=10)
+    a.add(f'<ellipse cx="250" cy="300" rx="50" ry="118" fill="none" stroke="{LILAC}" stroke-opacity=".55" stroke-width="7"/>',
+          f'<path d="M 132 300 H 368 M 148 241 H 352 M 148 359 H 352" fill="none" stroke="{LILAC}" stroke-opacity=".45" stroke-width="6"/>')
+    a.ambient(cy=880, rx=300, ry=55, opacity=.45)
+    a.render("policies", product="vpnhood-manager")
+
+
 def troubleshooting() -> None:
     """Troubleshooting: the panel of servers, one whose status is out (a dashed, unlit chip), and a wrench over the corner."""
     a = Art("dhMgrTroubleshooting")
@@ -1194,6 +1215,7 @@ if __name__ == "__main__":
     server_profiles()
     farms()
     farm_token()
+    policies()
     roles()
     troubleshooting()
     manager_promo()

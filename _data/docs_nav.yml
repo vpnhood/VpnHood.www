@@ -46,6 +46,7 @@ vpnhood-manager:
       - url: /vpnhood-manager/docs/access-points/
       - url: /vpnhood-manager/docs/certificates/
       - url: /vpnhood-manager/docs/server-profiles/
+      - url: /vpnhood-manager/docs/policies/
       - url: /vpnhood-manager/docs/roles/
 vpnhood-client:
   - group: getting-started

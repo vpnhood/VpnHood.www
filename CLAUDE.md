@@ -15,7 +15,7 @@ This file is the binding summary of what every task needs. Each area's rules liv
 - **Never write a raw colour** (`white`, `#fff`, `rgba(255,255,255,…)`) in our SCSS — use `--vh-*` tokens or the brand ramp, or the light theme has nothing to re-point.
 - **Never hot-link a public CDN** — the Great Firewall blocks cdnjs, unpkg and every Google host. Vendor into `assets/js/vendor/` or `assets/css`.
 - **Every `meta_title` contains "VpnHood!"**, and [.docs/seo-and-semantic-html.md](.docs/seo-and-semantic-html.md) is binding for any markup change (a shared standard kept byte-identical with `paymenthood-www` — edit both copies together).
-- **Light-mode art comes only from `python tools/make-light-art.py`** — never hand-author a `*-light.*` file or a per-image CSS filter.
+- **Light-mode decorative backdrops come from `python tools/make-light-art.py`** — never hand-edit generated files or use a per-image CSS filter. The user-approved `banner-guardian-light.webp` is a separately drawn original exported with the guardian pipeline; preserve its lighting.
 - **Verify both themes after any markup or CSS change**; the dark theme must stay pixel-identical.
 - **`jekyll serve --watch` never reloads `_plugins/`** — restart it after a plugin edit. A `_data` change triggers a full rebuild (~15 s). **Generators must not stamp render-time data onto pages** — that rebuild renders fresh page objects, so the data vanishes in local preview while CI stays green.
 

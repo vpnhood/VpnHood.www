@@ -13,6 +13,7 @@ Writes, under `_includes/diagrams/`:
   dynamic-ip-urls.svg, dynamic-ip-urls-tall.svg  /vpnhood-manager/docs/dynamic-ip/
   farm-token-key.svg, farm-token-key-tall.svg,  
   farm-token-new.svg, farm-token-new-tall.svg  /vpnhood-manager/docs/farm-token/
+  policies-options.svg, policies-options-tall.svg  /vpnhood-manager/docs/policies/
   cloak-mode.svg, cloak-mode-tall.svg            /features/cloak-mode/, and
                                                  /self-hosted-vpn/docs/vpn-detection/, which
                                                  carries the same diagram_* keys
@@ -79,6 +80,9 @@ Each diagram states one idea and no more:
                   part of its own: only the whole key connects.
   farm-token-new  a new token reaches an app by two roads: from your server while it can connect,
                   and from the file at a farm token URL when it cannot.
+  policies-options  the user's country, the location and the app decide the choices, and where
+                  a trial or a rewarded ad is on offer the app asks on a page of them; a private
+                  key skips the question.
 
 Run from the repo root:  python tools/make-docs-diagrams.py
 """
@@ -1133,6 +1137,75 @@ def farm_token_new() -> None:
     render("farm-token-new-tall", *FARM_TOKEN, W, H, "vhFarmTokenNewTall", parts, "diagram_new")
 
 
+# ===========================================================================
+# policies-options - what decides a user's choices at a location, and the page where the app asks
+# ===========================================================================
+POLICIES = ("vpnhood_manager_docs_policies", "vh_policies_en")
+
+# the app's page of choices: each row's label, its line under it, and its chalk
+POLICY_ROWS = (("diagram_free", "diagram_free_sub", CHALK), ("diagram_free_ad", "diagram_free_ad_sub", CHALK),
+               None,
+               ("diagram_watch", "diagram_watch_sub", VIOLET), ("diagram_try", "diagram_try_sub", VIOLET),
+               ("diagram_go", "diagram_go_sub", MINT))
+
+
+def policy_inputs(T, x, ys, size, sub):
+    """The three things that decide, an icon each with its label and line beside it, then the private key."""
+    parts = [globe(x, ys[0], 30), rack(x, ys[1], 74, 60), phone(x, ys[2])]
+    for y, label in zip(ys, ("diagram_country", "diagram_location", "diagram_app")):
+        parts += [txt(x + 58, y - 3, T(label), size, CHALK, "start"), txt(x + 58, y + 21, T(label + "_sub"), sub, CHALK_DIM, "start")]
+    parts += [small_key(x + 6, ys[3] - 4, .55), txt(x + 58, ys[3] - 3, T("diagram_private"), size, AMBER, "start"),
+              txt(x + 58, ys[3] + 21, T("diagram_private_sub"), sub, CHALK_DIM, "start")]
+    return parts
+
+
+def policy_page(T, x, y, w, h, row_w):
+    """The app's page of choices for a location that is free with premium: two free rows, then three premium ones."""
+    cx = x + w / 2
+    parts = [box(x, y, w, h, CHALK, 3.2), line(cx - 12, y + 14, cx + 12, y + 14), line(cx - 18, y + h - 14, cx + 18, y + h - 14),
+             txt(cx, y + 48, T("diagram_screen_1"), 15, CHALK_DIM), txt(cx, y + 72, T("diagram_screen_2"), 19, CHALK)]
+    ry = y + 92
+    for row in POLICY_ROWS:
+        if row is None:
+            parts.append(txt(cx, ry + 18, T("diagram_or"), 15, CHALK_DIM))
+            ry += 30
+            continue
+        label, sub, chalk = row
+        parts += [box(cx - row_w / 2, ry, row_w, 48, chalk, 2.6), txt(cx, ry + 21, T(label), 17, chalk),
+                  txt(cx, ry + 40, T(sub), 13, CHALK_DIM)]
+        ry += 58
+    return parts
+
+
+def policies_options() -> None:
+    T, _ = strings(POLICIES[1])
+
+    # --- left to right: what decides, beside the app's page of choices ---------------------------
+    seed(47)
+    W, H = 920, 520
+    X, YS = 78, (96, 198, 304, 418)
+    XP, YP, WP, HP = 560, 26, 300, 446
+    parts = [txt(X - 30, 44, T("diagram_decides"), 18, CHALK_DIM, "start")]
+    parts += policy_inputs(T, X, YS, 20, 15)
+    parts += policy_page(T, XP, YP, WP, HP, 244)
+    for y in YS[:3]:
+        parts.append(elbow([(452, y), (500, y), (500, 248), (XP - 14, 248)], MINT))
+    parts.append(txt(W / 2, H - 20, T("diagram_caption"), 19, AMBER))
+    render("policies-options", *POLICIES, W, H, "vhPoliciesOptions", parts)
+
+    # --- top to bottom: what decides, then the page below it -------------------------------------
+    seed(47)
+    W, H = 560, 1010
+    X, YS = 64, (96, 198, 304, 418)
+    XP, YP, WP, HP = 120, 500, 320, 446
+    parts = [txt(X - 30, 44, T("diagram_decides"), 18, CHALK_DIM, "start")]
+    parts += policy_inputs(T, X, YS, 20, 15)
+    parts += policy_page(T, XP, YP, WP, HP, 256)
+    parts.append(arrow(W / 2, 452, W / 2, YP - 14, MINT))
+    parts.append(txt(W / 2, H - 22, T("diagram_caption"), 18, AMBER))
+    render("policies-options-tall", *POLICIES, W, H, "vhPoliciesOptionsTall", parts)
+
+
 if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
@@ -1145,3 +1218,4 @@ if __name__ == "__main__":
     block_quic()
     farm_token_key()
     farm_token_new()
+    policies_options()

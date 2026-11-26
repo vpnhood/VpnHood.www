@@ -6,8 +6,11 @@ theme. The light theme needs the same artwork reading the other way round, so th
 generates a `<name>-light.<ext>` sibling for each one; /assets/js/theme.js and
 _sass/theme/_light.scss point at those when <html data-theme="light">.
 
-THIS SCRIPT IS THE ONLY WAY LIGHT ART IS PRODUCED. Every `*-light.*` file under
-assets/images/ is generated output. Do not hand-author one, do not hand-edit one, and do
+The user-approved banner-guardian-light.webp is a separately drawn polar portrait exported
+through the guardian pipeline; this script must not recolour or replace it.
+
+THIS SCRIPT PRODUCES THE LIGHT DECORATIVE BACKDROPS. Registered `*-light.*` files under
+assets/images/ are generated output. Do not hand-author one, do not hand-edit one, and do
 not reach for a per-image CSS filter instead — the next run overwrites hand edits, and
 `filter: invert()` on this art turns dark indigo into pale yellow. To give a dark image a
 light counterpart:
