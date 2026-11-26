@@ -1,6 +1,6 @@
 {
   "meta_title": "关于 VpnHood!：不可检测的开源科学上网 VPN",
-  "meta_description": "VpnHood! 为何而生、有何不同、由谁打造：一款从零构建、专为隐私而设计的科学上网 VPN，可抵御 DPI 与网络审查，开源且经过独立审计。",
+  "meta_description": "VpnHood! 为何而生、有何不同、由谁打造：一款从零构建、专为隐私而设计的科学上网 VPN，可抵御 DPI，开源且经过独立审计。",
   "eyebrow": "关于我们",
   "page_title": "关于 VpnHood!",
   "page_desc": "我们打造的 VPN 就连您在使用 VPN 这件事也能替您保密，能抵御深度包检测（DPI），并突破网络审查和防火墙。而且一切都摆在明处：代码公开，已通过独立审计，任何人都能在自己的服务器上运行它。",
