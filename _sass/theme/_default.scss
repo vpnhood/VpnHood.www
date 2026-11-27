@@ -713,7 +713,8 @@ pre[tabindex]:focus-visible{
 [dir="rtl"] .vh-offcanvas-nav .vh-submenu-toggle[aria-expanded="true"]::after{
     transform: rotate(90deg);
 }
-.vh-offcanvas-nav .vh-submenu{
+// ul: [dir="rtl"] .list-unstyled zeroes padding-right with the same weight, later in the file
+.vh-offcanvas-nav ul.vh-submenu{
     padding-inline-start: 0.85rem; // submenu indent follows the reading direction
 }
 .vh-offcanvas-nav .vh-submenu li a{
@@ -725,6 +726,12 @@ pre[tabindex]:focus-visible{
 .vh-offcanvas-nav .vh-submenu li a:hover,
 .vh-offcanvas-nav .vh-submenu li a:focus{
     color: var(--purple-120);
+}
+// A desktop mega menu's columns stay apart on a phone: a line opens each group after the first.
+.vh-offcanvas-nav .vh-submenu .vh-submenu-group{
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--vh-border);             // plainer than the rows' hairlines, even on a dim screen
 }
 // Match the old Helix backdrop look (blurred, slightly darker than Bootstrap's default)
 .offcanvas-backdrop{
