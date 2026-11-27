@@ -1106,24 +1106,37 @@ def self_hosted_docs() -> None:
     a.render("docs", product="self-hosted-vpn")
 
 
+def portal(a: Art, cx, cy, rx=46, ry=138) -> None:
+    """A portal seen from the side: a lit ring, glowing inside."""
+    e = f'cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}"'
+    a.add(f'<ellipse cx="{cx}" cy="{cy}" rx="{rx * 2.2:.0f}" ry="{ry * 1.2:.0f}" fill="{a.url("Glow")}" filter="{a.url("Softer")}" opacity=".5"/>',
+          f'<ellipse {e} fill="{INDIGO_DEEP}"/>',
+          f'<ellipse cx="{cx}" cy="{cy}" rx="{rx * .6:.0f}" ry="{ry * .78:.0f}" fill="{a.url("Glow")}" opacity=".6"/>',
+          f'<ellipse {e} fill="none" stroke="{a.url("Rim")}" stroke-width="40" filter="{a.url("Soft")}" opacity=".5"/>',
+          f'<ellipse {e} fill="none" stroke="{a.url("Rim")}" stroke-width="24"/>')
+
+
 def how_it_works() -> None:
-    """How it works: a phone's traffic goes through the tunnel to the server, and out to the internet from there."""
+    """How it works: the phone's traffic goes into one portal and comes out of another, on the internet's
+    side; what lies between is out of sight."""
     a = Art("dhHow")
     a.ambient(cy=500)
-    # the internet, which only the server reaches
-    a.solid('<circle cx="770" cy="250" r="125" {fill} {stroke}/>', width=10)
+    y = 505
+    phone(a, 50, 345, 170, 320, lit_rows=2)
+    for x, w in ((242, 44), (306, 76)):
+        a.bar(x, y - 12, w, 24, fill=MINT, opacity=.95, glow=True)
+    portal(a, 400, y)
+    # the way between the portals: a faint trail of dots, nobody's to follow
+    a.add(f'<path d="M 452 {y - 40} Q 505 {y - 190} 558 {y - 40}" fill="none" stroke="{LILAC}" stroke-opacity=".35" '
+          f'stroke-width="9" stroke-dasharray="1 26" stroke-linecap="round"/>')
+    portal(a, 610, y)
+    for x, w in ((612, 76), (704, 44)):
+        a.bar(x, y - 12, w, 24, fill=MINT, opacity=.95, glow=True)
+    # the internet
+    a.solid(f'<circle cx="862" cy="{y}" r="104" {{fill}} {{stroke}}/>', width=10)
     grid = f'stroke="{LILAC}" stroke-opacity=".3" stroke-width="6" fill="none"'
-    a.add(f'<ellipse cx="770" cy="250" rx="52" ry="123" {grid}/>',
-          f'<path d="M 645 250 H 895" {grid}/>')
-    a.add(f'<path d="M 770 390 V 470" stroke="{MINT}" stroke-width="10" stroke-dasharray="2 22" stroke-linecap="round" opacity=".9"/>')
-    phone(a, 100, 330, 200, 380, lit_rows=2)
-    # the tunnel, with packets on their way
-    a.lane(290, 562, 330, 96)
-    for n, (x, w) in enumerate(((340, 46), (418, 58), (510, 70))):
-        a.bar(x, 600, w, 20, fill=MINT, opacity=.55 + .2 * n, glow=(n == 2))
-    a.server_unit(600, 490, 300, 120, rim=True, lit=True)
-    a.server_unit(600, 630, 300, 120, rim=False, lit=False)
-    a.ambient(cy=880, rx=330, ry=60, opacity=.5)
+    a.add(f'<ellipse cx="862" cy="{y}" rx="44" ry="102" {grid}/>', f'<path d="M 758 {y} H 966" {grid}/>')
+    a.ambient(cy=900, rx=330, ry=60, opacity=.5)
     a.render("how-it-works", product="self-hosted-vpn")
 
 

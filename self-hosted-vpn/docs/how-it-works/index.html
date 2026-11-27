@@ -34,10 +34,22 @@ extra_css:
 <h2 id="device">{{ t.device_title }}</h2>
 <p>{{ t.device_capture }}</p>
 <p>{% include copy.html s=t.device_split %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/how-it-works-device.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/how-it-works-device-tall.svg %}
+</figure>
 <p>{{ t.device_dns }}</p>
 
 <h2 id="tunnel">{{ t.tunnel_title }}</h2>
 <p>{% include copy.html s=t.tunnel_tls %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/how-it-works-tunnel.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/how-it-works-tunnel-tall.svg %}
+</figure>
 <p>{% include copy.html s=t.tunnel_cert %}</p>
 <p>{% include copy.html s=t.tunnel_protocols %}</p>
 <p>{{ t.tunnel_probe }}</p>
@@ -45,6 +57,12 @@ extra_css:
 <h2 id="tcp">{{ t.tcp_title }}</h2>
 <p>{{ t.tcp_packets }}</p>
 <p>{% include copy.html s=t.tcp_cloak %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/how-it-works-tcp.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/how-it-works-tcp-tall.svg %}
+</figure>
 <p>{{ t.tcp_forced }}</p>
 <p>{% include copy.html s=t.tcp_detection %}</p>
 
@@ -56,9 +74,21 @@ extra_css:
 <p>{{ t.server_filter }}</p>
 <p>{% include copy.html s=t.server_ports %}</p>
 <p>{% include copy.html s=t.server_manager %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/how-it-works-server.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/how-it-works-server-tall.svg %}
+</figure>
 
 <h2 id="access-key">{{ t.key_title }}</h2>
 <p>{% include copy.html s=t.key_desc %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/how-it-works-key.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/how-it-works-key-tall.svg %}
+</figure>
 
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>

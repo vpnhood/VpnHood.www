@@ -5,7 +5,12 @@ Writes, under `_includes/diagrams/`:
 
   server-two-ips.svg, server-two-ips-tall.svg    /vpnhood-server/docs/ip-blocking/
   reverse-proxy.svg, reverse-proxy-tall.svg      /vpnhood-server/docs/reverse-proxy/
-  how-it-works.svg, how-it-works-tall.svg        /self-hosted-vpn/docs/how-it-works/
+  how-it-works.svg, how-it-works-tall.svg,
+  how-it-works-device.svg, how-it-works-device-tall.svg,
+  how-it-works-tunnel.svg, how-it-works-tunnel-tall.svg,
+  how-it-works-tcp.svg, how-it-works-tcp-tall.svg,
+  how-it-works-server.svg, how-it-works-server-tall.svg,
+  how-it-works-key.svg, how-it-works-key-tall.svg  /self-hosted-vpn/docs/how-it-works/
   cloak-traffic.svg, cloak-traffic-tall.svg,
   block-quic.svg, block-quic-tall.svg            /self-hosted-vpn/docs/vpn-detection/
   dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
@@ -57,8 +62,17 @@ Each diagram states one idea and no more:
                   websites can flag is never the one in the access keys.
   reverse-proxy   apps that find the proxy through your domain go around a blocked server
                   address.
-  how-it-works    devices reach your server through an encrypted tunnel, and websites see
-                  your server, not your users.
+  how-it-works    a firewall knows an ordinary VPN protocol by the ridges of its tunnel and
+                  stops it; VpnHood's smooth tunnel, built like HTTPS, goes through to your
+                  server and on to websites.
+  how-it-works-device  one app's traffic goes into the tunnel; another app, left out by split
+                  tunneling, goes straight to the internet and never reaches your server.
+  how-it-works-tunnel  the tunnel cut open: TLS around WebSocket messages around the traffic.
+  how-it-works-tcp  the same TCP twice: as packets your server passes on, and in Cloak Mode as
+                  a tunnel per connection, each opened again by your server.
+  how-it-works-server  an app connects, and a managed server calls MANAGER to check the key;
+                  MANAGER never calls the server.
+  how-it-works-key  the three things an access key holds.
   cloak-traffic   over time, a server in Cloak Mode has a web server's connections, short
                   ones for browsing and a long one for a download, and not one long tunnel.
                   The first two lanes are alike and never identical, as the page says.
@@ -506,63 +520,357 @@ def reverse_proxy() -> None:
 
 
 # ===========================================================================
-# how-it-works - the tunnel to your server, and on from there
+# how-it-works - an ordinary VPN protocol stops at a firewall, VpnHood's tunnel goes through
 # ===========================================================================
 HOW = ("self_hosted_vpn_docs_how_it_works", "vh_how_en")
+
+
+def other_server(cx, cy, w, h):
+    """Somebody else's VPN server: the rack, dim and without VpnHood's hood."""
+    x, y = cx - w / 2, cy - h / 2
+    out = [box(x, y, w, h, CHALK_DIM, 2.8)]
+    pad = 11
+    uh = (h - 3 * pad) / 2
+    for i in range(2):
+        my = y + pad + i * (uh + pad) + uh / 2
+        out += [box(x + pad, y + pad + i * (uh + pad), w - 2 * pad, uh, CHALK_DIM, 2.0),
+                dot(x + pad + 12, my, 3.2, CHALK_DIM), line(x + w - pad - 34, my, x + w - pad - 10, my)]
+    return "".join(out)
+
+
+def ridged_tunnel(x1, x2, y, colour, half=10, pitch=9, depth=7):
+    """An ordinary protocol's tunnel: its walls ridged, a form of its own that a firewall knows."""
+    n = 2 * max(2, round((x2 - 6 - x1) / (2 * pitch)))
+    step = (x2 - 6 - x1) / n
+
+    def wall(sign):
+        d = "M %.1f %.1f" % (x1, y + sign * half)
+        for k in range(1, n + 1):
+            d += " L %.1f %.1f" % (x1 + k * step, y + sign * (half + (depth if k % 2 else 0)))
+        return ('<path d="%s" fill="none" stroke="%s" stroke-width="2.2" stroke-linejoin="round" '
+                'stroke-linecap="round"/>' % (d, colour))
+
+    return wall(-1) + wall(1) + arrow(x1 + 10, y, x2, y, CHALK)
+
+
+def wall_gap(xf, wall_w, y, half=15):
+    """Where a tunnel goes through the wall: the bricks stop either side of it."""
+    return ('<rect x="%.1f" y="%.1f" width="%d" height="%d" fill="%s"/>'
+            % (xf - wall_w / 2 - 2, y - half, wall_w + 4, 2 * half, BOARD))
 
 
 def how_it_works() -> None:
     T, _ = strings(HOW[1])
 
-    # --- left to right: users, the tunnel, the server, websites -------------------------
+    # --- left to right: one firewall across both lanes; only VpnHood's tunnel goes on ----------
     seed(17)
-    W, H = 920, 300
-    Y = 92
-    XU, XS, XW = 120, 460, 800
-    pl, pr = XS - RACK_W / 2, XS + RACK_W / 2
-    parts = [people(XU, Y), rack(XS, Y, RACK_W, RACK_H), globe(XW, Y)]
-    # the tunnel: a double line around the arrow, as on the guides' pictures. The data inside is
-    # chalk, as in cloak-mode's tunnels: in the lines' own mint, the three read as one stripe
-    x1, x2 = XU + 58, pl - 14
-    parts += [line(x1, Y - 11, x2 - 6, Y - 11, MINT, 2.0), line(x1, Y + 11, x2 - 6, Y + 11, MINT, 2.0),
-              arrow(x1 + 10, Y, x2, Y, CHALK)]
-    m = (x1 + x2) / 2
-    parts += [txt(m, Y - 26, T("diagram_tunnel"), 20, MINT),
-              txt(m, Y + 40, T("diagram_tunnel_sub"), 17, CHALK_DIM)]
-    x1, x2 = pr + 14, XW - 56
-    m = (x1 + x2) / 2
-    parts += [arrow(x1, Y, x2, Y, VIOLET), txt(m, Y - 18, T("diagram_out"), 20, VIOLET)]
-    for x, name, sub in ((XU, "diagram_users", "diagram_users_sub"),
-                         (XS, "diagram_server", "diagram_server_sub"),
-                         (XW, "diagram_websites", None)):
-        parts.append(txt(x, Y + 98, T(name), 24))
-        if sub:
-            parts.append(txt(x, Y + 124, T(sub), 16, CHALK_DIM))
-    parts.append(txt(W / 2, H - 30, T("diagram_caption"), 20, AMBER))
+    W, H = 920, 484
+    XP, XF, XS, XW, WALL = 92, 456, 662, 836, 52
+    Y1, Y2 = 146, 314
+    a, b = XP + PHONE_W / 2 + 12, XF - WALL / 2 - 3         # the device to the wall
+    c = XF + WALL / 2 + 10                                  # the wall's far side
+    mid = (a + b) / 2
+    top = (XP - PHONE_W / 2 + b) / 2                        # a lane's name, above its phone and tunnel
+    parts = [filter_wall(XF, 64, 396, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 - 4),
+             txt(XF, 44, T("diagram_firewall"), 19)]
+    # an ordinary VPN protocol: the firewall knows its form, and stops it
+    parts += [phone(XP, Y1), ridged_tunnel(a, b, Y1, CHALK_DIM),
+              cross(XF, Y1, 14, CORAL, 5.0), other_server(XS, Y1, 92, 70),
+              arrow(c, Y1, XS - 46 - 14, Y1, CHALK_DIM, 2.6, "9 11"),
+              txt(top, Y1 - 62, T("diagram_other"), 22), txt(mid, Y1 + 48, T("diagram_other_sub"), 18, CHALK_DIM),
+              txt(c + 2, Y1 + 66, T("diagram_other_result"), 19, CORAL, "start")]
+    # VpnHood: a smooth tunnel, built like HTTPS; it goes through, to your server and on
+    d = XS - 52 - 14
+    parts += [phone(XP, Y2), wall_gap(XF, WALL, Y2), tunnel(a, Y2, d, Y2),
+              rack(XS, Y2, 104, 84), arrow(XS + 52 + 14, Y2, XW - 42 - 14, Y2, VIOLET), globe(XW, Y2),
+              txt(top, Y2 - 62, T("diagram_vpnhood"), 22), txt(mid, Y2 + 48, T("diagram_tunnel_sub"), 18, CHALK_DIM),
+              txt(XS, Y2 + 78, T("diagram_server"), 22), txt(XS, Y2 + 102, T("diagram_server_sub"), 16, CHALK_DIM),
+              txt(XW, Y2 + 78, T("diagram_websites"), 20)]
+    parts.append(txt(W / 2, H - 28, T("diagram_caption"), 20, AMBER))
     render("how-it-works", *HOW, W, H, "vhHow", parts)
 
-    # --- top to bottom: icons down the left, their labels beside them ----------------
+    # --- on a phone: the same lanes, one under the other, each with its own stretch of wall -----
     seed(17)
-    W, H = 560, 640
-    X, TX = 104, 186
-    YU, YS, YW = 84, 316, 530
-    pt, pb = YS - RACK_H / 2, YS + RACK_H / 2
-    parts = [people(X, YU), rack(X, YS, RACK_W, RACK_H), globe(X, YW)]
-    y1, y2 = YU + 44, pt - 14
-    parts += [line(X - 11, y1, X - 11, y2 - 6, MINT, 2.0), line(X + 11, y1, X + 11, y2 - 6, MINT, 2.0),
-              arrow(X, y1 + 10, X, y2, CHALK)]
-    m = (y1 + y2) / 2
-    parts += [txt(TX, m - 2, T("diagram_tunnel"), 21, MINT, "start"),
-              txt(TX, m + 24, T("diagram_tunnel_sub"), 17, CHALK_DIM, "start")]
-    y1, y2 = pb + 14, YW - 56
-    parts += [arrow(X, y1, X, y2, VIOLET), txt(TX, (y1 + y2) / 2 + 7, T("diagram_out"), 21, VIOLET, "start")]
-    for y, name, sub in ((YU, "diagram_users", "diagram_users_sub"),
-                         (YS, "diagram_server", "diagram_server_sub")):
-        parts += [txt(TX, y - 2, T(name), 24, CHALK, "start"),
-                  txt(TX, y + 24, T(sub), 16, CHALK_DIM, "start")]
-    parts.append(txt(TX, YW + 8, T("diagram_websites"), 24, CHALK, "start"))
-    parts.append(txt(W / 2, H - 32, T("diagram_caption"), 19, AMBER))
+    W, H = 560, 690
+    XP, XF, XS, WALL = 62, 286, 476, 48
+    Y1, Y2 = 176, 426
+    a, b = XP + PHONE_W / 2 + 12, XF - WALL / 2 - 3
+    c = XF + WALL / 2 + 10
+    mid = (a + b) / 2
+    parts = [filter_wall(XF, y - 60, y + 60, WALL, 20) for y in (Y1, Y2)]
+    parts.append(txt(XF, 42, T("diagram_firewall"), 17))
+    parts += [phone(XP, Y1), ridged_tunnel(a, b, Y1, CHALK_DIM),
+              cross(XF, Y1, 14, CORAL, 5.0), other_server(XS, Y1, 84, 66),
+              arrow(c, Y1, XS - 42 - 14, Y1, CHALK_DIM, 2.6, "9 11"),
+              txt(W / 2, Y1 - 84, T("diagram_other"), 22), txt(W / 2, Y1 + 88, T("diagram_other_sub"), 17, CHALK_DIM),
+              txt(W / 2, Y1 + 116, T("diagram_other_result"), 19, CORAL)]
+    d = XS - 46 - 14
+    YG = Y2 + 142                                           # websites, below your server
+    parts += [phone(XP, Y2), wall_gap(XF, WALL, Y2), tunnel(a, Y2, d, Y2), rack(XS, Y2, 92, 76),
+              arrow(XS, Y2 + 38 + 14, XS, YG - 32 - 14, VIOLET), globe(XS, YG, 32),
+              txt(W / 2 - 60, Y2 - 84, T("diagram_vpnhood"), 22),
+              txt(W - 28, Y2 - 70, T("diagram_server"), 19, CHALK, "end"),
+              txt(W - 28, Y2 - 50, T("diagram_server_sub"), 14, CHALK_DIM, "end"),
+              txt(mid + 24, Y2 + 88, T("diagram_tunnel_sub"), 17, CHALK_DIM),
+              txt(XS - 48, YG + 7, T("diagram_websites"), 19, CHALK, "end")]
+    parts.append(txt(W / 2, H - 28, T("diagram_caption"), 16, AMBER))
     render("how-it-works-tall", *HOW, W, H, "vhHowTall", parts)
+
+
+# ===========================================================================
+# how-it-works-device - what the app takes into the tunnel, and what split tunneling leaves out
+# ===========================================================================
+def other_app(cx, cy, s=52):
+    """Another app, one the user leaves out: a plain box with a ring."""
+    return box(cx - s / 2, cy - s / 2, s, s, CHALK_DIM, 2.8) + ring(cx, cy, 9, CHALK_DIM, 2.4)
+
+
+def how_device() -> None:
+    T, _ = strings(HOW[1])
+
+    # --- left to right: one app's traffic into the tunnel, another's straight out -----------------
+    seed(61)
+    W, H = 920, 470
+    PX0, PX1, PY0, PY1 = 48, 218, 66, 376                   # the device, tall enough for two apps
+    XA, Y1, Y2 = 133, 142, 300
+    XS, XW = 600, 836
+    parts = [box(PX0, PY0, PX1 - PX0, PY1 - PY0, CHALK, 3.2), line(XA - 9, PY0 + 12, XA + 9, PY0 + 12),
+             line(XA - 13, PY1 - 12, XA + 13, PY1 - 12), video_app(XA, Y1), other_app(XA, Y2)]
+    a, d = PX1 + 10, XS - 52 - 14
+    parts += [arrow(XA + 34, Y1, PX1 - 6, Y1, MINT, 3.0), tunnel(a, Y1, d, Y1), rack(XS, Y1, 104, 84),
+              arrow(XS + 52 + 14, Y1, XW - 42 - 14, Y1, VIOLET), globe(XW, Y1),
+              elbow([(XA + 34, Y2), (XW, Y2), (XW, Y1 + 42 + 14)], VIOLET)]
+    m1, m2 = (a + d) / 2, (a + XW) / 2
+    parts += [txt(m1, Y1 - 26, T("diagram_split_in"), 20, MINT), txt(m1, Y1 + 40, T("diagram_split_in_sub"), 17, CHALK_DIM),
+              txt(m2, Y2 - 18, T("diagram_split_out"), 20), txt(m2, Y2 + 32, T("diagram_split_out_sub"), 17, CHALK_DIM),
+              txt(XS, Y1 + 78, T("diagram_server"), 22), txt(XS, Y1 + 102, T("diagram_server_sub"), 16, CHALK_DIM),
+              txt(XW, Y1 - 60, T("diagram_websites"), 20), txt(XA, PY1 + 32, T("diagram_device"), 20)]
+    parts.append(txt(W / 2, H - 26, T("diagram_split_caption"), 20, AMBER))
+    render("how-it-works-device", *HOW, W, H, "vhHowDevice", parts, key="diagram_split")
+
+    # --- top to bottom: the device on its side, an app's lane down from each end --------------------
+    seed(61)
+    W, H = 560, 806
+    X1, X2, YA = 130, 470, 128                              # wide apart: the label between their lanes runs long
+    YS, XG, YG = 398, 300, 664
+    parts = [box(40, 70, 480, 116, CHALK, 3.2), line(52, YA - 11, 52, YA + 11), video_app(X1, YA), other_app(X2, YA),
+             txt(W / 2, 44, T("diagram_device"), 19),
+             tunnel(X1, 198, X1, YS - 42 - 14), rack(X1, YS, 104, 84),
+             elbow([(X1, YS + 42 + 14), (X1, YG), (XG - 38 - 14, YG)], VIOLET), globe(XG, YG, 38),
+             elbow([(X2, 198), (X2, YG), (XG + 38 + 14, YG)], VIOLET)]
+    parts += [txt(X1 + 28, 262, T("diagram_split_in"), 19, MINT, "start"),
+              txt(X1 + 28, 286, T("diagram_split_in_sub"), 15, CHALK_DIM, "start"),
+              txt(X1 + 66, YS - 2, T("diagram_server"), 20, CHALK, "start"),
+              txt(X1 + 66, YS + 22, T("diagram_server_sub"), 14, CHALK_DIM, "start"),
+              txt((X1 + X2) / 2, 520, T("diagram_split_out"), 16),
+              txt((X1 + X2) / 2, 544, T("diagram_split_out_sub"), 15, CHALK_DIM),
+              txt(XG, YG + 66, T("diagram_websites"), 20)]
+    parts.append(txt(W / 2, H - 28, T("diagram_split_caption"), 16, AMBER))
+    render("how-it-works-device-tall", *HOW, W, H, "vhHowDeviceTall", parts, key="diagram_split")
+
+
+# ===========================================================================
+# how-it-works-tunnel - what the tunnel is made of: TLS around WebSocket messages around the traffic
+# ===========================================================================
+def band(x, y, w, h, colour, opacity="0.10"):
+    """One layer of the tunnel: a shaded band with round ends, the next layer inside it."""
+    return ('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="%.1f" fill="%s" fill-opacity="%s" '
+            'stroke="%s" stroke-width="2.6"/>' % (j(x, 0.6), j(y, 0.6), w, h, min(w, h) / 2, colour, opacity, colour))
+
+
+def leader(x1, y1, x2, y2, colour):
+    """From a label to the layer it names, a dot where it lands."""
+    return line(x1, y1, x2, y2, colour, 2.0) + dot(x2, y2, 3.6, colour)
+
+
+def how_tunnel() -> None:
+    T, _ = strings(HOW[1])
+
+    # --- left to right: the app, the tunnel cut open, your server ----------------------------------
+    seed(67)
+    W, H = 920, 346
+    XP, XS, Y = 124, 820, 172                               # the phone in from the edge: its label runs long
+    x1, x2 = XP + PHONE_W / 2 + 14, XS - 52 - 14
+    parts = [phone(XP, Y), rack(XS, Y, 104, 84),
+             band(x1, Y - 44, x2 - x1, 88, MINT, "0.07"), band(x1 + 40, Y - 24, x2 - x1 - 80, 48, VIOLET, "0.12"),
+             arrow(x1 + 62, Y, x2 - 60, Y, CHALK, 3.0)]
+    parts += [txt(300, Y - 72, T("diagram_layers_tls"), 19, MINT), leader(300, Y - 64, 300, Y - 44, MINT),
+              txt(612, Y - 72, T("diagram_layers_ws"), 19, VIOLET), leader(612, Y - 64, 612, Y - 24, VIOLET),
+              txt((x1 + x2) / 2, Y + 84, T("diagram_layers_traffic"), 19), leader((x1 + x2) / 2, Y + 64, (x1 + x2) / 2, Y + 2, CHALK),
+              txt(XP, Y + 84, T("diagram_app"), 20),
+              txt(XS, Y + 80, T("diagram_server"), 22), txt(XS, Y + 104, T("diagram_server_sub"), 16, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 24, T("diagram_layers_caption"), 20, AMBER))
+    render("how-it-works-tunnel", *HOW, W, H, "vhHowTunnel", parts, key="diagram_layers")
+
+    # --- top to bottom: the tunnel stands between them, its layers named beside it -----------------
+    seed(67)
+    W, H = 560, 620
+    X, YP, YS, TX = 110, 84, 508, 198
+    y1, y2 = YP + 46 + 14, YS - 42 - 14
+    parts = [phone(X, YP), rack(X, YS, 104, 84),
+             band(X - 44, y1, 88, y2 - y1, MINT, "0.07"), band(X - 24, y1 + 34, 48, y2 - y1 - 68, VIOLET, "0.12"),
+             arrow(X, y1 + 52, X, y2 - 50, CHALK, 3.0)]
+    parts += [txt(TX, 222, T("diagram_layers_tls"), 17, MINT, "start"), leader(TX - 8, 216, X + 44, 216, MINT),
+              txt(TX, 302, T("diagram_layers_ws"), 17, VIOLET, "start"), leader(TX - 8, 296, X + 24, 296, VIOLET),
+              txt(TX, 382, T("diagram_layers_traffic"), 17, CHALK, "start"), leader(TX - 8, 376, X + 2, 376, CHALK),
+              txt(X + 52, YP + 6, T("diagram_app"), 20, CHALK, "start"),
+              txt(X + 70, YS - 2, T("diagram_server"), 21, CHALK, "start"),
+              txt(X + 70, YS + 22, T("diagram_server_sub"), 14, CHALK_DIM, "start")]
+    parts.append(txt(W / 2, H - 26, T("diagram_layers_caption"), 17, AMBER))
+    render("how-it-works-tunnel-tall", *HOW, W, H, "vhHowTunnelTall", parts, key="diagram_layers")
+
+
+# ===========================================================================
+# how-it-works-tcp - TCP as packets your server passes on, or one request per connection
+# ===========================================================================
+def packets_on(x1, x2, y, count):
+    """Packets going on from your server: the arrow out, with the same packets on it."""
+    out = [arrow(x1, y, x2, y, VIOLET)]
+    span = x2 - 30 - x1
+    for n in range(count):
+        x = x1 + (n + 0.5) * span / count
+        out.append('<rect x="%.1f" y="%.1f" width="12" height="12" rx="2" fill="%s"/>' % (j(x - 6, 0.8), j(y - 6, 0.8), CHALK))
+    return "".join(out)
+
+
+def tcp_lanes(xp, xs, xw, y1, y2, rack_w, rack_h, globe_r, packets, on):
+    """The same traffic twice: packets in one tunnel, passed on as they are; and a tunnel of its own
+    for each connection, with a connection of the server's own on the far side."""
+    a, d = xp + PHONE_W / 2 + 12, xs - rack_w / 2 - 14
+    e, f = xs + rack_w / 2 + 14, xw - globe_r - 14
+    out = [phone(xp, y1), packet_tunnel(a, d, y1, 19, packets), rack(xs, y1, rack_w, rack_h),
+           packets_on(e, f, y1, on), globe(xw, y1, globe_r),
+           phone(xp, y2), rack(xs, y2, rack_w, rack_h), globe(xw, y2, globe_r)]
+    for dy, tip in ((-17, -11), (17, 11)):
+        out += [pipe(a, d, y2 + dy, 10), arrow(a + 16, y2 + dy, d - 8, y2 + dy, CHALK, 2.8),
+                arrow(e, y2 + dy, f, y2 + tip, VIOLET, 2.8)]
+    return out
+
+
+def how_tcp() -> None:
+    T, _ = strings(HOW[1])
+    lanes = (("diagram_tcp_packets", "diagram_tcp_packets_sub", "diagram_tcp_packets_out"),
+             ("diagram_tcp_requests", "diagram_tcp_requests_sub", "diagram_tcp_requests_out"))
+
+    # --- left to right: a device, your server and websites, twice -----------------------------------
+    seed(71)
+    W, H = 920, 500
+    XP, XS, XW = 84, 540, 830
+    Y1, Y2 = 160, 340
+    left = (XP + PHONE_W / 2 + 12 + XS - 66) / 2
+    right = (XS + XW) / 2 + 14
+    parts = tcp_lanes(XP, XS, XW, Y1, Y2, 104, 84, 42, 9, 3)
+    parts += [txt(28, 46, T("diagram_device"), 19, CHALK, "start"), txt(XS, 46, T("diagram_server"), 19),
+              txt(W - 28, 46, T("diagram_websites"), 19, CHALK, "end")]
+    for y, (name, sub, out) in zip((Y1, Y2), lanes):
+        parts += [txt(left, y - 48, T(name), 22), txt(left, y + 56, T(sub), 17, CHALK_DIM),
+                  txt(right, y + 68, T(out), 17, VIOLET)]
+    parts.append(txt(W / 2, H - 28, T("diagram_tcp_caption"), 20, AMBER))
+    render("how-it-works-tcp", *HOW, W, H, "vhHowTcp", parts, key="diagram_tcp")
+
+    # --- on a phone: the same lanes, one under the other ---------------------------------------------
+    seed(71)
+    W, H = 560, 636
+    XP, XS, XW = 58, 296, 494
+    Y1, Y2 = 176, 430
+    parts = tcp_lanes(XP, XS, XW, Y1, Y2, 88, 76, 30, 4, 2)
+    parts += [txt(28, 42, T("diagram_device"), 17, CHALK, "start"), txt(XS, 42, T("diagram_server"), 17),
+              txt(W - 28, 42, T("diagram_websites"), 17, CHALK, "end")]
+    for y, (name, sub, out) in zip((Y1, Y2), lanes):
+        parts += [txt(W / 2, y - 78, T(name), 22), txt(W / 2, y + 78, T(sub), 16, CHALK_DIM),
+                  txt(W / 2, y + 104, T(out), 17, VIOLET)]
+    parts.append(txt(W / 2, H - 26, T("diagram_tcp_caption"), 16, AMBER))
+    render("how-it-works-tcp-tall", *HOW, W, H, "vhHowTcpTall", parts, key="diagram_tcp")
+
+
+# ===========================================================================
+# how-it-works-server - a managed server calls MANAGER; nothing calls into your server but the apps
+# ===========================================================================
+def how_server() -> None:
+    T, _ = strings(HOW[1])
+
+    # --- left to right: an app connects, and your server asks MANAGER ------------------------------
+    seed(73)
+    W, H = 920, 330
+    XP, XS, XM, Y = 124, 420, 800, 124                      # the phone in from the edge: its label runs long
+    a, b = XP + PHONE_W / 2 + 12, XS - 52 - 14
+    c, d = XS + 52 + 14, XM - 38 - 14
+    parts = [phone(XP, Y), tunnel(a, Y, b, Y), rack(XS, Y, 104, 84), arrow(c, Y, d, Y, VIOLET), manager_hood(XM, Y),
+             txt((a + b) / 2, Y - 26, T("diagram_manager_connect"), 19, MINT),
+             txt((c + d) / 2, Y - 18, T("diagram_manager_check"), 19, VIOLET),
+             txt((c + d) / 2, Y + 34, T("diagram_manager_check_sub"), 17, CHALK_DIM),
+             txt(XP, Y + 84, T("diagram_app"), 20),
+             txt(XS, Y + 84, T("diagram_server"), 22), txt(XS, Y + 108, T("diagram_server_sub"), 16, CHALK_DIM),
+             txt(XM, Y + 84, T("diagram_manager_node"), 20)]
+    parts.append(txt(W / 2, H - 26, T("diagram_manager_caption"), 20, AMBER))
+    render("how-it-works-server", *HOW, W, H, "vhHowServer", parts, key="diagram_manager")
+
+    # --- top to bottom ---------------------------------------------------------------------------------
+    seed(73)
+    W, H = 560, 650
+    X, TX, YP, YS, YM = 110, 190, 84, 306, 528
+    a, b = YP + 46 + 12, YS - 42 - 14
+    c, d = YS + 42 + 14, YM - 48 - 14
+    parts = [phone(X, YP), tunnel(X, a, X, b), rack(X, YS, 104, 84), arrow(X, c, X, d, VIOLET), manager_hood(X, YM),
+             txt(X + 26, (a + b) / 2 + 6, T("diagram_manager_connect"), 18, MINT, "start"),
+             txt(X + 26, (c + d) / 2 - 6, T("diagram_manager_check"), 18, VIOLET, "start"),
+             txt(X + 26, (c + d) / 2 + 18, T("diagram_manager_check_sub"), 15, CHALK_DIM, "start"),
+             txt(X + 52, YP + 6, T("diagram_app"), 20, CHALK, "start"),
+             txt(TX, YS - 2, T("diagram_server"), 21, CHALK, "start"),
+             txt(TX, YS + 22, T("diagram_server_sub"), 14, CHALK_DIM, "start"),
+             txt(TX - 14, YM + 8, T("diagram_manager_node"), 20, CHALK, "start")]
+    parts.append(txt(W / 2, H - 26, T("diagram_manager_caption"), 16, AMBER))
+    render("how-it-works-server-tall", *HOW, W, H, "vhHowServerTall", parts, key="diagram_manager")
+
+
+# ===========================================================================
+# how-it-works-key - what an access key holds
+# ===========================================================================
+KEY_ROWS = (("diagram_key_where", "diagram_key_where_sub"), ("diagram_key_trust", "diagram_key_trust_sub"),
+            ("diagram_key_secret", None))
+
+
+def how_key() -> None:
+    T, _ = strings(HOW[1])
+
+    # --- left to right: the key, and a branch to each thing it holds --------------------------------
+    seed(79)
+    W, H = 920, 364
+    XK, YK, XB, XT = 130, 176, 268, 322
+    ys = (88, 176, 264)
+    parts = [access_key(XK, YK), txt(XK, YK + 72, T("diagram_key_name"), 22),
+             elbow([(XK + 76, YK), (XB, YK), (XB, ys[0]), (XT, ys[0])]), arrow(XK + 76, YK, XT, YK),
+             elbow([(XB, YK), (XB, ys[2]), (XT, ys[2])])]
+    for y, (name, sub) in zip(ys, KEY_ROWS):
+        parts.append(txt(XT + 20, y + (-4 if sub else 7), T(name), 21, CHALK, "start"))
+        if sub:
+            parts.append(txt(XT + 20, y + 22, T(sub), 16, CHALK_DIM, "start"))
+    parts.append(txt(W / 2, H - 26, T("diagram_key_caption"), 20, AMBER))
+    render("how-it-works-key", *HOW, W, H, "vhHowKey", parts, key="diagram_key")
+
+    # --- top to bottom: the key above, what it holds in a list under it ------------------------------
+    seed(79)
+    W, H = 560, 500
+    XK, YK, XB, XT = 120, 80, 82, 128
+    ys = (196, 290, 384)
+    parts = [access_key(XK, YK), txt(XK + 86, YK + 8, T("diagram_key_name"), 21, CHALK, "start")]
+    for y0, y in zip((YK + 34,) + ys, ys):
+        parts.append(elbow([(XB, y0), (XB, y), (XT, y)]))
+    for y, (name, sub) in zip(ys, KEY_ROWS):
+        parts.append(txt(XT + 16, y + (-4 if sub else 7), T(name), 19, CHALK, "start"))
+        if sub:
+            parts.append(txt(XT + 16, y + 20, T(sub), 15, CHALK_DIM, "start"))
+    parts.append(txt(W / 2, H - 26, T("diagram_key_caption"), 17, AMBER))
+    render("how-it-works-key-tall", *HOW, W, H, "vhHowKeyTall", parts, key="diagram_key")
+
+
+def tunnel(x1, y1, x2, y2, half=11):
+    """A tunnel leg: the double mint line of how-it-works around a chalk arrow, either way round."""
+    if y1 == y2:
+        return (line(x1, y1 - half, x2 - 6, y2 - half, MINT, 2.0) + line(x1, y1 + half, x2 - 6, y2 + half, MINT, 2.0) +
+                arrow(x1 + 10, y1, x2, y2, CHALK))
+    return (line(x1 - half, y1, x2 - half, y2 - 6, MINT, 2.0) + line(x1 + half, y1, x2 + half, y2 - 6, MINT, 2.0) +
+            arrow(x1, y1 + 10, x2, y2, CHALK))
 
 
 # ===========================================================================
@@ -1210,6 +1518,11 @@ if __name__ == "__main__":
     server_two_ips()
     reverse_proxy()
     how_it_works()
+    how_device()
+    how_tunnel()
+    how_tcp()
+    how_server()
+    how_key()
     cloak_traffic()
     dynamic_ip_follow()
     dynamic_ip_find()
