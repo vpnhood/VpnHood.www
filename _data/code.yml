@@ -143,6 +143,8 @@ old_updater_container: "VpnHoodUpdater"
 ip_connection_example: "203.0.113.10"
 ip_outgoing_example: "198.51.100.20"
 ip_range_example: "192.0.2.0/24"
+# a relay in front of the server (/self-hosted-vpn/docs/relay-server/: its copy, commands and diagrams)
+ip_relay_example: "198.51.100.40"
 # a machine's own address on a home network, from the private ranges (RFC 1918)
 ip_home_example: "192.168.1.10"
 # the WebRTC guide: a private address of each kind, a public IPv6 one (documentation range), Firefox's settings

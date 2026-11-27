@@ -36,6 +36,12 @@
   "proxy_keep": "En laissant <b>[manager_public_in_token]</b>, les adresses restent dans les clés et les applications peuvent utiliser indifféremment ces adresses ou le proxy. Le proxy permet ainsi à vos utilisateurs de rester connectés si une adresse directe est bloquée.",
   "proxy_addresses": "Vos serveurs font confiance à Cloudflare pour leur indiquer l'adresse de chaque utilisateur. Derrière un autre proxy, fournissez-leur les adresses de ce proxy dans le profil de serveur de la ferme, comme l'indique la page <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Profils de serveur</a>.",
   "proxy_farm": "Le nom de domaine pointant vers un seul serveur, toutes les connexions passant par le proxy aboutiront à ce même serveur, même au sein d'une ferme de serveurs.",
+  "relay_title": "Derrière un relais",
+  "relay_desc": "Un <a href=\"/self-hosted-vpn/docs/relay-server/\">relais</a> est une autre machine qui redirige les ports de votre serveur. Pour intégrer son adresse aux clés :",
+  "relay_step_auto": "Désactivez <b>[manager_auto_config]</b>.",
+  "relay_step_add": "Sous <b>[manager_access_points]</b>, choisissez <b>[manager_add]</b> et saisissez l'adresse du relais, avec les ports qu'il redirige.",
+  "relay_step_mode": "Définissez son <b>[manager_mode]</b> sur <b>[manager_public_in_token]</b> et son <b>[manager_listen]</b> sur <b>[manager_no]</b> : l'adresse est celle du relais, votre serveur n'écoute donc pas sur cette adresse.",
+  "relay_keys": "Conservez telles quelles les adresses propres de votre serveur. Les clés contiennent alors les deux, et chaque application se connecte par celle qui répond. Les applications qui détiennent une clé plus ancienne reçoivent la nouvelle lors de leur connexion.",
   "next_title": "Étapes suivantes",
   "next_domain": "Utiliser votre propre domaine avec un certificat approuvé"
 }

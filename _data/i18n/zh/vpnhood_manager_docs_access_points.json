@@ -36,6 +36,12 @@
   "proxy_keep": "若保持为 <b>[manager_public_in_token]</b>，地址将保留在密钥中，应用可同时使用直连地址与代理。当某个地址被封锁时，代理仍能保障用户畅连无阻。",
   "proxy_addresses": "您的服务器信任 Cloudflare 告知的每个用户的地址。若位于其他代理之后，请在集群的服务器配置方案中向服务器提供该代理的地址，如<a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">服务器配置方案</a>中所示。",
   "proxy_farm": "域名指向单一服务器，因此在多服务器集群中，所有通过代理访问的应用都会连接到同一台服务器。",
+  "relay_title": "位于中继之后",
+  "relay_desc": "<a href=\"/self-hosted-vpn/docs/relay-server/\">中继</a>是另一台为您的服务器转发端口的机器。要将其地址写入密钥：",
+  "relay_step_auto": "关闭 <b>[manager_auto_config]</b>。",
+  "relay_step_add": "在 <b>[manager_access_points]</b> 下选择 <b>[manager_add]</b>，然后输入中继的地址及其转发的端口。",
+  "relay_step_mode": "将其 <b>[manager_mode]</b> 设置为 <b>[manager_public_in_token]</b>，<b>[manager_listen]</b> 设置为 <b>[manager_no]</b>：该地址属于中继，因此您的服务器不会监听它。",
+  "relay_keys": "保持服务器自身的地址不变。这样密钥会同时包含两者，每个应用会通过其中能响应的地址连接。持有旧密钥的应用在连接时会获取新密钥。",
   "next_title": "后续步骤",
   "next_domain": "使用带有受信任证书的自定义域名"
 }

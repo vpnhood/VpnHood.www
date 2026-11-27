@@ -1157,6 +1157,40 @@ def vpn_detection() -> None:
     a.render("vpn-detection", product="self-hosted-vpn")
 
 
+def relay_server() -> None:
+    """Relay server: a relay mast with a dish facing each way, the signal coming in on one side and
+    going on out of the other, the relay server at its foot."""
+    a = Art("dhRelay")
+    a.ambient(cy=480)
+    # the mast: two legs, braced, and a light on its top
+    legs = "M 430 790 L 488 190 M 570 790 L 512 190"
+    a.add(f'<path d="{legs}" stroke="{a.url("Rim")}" stroke-width="30" filter="{a.url("Soft")}" opacity=".45" stroke-linecap="round"/>',
+          f'<path d="{legs}" stroke="{a.url("Rim")}" stroke-width="16" stroke-linecap="round"/>')
+    ys = [190 + n * 100 for n in range(7)]
+    for top, bottom in zip(ys, ys[1:]):
+        def at(y, side):
+            t = (y - 190) / 600
+            return 488 - 58 * t if side < 0 else 512 + 58 * t
+        a.add(f'<path d="M {at(top, -1):.0f} {top} L {at(bottom, 1):.0f} {bottom} M {at(top, 1):.0f} {top} L {at(bottom, -1):.0f} {bottom}" '
+              f'stroke="{LILAC}" stroke-opacity=".45" stroke-width="7"/>')
+    a.led(500, 160, r=16)
+    # the dishes, one facing each way, and the signal coming in and going on out
+    for side in (-1, 1):
+        rim, inner = 500 + side * 80, 500 + side * 30
+        bowl = f"M {rim} 270 Q {inner} 340 {rim} 410"
+        a.add(f'<path d="M {500 + side * 28} 340 H {rim - side * 12}" stroke="{LILAC}" stroke-opacity=".7" stroke-width="10"/>',
+              f'<path d="{bowl}" fill="{INDIGO_DEEP}" stroke="{a.url("Rim")}" stroke-width="14" stroke-linejoin="round"/>',
+              f'<path d="M {rim - side * 22} 340 L {rim + side * 30} 340" stroke="{MINT}" stroke-width="10" stroke-linecap="round"/>',
+              f'<circle cx="{rim + side * 34}" cy="340" r="11" fill="{MINT}"/>')
+        for n, r in enumerate((60, 105, 150)):
+            x = rim + side * 60
+            arc = f"M {x} {340 - r} A {r} {r} 0 0 {1 if side > 0 else 0} {x} {340 + r}"
+            a.add(f'<path d="{arc}" fill="none" stroke="{MINT}" stroke-width="14" stroke-linecap="round" opacity="{.95 - n * .28:.2f}"/>')
+    a.server_unit(330, 790, 340, 100, rim=True, lit=True)
+    a.ambient(cy=930, rx=330, ry=45, opacity=.45)
+    a.render("relay-server", product="self-hosted-vpn")
+
+
 def server_troubleshooting() -> None:
     """Troubleshooting a server: a server of two units, the lower one's light out, and the wrench badge over its corner."""
     a = Art("dhSrvTroubleshooting")
@@ -1196,6 +1230,7 @@ if __name__ == "__main__":
     self_hosted_docs()
     how_it_works()
     vpn_detection()
+    relay_server()
     docs()
     requirements()
     install()

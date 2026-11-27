@@ -36,6 +36,12 @@
   "proxy_keep": "Se mantenuti su <b>[manager_public_in_token]</b>, gli indirizzi rimangono nelle chiavi e le app useranno sia questi sia il proxy. In questo modo, il proxy garantisce la connessione degli utenti anche qualora un indirizzo venisse bloccato.",
   "proxy_addresses": "I tuoi server si fidano di Cloudflare quando indica l'indirizzo di ciascun utente. Dietro un altro proxy, fornisci loro gli indirizzi di quel proxy nel profilo server della farm, come mostrato in <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Profili server</a>.",
   "proxy_farm": "Il dominio punta a un unico server: in una farm con più server, tutte le app che transitano dal proxy raggiungeranno sempre lo stesso.",
+  "relay_title": "Dietro un relay",
+  "relay_desc": "Un <a href=\"/self-hosted-vpn/docs/relay-server/\">relay</a> è un'altra macchina che inoltra le porte del tuo server. Per inserire il suo indirizzo nelle chiavi:",
+  "relay_step_auto": "Disattiva <b>[manager_auto_config]</b>.",
+  "relay_step_add": "In <b>[manager_access_points]</b>, scegli <b>[manager_add]</b> e inserisci l'indirizzo del relay, con le porte che inoltra.",
+  "relay_step_mode": "Imposta <b>[manager_mode]</b> su <b>[manager_public_in_token]</b> e <b>[manager_listen]</b> su <b>[manager_no]</b>: l'indirizzo è del relay, quindi il tuo server non è in ascolto su di esso.",
+  "relay_keys": "Lascia invariati gli indirizzi del tuo server. Le chiavi contengono così entrambi, e ogni app si connette tramite quello che risponde. Le app con una chiave precedente ricevono quella nuova alla connessione.",
   "next_title": "Passaggi successivi",
   "next_domain": "Usa il tuo dominio con un certificato attendibile"
 }

@@ -36,6 +36,12 @@
   "proxy_keep": "Bleibt die Einstellung auf <b>[manager_public_in_token]</b>, verbleiben die Adressen in den Schlüsseln und die Apps nutzen sowohl diese als auch den Proxy. So bleiben Ihre Nutzer auch dann verbunden, wenn eine Adresse blockiert wird.",
   "proxy_addresses": "Ihre Server vertrauen darauf, dass Cloudflare ihnen die Adresse jedes Nutzers nennt. Hinter einem anderen Proxy geben Sie ihnen dessen Adressen im Serverprofil der Farm an, wie unter <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Serverprofile</a> beschrieben.",
   "proxy_farm": "Die Domain verweist auf einen bestimmten Server. In einer Serverfarm mit mehreren Servern erreicht daher jede App über den Proxy denselben Server.",
+  "relay_title": "Hinter einem Relay",
+  "relay_desc": "Ein <a href=\"/self-hosted-vpn/docs/relay-server/\">Relay</a> ist ein anderer Rechner, der die Ports Ihres Servers weiterleitet. So tragen Sie seine Adresse in die Schlüssel ein:",
+  "relay_step_auto": "Deaktivieren Sie <b>[manager_auto_config]</b>.",
+  "relay_step_add": "Wählen Sie <b>[manager_add]</b> unter <b>[manager_access_points]</b> und geben Sie die Adresse des Relays mit den Ports ein, die es weiterleitet.",
+  "relay_step_mode": "Setzen Sie <b>[manager_mode]</b> auf <b>[manager_public_in_token]</b> und <b>[manager_listen]</b> auf <b>[manager_no]</b>: Die Adresse gehört dem Relay, daher lauscht Ihr Server nicht darauf.",
+  "relay_keys": "Lassen Sie die eigenen Adressen Ihres Servers unverändert. Die Schlüssel enthalten dann beide, und jede App verbindet sich über diejenige, die antwortet. Apps mit einem älteren Schlüssel erhalten beim Verbinden den neuen.",
   "next_title": "Nächste Schritte",
   "next_domain": "Eigene Domain mit einem vertrauenswürdigen Zertifikat verwenden"
 }

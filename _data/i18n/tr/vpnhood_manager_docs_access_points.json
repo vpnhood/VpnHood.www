@@ -36,6 +36,12 @@
   "proxy_keep": "<b>[manager_public_in_token]</b> olarak bırakıldığında adresler anahtarlarda kalır; uygulamalar hem bu adresleri hem de proxy'yi kullanır. Böylece bir adres engellendiğinde proxy, kullanıcılarınızın bağlı kalmasını sağlar.",
   "proxy_addresses": "Sunucularınız, her kullanıcının adresini belirtme konusunda Cloudflare'e güvenir. Başka bir proxy'nin arkasındaysalar, <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Sunucu profilleri</a> sayfasında gösterildiği gibi bu proxy'nin adreslerini çiftliğin sunucu profilinde onlar için tanımlayın.",
   "proxy_farm": "Alan adı tek bir sunucuya yönlendirdiğinden, birden fazla sunucudan oluşan bir çiftlikte proxy üzerinden gelen tüm uygulamalar aynı sunucuya ulaşır.",
+  "relay_title": "Aktarıcı arkasında",
+  "relay_desc": "<a href=\"/self-hosted-vpn/docs/relay-server/\">Aktarıcı</a>, sunucunuzun portlarını yönlendiren başka bir makinedir. Adresini anahtarlara eklemek için:",
+  "relay_step_auto": "<b>[manager_auto_config]</b> seçeneğini kapatın.",
+  "relay_step_add": "<b>[manager_access_points]</b> altında <b>[manager_add]</b> seçeneğini seçin ve aktarıcının adresini, yönlendirdiği portlarla birlikte girin.",
+  "relay_step_mode": "<b>[manager_mode]</b> değerini <b>[manager_public_in_token]</b>, <b>[manager_listen]</b> değerini ise <b>[manager_no]</b> olarak ayarlayın: adres aktarıcıya aittir, bu yüzden sunucunuz bu adresi dinlemez.",
+  "relay_keys": "Sunucunuzun kendi adreslerini olduğu gibi bırakın. Böylece anahtarlar her ikisini de taşır ve her uygulama bunlardan hangisi yanıt verirse onun üzerinden bağlanır. Eski bir anahtara sahip uygulamalar bağlandıklarında yenisini alır.",
   "next_title": "Sonraki adımlar",
   "next_domain": "Güvenilir bir sertifika ile kendi alan adınızı kullanın"
 }

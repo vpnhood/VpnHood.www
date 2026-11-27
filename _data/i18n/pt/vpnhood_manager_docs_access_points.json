@@ -36,6 +36,12 @@
   "proxy_keep": "Se ficarem em <b>[manager_public_in_token]</b>, os endereços permanecem nas chaves, e as apps usam tanto esses endereços como o proxy. O proxy mantém então os seus utilizadores ligados quando um endereço é bloqueado.",
   "proxy_addresses": "Os seus servidores confiam na Cloudflare para indicar o endereço de cada utilizador. Atrás de outro proxy, indique-lhes os endereços desse proxy no perfil de servidor do farm, como mostra <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Perfis de servidor</a>.",
   "proxy_farm": "O domínio leva a um único servidor; por isso, num farm com vários servidores, todas as apps que passam pelo proxy chegam ao mesmo servidor.",
+  "relay_title": "Atrás de um retransmissor",
+  "relay_desc": "Um <a href=\"/self-hosted-vpn/docs/relay-server/\">retransmissor</a> é outra máquina que encaminha as portas do seu servidor. Para colocar o endereço dele nas chaves:",
+  "relay_step_auto": "Desative a opção <b>[manager_auto_config]</b>.",
+  "relay_step_add": "Em <b>[manager_access_points]</b>, escolha <b>[manager_add]</b> e introduza o endereço do retransmissor, com as portas que ele encaminha.",
+  "relay_step_mode": "Defina o <b>[manager_mode]</b> dele como <b>[manager_public_in_token]</b> e o <b>[manager_listen]</b> como <b>[manager_no]</b>: o endereço é do retransmissor, por isso o seu servidor não escuta nele.",
+  "relay_keys": "Mantenha os endereços do próprio servidor como estão. As chaves passam então a conter ambos, e cada app liga-se através daquele que responder. As apps com uma chave mais antiga recebem a nova quando se ligam.",
   "next_title": "Próximos passos",
   "next_domain": "Use o seu próprio domínio com um certificado fidedigno"
 }

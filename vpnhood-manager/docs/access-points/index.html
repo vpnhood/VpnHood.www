@@ -87,6 +87,15 @@ extra_css:
 <p>{% include copy.html s=t.proxy_addresses %}</p>
 <div class="vh-docs-note" role="note"><p>{{ t.proxy_farm }}</p></div>
 
+<h2 id="relay">{{ t.relay_title }}</h2>
+<p>{% include copy.html s=t.relay_desc %}</p>
+<ol>
+  <li>{% include copy.html s=t.relay_step_auto %}</li>
+  <li>{% include copy.html s=t.relay_step_add %}</li>
+  <li>{% include copy.html s=t.relay_step_mode %}</li>
+</ol>
+<p>{{ t.relay_keys }}</p>
+
 <h2 id="next-steps">{{ t.next_title }}</h2>
 <ul>
   <li><a href="{{ vh_base }}/vpnhood-manager/docs/certificates/#domain">{{ t.next_domain }}</a></li>

@@ -1,0 +1,127 @@
+---
+layout: none
+i18n: self_hosted_vpn_docs_relay_server
+nav_active: self-hosted
+extra_css:
+  - /assets/css/custom.css
+---
+{% include header.html %}
+{% assign vh_lang = page.lang | default: 'en' %}{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{%- comment -%}
+  A relay in front of a server (owner, 2026-11-26): any machine on the users' side of the firewall
+  that can still reach the server, for whatever reason it gets through (a privilege, a path the usual
+  restrictions skip), forwards the server's port. It grew from a 2023 guide sent to us, with no credit
+  on the site (owner, 2026-11-26: "dont credit him in our website"), as the setup is now our own
+  installer. It is a pass-through, never called a reverse proxy (memory server-docs-reverse-proxy-only),
+  and it lives here, not on the SERVER pages. Its shape is the owner's (2026-11-26): the relay stands on
+  the users' side, behind a gate the firewall leaves open; a satellite link never meets the firewall;
+  the address reaches users three ways: in the keys, a domain name, or typed in. A proxy is another way
+  to build the relay, on the same machine, so its board is the relay's with the proxy in its place; but
+  a SOCKS or plain HTTP proxy's request names the server in clear text, the app sends the tunnel
+  through a proxy over TCP only (ClientSessionBuilder: no UDP or QUIC when proxied), and no key can
+  carry a proxy. Its fingerprint is left out: on the users' side nothing usually looks for it, unless a
+  man-in-the-middle firewall does (owner, 2026-11-26). An app with several addresses in its key checks
+  them and connects through one that answers (ServerFinder), so the keys keep the server's own address
+  beside the relay's.
+{%- endcomment -%}
+{% capture vh_article %}
+{% include docs-hero.html art="self-hosted-vpn/docs/hero-relay-server.svg" %}
+
+<h2 id="how">{{ t.how_title }}</h2>
+<p>{{ t.how_desc }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/relay-route.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/relay-route-tall.svg %}
+</figure>
+<p>{{ t.how_sees }}</p>
+
+<h2 id="proxies">{{ t.proxy_title }}</h2>
+<p>{% include copy.html s=t.proxy_desc %}</p>
+<ul>
+  <li>{{ t.proxy_names }}</li>
+  <li>{{ t.proxy_tcp }}</li>
+  <li>{{ t.proxy_setup }}</li>
+</ul>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/relay-proxy.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/relay-proxy-tall.svg %}
+</figure>
+<p>{{ t.proxy_relay }}</p>
+
+<h2 id="satellite">{{ t.satellite_title }}</h2>
+<p>{{ t.satellite_desc }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/relay-satellite.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/relay-satellite-tall.svg %}
+</figure>
+
+<h2 id="setup">{{ t.setup_title }}</h2>
+<p>{% include copy.html s=t.setup_before %}</p>
+{%- assign vh_server_ip = site.data.code.ip_connection_example -%}
+{%- comment -%}
+  The relay's installer (owner, 2026-11-26: "create installer and uninstaller for that ... same as how we install
+  the server in Linux"): VpnHood's src/apps/Server/pub/Linux/install-relay.sh, in every server release as
+  VpnHoodServer-linux-relay.sh; it installs the vhrelay command. Why its rules are as they are is in its own
+  comments: only what is sent to the relay itself goes on (a relay that is its users' router keeps their other
+  sites), a FORWARD rule for Docker and ufw, a systemd service rather than iptables-persistent (which removes
+  ufw on Ubuntu). Tested 2026-11-26 on Ubuntu 24.04 and Debian 13 with systemd: VpnHood.www's
+  .tmp/vhtest/relay/run.sh. What the script does stays off the page (memory scripts-over-web-instructions).
+{%- endcomment -%}
+{% capture vh_relay_cmd %}sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-relay.sh; s=$(wget -qO- $u 2>/dev/null) || s=$(curl -fsSL $u) && bash -c "$s" -- -server {{ vh_server_ip }}'{% endcapture %}
+{% include terminal.html caption=t.setup_run cmd=vh_relay_cmd %}
+<p>{% include copy.html s=t.setup_what %}</p>
+<p>{% include copy.html s=t.setup_port %}</p>
+{% capture vh_manage %}sudo vhrelay status
+sudo vhrelay disable
+sudo vhrelay enable
+sudo vhrelay uninstall{% endcapture %}
+{% include terminal.html caption=t.setup_manage cmd=vh_manage %}
+
+<h2 id="address">{{ t.address_title }}</h2>
+<p>{{ t.address_desc }}</p>
+
+<h3 id="in-keys">{{ t.keys_title }}</h3>
+<p>{{ t.keys_desc }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/relay-keys.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/relay-keys-tall.svg %}
+</figure>
+{% include docs-managed.html href="/vpnhood-manager/docs/access-points/#relay" %}
+<p id="standalone">{% include copy.html s=t.keys_standalone %}</p>
+<p>{{ t.keys_existing }}</p>
+
+<h3 id="domain">{{ t.domain_title }}</h3>
+<p>{% include copy.html s=t.domain_desc %}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/relay-domain.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/relay-domain-tall.svg %}
+</figure>
+
+<h3 id="custom-address">{{ t.custom_title }}</h3>
+<p>{{ t.custom_desc }}</p>
+<figure class="vh-topology vh-topology-wide d-none d-md-block">
+  {% include diagrams/relay-custom.svg %}
+</figure>
+<figure class="vh-topology d-md-none">
+  {% include diagrams/relay-custom-tall.svg %}
+</figure>
+
+
+<h2 id="next-steps">{{ t.next_title }}</h2>
+<ul>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-addresses/#server-token">{{ t.next_token }}</a></li>
+  <li><a href="{{ vh_base }}/vpnhood-server/docs/ip-blocking/">{{ t.next_blocking }}</a></li>
+</ul>
+{% endcapture %}
+{% include docs.html article=vh_article %}
+{% include footer.html %}

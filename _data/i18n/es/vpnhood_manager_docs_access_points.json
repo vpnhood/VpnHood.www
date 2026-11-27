@@ -36,6 +36,12 @@
   "proxy_keep": "Si se mantienen como <b>[manager_public_in_token]</b>, las direcciones seguirán en las claves y las aplicaciones podrán usar tanto las direcciones directas como el proxy. Así, el proxy mantendrá conectados a los usuarios si se bloquea alguna dirección.",
   "proxy_addresses": "Tus servidores confían en que Cloudflare indique la dirección de cada usuario. Detrás de otro proxy, dales las direcciones de ese proxy en el perfil de servidor de la granja, como se explica en <a href=\"/vpnhood-manager/docs/server-profiles/#reverse-proxy\">Perfiles de servidor</a>.",
   "proxy_farm": "El dominio apunta a un único servidor; por lo tanto, en una granja con varios servidores, todas las aplicaciones que se conecten a través del proxy llegarán siempre al mismo.",
+  "relay_title": "Detrás de un repetidor",
+  "relay_desc": "Un <a href=\"/self-hosted-vpn/docs/relay-server/\">repetidor</a> es otra máquina que reenvía los puertos de tu servidor. Para incluir su dirección en las claves:",
+  "relay_step_auto": "Desactiva <b>[manager_auto_config]</b>.",
+  "relay_step_add": "En <b>[manager_access_points]</b>, elige <b>[manager_add]</b> e introduce la dirección del repetidor, con los puertos que reenvía.",
+  "relay_step_mode": "Cambia su <b>[manager_mode]</b> a <b>[manager_public_in_token]</b> y su <b>[manager_listen]</b> a <b>[manager_no]</b>: la dirección es del repetidor, así que tu servidor no escucha en ella.",
+  "relay_keys": "Deja como están las direcciones propias de tu servidor. Así, las claves incluyen ambas, y cada aplicación se conecta a través de la que responda. Las aplicaciones con una clave anterior reciben la nueva al conectarse.",
   "next_title": "Siguientes pasos",
   "next_domain": "Usa tu propio dominio con un certificado de confianza"
 }

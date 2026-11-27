@@ -11,6 +11,12 @@ Writes, under `_includes/diagrams/`:
   how-it-works-tcp.svg, how-it-works-tcp-tall.svg,
   how-it-works-server.svg, how-it-works-server-tall.svg,
   how-it-works-key.svg, how-it-works-key-tall.svg  /self-hosted-vpn/docs/how-it-works/
+  relay-route.svg, relay-route-tall.svg,
+  relay-proxy.svg, relay-proxy-tall.svg,
+  relay-satellite.svg, relay-satellite-tall.svg,
+  relay-keys.svg, relay-keys-tall.svg,
+  relay-domain.svg, relay-domain-tall.svg,
+  relay-custom.svg, relay-custom-tall.svg      /self-hosted-vpn/docs/relay-server/
   cloak-traffic.svg, cloak-traffic-tall.svg,
   block-quic.svg, block-quic-tall.svg            /self-hosted-vpn/docs/vpn-detection/
   dynamic-ip-follow.svg, dynamic-ip-follow-tall.svg,
@@ -51,7 +57,7 @@ as often as on a desk:
 Nodes are icons, not boxes: two people for your users, a rack for your server, a globe for
 websites, a cloud - the docs heroes' cloud, `tools/make-docs-heroes.py` - for a reverse
 proxy, a hood for MANAGER, a key for access keys, a signpost for what shows the way to a
-server's address, a phone for your device, and a brick wall for a network filter. A server's
+server's address, a phone for your device, and a brick wall for a firewall (DPI). A server's
 addresses are ports on its edge, in the colour of the arrow that reaches them. Example
 addresses and names are not copy: they come from `_data/code.yml`, the values the pages' own
 text uses, so the picture and the text always agree.
@@ -73,6 +79,16 @@ Each diagram states one idea and no more:
   how-it-works-server  an app connects, and a managed server calls MANAGER to check the key;
                   MANAGER never calls the server.
   how-it-works-key  the three things an access key holds.
+  relay-route     straight to your server is blocked at the firewall; the relay, on the users'
+                  side of it, has a way through, for whatever reason: a gate the firewall leaves open.
+  relay-proxy     relay-route with a proxy in the relay's place: through the same gate, but its
+                  request names your server, and anyone on the way can read it.
+  relay-satellite as relay-route, straight to your server is blocked; the relay's own link takes
+                  the tunnels up to a satellite and down to your server, over the firewall.
+  relay-keys      as relay-route, with the key in the users' place: its server address is blocked,
+                  its relay address gets through the gate; the app uses whichever answers.
+  relay-domain    the key's name leads, through its DNS record, to the relay.
+  relay-custom    the user types the relay's address into the app; the key stays as it is.
   cloak-traffic   over time, a server in Cloak Mode has a web server's connections, short
                   ones for browsing and a long one for a download, and not one long tunnel.
                   The first two lanes are alike and never identical, as the page says.
@@ -82,12 +98,12 @@ Each diagram states one idea and no more:
                   apps to the new one.
   dynamic-ip-urls MANAGER keeps a file on the web up to date, and apps that read it reach the
                   server at the new address.
-  cloak-mode      nobody outside can see into a tunnel, so a filter goes by its shape: packets
+  cloak-mode      nobody outside can see into a tunnel, so a firewall goes by its shape: packets
                   make one long tunnel bumpy, and with Cloak Mode each connection's own tunnel
                   is smooth, like web browsing. Both lanes read left to right on a phone too,
                   one under the other, because setting them side by side is the idea.
   block-quic      one app, in Cloak Mode, which can disguise TCP but not QUIC: its QUIC makes
-                  cloak-mode's bumpy tunnel and the filter can drop it, and with Block QUIC
+                  cloak-mode's bumpy tunnel and the firewall can drop it, and with Block QUIC
                   the device stops QUIC, inside the phone, and the app's TCP goes smooth.
 
   farm-token-key  MANAGER builds one farm token and every key of the farm carries it, beside a
@@ -571,19 +587,19 @@ def how_it_works() -> None:
     c = XF + WALL / 2 + 10                                  # the wall's far side
     mid = (a + b) / 2
     top = (XP - PHONE_W / 2 + b) / 2                        # a lane's name, above its phone and tunnel
-    parts = [filter_wall(XF, 64, 396, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 - 4),
-             txt(XF, 44, T("diagram_firewall"), 19)]
+    parts = [filter_wall(XF, 92, 396, WALL, 26), dragon(XF, 92), magnifier(XF, (Y1 + Y2) / 2 - 4),
+             txt(XF + 40, 76, T("diagram_firewall"), 19, CHALK, "start")]
     # an ordinary VPN protocol: the firewall knows its form, and stops it
     parts += [phone(XP, Y1), ridged_tunnel(a, b, Y1, CHALK_DIM),
               cross(XF, Y1, 14, CORAL, 5.0), other_server(XS, Y1, 92, 70),
               arrow(c, Y1, XS - 46 - 14, Y1, CHALK_DIM, 2.6, "9 11"),
-              txt(top, Y1 - 62, T("diagram_other"), 22), txt(mid, Y1 + 48, T("diagram_other_sub"), 18, CHALK_DIM),
+              txt(top - 28, Y1 - 62, T("diagram_other"), 22), txt(mid, Y1 + 48, T("diagram_other_sub"), 18, CHALK_DIM),
               txt(c + 2, Y1 + 66, T("diagram_other_result"), 19, CORAL, "start")]
     # VpnHood: a smooth tunnel, built like HTTPS; it goes through, to your server and on
     d = XS - 52 - 14
     parts += [phone(XP, Y2), wall_gap(XF, WALL, Y2), tunnel(a, Y2, d, Y2),
               rack(XS, Y2, 104, 84), arrow(XS + 52 + 14, Y2, XW - 42 - 14, Y2, VIOLET), globe(XW, Y2),
-              txt(top, Y2 - 62, T("diagram_vpnhood"), 22), txt(mid, Y2 + 48, T("diagram_tunnel_sub"), 18, CHALK_DIM),
+              txt(top - 28, Y2 - 62, T("diagram_vpnhood"), 22), txt(mid, Y2 + 48, T("diagram_tunnel_sub"), 18, CHALK_DIM),
               txt(XS, Y2 + 78, T("diagram_server"), 22), txt(XS, Y2 + 102, T("diagram_server_sub"), 16, CHALK_DIM),
               txt(XW, Y2 + 78, T("diagram_websites"), 20)]
     parts.append(txt(W / 2, H - 28, T("diagram_caption"), 20, AMBER))
@@ -598,7 +614,7 @@ def how_it_works() -> None:
     c = XF + WALL / 2 + 10
     mid = (a + b) / 2
     parts = [filter_wall(XF, y - 60, y + 60, WALL, 20) for y in (Y1, Y2)]
-    parts.append(txt(XF, 42, T("diagram_firewall"), 17))
+    parts += [dragon(XF, Y2 - 60), txt(XF, 42, T("diagram_firewall"), 17)]
     parts += [phone(XP, Y1), ridged_tunnel(a, b, Y1, CHALK_DIM),
               cross(XF, Y1, 14, CORAL, 5.0), other_server(XS, Y1, 84, 66),
               arrow(c, Y1, XS - 42 - 14, Y1, CHALK_DIM, 2.6, "9 11"),
@@ -608,7 +624,7 @@ def how_it_works() -> None:
     YG = Y2 + 142                                           # websites, below your server
     parts += [phone(XP, Y2), wall_gap(XF, WALL, Y2), tunnel(a, Y2, d, Y2), rack(XS, Y2, 92, 76),
               arrow(XS, Y2 + 38 + 14, XS, YG - 32 - 14, VIOLET), globe(XS, YG, 32),
-              txt(W / 2 - 60, Y2 - 84, T("diagram_vpnhood"), 22),
+              txt(28, Y2 - 84, T("diagram_vpnhood"), 22, CHALK, "start"),
               txt(W - 28, Y2 - 70, T("diagram_server"), 19, CHALK, "end"),
               txt(W - 28, Y2 - 50, T("diagram_server_sub"), 14, CHALK_DIM, "end"),
               txt(mid + 24, Y2 + 88, T("diagram_tunnel_sub"), 17, CHALK_DIM),
@@ -864,6 +880,13 @@ def how_key() -> None:
     render("how-it-works-key-tall", *HOW, W, H, "vhHowKeyTall", parts, key="diagram_key")
 
 
+# ===========================================================================
+# relay-route, -proxy, -satellite, -keys, -domain, -custom - a relay in front of your server
+# ===========================================================================
+RELAY = ("self_hosted_vpn_docs_relay_server", "vh_relay_en")
+RELAY_W, RELAY_H = 84, 68               # the relay: a smaller rack than your server's
+
+
 def tunnel(x1, y1, x2, y2, half=11):
     """A tunnel leg: the double mint line of how-it-works around a chalk arrow, either way round."""
     if y1 == y2:
@@ -871,6 +894,351 @@ def tunnel(x1, y1, x2, y2, half=11):
                 arrow(x1 + 10, y1, x2, y2, CHALK))
     return (line(x1 - half, y1, x2 - half, y2 - 6, MINT, 2.0) + line(x1 + half, y1, x2 + half, y2 - 6, MINT, 2.0) +
             arrow(x1, y1 + 10, x2, y2, CHALK))
+
+
+def satellite(cx, cy):
+    """A satellite: its body, a solar panel on either side, and its antenna."""
+    out = [box(cx - 17, cy - 13, 34, 26, CHALK, 3.0)]
+    for side in (-1, 1):
+        x0 = cx + side * 21 if side > 0 else cx - 21 - 44
+        out += [line(cx + side * 17, cy, cx + side * 21, cy, CHALK, 2.6), box(x0, cy - 10, 44, 20, CHALK_DIM, 2.4),
+                line(x0 + 22, cy - 10, x0 + 22, cy + 10, CHALK_DIM, 1.6)]
+    out += [line(cx, cy + 13, cx, cy + 24, CHALK, 2.4), dot(cx, cy + 27, 3.5, CHALK)]
+    return "".join(out)
+
+
+def dish(cx, cy):
+    """A satellite dish on its stand, its bowl turned up to the right."""
+    bowl = ('<path d="M %.1f %.1f Q %.1f %.1f %.1f %.1f" fill="none" stroke="%s" stroke-width="3.2" '
+            'stroke-linecap="round"/>' % (j(cx - 26), j(cy - 2), j(cx - 12), j(cy + 26), j(cx + 22), j(cy - 16), CHALK))
+    return (bowl + line(cx - 6, cy + 6, cx + 6, cy - 6, CHALK_DIM, 2.4) + dot(cx + 8, cy - 8, 3.5, CHALK) +
+            line(cx - 4, cy + 10, cx - 4, cy + 30, CHALK, 3.0) + line(cx - 16, cy + 30, cx + 8, cy + 30, CHALK, 3.0))
+
+
+def filter_wall_h(cy, x0, x1, h, course):
+    """A network filter lying across a tall board: a row of bricks, two courses high."""
+    y0, y1 = cy - h / 2, cy + h / 2
+    out = [box(x0, y0, x1 - x0, h, CHALK_DIM, 2.8), line(x0, cy, x1, cy, CHALK_DIM, 1.8)]
+    n = round((x1 - x0) / course)
+    step = (x1 - x0) / n
+    for k in range(1, n):
+        x = x0 + k * step
+        out.append(line(x, y0, x, cy, CHALK_DIM, 1.8))
+        out.append(line(x - step / 2, cy, x - step / 2, y1, CHALK_DIM, 1.8))
+    return "".join(out)
+
+
+def open_gate(hinges, ends):
+    """A gate left open in a filter's gap: each leaf swung from its hinge back toward the relay."""
+    return "".join(line(hx, hy, ex, ey, MINT, 3.4) + dot(hx, hy, 3.4, MINT)
+                   for (hx, hy), (ex, ey) in zip(hinges, ends))
+
+
+def dragon(cx, cy, s=0.95):
+    """A small dragon keeping the firewall: lying on its top at (cx, cy), facing the users, its wing
+    up, spikes down its back, its tail curled down the far side and fire before its open jaws."""
+    sw = 2.8 / s
+    chalk = 'fill="none" stroke="%s" stroke-width="%.2f" stroke-linecap="round" stroke-linejoin="round"' % (CHALK, sw)
+    solid = 'fill="%s" stroke="%s" stroke-width="%.2f" stroke-linejoin="round"' % (BOARD, CHALK, sw)
+    shapes = [
+        # fire
+        '<path d="M -58 -33 C -70 -35 -80 -29 -86 -17 C -78 -21 -74 -19 -72 -13 C -70 -21 -64 -21 -62 -15 '
+        'C -62 -23 -60 -29 -58 -33 Z" fill="%s" fill-opacity=".4" stroke="%s" stroke-width="%.2f" '
+        'stroke-linejoin="round"/>' % (CORAL, CORAL, sw),
+        # tail, down the far side of the wall, with its spade
+        '<path d="M 24 -4 C 40 -2 44 12 38 24 C 34 32 40 42 50 40" %s/>' % chalk,
+        '<path d="M 50 40 L 60 32 L 58 46 Z" %s/>' % solid,
+        # wing, with its ribs
+        '<path d="M 2 -20 L -4 -62 C 4 -56 10 -54 16 -57 C 18 -50 22 -46 30 -44 C 26 -34 20 -26 14 -20 Z" %s/>' % solid,
+        '<path d="M -4 -62 L 6 -24 M 16 -57 L 10 -23" %s/>' % chalk,
+        # body, lying along the wall's top, and its legs over the edge
+        '<path d="M -22 -10 C -12 -26 16 -26 28 -8 C 30 -2 26 0 20 0 L -16 0 C -22 0 -24 -4 -22 -10 Z" %s/>' % solid,
+        '<path d="M -13 -1 L -17 9 M 17 -1 L 21 9" %s/>' % chalk,
+        # spikes down the back
+        '<path d="M -14 -16 L -12 -24 L -7 -20 M 15 -20 L 21 -24 L 22 -15" %s/>' % chalk,
+        # neck and head, the jaws open
+        '<path d="M -21 -8 C -28 -16 -32 -24 -34 -32 M -14 -18 C -20 -24 -24 -30 -26 -36" %s/>' % chalk,
+        '<path d="M -26 -36 C -32 -46 -44 -46 -60 -41 L -58 -36 L -40 -35 L -56 -30 L -54 -27 '
+        'C -44 -27 -36 -29 -34 -32 Z" %s/>' % solid,
+        '<path d="M -30 -43 L -24 -54 M -35 -45 L -33 -56" %s/>' % chalk,
+        '<circle cx="-41" cy="-40" r="2.4" fill="%s"/>' % CORAL]
+    return '<g transform="translate(%.1f %.1f) scale(%.2f)">%s</g>' % (cx, cy, s, "".join(shapes))
+
+
+def gated_wall(cx, y0, y1, w, course, gaps, half, leaf):
+    """A filter standing up a wide board with a gate open at each height in `gaps`."""
+    out, top, face = [], y0, cx - w / 2
+    for g in gaps:
+        out.append(filter_wall(cx, top, g - half, w, course))
+        out.append(open_gate([(face, g - half), (face, g + half)],
+                             [(face - 0.85 * leaf, g - half + leaf / 2), (face - 0.85 * leaf, g + half - leaf / 2)]))
+        top = g + half
+    out.append(filter_wall(cx, top, y1, w, course))
+    return "".join(out)
+
+
+def relay_road(proxy: bool) -> None:
+    """The relay-route board, and with `proxy` the same board with a SOCKS or HTTP proxy in the
+    relay's place: the same gate lets it through, but its first leg names your server, so a
+    magnifier on that leg reads the server's address."""
+    T, CODE = strings(RELAY[1])
+    node = T("diagram_proxy_node") if proxy else T("diagram_relay")
+    caption = T("diagram_proxy_caption") if proxy else T("diagram_caption")
+    name, uid, key = ("relay-proxy", "vhRelayProxy", "diagram_proxy") if proxy else ("relay-route", "vhRelay", "diagram")
+
+    # --- left to right: straight to your server is blocked at the firewall; the relay, on the
+    #     users' side of it, has a way through: a gate the firewall leaves open, for whatever reason
+    seed(41)
+    W, H = 920, 540
+    XU, YU, XS, YS = 120, 250, 840, 250
+    XF, XR = 600, 400
+    Y1, Y2 = 120, 380
+    rl, rr = XR - RELAY_W / 2, XR + RELAY_W / 2
+    parts = [people(XU, YU), rack(XS, YS, RACK_W, RACK_H), rack(XR, Y2, RELAY_W, RELAY_H)]
+    # the dragon keeps the wall's top, so the wall starts lower and its name stands beside it
+    parts += [gated_wall(XF, 100, 450, 52, 26, [Y2], 20, 20), dragon(XF, 100),
+              txt(XF + 40, 84, T("diagram_firewall"), 19, CHALK, "start")]
+    # straight to your server: stopped at the firewall
+    m1 = (XU + XF - 52) / 2
+    parts += [elbow([(XU, YU - 48), (XU, Y1), (XF - 52, Y1)], CORAL), cross(XF - 38, Y1),
+              txt(m1, Y1 - 18, T("diagram_direct"), 20), txt(m1, Y1 + 34, T("diagram_blocked"), 18, CORAL)]
+    # through the relay or the proxy: to it, then through the gate on to your server
+    m2 = (XU + rl - 14) / 2 + 14
+    m3 = (XF + 26 + XS) / 2
+    parts.append(elbow([(XU, YU + 48), (XU, Y2), (rl - 14, Y2)]))
+    if proxy:
+        parts += [magnifier(m2 - 16, Y2), txt(m2 - 16, Y2 - 30, T("diagram_proxy_read"), 20, CORAL),
+                  txt(m2 - 16, Y2 + 40, CODE("ip_connection_example"), 18, CORAL)]
+    else:
+        parts += [txt(m2, Y2 - 18, T("diagram_to_relay"), 20, MINT), txt(m2, Y2 + 34, CODE("ip_relay_example"), 18)]
+    parts += [elbow([(rr + 14, Y2), (XS, Y2), (XS, YS + RACK_H / 2 + 14)]),
+              txt(m3, Y2 - 18, T("diagram_on"), 20, MINT), txt(m3, Y2 + 34, CODE("ip_connection_example"), 18),
+              port(rl, Y2, MINT), port(rr, Y2, MINT), port(XS, YS + RACK_H / 2, MINT)]
+    parts += [txt(XU + 64, YU - 4, T("diagram_users"), 22, CHALK, "start"),
+              txt(XU + 64, YU + 20, T("diagram_users_sub"), 15, CHALK_DIM, "start"),
+              txt(XS - 70, YS - 4, T("diagram_server"), 22, CHALK, "end"),
+              txt(XS - 70, YS + 20, T("diagram_server_sub"), 15, CHALK_DIM, "end"),
+              txt(XR, Y2 + 64, node, 22), txt(XR, Y2 + 88, T("diagram_relay_sub"), 15, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 28, caption, 19, AMBER))
+    render(name, *RELAY, W, H, uid, parts, key=key)
+
+    # --- top to bottom: the firewall lies across the board, the relay above it --------------------
+    seed(41)
+    W, H = 560, 820
+    XU, YU, XR, YR, XS, YS, YF = 280, 90, 440, 310, 440, 650, 470
+    parts = [filter_wall_h(YF, 30, XR - 20, 44, 40), filter_wall_h(YF, XR + 20, 530, 44, 40),
+             open_gate([(XR - 20, YF - 22), (XR + 20, YF - 22)], [(XR - 10, YF - 39), (XR + 10, YF - 39)]),
+             dragon(362, YF - 22),
+             txt(36, YF + 52, T("diagram_firewall"), 17, CHALK, "start"),
+             people(XU, YU), rack(XR, YR, RELAY_W, RELAY_H), rack(XS, YS, RACK_W, RACK_H)]
+    parts += [elbow([(XU - 58, YU), (90, YU), (90, YF - 48)], CORAL), cross(90, YF - 36),
+              txt(110, 392, T("diagram_direct"), 18, CHALK, "start"), txt(110, 418, T("diagram_blocked"), 17, CORAL, "start")]
+    parts.append(elbow([(XU + 58, YU), (XR, YU), (XR, YR - RELAY_H / 2 - 14)]))
+    if proxy:
+        parts += [magnifier(XR, 226, 16), txt(XR - 26, 222, T("diagram_proxy_read"), 18, CORAL, "end"),
+                  txt(XR - 26, 246, CODE("ip_connection_example"), 17, CORAL, "end")]
+    else:
+        parts += [txt(XR - 14, 238, T("diagram_to_relay"), 18, MINT, "end"),
+                  txt(XR - 14, 262, CODE("ip_relay_example"), 17, CHALK, "end")]
+    parts += [arrow(XR, YR + RELAY_H / 2 + 14, XS, YS - RACK_H / 2 - 14),
+              txt(XR - 14, 560, T("diagram_on"), 18, MINT, "end"), txt(XR - 14, 584, CODE("ip_connection_example"), 17, CHALK, "end"),
+              port(XR, YR - RELAY_H / 2, MINT), port(XR, YR + RELAY_H / 2, MINT), port(XS, YS - RACK_H / 2, MINT)]
+    parts += [txt(XU, YU + 70, T("diagram_users"), 21), txt(XU, YU + 94, T("diagram_users_sub"), 14, CHALK_DIM),
+              txt(XR - 60, YR - 2, node, 21, CHALK, "end"),
+              txt(XR - 60, YR + 22, T("diagram_relay_sub"), 13, CHALK_DIM, "end"),
+              txt(XS, YS + 72, T("diagram_server"), 21), txt(XS, YS + 96, T("diagram_server_sub"), 14, CHALK_DIM)]
+    parts.append(txt(W / 2, H - 28, caption, 16, AMBER))
+    render(name + "-tall", *RELAY, W, H, uid + "Tall", parts, key=key)
+
+
+def relay_route() -> None:
+    relay_road(proxy=False)
+
+
+def relay_proxy() -> None:
+    relay_road(proxy=True)
+
+
+def relay_satellite() -> None:
+    T, _ = strings(RELAY[1])
+
+    # --- left to right: as relay-route, straight to your server is blocked at the firewall; the
+    #     relay's dish beams up to the satellite, over the wall, and down to your server ------------
+    seed(47)
+    W, H = 920, 620
+    XU, YU, XR, Y1, Y2 = 120, 330, 430, 240, 450
+    XF, XA, YA, XS, YS = 600, 600, 84, 840, 330
+    rl = XR - RELAY_W / 2
+    parts = [filter_wall(XF, 190, 500, 52, 26), dragon(XF, 190), txt(XF, 534, T("diagram_firewall"), 19),
+             people(XU, YU), rack(XR, Y1, RELAY_W, RELAY_H), dish(XR + 20, Y1 - 70), satellite(XA, YA),
+             rack(XS, YS, RACK_W, RACK_H)]
+    # the users reach the relay over the local network
+    parts += [elbow([(XU, YU - 48), (XU, Y1), (rl - 14, Y1)]), port(rl, Y1, MINT),
+              txt((XU + rl - 14) / 2 + 14, Y1 - 18, T("diagram_sat_local"), 20, MINT)]
+    # straight to your server: stopped at the firewall
+    m1 = (XU + XF - 52) / 2
+    parts += [elbow([(XU, YU + 48), (XU, Y2), (XF - 52, Y2)], CORAL), cross(XF - 38, Y2),
+              txt(m1, Y2 - 18, T("diagram_direct"), 20), txt(m1, Y2 + 34, T("diagram_blocked"), 18, CORAL)]
+    # the satellite link, over the wall
+    parts += [arrow(XR + 48, Y1 - 94, XA - 74, YA + 14, MINT, 3.0, "10 9"),
+              arrow(XA + 70, YA + 18, XS - 14, YS - RACK_H / 2 - 16, MINT, 3.0, "10 9"),
+              txt(XA + 92, YA + 6, T("diagram_sat_link"), 20, MINT, "start")]
+    parts += [txt(XU + 64, YU - 4, T("diagram_users"), 22, CHALK, "start"),
+              txt(XU + 64, YU + 20, T("diagram_users_sub"), 15, CHALK_DIM, "start"),
+              txt(XR, Y1 + 64, T("diagram_relay"), 22), txt(XR, Y1 + 88, T("diagram_sat_relay_sub"), 15, CHALK_DIM),
+              txt(XS - 70, YS - 4, T("diagram_server"), 22, CHALK, "end"),
+              txt(XS - 70, YS + 20, T("diagram_server_sub"), 15, CHALK_DIM, "end")]
+    parts.append(txt(W / 2, H - 28, T("diagram_sat_caption"), 19, AMBER))
+    render("relay-satellite", *RELAY, W, H, "vhRelaySat", parts, key="diagram_sat")
+
+    # --- top to bottom: the firewall lies across the left, under the users and the relay; the
+    #     straight road stops at it, and the satellite link goes past its end ---------------------
+    seed(47)
+    W, H = 560, 820
+    X, YU, YR, YF = 170, 84, 250, 480
+    XA, YA, XS, YS = 460, 300, 460, 660
+    rt = YR - RELAY_H / 2
+    parts = [filter_wall_h(YF, 24, 360, 44, 40), dragon(320, YF - 22),
+             txt(30, YF + 52, T("diagram_firewall"), 17, CHALK, "start"),
+             people(X, YU), rack(X, YR, RELAY_W, RELAY_H), dish(X + 88, YR - 10), satellite(XA, YA),
+             rack(XS, YS, RACK_W, RACK_H)]
+    parts += [arrow(X, YU + 44, X, rt - 14), port(X, rt, MINT),
+              txt(X + 24, (YU + 44 + rt - 14) / 2 + 6, T("diagram_sat_local"), 18, MINT, "start")]
+    parts += [elbow([(X - 58, YU), (50, YU), (50, YF - 48)], CORAL), cross(50, YF - 36),
+              txt(70, 404, T("diagram_direct"), 18, CHALK, "start"), txt(70, 428, T("diagram_blocked"), 17, CORAL, "start")]
+    parts += [arrow(X + 114, YR - 30, XA - 72, YA, MINT, 3.0, "10 9"),
+              arrow(XA, YA + 44, XS, YS - RACK_H / 2 - 16, MINT, 3.0, "10 9"),
+              txt(XA, YA - 40, T("diagram_sat_link"), 18, MINT)]
+    parts += [txt(X + 64, YU - 4, T("diagram_users"), 21, CHALK, "start"),
+              txt(X, YR + 66, T("diagram_relay"), 21), txt(X, YR + 90, T("diagram_sat_relay_sub"), 14, CHALK_DIM),
+              txt(XS, YS + 72, T("diagram_server"), 21)]
+    parts.append(txt(W / 2, H - 28, T("diagram_sat_caption"), 16, AMBER))
+    render("relay-satellite-tall", *RELAY, W, H, "vhRelaySatTall", parts, key="diagram_sat")
+
+
+def relay_keys() -> None:
+    T, CODE = strings(RELAY[1])
+
+    # --- left to right: as relay-route, with the key in the users' place: of its two addresses,
+    #     your server's is blocked at the firewall, and the relay's gets through the gate ----------
+    seed(51)
+    W, H = 920, 520
+    XK, YK, XB = 110, 250, 204
+    XR, XF, XS, YS = 460, 600, 840, 250
+    Y1, Y2 = 120, 380
+    rl, rr = XR - RELAY_W / 2, XR + RELAY_W / 2
+    parts = [gated_wall(XF, 100, 450, 52, 26, [Y2], 20, 20), dragon(XF, 100),
+             txt(XF + 40, 84, T("diagram_firewall"), 19, CHALK, "start"),
+             access_key(XK, YK), txt(XK, YK + 70, T("diagram_keys_key"), 22),
+             rack(XR, Y2, RELAY_W, RELAY_H), rack(XS, YS, RACK_W, RACK_H)]
+    m1 = (XB + XF - 52) / 2
+    parts += [line(XK + 62, YK, XB - 18, YK, MINT, 3.2),
+              elbow([(XB - 18, YK), (XB, YK), (XB, Y1), (XF - 52, Y1)], CORAL), cross(XF - 38, Y1),
+              txt(m1, Y1 - 18, T("diagram_keys_server"), 20), txt(m1, Y1 + 34, CODE("ip_connection_example"), 18)]
+    m2 = (XB + rl - 14) / 2
+    parts += [elbow([(XB - 18, YK), (XB, YK), (XB, Y2), (rl - 14, Y2)]),
+              txt(m2, Y2 - 18, T("diagram_keys_relay"), 18, MINT), txt(m2, Y2 + 34, CODE("ip_relay_example"), 18),
+              elbow([(rr + 14, Y2), (XS, Y2), (XS, YS + RACK_H / 2 + 14)]),
+              port(rl, Y2, MINT), port(rr, Y2, MINT), port(XS, YS + RACK_H / 2, MINT),
+              txt(XR, Y2 + 64, T("diagram_relay"), 22), txt(XS - 70, YS + 8, T("diagram_server"), 22, CHALK, "end")]
+    parts.append(txt(W / 2, H - 28, T("diagram_keys_caption"), 19, AMBER))
+    render("relay-keys", *RELAY, W, H, "vhRelayKeys", parts, key="diagram_keys")
+
+    # --- top to bottom: the key on top, its two addresses branching down, as relay-route-tall -----
+    seed(51)
+    W, H = 560, 820
+    XK, YK, XT, XR, YR, XS, YS, YF = 250, 80, 212, 440, 310, 440, 650, 470
+    parts = [filter_wall_h(YF, 30, XR - 20, 44, 40), filter_wall_h(YF, XR + 20, 530, 44, 40),
+             open_gate([(XR - 20, YF - 22), (XR + 20, YF - 22)], [(XR - 10, YF - 39), (XR + 10, YF - 39)]),
+             dragon(362, YF - 22),
+             txt(36, YF + 52, T("diagram_firewall"), 17, CHALK, "start"),
+             access_key(XK, YK), txt(XK + 82, YK + 8, T("diagram_keys_key"), 21, CHALK, "start"),
+             rack(XR, YR, RELAY_W, RELAY_H), rack(XS, YS, RACK_W, RACK_H)]
+    parts += [line(XT, YK + 26, XT, 132, MINT, 3.2),
+              elbow([(XT, 132), (XT, 150), (90, 150), (90, YF - 48)], CORAL), cross(90, YF - 36),
+              txt(110, 392, T("diagram_keys_server"), 18, CHALK, "start"),
+              txt(110, 418, CODE("ip_connection_example"), 17, CHALK, "start")]
+    parts += [elbow([(XT, 132), (XT, 150), (XR, 150), (XR, YR - RELAY_H / 2 - 14)]),
+              txt(XR - 14, 238, T("diagram_keys_relay"), 18, MINT, "end"),
+              txt(XR - 14, 262, CODE("ip_relay_example"), 17, CHALK, "end"),
+              arrow(XR, YR + RELAY_H / 2 + 14, XS, YS - RACK_H / 2 - 14),
+              port(XR, YR - RELAY_H / 2, MINT), port(XR, YR + RELAY_H / 2, MINT), port(XS, YS - RACK_H / 2, MINT)]
+    parts += [txt(XR - 60, YR + 8, T("diagram_relay"), 21, CHALK, "end"), txt(XS, YS + 72, T("diagram_server"), 21)]
+    parts.append(txt(W / 2, H - 28, T("diagram_keys_caption"), 16, AMBER))
+    render("relay-keys-tall", *RELAY, W, H, "vhRelayKeysTall", parts, key="diagram_keys")
+
+
+def relay_domain() -> None:
+    T, CODE = strings(RELAY[1])
+
+    # --- left to right: the key's name, its DNS record, the relay ------------------------------------
+    seed(53)
+    W, H = 920, 330
+    Y = 130
+    XK, XD, XT = 130, 450, 780
+    parts = [access_key(XK, Y), signpost(XD, Y + 8), rack(XT, Y, RELAY_W, RELAY_H), port(XT - RELAY_W / 2, Y, MINT),
+             arrow(XK + 64, Y, XD - 50, Y), arrow(XD + 50, Y, XT - RELAY_W / 2 - 14, Y),
+             txt((XK + 64 + XD - 50) / 2, Y - 18, CODE("domain_example"), 17, MINT),
+             txt((XD + 50 + XT - 56) / 2, Y - 18, CODE("ip_relay_example"), 18, MINT)]
+    for x, name, sub in ((XK, "diagram_domain_key", "diagram_domain_key_sub"),
+                         (XD, "diagram_domain_dns", "diagram_domain_dns_sub"),
+                         (XT, "diagram_relay", None)):
+        parts.append(txt(x, Y + 86, T(name), 21))
+        if sub:
+            parts.append(txt(x, Y + 110, T(sub), 15, CHALK_DIM))
+    parts.append(txt(W / 2, H - 28, T("diagram_domain_caption"), 19, AMBER))
+    render("relay-domain", *RELAY, W, H, "vhRelayDomain", parts, key="diagram_domain")
+
+    # --- top to bottom ------------------------------------------------------------------------------
+    seed(53)
+    W, H = 560, 660
+    X, TX, YK, YD, YT = 110, 190, 84, 300, 516
+    parts = [access_key(X, YK), signpost(X, YD + 8), rack(X, YT, RELAY_W, RELAY_H), port(X, YT - RELAY_H / 2, MINT),
+             arrow(X, YK + 40, X, YD - 62), arrow(X, YD + 46, X, YT - RELAY_H / 2 - 14),
+             txt(X + 24, (YK + YD) / 2 + 8, CODE("domain_example"), 16, MINT, "start"),
+             txt(X + 24, (YD + YT) / 2 + 12, CODE("ip_relay_example"), 17, MINT, "start")]
+    for y, name, sub in ((YK, "diagram_domain_key", "diagram_domain_key_sub"),
+                         (YD, "diagram_domain_dns", "diagram_domain_dns_sub"),
+                         (YT, "diagram_relay", None)):
+        parts.append(txt(TX + 20, y - 2, T(name), 21, CHALK, "start"))
+        if sub:
+            parts.append(txt(TX + 20, y + 22, T(sub), 14, CHALK_DIM, "start"))
+    parts.append(txt(W / 2, H - 28, T("diagram_domain_caption"), 16, AMBER))
+    render("relay-domain-tall", *RELAY, W, H, "vhRelayDomainTall", parts, key="diagram_domain")
+
+
+def address_field(x, y, w, h, T, CODE, size):
+    """The app's Custom server address box: its title, and the relay's address and port typed in."""
+    value = "%s:%s" % (CODE("ip_relay_example"), CODE("server_port"))
+    return (box(x, y, w, h, CHALK, 2.8) + txt(x + 16, y + 30, T("diagram_custom_field"), size, CHALK, "start") +
+            box(x + 16, y + 44, w - 32, h - 58, MINT, 2.2) + txt(x + 30, y + 44 + (h - 58) / 2 + 6, value, size, MINT, "start"))
+
+
+def relay_custom() -> None:
+    T, CODE = strings(RELAY[1])
+
+    # --- left to right: the user types the relay's address into the app, which goes to the relay -----
+    seed(57)
+    W, H = 920, 330
+    Y = 140
+    XP, XT = 110, 790
+    parts = [phone(XP, Y), line(XP + PHONE_W / 2 + 8, Y, 182, Y, CHALK_DIM, 2.2, "6 8"),
+             address_field(190, Y - 58, 380, 116, T, CODE, 18),
+             arrow(590, Y, XT - RELAY_W / 2 - 14, Y), rack(XT, Y, RELAY_W, RELAY_H), port(XT - RELAY_W / 2, Y, MINT),
+             txt(XP, Y + 86, T("diagram_custom_app"), 21), txt(XT, Y + 86, T("diagram_relay"), 21)]
+    parts.append(txt(W / 2, H - 28, T("diagram_custom_caption"), 19, AMBER))
+    render("relay-custom", *RELAY, W, H, "vhRelayCustom", parts, key="diagram_custom")
+
+    # --- top to bottom --------------------------------------------------------------------------------
+    seed(57)
+    W, H = 560, 600
+    parts = [phone(110, 96), txt(170, 102, T("diagram_custom_app"), 21, CHALK, "start"),
+             line(110, 96 + PHONE_H / 2 + 8, 110, 162, CHALK_DIM, 2.2, "6 8"),
+             address_field(60, 170, 440, 112, T, CODE, 17),
+             arrow(280, 296, 280, 430), rack(280, 476, RELAY_W, RELAY_H), port(280, 476 - RELAY_H / 2, MINT),
+             txt(280, 540, T("diagram_relay"), 21)]
+    parts.append(txt(W / 2, H - 22, T("diagram_custom_caption"), 16, AMBER))
+    render("relay-custom-tall", *RELAY, W, H, "vhRelayCustomTall", parts, key="diagram_custom")
 
 
 # ===========================================================================
@@ -1124,7 +1492,7 @@ def dynamic_ip_urls() -> None:
 
 
 # ===========================================================================
-# cloak-mode - a filter can recognize one long tunnel, and not a browser's requests
+# cloak-mode - a firewall can recognize one long tunnel, and not a browser's requests
 # ===========================================================================
 CLOAK = ("features_cloak_mode", "vh_cloak_en")
 PHONE_W, PHONE_H = 54, 92
@@ -1138,7 +1506,7 @@ def phone(cx, cy):
 
 
 def filter_wall(cx, y0, y1, w, course):
-    """A network filter: a column of bricks, each course offset from the last."""
+    """A firewall (DPI): a column of bricks, each course offset from the last."""
     x0, x1 = cx - w / 2, cx + w / 2
     rows = round((y1 - y0) / course)
     step = (y1 - y0) / rows
@@ -1227,7 +1595,7 @@ def cloak_mode() -> None:
     XP, XF, XS, WALL = 104, 530, 836, 52
     Y1, Y2 = 164, 358
     left, right = 320, 726              # the middle of what lies on either side of the wall
-    parts = [filter_wall(XF, 68, 450, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 - 6)]
+    parts = [filter_wall(XF, 110, 450, WALL, 26), dragon(XF, 110), magnifier(XF, (Y1 + Y2) / 2 - 6)]
     parts += cloak_lanes(XP, XF, XS, Y1, Y2, 92, 72, WALL, 19, 10)
     for x, key in ((XP, "diagram_device"), (XF, "diagram_filter"), (XS, "diagram_server")):
         parts.append(txt(x, 46, T(key), 19))
@@ -1239,15 +1607,16 @@ def cloak_mode() -> None:
 
     # --- on a phone: the same lanes, one under the other, each with its own stretch of wall -----
     seed(31)
-    W, H = 560, 660
+    W, H = 560, 684
     XP, XF, XS, WALL = 62, 300, 492, 48
-    Y1, Y2 = 180, 446
+    Y1, Y2 = 204, 470
     parts = [filter_wall(XF, y - 60, y + 60, WALL, 20) for y in (Y1, Y2)]
+    parts += [dragon(XF, Y1 - 60)]
     parts += cloak_lanes(XP, XF, XS, Y1, Y2, 84, 66, WALL, 19, 5)
     parts += [txt(28, 42, T("diagram_device"), 17, CHALK, "start"), txt(XF, 42, T("diagram_filter"), 17),
               txt(W - 28, 42, T("diagram_server"), 17, CHALK, "end")]
     for y, (key, sub, result, colour) in zip((Y1, Y2), lanes):
-        parts += [txt(W / 2, y - 84, T(key), 22), txt(W / 2, y + 88, T(sub), 17, CHALK_DIM),
+        parts += [txt(28, y - 96, T(key), 21, CHALK, "start"), txt(W / 2, y + 88, T(sub), 17, CHALK_DIM),
                   txt(W / 2, y + 116, T(result), 19, colour)]
     parts.append(txt(W / 2, H - 28, T("diagram_caption"), 18, AMBER))
     render("cloak-mode-tall", *CLOAK, W, H, "vhCloakModeTall", parts)
@@ -1311,7 +1680,7 @@ def block_quic() -> None:
     X0, X1, XF, XS, WALL = 36, 272, 548, 836, 52
     Y1, Y2 = 176, 408
     left, right = (X0 + XF - WALL / 2) / 2, 742     # the middle of what lies on either side of the wall
-    parts = [filter_wall(XF, 68, 552, WALL, 26), magnifier(XF, (Y1 + Y2) / 2 + 2)]
+    parts = [filter_wall(XF, 110, 552, WALL, 26), dragon(XF, 110), magnifier(XF, (Y1 + Y2) / 2 + 2)]
     parts += quic_lanes(X0, X1, XF, XS, Y1, Y2, 124, X0 + 48, 92, 72, WALL, 19, 8, 18)
     for x, key in ((X0 + (X1 - X0) / 2, "diagram_quic_device"), (XF, "diagram_filter"), (XS, "diagram_server")):
         parts.append(txt(x, 46, T(key), 19))
@@ -1327,7 +1696,7 @@ def block_quic() -> None:
     W, H = 560, 760
     X0, X1, XF, XS, WALL = 22, 208, 336, 494, 44
     Y1, Y2 = 170, 492
-    parts = [filter_wall(XF, y - 62, y + 62, WALL, 20) for y in (Y1, Y2)]
+    parts = [filter_wall(XF, y - 62, y + 62, WALL, 20) for y in (Y1, Y2)] + [dragon(XF, Y1 - 62)]
     parts += quic_lanes(X0, X1, XF, XS, Y1, Y2, 124, X0 + 44, 80, 64, WALL, 19, 4, 17)
     parts += [txt(X0 + 6, 42, T("diagram_quic_device"), 17, CHALK, "start"), txt(XF, 42, T("diagram_filter"), 17),
               txt(W - 22, 42, T("diagram_server"), 17, CHALK, "end")]
@@ -1532,3 +1901,9 @@ if __name__ == "__main__":
     farm_token_key()
     farm_token_new()
     policies_options()
+    relay_route()
+    relay_proxy()
+    relay_satellite()
+    relay_keys()
+    relay_domain()
+    relay_custom()
