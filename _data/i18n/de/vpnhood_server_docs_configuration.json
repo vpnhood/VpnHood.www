@@ -62,7 +62,7 @@
   "session_desc": "Jede App, die sich verbindet, hält eine Sitzung. Zeiten werden in Stunden, Minuten und Sekunden angegeben, etwa <code>[timespan_example]</code> für anderthalb Stunden.",
   "timeouts_title": "Zeitlimits",
   "r_timeout": "Wie lange eine Sitzung ohne Aktivität bleiben darf, bevor der Server sie schließt.",
-  "r_tcp_idle": "Wie lange eine TCP-Verbindung, die der Server weiterleitet, in keiner Richtung etwas übertragen darf, bevor der Server sie schließt, etwa eine, deren Ziel nie antwortet oder deren Smartphone das Netzwerk gewechselt hat. Der Server prüft etwa alle 30 Sekunden. Eine kürzere Zeit kann die Push-Benachrichtigungen eines Smartphones unterbrechen, deren Verbindung fast eine halbe Stunde lang still bleiben kann. Null, <code>00:00:00</code>, bedeutet keine Grenze.",
+  "r_tcp_idle": "Gibt an, wie lange über eine vom Server weitergeleitete TCP-Verbindung in beiden Richtungen kein Datenverkehr fließen darf, bevor der Server sie schließt – etwa wenn das Ziel nicht antwortet oder das Smartphone das Netzwerk gewechselt hat. Der Server prüft dies etwa alle 30 Sekunden. Eine zu kurze Zeitspanne kann Push-Benachrichtigungen auf Mobilgeräten unterbrechen, deren Verbindung teils fast eine halbe Stunde lang inaktiv bleibt. Der Wert Null, <code>00:00:00</code>, hebt die Begrenzung auf.",
   "r_udp_timeout": "Wie lange der Server einen inaktiven UDP-Port für eine Sitzung offen hält, wo er UDP selbst weiterleitet statt über seinen VPN-Adapter.",
   "r_icmp_timeout": "Wie lange sich der Server ein Ziel merkt, das eine Sitzung anpingt, wo er ICMP selbst weiterleitet.",
   "r_connect_timeout": "Wie lange eine Anfrage auf einer neuen Verbindung einer App dauern darf, einschließlich der Verbindung des Servers zum Ziel.",

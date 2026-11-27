@@ -62,7 +62,7 @@
   "session_desc": "Bağlanan her uygulamanın bir oturumu olur. Süreler saat, dakika ve saniye olarak yazılır; örneğin bir buçuk saat için <code>[timespan_example]</code>.",
   "timeouts_title": "Zaman aşımları",
   "r_timeout": "Bir oturumun, sunucu onu kapatmadan önce etkinlik olmadan ne kadar kalabileceği.",
-  "r_tcp_idle": "Sunucunun ilettiği bir TCP bağlantısının, sunucu onu kapatmadan önce iki yönde de hiçbir şey iletmeden ne kadar kalabileceği; örneğin hedefi hiç yanıt vermeyen ya da telefonu ağ değiştiren bir bağlantı. Sunucu bunu yaklaşık 30 saniyede bir denetler. Daha kısa bir süre bir telefonun anlık bildirimlerini kesebilir; bu bildirimlerin bağlantısı yarım saate yakın sessiz kalabilir. Sıfır, <code>00:00:00</code>, sınır olmadığı anlamına gelir.",
+  "r_tcp_idle": "Sunucunun yönlendirdiği bir TCP bağlantısının, sunucu tarafından kapatılmadan önce her iki yönde de ne kadar süre boyunca veri aktarmadan boşta kalabileceğini belirler; örneğin hedefi hiç yanıt vermeyen veya telefonu ağ değiştiren bağlantılar gibi. Sunucu bunu yaklaşık 30 saniyede bir denetler. Süreyi daha kısa tutmak, bağlantısı neredeyse yarım saat boyunca hareketsiz kalabilen telefonların anlık bildirimlerini kesebilir. Sıfır, yani <code>00:00:00</code>, sınır olmadığı anlamına gelir.",
   "r_udp_timeout": "Sunucunun UDP'yi VPN adaptörü yerine kendisi ilettiği durumlarda, bir oturum için boştaki bir UDP portunu ne kadar açık tuttuğu.",
   "r_icmp_timeout": "Sunucunun ICMP'yi kendisi ilettiği durumlarda, bir oturumun ping attığı bir hedefi ne kadar hatırladığı.",
   "r_connect_timeout": "Bir uygulamanın yeni bağlantısındaki bir isteğin, sunucunun hedefe bağlanması dahil, ne kadar sürebileceği.",

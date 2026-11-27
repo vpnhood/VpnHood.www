@@ -62,7 +62,7 @@
   "session_desc": "Cada app que se liga mantém uma sessão. Os tempos são horas, minutos e segundos, como <code>[timespan_example]</code> para uma hora e meia.",
   "timeouts_title": "Tempos limite",
   "r_timeout": "Quanto tempo uma sessão pode ficar sem atividade antes de o servidor a fechar.",
-  "r_tcp_idle": "Quanto tempo uma ligação TCP que o servidor reencaminha pode ficar sem passar nada em nenhum dos sentidos antes de o servidor a fechar, como uma cujo destino nunca responde ou cujo telemóvel mudou de rede. O servidor verifica aproximadamente de 30 em 30 segundos. Um tempo mais curto pode cortar as notificações push de um telemóvel, cuja ligação pode ficar em silêncio durante quase meia hora. Zero, <code>00:00:00</code>, significa sem limite.",
+  "r_tcp_idle": "Tempo limite de inatividade que uma ligação TCP reencaminhada pelo servidor pode manter sem tráfego antes de ser encerrada — como no caso de um destino que nunca responde ou de um telemóvel que mudou de rede. O servidor verifica as ligações a cada 30 segundos. Um valor demasiado curto pode interromper as notificações push do telemóvel, cuja ligação pode ficar inativa durante quase meia hora. O valor zero, <code>00:00:00</code>, desativa este limite.",
   "r_udp_timeout": "Quanto tempo o servidor mantém aberta uma porta UDP inativa para uma sessão, quando reencaminha ele próprio o UDP em vez de o fazer através do seu adaptador VPN.",
   "r_icmp_timeout": "Quanto tempo o servidor se lembra de um destino a que uma sessão faz ping, quando reencaminha ele próprio o ICMP.",
   "r_connect_timeout": "Quanto tempo pode demorar um pedido numa nova ligação de uma app, incluindo a ligação do servidor ao destino.",

@@ -62,7 +62,7 @@
   "session_desc": "Cada aplicación que se conecta mantiene una sesión. Los tiempos se expresan en horas, minutos y segundos, como <code>[timespan_example]</code> para una hora y media.",
   "timeouts_title": "Tiempos de espera",
   "r_timeout": "Cuánto tiempo puede pasar una sesión sin actividad antes de que el servidor la cierre.",
-  "r_tcp_idle": "Cuánto tiempo puede pasar una conexión TCP que reenvía el servidor sin transmitir nada en ningún sentido antes de que el servidor la cierre, como una cuyo destino nunca responde o cuyo teléfono cambió de red. El servidor lo comprueba aproximadamente cada 30 segundos. Un tiempo más corto puede cortar las notificaciones push de un teléfono, cuya conexión puede permanecer en silencio durante casi media hora. Cero, <code>00:00:00</code>, significa sin límite.",
+  "r_tcp_idle": "Tiempo que una conexión TCP reenviada por el servidor puede permanecer inactiva en ambas direcciones antes de que este la cierre (por ejemplo, si el destino no responde o si el teléfono cambió de red). El servidor realiza comprobaciones cada 30 segundos aproximadamente. Un tiempo más corto puede interrumpir las notificaciones push de un teléfono, cuya conexión puede estar inactiva durante casi media hora. Cero, <code>00:00:00</code>, significa sin límite.",
   "r_udp_timeout": "Cuánto tiempo mantiene el servidor abierto un puerto UDP inactivo para una sesión, cuando reenvía el UDP por sí mismo en lugar de a través de su adaptador VPN.",
   "r_icmp_timeout": "Cuánto tiempo recuerda el servidor un destino al que una sesión hace ping, cuando reenvía el ICMP por sí mismo.",
   "r_connect_timeout": "Cuánto puede tardar una solicitud en una nueva conexión de una aplicación, incluida la conexión del servidor al destino.",
