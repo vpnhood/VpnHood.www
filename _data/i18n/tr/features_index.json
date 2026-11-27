@@ -13,7 +13,7 @@
   "g3_title": "Güvende kalma",
   "g4_title": "Günlük kullanım",
   "cloak_mode_title": "Kamufle Modu",
-  "cloak_mode_short": "VPN trafiğinizi sıradan web trafiği gibi gösterir; böylece ağ VPN kullandığınızı pek anlayamaz ve filtreler eşleştirecek tanıdık hiçbir şey bulamaz.",
+  "cloak_mode_short": "VPN trafiğinizi sıradan web trafiği gibi gösterir; böylece ağ VPN kullandığınızı pek anlayamaz ve güvenlik duvarları eşleştirecek tanıdık hiçbir şey bulamaz.",
   "cloak_mode_plat": "Tüm platformlar",
   "protocols_title": "Protokoller",
   "protocols_short": "Bulunduğunuz ağa en uygun performans için UDP, TCP ve QUIC arasında geçiş yapın.",

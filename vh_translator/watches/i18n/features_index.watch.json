@@ -15,7 +15,7 @@
     "g3_title": "Staying protected",
     "g4_title": "Everyday",
     "cloak_mode_title": "Cloak Mode",
-    "cloak_mode_short": "Disguises VPN traffic as ordinary web traffic, so a network can hardly tell you use a VPN, and a filter has nothing familiar to match.",
+    "cloak_mode_short": "Disguises VPN traffic as ordinary web traffic, so a network can hardly tell you use a VPN, and a firewall has nothing familiar to match.",
     "cloak_mode_plat": "All platforms",
     "protocols_title": "Protocols",
     "protocols_short": "Switch between UDP, TCP and QUIC to suit the network you are on.",

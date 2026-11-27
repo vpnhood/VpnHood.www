@@ -13,7 +13,7 @@
   "g3_title": "Massima protezione",
   "g4_title": "Uso quotidiano",
   "cloak_mode_title": "Modalità camuffamento",
-  "cloak_mode_short": "Maschera il traffico VPN come normale traffico web, così una rete difficilmente si accorge che usi una VPN e un filtro non trova nulla di familiare da riconoscere.",
+  "cloak_mode_short": "Maschera il traffico VPN come normale traffico web, così una rete difficilmente si accorge che usi una VPN e un firewall non trova nulla di familiare da riconoscere.",
   "cloak_mode_plat": "Tutte le piattaforme",
   "protocols_title": "Protocolli",
   "protocols_short": "Passa facilmente da UDP, TCP a QUIC per adattarti al meglio alla tua rete.",

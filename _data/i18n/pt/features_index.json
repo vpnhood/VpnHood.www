@@ -13,7 +13,7 @@
   "g3_title": "Manter-se protegido",
   "g4_title": "Para o dia a dia",
   "cloak_mode_title": "Modo invisível",
-  "cloak_mode_short": "Disfarça o tráfego da VPN como navegação comum, para que uma rede dificilmente perceba que usa uma VPN e um filtro não encontre nenhum padrão conhecido.",
+  "cloak_mode_short": "Disfarça o tráfego da VPN como navegação comum, para que uma rede dificilmente perceba que usa uma VPN e uma firewall não encontre nenhum padrão conhecido.",
   "cloak_mode_plat": "Todas as plataformas",
   "protocols_title": "Protocolos",
   "protocols_short": "Alterne entre UDP, TCP e QUIC conforme a rede em que está.",

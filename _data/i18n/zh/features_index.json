@@ -13,7 +13,7 @@
   "g3_title": "时刻保持安全防护",
   "g4_title": "日常便捷体验",
   "cloak_mode_title": "伪装模式",
-  "cloak_mode_short": "将 VPN 流量伪装成普通网络流量，让网络很难看出您在使用 VPN，过滤系统也找不到熟悉的特征可供匹配。",
+  "cloak_mode_short": "将 VPN 流量伪装成普通网络流量，让网络很难看出您在使用 VPN，防火墙也找不到熟悉的特征可供匹配。",
   "cloak_mode_plat": "全平台支持",
   "protocols_title": "连接协议",
   "protocols_short": "根据当前网络环境，在 UDP、TCP 和 QUIC 之间自由切换。",

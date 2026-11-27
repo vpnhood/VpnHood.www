@@ -13,7 +13,7 @@
   "g3_title": "Rundum geschützt",
   "g4_title": "Für den Alltag",
   "cloak_mode_title": "Tarnmodus",
-  "cloak_mode_short": "Tarnt VPN-Datenverkehr als gewöhnlichen Web-Datenverkehr, sodass ein Netzwerk kaum erkennen kann, dass Sie ein VPN nutzen, und Filter keine bekannten Muster finden.",
+  "cloak_mode_short": "Tarnt VPN-Datenverkehr als gewöhnlichen Web-Datenverkehr, sodass ein Netzwerk kaum erkennen kann, dass Sie ein VPN nutzen, und Firewalls keine bekannten Muster finden.",
   "cloak_mode_plat": "Alle Plattformen",
   "protocols_title": "Protokolle",
   "protocols_short": "Wechseln Sie je nach Netzwerk flexibel zwischen UDP, TCP und QUIC.",
