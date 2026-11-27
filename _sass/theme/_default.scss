@@ -104,6 +104,7 @@
     --vh-border-strong: rgba(var(--purple-200-rgb), 0.9);
     --vh-hairline: rgba(255, 255, 255, 0.12);             // dividers inside the chrome
     --vh-hairline-soft: rgba(255, 255, 255, 0.07);
+    --vh-menu-line: rgba(255, 255, 255, 0.15);            // the phone menu's rows: a hairline vanishes on a dim screen
     --vh-divider-glint: rgba(255, 255, 255, 0.3);         // bright middle of a fading rule
     // Ink
     --vh-text: #fff;                                      // headings / high-emphasis text
@@ -684,7 +685,7 @@ pre[tabindex]:focus-visible{
     align-items: center;
     color: var(--vh-text);
     padding: 0.7rem 0;
-    border-bottom: 1px solid var(--vh-hairline-soft);
+    border-bottom: 1px solid var(--vh-menu-line);
 }
 .vh-offcanvas-nav .nav-link:hover,
 .vh-offcanvas-nav .nav-link:focus{
