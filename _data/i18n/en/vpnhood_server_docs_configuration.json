@@ -62,7 +62,7 @@
   "session_desc": "Each app that connects holds a session. Times are hours, minutes and seconds, such as <code>[timespan_example]</code> for an hour and a half.",
   "timeouts_title": "Timeouts",
   "r_timeout": "How long a session may go without activity before the server closes it.",
-  "r_tcp_idle": "How long a TCP connection the server forwards may pass nothing either way before the server closes it, such as one whose destination never answers, or whose phone changed networks. The server checks about every 30 seconds. A shorter time can cut a phone's push notifications, whose connection may stay quiet for nearly half an hour.",
+  "r_tcp_idle": "How long a TCP connection the server forwards may pass nothing either way before the server closes it, such as one whose destination never answers, or whose phone changed networks. The server checks about every 30 seconds. A shorter time can cut a phone's push notifications, whose connection may stay quiet for nearly half an hour. Zero, <code>00:00:00</code>, means no limit.",
   "r_udp_timeout": "How long the server keeps an idle UDP port open for a session, where it forwards UDP itself rather than through its VPN adapter.",
   "r_icmp_timeout": "How long the server remembers a destination a session pings, where it forwards ICMP itself.",
   "r_connect_timeout": "How long a request on an app's new connection may take, the server's connection to the destination included.",
