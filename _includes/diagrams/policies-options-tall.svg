@@ -4,7 +4,7 @@
 {%- assign vh_policies_en = site.data.i18n.en.vpnhood_manager_docs_policies -%}
 {%- assign vh_bidi_in = "" -%}{%- assign vh_bidi_out = "" -%}
 {%- if vh_dir == "rtl" -%}{%- assign vh_bidi_in = "&#x2067;" -%}{%- assign vh_bidi_out = "&#x2069;" -%}{%- endif -%}
-<svg class="vh-topology-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 1010" direction="ltr"
+<svg class="vh-topology-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 1000" direction="ltr"
      role="img" aria-labelledby="vhPoliciesOptionsTallTitle vhPoliciesOptionsTallDesc" preserveAspectRatio="xMidYMid meet">
   <title id="vhPoliciesOptionsTallTitle">{{ t.diagram_title | default: vh_policies_en.diagram_title }}</title>
   <desc id="vhPoliciesOptionsTallDesc">{{ t.diagram_desc | default: vh_policies_en.diagram_desc }}</desc>
@@ -36,8 +36,8 @@
     </filter>
   </defs>
 
-  <rect width="560" height="1010" rx="18" fill="#22202f"/>
-  <rect width="560" height="1010" rx="18" filter="url(#vhPoliciesOptionsTallBoard)"/>
+  <rect width="560" height="1000" rx="18" fill="#22202f"/>
+  <rect width="560" height="1000" rx="18" filter="url(#vhPoliciesOptionsTallBoard)"/>
 
   <g class="vh-chalk" filter="url(#vhPoliciesOptionsTallChalk)" style="--vh-chalk-fx: url(#vhPoliciesOptionsTallChalkFx)">
     <text x="34.0" y="44.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="18" fill="#a9a7b8" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_decides | default: vh_policies_en.diagram_decides }}{{ vh_bidi_out }}</text>
@@ -50,31 +50,31 @@
     <text x="122.0" y="219.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_location_sub | default: vh_policies_en.diagram_location_sub }}{{ vh_bidi_out }}</text>
     <text x="122.0" y="301.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#ecebe3" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_app | default: vh_policies_en.diagram_app }}{{ vh_bidi_out }}</text>
     <text x="122.0" y="325.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_app_sub | default: vh_policies_en.diagram_app_sub }}{{ vh_bidi_out }}</text>
-    <g transform="translate(70.0 414.0) scale(0.55)"><circle cx="-37.2" cy="0.1" r="24.0" fill="none" stroke="#ecebe3" stroke-width="3.2"/><circle cx="-38.1" cy="0.8" r="7.0" fill="none" stroke="#a9a7b8" stroke-width="2.2"/><path d="M -13.9 0.6 L 61.2 -0.5" fill="none" stroke="#ecebe3" stroke-width="3.4" stroke-linecap="round"/><path d="M 62.6 0.1 L 62.6 20.9" fill="none" stroke="#ecebe3" stroke-width="3.4" stroke-linecap="round"/><path d="M 40.8 -0.9 L 39.5 16.3" fill="none" stroke="#ecebe3" stroke-width="3.4" stroke-linecap="round"/></g>
-    <text x="122.0" y="415.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#f2d9a2" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_private | default: vh_policies_en.diagram_private }}{{ vh_bidi_out }}</text>
-    <text x="122.0" y="439.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_private_sub | default: vh_policies_en.diagram_private_sub }}{{ vh_bidi_out }}</text>
-    <path d="M 120.1 500.8 L 439.9 501.0 L 441.4 945.1 L 117.7 944.8 Z" fill="none" stroke="#ecebe3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M 267.7 515.0 L 292.9 514.4" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/>
-    <path d="M 261.4 932.8 L 297.3 931.3" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/>
-    <text x="280.0" y="548.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_screen_1 | default: vh_policies_en.diagram_screen_1 }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="572.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="19" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_screen_2 | default: vh_policies_en.diagram_screen_2 }}{{ vh_bidi_out }}</text>
-    <path d="M 153.4 591.3 L 407.5 590.9 L 405.6 638.2 L 149.9 637.7 Z" fill="none" stroke="#ecebe3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <text x="280.0" y="613.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free | default: vh_policies_en.diagram_free }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="632.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free_sub | default: vh_policies_en.diagram_free_sub }}{{ vh_bidi_out }}</text>
-    <path d="M 149.8 648.5 L 408.1 650.0 L 409.4 699.5 L 152.1 698.3 Z" fill="none" stroke="#ecebe3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <text x="280.0" y="671.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free_ad | default: vh_policies_en.diagram_free_ad }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="690.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free_ad_sub | default: vh_policies_en.diagram_free_ad_sub }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="726.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_or | default: vh_policies_en.diagram_or }}{{ vh_bidi_out }}</text>
-    <path d="M 149.6 736.0 L 409.6 740.0 L 407.2 787.8 L 153.8 784.7 Z" fill="none" stroke="#c3b0ff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <text x="280.0" y="759.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#c3b0ff" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_watch | default: vh_policies_en.diagram_watch }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="778.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_watch_sub | default: vh_policies_en.diagram_watch_sub }}{{ vh_bidi_out }}</text>
-    <path d="M 149.9 794.2 L 406.0 793.9 L 408.2 842.7 L 153.9 844.2 Z" fill="none" stroke="#c3b0ff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <text x="280.0" y="817.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#c3b0ff" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_try | default: vh_policies_en.diagram_try }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="836.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_try_sub | default: vh_policies_en.diagram_try_sub }}{{ vh_bidi_out }}</text>
-    <path d="M 152.2 855.3 L 408.6 856.4 L 406.0 902.0 L 152.3 904.2 Z" fill="none" stroke="#9fe8d2" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <text x="280.0" y="875.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#9fe8d2" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_go | default: vh_policies_en.diagram_go }}{{ vh_bidi_out }}</text>
-    <text x="280.0" y="894.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_go_sub | default: vh_policies_en.diagram_go_sub }}{{ vh_bidi_out }}</text>
-    <path d="M 279.7 451.5 L 280.0 486.0" fill="none" stroke="#9fe8d2" stroke-width="3.2" stroke-linecap="round"/><path d="M 272.6 468.5 L 280.0 486.0 M 287.4 468.5 L 280.0 486.0" fill="none" stroke="#9fe8d2" stroke-width="3.2" stroke-linecap="round"/>
-    <text x="280.0" y="988.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="18" fill="#f2d9a2" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_caption | default: vh_policies_en.diagram_caption }}{{ vh_bidi_out }}</text>
+    <g transform="translate(70.0 908.0) scale(0.55)"><circle cx="-37.2" cy="0.1" r="24.0" fill="none" stroke="#ecebe3" stroke-width="3.2"/><circle cx="-38.1" cy="0.8" r="7.0" fill="none" stroke="#a9a7b8" stroke-width="2.2"/><path d="M -13.9 0.6 L 61.2 -0.5" fill="none" stroke="#ecebe3" stroke-width="3.4" stroke-linecap="round"/><path d="M 62.6 0.1 L 62.6 20.9" fill="none" stroke="#ecebe3" stroke-width="3.4" stroke-linecap="round"/><path d="M 40.8 -0.9 L 39.5 16.3" fill="none" stroke="#ecebe3" stroke-width="3.4" stroke-linecap="round"/></g>
+    <text x="122.0" y="909.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="20" fill="#f2d9a2" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_private | default: vh_policies_en.diagram_private }}{{ vh_bidi_out }}</text>
+    <text x="122.0" y="933.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="start">{{ vh_bidi_in }}{{ t.diagram_private_sub | default: vh_policies_en.diagram_private_sub }}{{ vh_bidi_out }}</text>
+    <path d="M 120.1 410.8 L 439.9 411.0 L 441.4 855.1 L 117.7 854.8 Z" fill="none" stroke="#ecebe3" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 267.7 425.0 L 292.9 424.4" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M 261.4 842.8 L 297.3 841.3" fill="none" stroke="#a9a7b8" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="280.0" y="458.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_screen_1 | default: vh_policies_en.diagram_screen_1 }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="482.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="19" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_screen_2 | default: vh_policies_en.diagram_screen_2 }}{{ vh_bidi_out }}</text>
+    <path d="M 153.4 501.3 L 407.5 500.9 L 405.6 548.2 L 149.9 547.7 Z" fill="none" stroke="#ecebe3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="280.0" y="523.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free | default: vh_policies_en.diagram_free }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="542.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free_sub | default: vh_policies_en.diagram_free_sub }}{{ vh_bidi_out }}</text>
+    <path d="M 149.8 558.5 L 408.1 560.0 L 409.4 609.5 L 152.1 608.3 Z" fill="none" stroke="#ecebe3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="280.0" y="581.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#ecebe3" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free_ad | default: vh_policies_en.diagram_free_ad }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="600.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_free_ad_sub | default: vh_policies_en.diagram_free_ad_sub }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="636.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="15" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_or | default: vh_policies_en.diagram_or }}{{ vh_bidi_out }}</text>
+    <path d="M 149.6 646.0 L 409.6 650.0 L 407.2 697.8 L 153.8 694.7 Z" fill="none" stroke="#c3b0ff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="280.0" y="669.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#c3b0ff" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_watch | default: vh_policies_en.diagram_watch }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="688.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_watch_sub | default: vh_policies_en.diagram_watch_sub }}{{ vh_bidi_out }}</text>
+    <path d="M 149.9 704.2 L 406.0 703.9 L 408.2 752.7 L 153.9 754.2 Z" fill="none" stroke="#c3b0ff" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="280.0" y="727.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#c3b0ff" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_try | default: vh_policies_en.diagram_try }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="746.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_try_sub | default: vh_policies_en.diagram_try_sub }}{{ vh_bidi_out }}</text>
+    <path d="M 152.2 765.3 L 408.6 766.4 L 406.0 812.0 L 152.3 814.2 Z" fill="none" stroke="#9fe8d2" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="280.0" y="785.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="17" fill="#9fe8d2" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_go | default: vh_policies_en.diagram_go }}{{ vh_bidi_out }}</text>
+    <text x="280.0" y="804.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="13" fill="#a9a7b8" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_go_sub | default: vh_policies_en.diagram_go_sub }}{{ vh_bidi_out }}</text>
+    <path d="M 279.7 361.5 L 280.0 396.0" fill="none" stroke="#9fe8d2" stroke-width="3.2" stroke-linecap="round"/><path d="M 272.6 378.5 L 280.0 396.0 M 287.4 378.5 L 280.0 396.0" fill="none" stroke="#9fe8d2" stroke-width="3.2" stroke-linecap="round"/>
+    <text x="280.0" y="978.0" font-family="&quot;Poppins&quot;, sans-serif" font-size="18" fill="#f2d9a2" text-anchor="middle">{{ vh_bidi_in }}{{ t.diagram_caption | default: vh_policies_en.diagram_caption }}{{ vh_bidi_out }}</text>
   </g>
 </svg>

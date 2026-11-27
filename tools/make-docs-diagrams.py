@@ -1870,15 +1870,15 @@ def policies_options() -> None:
     parts.append(txt(W / 2, H - 20, T("diagram_caption"), 19, AMBER))
     render("policies-options", *POLICIES, W, H, "vhPoliciesOptions", parts)
 
-    # --- top to bottom: what decides, then the page below it -------------------------------------
+    # --- top to bottom: what decides, the page below it, and under the page the private key, which skips it
     seed(47)
-    W, H = 560, 1010
-    X, YS = 64, (96, 198, 304, 418)
-    XP, YP, WP, HP = 120, 500, 320, 446
+    W, H = 560, 1000
+    X, YS = 64, (96, 198, 304, 912)
+    XP, YP, WP, HP = 120, 410, 320, 446
     parts = [txt(X - 30, 44, T("diagram_decides"), 18, CHALK_DIM, "start")]
     parts += policy_inputs(T, X, YS, 20, 15)
     parts += policy_page(T, XP, YP, WP, HP, 256)
-    parts.append(arrow(W / 2, 452, W / 2, YP - 14, MINT))
+    parts.append(arrow(W / 2, 362, W / 2, YP - 14, MINT))
     parts.append(txt(W / 2, H - 22, T("diagram_caption"), 18, AMBER))
     render("policies-options-tall", *POLICIES, W, H, "vhPoliciesOptionsTall", parts)
 
