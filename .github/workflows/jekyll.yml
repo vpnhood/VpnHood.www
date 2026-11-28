@@ -152,6 +152,13 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # Every CSS and JS URL in the built pages gets the file's content hash (?v=),
+      # so a changed file gets a new URL: no browser, and no Google render, pairs a
+      # new page with an old stylesheet, and those files can be cached for long.
+      # Rewrites _site only, before the checks read it.
+      - name: Stamp asset URLs with their content hash
+        run: python3 tools/version-assets.py _site
+
       # Cheap, read-only, no dependencies. A link to the page it is on is always a
       # mistake, and easy to add without noticing: a FAQ answer is written once
       # and rendered on up to eight pages.
@@ -177,3 +184,28 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+      # Clears Cloudflare's cache for www.vpnhood.com, then checks that every CSS and JS
+      # URL the deployed pages stamp with ?v= serves the bytes its hash names: such a URL
+      # is kept for a year, so a stale copy would be wrong for a year. A wrong one is
+      # purged and fetched again, and the run fails if it stays wrong. The token may only
+      # purge the vpnhood.com zone's cache (Cache Purge).
+      - name: Check out the deploy check
+        uses: actions/checkout@v7
+        with:
+          sparse-checkout: tools/verify-deploy.py
+          sparse-checkout-cone-mode: false
+
+      - name: Download the deployed site
+        uses: actions/download-artifact@v8
+        with:
+          name: github-pages
+          path: deployed
+
+      - name: Clear Cloudflare's cache and check the stamped CSS and JS
+        env:
+          CLOUDFLARE_PURGE_TOKEN: ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}
+        run: |
+          mkdir deployed/site
+          tar -xf deployed/artifact.tar -C deployed/site
+          python3 tools/verify-deploy.py deployed/site --host www.vpnhood.com --zone 1483dd881d6089285a99ee141f48d432

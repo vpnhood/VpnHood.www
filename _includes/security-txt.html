@@ -1,0 +1,27 @@
+{%- comment -%}
+  Shared body for BOTH copies of security.txt, as in paymenthood-www. Do not
+  inline it into either file: two hand-kept copies drift, and a security
+  contact that is wrong in one of them is worse than having none.
+
+  Published at two URLs on purpose:
+    /.well-known/security.txt  - the location RFC 9116 requires; canonical.
+    /security.txt              - the legacy location some scanners still read.
+
+  The contacts and the policy are VpnHood's SECURITY.md in the vpnhood/VpnHood
+  repo, which is where researchers already find them: change the two together.
+  Credit goes in the GitHub advisory, as SECURITY.md promises, so
+  `Acknowledgments:` points at the repo's advisories. It is the RFC 9116
+  spelling, American, with no middle "e"; parsers do not match the British one.
+
+  Expires is REQUIRED and must be a future RFC 3339 timestamp. It is the build
+  time plus one year, so every deploy refreshes it; a hardcoded date would lapse
+  silently and invalidate the file. A site left unbuilt for a year goes stale.
+{%- endcomment -%}
+Contact: https://github.com/vpnhood/VpnHood/security/advisories/new
+Contact: mailto:support@vpnhood.com
+Expires: {{ site.time | date: '%s' | plus: 31536000 | date: '%Y-%m-%dT%H:%M:%S%:z' }}
+Policy: https://github.com/vpnhood/VpnHood/security/policy
+Acknowledgments: https://github.com/vpnhood/VpnHood/security/advisories
+Preferred-Languages: en
+Canonical: {{ '/.well-known/security.txt' | absolute_url }}
+Canonical: {{ '/security.txt' | absolute_url }}

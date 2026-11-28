@@ -1,0 +1,14 @@
+---
+permalink: /.well-known/security.txt
+layout: none
+sitemap: false
+---
+{%- comment -%}
+  RFC 9116 security contact file, the canonical copy. Its body is shared with
+  /security.txt through the include; read the notes there before editing.
+
+  This folder's name starts with a dot, and Jekyll skips those by default, so
+  `.well-known` must stay listed under `include:` in _config.yml, or this file
+  never reaches _site.
+{%- endcomment -%}
+{%- include security-txt.html -%}

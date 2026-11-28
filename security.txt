@@ -1,0 +1,6 @@
+---
+permalink: /security.txt
+layout: none
+sitemap: false
+---
+{%- include security-txt.html -%}

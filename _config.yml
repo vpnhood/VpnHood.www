@@ -66,6 +66,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Jekyll skips dot-folders; .well-known holds security.txt (RFC 9116)
+include:
+  - .well-known
+
 # Exclude non-site files from the build
 exclude:
   - README.md

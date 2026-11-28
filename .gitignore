@@ -22,6 +22,11 @@ node_modules/
 # Working plans and private notes. Never committed — this repo is public.
 /.user/
 
+# The conventions Claude Code reads (.claude/rules/, .docs/) are versioned in
+# the owner's private notes too.
+/.claude/rules/
+/.docs/
+
 # Generated Python bytecode.
 __pycache__/
 *.py[cod]
