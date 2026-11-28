@@ -12,7 +12,7 @@
   "install_android": "<b>Android TV:</b> TV'de Google Play'i açın ve VpnHood! CLIENT'ı arayın. Google Play olmayan bir TV, evrensel sürümü <a href=\"/vpnhood-client/download/\">indirme sayfasından</a> yükleyebilir.",
   "add_title": "Erişim anahtarınızı ekleyin",
   "add_desc": "Erişim anahtarı kumandayla yazılamayacak kadar uzundur, bu yüzden TV bu işi telefonunuza bırakır. Uzaktan Erişim budur: telefonunuzun tarayıcısı, TV'deki uygulamanın kumandası olur.",
-  "add_step_open": "TV'de <b>Sunucu</b>'yu açın ve <b>Sunucu Ekle</b>'yi seçin. TV, bir kod ve bir adresle <b>Uzaktan Erişim</b> ekranını gösterir.",
+  "add_step_open": "TV'de <b>Sunucu</b>'yu açın ve <b>Sunucu Ekle</b>'yi seçin. TV, bir kod ve bir adresle <b>Uzaktan Erişim</b> ekranını gösterir. TV \"Yakındaki cihazlar\" izni isterse izin verin: Bu izin olmadan telefonunuz TV'ye ulaşamaz.",
   "shot_remote_alt": "TV'de Uzaktan Erişim ekranı: taranacak bir kod, altında adres, ekranı açık tutma notu, Telefonunuzu kullanırken sorun mu yaşıyorsunuz? ve Tamam düğmesi",
   "add_step_scan": "Kodu telefonunuzun kamerasıyla tarayın. Bilgisayarda, kodun altındaki adresi bir tarayıcıya yazın.",
   "add_step_paste": "Uygulamanın sayfaları tarayıcıda açılır. <b>Sunucular</b>'ı açın, <b>Sunucu Ekle</b>'yi seçin ve erişim anahtarınızı yapıştırın.",

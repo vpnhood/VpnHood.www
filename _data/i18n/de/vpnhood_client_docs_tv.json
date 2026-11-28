@@ -12,7 +12,7 @@
   "install_android": "<b>Android TV:</b> Öffnen Sie auf dem Fernseher Google Play und suchen Sie nach VpnHood! CLIENT. Ein Fernseher ohne Google Play kann die Universal-Version von der <a href=\"/vpnhood-client/download/\">Download-Seite</a> installieren.",
   "add_title": "Zugangsschlüssel hinzufügen",
   "add_desc": "Ein Zugangsschlüssel ist zu lang, um ihn mit der Fernbedienung einzutippen, deshalb überlässt der Fernseher diese Aufgabe Ihrem Handy. Das ist der Fernzugriff: Der Browser Ihres Handys wird zur Fernbedienung für die App auf dem Fernseher.",
-  "add_step_open": "Öffnen Sie auf dem Fernseher <b>Server</b> und wählen Sie <b>Server hinzufügen</b>. Der Fernseher zeigt den Bildschirm <b>Fernzugriff</b> mit einem Code und einer Adresse.",
+  "add_step_open": "Öffnen Sie auf dem Fernseher <b>Server</b> und wählen Sie <b>Server hinzufügen</b>. Der Fernseher zeigt den Bildschirm <b>Fernzugriff</b> mit einem Code und einer Adresse. Fragt der Fernseher, ob Sie „Geräte in der Nähe“ zulassen möchten, lassen Sie es zu: Ohne diese Berechtigung erreicht Ihr Handy den Fernseher nicht.",
   "shot_remote_alt": "Der Bildschirm Fernzugriff auf einem Fernseher: ein Code zum Scannen, die Adresse darunter, ein Hinweis, den Bildschirm offen zu lassen, „Probleme beim Verwenden Ihres Handys?“ und die Schaltfläche Fertig",
   "add_step_scan": "Scannen Sie den Code mit der Kamera Ihres Handys. Auf einem Computer geben Sie die Adresse unter dem Code in einen Browser ein.",
   "add_step_paste": "Die Seiten der App öffnen sich im Browser. Öffnen Sie <b>Server</b>, wählen Sie <b>Server hinzufügen</b> und fügen Sie Ihren Zugangsschlüssel ein.",

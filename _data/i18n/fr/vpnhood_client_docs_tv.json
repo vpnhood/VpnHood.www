@@ -12,7 +12,7 @@
   "install_android": "<b>Android TV :</b> ouvrez Google Play sur la TV et recherchez VpnHood! CLIENT. Une TV sans Google Play peut installer la version universelle depuis la <a href=\"/vpnhood-client/download/\">page de téléchargement</a>.",
   "add_title": "Ajouter votre clé d'accès",
   "add_desc": "Une clé d'accès est trop longue pour être saisie à la télécommande : la TV confie donc cette tâche à votre téléphone. C'est l'Accès distant : le navigateur de votre téléphone devient une télécommande pour l'application sur la TV.",
-  "add_step_open": "Sur la TV, ouvrez <b>Serveur</b> et choisissez <b>Ajouter un serveur</b>. La TV affiche l'écran <b>Accès distant</b>, avec un code et une adresse.",
+  "add_step_open": "Sur la TV, ouvrez <b>Serveur</b> et choisissez <b>Ajouter un serveur</b>. La TV affiche l'écran <b>Accès distant</b>, avec un code et une adresse. Si la TV demande l'autorisation « Appareils à proximité », accordez-la. Sans elle, votre téléphone ne peut pas joindre la TV.",
   "shot_remote_alt": "L'écran Accès distant sur une TV : un code à scanner, l'adresse en dessous, un rappel de garder l'écran ouvert, « Un problème pour utiliser votre téléphone ? » et un bouton Terminé",
   "add_step_scan": "Scannez le code avec l'appareil photo de votre téléphone. Sur un ordinateur, saisissez dans un navigateur l'adresse affichée sous le code.",
   "add_step_paste": "Les pages de l'application s'ouvrent dans le navigateur. Ouvrez <b>Serveurs</b>, choisissez <b>Ajouter un serveur</b> et collez votre clé d'accès.",
