@@ -31,7 +31,7 @@
   "android_universal_title": "通用版本",
   "android_universal_desc": "适用于旧款手机和许多 Android TV 设备。",
   "windows_premium_note": "Windows 版本不提供免费服务器，需<a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">升级高级版</b></a>后方可使用。",
-  "ios_premium_note": "iOS 和 Apple TV 版本不提供免费服务器，需<a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">升级高级版</b></a>后方可使用。",
+  "ios_premium_note": "iOS 和 Apple TV 版本不提供免费服务器，需<a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">升级高级版</b></a>后方可使用。您有高级代码吗？在 iPhone、iPad 和 Mac 上，它通过您的账号生效：<a href=\"/free-vpn/premium-code-on-apple/\"><b class=\"text-decoration-underline\">了解如何操作</b></a>。",
   "linux_arch_note": "支持 x64 和 ARM64 架构。",
   "linux_distros_note": "支持 Ubuntu 22.04 及更高版本（包括 Kubuntu 和 Lubuntu）、Debian 13 和 Arch Linux；其他使用 systemd 的发行版应该也能运行。",
   "linux_requirements_link": "查看系统要求。",

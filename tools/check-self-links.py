@@ -22,9 +22,9 @@ Three checks, all read-only:
      and query strings are NOT self-links - jumping to a section of the current
      page is real navigation - so they are skipped.
 
-  3. INVARIANT. No FAQ answer carries more than one <a>. faq-answer.html finds
-     the matching </a> by taking the first one after the opening tag, which is
-     only correct while each answer holds a single link.
+  3. INVARIANT. No FAQ answer links to the same page twice. faq-answer.html
+     unwraps the one link to the current page, ending it at the first </a> after
+     its opening tag, so a second link to that page would stay.
 
 Check 2 reads the English tree only: the other twelve are clones of the same
 source, so a finding there is the same finding repeated.
@@ -173,12 +173,14 @@ def check_output(site_dir):
 
 
 def check_invariant():
-    return [
-        "faqs.json %s holds %d links; _includes/faq-answer.html assumes one"
-        % (k, v.count("<a "))
-        for k, v in faqs().items()
-        if k.startswith("a_") and isinstance(v, str) and v.count("<a ") > 1
-    ]
+    findings = []
+    for k, v in faqs().items():
+        if not (k.startswith("a_") and isinstance(v, str)):
+            continue
+        hrefs = re.findall(r'<a [^>]*href="([^"]*)"', v)
+        for href in sorted({h for h in hrefs if hrefs.count(h) > 1}):
+            findings.append("faqs.json %s links to %s more than once; _includes/faq-answer.html unwraps one" % (k, href))
+    return findings
 
 
 def main():

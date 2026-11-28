@@ -31,7 +31,7 @@
   "android_universal_title": "Evrensel sürüm",
   "android_universal_desc": "Eski telefonlar ve birçok Android TV için.",
   "windows_premium_note": "Windows sürümünde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir.",
-  "ios_premium_note": "iOS ve Apple TV sürümlerinde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir.",
+  "ios_premium_note": "iOS ve Apple TV sürümlerinde ücretsiz sunucu bulunmamaktadır; kullanmak için <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">Premium'a Geç</b></a>meniz gerekir. Premium kodunuz mu var? iPhone, iPad ve Mac'te kod, hesabınız üzerinden çalışır: <a href=\"/free-vpn/premium-code-on-apple/\"><b class=\"text-decoration-underline\">nasıl yapılacağını görün</b></a>.",
   "linux_arch_note": "x64 ve ARM64 mimarilerini destekler.",
   "linux_distros_note": "Ubuntu 22.04 ve sonrası (Kubuntu ve Lubuntu dahil), Debian 13 ve Arch Linux'u destekler; systemd kullanan diğer dağıtımlarda da çalışması beklenir.",
   "linux_requirements_link": "Sistem gereksinimlerine bakın.",

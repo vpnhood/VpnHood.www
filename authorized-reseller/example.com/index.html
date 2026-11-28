@@ -1,0 +1,19 @@
+---
+layout: none
+i18n: authorized_reseller
+extra_css:
+  - /assets/css/custom.css
+noindex: true
+sitemap: false
+# The sample the reseller hub links to: the page every authorized reseller gets, for a made-up store.
+# example.com is reserved for examples (RFC 2606), so no real store can be mistaken for it.
+sample: true
+i18n_vars:
+  store: Example Store
+  domain: example.com
+  since: "2026"
+  checked: "2026-11-27"
+---
+{% include header.html %}
+{% include authorized-reseller.html %}
+{% include footer.html %}

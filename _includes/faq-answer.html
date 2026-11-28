@@ -13,8 +13,9 @@
   page's own set in _data/faq_sets.yml repeats the page inside itself. Keep it
   out of the set; see the note there.
 
-  Assumes at most ONE <a> per answer, which is what lets the unwrap find the
-  matching </a> by taking the first one after the opening tag.
+  An answer may hold several links, but at most ONE to any page: the unwrap
+  removes that link's opening tag and the first </a> after it, and leaves the
+  rest of the answer, other links included, as it is.
   tools/check-self-links.py enforces that invariant.
 
   Parameters:
@@ -29,7 +30,6 @@
   {%- assign vh_fa_attrs = vh_fa | split: vh_fa_self | last | split: '>' | first -%}
   {%- capture vh_fa_open %}<a {{ vh_fa_self }}{{ vh_fa_attrs }}>{% endcapture -%}
   {%- assign vh_fa_parts = vh_fa | split: vh_fa_open -%}
-  {%- assign vh_fa_rest = vh_fa_parts[1] | split: '</a>' -%}
-  {%- capture vh_fa %}{{ vh_fa_parts[0] }}{{ vh_fa_rest[0] }}{{ vh_fa_rest[1] }}{% endcapture -%}
+  {%- capture vh_fa %}{{ vh_fa_parts[0] }}{{ vh_fa_parts[1] | replace_first: '</a>', '' }}{% endcapture -%}
 {%- endif -%}
 {{- vh_fa -}}

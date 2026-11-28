@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="vhAppleCodeArtTitle">
+<title id="vhAppleCodeArtTitle">One glowing key reaching a MacBook, an iPad and an iPhone, each showing the premium crown</title>
+<defs>
+  <linearGradient id="dBody" x1=".15" y1="0" x2=".85" y2="1">
+    <stop offset="0" stop-color="#2b1470" stop-opacity=".97"/>
+    <stop offset="1" stop-color="#150a3a" stop-opacity=".97"/></linearGradient>
+  <linearGradient id="dScreen" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#241060"/><stop offset="1" stop-color="#120836"/></linearGradient>
+  <linearGradient id="dBase" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#5b2fd6"/><stop offset=".55" stop-color="#8257f5"/>
+    <stop offset="1" stop-color="#c0a4ff"/></linearGradient>
+  <linearGradient id="dKey" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#3ce8c8"/><stop offset="1" stop-color="#8ef7e2"/></linearGradient>
+  <radialGradient id="dAmbient" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8b5cf6" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="dKeyGlow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#8ef7e2" stop-opacity=".9"/>
+    <stop offset=".5" stop-color="#3ce8c8" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#22b6d6" stop-opacity="0"/></radialGradient>
+  <filter id="dSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="dSofter" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="40"/></filter>
+  <linearGradient id="dAppleFill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset=".08" stop-color="#e6dcff"/><stop offset="1" stop-color="#9066fb"/></linearGradient>
+  <!-- each screen shows Apple's logo, as an Apple device starts up (the site's own Apple icon) -->
+  <symbol id="dApple" viewBox="0 0 24 24">
+    <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04c-2.04.027-3.91 1.183-4.961 3.014c-2.117 3.675-.546 9.103 1.519 12.09c1.013 1.454 2.208 3.09 3.792 3.039c1.52-.065 2.09-.987 3.935-.987c1.831 0 2.35.987 3.96.948c1.637-.026 2.676-1.48 3.676-2.948c1.156-1.688 1.636-3.325 1.662-3.415c-.039-.013-3.182-1.221-3.22-4.857c-.026-3.040 2.48-4.494 2.597-4.559c-1.429-2.09-3.623-2.324-4.39-2.376c-2-.156-3.675 1.088-4.61 1.088M15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83c-1.207.052-2.662.805-3.532 1.818c-.78.896-1.454 2.338-1.273 3.714c1.338.104 2.715-.688 3.559-1.701" fill="url(#dAppleFill)"/>
+  </symbol>
+  <!-- the premium mark on each screen: the app's crown in a pill -->
+  <symbol id="dCrown" viewBox="0 0 24 24">
+    <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" fill="#3ce8c8"/>
+    <path d="M5 21h14" stroke="#3ce8c8" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+</defs>
+
+<ellipse cx="500" cy="560" rx="450" ry="400" fill="url(#dAmbient)"/>
+
+<!-- the key's paths down to the three devices -->
+<g fill="none" stroke="#c0a4ff" stroke-opacity=".6" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 20">
+  <path d="M500 250 C 500 300 500 320 500 360"/>
+  <path d="M440 250 C 300 270 230 380 255 510"/>
+  <path d="M560 245 C 700 270 775 400 742 552"/>
+</g>
+
+<!-- the key -->
+<g transform="rotate(-20 500 180)">
+  <circle cx="440" cy="180" r="86" fill="url(#dKeyGlow)" filter="url(#dSoft)"/>
+  <circle cx="440" cy="180" r="40" fill="none" stroke="url(#dKey)" stroke-width="16"/>
+  <rect x="478" y="168" width="150" height="24" rx="12" fill="url(#dKey)"/>
+  <rect x="584" y="190" width="22" height="32" rx="7" fill="url(#dKey)"/>
+  <rect x="548" y="190" width="22" height="26" rx="7" fill="url(#dKey)"/>
+</g>
+
+<!-- MacBook, at the back -->
+<rect x="275" y="360" width="450" height="290" rx="24" fill="url(#dBody)" stroke="#8257f5" stroke-opacity=".55" stroke-width="3"/>
+<rect x="295" y="380" width="410" height="250" rx="12" fill="url(#dScreen)"/>
+<rect x="447" y="364" width="106" height="12" rx="6" fill="#150a3a"/>
+<path d="M215 660 H785 L765 690 a14 14 0 0 1 -12 6 H247 a14 14 0 0 1 -12 -6 Z" fill="url(#dBase)"/>
+<rect x="455" y="660" width="90" height="10" rx="5" fill="#1f1152" opacity=".6"/>
+<use href="#dApple" x="474" y="408" width="52" height="52"/>
+<rect x="430" y="484" width="140" height="44" rx="22" fill="#3ce8c8" fill-opacity=".14" stroke="#3ce8c8" stroke-opacity=".45" stroke-width="2"/>
+<use href="#dCrown" x="481" y="492" width="38" height="28"/>
+
+<!-- iPad, front left -->
+<rect x="140" y="520" width="250" height="340" rx="28" fill="url(#dBody)" stroke="#8257f5" stroke-opacity=".6" stroke-width="3"/>
+<rect x="156" y="536" width="218" height="308" rx="16" fill="url(#dScreen)"/>
+<use href="#dApple" x="245" y="606" width="40" height="40"/>
+<rect x="215" y="664" width="100" height="36" rx="18" fill="#3ce8c8" fill-opacity=".14" stroke="#3ce8c8" stroke-opacity=".45" stroke-width="2"/>
+<use href="#dCrown" x="250" y="670" width="30" height="24"/>
+
+<!-- iPhone, front right -->
+<rect x="660" y="560" width="160" height="310" rx="30" fill="url(#dBody)" stroke="#8257f5" stroke-opacity=".6" stroke-width="3"/>
+<rect x="672" y="572" width="136" height="286" rx="22" fill="url(#dScreen)"/>
+<rect x="716" y="582" width="48" height="14" rx="7" fill="#06031a"/>
+<use href="#dApple" x="724" y="650" width="32" height="32"/>
+<rect x="696" y="700" width="88" height="32" rx="16" fill="#3ce8c8" fill-opacity=".14" stroke="#3ce8c8" stroke-opacity=".45" stroke-width="2"/>
+<use href="#dCrown" x="727" y="705" width="26" height="21"/>
+
+<!-- ground -->
+<ellipse cx="500" cy="900" rx="380" ry="60" fill="url(#dAmbient)" opacity=".7" filter="url(#dSofter)"/>
+</svg>

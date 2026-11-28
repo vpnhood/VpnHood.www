@@ -31,7 +31,7 @@
   "android_universal_title": "Versão universal",
   "android_universal_desc": "Para telemóveis antigos e muitas Android TV.",
   "windows_premium_note": "A versão para Windows não tem servidores gratuitos, e tem de <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">passar para o Premium</b></a> para a usar.",
-  "ios_premium_note": "As versões para iOS e Apple TV não têm servidores gratuitos, e tem de <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">passar para o Premium</b></a> para as usar.",
+  "ios_premium_note": "As versões para iOS e Apple TV não têm servidores gratuitos, e tem de <a href=\"/free-vpn/go-premium/\"><b class=\"text-decoration-underline\">passar para o Premium</b></a> para as usar. Tem um código Premium? No iPhone, iPad e Mac, funciona através da sua conta: <a href=\"/free-vpn/premium-code-on-apple/\"><b class=\"text-decoration-underline\">veja como</b></a>.",
   "linux_arch_note": "Suporta arquiteturas x64 e ARM64.",
   "linux_distros_note": "Suporta Ubuntu 22.04 e versões posteriores (incluindo Kubuntu e Lubuntu), Debian 13 e Arch Linux; outras distribuições com systemd também deverão funcionar.",
   "linux_requirements_link": "Veja os requisitos do sistema.",

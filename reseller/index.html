@@ -228,6 +228,20 @@ nav_active: reseller
                   </div>
                 </div>
 
+                {% comment %} The authorized reseller page an active reseller gets, with a real sample to open (/authorized-reseller/example.com/). {% endcomment %}
+                <div class="row align-items-center gy-5 gx-lg-5 mt-5 pt-5">
+                  <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.authorized_label }}</p>
+                    </div>
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.authorized_title }}</h2>
+                    <p class="section-desc mb-0">{{ t.authorized_desc }}</p>
+                  </div>
+                  <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                    {% include authorized-reseller-preview.html link=t.authorized_sample_link %}
+                  </div>
+                </div>
+
                 <div class="section-start-text mt-5 pt-5" data-aos="fade-up" data-aos-duration="1000">
                   <div class="section-label">
                     <p class="vh-txt-grad-purple-400">{{ t.start_label }}</p>

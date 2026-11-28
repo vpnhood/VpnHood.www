@@ -166,6 +166,10 @@ SHOTS: list[dict] = [
     {"name": "connect-cloak-mode", "route": "/protocols/cloak-mode", **STRIP},
     {"name": "connect-split-tunneling", "route": "/split-tunneling", **STRIP},
     {"name": "connect-quick-launch", "route": "/settings/quick-launch", **STRIP},
+    # an authorized reseller's page: the home screen of a premium user, who sees the app's premium mark
+    # where others see Go Premium (MainViewModel.RefreshPremiumButton), on the iPhone of CONNECT's App Store set
+    {"name": "connect-home-premium", "route": "/", **STRIP, "platform": "ios", "device": "iphone-6.9",
+     "patch": {"state": {"vpnProfile": {"isPremium": True, "canGoPremium": False, "canTryPremium": False}}}},
 
     # the CLIENT page: the home screen, connected as its Google Play shot is, behind the server
     # list with the fixture's two profiles (the Play set shows it empty, with its warning); the
@@ -424,14 +428,15 @@ def write_config(product: str, shots: list[dict], langs: list[str]) -> Path:
     platforms = {}
     patch_files = set()
     for shot in shots:
-        platform = store["platforms"][TV if shot.get("tv") else PLATFORM]
+        # a shot may name another store set and its device: the Apple pages show an iPhone
+        platform = store["platforms"][shot.get("platform") or (TV if shot.get("tv") else PLATFORM)]
         likes = {x["route"]: x for x in platform["shots"]}
         if platform.get("patchFile"):
             patch_files.add(platform["patchFile"])
         if shot.get("tv"):
             device = dict(next(iter(platform["devices"].values())), label="site", scale=TV_SCALE)
         elif shot.get("phone") or shot.get("pair"):
-            device = dict(platform["devices"][PHONE], label="site")
+            device = dict(platform["devices"][shot.get("device", PHONE)], label="site")
         else:
             device = {"label": "site", "frame": "none", "cssWidth": WIDTH,
                       "cssHeight": shot.get("height", HEIGHT), "scale": shot.get("scale", SCALE)}

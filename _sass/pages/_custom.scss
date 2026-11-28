@@ -2100,3 +2100,302 @@ a.vh-feature-chip:hover{
         height: 64px;
     }
 }
+
+// Authorized reseller pages (/authorized-reseller/<domain>/, _includes/authorized-reseller.html) ----
+// The seller's logo, or a monogram of its name, beside its website's address, above the title.
+.vh-reseller-id{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.vh-reseller-logo{
+    flex: none;
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    object-fit: contain;
+    background: var(--vh-surface-raised);
+    border: 1px solid var(--vh-border);
+}
+.vh-reseller-monogram{
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--vh-on-accent);
+    background: linear-gradient(135deg, var(--purple-300), var(--purple-450));
+    border: 0;
+}
+// The sample page (/authorized-reseller/example.com/): a note above it says it is a sample, and its Visit button
+// leads nowhere.
+.vh-reseller-sample{
+    padding: .9rem 1.25rem;
+    border-radius: 14px;
+    border: 1px dashed var(--vh-border-strong);
+    background: var(--vh-surface-raised);
+    color: var(--vh-text-soft);
+}
+.vh-btn-sample{
+    cursor: default;
+}
+.vh-reseller-domain{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--vh-text);
+}
+.vh-reseller-checked{
+    font-size: .875rem;
+    color: var(--vh-text-muted);
+}
+// "What you get": the three points stacked beside the app's phone screen.
+.vh-reseller-points{
+    display: grid;
+    gap: 1rem;
+}
+// The Apple note: the logo beside the steps, in a box that stands out from the cards around it.
+.vh-reseller-apple{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 960px;
+    margin-inline: auto;
+    border: 1px solid var(--vh-border-strong);
+}
+.vh-reseller-apple-logo{
+    flex: none;
+    width: 60px;
+    height: 60px;
+}
+@media (max-width: 575.98px){
+    .vh-reseller-apple{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+// Numbered steps for ordinary readers: each number in the same violet disc as the site's icons.
+.vh-num-steps{
+    list-style: none;
+    padding-inline-start: 0;
+    counter-reset: vh-num-step;
+    li{
+        position: relative;
+        min-height: 2rem;
+        padding-inline-start: 2.9rem;
+        counter-increment: vh-num-step;
+    }
+    li + li{
+        margin-top: .85rem;
+    }
+    li::before{
+        content: counter(vh-num-step);
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        font-size: .95rem;
+        font-weight: 600;
+        line-height: 1;
+        background-color: rgba(var(--purple-300-rgb), .18);
+        color: var(--purple-120);
+    }
+}
+// /free-vpn/premium-code-on-apple/: the steps' card's small label above its title.
+.vh-apple-how-label{
+    font-size: .9rem;
+    color: var(--vh-text-muted);
+}
+// A link inside a step is running text: underlined, as #sp-main-body p a is (WCAG 1.4.1).
+.vh-num-steps a:not([class]){
+    text-decoration: underline;
+}
+// Step 2's two places, a plain bulleted pair inside the numbered step (no disc of their own).
+.vh-num-steps .vh-apple-how-ways{
+    list-style: disc;
+    padding-inline-start: 1.25rem;
+    li{
+        min-height: 0;
+        padding-inline-start: 0;
+        counter-increment: none;
+    }
+    li + li{
+        margin-top: .25rem;
+    }
+    li::before{
+        content: none;
+    }
+}
+// "Good to know": the receipt art beside the few sale terms a buyer needs.
+.vh-reseller-art{
+    max-width: 340px;
+    margin-inline: auto;
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.vh-reseller-terms li + li{
+    margin-top: .75rem;
+}
+
+// "Check a seller": a browser window showing this seller's page address, drawn in HTML so it names
+// each seller by itself. Left to right in every language, as an address is.
+.vh-browser{
+    max-width: 520px;
+    margin-inline: auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--vh-surface);
+    border: 1px solid var(--vh-border-strong);
+    box-shadow: 0 24px 60px rgba(var(--purple-300-rgb), .18);
+}
+.vh-browser-bar{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .7rem .9rem;
+    background: var(--vh-surface-raised);
+    border-bottom: 1px solid var(--vh-hairline);
+}
+.vh-browser-dots{
+    display: inline-flex;
+    gap: 6px;
+    flex: none;
+    i{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--vh-border-strong);
+    }
+}
+.vh-browser-url{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    min-width: 0;
+    flex: 1;
+    padding: .35rem .75rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    color: var(--vh-text-soft);
+    background: var(--vh-page-bg);
+    svg{
+        flex: none;
+        width: 14px;
+        height: 14px;
+        color: var(--vh-green-ink);
+    }
+    // The seller's part ends the address, so a narrow phone wraps it rather than cutting it off.
+    span{
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+    b{
+        font-weight: 600;
+        color: var(--vh-text);
+    }
+}
+.vh-browser-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.25rem 1.5rem 2rem;
+    text-align: center;
+    .vh-reseller-logo{
+        margin-bottom: 1rem;
+    }
+}
+// The reseller hub's preview of an authorized page: the page's top, its words beside its art, smaller, with one
+// real button to the sample page.
+.vh-browser-wide{
+    max-width: 680px;
+}
+.vh-browser-hero{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.75rem 1.5rem 1.75rem 1.75rem;
+    .vh-reseller-id{
+        gap: .65rem;
+        margin-bottom: .85rem;
+    }
+    .vh-reseller-logo{
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+    }
+    .vh-reseller-monogram{
+        font-size: 1.3rem;
+    }
+    .vh-reseller-domain{
+        font-size: .95rem;
+    }
+}
+.vh-browser-hero-text{
+    flex: 1;
+    min-width: 0;
+}
+.vh-browser-eyebrow{
+    display: inline-block;
+    padding: .2rem .7rem;
+    border-radius: 999px;
+    font-size: .75rem;
+    color: var(--vh-text-soft);
+    border: 1px solid var(--vh-border);
+}
+.vh-browser-hero-title{
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--vh-text);
+}
+.vh-browser-hero-desc{
+    margin-bottom: 1.1rem;
+    font-size: .8rem;
+    line-height: 1.5;
+    color: var(--vh-text-soft);
+}
+.vh-browser-hero-art{
+    flex: none;
+    width: 34%;
+    height: auto;
+}
+@media (max-width: 575.98px){
+    .vh-browser-hero-art{
+        display: none;
+    }
+}
+// The verified mark sits on the logo's corner.
+.vh-browser-seal{
+    position: absolute;
+    top: 1.85rem;
+    left: calc(50% + 22px);
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--vh-green-ink);
+    background: var(--vh-surface);
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}
+.vh-browser-title{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--vh-text);
+}
+.vh-browser-sub{
+    font-size: .9rem;
+    color: var(--vh-text-muted);
+}

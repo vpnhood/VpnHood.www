@@ -1,0 +1,191 @@
+{% comment %}
+  The body of an authorized reseller's page, /authorized-reseller/<domain>/. Each reseller is one
+  small page that names this include and carries its facts as front matter:
+    i18n_vars: store (its name), domain (its website, as in the address), since (a year),
+               checked (the date of our last monthly check, YYYY-MM-DD)
+    reseller_url: its store's address;  reseller_logo: optional, else a monogram of its name
+  The pages are unlisted on purpose: noindex, out of the sitemap, and no page links to them.
+{% endcomment %}
+{% assign vh_lang = page.lang | default: 'en' %}
+{% assign t = site.data.i18n[vh_lang][page.i18n] %}
+{% assign t_en = site.data.i18n.en[page.i18n] %}
+{% assign v = page.i18n_vars %}
+{% comment %} In a heading the name never breaks at its own hyphen ("C-" / "Hood" on a phone). {% endcomment %}
+{% capture store_nb %}<span class="text-nowrap">{{ v.store }}</span>{% endcapture %}
+{% capture page_title %}{{ t.page_title | default: t_en.page_title | replace: '[store]', store_nb }}{% endcapture %}
+{% capture page_desc %}{{ t.page_desc | default: t_en.page_desc | replace: '[store]', v.store | replace: '[since]', v.since }}{% endcapture %}
+{% capture logo_alt %}{{ t.logo_alt | default: t_en.logo_alt | replace: '[store]', v.store }}{% endcapture %}
+{% capture visit %}{{ t.visit | default: t_en.visit | replace: '[store]', v.store }}{% endcapture %}
+{% capture what_title %}{{ t.what_title | default: t_en.what_title | replace: '[store]', store_nb }}{% endcapture %}
+{% capture point_works_desc %}{{ t.point_works_desc | default: t_en.point_works_desc | replace: '[store]', v.store }}{% endcapture %}
+{% capture point_help_title %}{{ t.point_help_title | default: t_en.point_help_title | replace: '[store]', v.store }}{% endcapture %}
+{% capture point_help_desc %}{{ t.point_help_desc | default: t_en.point_help_desc | replace: '[store]', v.store }}{% endcapture %}
+{% capture terms_title %}{{ t.terms_title | default: t_en.terms_title | replace: '[store]', store_nb }}{% endcapture %}
+{% capture terms_payment %}{{ t.terms_payment | default: t_en.terms_payment | replace: '[store]', v.store }}{% endcapture %}
+{% capture terms_renewal %}{{ t.terms_renewal | default: t_en.terms_renewal | replace: '[store]', v.store }}{% endcapture %}
+{% capture terms_reversal %}{{ t.terms_reversal | default: t_en.terms_reversal | replace: '[store]', v.store }}{% endcapture %}
+{% capture terms_details %}{{ t.terms_details | default: t_en.terms_details | replace: '[store]', v.store }}{% endcapture %}
+{% capture check_desc %}{{ t.check_desc | default: t_en.check_desc | replace: '[store]', v.store | replace: '[domain]', v.domain }}{% endcapture %}
+{% capture app_shot_alt %}{{ t.app_shot_alt | default: t_en.app_shot_alt }}{% endcapture %}
+{% capture checked %}{{ t.checked | default: t_en.checked | replace: '[checked]', v.checked }}{% endcapture %}
+<main id="sp-main-body">
+  <div class="container">
+    <div class="container-inner">
+      <div class="row">
+        <div id="sp-component" class="col-lg-12">
+          <div class="sp-column">
+            <div id="system-message-container" aria-live="polite"></div>
+            <div class="com-content-article item-page">
+              <div class="com-content-article__body">
+
+                {% if page.sample %}
+                <div class="vh-reseller-sample mb-5" role="note">
+                  <p class="mb-0">{{ t.sample_note | default: t_en.sample_note | replace: 'href="/', vh_href_lang }}</p>
+                </div>
+                {% endif %}
+
+                <div class="row align-items-center gap-lg-0 gap-5 pb-4">
+                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.eyebrow | default: t_en.eyebrow }}</p>
+                    </div>
+                    <div class="vh-reseller-id">
+                      {% if page.reseller_logo %}
+                      <img class="vh-reseller-logo" src="{{ page.reseller_logo }}" alt="{{ logo_alt }}" width="72" height="72" />
+                      {% else %}
+                      <span class="vh-reseller-logo vh-reseller-monogram" aria-hidden="true">{{ v.store | slice: 0 }}</span>
+                      {% endif %}
+                      <span class="vh-reseller-domain" dir="ltr">{{ v.domain }}</span>
+                    </div>
+                    <h1 class="section-title vh-txt-grad-purple-400">{{ page_title }}</h1>
+                    <p class="section-desc mb-0">{{ page_desc }}</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                      {% if page.sample %}
+                      <span class="vh-btn vh-btn-primary vh-btn-sample" aria-disabled="true">{{ visit }}</span>
+                      {% else %}
+                      <a class="vh-btn vh-btn-primary" href="{{ page.reseller_url }}" target="_blank" rel="nofollow noopener">{{ visit }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a>
+                      {% endif %}
+                      <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/free-vpn/download/">{{ t.get_app | default: t_en.get_app }}</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-hero-art">
+                      <img src="/assets/images/reseller/authorized.svg" alt="{{ t.hero_alt | default: t_en.hero_alt }}" width="1000" height="1000" loading="eager" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-start-text mt-5 pt-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.what_label | default: t_en.what_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ what_title }}</h2>
+                </div>
+                {% comment %} What you get: the real CONNECT home screen beside the three points. {% endcomment %}
+                <div class="row align-items-center gy-5 gx-lg-5">
+                  <div class="col-lg-5 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-feature-shot">
+                      {% include app-shot.html name="connect-home-premium" alt=app_shot_alt %}
+                    </div>
+                  </div>
+                  <div class="col-lg-7 order-lg-1">
+                    <div class="vh-reseller-points">
+                      <div class="vh-card-light vh-feature-card rounded-4 p-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="vh-feature-head">
+                          <span class="vh-feature-icon">{% include icons/crown.svg %}</span>
+                          <h3 class="h5">{{ t.point_works_title | default: t_en.point_works_title }}</h3>
+                        </div>
+                        <p class="mb-0">{{ point_works_desc }}</p>
+                      </div>
+                      <div class="vh-card-light vh-feature-card rounded-4 p-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="vh-feature-head">
+                          <span class="vh-feature-icon">{% include icons/headset.svg %}</span>
+                          <h3 class="h5">{{ point_help_title }}</h3>
+                        </div>
+                        <p class="mb-0">{{ point_help_desc }}</p>
+                      </div>
+                      <div class="vh-card-light vh-feature-card rounded-4 p-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="vh-feature-head">
+                          <span class="vh-feature-icon vh-product-icon">{% include icons/product-connect.svg %}</span>
+                          <h3 class="h5">{{ t.point_app_title | default: t_en.point_app_title }}</h3>
+                        </div>
+                        <p class="mb-0">{{ t.point_app_desc | default: t_en.point_app_desc }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-start-text mt-5 pt-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="section-label">
+                    <p class="vh-txt-grad-purple-400">{{ t.terms_label | default: t_en.terms_label }}</p>
+                  </div>
+                  <h2 class="section-title vh-txt-grad-purple-400">{{ terms_title }}</h2>
+                </div>
+                {% comment %} Good to know: a paid receipt from the shop beside the few sale terms a buyer needs. {% endcomment %}
+                <div class="row align-items-center gy-4 gx-lg-5">
+                  <div class="col-lg-4" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="vh-reseller-art">
+                      <img src="/assets/images/reseller/purchase.svg" alt="{{ t.terms_art_alt | default: t_en.terms_art_alt }}" width="1000" height="1000" loading="lazy" />
+                    </div>
+                  </div>
+                  <div class="col-lg-8" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-card-light rounded-4 p-4 vh-reseller-terms">
+                      <ul class="mb-0">
+                        <li>{{ terms_payment }}</li>
+                        <li>{{ terms_renewal }}</li>
+                        <li>{{ terms_reversal }}</li>
+                        <li>{{ terms_details }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {% comment %} On Apple devices the app takes no premium code (App Review 3.1.1), so the code goes in under the
+                   same account elsewhere. The reseller reads this page first, and must know it before it sells. {% endcomment %}
+                <div class="vh-reseller-apple vh-card-light rounded-4 p-4 p-lg-5 mt-5" data-aos="fade-up" data-aos-duration="1000">
+                  <img class="vh-reseller-apple-logo" src="/assets/images/general/apple-icon-grad-purple-300.svg" data-vh-light-src="/assets/images/general/apple-icon-grad-purple-300-light.svg" width="60" height="60" alt="{{ t.apple_icon_alt | default: t_en.apple_icon_alt }}" />
+                  <div>
+                    <h2 class="h4 mb-2">{{ t.apple_title | default: t_en.apple_title }}</h2>
+                    <p class="mb-3">{{ t.apple_desc | default: t_en.apple_desc }}</p>
+                    <a class="vh-text-btn vh-txt-purple-300" href="{{ vh_base }}/free-vpn/premium-code-on-apple/">{{ t.apple_link | default: t_en.apple_link }}</a>
+                  </div>
+                </div>
+
+                {% comment %} Check a seller: the address a buyer checks, drawn as a browser window for this seller. {% endcomment %}
+                <div class="row align-items-center gy-5 gx-lg-5 mt-5 pt-lg-4">
+                  <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-label">
+                      <p class="vh-txt-grad-purple-400">{{ t.check_label | default: t_en.check_label }}</p>
+                    </div>
+                    <h2 class="section-title vh-txt-grad-purple-400">{{ t.check_title | default: t_en.check_title }}</h2>
+                    <p class="section-desc">{{ check_desc }}</p>
+                    <p class="vh-reseller-checked mt-4 mb-0">{{ checked }}</p>
+                  </div>
+                  <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="vh-browser" aria-hidden="true">
+                      <div class="vh-browser-bar">
+                        <span class="vh-browser-dots"><i></i><i></i><i></i></span>
+                        <span class="vh-browser-url" dir="ltr">{% include icons/lock.svg %}<span>www.vpnhood.com/authorized-reseller/<b>{{ v.domain }}</b>/</span></span>
+                      </div>
+                      <div class="vh-browser-body">
+                        {% if page.reseller_logo %}
+                        <img class="vh-reseller-logo" src="{{ page.reseller_logo }}" alt="" width="72" height="72" />
+                        {% else %}
+                        <span class="vh-reseller-logo vh-reseller-monogram">{{ v.store | slice: 0 }}</span>
+                        {% endif %}
+                        <span class="vh-browser-seal">{% include icons/check-circle.svg %}</span>
+                        <p class="vh-browser-title mb-1">{{ v.store }}</p>
+                        <p class="vh-browser-sub mb-0">{{ t.eyebrow | default: t_en.eyebrow }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

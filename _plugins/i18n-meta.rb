@@ -26,6 +26,12 @@ module VhI18nMeta
     # An empty string (e.g. a skipped translation) falls back like a missing key.
     title = [localized["meta_title"], english["meta_title"]].find { |v| !v.to_s.empty? }
     description = [localized["meta_description"], english["meta_description"]].find { |v| !v.to_s.empty? }
+    # A page that shares its data file with others fills the file's [placeholders] from its own
+    # "i18n_vars" front matter (an authorized reseller's page puts its name in its title).
+    (page.data["i18n_vars"] || {}).each do |name, value|
+      title = title.gsub("[#{name}]", value.to_s) if title
+      description = description.gsub("[#{name}]", value.to_s) if description
+    end
     page.data["title"] = title unless title.to_s.empty?
     page.data["description"] = description unless description.to_s.empty?
   end

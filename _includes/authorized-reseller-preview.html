@@ -1,0 +1,31 @@
+{% comment %}
+  The top of an authorized reseller's page (_includes/authorized-reseller.html) in a browser window, filled with the
+  sample store of /authorized-reseller/example.com/, for the reseller pages that offer it. Drawn from the page's own
+  words, so it stays the template; its one button opens the sample page itself.
+    {% include authorized-reseller-preview.html link=t.authorized_sample_link %}
+{% endcomment %}
+{%- assign vh_ar = site.data.i18n[vh_lang].authorized_reseller -%}
+{%- assign vh_ar_en = site.data.i18n.en.authorized_reseller -%}
+{%- assign vh_ar_page = site.pages | where: "url", "/authorized-reseller/example.com/" | first -%}
+{%- assign vh_ar_v = vh_ar_page.i18n_vars -%}
+<div class="vh-browser vh-browser-wide">
+  <div class="vh-browser-bar" aria-hidden="true">
+    <span class="vh-browser-dots"><i></i><i></i><i></i></span>
+    <span class="vh-browser-url" dir="ltr">{% include icons/lock.svg %}<span>www.vpnhood.com/authorized-reseller/<b>{{ vh_ar_v.domain }}</b>/</span></span>
+  </div>
+  <div class="vh-browser-hero">
+    <div class="vh-browser-hero-text">
+      <div aria-hidden="true">
+        <p class="vh-browser-eyebrow mb-2">{{ vh_ar.eyebrow | default: vh_ar_en.eyebrow }}</p>
+        <div class="vh-reseller-id">
+          <span class="vh-reseller-logo vh-reseller-monogram">{{ vh_ar_v.store | slice: 0 }}</span>
+          <span class="vh-reseller-domain" dir="ltr">{{ vh_ar_v.domain }}</span>
+        </div>
+        <p class="vh-browser-hero-title">{{ vh_ar.page_title | default: vh_ar_en.page_title | replace: '[store]', vh_ar_v.store }}</p>
+        <p class="vh-browser-hero-desc">{{ vh_ar.page_desc | default: vh_ar_en.page_desc | replace: '[store]', vh_ar_v.store | replace: '[since]', vh_ar_v.since }}</p>
+      </div>
+      <a class="vh-btn vh-btn-primary vh-browser-cta" href="{{ vh_base }}/authorized-reseller/{{ vh_ar_v.domain }}/">{{ include.link }}</a>
+    </div>
+    <img class="vh-browser-hero-art" src="/assets/images/reseller/authorized.svg" alt="" width="1000" height="1000" loading="lazy" />
+  </div>
+</div>
