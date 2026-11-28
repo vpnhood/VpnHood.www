@@ -2104,20 +2104,21 @@ a.vh-feature-chip:hover{
 // Authorized reseller pages (/authorized-reseller/<domain>/, _includes/authorized-reseller.html) ----
 // The hero: the guardian is a layer of it, behind the words, not a picture beside them, as on the home page.
 // Faded as a whole and masked on every side, she melts into the page; on a phone she comes under the buttons.
-// No transform here: AOS sets one on the element it animates.
-.vh-reseller-hero{
+// No transform here: AOS sets one on the element it animates. Its own class names: the reseller hub's hero
+// already has .vh-reseller-hero-art, a plain picture under its title.
+.vh-authorized-hero{
     position: relative;
     isolation: isolate;
     display: flex;
     align-items: center;
     min-height: 620px;
 }
-.vh-reseller-hero-text{
+.vh-authorized-hero-text{
     position: relative;
     z-index: 1;
     max-width: 640px;
 }
-.vh-reseller-hero-art{
+.vh-authorized-hero-art{
     position: absolute;
     z-index: 0;
     inset-block: -6rem;
@@ -2127,25 +2128,42 @@ a.vh-feature-chip:hover{
     align-items: center;
     pointer-events: none;
 }
-.vh-reseller-hero-art img{
-    display: block;
+// A background, not an <img>, as on the home page: only the picture of the page's theme is downloaded (the light
+// one is in _light.scss), where an <img> fetched the dark one for a light visitor too. Each screen takes the
+// smallest width tools/make-reseller-guardian.py writes that still gives it every pixel; the -webkit- copies are
+// for Chrome before 113 and 120.
+.vh-authorized-hero-pic{
     width: 100%;
-    height: auto;
+    aspect-ratio: 1;
+    background: no-repeat center / 100%;
+    background-image: -webkit-image-set(url("/assets/images/reseller/authorized-guardian-820.webp") 1x, url("/assets/images/reseller/authorized-guardian-1240.webp") 1.5x, url("/assets/images/reseller/authorized-guardian.webp") 2x);
+    background-image: image-set(url("/assets/images/reseller/authorized-guardian-820.webp") 1x, url("/assets/images/reseller/authorized-guardian-1240.webp") 1.5x, url("/assets/images/reseller/authorized-guardian.webp") 2x);
     opacity: .7;
     // Soft straight fades at every side, met at the corners: an oval would show its own shape. Both faces and
     // the keys stay clear.
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0, var(--vh-page-bg) 16%, var(--vh-page-bg) 80%, transparent 100%),
+        linear-gradient(to bottom, transparent 0, var(--vh-page-bg) 12%, var(--vh-page-bg) 64%, transparent 98%);
+    -webkit-mask-composite: source-in;
     mask-image:
         linear-gradient(to right, transparent 0, var(--vh-page-bg) 16%, var(--vh-page-bg) 80%, transparent 100%),
         linear-gradient(to bottom, transparent 0, var(--vh-page-bg) 12%, var(--vh-page-bg) 64%, transparent 98%);
     mask-composite: intersect;
 }
+// On a phone she is under 560 CSS px wide: the 820 one fills a 2x screen, the 1240 one a 3x.
+@media (max-width: 575.98px){
+    .vh-authorized-hero-pic{
+        background-image: -webkit-image-set(url("/assets/images/reseller/authorized-guardian-820.webp") 2x, url("/assets/images/reseller/authorized-guardian-1240.webp") 3x);
+        background-image: image-set(url("/assets/images/reseller/authorized-guardian-820.webp") 2x, url("/assets/images/reseller/authorized-guardian-1240.webp") 3x);
+    }
+}
 @media (max-width: 991.98px){
-    .vh-reseller-hero{
+    .vh-authorized-hero{
         flex-direction: column;
         align-items: stretch;
         min-height: 0;
     }
-    .vh-reseller-hero-art{
+    .vh-authorized-hero-art{
         position: relative;
         order: 1;
         inset: auto;
@@ -2420,12 +2438,6 @@ a.vh-feature-chip:hover{
     flex: none;
     width: 34%;
     height: auto;
-    // Melts into the window, as the page's own hero does.
-    opacity: .7;
-    mask-image:
-        linear-gradient(to right, transparent 0, var(--vh-page-bg) 16%, var(--vh-page-bg) 80%, transparent 100%),
-        linear-gradient(to bottom, transparent 0, var(--vh-page-bg) 12%, var(--vh-page-bg) 64%, transparent 98%);
-    mask-composite: intersect;
 }
 @media (max-width: 575.98px){
     .vh-browser-hero-art{

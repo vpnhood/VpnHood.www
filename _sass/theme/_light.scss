@@ -380,10 +380,19 @@
 // keys (owner, 2026-11-27: "slowly with gradient go to the completely white"), so here she is not masked. She is
 // still faded as a whole, so she stays behind the words ("I don't want that image be a prominent image of the
 // screen. It should be something on back").
-[data-theme="light"] .vh-reseller-hero-art img,
-[data-theme="light"] .vh-browser-hero-art{
+// The same widths as the dark one (_custom.scss, .vh-authorized-hero-pic).
+[data-theme="light"] .vh-authorized-hero-pic{
+    background-image: -webkit-image-set(url("/assets/images/reseller/authorized-guardian-light-820.webp") 1x, url("/assets/images/reseller/authorized-guardian-light-1240.webp") 1.5x, url("/assets/images/reseller/authorized-guardian-light.webp") 2x);
+    background-image: image-set(url("/assets/images/reseller/authorized-guardian-light-820.webp") 1x, url("/assets/images/reseller/authorized-guardian-light-1240.webp") 1.5x, url("/assets/images/reseller/authorized-guardian-light.webp") 2x);
     opacity: .6;
+    -webkit-mask-image: none;
     mask-image: none;
+}
+@media (max-width: 575.98px){
+    [data-theme="light"] .vh-authorized-hero-pic{
+        background-image: -webkit-image-set(url("/assets/images/reseller/authorized-guardian-light-820.webp") 2x, url("/assets/images/reseller/authorized-guardian-light-1240.webp") 3x);
+        background-image: image-set(url("/assets/images/reseller/authorized-guardian-light-820.webp") 2x, url("/assets/images/reseller/authorized-guardian-light-1240.webp") 3x);
+    }
 }
 [data-theme="light"] #bannerCardBlur{
     background-color: rgba(var(--purple-700-rgb), 0.86);

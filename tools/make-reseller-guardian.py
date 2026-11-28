@@ -7,22 +7,24 @@ a snow version drawn as a picture of its own (both in white robes, fluffy white 
 face showing like hers), like the home page's light guardian, never recoloured. They come
 from VpnHood.Artworks site/authorized-reseller/set-seal.py, which sets the logo's hood into the seal. This
 script writes assets/images/reseller/authorized-guardian.webp and authorized-guardian-light.webp, which the page
-(_includes/authorized-reseller.html) and its preview in a browser window (authorized-reseller-preview.html) show,
-the light one through data-vh-light-src:
+(_includes/authorized-reseller.html) shows as the background of its hero's .vh-authorized-hero-pic, the light one
+from _sass/theme/_light.scss, so a visitor downloads only the picture of their own theme:
 
-- at 1640x1640: the hero shows them up to 820 CSS px wide, as a faded layer behind its words, so a sharp
-  screen gets every pixel. Quality stays high: at 72 the skin, hair and leather broke into blocks (owner,
-  2026-11-27: "the quality of image is degraded too much ... the details are rectangular");
+- in three widths, as each screen takes the smallest that still gives it every pixel (the image-set() in
+  _sass/pages/_custom.scss): 1640x1640 under the plain name, and -1240 and -820. The hero shows them up to
+  820 CSS px wide on a computer, as a faded layer behind its words, and under 560 on a phone. Quality stays
+  high: at 72 the skin, hair and leather broke into blocks (owner, 2026-11-27: "the quality of image is
+  degraded too much ... the details are rectangular");
 - opaque wherever the original reaches OPAQUE: its figures stop at 254 of 255;
 - faded out at the edges, each picture by its own FADES (fractions of the width or height, from each side):
   - the dark one only where the cloaks and the hood run off the picture and would end in straight lines; the
-    page fades it as a whole and masks its edges in CSS (_sass/pages/_custom.scss, .vh-reseller-hero-art);
+    page fades it as a whole and masks its edges in CSS (_sass/pages/_custom.scss, .vh-authorized-hero-pic);
   - the light one over long, slow fades, full strength around the faces and the keys and dissolving into the
     page's white towards every side (owner, 2026-11-27: "slowly with gradient go to the completely white", not
     the whole picture faded with a narrow edge). Baked in, as a CSS mask follows the box and not the figures,
-    so the light theme shows it with no opacity and no mask.
+    so the light theme fades it as a whole but masks nothing.
 
-    python tools/make-reseller-guardian.py            # writes both pictures
+    python tools/make-reseller-guardian.py            # writes both pictures, in every width
     python tools/make-reseller-guardian.py --check    # reports a picture that differs from a fresh run
 
 Never edit the output by hand; change this script or the originals and rerun it. Needs Pillow and NumPy. Run
@@ -47,11 +49,11 @@ DARK_FADES = {"left": 0.07, "right": 0.07, "top": 0.0, "bottom": 0.15}
 # The faces sit at about 20% (his) and 65% (hers) across, 35-40% down; the keys at 45% across, 70% down.
 LIGHT_FADES = {"left": 0.34, "right": 0.38, "top": 0.26, "bottom": 0.5}
 JOBS = {
-    SRC / "authorized-guardian.png": (OUT / "authorized-guardian.webp", DARK_FADES),
-    SRC / "authorized-guardian-light.png": (OUT / "authorized-guardian-light.webp", LIGHT_FADES),
+    SRC / "authorized-guardian.png": ("authorized-guardian", DARK_FADES),
+    SRC / "authorized-guardian-light.png": ("authorized-guardian-light", LIGHT_FADES),
 }
 
-SIZE = (1640, 1640)
+WIDTHS = (1640, 1240, 820)  # square; the first keeps the plain name
 OPAQUE = 250        # the originals' alpha from here up is a figure
 QUALITY, ALPHA_QUALITY = 88, 90
 
@@ -62,11 +64,16 @@ def _ease(t: np.ndarray) -> np.ndarray:
     return t * t * t * (t * (6 * t - 15) + 10)
 
 
-def picture(src: Path, fades: dict[str, float]) -> Image.Image:
-    # Resized with premultiplied alpha, so no colour bleeds in from the transparent pixels.
-    image = Image.open(src).convert("RGBa").resize(SIZE, Image.LANCZOS).convert("RGBA")
+def out_path(stem: str, width: int) -> Path:
+    return OUT / (f"{stem}.webp" if width == WIDTHS[0] else f"{stem}-{width}.webp")
+
+
+def picture(src: Path, fades: dict[str, float], width: int) -> Image.Image:
+    # Each width straight from the original, resized with premultiplied alpha, so no colour bleeds in from the
+    # transparent pixels.
+    image = Image.open(src).convert("RGBa").resize((width, width), Image.LANCZOS).convert("RGBA")
     rgba = np.asarray(image).astype(np.float64)
-    w, h = SIZE
+    w, h = width, width
     y = np.arange(h, dtype=np.float64)[:, None] / (h - 1)
     x = np.arange(w, dtype=np.float64)[None, :] / (w - 1)
     alpha = np.clip(rgba[..., 3] / OPAQUE, 0, 1)
@@ -91,21 +98,23 @@ def main() -> int:
     args = parser.parse_args()
 
     stale = 0
-    for src, (out, fades) in JOBS.items():
-        data = encode(picture(src, fades))
-        rel = out.relative_to(ROOT).as_posix()
-        if args.check:
-            if not out.exists():
-                print(f"missing: {rel}")
-                stale += 1
-            elif out.read_bytes() != data:
-                print(f"stale: {rel} (rerun python tools/make-reseller-guardian.py)")
-                stale += 1
-            else:
-                print(f"ok: {rel}")
-            continue
-        out.write_bytes(data)
-        print(f"wrote {rel} ({len(data):,} bytes)")
+    for src, (stem, fades) in JOBS.items():
+        for width in WIDTHS:
+            out = out_path(stem, width)
+            data = encode(picture(src, fades, width))
+            rel = out.relative_to(ROOT).as_posix()
+            if args.check:
+                if not out.exists():
+                    print(f"missing: {rel}")
+                    stale += 1
+                elif out.read_bytes() != data:
+                    print(f"stale: {rel} (rerun python tools/make-reseller-guardian.py)")
+                    stale += 1
+                else:
+                    print(f"ok: {rel}")
+                continue
+            out.write_bytes(data)
+            print(f"wrote {rel} ({len(data):,} bytes)")
     return 1 if stale else 0
 
 

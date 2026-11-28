@@ -45,12 +45,13 @@
                 {% endif %}
 
                 {% comment %} The guardian is a layer of the hero, not a picture beside it: faded, behind the words,
-                   melting into the page on every side, as on the home page. {% endcomment %}
-                <div class="vh-reseller-hero">
-                  <div class="vh-reseller-hero-art" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
-                    <img src="/assets/images/reseller/authorized-guardian.webp" data-vh-light-src="/assets/images/reseller/authorized-guardian-light.webp" alt="{{ t.hero_alt | default: t_en.hero_alt }}" width="1640" height="1640" loading="eager" />
+                   melting into the page on every side, as on the home page. Decorative, so a CSS background with no
+                   words for a screen reader; the stylesheets pick her picture by theme and screen. {% endcomment %}
+                <div class="vh-authorized-hero">
+                  <div class="vh-authorized-hero-art" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
+                    <div class="vh-authorized-hero-pic"></div>
                   </div>
-                  <div class="vh-reseller-hero-text" data-aos="fade-right" data-aos-duration="1000">
+                  <div class="vh-authorized-hero-text" data-aos="fade-right" data-aos-duration="1000">
                     <div class="section-label">
                       <p class="vh-txt-grad-purple-400">{{ t.eyebrow | default: t_en.eyebrow }}</p>
                     </div>
@@ -66,7 +67,7 @@
                     <p class="section-desc mb-0">{{ page_desc }}</p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
                       {% if page.sample %}
-                      <span class="vh-btn vh-btn-primary vh-btn-sample" aria-disabled="true">{{ visit }}</span>
+                      <span class="vh-btn vh-btn-primary vh-btn-sample" role="link" aria-disabled="true">{{ visit }}</span>
                       {% else %}
                       <a class="vh-btn vh-btn-primary" href="{{ page.reseller_url }}" target="_blank" rel="nofollow noopener">{{ visit }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a>
                       {% endif %}
