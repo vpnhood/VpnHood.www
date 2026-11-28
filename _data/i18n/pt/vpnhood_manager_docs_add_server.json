@@ -4,7 +4,7 @@
   "title": "Adicionar um servidor",
   "lead": "Adicione um servidor ao VpnHood! MANAGER, e o MANAGER instala nele o VpnHood! SERVER por si, ou dá-lhe o comando que o faz. O servidor liga-se então ao MANAGER, que emite as respetivas chaves de acesso.",
   "before_title": "Antes de começar",
-  "req_machine": "Uma máquina com um endereço IP público, com Linux em x64 ou arm64 e acesso root. Os comandos de instalação são executados através do sudo, por isso o sudo tem de estar na máquina mesmo que inicie sessão como root. <a href=\"/vpnhood-server/docs/requirements/\">Requisitos do sistema</a> indica os sistemas em que funciona.",
+  "req_machine": "Uma máquina com um endereço IP público, com Linux em x64 ou arm64 e acesso root. Os comandos que o MANAGER mostra são executados através do sudo, por isso o sudo tem de estar na máquina mesmo que inicie sessão como root. <a href=\"/vpnhood-server/docs/requirements/\">Requisitos do sistema</a> indica os sistemas em que funciona.",
   "req_port": "Porta TCP <code>[server_port]</code> aberta, tanto na firewall da máquina como na do seu fornecedor de alojamento.",
   "req_ssh": "Para que o MANAGER instale o servidor por SSH, a porta SSH da máquina aberta ao MANAGER: <code>[port_ssh]</code>, a menos que a tenha alterado.",
   "req_docker": "Para usar o Docker, o próprio Docker com o plugin compose. O instalador pode instalá-lo por si no Ubuntu, no Debian e nas distribuições baseadas neles.",

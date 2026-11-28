@@ -37,7 +37,8 @@ extra_css:
 
 <h2 id="standalone">{{ t.install_title }}</h2>
 <p>{{ t.step_install_run }}</p>
-{% include terminal.html cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'" %}
+{% capture vh_docker_cmd %}sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer.docker.sh; s=$(wget -qO- $u 2>/dev/null) || s=$(curl -fsSL $u) && bash -c "$s" --'{% endcapture %}
+{% include terminal.html cmd=vh_docker_cmd %}
 <p>{% include copy.html s=t.step_install_options %}</p>
 <p>{% include copy.html s=t.step_install_storage %}</p>
 

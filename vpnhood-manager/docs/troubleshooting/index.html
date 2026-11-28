@@ -21,9 +21,13 @@ extra_css:
   those icons only on a Listen Yes address (console of 2026-10-29; the agent stops marking the
   others in its next release: finding 30 in the MANAGER improvements plan). The server retries its settings every minute (ConfigureInterval), and after
   a week of failures only every 30 minutes, with one try at each restart (ConfigErrorTracker).
-  The SSH install dials public addresses only, answers sudo's prompt with the Login Password, and
-  fails "Installation failed!" when /opt/VpnHoodServer has no publish.json; the console's error
-  dialog shows the reply under Details. An install command stays valid: the server's
+  The SSH install dials public addresses only and gets root: as it is for root, else through
+  sudo, the Login Password given on sudo's input (SshUtils.GetRootAccess). The call answers once
+  it has, and fails "Installation failed: ..." when that takes over 2 minutes; the installer then
+  runs in the background (SshInstallJob): stopped on the machine after 6 minutes without output,
+  left to run after 20, its state and output at servers/{id}/install/status. The console's dialog
+  closes when the call answers and reads no status yet, so a failed installer shows as a server
+  that never connects. An install command stays valid: the server's
   authorization changes only when it is deleted. A farm whose token cannot be built keeps its old
   one and shows FarmTokenBuilder's message under its name; a farm that never had one gives every
   key "The server farm token has not been initialized properly." (GetRequiredServerToken): both
@@ -70,6 +74,7 @@ extra_css:
   <li>{{ t.ssh_connect }}</li>
   <li>{% include copy.html s=t.ssh_denied %}</li>
   <li>{% include copy.html s=t.ssh_password %}</li>
+  <li>{% include copy.html s=t.ssh_root %}</li>
   <li>{% include copy.html s=t.ssh_failed %}</li>
 </ul>
 

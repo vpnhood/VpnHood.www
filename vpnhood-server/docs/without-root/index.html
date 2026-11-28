@@ -48,7 +48,8 @@ extra_css:
 
 <h2 id="install">{{ t.install_title }}</h2>
 <p>{% include copy.html s=t.step_install %}</p>
-{% include terminal.html cmd="bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-noroot.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'" %}
+{% capture vh_noroot_cmd %}bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux-noroot.sh; s=$(wget -qO- $u 2>/dev/null) || s=$(curl -fsSL $u) && bash -c "$s" --'{% endcapture %}
+{% include terminal.html cmd=vh_noroot_cmd %}
 <p>{% include copy.html s=t.step_install_options %}</p>
 
 <h3 id="access-key">{{ t.key_title }}</h3>

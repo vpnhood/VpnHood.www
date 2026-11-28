@@ -115,8 +115,9 @@ nav_active: self-hosted
 <div class="vh-server-standalone" data-aos="fade-up" data-aos-duration="1000">
     <h3 id="standalone" class="h4">{{ t.install_solo_title }}</h3>
     <p>{{ t.install_solo_desc }}</p>
+    {% capture vh_install_cmd %}sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; s=$(wget -qO- $u 2>/dev/null) || s=$(curl -fsSL $u) && bash -c "$s" --'{% endcapture %}
     {% include terminal.html
-        caption=t.install_caption_install cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'"
+        caption=t.install_caption_install cmd=vh_install_cmd
         caption2=t.install_caption_key cmd2='sudo /opt/VpnHoodServer/vhserver gen' %}
     <p class="mt-4 mb-0">
         <a class="vh-text-btn vh-txt-purple-300 d-inline-flex" href="{{ vh_base }}/vpnhood-server/docs/install/"><span>{{ t.install_guide }}</span><svg class="vh-rtl-mirror" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>

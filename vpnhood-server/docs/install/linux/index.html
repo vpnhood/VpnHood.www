@@ -56,7 +56,8 @@ extra_css:
 
 <h2 id="standalone">{{ t.linux_title }}</h2>
 <p>{% include copy.html s=t.step_linux_run %}</p>
-{% include terminal.html cmd="sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; bash <(wget -qO- $u 2>/dev/null || curl -fsSL $u)'" %}
+{% capture vh_install_cmd %}sudo bash -c 'u=https://github.com/vpnhood/VpnHood.App.Server/releases/latest/download/VpnHoodServer-linux.sh; s=$(wget -qO- $u 2>/dev/null) || s=$(curl -fsSL $u) && bash -c "$s" --'{% endcapture %}
+{% include terminal.html cmd=vh_install_cmd %}
 <p>{% include copy.html s=t.step_linux_options %}</p>
 
 <h3 id="access-key">{{ t.key_title }}</h3>
