@@ -375,6 +375,16 @@
         --vh-guardian-position: center 47%;
     }
 }
+// The authorized-reseller hero's guardian, in her separately drawn snow version: her long, slow fade into the
+// page's white is baked into the picture (tools/make-reseller-guardian.py), full strength around the faces and the
+// keys (owner, 2026-11-27: "slowly with gradient go to the completely white"), so here she is not masked. She is
+// still faded as a whole, so she stays behind the words ("I don't want that image be a prominent image of the
+// screen. It should be something on back").
+[data-theme="light"] .vh-reseller-hero-art img,
+[data-theme="light"] .vh-browser-hero-art{
+    opacity: .6;
+    mask-image: none;
+}
 [data-theme="light"] #bannerCardBlur{
     background-color: rgba(var(--purple-700-rgb), 0.86);
 }

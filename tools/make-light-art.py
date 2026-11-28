@@ -7,7 +7,9 @@ generates a `<name>-light.<ext>` sibling for each one; /assets/js/theme.js and
 _sass/theme/_light.scss point at those when <html data-theme="light">.
 
 The user-approved banner-guardian-light.webp is a separately drawn polar portrait exported
-through the guardian pipeline; this script must not recolour or replace it.
+through the guardian pipeline; this script must not recolour or replace it. The same holds for
+reseller/authorized-guardian-light.webp, the authorized-reseller hero's separately drawn snow
+version, which tools/make-reseller-guardian.py writes.
 
 THIS SCRIPT PRODUCES THE LIGHT DECORATIVE BACKDROPS. Registered `*-light.*` files under
 assets/images/ are generated output. Do not hand-author one, do not hand-edit one, and do

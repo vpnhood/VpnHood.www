@@ -44,8 +44,13 @@
                 </div>
                 {% endif %}
 
-                <div class="row align-items-center gap-lg-0 gap-5 pb-4">
-                  <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                {% comment %} The guardian is a layer of the hero, not a picture beside it: faded, behind the words,
+                   melting into the page on every side, as on the home page. {% endcomment %}
+                <div class="vh-reseller-hero">
+                  <div class="vh-reseller-hero-art" data-aos="fade" data-aos-duration="1800" data-aos-delay="200">
+                    <img src="/assets/images/reseller/authorized-guardian.webp" data-vh-light-src="/assets/images/reseller/authorized-guardian-light.webp" alt="{{ t.hero_alt | default: t_en.hero_alt }}" width="1640" height="1640" loading="eager" />
+                  </div>
+                  <div class="vh-reseller-hero-text" data-aos="fade-right" data-aos-duration="1000">
                     <div class="section-label">
                       <p class="vh-txt-grad-purple-400">{{ t.eyebrow | default: t_en.eyebrow }}</p>
                     </div>
@@ -66,11 +71,6 @@
                       <a class="vh-btn vh-btn-primary" href="{{ page.reseller_url }}" target="_blank" rel="nofollow noopener">{{ visit }}<span class="visually-hidden"> {{ tc.new_tab }}</span></a>
                       {% endif %}
                       <a class="vh-btn vh-btn-secondary" href="{{ vh_base }}/free-vpn/download/">{{ t.get_app | default: t_en.get_app }}</a>
-                    </div>
-                  </div>
-                  <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="vh-feature-hero-art">
-                      <img src="/assets/images/reseller/authorized.svg" alt="{{ t.hero_alt | default: t_en.hero_alt }}" width="1000" height="1000" loading="eager" />
                     </div>
                   </div>
                 </div>

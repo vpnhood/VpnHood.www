@@ -2102,6 +2102,58 @@ a.vh-feature-chip:hover{
 }
 
 // Authorized reseller pages (/authorized-reseller/<domain>/, _includes/authorized-reseller.html) ----
+// The hero: the guardian is a layer of it, behind the words, not a picture beside them, as on the home page.
+// Faded as a whole and masked on every side, she melts into the page; on a phone she comes under the buttons.
+// No transform here: AOS sets one on the element it animates.
+.vh-reseller-hero{
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 620px;
+}
+.vh-reseller-hero-text{
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+}
+.vh-reseller-hero-art{
+    position: absolute;
+    z-index: 0;
+    inset-block: -6rem;
+    inset-inline-end: -4%;
+    width: min(66%, 820px);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+.vh-reseller-hero-art img{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: .7;
+    // Soft straight fades at every side, met at the corners: an oval would show its own shape. Both faces and
+    // the keys stay clear.
+    mask-image:
+        linear-gradient(to right, transparent 0, var(--vh-page-bg) 16%, var(--vh-page-bg) 80%, transparent 100%),
+        linear-gradient(to bottom, transparent 0, var(--vh-page-bg) 12%, var(--vh-page-bg) 64%, transparent 98%);
+    mask-composite: intersect;
+}
+@media (max-width: 991.98px){
+    .vh-reseller-hero{
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+    }
+    .vh-reseller-hero-art{
+        position: relative;
+        order: 1;
+        inset: auto;
+        width: 100%;
+        max-width: 640px;
+        margin: -1.5rem auto -2rem;
+    }
+}
 // The seller's logo, or a monogram of its name, beside its website's address, above the title.
 .vh-reseller-id{
     display: flex;
@@ -2368,6 +2420,12 @@ a.vh-feature-chip:hover{
     flex: none;
     width: 34%;
     height: auto;
+    // Melts into the window, as the page's own hero does.
+    opacity: .7;
+    mask-image:
+        linear-gradient(to right, transparent 0, var(--vh-page-bg) 16%, var(--vh-page-bg) 80%, transparent 100%),
+        linear-gradient(to bottom, transparent 0, var(--vh-page-bg) 12%, var(--vh-page-bg) 64%, transparent 98%);
+    mask-composite: intersect;
 }
 @media (max-width: 575.98px){
     .vh-browser-hero-art{
