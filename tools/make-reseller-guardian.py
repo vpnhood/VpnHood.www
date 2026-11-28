@@ -46,7 +46,7 @@ OUT = ROOT / "assets" / "images" / "reseller"
 
 # How far each fade reaches in from its side, as a fraction of the picture.
 DARK_FADES = {"left": 0.07, "right": 0.07, "top": 0.0, "bottom": 0.15}
-# The faces sit at about 20% (his) and 65% (hers) across, 35-40% down; the keys at 45% across, 70% down.
+# The faces sit at about 23% (his) and 64% (hers) across, 37-41% down; the keys at 38% across, 70% down.
 LIGHT_FADES = {"left": 0.34, "right": 0.38, "top": 0.26, "bottom": 0.5}
 JOBS = {
     SRC / "authorized-guardian.png": ("authorized-guardian", DARK_FADES),

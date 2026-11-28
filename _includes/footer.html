@@ -44,8 +44,9 @@
 		</div>
 
 		<!-- Mobile menu — Bootstrap off-canvas (replaces the former Helix off-canvas;
-		     opened by the header burger via data-bs-toggle, backdrop provided by Bootstrap). -->
-		<div class="offcanvas offcanvas-start vh-offcanvas" tabindex="-1" id="mobileMenu" aria-label="{{ tc.oc_site_menu }}">
+		     opened by the header burger via data-bs-toggle, backdrop provided by Bootstrap). Its role is in
+		     the markup, as an aria-label is not allowed on a plain div; Bootstrap sets it again on opening. -->
+		<div class="offcanvas offcanvas-start vh-offcanvas" tabindex="-1" id="mobileMenu" role="dialog" aria-label="{{ tc.oc_site_menu }}">
 			<div class="offcanvas-header justify-content-end">
 				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="{{ tc.oc_close }}"></button>
 			</div>
